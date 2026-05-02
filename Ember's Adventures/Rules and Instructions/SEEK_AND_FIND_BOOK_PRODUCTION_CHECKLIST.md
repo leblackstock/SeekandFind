@@ -72,11 +72,11 @@ b#p24                 closing/teaser page
 | E | Redo/revise seek image until approved. | ? |
 | F | Ask chat to identify 20-30 candidate finds visible in the approved seek image. | ? |
 | G | Human checks the 20-30 candidates against the image. | ? |
-| H | Select 1 mission item, 10 main printed finds, and 5-15 bonus finds. | ? |
+| H | Select 1 mission item, 10 main printed finds, and 5-15 bonus finds; keep them as separate Mission Item, Main Finds, and Bonus Finds groups. | ? |
 | I | Confirm all chosen items are visible in the approved seek image and easy enough for kids. | ? |
-| J | Output the paired story/list `.md` source as a downloadable file using the preferred filename. | ? |
-| K | Generate the story/list page with exact text, low-clutter underlay, themed icons, and correct facing-page direction. | ? |
-| L | Verify story/list text exactly against the `.md` source; check spelling, line breaks, object names, and icons. | ? |
+| J | Output the paired story/list `.md` source as a downloadable file using the preferred filename, with separate Mission Item, Main Finds (10), and Bonus Finds (5-15) sections. | ? |
+| K | Generate the story/list page with exact text, preserved find-list sections, low-clutter underlay, themed icons, and correct facing-page direction. | ? |
+| L | Verify story/list text exactly against the `.md` source; check section breaks, spelling, line breaks, object names, and icons. | ? |
 | M | If text/icons fail, retry; if still failing, use no-text story/list art + text/icons added in layout. | ? |
 | N | Save final seek image, story/list `.md`, and final story/list image with correct filenames. | ? |
 

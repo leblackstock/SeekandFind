@@ -28,9 +28,15 @@ Generated from the split v2 source files. Upload only the four consolidated file
 
 The following Ember book plans are source-of-truth content inside this four-file rules bundle. Production checklists and Word files are derivative working copies only; if they conflict with these rows, story blocks, mission lines, or material rules, correct the derivative copy.
 
+Character reference rule: Every Ember image prompt generated from these plans must directly name `Ember-001`, `Ember-002`, and `Ember-003` for Ember. When a page includes a named supporting character, add that character's exact reference image files directly: Hootiepuff uses `HootiePuff-001`, `HootiePuff-002`, and `HootiePuff-003`; Luma Leafwhisk uses `Luma_Leafwhisk-001`, `Luma_Leafwhisk-002`, and `Luma_Leafwhisk-003`; Gemma Glint uses `Gemma_Glint-001`, `Gemma_Glint-002`, and `Gemma_Glint-003`; Pebblekins uses `Pebblekins-001`, `Pebblekins-002`, and `Pebblekins-003`; Elder Glowkeeper uses `Elder_Glowkeeper-001`, `Elder_Glowkeeper-002`, and `Elder_Glowkeeper-003`.
+
 ## Ember Book 1 10-Spread Plan
 
 Title: **Ember and the Sparkleflame Festival Search**.
+
+Book 1 seek-image placement rule: Book 1 Sparkleflame Festival seek-image prompts should be rich but slightly less cluttered than an overpacked hidden-object spread. Use intentional clusters and believable surfaces for named mission items and broad category items. Keep walkways, paths, bridge surfaces, mountain trails, doorway thresholds, market aisles, and the main eye path mostly clear, with only a few small edge details. Do not scatter items randomly across floors or routes.
+
+Book 1 scene-life and object-variety rule: Sparkleflame Festival seek-image prompts should include friendly original dragon villagers, festival-goers, helpers, customers, or small background activity when the location is a village square, market, bakery, workshop, bridge, or festival finale. These figures should make the scene feel alive but stay secondary, not become hidden targets, not block the mission item, and not crowd the walkways. Searchable objects should be varied and child-nameable, with distinct silhouettes. Prompt rows should name the actual page-specific object families instead of relying on generic decorative filler. Festival lanterns are an important Book 1 motif and may appear generously as strings, stands, garlands, workshop pieces, and celebration lights. Page-specific objects should lead: cottage pages use cottage belongings, village pages use village/festival props, bakery pages use treats and baking tools, workshop pages use lantern-making parts and safe tools, garden pages use mixed nature details, mountain pages use trail/rock details, cave pages use cave details, door pages use keys/carvings/vines, market pages use market goods, and finale pages use celebration objects.
 
 ### Production Order
 
@@ -57,18 +63,20 @@ Printed order is story/list left page then seek image right page. Production ord
 
 ### Broad Searchable Categories
 
+Use these as curated prop zones, not as permission to fill every open space. Category items should be grouped where they belong naturally, leaving walkways, trails, bridge surfaces, door thresholds, market aisles, and main eye paths mostly open.
+
 | Seek Page | Broad Searchable Categories |
 |---:|:---|
-| 3 | Cozy cottage objects, tiny dragon belongings, glowing sparkles, scrolls, little gems, satchel items, scarf details, small festival decorations. |
-| 5 | Village objects, festival decorations, dragon-town props, bells, ribbons, banners, glowing stones, market details, baskets, jars, flags, friendly dragon-world details. |
-| 7 | Cupcakes, cookies, baking tools, jars, sugar crystals, berries, tiny spoons, frosting swirls, warm oven details, little dragon treats. |
-| 9 | Lantern parts, safe rounded tools, ribbons, glowing bulbs, jars of sparks, tiny gears, paper decorations, hanging lights, workshop clutter. |
-| 11 | Flowers, leaves, mushrooms, fireflies, garden stones, tiny bridges, glowing vines, water ripples, dragon footprints, small nature treasures. |
-| 13 | Pebbles, trail markers, blank signs, glowing stones, mountain flowers, dragon footprints, small crystals, mossy rocks, scattered festival decorations. |
-| 15 | Crystals, gems, reflections, cave pools, sparkle shapes, tiny bells, carved stones, glowing cracks, hidden dragon symbols, small festival objects. |
-| 17 | Keys, carved stones, vines, old symbols, glowing cracks, tiny lanterns, mountain flowers, crystal fragments, hidden clue objects, dragon-scale patterns. |
-| 19 | Market goods, baskets, tiny trinkets, gems, treats, ribbons, bells, jars, festival souvenirs, small dragon-made objects. |
-| 21 | Festival decorations, glowing lanterns, bells, banners, treats, gems, musical objects, friendly dragon details, sparkle shapes, celebration objects. |
+| 3 | Cozy cottage objects, tiny dragon belongings, scrolls, satchel items, scarf details, soft blankets, little stools, rounded shelves, warm rugs, wooden toys, tiny cups, buttons, small festival keepsakes, and a few warm festival lanterns by the window or doorway. |
+| 5 | Friendly dragon villagers and festival-goers, village objects, festival decorations, dragon-town props, baskets, flags, festival lantern strings, decorated lantern stands, treat trays, ribbon spools, small instruments, wrapped parcels, wooden toys, pouches, buttons, painted path stones, and friendly dragon-world details. |
+| 7 | Cupcakes, cookies, baking tools, mixing bowls, berries, tiny spoons, frosting swirls, warm oven details, little dragon treats, trays, recipe cards with no readable text, cooling racks, and bakery cloths. |
+| 9 | Lantern frames, festival lantern strings, safe rounded tools, wick holders, folded paper shades, tiny gears, workbench clamps, hanging hooks, workshop shelves, bulb shapes, paper decorations, finished festival lanterns, and partially assembled lantern-making pieces. |
+| 11 | Leaves, mushrooms, fireflies, garden stones, tiny bridge details, vine curls, water ripples, dragon footprints, lily-pad shapes, moss patches, path-edge nature treasures, and small flower clusters near the Firefly Flower Charm. |
+| 13 | Trail markers, dragon footprints, mossy rocks, switchback path stones, small cave-mouth hints, ribbon scraps, weathered signposts with no readable text, ridge plants, and mountain path details. |
+| 15 | Cave pools, reflections, carved stones, glowing cracks, hidden dragon symbols, echo marks, ledges, smooth rock shelves, cave shadows, small festival keepsakes, and the Echo Glow Gem as the only required gem focus. |
+| 17 | Keys, carved stones, vines, old symbols, glowing cracks, moss patches, door hinges, keyholes, handles, dragon-scale patterns, side stones, tiny festival lanterns along the approach, and hidden clue objects around the ancient door. |
+| 19 | Market goods, baskets, tiny trinkets, treats, fabric pouches, painted tokens, souvenir boxes, small dragon-made objects, counter displays, stall shelves, hand-carried parcels, and festival lantern strings over the stalls. |
+| 21 | Festival lantern strings, lantern garlands, glowing lantern stands, musical objects, friendly dragon details, treat tables, celebration arches, pennants, drums, tiny horns, side stalls, dance-path details, and the Sparkleflame Crown Lantern as the main crown-shaped lantern focus. |
 
 ### Story/List Source Blocks
 
@@ -86,6 +94,8 @@ Icon plan: warm cottage and sparkle-map mini icons.
 
 Layout: Ember vignette on the left, looking and pointing right toward page 3; story at top; checklist in a rounded panel flowing toward the right edge.
 
+Seek image placement note: Place cottage objects on shelves, tables, hooks, rugs, satchel-side surfaces, and decoration clusters. Keep any floor route from Ember to the clue readable.
+
 #### Page 4 / Facing Page 5
 
 Title: `The Worried Village`
@@ -99,6 +109,8 @@ Checklist rule: Golden Welcome Bell first, then 10 main printed finds and 5-15 b
 Icon plan: bells, ribbons, village stones, and festival-trim icons.
 
 Layout: festival banner heading, story box upper left, checklist ribbon along the lower half leading right.
+
+Seek image placement note: Include friendly original dragon villagers and festival-goers doing simple secondary actions, such as carrying a basket, browsing a stall, setting out treats, or waving near Ember. Cluster baskets, flags, festival lantern strings, decorated lantern stands, treat trays, ribbon spools, small instruments, wrapped parcels, wooden toys, pouches, buttons, painted path stones, and village props on stalls, posts, walls, hooks, shelves, and side tables. Hide the single Golden Welcome Bell as the special mission item; avoid adding other similar bells that could make the answer ambiguous. Keep the village-square walking area mostly open. Use cozy festival lantern shapes, not modern street-lamp or street-lantern shapes.
 
 #### Page 6 / Facing Page 7
 
@@ -114,6 +126,8 @@ Icon plan: cupcake, spoon, berry, jar, and sugar-star icons.
 
 Layout: bakery parchment card, small Ember/helper cue on the left pointing right, checklist bubbles below the story.
 
+Seek image placement note: Put cupcakes, cookies, spoons, mixing bowls, berries, frosting, trays, recipe cards with no readable text, cooling racks, and bakery cloths on bakery counters, shelves, and treat stands. Keep floor and customer path areas lightly detailed.
+
 #### Page 8 / Facing Page 9
 
 Title: `The Lantern Maker's Secret`
@@ -127,6 +141,8 @@ Checklist rule: Baby Flame Lantern first, then 10 main printed finds and 5-15 bo
 Icon plan: lantern, gear, ribbon, spark jar, and flame icons.
 
 Layout: lantern-border underlay, checklist shelf on the lower right, Ember on the lower-left gesturing right.
+
+Seek image placement note: Place lantern frames, festival lantern strings, safe tools, wick holders, folded paper shades, tiny gears, workbench clamps, hooks, shelves, bulb shapes, paper decorations, finished festival lanterns, and partially assembled lantern-making pieces on worktables and hanging lines. Hide the Baby Flame Lantern as the special mission item within a lively lantern-making scene. Keep the workshop walkway and Ember's movement path mostly clear.
 
 #### Page 10 / Facing Page 11
 
@@ -142,6 +158,8 @@ Icon plan: flower, leaf, mushroom, pebble, bridge, and firefly icons.
 
 Layout: garden vine frame; checklist follows a soft trail from left to right.
 
+Seek image placement note: Keep the bridge and path readable. Place leaves, mushrooms, fireflies, garden stones, bridge details, water edges, vine curls, lily-pad shapes, moss patches, and path-edge nature treasures around the scene. Keep small flower clusters near the Firefly Flower Charm rather than across the whole page.
+
 #### Page 12 / Facing Page 13
 
 Title: `Pebbles Up the Mountain`
@@ -155,6 +173,8 @@ Checklist rule: Shimmer Trail Stone first, then 10 main printed finds and 5-15 b
 Icon plan: pebble, trail marker, flower, crystal, and ribbon scrap icons.
 
 Layout: mountain path motif; pebble icon row arcs toward the right edge.
+
+Seek image placement note: Keep the mountain path readable but allow fair hiding in the midground and background along rock clusters, trail edges, switchbacks, and moss patches. Use trail markers, dragon footprints, ridge plants, ribbon scraps, weathered signposts with no readable text, and mountain path details around the scene. Hide the Shimmer Trail Stone as the special mission item without surrounding it with many similar glowing stones.
 
 #### Page 14 / Facing Page 15
 
@@ -170,6 +190,8 @@ Icon plan: crystal, gem, cave pool, bell, carved stone, and sparkle icons.
 
 Layout: crystal frame; story box upper-left, checklist pockets stepping right.
 
+Seek image placement note: Cluster cave pools, reflections, carved stones, echo marks, ledges, smooth rock shelves, cave shadows, hidden dragon symbols, and small festival keepsakes along cave walls, ledges, poolsides, and glowing cracks. Hide the Echo Glow Gem as the special mission item without surrounding it with many similar gems.
+
 #### Page 16 / Facing Page 17
 
 Title: `The Ancient Dragon Door`
@@ -183,6 +205,8 @@ Checklist rule: Dragon Door Key first, then 10 main printed finds and 5-15 bonus
 Icon plan: key, vine, carved stone, lantern, crystal shard, and dragon-scale icons.
 
 Layout: ancient-door parchment; Ember lower-left pointing right, checklist in keyhole-shaped markers.
+
+Seek image placement note: Keep the doorway threshold and approach readable while allowing fair hiding around the midground door frame, wall, side stones, vines, hinges, keyholes, handles, carvings, moss patches, dragon-scale patterns, and tiny festival lanterns along the side stones. Hide the Dragon Door Key as the special mission item without adding many similar keys nearby.
 
 #### Page 18 / Facing Page 19
 
@@ -198,6 +222,8 @@ Icon plan: basket, jar, bell, ribbon, gem, treat, and token icons.
 
 Layout: market stall label card; checklist tokens run toward the right side.
 
+Seek image placement note: Keep the market aisle/walkway readable while allowing fair hiding in foreground, midground, and background stall areas. Cluster baskets, tiny trinkets, treats, fabric pouches, painted tokens, souvenir boxes, small dragon-made objects, counter displays, stall shelves, hand-carried parcels, and festival lantern strings on stalls, hooks, baskets, and counter edges.
+
 #### Page 20 / Facing Page 21
 
 Title: `The Festival Shines`
@@ -211,6 +237,8 @@ Checklist rule: Sparkleflame Crown Lantern first, then 10 main printed finds and
 Icon plan: lantern, crown, bell, banner, treat, gem, and music icons.
 
 Layout: celebration arch; checklist appears as a lantern string flowing right.
+
+Seek image placement note: Keep the central celebration path readable while allowing fair hiding around the arch, stalls, side tables, hanging decorations, midground celebration details, and background festival structures. Place festival lantern strings, lantern garlands, glowing lantern stands, musical objects, friendly dragon details, treat tables, pennants, drums, tiny horns, side stalls, and dance-path details around the scene. Hide the Sparkleflame Crown Lantern as the special mission item; other festival lanterns may appear, but the mission item should be the only crown-shaped lantern.
 
 ### Pages 22-23 Recap / Reward Spread
 
@@ -316,6 +344,8 @@ Icon plan: acorn, key, tiny door, leaf, root, and bell icons.
 
 Layout: fairy-door parchment; Luma or Ember may look right toward the seek page.
 
+Character reference line: If Luma appears, use Luma Leafwhisk reference images `Luma_Leafwhisk-001`, `Luma_Leafwhisk-002`, and `Luma_Leafwhisk-003`; always use Ember reference images `Ember-001`, `Ember-002`, and `Ember-003` for Ember.
+
 #### Page 8 / Facing Page 9
 
 Title: `Hootiepuff's Lookout`
@@ -329,6 +359,8 @@ Checklist rule: Moonfeather Clue first, then 10 main printed finds and 5-15 bonu
 Icon plan: feather, nest, moon, twig, berry, and owl-like puff icons.
 
 Layout: nest vignette on the left; Hootiepuff and Ember look right; feather checklist panel.
+
+Character reference line: Use HootiePuff reference images `HootiePuff-001`, `HootiePuff-002`, and `HootiePuff-003` for Hootiepuff; use Ember reference images `Ember-001`, `Ember-002`, and `Ember-003` for Ember.
 
 #### Page 10 / Facing Page 11
 
@@ -440,7 +472,7 @@ Book 3 material rule: In Crystal Castle prompts, make the castle walls, towers, 
 
 Book 3 non-crystal search rule: Every Book 3 seek-image prompt should include a rich mix of non-crystal searchable items, such as brass bells, metal keys, fabric ribbons, cloth banners, paper guide cards, folded maps with no readable text, books, scrolls, baskets, flower pots, stone planters, rounded stones, tiny tools, flags, cushions, bowls, plates, spoons, hinges, handles, knobs, coins, crowns, chests, shelves, and safe cozy castle props. Do not include signs as searchable props. Crystal items should feel like accents among these objects, not the whole search vocabulary.
 
-Book 3 helper rule: Every Book 3 seek-image prompt should show Ember exactly once as the child's visible guide/helper, never as a hidden target. Gemma Glint is the approved pink crystal castle guide, but she is page-specific: use Gemma only for Gemma's Guide Nook, Book 3 seek page 9 / paired story-list page 8, unless the user explicitly requests otherwise. Other Book 3 seek scenes may include friendly castle helpers and tiny original fantasy creatures in the earlier gate-prompt style: preparing the castle for Ember's arrival, polishing crystal trim, carrying little baskets of gems, arranging glowing flowers, hanging jewel lanterns, sweeping stone steps, and adding small magical visual jokes such as a tiny helper polishing the same gem twice, a lantern glowing in rainbow colors, a shy creature peeking from behind a stone planter, or a basket of gems gently wobbling. Keep helpers secondary and organized so they add life without covering hidden objects.
+Book 3 helper rule: Every Book 3 seek-image prompt should show Ember exactly once as the child's visible guide/helper, never as a hidden target, and should directly name Ember reference images `Ember-001`, `Ember-002`, and `Ember-003`. Gemma Glint is the approved pink crystal castle guide, but she is page-specific: use Gemma only for Gemma's Guide Nook, Book 3 seek page 9 / paired story-list page 8, and directly name Gemma reference images `Gemma_Glint-001`, `Gemma_Glint-002`, and `Gemma_Glint-003`, unless the user explicitly requests otherwise. Other Book 3 seek scenes may include friendly castle helpers and tiny original fantasy creatures in the earlier gate-prompt style: preparing the castle for Ember's arrival, polishing crystal trim, carrying little baskets of gems, arranging glowing flowers, hanging jewel lanterns, sweeping stone steps, and adding small magical visual jokes such as a tiny helper polishing the same gem twice, a lantern glowing in rainbow colors, a shy creature peeking from behind a stone planter, or a basket of gems gently wobbling. Keep helpers secondary and organized so they add life without covering hidden objects.
 
 ### Production Order
 
@@ -537,6 +569,8 @@ Checklist rule: Pink Guide Gem first, then 10 main printed finds and 5-15 bonus 
 Icon plan: pink gem, small map, shelf, ribbon, brass bell, crystal lantern, and guide-card icons.
 
 Layout: Gemma/Ember cue on the left, both looking right; gem guide card checklist.
+
+Character reference line: Use Gemma Glint reference images `Gemma_Glint-001`, `Gemma_Glint-002`, and `Gemma_Glint-003` for Gemma; use Ember reference images `Ember-001`, `Ember-002`, and `Ember-003` for Ember.
 
 #### Page 10 / Facing Page 11
 
@@ -640,6 +674,244 @@ Visual source: Ember in a friendly stone castle celebration setting, with crysta
 
 Text rule: Render the title and closing text exactly. Do not add extra teaser words, fake text, page numbers, labels, or answer marks. If exact generated text fails, use no-text art and add the text in layout.
 
+## Ember Book 4 10-Spread Plan
+
+Title: **Ember and the Moonlit Seaside Search**.
+
+Book 4 character rule: Every Book 4 seek-image prompt should show Ember exactly once as the child's visible guide/helper, never as a hidden target, and should directly name Ember reference images `Ember-001`, `Ember-002`, and `Ember-003`. Named supporting characters must come from canon only: Pebblekins, Hootiepuff, Luma Leafwhisk, and Elder Glowkeeper. Do not introduce new named seaside characters. Generic background seaside helpers or tiny non-recurring fantasy creatures may appear only as secondary scene life when the location calls for it.
+
+### Production Order
+
+Printed order is story/list left page then seek image right page. Production order is seek image first, then story/list page after the find list is approved:
+
+```text
+1, 3, 2, 5, 4, 7, 6, 9, 8, 11, 10, 13, 12, 15, 14, 17, 16, 19, 18, 21, 20, 22-23, 24
+```
+
+### Shorthand And Preferred Files
+
+| Shorthand / Request | Page Role | Printed Pages | Paired Page | Prompt Title / Location | Mission Item | Preferred Files |
+|:---|:---|:---|:---|:---|:---|:---|
+| `b4p1` / `Book 4 page 1` | title page | 1 | n/a | Ember and the Moonlit Seaside Search | title page | `B4P01.png` |
+| `b4p3` / `b4p3 list 20-30` / `b4p2 md` / `b4p2` / `Book 4 page 3` | seek image + paired story/list | 3 then 2 | 2 story/list | The Moon Shell Map / Shellspark Beach | Moon Shell Map | `B4P03.png`, `B4P02.md`, `B4P02.png` |
+| `b4p5` / `b4p5 list 20-30` / `b4p4 md` / `b4p4` / `Book 4 page 5` | seek image + paired story/list | 5 then 4 | 4 story/list | Lanterns in the Tide Pools / Tide Pool Lantern Cove | Pearl Glow Lantern | `B4P05.png`, `B4P04.md`, `B4P04.png` |
+| `b4p7` / `b4p7 list 20-30` / `b4p6 md` / `b4p6` / `Book 4 page 7` | seek image + paired story/list | 7 then 6 | 6 story/list | Stars on the Sandbar / Starfish Sandbar | Tiny Starfish Compass | `B4P07.png`, `B4P06.md`, `B4P06.png` |
+| `b4p9` / `b4p9 list 20-30` / `b4p8 md` / `b4p8` / `Book 4 page 9` | seek image + paired story/list | 9 then 8 | 8 story/list | The Driftwood Treasure Hut / Driftwood Treasure Hut | Driftwood Door Charm | `B4P09.png`, `B4P08.md`, `B4P08.png` |
+| `b4p11` / `b4p11 list 20-30` / `b4p10 md` / `b4p10` / `Book 4 page 11` | seek image + paired story/list | 11 then 10 | 10 story/list | Treats by the Coral / Coral Cupcake Stand | Coral Berry Cupcake | `B4P11.png`, `B4P10.md`, `B4P10.png` |
+| `b4p13` / `b4p13 list 20-30` / `b4p12 md` / `b4p12` / `Book 4 page 13` | seek image + paired story/list | 13 then 12 | 12 story/list | The Kelp Ribbon Trail / Kelp Ribbon Trail | Kelp Ribbon Clue | `B4P13.png`, `B4P12.md`, `B4P12.png` |
+| `b4p15` / `b4p15 list 20-30` / `b4p14 md` / `b4p14` / `Book 4 page 15` | seek image + paired story/list | 15 then 14 | 14 story/list | The Seahorse Garden Bridge / Seahorse Garden Bridge | Seahorse Garden Key | `B4P15.png`, `B4P14.md`, `B4P14.png` |
+| `b4p17` / `b4p17 list 20-30` / `b4p16 md` / `b4p16` / `Book 4 page 17` | seek image + paired story/list | 17 then 16 | 16 story/list | Stories in the Glow Reef / Glow Reef Library | Shimmer Scroll Shell | `B4P17.png`, `B4P16.md`, `B4P16.png` |
+| `b4p19` / `b4p19 list 20-30` / `b4p18 md` / `b4p18` / `Book 4 page 19` | seek image + paired story/list | 19 then 18 | 18 story/list | Steps to the Moonbeam Light / Moonbeam Lighthouse Steps | Moonbeam Lens | `B4P19.png`, `B4P18.md`, `B4P18.png` |
+| `b4p21` / `b4p21 list 20-30` / `b4p20 md` / `b4p20` / `Book 4 page 21` | seek image + paired story/list | 21 then 20 | 20 story/list | The Seaside Glows / Seaside Glow Finale | Seaside Crown Lantern | `B4P21.png`, `B4P20.md`, `B4P20.png` |
+| `b4p22-23` / `Book 4 pages 22-23` | recap / reward spread | 22-23 | n/a | Recap / reward spread | all 10 mission items | `B4P22-23.png` |
+| `b4p24` / `Book 4 page 24` | closing / teaser | 24 | n/a | Where Will Ember Search Next? | n/a | `B4P24.png` |
+
+### Page Map
+
+| Spread | Story/List Page | Seek Page | Zone | Seek Location | Mission Item | Layout Variant |
+|---:|---:|---:|:---|:---|:---|:---|
+| 1 | 2 | 3 | Moonlit Shore and Tide Pools | Shellspark Beach | Moon Shell Map | sandy path underlay; Ember points right |
+| 2 | 4 | 5 | Moonlit Shore and Tide Pools | Tide Pool Lantern Cove | Pearl Glow Lantern | Pebblekins stone cue; pearl checklist bubbles |
+| 3 | 6 | 7 | Moonlit Shore and Tide Pools | Starfish Sandbar | Tiny Starfish Compass | Hootiepuff moon cue; star icons |
+| 4 | 8 | 9 | Moonlit Shore and Tide Pools | Driftwood Treasure Hut | Driftwood Door Charm | Pebblekins driftwood cue; charm checklist tags |
+| 5 | 10 | 11 | Coral Village and Kelp Paths | Coral Cupcake Stand | Coral Berry Cupcake | coral-card layout; treat icons |
+| 6 | 12 | 13 | Coral Village and Kelp Paths | Kelp Ribbon Trail | Kelp Ribbon Clue | Luma kelp cue; leaflike kelp icons |
+| 7 | 14 | 15 | Coral Village and Kelp Paths | Seahorse Garden Bridge | Seahorse Garden Key | Luma garden cue; key bubbles |
+| 8 | 16 | 17 | Glow Reef and Lighthouse Point | Glow Reef Library | Shimmer Scroll Shell | Luma reef cue; scroll-shell icons |
+| 9 | 18 | 19 | Glow Reef and Lighthouse Point | Moonbeam Lighthouse Steps | Moonbeam Lens | Elder Glowkeeper lighthouse cue; lens markers |
+| 10 | 20 | 21 | Glow Reef and Lighthouse Point | Seaside Glow Finale | Seaside Crown Lantern | Elder Glowkeeper finale cue; lantern checklist string |
+
+### Broad Searchable Categories
+
+| Seek Page | Broad Searchable Categories |
+|---:|:---|
+| 3 | Shells, smooth stones, beach pails, tiny flags, star shapes, moon glows, sand swirls, driftwood pieces, small seaside clue objects. |
+| 5 | Tide pools, pearls, lanterns, shells, sea glass, rounded rocks, tiny crabs, coral bits, water sparkles, cozy cove decorations. |
+| 7 | Starfish, sand dollars, compass shapes, beach ribbons, little bottles with no readable text, shells, tiny anchors, soft wave patterns. |
+| 9 | Driftwood planks, charms, rope loops, shells, jars, safe rounded tools, tiny treasure boxes, woven baskets, beach hut details. |
+| 11 | Coral shapes, berry treats, bowls, spoons, cupcake trays, napkins, shells, tiny signs with no readable text, seaside bakery props. |
+| 13 | Kelp ribbons, sea leaves, bubbles, shells, path stones, glow beads, tiny fish shapes, ribbon knots, soft underwater-garden details. |
+| 15 | Seahorse shapes, garden keys, flowers, bridge stones, coral rails, shells, water plants, soft lanterns, tiny garden treasures. |
+| 17 | Scroll shells, books with no readable text, reef shelves, bookmarks, coral lamps, pearls, small jars, clue cards, cozy library objects. |
+| 19 | Lighthouse steps, lenses, lanterns, moon shapes, shells, rope, glass pieces, wave tiles, tiny windows, glowing guide details. |
+| 21 | Crown lanterns, moon shells, pearls, ribbons, bells, beach flowers, sea glass, celebration flags, glowing waves, friendly seaside props. |
+
+### Story/List Source Blocks
+
+#### Page 2 / Facing Page 3
+
+Title: `The Moon Shell Map`
+
+Story: `A silvery shell rolled to Ember's feet at the edge of the moonlit shore. The waves sparkled softly, but the beach path was missing its brightest clue. Ember opened his satchel and saw a tiny map glow in the sand.`
+
+Mission line: `Can you help Ember find the Moon Shell Map?`
+
+Checklist rule: Moon Shell Map first, then 10 main printed finds and 5-15 bonus finds from approved page 3 art.
+
+Icon plan: shell, moon, map, wave, pebble, and sparkle icons.
+
+Layout: sandy path underlay; Ember lower-left pointing right along the beach.
+
+#### Page 4 / Facing Page 5
+
+Title: `Lanterns in the Tide Pools`
+
+Story: `Pebblekins sat very still beside the round tide pools while Ember watched tiny lights blink under the water. The cove should have glowed like a necklace of pearls, but one lantern was still asleep. A pearl-bright shimmer waited near the rocks.`
+
+Mission line: `Can you help Ember find the Pearl Glow Lantern?`
+
+Checklist rule: Pearl Glow Lantern first, then 10 main printed finds and 5-15 bonus finds from approved page 5 art.
+
+Icon plan: pearl, lantern, shell, tide pool, rock, and bubble icons.
+
+Layout: tide-pool border; small Pebblekins and Ember cue on the left; checklist bubbles drift gently toward the right edge.
+
+Character reference line: Use Pebblekins reference images `Pebblekins-001`, `Pebblekins-002`, and `Pebblekins-003` for Pebblekins; use Ember reference images `Ember-001`, `Ember-002`, and `Ember-003` for Ember.
+
+#### Page 6 / Facing Page 7
+
+Title: `Stars on the Sandbar`
+
+Story: `The sandbar glittered with starfish shapes and soft moonlight. Hootiepuff blinked at the star marks while Ember followed them across the sand. One little compass was hiding among the bright seaside clues.`
+
+Mission line: `Can you help Ember find the Tiny Starfish Compass?`
+
+Checklist rule: Tiny Starfish Compass first, then 10 main printed finds and 5-15 bonus finds from approved page 7 art.
+
+Icon plan: starfish, compass, shell, ribbon, wave, and sand-dollar icons.
+
+Layout: sandbar parchment; Hootiepuff and Ember look right; star icons lead the eye toward the seek page.
+
+Character reference line: Use HootiePuff reference images `HootiePuff-001`, `HootiePuff-002`, and `HootiePuff-003` for Hootiepuff; use Ember reference images `Ember-001`, `Ember-002`, and `Ember-003` for Ember.
+
+#### Page 8 / Facing Page 9
+
+Title: `The Driftwood Treasure Hut`
+
+Story: `A cozy hut made of smooth driftwood leaned beside the shore. Pebblekins helped Ember peek at ropes, shells, baskets, and tiny beach treasures while moonlight slipped between the planks. A little door charm glowed somewhere inside.`
+
+Mission line: `Can you help Ember find the Driftwood Door Charm?`
+
+Checklist rule: Driftwood Door Charm first, then 10 main printed finds and 5-15 bonus finds from approved page 9 art.
+
+Icon plan: driftwood, charm, rope, basket, shell, and treasure-box icons.
+
+Layout: driftwood frame; Pebblekins and Ember gesture right while charm tags hold the checklist.
+
+Character reference line: Use Pebblekins reference images `Pebblekins-001`, `Pebblekins-002`, and `Pebblekins-003` for Pebblekins; use Ember reference images `Ember-001`, `Ember-002`, and `Ember-003` for Ember.
+
+#### Page 10 / Facing Page 11
+
+Title: `Treats by the Coral`
+
+Story: `Near the coral village, a tiny cupcake stand smelled sweet and berry-bright. The treats sparkled with seafoam colors, but one special cupcake was missing from the tray. Ember followed a crumbly glow.`
+
+Mission line: `Can you help Ember find the Coral Berry Cupcake?`
+
+Checklist rule: Coral Berry Cupcake first, then 10 main printed finds and 5-15 bonus finds from approved page 11 art.
+
+Icon plan: cupcake, berry, coral, spoon, bowl, shell, and napkin icons.
+
+Layout: coral-card layout; treat icons step from left to right.
+
+#### Page 12 / Facing Page 13
+
+Title: `The Kelp Ribbon Trail`
+
+Story: `A path of soft green kelp ribbons waved beneath the moonlit water. Luma Leafwhisk showed Ember how the ribbons curled and uncurled like they were pointing the way. One clue ribbon shone brighter than the rest.`
+
+Mission line: `Can you help Ember find the Kelp Ribbon Clue?`
+
+Checklist rule: Kelp Ribbon Clue first, then 10 main printed finds and 5-15 bonus finds from approved page 13 art.
+
+Icon plan: kelp, ribbon, bubble, shell, path stone, and glow bead icons.
+
+Layout: ribbon trail layout; Luma and Ember cue on the left; checklist follows the kelp curve toward the right edge.
+
+Character reference line: Use Luma Leafwhisk reference images `Luma_Leafwhisk-001`, `Luma_Leafwhisk-002`, and `Luma_Leafwhisk-003` for Luma; use Ember reference images `Ember-001`, `Ember-002`, and `Ember-003` for Ember.
+
+#### Page 14 / Facing Page 15
+
+Title: `The Seahorse Garden Bridge`
+
+Story: `The garden bridge curved over a quiet pool full of flowers, shells, and seahorse shapes. Luma Leafwhisk listened with Ember when a tiny click sounded near the railing. A garden key was tucked somewhere in the soft seaside sparkle.`
+
+Mission line: `Can you help Ember find the Seahorse Garden Key?`
+
+Checklist rule: Seahorse Garden Key first, then 10 main printed finds and 5-15 bonus finds from approved page 15 art.
+
+Icon plan: seahorse, key, bridge, flower, coral rail, and shell icons.
+
+Layout: garden bridge motif; Luma and Ember look right; key bubbles carry the checklist toward the seek page.
+
+Character reference line: Use Luma Leafwhisk reference images `Luma_Leafwhisk-001`, `Luma_Leafwhisk-002`, and `Luma_Leafwhisk-003` for Luma; use Ember reference images `Ember-001`, `Ember-002`, and `Ember-003` for Ember.
+
+#### Page 16 / Facing Page 17
+
+Title: `Stories in the Glow Reef`
+
+Story: `The glow reef held little shelves of shells, scrolls, and shiny clue cards. Luma Leafwhisk helped Ember look carefully without reading any words, because the pictures told the story. A shimmer scroll shell waited among the reef treasures.`
+
+Mission line: `Can you help Ember find the Shimmer Scroll Shell?`
+
+Checklist rule: Shimmer Scroll Shell first, then 10 main printed finds and 5-15 bonus finds from approved page 17 art.
+
+Icon plan: scroll shell, coral shelf, pearl, bookmark, reef lamp, and jar icons.
+
+Layout: reef parchment; Luma and Ember cue on the left; scroll-shell icons sit in a gentle row leading right.
+
+Character reference line: Use Luma Leafwhisk reference images `Luma_Leafwhisk-001`, `Luma_Leafwhisk-002`, and `Luma_Leafwhisk-003` for Luma; use Ember reference images `Ember-001`, `Ember-002`, and `Ember-003` for Ember.
+
+#### Page 18 / Facing Page 19
+
+Title: `Steps to the Moonbeam Light`
+
+Story: `At Lighthouse Point, Elder Glowkeeper waited beside the rounded steps while moonbeams slid down like ribbons of silver. Ember climbed carefully and watched the glass glow above him. One moonbeam lens could wake the seaside light.`
+
+Mission line: `Can you help Ember find the Moonbeam Lens?`
+
+Checklist rule: Moonbeam Lens first, then 10 main printed finds and 5-15 bonus finds from approved page 19 art.
+
+Icon plan: lens, lighthouse, moon, rope, lantern, shell, and glass icons.
+
+Layout: lighthouse stair layout; Elder Glowkeeper and Ember cue on the left; lens markers climb toward the right side.
+
+Character reference line: Use Elder Glowkeeper reference images `Elder_Glowkeeper-001`, `Elder_Glowkeeper-002`, and `Elder_Glowkeeper-003` for Elder Glowkeeper; use Ember reference images `Ember-001`, `Ember-002`, and `Ember-003` for Ember.
+
+#### Page 20 / Facing Page 21
+
+Title: `The Seaside Glows`
+
+Story: `Ember reached the seaside finale as Elder Glowkeeper watched the waves, lanterns, and moon shells shine together. The whole shore shimmered with happy light. One crown lantern held the final glow of the moonlit search.`
+
+Mission line: `Can you help Ember find the Seaside Crown Lantern?`
+
+Checklist rule: Seaside Crown Lantern first, then 10 main printed finds and 5-15 bonus finds from approved page 21 art.
+
+Icon plan: crown lantern, moon shell, pearl, ribbon, bell, wave, and sea-glass icons.
+
+Layout: moonlit celebration arch; Elder Glowkeeper and Ember celebrate on the left; lantern checklist string flows toward the right page.
+
+Character reference line: Use Elder Glowkeeper reference images `Elder_Glowkeeper-001`, `Elder_Glowkeeper-002`, and `Elder_Glowkeeper-003` for Elder Glowkeeper; use Ember reference images `Ember-001`, `Ember-002`, and `Ember-003` for Ember.
+
+### Pages 22-23 Recap / Reward Spread
+
+Show Ember proudly celebrating the 10 recovered mission items:
+
+Moon Shell Map; Pearl Glow Lantern; Tiny Starfish Compass; Driftwood Door Charm; Coral Berry Cupcake; Kelp Ribbon Clue; Seahorse Garden Key; Shimmer Scroll Shell; Moonbeam Lens; Seaside Crown Lantern.
+
+Do not show answer locations. This is a reward spread, not an answer key.
+
+### Page 24 Closing Source
+
+Title: `Where Will Ember Search Next?`
+
+Closing text: `Thanks to you, the moonlit seaside glows again! Ember closes his satchel with a happy smile, ready for the next tiny mystery.`
+
+Visual source: Ember in the restored seaside glow with moon shells, lanterns, gentle waves, and no specific next-book mission item. The page should feel complete while leaving room for future adventures.
+
+Text rule: Render the title and closing text exactly. Do not add extra teaser words, fake text, page numbers, labels, or answer marks. If exact generated text fails, use no-text art and add the text in layout.
+
 ## Ember Covers, KDP, Marketing, and Upload Preflight
 
 This section replaces the archived `07_EMBER_COVERS_KDP_MARKETING.md` and `EMBER_KDP_PREFLIGHT.md` files for active production. Use it for cover prompts, back-cover copy, listings, KDP checks, pricing decisions, and final upload review.
@@ -707,6 +979,23 @@ Active mission-item motifs:
 
 Suggested front-cover direction: Ember before a friendly pink-lavender stone castle with rounded towers, crystal roofs, crystal windows, a few named crystal objects such as a crystal lantern, crystal rose, or crystal wind chime, golden doors, stained-glass color, and soft rainbow light. Avoid loose gems, loose crystals, crystal piles, and random crystal scatter.
 
+### Book 4 Cover Motifs
+
+Active mission-item motifs:
+
+- Moon Shell Map
+- Pearl Glow Lantern
+- Tiny Starfish Compass
+- Driftwood Door Charm
+- Coral Berry Cupcake
+- Kelp Ribbon Clue
+- Seahorse Garden Key
+- Shimmer Scroll Shell
+- Moonbeam Lens
+- Seaside Crown Lantern
+
+Suggested front-cover direction: Ember at a moonlit magical seaside with shells, tide pools, soft lanterns, coral details, and a clear search-adventure feel.
+
 ### Back-Cover / Listing Positioning
 
 Use the active structure:
@@ -748,10 +1037,10 @@ Before upload, check:
 - [ ] Cover has bleed; front/back text sits inside safe areas; barcode area is clear.
 - [ ] Interior PDF page count is correct and even.
 - [ ] Interior art is 300 DPI or better at final trim size.
-- [ ] All seek pages have no readable text, arrows, circles, squares, answer marks, watermarks, or accidental labels.
-- [ ] Mission items and hidden objects are not highlighted, boxed, circled, outlined, marked, or covered by any square/circle/shape overlay.
+- [ ] All seek pages have no readable text, arrows, circles, squares, boxes, outlines, halos, highlights, answer marks, watermarks, or accidental labels.
+- [ ] Hard fail: mission items and hidden objects are not highlighted, boxed, circled, squared, outlined, haloed, arrow-pointed, labeled, marked, or covered by any answer-mark/shape overlay.
 - [ ] All story/list, title, recap, and closing text is spelled exactly as approved.
-- [ ] Story/list pages have mission item first, then 10 main finds, then 5-15 bonus finds.
+- [ ] Story/list pages have three separate visible sections: Mission Item, Main Finds, and Bonus Finds. Mission Item has 1 item, Main Finds has 10 items, and Bonus Finds has 5-15 items.
 - [ ] Child-facing story/list checklists match the approved facing seek artwork; objects are actually visible/printed.
 - [ ] Pages 22-23 mission-item recap/reward spread matches the 10 mission items for that book.
 - [ ] Answer keys are not required for upload; pages 22-23 are the mission recap. If adding a QR or URL for optional hints, verify link, destination, and privacy note before printing.
@@ -1070,14 +1359,20 @@ Hidden objects:
 Composition requirements:
 - [vertical full-page / two-page spread / cover]
 - organized visual complexity
+- intentional object placement by category
+- varied child-nameable objects with distinct silhouettes
+- secondary scene life when the location calls for villagers, helpers, customers, or festival-goers
 - layered foreground, midground, and background
 - no empty dead zones
 - hidden targets distributed across the full scene
-- keep important objects away from trim and gutter risk zones
+- walkways, paths, aisles, bridge surfaces, and door thresholds mostly open when present
+- important objects may sit in foreground, midground, or background, but should not be clipped by trim or lost in the gutter
 
 Hiding requirements:
 - fair but challenging
-- primary target not at the page edge
+- primary target may be in the foreground, midground, or background as long as it stays recognizable at final print size and is not clipped by trim or lost in the gutter
+- this depth rule applies to all findable objects: mission item, main finds, bonus finds, and candidate finds should be allowed across foreground, midground, and background
+- primary target placed in a believable hiding spot, not random floor scatter or the middle of a walkway/threshold
 - hidden targets identifiable once found
 - use partial cover, playful pose, similar colors, or busy surroundings without making objects invisible
 
@@ -1091,7 +1386,7 @@ Print requirements:
 - strong readability at final page size
 
 Page text behavior:
-- seek-image pages: no readable text, labels, speech bubbles, page numbers, watermarks, arrows, answer marks, circles, squares, boxes, outlines, or shape overlays on mission items or hidden objects
+- seek-image pages: no readable text, labels, speech bubbles, page numbers, watermarks, arrows, answer marks, circles, squares, boxes, outlines, halos, highlights, or any shape overlay on mission items or hidden objects; the mission item must be hidden as natural scene art only
 - non-seek text pages: generate the exact approved text supplied for the page; no extra words, misspellings, fake text, gibberish, unapproved labels, or watermarks
 
 Other negative constraints:
@@ -1099,6 +1394,8 @@ Other negative constraints:
 - no famous seek-and-find character imitation
 - no red-and-white striped focal outfit
 - no muddy clutter
+- no random floor litter or heavy walkway/path clutter
+- avoid muddy clutter, random scatter, and overly repeated same-shape props that make the search unreadable
 ```
 
 ---
@@ -1257,22 +1554,34 @@ Create a commercial-quality seek-and-find puzzle book illustration with strong A
 The scene should be dense and highly detailed, but organized and readable, with clear silhouettes, strong object separation, and distinct foreground, midground, and background zones.
 ```
 
+## Intentional Placement Block
+
+```text
+Make the seek scene rich but not overstuffed. Arrange named mission items, main find/category items, and decorative details in intentional clusters where they naturally belong in the environment. Keep walkways, paths, aisles, bridge surfaces, door thresholds, and the main eye path mostly open and readable, with only a few small edge details. Do not use random floor scatter or drop important hidden objects in the middle of walking routes.
+```
+
+## Scene Life and Object Variety Block
+
+```text
+Include appropriate secondary scene life for the location, such as friendly original villagers, helpers, customers, festival-goers, or small non-recurring fantasy creatures doing simple actions. They should make the world feel alive without becoming hidden targets, crowding walkways, or covering required objects. Use varied, identifiable, child-nameable searchable props with distinct silhouettes. If a prompt starts repeating one generic object family, revise the page row to name more specific objects from that page's actual setting.
+```
+
 ## Fair Hiding Block
 
 ```text
-Hide the primary target in a fair but moderately challenging way. Do not place it at the extreme page edge. Blend it using partial cover, similar colors, playful pose, or surrounding activity, while keeping its required identifying features visible once noticed.
+Hide the primary target in a fair but moderately challenging way. It may be in the foreground, midground, or background, including near a scene edge, as long as it is not clipped by trim, lost in the gutter, or unreadable at final print size. Blend it using partial cover, similar colors, playful pose, or surrounding activity, while keeping its required identifying features visible once noticed.
 ```
 
 ## Hidden Object Distribution Block
 
 ```text
-Distribute the hidden objects evenly across the whole scene. Do not cluster them all in the foreground or in one corner. Keep all required targets inside the print-safe area.
+Distribute hidden objects across foreground, midground, and background. This applies to all findable objects, including the mission item, main finds, bonus finds, and candidate finds. Background hiding is allowed and encouraged when the object remains recognizable at final print size, has enough contrast, and is not clipped by trim or lost in the gutter. Keep foreground finds to a minority unless the approved page layout specifically calls for a foreground-heavy scene. Do not cluster all hidden objects in the foreground or in one corner.
 ```
 
 ## Seek Image No Text Block
 
 ```text
-No text, no labels, no readable signs, no speech bubbles, no page numbers, no watermark, no border, no arrows, no answer marks, no circles, no squares, no boxes, no outlines, and no shape overlays on mission items or hidden objects.
+Hard rule: do not mark the mission item or any hidden object. No text, no labels, no readable signs, no speech bubbles, no page numbers, no watermark, no border, no arrows, no answer marks, no circles, no squares, no boxes, no outlines, no halos, no highlights, and no shape overlays on mission items or hidden objects. Hide the mission item as natural scene art only.
 ```
 
 Use this block only for seek images and other puzzle-art pages that are not supposed to contain generated words. Do not use it for title, story/list, recap, closing, instruction, or other non-seek text pages.
@@ -1283,16 +1592,73 @@ Use this block only for seek images and other puzzle-art pages that are not supp
 Generate the exact approved text supplied for this non-seek page. Preserve spelling, capitalization, punctuation, line order, and object names exactly. Do not add extra words, fake text, gibberish, unapproved labels, watermarks, page numbers, or speech bubbles.
 ```
 
+## Story/List Markdown Source Structure
+
+When producing a story/list `.md` source file, use this structure and keep the three checklist groups separate:
+
+```markdown
+# [Story/List Page Title]
+
+Source section:
+[canonical source section]
+
+Printed page:
+[story/list page number]
+
+Facing seek page:
+[seek page number]
+
+Title:
+[exact title]
+
+Story:
+[exact story prose]
+
+Mission line:
+[exact mission line]
+
+## Mission Item
+- [exact mission item]
+
+## Main Finds
+1. [main find 1]
+2. [main find 2]
+3. [main find 3]
+4. [main find 4]
+5. [main find 5]
+6. [main find 6]
+7. [main find 7]
+8. [main find 8]
+9. [main find 9]
+10. [main find 10]
+
+## Bonus Finds
+- [bonus find 1]
+- [bonus find 2]
+- [bonus find 3]
+- [bonus find 4]
+- [bonus find 5]
+```
+
+Do not replace the three section headings with one combined checklist. Add more bonus bullets only when approved, up to 15 total bonus finds.
+
 ## Title Page Exact Text and Source Images Block
 
 ```text
-For this title page, use the character images saved in ChatGPT Sources as required visual references. Use the exact source-image names and written mascot description from the active project canon. Render the exact approved title words exactly as supplied. Do not paraphrase, shorten, expand, redesign the wording, substitute a different title, add extra words, create fake text or gibberish, misspell anything, add a watermark, or add a page number. Never use unresolved placeholder text or a generic book label as title text. If the exact approved title, source-image names, or written mascot description is missing, stop and ask before generating.
+For this title page, use the character images saved in ChatGPT Sources as required visual references. For Ember title pages, directly name `Ember-001`, `Ember-002`, and `Ember-003`, and include the written mascot description from the active project canon. Render the exact approved title words exactly as supplied. Do not paraphrase, shorten, expand, redesign the wording, substitute a different title, add extra words, create fake text or gibberish, misspell anything, add a watermark, or add a page number. Never use unresolved placeholder text or a generic book label as title text. If the exact approved title, direct source-image names, or written mascot description is missing, stop and ask before generating.
 ```
 
 ## Story/List Low-Clutter Block
 
 ```text
-For this story/list page, keep the supporting illustration calm and less cluttered than the facing seek image. Preserve open breathing room around the title, story prose, mission line, and find-list areas. Include exact generated text from the approved source for the title, story prose, mission line, mission item, main finds, and bonus finds required by the active project workflow. Decorative details should support the theme without competing with the text or item lists.
+For this story/list page, keep the supporting illustration calm and less cluttered than the facing seek image. Preserve open breathing room around the title, story prose, mission line, and find-list areas. Include exact generated text from the approved source for the title, story prose, mission line, section headings, mission item, main finds, and bonus finds required by the active project workflow.
+
+The find list must remain visibly separated into three checklist sections in this order:
+1. Mission Item - exactly 1 item.
+2. Main Finds - exactly 10 items.
+3. Bonus Finds - 5-15 items.
+
+Do not merge, flatten, rename, reorder, or combine these sections into one continuous list. Decorative details should support the theme without competing with the text or item lists.
 ```
 
 ## Legal Safety Block
@@ -1347,11 +1713,15 @@ Composition:
 - clear foreground, midground, and background
 - no empty areas
 - hidden objects distributed across the full image
-- important objects kept away from trim and gutter risk zones
+- named mission items and category items placed intentionally where they naturally belong
+- walkways, paths, aisles, bridge surfaces, and door thresholds mostly open when present
+- important objects may appear in foreground, midground, or background, but should not be clipped by trim or lost in the gutter
 
 Hiding:
 - fair but challenging
-- primary target not on page edge
+- primary target can be in the foreground, midground, or background if it remains recognizable and is not clipped by trim or lost in the gutter
+- all findable objects, including mission item, main finds, bonus finds, and candidate finds, may be hidden across foreground, midground, and background
+- primary target hidden in a believable scene location, not random floor scatter or the middle of a walkway/threshold
 - objects identifiable once found
 - no unfair invisibility or tiny blob hiding
 
@@ -1366,7 +1736,7 @@ Requirements:
 - expressive characters and small visual stories
 - for seek-image pages only: no text, labels, speech bubbles, page numbers, watermarks, or borders
 - for non-seek text pages: generate exact approved text; no extra words, misspellings, fake text, gibberish, unapproved labels, or watermarks
-- for story/list pages: calm low-clutter supporting art with exact text for 1 mission item, 10 main search items, and 5-15 bonus items
+- for story/list pages: calm low-clutter supporting art with exact text preserved as three separate checklist sections: Mission Item (1), Main Finds (10), and Bonus Finds (5-15); never flatten these into one list
 - no copyrighted character or famous seek-and-find imitation
 ```
 
@@ -1466,7 +1836,17 @@ Record rule, template, and workflow changes here.
 
 | Date | File | Change | Reason |
 |---|---|---|---|
+| 2026-05-02 | `03_TEMPLATES_PROMPTS_AND_LOGS.md`, `03_EMBER_BOOK1_10_SPREAD_PLAN.md` | Restored festival lanterns as a positive Book 1 motif across cottage, village, workshop, door, market, and finale prompt vocabulary. | Keep the Sparkleflame Festival visually lantern-rich while still using page-specific objects. |
+| 2026-05-02 | `01_RULES_CORE_AUDIENCE_MODE_PROJECTS.md`, `02_WORKFLOWS_AND_QA.md`, `03_TEMPLATES_PROMPTS_AND_LOGS.md` | Added foreground-bias guard while preserving foreground/midground/background hiding for all findable objects. | Prevent image generation from defaulting most hidden objects to the foreground. |
+| 2026-05-02 | `03_TEMPLATES_PROMPTS_AND_LOGS.md` | Replaced strict Book 1 filler-restraint language with page-specific object vocabulary and ambiguity controls inside the actual Book 1 prompt rows. | Fix overused filler by removing generic object mentions from production prompts instead of adding another strict rule. |
+| 2026-05-02 | `03_TEMPLATES_PROMPTS_AND_LOGS.md` | Reworded hiding and print-safety prompt blocks to allow foreground, midground, and background hiding when objects remain recognizable and not clipped by trim/gutter. | Prevent prompts from pushing all hidden objects into the foreground. |
+| 2026-05-02 | `03_TEMPLATES_PROMPTS_AND_LOGS.md` | Promoted Book 4, *Ember and the Moonlit Seaside Search*, into the canonical four-rule bundle with shorthand rows, story/source blocks, Page 24 closing source, cover motifs, and canon character references. | Make Book 4 usable as rules-file source truth for shorthand/page-plan prompting. |
 | 2026-05-01 | Four-file rules bundle, system instructions | Promoted active Ember rules, character canon, Book 1-3 story/source plans, cover/KDP notes, and preflight rules from archive into the four-file bundle; marked checklists, Word docs, split files, archives, and all-in-one exports as derivative only. | Make the four consolidated files plus system instructions the only active source of truth. |
+| 2026-05-01 | Character reference rules | Required Ember and supporting-character prompts to directly name exact reference image files, including page-specific lines for Luma, Hootiepuff, and Gemma. | Prevent prompts from referencing side characters without attaching the correct image-file refs. |
+| 2026-05-01 | Story/list source and prompt rules | Required story/list `.md` sources and image prompts to keep Mission Item, Main Finds, and Bonus Finds as three separate visible sections; added prompt QA hard-fail checks for flattened lists. | Prevent story/list image prompts from merging mission, main, and bonus finds into one undifferentiated checklist. |
+| 2026-05-02 | Book 1 seek-image placement rules | Added Book 1 clutter control, category placement, walkway/path clearance notes, and reusable prompt-template wording for intentional object placement. | Keep Book 1 prompts rich but less cluttered, with named/category items placed deliberately and fewer objects in walkways. |
+| 2026-05-02 | Scene life and object variety rules | Required appropriate secondary villagers/helpers/festival-goers and varied child-nameable props; limited repeated bottles, jars, gems, crystals, beads, and sparkle blobs. | Prevent seek prompts from producing empty-feeling scenes or pages dominated by same-style small props. |
+| 2026-05-02 | Mission-item answer-mark hard rule | Hardened the four-rule bundle against circles, squares, boxes, outlines, halos, highlights, arrows, labels, answer marks, and shape overlays on mission items or hidden objects. | Prevent generated seek art from marking the answer instead of hiding it naturally. |
 | 2026-05-01 | Book 3 Crystal Castle prompt balance | Applied the page 3 crystal/non-crystal/helper balance across the other Book 3 seek-page categories and icon plans. | Keep all Crystal Castle prompts consistent: crystal accents plus majority non-crystal searchable objects and organized helper life. |
 | 2026-05-01 | Seek-image prompt and QA rules | Added explicit bans on squares, circles, boxes, outlines, and shape overlays on mission items or hidden objects. | Prevent generated art from marking answers instead of hiding them fairly. |
 | 2026-05-01 | Book 3 Crystal Castle searchable items | Removed signs from the non-crystal searchable item rule, page 3 category row, and icon plan. | Prevent generated Crystal Castle prompts from requesting signs. |

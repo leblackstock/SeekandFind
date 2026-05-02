@@ -62,8 +62,8 @@ Prompt row-match blocks must cite `seek-and-find-rules-consolidated-4-files/03_T
 - Seek page prompts use the row mission item and do not borrow from a neighboring row.
 - Seek page prompts must not request readable text, labels, arrows, circles, answer marks, page numbers, or watermarks.
 - After seek approval, identify 20-30 candidate finds, then select 1 mission item + 10 main finds + 5-15 bonus finds.
-- When shorthand includes `md`, provide the story/list source as a downloadable `.md` file attachment using the preferred filename.
-- Story/list images use exact `.md` text and keep low-clutter composition with open breathing room around title, story, mission line, and find lists.
+- When shorthand includes `md`, provide the story/list source as a downloadable `.md` file attachment using the preferred filename. The `.md` must keep Mission Item, Main Finds (10), and Bonus Finds (5-15) as separate labeled sections.
+- Story/list images use exact `.md` text, preserve the three find-list sections, and keep low-clutter composition with open breathing room around title, story, mission line, and find lists. A single flattened checklist is a fail.
 - Title pages use exact approved title words plus the source-image names and written character description from the active project canon.
 - Recap and Page 24 prompts use the exact source text in the canonical rules bundle.
 
@@ -77,9 +77,9 @@ Per spread list check:
 - [ ] Chat identified **20-30** candidate finds.
 - [ ] Human checked candidates against the image.
 - [ ] Final list chosen: 1 mission item + 10 main finds + 5-15 bonus finds.
-- [ ] Story/list `.md` saved.
-- [ ] Story/list image generated from exact `.md` text.
-- [ ] Story/list text, spelling, icons, low-clutter composition, and left-to-right direction checked.
+- [ ] Story/list `.md` saved with separate Mission Item, Main Finds (10), and Bonus Finds (5-15) sections.
+- [ ] Story/list image generated from exact `.md` text with the three find-list sections preserved.
+- [ ] Story/list text, section breaks, spelling, icons, low-clutter composition, and left-to-right direction checked.
 - [ ] Final files saved.
 
 Checklist key: `Art` = image approved, `List` = 20-30 candidates checked and final list chosen, `Text` = story/list text/icons checked, `Save` = final files saved.

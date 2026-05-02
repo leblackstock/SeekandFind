@@ -131,7 +131,7 @@ For Ember shorthand or page-plan requests, use the canonical Ember book plans an
 
 Every shorthand-generated prompt must begin with a row-match block that echoes the exact source row fields used: source section, shorthand/request, page role, printed pages, paired page, prompt title/location, mission item, and preferred files. The prompt must use those same row values without substitution or inference. If sources conflict, stop and report the conflict.
 
-When a shorthand command includes `md` and produces a story/list markdown source, the output must be a downloadable `.md` file attachment using the preferred filename from the page row. Inline markdown alone is not sufficient; it may only serve as a preview.
+When a shorthand command includes `md` and produces a story/list markdown source, the output must be a downloadable `.md` file attachment using the preferred filename from the page row. Inline markdown alone is not sufficient; it may only serve as a preview. The `.md` source must keep find-list text separated into **Mission Item**, **Main Finds (10)**, and **Bonus Finds (5-15)** sections; a single flattened list is a workflow failure.
 
 All shorthand prompts and generated `.md` sources must reference the canonical rules-file source section used. Do not invent story prose, source text, mission items, titles, recap text, closing text, prompt title/location values, or filenames when the canonical row/source block is missing. Stop and ask or report the missing source.
 
@@ -289,18 +289,25 @@ Include as applicable:
 - print-ready
 - vertical/full-page or spread format
 - organized visual complexity
+- intentional object placement by category
+- varied child-nameable objects with distinct silhouettes
+- scene life such as secondary villagers, helpers, customers, or festival-goers when the location calls for it
+- named mission item placed in a believable hiding spot, not random floor scatter
+- mostly clear walkways, paths, aisles, bridge surfaces, and door thresholds when the scene includes them
 - clear silhouettes
 - fair hiding
 - no copyrighted resemblance
 - page-type text policy: seek images use no-text constraints; non-seek text pages request exact approved generated text and forbid extra/unapproved words
 
+For seek-image prompts, include this as a hard negative constraint: no circles, squares, boxes, outlines, arrows, halos, labels, highlights, answer marks, or shape overlays around the mission item or any hidden object. The mission item must be integrated into the scene as ordinary art, not marked as the answer.
+
 ## Title Page Prompt Rule
 
-For title page images, reference the mascot/character images saved in ChatGPT Sources by exact uploaded name and include the written mascot description from the active project canon. The prompt must request the exact approved title words only. Do not allow flexible title wording, alternate title concepts, substitutions, extra words, fake text, gibberish, misspellings, watermarks, or page numbers. Never send unresolved placeholders or generic book labels. If the exact approved title, required source images, or written mascot description are missing, stop and ask.
+For title page images, reference the mascot/character images saved in ChatGPT Sources by exact uploaded name and include the written mascot description from the active project canon. For Ember title pages, directly name `Ember-001`, `Ember-002`, and `Ember-003`. The prompt must request the exact approved title words only. Do not allow flexible title wording, alternate title concepts, substitutions, extra words, fake text, gibberish, misspellings, watermarks, or page numbers. Never send unresolved placeholders or generic book labels. If the exact approved title, required source images, or written mascot description are missing, stop and ask.
 
 ## Story/List Prompt Rule
 
-For story/list page images, prompt for a calmer, less cluttered supporting illustration than the facing seek image. Keep open breathing room around the title, story prose, mission line, and find-list areas. The page source must include the required item counts from the active project workflow, and the prompt must request exact generated text from the approved source for all title, story, mission-line, and list text. If the source block or approved list is missing, stop instead of inventing it.
+For story/list page images, prompt for a calmer, less cluttered supporting illustration than the facing seek image. Keep open breathing room around the title, story prose, mission line, and find-list areas. The page source must include the required item counts from the active project workflow, separated into **Mission Item**, **Main Finds (10)**, and **Bonus Finds (5-15)** sections. The image prompt must request exact generated text from the approved source for all title, story, mission-line, section headings, and list text, and must explicitly say not to merge the three find sections into one list. If the source block or approved sectioned list is missing, stop instead of inventing it.
 
 ## Mascot Prompt Rule
 
@@ -312,6 +319,8 @@ For mascot series, every prompt must include:
 - personality
 - visibility requirement
 - hiding difficulty
+- exact reference image file names when reference images exist; for Ember prompts, directly name `Ember-001`, `Ember-002`, and `Ember-003`
+- exact side-character reference image file names when a named supporting character appears
 
 ## Coloring Prompt Rule
 
@@ -337,6 +346,8 @@ For seek images and other puzzle-art pages without planned text:
 - no Where's Waldo resemblance
 - no red-and-white striped focal outfit
 - no muddy clutter
+- no random floor litter or heavy walkway clutter
+- no muddy clutter, random scatter, or overly repeated same-shape props that make the search unreadable
 - no blurred details
 
 For non-seek pages that must generate exact text, do not use "no text" or "do not generate readable text." Use:
@@ -384,7 +395,7 @@ Check:
 ## Step 3 — Hiding Fairness Review
 
 Check:
-- primary target is not edge-hidden
+- primary target can be hidden in foreground, midground, or background, including near scene edges, if it remains readable and is not clipped by trim or lost in the gutter
 - target is not too tiny
 - target is identifiable once found
 - camouflage is fair
@@ -549,17 +560,26 @@ Use this checklist for every puzzle page.
 - [ ] No major dead empty zones.
 - [ ] No single area carries all interesting content.
 - [ ] Page is dense but not muddy.
+- [ ] Walkways, paths, aisles, bridge surfaces, door thresholds, and main visual routes stay mostly readable when present.
+- [ ] Props are arranged in intentional clusters or natural surfaces, not random scatter across floors/routes.
+- [ ] Scene includes appropriate life or activity when the location calls for it, without crowding the search.
+- [ ] Object variety is strong: searchable props have distinct silhouettes and are child-nameable for the target age.
 
 ## Hidden Object Check
 
 - [ ] Primary target exists.
-- [ ] Primary target is not at the extreme edge.
+- [ ] Primary target may be in the foreground, midground, or background, as long as it is recognizable at final print size and not clipped by trim or lost in the gutter.
 - [ ] Primary target is identifiable once found.
+- [ ] Primary target is hidden in a believable location and not dropped in the middle of a walkway, aisle, path, bridge surface, or threshold.
 - [ ] All listed secondary targets exist.
+- [ ] All findable objects, including mission item, main finds, bonus finds, and candidate finds, are allowed across foreground, midground, and background.
 - [ ] Hidden objects are distributed across the page.
-- [ ] No more than the allowed number of hidden objects are in the foreground.
+- [ ] Hidden objects are not clustered mostly in the foreground unless the approved page layout specifically calls for it.
 - [ ] No target is hidden only by being tiny or invisible.
 - [ ] No accidental duplicate makes the answer ambiguous.
+- [ ] Category items are placed where they naturally belong in the scene instead of scattered randomly.
+- [ ] If one generic object family dominates the scene, the next prompt revision replaces generic filler wording with more precise page-specific objects.
+- [ ] Mission items and hidden objects are not circled, squared, boxed, outlined, haloed, highlighted, arrow-pointed, labeled, or covered by any answer-mark/shape overlay.
 
 ## Print Check
 
@@ -773,9 +793,15 @@ Use this before sending an image prompt.
 - [ ] Composition requirements included.
 - [ ] Print requirements included.
 - [ ] Negative constraints included.
+- [ ] Exact mascot reference image file names included when available; for Ember, `Ember-001`, `Ember-002`, and `Ember-003` are named directly.
+- [ ] Any named supporting character has exact reference image file names included directly in the prompt.
 - [ ] For title pages: saved ChatGPT Sources character image names included and exact approved title words supplied.
 - [ ] For title pages: written mascot description included; for Ember, explicitly baby dragon and not fox/cat/human wizard.
 - [ ] For title pages: no unresolved title placeholders, generic book labels, or off-reference mascot redesigns.
+- [ ] For story/list pages: approved `.md` source includes separate Mission Item, Main Finds (10), and Bonus Finds (5-15) sections.
+- [ ] For story/list pages: image prompt supplies those section headings and item lists exactly.
+- [ ] For story/list pages: image prompt explicitly forbids merging or flattening the mission item, main finds, and bonus finds into one list.
+- [ ] For seek-image pages: image prompt hard-forbids circles, squares, boxes, outlines, arrows, halos, labels, highlights, answer marks, and shape overlays on mission items or hidden objects.
 
 ## Mascot Prompt Check
 
@@ -784,6 +810,7 @@ Use this before sending an image prompt.
 - [ ] Colors included.
 - [ ] Signature accessories included.
 - [ ] Consistency requirement included.
+- [ ] Exact reference image file names included directly when available.
 - [ ] Hiding instruction included.
 
 ## Coloring Prompt Check
@@ -799,3 +826,7 @@ Use this before sending an image prompt.
 - [ ] No vague "make it good" dependency.
 - [ ] No contradictory instructions.
 - [ ] Object count is realistic for the audience/mode.
+- [ ] Prompt asks for rich but not overstuffed seek art, with category items intentionally placed.
+- [ ] Prompt keeps walkways, paths, aisles, bridge surfaces, and door thresholds mostly open when they exist.
+- [ ] Prompt asks for varied, identifiable, child-nameable objects and uses page-specific vocabulary instead of broad decorative filler.
+- [ ] Prompt includes appropriate secondary scene life, such as festival-goers or helpers, when the page location needs activity.

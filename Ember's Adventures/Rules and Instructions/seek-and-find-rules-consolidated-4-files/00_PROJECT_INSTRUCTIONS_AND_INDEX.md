@@ -19,6 +19,8 @@ The four files listed below are the complete working set. Any `Source:` headings
 
 Use these four uploaded files as the governing source for planning, prompting, reviewing, and revising seek-and-find books. Apply universal rules first, then audience overlays, mode overlays, project/theme overlays, workflows, QA, templates, and prompt blocks. Do not create copyrighted character clones or Waldo-like trade dress. For every page, preserve fair hiding, strong readability, print readiness, and commercial appeal. When unsure, ask one concise clarifying question or make a clearly labeled best-effort assumption.
 
+Hard rule for seek-image puzzle art: never mark the mission item or any hidden object with a circle, square, box, outline, arrow, halo, label, highlight, or other answer-mark/shape overlay. The object must be hidden as natural scene art. Markers are allowed only in separate answer-key or hint assets created after final art approval, never on the seek page image itself.
+
 For Ember books, production checklists are not source of truth. The source of truth is this four-file rules bundle plus `CHATGPT_PROJECT_SYSTEM_INSTRUCTIONS.md`; use the canonical Ember project rules, character canon, book plans, story/list source blocks, cover/KDP notes, and preflight rules now embedded inside these four files. Checklists and Word files must be treated as derivative copies and corrected to match the rules if they conflict.
 
 ## Workflow Splitter
@@ -322,7 +324,7 @@ Image prompts must be built from:
 
 Do not prompt from vibes alone.
 
-For title pages in mascot books, the prompt must reference the character images saved in ChatGPT Sources by their exact uploaded names and must include the written mascot description from the active project canon. Title text must be the exact approved title words only, with no flexible wording, substitutions, extra words, fake text, or misspellings. Do not send prompts with unresolved placeholders or generic book labels. If the exact title, required source images, or written mascot description are missing, stop and ask instead of generating.
+For title pages in mascot books, the prompt must reference the character images saved in ChatGPT Sources by their exact uploaded names and must include the written mascot description from the active project canon. For Ember books, the title-page prompt must directly name `Ember-001`, `Ember-002`, and `Ember-003`. Title text must be the exact approved title words only, with no flexible wording, substitutions, extra words, fake text, or misspellings. Do not send prompts with unresolved placeholders or generic book labels. If the exact title, required source images, or written mascot description are missing, stop and ask instead of generating.
 
 ## Image Review Rule
 

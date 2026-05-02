@@ -269,15 +269,15 @@ Not:
 Hidden targets should be distributed across the full page.
 
 Default distribution:
-- foreground: no more than 30% of listed targets
-- midground: 40–50% of listed targets
-- background: 20–30% of listed targets
+- use a visible mix of foreground, midground, and background targets
+- allow readable background hiding when the object remains identifiable at final print size
+- avoid letting the foreground carry most of the puzzle unless a project-specific layout requires it
 
 Project overlays may adjust this, but crowding all objects in one area is forbidden.
 
 ## Edge Rule
 
-Do not place primary targets on the extreme page edge.
+Primary targets and other findable objects may be placed in foreground, midground, or background, including near scene edges, as long as they are not clipped by trim, lost in the gutter, or made unreadable at final print size.
 
 Secondary objects may be near an edge only if:
 - they are not at risk of trim
@@ -373,9 +373,11 @@ For seek-image generation, prompts should usually include:
 - no page number
 - no border unless intentionally needed
 
+Hard answer-mark rule: seek-image puzzle art must not use circles, squares, boxes, outlines, arrows, halos, labels, highlights, or any other shape overlay to call out mission items or hidden objects. The mission item must be naturally integrated into the scene; it may be partly hidden by composition, color, overlap, or surrounding activity, but it cannot be framed, boxed, circled, outlined, or otherwise marked as the answer.
+
 For non-seek page images that are designed to carry words, such as title pages, story/list pages, recap pages, closing pages, and instruction pages, prompts must request the exact approved generated text. Do not add a no-text constraint to these prompts. Instead, forbid only extra words, misspellings, fake text, gibberish, watermarks, and unapproved labels.
 
-Title-page prompts are not flexible title concepts. They must request the exact approved title words only. For mascot title pages, reference the character images saved in ChatGPT Sources by exact uploaded name and include the written mascot description from the active project canon. Unresolved placeholders and generic book labels are hard failures. If the exact title, required source images, or written mascot description are missing, stop and ask instead of generating.
+Title-page prompts are not flexible title concepts. They must request the exact approved title words only. For mascot title pages, reference the character images saved in ChatGPT Sources by exact uploaded name and include the written mascot description from the active project canon. For Ember title pages, directly name `Ember-001`, `Ember-002`, and `Ember-003`. Unresolved placeholders and generic book labels are hard failures. If the exact title, required source images, or written mascot description are missing, stop and ask instead of generating.
 
 ## Hidden Object List Placement
 
@@ -574,6 +576,7 @@ Good hidden objects are:
 - theme-appropriate
 - visually distinct
 - fun to find
+- child-nameable at the target age
 - not overly similar to many background objects
 - suited to the target age range
 
@@ -583,6 +586,7 @@ Weak hidden objects are:
 - tiny and shapeless
 - culturally confusing for the audience
 - too similar to surrounding clutter
+- repeated too many times with the same shape, such as many similar bottles, jars, crystals, or gems
 - difficult to draw consistently
 
 ## Count Guidance
@@ -604,6 +608,9 @@ A target list should include a mix of:
 - colors
 - categories
 - difficulty levels
+- material types and silhouettes
+
+Prefer varied, child-nameable finds with distinct silhouettes. If a generated scene keeps repeating one decorative object family, revise the prompt's page-specific object list instead of adding a stricter generic ban.
 
 Example fantasy list categories:
 - treasure
@@ -950,7 +957,7 @@ Every page should include:
 - one main activity
 - several side activities
 - hidden targets distributed across zones
-- no more than about 3 hidden objects in the foreground unless project rules allow it
+- foreground finds kept to a minority unless project rules allow a foreground-heavy page
 
 ## Success Standard
 
@@ -1465,7 +1472,7 @@ Default production order when story starts on page 2:
 
 ## Ember Canon
 
-Reference names:
+Ember reference image files:
 
 - `Ember-001`
 - `Ember-002`
@@ -1506,11 +1513,12 @@ Use supporting characters only when they are called for by a page prompt. Keep t
 
 Approved recurring roles:
 
-- Hootiepuff — fuzzy owl clue-spotter
-- Pebblekins — shy rock-dragon friend
-- Luma Leafwhisk — enchanted forest sprite friend
-- Gemma Glint — pink crystal castle guide
-- Elder Glowkeeper — wise golden dragon elder
+- Hootiepuff — fuzzy owl clue-spotter. Reference image files: `HootiePuff-001`, `HootiePuff-002`, `HootiePuff-003`.
+- Pebblekins — shy rock-dragon friend. Reference image files: `Pebblekins-001`, `Pebblekins-002`, `Pebblekins-003`.
+- Luma Leafwhisk — enchanted forest sprite friend. Reference image files: `Luma_Leafwhisk-001`, `Luma_Leafwhisk-002`, `Luma_Leafwhisk-003`.
+- Gemma Glint — pink crystal castle guide. Reference image files: `Gemma_Glint-001`, `Gemma_Glint-002`, `Gemma_Glint-003`.
+- Elder Glowkeeper — wise golden dragon elder. Reference image files: `Elder_Glowkeeper-001`, `Elder_Glowkeeper-002`, `Elder_Glowkeeper-003`.
+- Cast lineup — group reference only when needed for approved cast/world promo art. Reference image files: `Ember_Cast_Lineup-001`, `Ember_Cast_Lineup-002`.
 
 Avoid:
 
@@ -1519,12 +1527,22 @@ Avoid:
 - copyrighted character silhouettes
 - overly detailed recurring side characters unless the user approves them as canon
 
-Only add side-character references if the page actually includes that character. If a needed reference file is not present or the name is uncertain, stop and ask the user before producing a final prompt.
+Only add side-character reference lines if the page actually includes that character, and name that character's image files directly in the prompt. If a needed reference file is not present or the name is uncertain, stop and ask the user before producing a final prompt.
 
 Default Ember reference line:
 
 ```text
-Use the Ember reference images named in the Ember Canon section for Ember's baby dragon appearance and proportions.
+Use Ember reference images Ember-001, Ember-002, and Ember-003 for Ember's baby dragon appearance and proportions.
+```
+
+Side-character reference lines:
+
+```text
+Use HootiePuff reference images HootiePuff-001, HootiePuff-002, and HootiePuff-003 for Hootiepuff's fuzzy owl clue-spotter appearance.
+Use Pebblekins reference images Pebblekins-001, Pebblekins-002, and Pebblekins-003 for Pebblekins' shy rock-dragon friend appearance.
+Use Luma Leafwhisk reference images Luma_Leafwhisk-001, Luma_Leafwhisk-002, and Luma_Leafwhisk-003 for Luma's enchanted forest sprite appearance.
+Use Gemma Glint reference images Gemma_Glint-001, Gemma_Glint-002, and Gemma_Glint-003 for Gemma's pink crystal castle guide appearance.
+Use Elder Glowkeeper reference images Elder_Glowkeeper-001, Elder_Glowkeeper-002, and Elder_Glowkeeper-003 for the elder golden dragon appearance.
 ```
 
 ## Ember Page Standards
@@ -1534,16 +1552,22 @@ Seek image pages are the right-side full-color puzzle scenes. Each seek image pa
 - one full-color seek-and-find scene
 - Ember visible as guide/helper, not hidden
 - one special mission item hidden fairly
-- broad-category clutter in the prompt, not a fixed final checklist
-- no readable text, labels, checklist, arrows, circles, page numbers, watermarks, speech bubbles, or answer marks
+- broad-category searchable objects organized in the prompt, not a fixed final checklist
+- no readable text, labels, checklist, arrows, circles, squares, boxes, outlines, shape overlays, page numbers, watermarks, speech bubbles, or answer marks
 - print-safe composition with important objects away from trim/gutter risk
+
+Seek-image prompts should be rich and searchable without being overstuffed. Build clear, intentional prop zones instead of random scatter: named mission items, likely main finds/category items, and decorative details should each have believable locations in the scene. Place category items where they naturally belong, such as bakery items on trays and counters, market items in stalls and baskets, garden items in beds and leaves, trail items along stones and edges, cottage items on shelves and tables, and doorway items around frames or side stones. If generic decorative objects start replacing the page-specific search vocabulary, revise the actual prompt row to name more precise setting objects. Keep walkways, paths, bridge surfaces, trails, door thresholds, aisles, and the main eye path readable while still allowing fair hiding in foreground, midground, and background. This depth rule applies to all findable objects, including the mission item, main finds, bonus finds, and candidate finds.
+
+Mission items and hidden objects must be unmarked in the final seek image. Do not circle, square, box, outline, halo, highlight, label, arrow-point, or otherwise frame the mission item or any hidden object. Any marked answer view belongs only in a separate answer-key or hint asset after final art approval.
+
+Seek-image prompts should include scene life when the location calls for it: friendly original background villagers, helpers, customers, festival-goers, or small non-recurring fantasy creatures doing simple actions that make the world feel alive. These figures must stay secondary, not become hidden targets, not crowd the path, and not cover required hidden objects. Use varied child-nameable searchable props with distinct silhouettes.
 
 After seek art approval:
 
 1. Ask chat to identify **20-30 candidate finds** visible in the seek image.
 2. Human checks the list against the image.
 3. Select **1 mission item**, **10 main printed finds**, and **5-15 bonus finds**.
-4. Save a `.md` source file for the facing story/list page.
+4. Save a `.md` source file for the facing story/list page. The `.md` source must keep the find list in three separate labeled sections: **Mission Item**, **Main Finds (10)**, and **Bonus Finds (5-15)**. Do not flatten the items into one continuous checklist.
 5. Generate the story/list page with exact text and themed icons.
 6. Verify spelling, line breaks, icons, and object names.
 
@@ -1552,12 +1576,12 @@ Story/list pages are left-side pages. They are designed story pages, not workshe
 - one short heading
 - prewritten 2-4 sentence story prose specific to that book/location
 - a mission line asking the child to help Ember find the special mission item
-- a checklist area with the mission item first
+- a checklist area with three clear sections, in this order: **Mission Item**, **Main Finds**, **Bonus Finds**
 - **1 mission item**, listed first
 - **10 main printed finds** selected from the approved facing seek image
 - **5-15 bonus finds** selected from the approved facing seek image
 - themed icons first; icons may be simplified/stylized but must match clearly enough for kids
-- exact text from the `.md` source file, with no extra words or misspellings
+- exact text from the `.md` source file, preserving the section labels, item groupings, line breaks, and object names with no extra words or misspellings
 
 External fallback: if themed icons cause too many errors, switch to fancy checkboxes. If exact generated text fails after reasonable attempts, generate story/list art without text and add text in layout.
 
@@ -1581,9 +1605,9 @@ Allowed variation: book/location motifs, accent colors, border decorations, chec
 
 Seek-image prompts must not generate readable text.
 
-Title-page prompts must reference the Ember character images named in the Ember Canon section unless the uploaded source names differ. They must also include the required written Ember description from the Ember Canon section. Title-page prompts must use exact approved title words only. Unresolved placeholders and generic book labels are hard failures. If the exact approved title, required source images, or written Ember description are missing, stop and ask instead of generating.
+Title-page prompts must directly reference `Ember-001`, `Ember-002`, and `Ember-003` unless the uploaded source names differ. They must also include the required written Ember description from the Ember Canon section. Title-page prompts must use exact approved title words only. Unresolved placeholders and generic book labels are hard failures. If the exact approved title, required source images, or written Ember description are missing, stop and ask instead of generating.
 
-Story/list pages, title pages, recap pages, instruction pages, and closing pages must request exact generated text from the approved source text when using ChatGPT Image 2. The prompt must supply the exact words and layout, and must forbid extra words, misspellings, fake text, gibberish, unapproved labels, and watermarks. Verify every word. If text fails after review, regenerate without text and add it in layout.
+Story/list pages, title pages, recap pages, instruction pages, and closing pages must request exact generated text from the approved source text when using ChatGPT Image 2. The prompt must supply the exact words and layout, and must forbid extra words, misspellings, fake text, gibberish, unapproved labels, and watermarks. Story/list prompts must preserve the approved list as three visible sections, not one merged list: Mission Item, Main Finds, and Bonus Finds. Verify every word and every section break. If text fails after review, regenerate without text and add it in layout.
 
 Pages 22-23 show the 10 special mission items for that book as a celebratory reward spread. This is not a per-scene answer key and does not mark where small objects were hidden.
 
@@ -1593,7 +1617,9 @@ Traditional location-style answer keys are optional and not required. If used la
 
 Use a polished soft 2.25D children's storybook seek-and-find illustration style with lightly illustrated edges, rounded plush-like forms, gentle sculpted volume, painterly shading, warm cheerful lighting, mostly smooth clean surfaces, minimal visible outlines, subtle pencil-like edge details, magical but clean and readable, not flat cartoon, not realistic, and not overly 3D or plastic-looking.
 
-Strict avoid list: no Waldo-style red-and-white striped focal outfit, Disney/HP/Waldo clones, copyrighted character imitation, scary mood, weapons, photorealism, anime style, flat vector style, muddy clutter, tiny invisible objects, generated labels on seek pages, arrows, circles, answer marks, page numbers, or watermarks.
+Strict avoid list: no Waldo-style red-and-white striped focal outfit, Disney/HP/Waldo clones, copyrighted character imitation, scary mood, weapons, photorealism, anime style, flat vector style, muddy clutter, tiny invisible objects, generated labels on seek pages, arrows, circles, squares, boxes, outlines, halos, highlights, answer marks, page numbers, or watermarks.
+
+Also avoid floor-litter hiding, random prop scatter, dense repeated tiny objects, and placing named mission items in the middle of walkways or thresholds. If a scene contains a route, bridge, aisle, path, or doorway, preserve that route as a readable visual path while still allowing finds in foreground, midground, and background surfaces along that route.
 
 # Source: `70_projects\example_project_theme_rules.md`
 
