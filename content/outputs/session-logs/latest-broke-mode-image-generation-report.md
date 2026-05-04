@@ -72,6 +72,7 @@ The QA report includes the required manual visual checklist for Ember canon, no 
 
 - Opens `https://chatgpt.com/` in a persistent Playwright Chromium profile.
 - `--setup-login` opens the same profile for manual login setup.
+- Optional `--browser-channel=chrome` and `--profile-dir=<path>` support can be used for a supervised alternate browser profile if bundled Playwright Chromium gets stuck at normal human verification.
 - The default run pastes the prompt and pauses before submission.
 - The script uses robust textbox/contenteditable locator fallbacks and documents that ChatGPT UI changes may require selector updates.
 - If no reliable download button exists, it saves screenshot evidence and gives manual download guidance.

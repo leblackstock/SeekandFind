@@ -24,9 +24,8 @@ import { saveImageQaReport } from "../../../src/core/image-qa.js";
 import { GenerateResult } from "../../../src/types.js";
 
 const chatGptUrl = "https://chatgpt.com/";
-const profileDir = ".cache/playwright-chatgpt-profile";
 
-const boundaryPattern = /captcha|rate limit|cooldown|try again later|too many requests|payment|upgrade|subscribe|subscription|verify your account|account warning|unusual activity|log in|sign in/i;
+const boundaryPattern = /captcha|rate limit|cooldown|try again later|too many requests|payment|upgrade|subscribe|subscription|verify your account|account warning|unusual activity|log in|sign in|couldn.t sign you in|browser or app may not be secure|try using a different browser/i;
 const imageReadyPattern = /download|regenerate|share|copy|image/i;
 
 function option(args: string[], name: string): string | undefined {
@@ -69,12 +68,22 @@ export function parseBrokeModeArgs(args: string[] = process.argv.slice(2)): Brok
     ...defaults,
     prompt,
     assetName: option(args, "asset-name") ?? positionalArgs[1],
+    browserChannel: option(args, "browser-channel") ?? option(args, "channel"),
+    profileDir: option(args, "profile-dir") ?? defaults.profileDir,
     autoSubmit: booleanOption(args, "auto-submit", defaults.autoSubmit),
     maxAttempts,
     cooldownSeconds,
     dryRun: flag(args, "dry-run"),
     force: flag(args, "force")
   };
+}
+
+async function launchChatGptContext(root: string, options: Pick<BrokeModeRuntimeOptions, "browserChannel" | "profileDir">) {
+  return chromium.launchPersistentContext(join(root, options.profileDir), {
+    headless: false,
+    acceptDownloads: true,
+    channel: options.browserChannel
+  });
 }
 
 async function waitForApproval(): Promise<boolean> {
@@ -122,7 +131,7 @@ async function bodyText(page: Page): Promise<string> {
 async function assertNoBoundary(page: Page): Promise<void> {
   const text = await bodyText(page);
   if (boundaryPattern.test(text) || /auth\/login|\/login/.test(page.url())) {
-    throw new Error("ChatGPT showed a login, limit, cooldown, warning, CAPTCHA, payment, or verification boundary.");
+    throw new Error("ChatGPT showed a login, insecure-browser, limit, cooldown, warning, CAPTCHA, payment, or verification boundary.");
   }
 }
 
@@ -216,10 +225,7 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
     return;
   }
 
-  const context = await chromium.launchPersistentContext(join(root, profileDir), {
-    headless: false,
-    acceptDownloads: true
-  });
+  const context = await launchChatGptContext(root, options);
   const page = context.pages()[0] ?? await context.newPage();
   let screenshotPath: string | undefined;
   let imagePath: string | undefined;
@@ -415,11 +421,12 @@ const invokedPath = process.argv[1] ?? "";
 if (invokedPath.endsWith("automation\\playwright\\scripts\\chatgpt-broke-mode-generate.ts") || invokedPath.endsWith("automation/playwright/scripts/chatgpt-broke-mode-generate.ts")) {
   const setupLogin = flag(process.argv.slice(2), "setup-login");
   if (setupLogin) {
+    const options = parseBrokeModeArgs();
     const root = repoRoot();
-    const context = await chromium.launchPersistentContext(join(root, profileDir), { headless: false, acceptDownloads: true });
+    const context = await launchChatGptContext(root, options);
     const page = context.pages()[0] ?? await context.newPage();
     await page.goto(chatGptUrl, { waitUntil: "domcontentloaded" });
-    console.log("Log into ChatGPT in this Playwright Chromium browser, close the browser when finished, then rerun the command.");
+    console.log(`Log into ChatGPT in this supervised browser, close the browser when finished, then rerun the command. Profile: ${options.profileDir}. Channel: ${options.browserChannel ?? "playwright chromium"}.`);
   } else {
     runBrokeMode(parseBrokeModeArgs()).catch((error) => {
       console.error(error instanceof Error ? error.message : error);

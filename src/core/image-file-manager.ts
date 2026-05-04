@@ -42,6 +42,8 @@ export interface BrokeModeRuntimeOptions {
   maxAttempts: number;
   cooldownSeconds: number;
   assetName?: string;
+  browserChannel?: string;
+  profileDir: string;
   dryRun: boolean;
   force: boolean;
 }
@@ -71,6 +73,7 @@ export function defaultBrokeModeOptions(prompt: string): BrokeModeRuntimeOptions
     autoSubmit: false,
     maxAttempts: 1,
     cooldownSeconds: 120,
+    profileDir: ".cache/playwright-chatgpt-profile",
     dryRun: false,
     force: false
   };

@@ -26,11 +26,23 @@ npm run image:broke-mode -- --setup-login --prompt content/outputs/prompts/book0
 
 Log into ChatGPT manually in the browser. Do not store passwords in the repo. If ChatGPT shows CAPTCHA, account verification, warnings, or payment prompts, handle them manually or stop.
 
+If bundled Playwright Chromium gets stuck at normal human verification, you may try a supervised Chrome-channel profile:
+
+```powershell
+npm run image:broke-mode -- --setup-login --prompt=content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md --browser-channel=chrome --profile-dir=.cache/playwright-chatgpt-chrome-profile
+```
+
+This is not a bypass. It is only a different manually controlled browser profile. Stop if ChatGPT still shows verification, CAPTCHA, rate limits, cooldowns, or warnings.
+
+If Google says `Couldn't sign you in` or `This browser or app may not be secure`, stop. Do not try to bypass it. Use your normal browser manually for that attempt, then save the image into `content/outputs/images/pending-review/` and run local QA with `npm run image:qa`.
+
 ## One-Image-At-A-Time Workflow
 
 ```powershell
 npm run image:broke-mode -- --prompt content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md
 ```
+
+Use the same `--browser-channel` and `--profile-dir` values here if you used them during login setup.
 
 If npm strips bare option names on your setup, use:
 
@@ -139,6 +151,7 @@ The archive should include:
 ## Troubleshooting
 
 - Not logged in: run `--setup-login`, log in manually, then rerun.
+- Google says browser/app is not secure: stop and use the manual normal-browser fallback; do not bypass the sign-in protection.
 - No input box found: ChatGPT UI may have changed; update selectors in `automation/playwright/scripts/chatgpt-broke-mode-generate.ts`.
 - Download failed: use the manual fallback above.
 - `File already exists`: rerun with `--force` only when you intentionally want to overwrite a verification artifact.

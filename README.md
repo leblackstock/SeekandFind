@@ -167,11 +167,27 @@ npm run image:broke-mode -- --setup-login --prompt content/outputs/prompts/book0
 
 Log into ChatGPT manually in the browser, then close it when finished.
 
+If bundled Playwright Chromium gets stuck at normal human verification, use a supervised Chrome-channel profile instead:
+
+```powershell
+npm run image:broke-mode -- --setup-login --prompt=content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md --browser-channel=chrome --profile-dir=.cache/playwright-chatgpt-chrome-profile
+```
+
+This is still manual login. It does not bypass verification, CAPTCHA, rate limits, cooldowns, payment prompts, or account warnings.
+
+If Google says `Couldn't sign you in` or `This browser or app may not be secure`, stop. Use your normal browser manually for that attempt, save the image under `content/outputs/images/pending-review/`, then run:
+
+```powershell
+npm run image:qa -- --file=content/outputs/images/pending-review/YOUR-FILE.png
+```
+
 Run one supervised image attempt:
 
 ```powershell
 npm run image:broke-mode -- --prompt content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md
 ```
+
+Use the same `--browser-channel` and `--profile-dir` values for the generation command if you used them for setup/login.
 
 Default behavior is `--auto-submit=false`: the helper opens ChatGPT, checks for login/limit/payment/warning boundaries, pastes the prompt, and waits for you to type `YES` before submitting. A dry run can validate the prompt and create local preparation artifacts without opening ChatGPT:
 
