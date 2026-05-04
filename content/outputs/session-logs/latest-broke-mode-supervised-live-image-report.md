@@ -6,6 +6,8 @@ Ran one supervised Broke Mode existing-browser image attempt for Book 1 page 8, 
 
 During prompt review, Lauren identified that the prompt was still too much of a source packet. It was clean of local links and paths, but included unnecessary production assumptions, marketing rules, and post-approval find-list guidance. Broke Mode has now been patched to compact the final ChatGPT prompt into image-facing sections only.
 
+Follow-up compact-prompt test: ran one more supervised existing-browser attempt using the compact prompt workflow. The prompt archive confirms the compact image-facing prompt was used. ChatGPT again did not expose a reliable download button to automation, so the attempt was archived as failed/manual-download-required with screenshot evidence.
+
 ## Git Push Result
 
 `git push` succeeded before the live attempt.
@@ -35,6 +37,10 @@ Post-fix compact dry-run prompt:
 
 `content/outputs/images/pending-review/book01-page008-glowing-lantern-garden-compact-prompt-2026-05-04T02-25-35-451Z-prompt.md`
 
+Post-fix compact live-attempt prompt:
+
+`content/outputs/images/failed/book01-page008-glowing-lantern-garden-2026-05-04T02-42-03-323Z/book01-page008-glowing-lantern-garden-2026-05-04T02-42-03-323Z-prompt.md`
+
 ## Browser Mode
 
 Existing browser mode:
@@ -60,6 +66,8 @@ Problem found during human review: the prompt still included unnecessary interna
 
 Fix verification after patch: the compact dry-run prompt is 2,431 characters and omits those internal sections while preserving essential Ember visual canon, scene details, no-text/overlay rules, and KDP format requirements.
 
+Second live test verification: the compact live-attempt prompt includes `Ember-001`, `vertical 8.5 x 11 inch page`, and `17:22 aspect ratio`, and does not include Book 1 KDP assumptions, marketing prompt policy, hidden-object category guidance, local paths, or image file links.
+
 ## Approval / Submit Result
 
 The helper used the default supervised behavior, `autoSubmit=false`. The image request was submitted only after human approval in the interactive Broke Mode window.
@@ -78,6 +86,13 @@ Archived failed-attempt evidence:
 - `content/outputs/images/failed/book01-page008-glowing-lantern-garden-2026-05-04T02-07-03-697Z/book01-page008-glowing-lantern-garden-2026-05-04T02-07-03-697Z-metadata.json`
 - `content/outputs/images/failed/book01-page008-glowing-lantern-garden-2026-05-04T02-07-03-697Z/book01-page008-glowing-lantern-garden-2026-05-04T02-07-03-697Z-prompt.md`
 - `content/outputs/images/failed/book01-page008-glowing-lantern-garden-2026-05-04T02-07-03-697Z/failure-reason.md`
+
+Second compact failed-attempt evidence:
+
+- `content/outputs/images/failed/book01-page008-glowing-lantern-garden-2026-05-04T02-42-03-323Z/book01-page008-glowing-lantern-garden-2026-05-04T02-42-03-323Z-chatgpt-screenshot.png`
+- `content/outputs/images/failed/book01-page008-glowing-lantern-garden-2026-05-04T02-42-03-323Z/book01-page008-glowing-lantern-garden-2026-05-04T02-42-03-323Z-metadata.json`
+- `content/outputs/images/failed/book01-page008-glowing-lantern-garden-2026-05-04T02-42-03-323Z/book01-page008-glowing-lantern-garden-2026-05-04T02-42-03-323Z-prompt.md`
+- `content/outputs/images/failed/book01-page008-glowing-lantern-garden-2026-05-04T02-42-03-323Z/failure-reason.md`
 
 Manual download instructions: download the generated image directly from ChatGPT if it is acceptable, save it under `content/outputs/images/pending-review/`, then run:
 
@@ -105,6 +120,10 @@ Prompt fix/dry run:
 
 - `content/outputs/images/pending-review/book01-page008-glowing-lantern-garden-compact-prompt-2026-05-04T02-25-35-451Z-prompt.md`
 - `content/outputs/images/pending-review/book01-page008-glowing-lantern-garden-compact-prompt-2026-05-04T02-25-35-451Z-metadata.json`
+
+Second compact live attempt:
+
+- `content/outputs/images/failed/book01-page008-glowing-lantern-garden-2026-05-04T02-42-03-323Z/`
 
 Report:
 
