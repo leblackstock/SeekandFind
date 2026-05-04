@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-04T05-13-51-202Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "dry-run",
+  "assetName": "book01-page009-lantern-maker-s-workshop-fixed-direct-prompt-test",
+  "assetSlug": "book01-page009-lantern-maker-s-workshop-fixed-direct-prompt-test",
+  "promptPath": "content/outputs/prompts/book01-page009-lantern-maker-s-workshop-image-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/book01-page009-lantern-maker-s-workshop-fixed-direct-prompt-test-2026-05-04T05-13-51-202Z-prompt.md",
+  "warnings": [
+    "Compacted Broke Mode prompt to image-facing sections only.",
+    "Added missing ChatGPT image-generation requirements: vertical full-page children's seek-and-find illustration; vertical 8.5 x 11 inch page; 17:22 aspect ratio; full-color KDP-style interior page; bleed, trim, and safe-area awareness; Ember is visible as the helper/guide, not hidden"
+  ],
+  "dryRun": true,
+  "autoSubmit": false,
+  "maxAttempts": 1,
+  "browserMode": "manual"
+}

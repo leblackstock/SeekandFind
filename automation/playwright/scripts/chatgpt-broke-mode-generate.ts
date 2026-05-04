@@ -182,6 +182,16 @@ function stripLocalPathMaterial(text: string, warnings: string[]): string {
 }
 
 function removeExistingReferenceInstruction(text: string): string {
+  const finalPromptIndex = text.search(/(?:^|\r?\n)## Final Image Prompt\b/i);
+  if (finalPromptIndex >= 0) {
+    const prefix = text.slice(0, finalPromptIndex);
+    const finalPrompt = text.slice(finalPromptIndex);
+    return [
+      removeExistingReferenceInstruction(prefix),
+      finalPrompt.trim()
+    ].filter(Boolean).join("\n\n").replace(/\n{3,}/g, "\n\n").trim();
+  }
+
   const lines = text.split(/\r?\n/).map((line) => {
     const trimmed = line.trim();
     if (/^## Reference Instruction$/i.test(trimmed)) return "";
@@ -206,13 +216,14 @@ function removeExistingReferenceInstruction(text: string): string {
 
 function referenceInstruction(referenceNames: string[]): string {
   const emberReferences = ["Ember-001", "Ember-002", "Ember-003"];
-  const names = uniqueValues([...emberReferences, ...referenceNames]).join(", ");
+  const names = uniqueValues([...emberReferences, ...referenceNames]);
+  const otherNames = names.filter((name) => !emberReferences.includes(name));
   return [
-    "## Character Reference Handling",
+    "## Visual References",
     "",
-    `Use the character reference images available in this ChatGPT project/source context when available: ${names}.`,
-    "If references are not available, rely strictly on the written Ember canon below."
-  ].join("\n");
+    "Use Ember-001, Ember-002, and Ember-003 as visual references for Ember.",
+    otherNames.length ? `Use ${otherNames.join(", ")} as visual references for their named characters.` : undefined
+  ].filter((part): part is string => typeof part === "string").join("\n");
 }
 
 function missingRequirements(prompt: string): string[] {
@@ -271,6 +282,29 @@ function extractNegativePrompt(text: string): string | undefined {
   return match?.[1]?.trim();
 }
 
+function stripLeadingMetadataBlock(text: string): string {
+  const metadataLine = /^(?:Location|Mission item|Audience|Style|Format|Paired story\/list page|Source row):\s*.+$/i;
+  const lines = text.split(/\r?\n/);
+  let index = 0;
+  while (index < lines.length && (metadataLine.test(lines[index].trim()) || lines[index].trim() === "")) {
+    index += 1;
+  }
+  return lines.slice(index).join("\n").trim();
+}
+
+function stripInlineReferenceParagraphs(text: string): string {
+  const paragraphs = text.split(/\n{2,}/);
+  return paragraphs
+    .filter((paragraph) => {
+      const compact = paragraph.replace(/\s+/g, " ").trim();
+      if (/^Use Ember-001, Ember-002, and Ember-003 as visual references for Ember\./i.test(compact)) return false;
+      if (/^Use Ember reference images Ember-001, Ember-002, and Ember-003/i.test(compact)) return false;
+      return true;
+    })
+    .join("\n\n")
+    .trim();
+}
+
 function compactPromptForChatGPTImageGeneration(prompt: string): { prompt: string; warnings: string[] } {
   const referenceNames = collectReferenceNames(prompt);
   const location = extractField(prompt, "Location");
@@ -296,28 +330,29 @@ function compactPromptForChatGPTImageGeneration(prompt: string): { prompt: strin
   ].filter(Boolean) as string[];
 
   const parts = [
+    "Create one image now.",
+    "",
     referenceInstruction(referenceNames),
     "",
-    "Generate the image now from this prompt. Do not rewrite, summarize, explain, analyze, or turn this into a planning response.",
-    "",
-    "## Essential Ember Visual Canon",
+    "## Ember Appearance",
     "",
     visualRules ?? [
       "- tiny adorable reddish-orange baby dragon",
       "- tiny shiny golden spiral-comma horns",
       "- large glossy blue-teal eyes",
       "- cream belly",
+      "- small-cat sized, not a fox, cat, human wizard, or generic fantasy animal",
       "- plain bright blue-teal scarf",
       "- tiny plain brown crossbody satchel with dull-gold button clasps",
       "- rounded plush-like form",
       "- cheerful, curious expression"
     ].join("\n"),
     "",
-    "## Final Image Prompt",
+    "## Image Prompt",
     "",
     ...metadataLines,
     metadataLines.length ? "" : undefined,
-    finalImagePrompt,
+    stripInlineReferenceParagraphs(stripLeadingMetadataBlock(finalImagePrompt)),
     negativePrompt ? "" : undefined,
     negativePrompt ? "## Avoid" : undefined,
     negativePrompt ? "" : undefined,

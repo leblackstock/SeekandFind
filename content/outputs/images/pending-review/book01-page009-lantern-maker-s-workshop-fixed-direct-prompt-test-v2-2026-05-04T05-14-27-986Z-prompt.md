@@ -1,18 +1,29 @@
-# Ember and the Sparkleflame Festival Search - Page 9 Seek Render Prompt
+Create one image now.
 
-Source row: Book 1 spread 4, story/list page 8, seek page 9, Lantern Maker's Workshop / Baby Flame Lantern.
+## Visual References
+
+Use Ember-001, Ember-002, and Ember-003 as visual references for Ember.
+
+## Ember Appearance
+
+- tiny adorable reddish-orange baby dragon
+- tiny shiny golden spiral-comma horns
+- large glossy blue-teal eyes
+- cream belly
+- small-cat sized, not a fox, cat, human wizard, or generic fantasy animal
+- plain bright blue-teal scarf
+- tiny plain brown crossbody satchel with dull-gold button clasps
+- rounded plush-like form
+- cheerful, curious expression
+
+## Image Prompt
+
 Location: Lantern Maker's Workshop
 Mission item: Baby Flame Lantern
-Paired story/list page: 8
 Audience: children ages 5-8
 Style: soft rounded 2.25D children's storybook
-Format: vertical KDP-style 8.5x11 full-color interior page, portrait aspect ratio 8.5:11 (17:22), with bleed, trim, and safe-area awareness.
-
-## Final Image Prompt
 
 Create a production-ready children's seek-and-find illustration for Ember and the Sparkleflame Festival Search, seek page 9, set in Lantern Maker's Workshop.
-
-Use Ember-001, Ember-002, and Ember-003 as visual references for Ember. Ember must match this canon: tiny adorable reddish-orange baby dragon guide, about small-cat sized, with soft pumpkin-orange and coral shading, a cream belly, tiny shiny golden spiral-comma horns, large glossy blue-teal eyes, a plain bright blue-teal scarf, and a tiny plain brown crossbody satchel with dull-gold button clasps. He has rounded plush-like baby-dragon proportions, soft storybook scale texture, bright friendly eyes, and a cheerful curious expression. He is not a fox, cat, human wizard, or generic fantasy animal.
 
 Ember appears exactly once as a small friendly guide/helper in the foreground or midground. He should help the child enter the scene without dominating the page like cover art. Ember is visible, not hidden, and is not a target object.
 
@@ -26,12 +37,15 @@ No readable generated text. No labels, signs, page numbers, watermarks, gibberis
 
 Keep the tone warm, magical, cheerful, and child-safe for ages 5-8.
 
-## Hidden Object Category Guidance
-
-- Mission Item: Baby Flame Lantern appears once.
-- Main Finds: leave room for 10 clear objects to be selected after the approved image exists.
-- Bonus Finds: leave room for 5-15 optional objects to be selected from visible approved art.
-
-## Negative Prompt / Avoid
+## Avoid
 
 Avoid: off-model Ember, cover-art-sized Ember, duplicate Ember, hidden Ember, duplicate Baby Flame Lantern, similar lookalike mission items, readable text, fake text, labels, answer marks, circles, boxes, arrows, scary lighting, weapons focus, muddy clutter, random floor scatter, repeated generic flowers or lanterns overwhelming the search, copyrighted character imitation, and important details too close to trim or gutter.
+
+## Format Requirements
+
+- vertical full-page children's seek-and-find illustration
+- vertical 8.5 x 11 inch page
+- 17:22 aspect ratio
+- full-color KDP-style interior page
+- bleed, trim, and safe-area awareness
+- Ember is visible as the helper/guide, not hidden

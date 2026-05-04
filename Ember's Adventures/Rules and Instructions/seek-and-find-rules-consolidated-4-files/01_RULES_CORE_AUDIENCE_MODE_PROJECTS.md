@@ -4,6 +4,8 @@ This file contains the rule layer: universal rules, audience overlays, mode over
 
 Source-of-truth note: only this four-file rules bundle plus `CHATGPT_PROJECT_SYSTEM_INSTRUCTIONS.md` is authoritative. Archive files, split files, checklists, and Word documents are derivative/reference material only.
 
+Direct-generation scope rule: if the user supplies a complete image-generation prompt and explicitly asks to generate it now, generate from that prompt immediately through the user's selected generation path. For Ember production in this repo, default to supervised ChatGPT broke mode unless the user explicitly asks for a different renderer. Do not turn the request into prompt-writing, source validation, row matching, QA, or planning unless safety policy is implicated, a browser/account/payment/rate-limit boundary appears, or the prompt lacks an actual visual subject. The core rules still govern prompt creation and later art review, but they are not a pre-generation blocker for a supplied complete prompt.
+
 Generated from the split v2 source files. Upload only the four consolidated files for active production. The old folder-style paths below are provenance labels only, not separate files to locate or upload.
 
 ## Included Sources

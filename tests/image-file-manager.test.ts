@@ -257,12 +257,90 @@ No readable generated text.
 Avoid: off-model Ember, duplicate Ember, hidden Ember, readable text, fake text, labels, answer marks, circles, boxes, arrows.
 `);
 
-    expect(result.prompt).toContain("## Essential Ember Visual Canon");
-    expect(result.prompt).toContain("Generate the image now from this prompt.");
+    expect(result.prompt).toContain("Create one image now.");
+    expect(result.prompt).toContain("## Ember Appearance");
+    expect(result.prompt).toContain("Use Ember-001, Ember-002, and Ember-003 as visual references for Ember.");
     expect(result.prompt).toContain("plain bright blue-teal scarf");
     expect(result.prompt).toContain("Glowing Lantern Garden");
     expect(result.prompt).toContain("tiny golden lantern key");
     expect(result.prompt).toContain("17:22 aspect ratio");
+    expect(result.prompt).not.toMatch(/\n\s*He has rounded/);
     expect(result.prompt).not.toMatch(/KDP Working Assumptions|Marketing Image Prompts|Hidden Object Category Guidance|Pages 22-23|Main Finds/i);
+    expect(result.prompt).not.toMatch(/when available|If references are unavailable|project\/source context|Do not rewrite|turn this into a planning response/i);
+  });
+
+  it("does not duplicate metadata when compacting an already compact prompt", () => {
+    const result = preparePromptForChatGPTImageGeneration(`
+## Character Reference Handling
+
+Use the character reference images available in this ChatGPT project/source context when available: Ember-001, Ember-002, Ember-003.
+
+## Essential Ember Visual Canon
+
+- tiny adorable reddish-orange baby dragon
+- plain bright blue-teal scarf
+
+## Final Image Prompt
+
+Location: Glowing Lantern Garden
+Mission item: tiny golden lantern key
+Audience: children ages 5-8
+Style: soft rounded 2.25D children's storybook
+
+Create a production-ready children's seek-and-find illustration for Ember and the Sparkleflame Festival Search, page 8, set in Glowing Lantern Garden.
+
+Ember appears exactly once as a small friendly guide/helper, not hidden.
+
+The mission item appears exactly once and is findable: tiny golden lantern key.
+
+No readable generated text.
+`);
+
+    expect(result.prompt.match(/^Location:/gm)?.length).toBe(1);
+    expect(result.prompt.match(/^Mission item:/gm)?.length).toBe(1);
+    expect(result.prompt.match(/^Audience:/gm)?.length).toBe(1);
+    expect(result.prompt.match(/^Style:/gm)?.length).toBe(1);
+    expect(result.prompt).not.toMatch(/when available|If references are not available|project\/source context/i);
+  });
+
+  it("prepares a direct broke-mode prompt without assistant-routing language", () => {
+    const result = preparePromptForChatGPTImageGeneration(`
+# Ember and the Sparkleflame Festival Search - Page 9 Seek Render Prompt
+
+Source row: Book 1 spread 4, story/list page 8, seek page 9, Lantern Maker's Workshop / Baby Flame Lantern.
+Location: Lantern Maker's Workshop
+Mission item: Baby Flame Lantern
+Audience: children ages 5-8
+Style: soft rounded 2.25D children's storybook
+
+## Final Image Prompt
+
+Create a production-ready children's seek-and-find illustration for Ember and the Sparkleflame Festival Search, seek page 9, set in Lantern Maker's Workshop.
+
+Use Ember-001, Ember-002, and Ember-003 as visual references for Ember. Ember must match this canon: tiny adorable reddish-orange baby dragon guide, about small-cat sized, with a plain bright blue-teal scarf and tiny plain brown crossbody satchel.
+
+Ember appears exactly once as a small friendly guide/helper without dominating the page like cover art. Ember is visible, not hidden.
+
+Hide one Baby Flame Lantern fairly in the scene. The mission item appears exactly once and must be findable for children ages 5-8.
+
+Build a rich but readable seek-and-find scene with 4-6 intentional search zones across foreground, midground, and background: a clear foreground entry edge where Ember stands small at the side; a sturdy lantern-making workbench; wall hooks with distinct paper shades; ribbon-and-wick shelves; a finished-lantern display stand; and a side basket or bench corner. Keep paths open.
+
+Use the page's visual budget carefully: when adding searchable objects, reduce repeated decorative filler. Theme motifs such as lanterns may stay when specific examples are visually unique enough to find; limit repeated generic versions.
+
+No readable generated text. No labels, arrows, circles, boxes, outlines, halos, highlights, or answer marks.
+
+## Negative Prompt / Avoid
+
+Avoid: off-model Ember, cover-art-sized Ember, duplicate Ember, hidden Ember, duplicate Baby Flame Lantern, readable text, fake text, labels, answer marks, circles, boxes, arrows.
+`);
+
+    expect(result.prompt.startsWith("Create one image now.")).toBe(true);
+    expect(result.prompt).toContain("## Visual References");
+    expect(result.prompt).toContain("Use Ember-001, Ember-002, and Ember-003 as visual references for Ember.");
+    expect(result.prompt).toContain("Lantern Maker's Workshop");
+    expect(result.prompt).toContain("sturdy lantern-making workbench");
+    expect(result.prompt.match(/Use Ember-001, Ember-002, and Ember-003 as visual references for Ember\./g)?.length).toBe(1);
+    expect(result.prompt).not.toMatch(/Ember must match this canon/);
+    expect(result.prompt).not.toMatch(/when available|If references are unavailable|If references are not available|project\/source context|Do not rewrite|summarize|planning response/i);
   });
 });

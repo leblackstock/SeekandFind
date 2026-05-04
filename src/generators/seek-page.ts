@@ -4,7 +4,6 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { repoRoot } from "../config.js";
 import { GenerateResult, RunOptions, SeekPageInput } from "../types.js";
-import { canonAsPromptBlock, loadCanonBundle } from "../core/canon-loader.js";
 import { renderTemplate } from "../core/template-renderer.js";
 import { seekPageBaseName } from "../core/naming.js";
 import { writeTextFileSafe } from "../core/file-writer.js";
@@ -18,25 +17,29 @@ export const seekPageDefaults = {
   outputMode: "prompt+qa"
 };
 
-const seekTemplate = `# {{bookTitle}} - Page {{pageNumber}} Seek Prompt
+const seekTemplate = `# {{bookTitle}} - Page {{pageNumber}} Seek Render Prompt
 
+Source row: Book 1 spread {{spread}}, story/list page {{storyListPage}}, seek page {{seekPage}}, {{location}} / {{missionItem}}.
 Location: {{location}}
 Mission item: {{missionItem}}
+Paired story/list page: {{storyListPage}}
 Audience: children ages {{ageRange}}
 Style: {{style}}
 Format: vertical KDP-style 8.5x11 full-color interior page, portrait aspect ratio 8.5:11 (17:22), with bleed, trim, and safe-area awareness.
 
-{{canonBlock}}
-
 ## Final Image Prompt
 
-Create a production-ready children's seek-and-find illustration for {{bookTitle}}, page {{pageNumber}}, set in {{location}}.
+Create a production-ready children's seek-and-find illustration for {{bookTitle}}, seek page {{seekPage}}, set in {{location}}.
 
-Ember appears exactly once. Ember is visible as the friendly guide/helper, not hidden as a target object. Use the project/source reference images Ember-001, Ember-002, and Ember-003 when available. If references are unavailable, follow the written Ember character canon exactly.
+Use Ember-001, Ember-002, and Ember-003 as visual references for Ember. Ember must match this canon: tiny adorable reddish-orange baby dragon guide, about small-cat sized, with soft pumpkin-orange and coral shading, a cream belly, tiny shiny golden spiral-comma horns, large glossy blue-teal eyes, a plain bright blue-teal scarf, and a tiny plain brown crossbody satchel with dull-gold button clasps. He has rounded plush-like baby-dragon proportions, soft storybook scale texture, bright friendly eyes, and a cheerful curious expression. He is not a fox, cat, human wizard, or generic fantasy animal.
 
-Hide one {{missionItem}} fairly in the scene. The mission item appears exactly once and must be findable for children ages {{ageRange}}. Place it naturally on a believable surface or tucked edge, not randomly in a walkway.
+Ember appears exactly once as a small friendly guide/helper in the foreground or midground. He should help the child enter the scene without dominating the page like cover art. Ember is visible, not hidden, and is not a target object.
 
-Build a rich but readable seek-and-find scene with clear foreground, midground, and background zones. Keep search density age-appropriate and avoid muddy clutter. Use clustered details, open eye paths, and fair hiding.
+Hide one {{missionItem}} fairly in the scene. The mission item appears exactly once and must be findable for children ages {{ageRange}}. Place it naturally on a believable surface or tucked edge, not randomly in a walkway. Do not include duplicate or similar lookalike mission items.
+
+Build a rich but readable seek-and-find scene with 4-6 intentional search zones across foreground, midground, and background: {{searchZones}} Keep paths, doorways, bridge surfaces, and the main eye path mostly open.
+
+Use the page's visual budget carefully: when adding searchable objects, reduce repeated decorative filler. Replace some repeated atmosphere with distinct child-nameable search objects that belong naturally in {{location}}. Theme motifs such as flowers, lanterns, crystals, jars, ribbons, or mushrooms may stay when specific examples are visually unique enough to find; limit repeated generic versions so they do not become clutter.
 
 No readable generated text. No labels, signs, page numbers, watermarks, gibberish text, arrows, circles, boxes, outlines, halos, highlights, or answer marks. Do not imitate protected brands or famous seek-and-find trade dress.
 
@@ -45,12 +48,12 @@ Keep the tone warm, magical, cheerful, and child-safe for ages {{ageRange}}.
 ## Hidden Object Category Guidance
 
 - Mission Item: {{missionItem}} appears once.
-- Main Finds: choose 10 clear objects after the approved image exists.
-- Bonus Finds: choose 5-15 optional objects from visible approved art.
+- Main Finds: leave room for 10 clear objects to be selected after the approved image exists.
+- Bonus Finds: leave room for 5-15 optional objects to be selected from visible approved art.
 
 ## Negative Prompt / Avoid
 
-Avoid: off-model Ember, duplicate Ember, hidden Ember, readable text, fake text, labels, answer marks, circles, boxes, arrows, scary lighting, weapons focus, muddy clutter, overly tiny targets, copyrighted character imitation, and important details too close to trim or gutter.
+Avoid: off-model Ember, cover-art-sized Ember, duplicate Ember, hidden Ember, duplicate {{missionItem}}, similar lookalike mission items, readable text, fake text, labels, answer marks, circles, boxes, arrows, scary lighting, weapons focus, muddy clutter, random floor scatter, repeated generic flowers or lanterns overwhelming the search, copyrighted character imitation, and important details too close to trim or gutter.
 `;
 
 export function normalizeSeekPageInput(input: Partial<SeekPageInput>): SeekPageInput {
@@ -76,6 +79,18 @@ export interface PageMapRow {
   missionItem: string;
 }
 
+function searchZoneGuidance(location: string): string {
+  if (/lantern maker'?s workshop/i.test(location)) {
+    return "a clear foreground entry edge where Ember stands small at the side; a sturdy lantern-making workbench with a few frames, wicks, and safe rounded tools; wall hooks with a limited number of distinct paper shades; ribbon-and-wick shelves with small jars and spools; a finished-lantern display stand; and a side basket or bench corner for tucked child-nameable props.";
+  }
+
+  return "a clear foreground entry edge with Ember small at the side; one main work surface or display surface; shelves, hooks, or ledges for tucked objects; a side basket, bench, planter, or doorway edge; and a background feature with a few readable props.";
+}
+
+function allowsManualTestMode(input: SeekPageInput): boolean {
+  return /\b(test|manual)\b/i.test(input.outputMode);
+}
+
 export function parsePageMap(markdown: string): PageMapRow[] {
   return markdown
     .split(/\r?\n/)
@@ -98,6 +113,8 @@ function canonEqual(left: string, right: string): boolean {
 }
 
 export function validateSeekPageAgainstPageMap(input: SeekPageInput, rows: PageMapRow[]): void {
+  if (allowsManualTestMode(input)) return;
+
   const storyRow = rows.find((row) => row.storyListPage === input.pageNumber);
   if (storyRow && storyRow.seekPage !== input.pageNumber) {
     throw new Error(`Page ${input.pageNumber} is a story/list page for spread ${storyRow.spread}, not a seek image. Use seek page ${storyRow.seekPage}: ${storyRow.location} / ${storyRow.missionItem}.`);
@@ -118,6 +135,24 @@ export function validateSeekPageAgainstPageMap(input: SeekPageInput, rows: PageM
   }
 }
 
+function resolveSeekPageRow(input: SeekPageInput, rows: PageMapRow[]): PageMapRow {
+  if (allowsManualTestMode(input)) {
+    return {
+      spread: 0,
+      storyListPage: 0,
+      seekPage: input.pageNumber,
+      location: input.location,
+      missionItem: input.missionItem
+    };
+  }
+
+  const seekRow = rows.find((row) => row.seekPage === input.pageNumber);
+  if (!seekRow) {
+    throw new Error(`No canonical Book 1 seek-page row found for page ${input.pageNumber}. Use outputMode "manual-test" for non-canon experiments.`);
+  }
+  return seekRow;
+}
+
 async function loadPageMapRows(rootDir?: string): Promise<PageMapRow[]> {
   const root = repoRoot(rootDir);
   const absolute = join(root, "content/workflows/book-01/page-map.md");
@@ -127,14 +162,24 @@ async function loadPageMapRows(rootDir?: string): Promise<PageMapRow[]> {
 
 export async function generateSeekPage(input: Partial<SeekPageInput>, options: RunOptions = {}): Promise<GenerateResult> {
   const normalized = normalizeSeekPageInput(input);
-  validateSeekPageAgainstPageMap(normalized, await loadPageMapRows(options.rootDir));
-  const canon = await loadCanonBundle(options.rootDir);
-  const baseName = seekPageBaseName(normalized.pageNumber, normalized.location);
-  const prompt = renderTemplate(seekTemplate, {
+  const pageMapRows = await loadPageMapRows(options.rootDir);
+  validateSeekPageAgainstPageMap(normalized, pageMapRows);
+  const sourceRow = resolveSeekPageRow(normalized, pageMapRows);
+  const promptInput = {
     ...normalized,
-    canonBlock: canonAsPromptBlock(canon)
+    pageNumber: sourceRow.seekPage,
+    location: sourceRow.location,
+    missionItem: sourceRow.missionItem,
+    spread: sourceRow.spread,
+    storyListPage: sourceRow.storyListPage,
+    seekPage: sourceRow.seekPage,
+    searchZones: searchZoneGuidance(sourceRow.location)
+  };
+  const baseName = seekPageBaseName(promptInput.pageNumber, promptInput.location);
+  const prompt = renderTemplate(seekTemplate, {
+    ...promptInput
   });
-  const qa = runImagePromptQa(prompt, normalized.missionItem);
+  const qa = runImagePromptQa(prompt, promptInput.missionItem);
   const qaMarkdown = [
     `# QA Report - ${normalized.bookTitle} Page ${normalized.pageNumber}`,
     "",
@@ -176,8 +221,10 @@ export async function generateSeekPage(input: Partial<SeekPageInput>, options: R
   await updateProductionStatus(result, options.rootDir);
   const sessionFile = await appendSessionLog({
     workflow: "seek-page",
-    inputs: normalized,
-    assumptions: ["Book 1 Sparkleflame Festival canon unless input says otherwise."],
+    inputs: promptInput,
+    assumptions: allowsManualTestMode(normalized)
+      ? ["Manual/test prompt mode; output is not Book 1 canon."]
+      : ["Book 1 canonical page-map row locked before prompt rendering."],
     outputsCreated: files,
     warnings: result.warnings,
     qaResult: qa.passed ? "PASS" : "FAIL",

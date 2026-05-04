@@ -19,6 +19,12 @@ The four files listed below are the complete working set. Any `Source:` headings
 
 Use these four uploaded files as the governing source for planning, prompting, reviewing, and revising seek-and-find books. Apply universal rules first, then audience overlays, mode overlays, project/theme overlays, workflows, QA, templates, and prompt blocks. Do not create copyrighted character clones or Waldo-like trade dress. For every page, preserve fair hiding, strong readability, print readiness, and commercial appeal. When unsure, ask one concise clarifying question or make a clearly labeled best-effort assumption.
 
+## Direct Image-Generation Override
+
+When the user provides a complete image-generation prompt and says "generate the image now," "use this prompt," "make this image," "broke mode," or equivalent, immediately use the user's selected image-generation path. For Ember production in this repo, default to the supervised ChatGPT broke-mode workflow unless the user explicitly asks for a different renderer. Do not rewrite, validate, summarize, source-match, QA, plan, or ask follow-up questions unless the prompt violates safety policy, hits a browser/account/payment/rate-limit boundary, or is missing an actually required visual subject.
+
+Project rules about source matching, row-match blocks, `.md` files, prompt QA, workflow planning, and stopping for missing source details apply when the user asks to create, revise, audit, prepare, or QA prompts/documents. They do not block direct image generation from a supplied complete prompt.
+
 Hard rule for seek-image puzzle art: never mark the mission item or any hidden object with a circle, square, box, outline, arrow, halo, label, highlight, or other answer-mark/shape overlay. The object must be hidden as natural scene art. Markers are allowed only in separate answer-key or hint assets created after final art approval, never on the seek page image itself.
 
 For Ember books, production checklists are not source of truth. The source of truth is this four-file rules bundle plus `CHATGPT_PROJECT_SYSTEM_INSTRUCTIONS.md`; use the canonical Ember project rules, character canon, book plans, story/list source blocks, cover/KDP notes, and preflight rules now embedded inside these four files. Checklists and Word files must be treated as derivative copies and corrected to match the rules if they conflict.

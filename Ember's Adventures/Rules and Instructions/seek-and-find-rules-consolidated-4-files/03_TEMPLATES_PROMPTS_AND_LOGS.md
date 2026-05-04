@@ -30,6 +30,14 @@ The following Ember book plans are source-of-truth content inside this four-file
 
 Character reference rule: Every Ember image prompt generated from these plans must directly name `Ember-001`, `Ember-002`, and `Ember-003` for Ember. When a page includes a named supporting character, add that character's exact reference image files directly: Hootiepuff uses `HootiePuff-001`, `HootiePuff-002`, and `HootiePuff-003`; Luma Leafwhisk uses `Luma_Leafwhisk-001`, `Luma_Leafwhisk-002`, and `Luma_Leafwhisk-003`; Gemma Glint uses `Gemma_Glint-001`, `Gemma_Glint-002`, and `Gemma_Glint-003`; Pebblekins uses `Pebblekins-001`, `Pebblekins-002`, and `Pebblekins-003`; Elder Glowkeeper uses `Elder_Glowkeeper-001`, `Elder_Glowkeeper-002`, and `Elder_Glowkeeper-003`.
 
+Direct-generation request line for pasted prompts:
+
+```text
+This is a direct image-generation request, not a prompt-writing, QA, planning, or source-matching task. Generate the image now.
+```
+
+When that line or equivalent wording appears with a complete prompt, use the prompt as supplied and run it through the user's selected generation path. For Ember production in this repo, default to supervised ChatGPT broke mode unless the user explicitly asks for a different renderer. Do not rewrite, validate, summarize, source-match, QA, or ask follow-up questions unless safety policy is implicated, a browser/account/payment/rate-limit boundary appears, or the prompt lacks an actual visual subject.
+
 ## Ember Book 1 10-Spread Plan
 
 Title: **Ember and the Sparkleflame Festival Search**.
@@ -1836,6 +1844,8 @@ Record rule, template, and workflow changes here.
 
 | Date | File | Change | Reason |
 |---|---|---|---|
+| 2026-05-04 | Four-file rules bundle, system instructions | Routed direct supplied-prompt generation through the user's selected renderer, defaulting Ember production to supervised ChatGPT broke mode. | Keep explicit generate-now requests budget-aware instead of defaulting to the built-in image tool. |
+| 2026-05-04 | Four-file rules bundle, system instructions | Added direct image-generation override for complete supplied prompts. | Prevent prompt/source/QA workflows from blocking explicit generate-now requests. |
 | 2026-05-02 | `03_TEMPLATES_PROMPTS_AND_LOGS.md`, `03_EMBER_BOOK1_10_SPREAD_PLAN.md` | Restored festival lanterns as a positive Book 1 motif across cottage, village, workshop, door, market, and finale prompt vocabulary. | Keep the Sparkleflame Festival visually lantern-rich while still using page-specific objects. |
 | 2026-05-02 | `01_RULES_CORE_AUDIENCE_MODE_PROJECTS.md`, `02_WORKFLOWS_AND_QA.md`, `03_TEMPLATES_PROMPTS_AND_LOGS.md` | Added foreground-bias guard while preserving foreground/midground/background hiding for all findable objects. | Prevent image generation from defaulting most hidden objects to the foreground. |
 | 2026-05-02 | `03_TEMPLATES_PROMPTS_AND_LOGS.md` | Replaced strict Book 1 filler-restraint language with page-specific object vocabulary and ambiguity controls inside the actual Book 1 prompt rows. | Fix overused filler by removing generic object mentions from production prompts instead of adding another strict rule. |

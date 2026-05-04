@@ -4,6 +4,8 @@ This file contains the process layer: planning, page creation, prompt building, 
 
 Source-of-truth note: only this four-file rules bundle plus `CHATGPT_PROJECT_SYSTEM_INSTRUCTIONS.md` is authoritative. Archive files, split files, checklists, and Word documents are derivative/reference material only.
 
+Direct-generation scope rule: workflows in this file govern planning, prompt creation, prompt QA, revision, export, answer keys, and review. If the user instead pastes a complete prompt and asks to generate the image now, immediately use the user's selected generation path and skip row matching, source validation, prompt QA, source-block checks, `.md` creation, and workflow planning unless the prompt violates safety policy, hits a browser/account/payment/rate-limit boundary, or has no required visual subject. For Ember production in this repo, the default selected path is supervised ChatGPT broke mode unless the user explicitly asks for a different renderer.
+
 Generated from the split v2 source files. Upload only the four consolidated files for active production. The old folder-style paths below are provenance labels only, not separate files to locate or upload.
 
 ## Included Sources
@@ -216,6 +218,8 @@ Use:
 ## Step 5 — Generate Draft Image
 
 Generate one or more draft images.
+
+If the user supplied the complete prompt and explicitly requested immediate generation, this step is direct: use the user's selected generation path without rewriting, auditing, source-matching, or asking follow-up questions unless safety policy, a browser/account/payment/rate-limit boundary, or a missing visual subject requires it. For Ember production in this repo, default to supervised ChatGPT broke mode unless the user explicitly asks for a different renderer.
 
 Do not approve based on prettiness alone.
 

@@ -22,6 +22,11 @@ export function runImagePromptQa(prompt: string, missionItem?: string): QaResult
   if (!has(prompt, /ages? 5-8|age range: 5-8|5-8/i)) failures.push("Missing children ages 5-8 guidance.");
   if (!has(prompt, /8\.5x11|8\.5 x 11|vertical KDP/i)) failures.push("Missing vertical KDP page format.");
   if (!has(prompt, /8\.5\s*:\s*11|17\s*:\s*22|aspect ratio/i)) failures.push("Missing explicit portrait aspect ratio: 8.5:11 / 17:22.");
+  if (!has(prompt, /small friendly guide|small-cat sized|without dominating|cover-art-sized/i)) failures.push("Missing Ember guide-scale control.");
+  if (!has(prompt, /visual budget|reduce repeated decorative filler|repeated generic/i)) failures.push("Missing visual-budget control for searchable objects.");
+  if (!has(prompt, /visually unique enough to find|searchable motifs|unique enough/i)) failures.push("Missing unique searchable motif guidance.");
+  if (has(prompt, /Source mirror:|Marketing Image Prompts|marketing prompt pack/i)) failures.push("Prompt includes stale source-packet or marketing guidance.");
+  if (has(prompt, /when available|If references are unavailable|If references are not available|project\/source context|Do not rewrite|turn this into a planning response/i)) failures.push("Prompt includes assistant-routing or uncertain reference language that can stall broke-mode generation.");
   if (has(prompt, /Ember (is|should be) hidden/i)) failures.push("Prompt says Ember is hidden.");
   const forbidsAnswerMarks = has(prompt, /No labels|No .*arrows|Do not.*circle|Avoid:.*answer/i);
   if (!forbidsAnswerMarks && has(prompt, /circle|outline|arrow|box|highlight/i) && has(prompt, /mission item|hidden object/i)) {

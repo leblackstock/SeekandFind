@@ -5,6 +5,9 @@ const goodPrompt = `
 Ember appears exactly once. Ember is visible as the guide/helper.
 Use reference images Ember-001, Ember-002, and Ember-003.
 No readable generated text. Vertical KDP-style 8.5x11 portrait aspect ratio 8.5:11 / 17:22 for children ages 5-8.
+Ember stays a small friendly guide without dominating the page like cover art.
+Use the page's visual budget carefully: reduce repeated decorative filler when adding searchable objects.
+Theme motifs may stay when they are visually unique enough to find; limit repeated generic versions.
 Hide one tiny frosted bell fairly. No labels, arrows, circles, boxes, outlines, or highlights.
 `;
 
@@ -39,6 +42,20 @@ Hide one tiny frosted bell fairly. No labels, arrows, circles, boxes, outlines, 
 `, "tiny frosted bell");
     expect(qa.passed).toBe(false);
     expect(qa.failures.join(" ")).toMatch(/project reference IDs/);
+  });
+
+  it("fails assistant-routing language that can stall broke mode", () => {
+    const qa = runImagePromptQa(`
+Ember appears exactly once. Ember is visible as the guide/helper.
+Use reference images Ember-001, Ember-002, and Ember-003 when available. If references are unavailable, follow canon.
+No readable generated text. Vertical KDP-style 8.5x11 portrait aspect ratio 8.5:11 / 17:22 for children ages 5-8.
+Ember stays a small friendly guide without dominating the page like cover art.
+Use the page's visual budget carefully: reduce repeated decorative filler when adding searchable objects.
+Theme motifs may stay when they are visually unique enough to find; limit repeated generic versions.
+Hide one tiny frosted bell fairly. No labels, arrows, circles, boxes, outlines, or highlights.
+`, "tiny frosted bell");
+    expect(qa.passed).toBe(false);
+    expect(qa.failures.join(" ")).toMatch(/assistant-routing/);
   });
 
   it("checks storyboard basics", () => {

@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-05-04T04-22-56-110Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "canceled",
+  "assetName": "book01-page008-glowing-lantern-garden-manual-rerun",
+  "assetSlug": "book01-page008-glowing-lantern-garden-manual-rerun",
+  "promptPath": "content/outputs/images/failed/book01-page008-glowing-lantern-garden-2026-05-04T03-24-08-233Z/book01-page008-glowing-lantern-garden-2026-05-04T03-24-08-233Z-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/book01-page008-glowing-lantern-garden-manual-rerun-2026-05-04T04-22-56-110Z-prompt.md",
+  "warnings": [
+    "Manual mode selected; no browser automation was run.",
+    "Compacted Broke Mode prompt to image-facing sections only.",
+    "Added missing ChatGPT image-generation requirements: vertical full-page children's seek-and-find illustration; vertical 8.5 x 11 inch page; 17:22 aspect ratio; full-color KDP-style interior page; bleed, trim, and safe-area awareness"
+  ],
+  "dryRun": false,
+  "autoSubmit": false,
+  "maxAttempts": 1,
+  "browserMode": "manual"
+}

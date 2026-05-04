@@ -26,6 +26,7 @@ program
   .option("--book <bookTitle>", "book title")
   .option("--age <ageRange>", "age range")
   .option("--style <style>", "visual style")
+  .option("--output-mode <mode>", "output mode, for example manual-test for non-canon experiments")
   .action(async (pageArg, locationArg, missionParts: string[], options) => {
     const globals = program.opts();
     const pageNumber = options.page ?? (pageArg ? Number.parseInt(pageArg, 10) : undefined);
@@ -40,7 +41,8 @@ program
       location: location ?? locationArg,
       missionItem,
       ageRange: options.age,
-      style: options.style
+      style: options.style,
+      outputMode: options.outputMode
     }, { force: globals.force }));
   });
 
