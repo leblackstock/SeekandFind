@@ -15,6 +15,7 @@ import {
 import {
   managedModeBlockedByInsecureBrowser,
   manualModeMessage,
+  generationStillInProgress,
   normalizeReferenceNamesForBrokeMode,
   parseBrokeModeArgs,
   parseBrowserMode,
@@ -123,6 +124,13 @@ describe("image file manager", () => {
 
   it("detects managed insecure-browser boundary wording", () => {
     expect(managedModeBlockedByInsecureBrowser("Couldn't sign you in. This browser or app may not be secure.")).toBe(true);
+  });
+
+  it("does not treat ChatGPT thinking state as image-ready", () => {
+    expect(generationStillInProgress("Thinking")).toBe(false);
+    expect(generationStillInProgress("Generating an image based on user input")).toBe(true);
+    expect(generationStillInProgress("Cancel loading")).toBe(true);
+    expect(generationStillInProgress("Download image")).toBe(false);
   });
 
   it("provides manual mode fallback messaging", () => {
@@ -250,6 +258,7 @@ Avoid: off-model Ember, duplicate Ember, hidden Ember, readable text, fake text,
 `);
 
     expect(result.prompt).toContain("## Essential Ember Visual Canon");
+    expect(result.prompt).toContain("Generate the image now from this prompt.");
     expect(result.prompt).toContain("plain bright blue-teal scarf");
     expect(result.prompt).toContain("Glowing Lantern Garden");
     expect(result.prompt).toContain("tiny golden lantern key");

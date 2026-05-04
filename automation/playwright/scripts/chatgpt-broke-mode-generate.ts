@@ -27,7 +27,8 @@ const chatGptUrl = "https://chatgpt.com/";
 
 const boundaryPattern = /captcha|rate limit|cooldown|try again later|too many requests|payment|upgrade|subscribe|subscription|verify your account|account warning|unusual activity|log in|sign in|couldn.t sign you in|browser or app may not be secure|try using a different browser/i;
 const insecureBrowserPattern = /couldn.t sign you in|browser or app may not be secure|try using a different browser/i;
-const imageReadyPattern = /download|regenerate|share|copy|image/i;
+const imageReadyPattern = /download|regenerate/i;
+const generationInProgressPattern = /\b(generating|creating|working on it|cancel loading)\b/i;
 
 export function isBoundaryText(text: string): boolean {
   return boundaryPattern.test(text);
@@ -35,6 +36,10 @@ export function isBoundaryText(text: string): boolean {
 
 export function managedModeBlockedByInsecureBrowser(text: string): boolean {
   return insecureBrowserPattern.test(text);
+}
+
+export function generationStillInProgress(text: string): boolean {
+  return generationInProgressPattern.test(text);
 }
 
 export function manualModeMessage(promptPath: string): string {
@@ -293,6 +298,8 @@ function compactPromptForChatGPTImageGeneration(prompt: string): { prompt: strin
   const parts = [
     referenceInstruction(referenceNames),
     "",
+    "Generate the image now from this prompt. Do not rewrite, summarize, explain, analyze, or turn this into a planning response.",
+    "",
     "## Essential Ember Visual Canon",
     "",
     visualRules ?? [
@@ -508,6 +515,10 @@ async function waitForGeneration(page: Page): Promise<void> {
     const text = await bodyText(page);
     const hasDownloadButton = await page.getByRole("button", { name: /download/i }).count().catch(() => 0);
     const hasImage = await page.locator("img").count().catch(() => 0);
+    if (generationStillInProgress(text)) {
+      await page.waitForTimeout(5000);
+      continue;
+    }
     if (hasDownloadButton > 0 || (hasImage > 0 && imageReadyPattern.test(text))) return;
     await page.waitForTimeout(5000);
   }
