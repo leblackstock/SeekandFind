@@ -153,6 +153,55 @@ npm run playwright:screenshot -- --name seedance-login-check
 
 The helpers are reviewable browser assistance only. They stop at login, CAPTCHA, payment/subscription prompts, account verification, or unreliable UI changes.
 
+## Broke Mode ChatGPT Image Generation
+
+Broke Mode is a supervised, one-image-at-a-time helper for using your already-logged-in ChatGPT web session through Playwright Chromium. It is for prompt refinement and careful free/local testing before paid API image credits are available.
+
+It does not use the OpenAI API, bypass login, bypass CAPTCHA, bypass payment prompts, bypass rate limits, evade cooldowns, or run unattended bulk generation.
+
+Set up the Playwright Chromium ChatGPT login profile:
+
+```powershell
+npm run image:broke-mode -- --setup-login --prompt content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md
+```
+
+Log into ChatGPT manually in the browser, then close it when finished.
+
+Run one supervised image attempt:
+
+```powershell
+npm run image:broke-mode -- --prompt content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md
+```
+
+Default behavior is `--auto-submit=false`: the helper opens ChatGPT, checks for login/limit/payment/warning boundaries, pastes the prompt, and waits for you to type `YES` before submitting. A dry run can validate the prompt and create local preparation artifacts without opening ChatGPT:
+
+```powershell
+npm run image:broke-mode -- --prompt content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md --dry-run
+```
+
+If your npm version strips bare option names, use equals form:
+
+```powershell
+npm run image:broke-mode -- --prompt=content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md --dry-run
+```
+
+Images and evidence are saved under:
+
+- `content/outputs/images/pending-review/`
+- `content/outputs/images/approved/`
+- `content/outputs/images/failed/`
+- `content/outputs/image-qa-reports/`
+
+If the ChatGPT download UI is unreliable, the helper saves a screenshot and tells you to download manually. Run local QA on a manually saved image with:
+
+```powershell
+npm run image:qa -- --file content/outputs/images/pending-review/YOUR-FILE.png
+```
+
+Manual review is still required before approval: Ember must appear exactly once, match canon, have the blue-teal scarf, brown satchel, and tiny golden spiral-comma horns, contain no readable text, include the mission item, stay child-friendly, and remain KDP-safe.
+
+This is temporary. The future paid API path should reuse the same prompt files, output folders, metadata, QA reports, and session logging.
+
 ## Discord Phase 9
 
 Discord is intentionally not the first control layer. The planned flow is:

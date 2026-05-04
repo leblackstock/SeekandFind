@@ -29,6 +29,11 @@ describe("qa engine", () => {
     expect(qa.passed).toBe(false);
   });
 
+  it("allows explicit no-publication-claim wording", () => {
+    const qa = runMarketingQa("Pinterest Facebook Instagram CTA children ages 5-8 promote the book without claiming it is already published", "");
+    expect(qa.passed).toBe(true);
+  });
+
   it("checks KDP essentials", () => {
     const qa = runKdpQa("KDP 8.5x11 safe area bleed trim no readable text Ember density readable");
     expect(qa.passed).toBe(true);

@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-05-04T00-43-16-155Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "dry-run",
+  "assetName": "broke-mode-dry-run-simple-command",
+  "assetSlug": "broke-mode-dry-run-simple-command",
+  "promptPath": "content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/broke-mode-dry-run-simple-command-2026-05-04T00-43-16-155Z-prompt.md",
+  "warnings": [],
+  "dryRun": true,
+  "autoSubmit": false,
+  "maxAttempts": 1
+}
