@@ -1,0 +1,41 @@
+{
+  "name": "ember-content-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "server": "tsx src/server/local-api.ts",
+    "build": "tsc",
+    "test": "vitest run",
+    "lint": "tsc --noEmit",
+    "generate:seek": "tsx src/cli.ts seek",
+    "generate:title": "tsx src/cli.ts title",
+    "generate:storyboard": "tsx src/cli.ts storyboard",
+    "generate:marketing": "tsx src/cli.ts marketing",
+    "qa:kdp": "tsx src/cli.ts qa",
+    "n8n:check": "tsx src/integrations/n8n-client.ts",
+    "playwright:open": "tsx automation/playwright/scripts/open-tool.ts",
+    "playwright:screenshot": "tsx automation/playwright/scripts/save-screenshot.ts",
+    "playwright:login-check": "tsx automation/playwright/scripts/login-check.ts",
+    "discord:register": "tsx discord/register-commands.ts",
+    "discord:bridge": "tsx discord/discord-bridge.ts"
+  },
+  "dependencies": {
+    "@playwright/test": "latest",
+    "commander": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "gray-matter": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/express": "latest",
+    "@types/node": "latest",
+    "@types/supertest": "latest",
+    "supertest": "latest",
+    "tsx": "latest",
+    "typescript": "latest",
+    "vitest": "latest"
+  }
+}

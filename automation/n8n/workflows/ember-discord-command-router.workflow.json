@@ -1,0 +1,60 @@
+{
+  "id": "ember-discord-command-router",
+  "name": "Ember Discord Command Router",
+  "nodes": [
+    {
+      "parameters": { "path": "ember/discord-router", "httpMethod": "POST", "responseMode": "responseNode" },
+      "id": "webhook-discord-router",
+      "name": "Webhook Trigger from Discord Bridge",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300],
+      "webhookId": "f1764f80-2b98-4ea6-b710-4bb92f0c353d"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            { "conditions": { "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" }, "conditions": [{ "leftValue": "={{ $json.body.command }}", "rightValue": "ember-seek", "operator": { "type": "string", "operation": "equals" } }], "combinator": "and" } },
+            { "conditions": { "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" }, "conditions": [{ "leftValue": "={{ $json.body.command }}", "rightValue": "ember-status", "operator": { "type": "string", "operation": "equals" } }], "combinator": "and" } }
+          ]
+        }
+      },
+      "id": "switch-discord-command",
+      "name": "Switch on Command Name",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:3333/workflow/run",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json.body ?? $json }}"
+      },
+      "id": "http-discord-local-api",
+      "name": "HTTP Request to Local API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [760, 300]
+    },
+    {
+      "parameters": { "respondWith": "allIncomingItems", "options": { "responseCode": 200 } },
+      "id": "respond-discord-router",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [1020, 300]
+    }
+  ],
+  "connections": {
+    "Webhook Trigger from Discord Bridge": { "main": [[{ "node": "Switch on Command Name", "type": "main", "index": 0 }]] },
+    "Switch on Command Name": { "main": [[{ "node": "HTTP Request to Local API", "type": "main", "index": 0 }], [{ "node": "HTTP Request to Local API", "type": "main", "index": 0 }]] },
+    "HTTP Request to Local API": { "main": [[{ "node": "Respond to Webhook", "type": "main", "index": 0 }]] }
+  },
+  "active": false,
+  "settings": {},
+  "versionId": "ember-discord-router-v1"
+}

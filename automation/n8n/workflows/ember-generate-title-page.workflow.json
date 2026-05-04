@@ -1,0 +1,44 @@
+{
+  "id": "ember-generate-title-page",
+  "name": "Ember Generate Title Page",
+  "nodes": [
+    {
+      "parameters": { "path": "ember/title-page", "httpMethod": "POST", "responseMode": "responseNode" },
+      "id": "webhook-title-page",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300],
+      "webhookId": "5f60b0ea-9d3a-4d84-b986-1a2ec6e97d51"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:3333/generate/title-page",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json.body ?? $json }}"
+      },
+      "id": "http-title-page",
+      "name": "HTTP Request to Local API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [520, 300]
+    },
+    {
+      "parameters": { "respondWith": "allIncomingItems", "options": { "responseCode": 200 } },
+      "id": "respond-title-page",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [780, 300]
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": { "main": [[{ "node": "HTTP Request to Local API", "type": "main", "index": 0 }]] },
+    "HTTP Request to Local API": { "main": [[{ "node": "Respond to Webhook", "type": "main", "index": 0 }]] }
+  },
+  "active": false,
+  "settings": {},
+  "versionId": "ember-title-page-v1"
+}

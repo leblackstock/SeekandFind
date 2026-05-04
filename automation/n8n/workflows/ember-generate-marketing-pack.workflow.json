@@ -1,0 +1,44 @@
+{
+  "id": "ember-generate-marketing-pack",
+  "name": "Ember Generate Marketing Pack",
+  "nodes": [
+    {
+      "parameters": { "path": "ember/marketing-pack", "httpMethod": "POST", "responseMode": "responseNode" },
+      "id": "webhook-marketing",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300],
+      "webhookId": "32e69f2c-32d5-48ff-857e-e8b606896e58"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:3333/generate/marketing-pack",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json.body ?? $json }}"
+      },
+      "id": "http-marketing",
+      "name": "HTTP Request to Local API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [520, 300]
+    },
+    {
+      "parameters": { "respondWith": "allIncomingItems", "options": { "responseCode": 200 } },
+      "id": "respond-marketing",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [780, 300]
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": { "main": [[{ "node": "HTTP Request to Local API", "type": "main", "index": 0 }]] },
+    "HTTP Request to Local API": { "main": [[{ "node": "Respond to Webhook", "type": "main", "index": 0 }]] }
+  },
+  "active": false,
+  "settings": {},
+  "versionId": "ember-marketing-v1"
+}
