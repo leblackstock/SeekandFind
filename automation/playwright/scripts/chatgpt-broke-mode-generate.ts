@@ -245,6 +245,84 @@ export function sanitizePromptForBrokeMode(prompt: string): { prompt: string; wa
   return { prompt: promptWithReferenceInstruction, warnings: uniqueValues(warnings) };
 }
 
+function extractField(text: string, label: string): string | undefined {
+  const match = text.match(new RegExp(`^${label}:\\s*(.+)$`, "im"));
+  return match?.[1]?.trim();
+}
+
+function extractSection(text: string, heading: string): string | undefined {
+  const escapedHeading = heading.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const match = text.match(new RegExp(`(?:^|\\r?\\n)## ${escapedHeading}\\s*\\r?\\n([\\s\\S]*?)(?=\\r?\\n## |\\r?\\n# |$)`, "i"));
+  return match?.[1]?.trim();
+}
+
+function extractFinalImagePrompt(text: string): string | undefined {
+  const match = text.match(/(?:^|\r?\n)## Final Image Prompt\s*\r?\n([\s\S]*?)(?=\r?\n## Hidden Object Category Guidance|\r?\n## Negative Prompt \/ Avoid|\r?\n## Format Requirements|$)/i);
+  return match?.[1]?.trim();
+}
+
+function extractNegativePrompt(text: string): string | undefined {
+  const match = text.match(/(?:^|\r?\n)## Negative Prompt \/ Avoid\s*\r?\n([\s\S]*?)(?=\r?\n## Format Requirements|$)/i);
+  return match?.[1]?.trim();
+}
+
+function compactPromptForChatGPTImageGeneration(prompt: string): { prompt: string; warnings: string[] } {
+  const referenceNames = collectReferenceNames(prompt);
+  const location = extractField(prompt, "Location");
+  const missionItem = extractField(prompt, "Mission item");
+  const audience = extractField(prompt, "Audience");
+  const style = extractField(prompt, "Style");
+  const visualRules = extractSection(prompt, "Visual Rules");
+  const finalImagePrompt = extractFinalImagePrompt(prompt);
+  const negativePrompt = extractNegativePrompt(prompt);
+
+  if (!finalImagePrompt) {
+    return {
+      prompt,
+      warnings: ["Could not find a Final Image Prompt section, so Broke Mode kept the sanitized source prompt."]
+    };
+  }
+
+  const metadataLines = [
+    location ? `Location: ${location}` : undefined,
+    missionItem ? `Mission item: ${missionItem}` : undefined,
+    audience ? `Audience: ${audience}` : undefined,
+    style ? `Style: ${style}` : undefined
+  ].filter(Boolean) as string[];
+
+  const parts = [
+    referenceInstruction(referenceNames),
+    "",
+    "## Essential Ember Visual Canon",
+    "",
+    visualRules ?? [
+      "- tiny adorable reddish-orange baby dragon",
+      "- tiny shiny golden spiral-comma horns",
+      "- large glossy blue-teal eyes",
+      "- cream belly",
+      "- plain bright blue-teal scarf",
+      "- tiny plain brown crossbody satchel with dull-gold button clasps",
+      "- rounded plush-like form",
+      "- cheerful, curious expression"
+    ].join("\n"),
+    "",
+    "## Final Image Prompt",
+    "",
+    ...metadataLines,
+    metadataLines.length ? "" : undefined,
+    finalImagePrompt,
+    negativePrompt ? "" : undefined,
+    negativePrompt ? "## Avoid" : undefined,
+    negativePrompt ? "" : undefined,
+    negativePrompt
+  ].filter((part): part is string => typeof part === "string").join("\n");
+
+  return {
+    prompt: parts.replace(/\n{3,}/g, "\n\n").trim(),
+    warnings: ["Compacted Broke Mode prompt to image-facing sections only."]
+  };
+}
+
 export function ensureImageGenerationPromptRequirements(prompt: string): { prompt: string; warnings: string[] } {
   return appendMissingRequirements(prompt);
 }
@@ -252,10 +330,11 @@ export function ensureImageGenerationPromptRequirements(prompt: string): { promp
 export function preparePromptForChatGPTImageGeneration(prompt: string): { prompt: string; warnings: string[] } {
   const normalized = normalizeReferenceNamesForBrokeMode(prompt);
   const sanitized = sanitizePromptForBrokeMode(normalized.prompt);
-  const enforced = ensureImageGenerationPromptRequirements(sanitized.prompt);
+  const compacted = compactPromptForChatGPTImageGeneration(sanitized.prompt);
+  const enforced = ensureImageGenerationPromptRequirements(compacted.prompt);
   return {
     prompt: enforced.prompt,
-    warnings: uniqueValues([...normalized.warnings, ...sanitized.warnings, ...enforced.warnings])
+    warnings: uniqueValues([...normalized.warnings, ...sanitized.warnings, ...compacted.warnings, ...enforced.warnings])
   };
 }
 

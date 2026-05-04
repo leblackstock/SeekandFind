@@ -215,7 +215,7 @@ npm run image:broke-mode -- --browser-mode=manual --prompt=content/outputs/promp
 
 Default behavior is `--auto-submit=false`: the helper opens ChatGPT, checks for login/limit/payment/warning boundaries, pastes the prompt, and waits for you to type `YES` before submitting. A dry run can validate the prompt and create local preparation artifacts without opening ChatGPT:
 
-Before pasting, Broke Mode strips local paths, markdown links, folder references, and image file links from the final ChatGPT prompt. It keeps project reference labels such as `Ember-001`, `Ember-002`, and `Ember-003`, preserves the written canon/scene instructions, and appends missing KDP format requirements such as `vertical 8.5 x 11 inch page`, `17:22 aspect ratio`, `full-color KDP-style interior page`, and `bleed, trim, and safe-area awareness`.
+Before pasting, Broke Mode strips local paths, markdown links, folder references, and image file links from the final ChatGPT prompt. It keeps project reference labels such as `Ember-001`, `Ember-002`, and `Ember-003`, then compacts the source packet into image-facing sections only: character reference handling, essential Ember visual canon, the final image prompt, avoid rules, and missing KDP format requirements such as `vertical 8.5 x 11 inch page`, `17:22 aspect ratio`, `full-color KDP-style interior page`, and `bleed, trim, and safe-area awareness`.
 
 ```powershell
 npm run image:broke-mode -- --prompt content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md --dry-run

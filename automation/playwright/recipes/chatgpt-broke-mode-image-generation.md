@@ -91,7 +91,9 @@ Prompt preparation:
 
 - strips local paths, folder references, markdown links, and image file links from the final pasted prompt
 - keeps named project references such as `Ember-001`, `Ember-002`, and `Ember-003`
-- preserves written Ember canon, scene instructions, mission item, location, and QA-relevant constraints
+- compacts source packets into image-facing prompt sections only
+- preserves essential Ember visual canon, scene instructions, mission item, location, and QA-relevant constraints
+- omits internal source-packet material such as book-production assumptions, marketing prompt rules, and post-approval find-list guidance
 - appends missing format requirements, including `vertical 8.5 x 11 inch page`, `17:22 aspect ratio`, `full-color KDP-style interior page`, and `bleed, trim, and safe-area awareness`
 
 ## Manual Approval Requirement

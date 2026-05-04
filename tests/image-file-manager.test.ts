@@ -194,4 +194,66 @@ The mission item appears exactly once and is findable.
     expect(result.prompt).toContain("Ember-001");
     expect(result.prompt).not.toContain("content/canon");
   });
+
+  it("compacts source packets to image-facing ChatGPT prompts", () => {
+    const result = preparePromptForChatGPTImageGeneration(`
+Location: Glowing Lantern Garden
+Mission item: tiny golden lantern key
+Audience: children ages 5-8
+Style: soft rounded 2.25D children's storybook
+
+# Ember Character Canon
+
+## Reference Names
+
+- Ember-001
+- Ember-002
+- Ember-003
+
+## Visual Rules
+
+- tiny adorable reddish-orange baby dragon
+- large glossy blue-teal eyes
+- plain bright blue-teal scarf
+- tiny plain brown crossbody satchel with dull-gold button clasps
+
+# Book 1 Sparkleflame Canon
+
+## KDP Working Assumptions
+
+- Interior target: 24 pages.
+- Pages 22-23 are the reward recap spread.
+
+# No Readable Text Policy
+
+## Marketing Image Prompts
+
+For every marketing prompt, list exact words if text should appear.
+
+## Final Image Prompt
+
+Create a production-ready children's seek-and-find illustration for Ember and the Sparkleflame Festival Search, page 8, set in Glowing Lantern Garden.
+
+Ember appears exactly once. Ember is visible as the friendly guide/helper, not hidden as a target object.
+
+Hide one tiny golden lantern key fairly in the scene. The mission item appears exactly once and must be findable for children ages 5-8.
+
+No readable generated text.
+
+## Hidden Object Category Guidance
+
+- Main Finds: choose 10 clear objects after the approved image exists.
+
+## Negative Prompt / Avoid
+
+Avoid: off-model Ember, duplicate Ember, hidden Ember, readable text, fake text, labels, answer marks, circles, boxes, arrows.
+`);
+
+    expect(result.prompt).toContain("## Essential Ember Visual Canon");
+    expect(result.prompt).toContain("plain bright blue-teal scarf");
+    expect(result.prompt).toContain("Glowing Lantern Garden");
+    expect(result.prompt).toContain("tiny golden lantern key");
+    expect(result.prompt).toContain("17:22 aspect ratio");
+    expect(result.prompt).not.toMatch(/KDP Working Assumptions|Marketing Image Prompts|Hidden Object Category Guidance|Pages 22-23|Main Finds/i);
+  });
 });
