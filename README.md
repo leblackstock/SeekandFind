@@ -183,3 +183,54 @@ Keep the local API and n8n private unless you explicitly choose otherwise. If Di
 - n8n webhook returns connection errors: make sure the local API is running at `LOCAL_API_BASE_URL`.
 - Playwright cannot open a browser: run `npx playwright install chromium`.
 - Codex does not show new skills: restart Codex from this repo root.
+
+## Verified Local n8n Workflow Usage
+
+Start the local Ember API:
+
+```powershell
+npm run server
+```
+
+Start n8n with Docker:
+
+```powershell
+docker start n8n-local
+```
+
+n8n runs at:
+
+```text
+http://localhost:5678
+```
+
+Because n8n is inside Docker, workflow HTTP Request nodes must call the host API with:
+
+```text
+http://host.docker.internal:3333
+```
+
+Test workflow usage:
+
+1. Open a workflow in n8n.
+2. Click `Execute workflow` / `Listen for test event`.
+3. Post to `http://localhost:5678/webhook-test/<path>`.
+4. Confirm `200 OK`, `ok: true`, and created output files.
+
+Production workflow usage:
+
+1. Confirm the workflow passed test mode.
+2. Publish one workflow at a time.
+3. Post to `http://localhost:5678/webhook/<path>`.
+4. Confirm outputs under `content/outputs/` and status/log updates.
+
+Outputs are saved under:
+
+- `content/outputs/prompts/`
+- `content/outputs/storyboards/`
+- `content/outputs/marketing/`
+- `content/outputs/qa-reports/`
+- `content/outputs/session-logs/`
+- `content/workflows/book-01/production-status.md`
+
+Discord remains Phase 9 and is not active. Playwright helpers are reviewable browser assistance only and must stop at login, CAPTCHA, payment, subscription, account verification, rate limits, or platform restrictions.

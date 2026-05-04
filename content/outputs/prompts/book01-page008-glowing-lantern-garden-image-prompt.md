@@ -1,9 +1,10 @@
-# Seedance Storyboard Pack
+# Ember and the Sparkleflame Festival Search - Page 8 Seek Prompt
 
-Goal: promote Ember seek-and-find book
-Scene: Ember waves, notices a glowing festival clue, follows sparkles, and smiles at the viewer
-Clip length: 15 seconds
+Location: Glowing Lantern Garden
+Mission item: tiny golden lantern key
 Audience: children ages 5-8
+Style: soft rounded 2.25D children's storybook
+Format: vertical KDP-style 8.5x11 full-color interior page with bleed, trim, and safe-area awareness.
 
 ## Canon To Preserve
 
@@ -120,34 +121,26 @@ For every marketing prompt:
 Never mark the mission item or hidden objects with a circle, square, box, outline, arrow, halo, label, highlight, or answer mark on seek-page art. Markers are allowed only in separate answer-key or hint assets created after final art approval.
 
 
-## 15-Second Structure
+## Final Image Prompt
 
-Beat 1, 0:00-0:03: Establish a warm Ember world moment tied to promote Ember seek-and-find book.
-Beat 2, 0:03-0:07: Ember moves gently through the scene: Ember waves, notices a glowing festival clue, follows sparkles, and smiles at the viewer.
-Beat 3, 0:07-0:11: A glowing clue or search moment gives the clip visual payoff.
-Beat 4, 0:11-0:15: Ember smiles toward the viewer with a cozy invitation to search.
+Create a production-ready children's seek-and-find illustration for Ember and the Sparkleflame Festival Search, page 8, set in Glowing Lantern Garden.
 
-## Image-To-Video Prompt
+Ember appears exactly once. Ember is visible as the friendly guide/helper, not hidden as a target object. Use the project/source reference images Ember-001, Ember-002, and Ember-003 when available. If references are unavailable, follow the written Ember character canon exactly.
 
-Use Ember reference images Ember-001, Ember-002, and Ember-003 for character consistency. Keep Ember's scarf, satchel, horns, eyes, and reddish-orange baby-dragon proportions on-model.
+Hide one tiny golden lantern key fairly in the scene. The mission item appears exactly once and must be findable for children ages 5-8. Place it naturally on a believable surface or tucked edge, not randomly in a walkway.
 
-Animate a soft 2.25D children's storybook scene. Use gentle camera motion: slow push-in, slight parallax, and tiny sparkle movement. Keep motion readable and calm for children ages 5-8.
+Build a rich but readable seek-and-find scene with clear foreground, midground, and background zones. Keep search density age-appropriate and avoid muddy clutter. Use clustered details, open eye paths, and fair hiding.
 
-## Camera Movement
+No readable generated text. No labels, signs, page numbers, watermarks, gibberish text, arrows, circles, boxes, outlines, halos, highlights, or answer marks. Do not imitate protected brands or famous seek-and-find trade dress.
 
-- Slow push-in toward Ember.
-- Gentle parallax between foreground decorations and background festival/world details.
-- No frantic cuts, scary lighting, or dizzying motion.
+Keep the tone warm, magical, cheerful, and child-safe for ages 5-8.
 
-## CapCut Edit Notes
+## Hidden Object Category Guidance
 
-- Add real editable text outside the video model if captions are needed.
-- Keep music soft, magical, and upbeat.
-- Export a short vertical and square crop only after reviewing composition.
+- Mission Item: tiny golden lantern key appears once.
+- Main Finds: choose 10 clear objects after the approved image exists.
+- Bonus Finds: choose 5-15 optional objects from visible approved art.
 
-## Manual Upload Checklist
+## Negative Prompt / Avoid
 
-- Confirm reference image selected manually.
-- Confirm no payment, CAPTCHA, subscription, or account-verification prompt is present.
-- Paste prompt only after reviewing it.
-- Save screenshots and output file path in the session log.
+Avoid: off-model Ember, duplicate Ember, hidden Ember, readable text, fake text, labels, answer marks, circles, boxes, arrows, scary lighting, weapons focus, muddy clutter, overly tiny targets, copyrighted character imitation, and important details too close to trim or gutter.

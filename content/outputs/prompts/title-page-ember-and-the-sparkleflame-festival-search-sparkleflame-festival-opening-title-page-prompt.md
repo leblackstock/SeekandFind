@@ -1,9 +1,8 @@
-# Seedance Storyboard Pack
+# Ember and the Sparkleflame Festival Search - Title Page Prompt
 
-Goal: promote Ember seek-and-find book
-Scene: Ember waves, notices a glowing festival clue, follows sparkles, and smiles at the viewer
-Clip length: 15 seconds
+Theme: Sparkleflame Festival opening title page
 Audience: children ages 5-8
+Style: soft rounded 2.25D children's storybook
 
 ## Canon To Preserve
 
@@ -120,34 +119,14 @@ For every marketing prompt:
 Never mark the mission item or hidden objects with a circle, square, box, outline, arrow, halo, label, highlight, or answer mark on seek-page art. Markers are allowed only in separate answer-key or hint assets created after final art approval.
 
 
-## 15-Second Structure
+## Final Image Prompt
 
-Beat 1, 0:00-0:03: Establish a warm Ember world moment tied to promote Ember seek-and-find book.
-Beat 2, 0:03-0:07: Ember moves gently through the scene: Ember waves, notices a glowing festival clue, follows sparkles, and smiles at the viewer.
-Beat 3, 0:07-0:11: A glowing clue or search moment gives the clip visual payoff.
-Beat 4, 0:11-0:15: Ember smiles toward the viewer with a cozy invitation to search.
+Create a warm title-page illustration for Ember and the Sparkleflame Festival Search. This is not a hidden-object page.
 
-## Image-To-Video Prompt
+Use the project/source reference images Ember-001, Ember-002, and Ember-003 when available. Ember must be clear, friendly, and on-model.
 
-Use Ember reference images Ember-001, Ember-002, and Ember-003 for character consistency. Keep Ember's scarf, satchel, horns, eyes, and reddish-orange baby-dragon proportions on-model.
+Composition: Ember appears in a welcoming title-page scene inspired by Sparkleflame Festival opening title page, with clear visual hierarchy, soft magical lighting, and enough open space for real layout typography.
 
-Animate a soft 2.25D children's storybook scene. Use gentle camera motion: slow push-in, slight parallax, and tiny sparkle movement. Keep motion readable and calm for children ages 5-8.
+Text policy: do not ask the image model to invent title words, fake labels, page numbers, or gibberish text. If exact title text is needed, it must be added later with editable typography unless the user explicitly requests exact text generation.
 
-## Camera Movement
-
-- Slow push-in toward Ember.
-- Gentle parallax between foreground decorations and background festival/world details.
-- No frantic cuts, scary lighting, or dizzying motion.
-
-## CapCut Edit Notes
-
-- Add real editable text outside the video model if captions are needed.
-- Keep music soft, magical, and upbeat.
-- Export a short vertical and square crop only after reviewing composition.
-
-## Manual Upload Checklist
-
-- Confirm reference image selected manually.
-- Confirm no payment, CAPTCHA, subscription, or account-verification prompt is present.
-- Paste prompt only after reviewing it.
-- Save screenshots and output file path in the session log.
+Format: vertical KDP-style 8.5x11 title page with bleed, trim, gutter, and safe-area awareness.

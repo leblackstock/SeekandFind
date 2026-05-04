@@ -56,6 +56,8 @@ export function runMarketingQa(text: string, productionStatus = ""): QaResult {
   const statusConfirmsPublished = /published|available now/i.test(productionStatus);
   const claimText = text
     .replace(/\bDo not [^.]+[.]/gi, "")
+    .replace(/\bwithout claiming [^.]+(?:published|available now|buy now)[^.]*[.]?/gi, "")
+    .replace(/\bnot claiming [^.]+(?:published|available now|buy now)[^.]*[.]?/gi, "")
     .replace(/## Publication Claim Guardrail[\s\S]*/i, "");
   if (!statusConfirmsPublished && /available now|buy now|published/i.test(claimText)) {
     failures.push("Marketing copy claims publication/availability before production status confirms it.");

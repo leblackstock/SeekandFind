@@ -1,9 +1,9 @@
-# Seedance Storyboard Pack
+# Ember Marketing Pack
 
-Goal: promote Ember seek-and-find book
-Scene: Ember waves, notices a glowing festival clue, follows sparkles, and smiles at the viewer
-Clip length: 15 seconds
-Audience: children ages 5-8
+Asset: Book 1 sample seek-and-find page
+Goal: promote a children's dragon seek-and-find activity book without claiming it is already published
+Platforms: Pinterest, Facebook, Instagram
+Audience: children ages 5-8 and adult gift-buyers.
 
 ## Canon To Preserve
 
@@ -120,34 +120,39 @@ For every marketing prompt:
 Never mark the mission item or hidden objects with a circle, square, box, outline, arrow, halo, label, highlight, or answer mark on seek-page art. Markers are allowed only in separate answer-key or hint assets created after final art approval.
 
 
-## 15-Second Structure
+## Pinterest
 
-Beat 1, 0:00-0:03: Establish a warm Ember world moment tied to promote Ember seek-and-find book.
-Beat 2, 0:03-0:07: Ember moves gently through the scene: Ember waves, notices a glowing festival clue, follows sparkles, and smiles at the viewer.
-Beat 3, 0:07-0:11: A glowing clue or search moment gives the clip visual payoff.
-Beat 4, 0:11-0:15: Ember smiles toward the viewer with a cozy invitation to search.
+Title: Magical seek-and-find adventure for kids ages 5-8
+Description: A cozy Ember search-adventure teaser for families who love screen-free activity books, gentle fantasy worlds, and hidden-object fun.
 
-## Image-To-Video Prompt
+## Facebook
 
-Use Ember reference images Ember-001, Ember-002, and Ember-003 for character consistency. Keep Ember's scarf, satchel, horns, eyes, and reddish-orange baby-dragon proportions on-model.
+Post: Meet Ember, a tiny baby dragon guide in a warm seek-and-find adventure for children ages 5-8. This teaser is based on Book 1 sample seek-and-find page and keeps the focus on cozy search fun.
 
-Animate a soft 2.25D children's storybook scene. Use gentle camera motion: slow push-in, slight parallax, and tiny sparkle movement. Keep motion readable and calm for children ages 5-8.
+## Instagram
 
-## Camera Movement
+Caption: A soft magical search moment with Ember, made for young seekers and family reading time. Children ages 5-8 can look for little story treasures in a gentle fantasy world.
 
-- Slow push-in toward Ember.
-- Gentle parallax between foreground decorations and background festival/world details.
-- No frantic cuts, scary lighting, or dizzying motion.
+## Short Video Caption
 
-## CapCut Edit Notes
+Follow Ember into a cozy seek-and-find adventure.
 
-- Add real editable text outside the video model if captions are needed.
-- Keep music soft, magical, and upbeat.
-- Export a short vertical and square crop only after reviewing composition.
+## CTA Variants
 
-## Manual Upload Checklist
+- Save this for your next screen-free kids' activity idea.
+- Follow for more Ember search-adventure updates.
+- Watch for the next hidden treasure teaser.
 
-- Confirm reference image selected manually.
-- Confirm no payment, CAPTCHA, subscription, or account-verification prompt is present.
-- Paste prompt only after reviewing it.
-- Save screenshots and output file path in the session log.
+## Hashtags
+
+#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #FantasyForKids
+
+## Marketing Image Prompt
+
+Create promotional-style art inspired by Book 1 sample seek-and-find page. Use Ember reference images Ember-001, Ember-002, and Ember-003 when available. Keep Ember on-model, cheerful, and child-safe. This is fresh promo art, not an interior sample page, not a fake cover, and not an Amazon listing preview.
+
+No text unless exact approved marketing text is provided. No fake text, labels, logos, watermarks, page numbers, arrows, circles, boxes, or answer marks.
+
+## Publication Claim Guardrail
+
+Do not say available now, buy now, published, or inside-the-book unless production status confirms that wording.
