@@ -6,6 +6,8 @@ Use this recipe for one supervised ChatGPT web UI image attempt from an existing
 
 This recipe does not use the OpenAI API and does not run unattended bulk generation.
 
+Broke Mode pastes clean prompt text only. It does not paste local file links or folder paths into ChatGPT. Character references should be named as Ember-001, Ember-002, and Ember-003.
+
 ## Prerequisites
 
 - `npm install` has been run.
@@ -16,20 +18,34 @@ This recipe does not use the OpenAI API and does not run unattended bulk generat
 
 ## Login Setup
 
-The helper uses a persistent local Playwright profile stored under `.cache/playwright-chatgpt-profile/`, which is ignored by git.
+Broke Mode has three browser strategies:
 
-Open the login browser:
+- `existing`: preferred. Connects to an already-open browser over CDP when available.
+- `managed`: fallback. Launches a Playwright-managed browser profile and may be blocked by Google as insecure.
+- `manual`: no browser automation; use normal browser copy/paste and local QA.
+
+Existing-browser mode does not copy, scrape, or expose cookies. It only connects to a browser endpoint you intentionally start for this supervised workflow.
+
+Start a normal browser with remote debugging and a separate profile:
 
 ```powershell
-npm run image:broke-mode -- --setup-login --prompt content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md
+chrome.exe --remote-debugging-port=9222 --user-data-dir="$env:TEMP\ember-chatgpt-cdp-profile"
+```
+
+Log into ChatGPT manually in that browser.
+
+Run setup against the existing browser:
+
+```powershell
+npm run image:broke-mode -- --browser-mode=existing --setup-login --prompt=content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md
 ```
 
 Log into ChatGPT manually in the browser. Do not store passwords in the repo. If ChatGPT shows CAPTCHA, account verification, warnings, or payment prompts, handle them manually or stop.
 
-If bundled Playwright Chromium gets stuck at normal human verification, you may try a supervised Chrome-channel profile:
+Managed fallback:
 
 ```powershell
-npm run image:broke-mode -- --setup-login --prompt=content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md --browser-channel=chrome --profile-dir=.cache/playwright-chatgpt-chrome-profile
+npm run image:broke-mode -- --browser-mode=managed --setup-login --prompt=content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md --browser-channel=chrome --profile-dir=.cache/playwright-chatgpt-chrome-profile
 ```
 
 This is not a bypass. It is only a different manually controlled browser profile. Stop if ChatGPT still shows verification, CAPTCHA, rate limits, cooldowns, or warnings.
@@ -39,10 +55,16 @@ If Google says `Couldn't sign you in` or `This browser or app may not be secure`
 ## One-Image-At-A-Time Workflow
 
 ```powershell
-npm run image:broke-mode -- --prompt content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md
+npm run image:broke-mode -- --browser-mode=existing --prompt=content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md
 ```
 
-Use the same `--browser-channel` and `--profile-dir` values here if you used them during login setup.
+Use the same browser mode/setup values here if you used them during login setup.
+
+Manual mode:
+
+```powershell
+npm run image:broke-mode -- --browser-mode=manual --prompt=content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md
+```
 
 If npm strips bare option names on your setup, use:
 
@@ -53,16 +75,24 @@ npm run image:broke-mode -- --prompt=content/outputs/prompts/book01-page008-glow
 Default behavior:
 
 1. Read the prompt file.
-2. Open ChatGPT in Playwright Chromium.
-3. Confirm there is no login, CAPTCHA, cooldown, rate-limit, payment, or warning boundary.
-4. Paste the prompt into the ChatGPT composer.
-5. Pause for human approval.
-6. Submit only if you type `YES`.
-7. Wait for generation.
-8. Try to download the image.
-9. Save image or screenshot evidence under `content/outputs/images/pending-review/`.
-10. Run basic local image QA.
-11. Log the attempt.
+2. Prepare a clean final ChatGPT prompt.
+3. Open ChatGPT through the selected browser mode.
+4. Confirm there is no login, CAPTCHA, cooldown, rate-limit, payment, or warning boundary.
+5. Paste the prompt into the ChatGPT composer.
+6. Pause for human approval.
+7. Submit only if you type `YES`.
+8. Wait for generation.
+9. Try to download the image.
+10. Save image or screenshot evidence under `content/outputs/images/pending-review/`.
+11. Run basic local image QA.
+12. Log the attempt.
+
+Prompt preparation:
+
+- strips local paths, folder references, markdown links, and image file links from the final pasted prompt
+- keeps named project references such as `Ember-001`, `Ember-002`, and `Ember-003`
+- preserves written Ember canon, scene instructions, mission item, location, and QA-relevant constraints
+- appends missing format requirements, including `vertical 8.5 x 11 inch page`, `17:22 aspect ratio`, `full-color KDP-style interior page`, and `bleed, trim, and safe-area awareness`
 
 ## Manual Approval Requirement
 

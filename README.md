@@ -155,22 +155,40 @@ The helpers are reviewable browser assistance only. They stop at login, CAPTCHA,
 
 ## Broke Mode ChatGPT Image Generation
 
-Broke Mode is a supervised, one-image-at-a-time helper for using your already-logged-in ChatGPT web session through Playwright Chromium. It is for prompt refinement and careful free/local testing before paid API image credits are available.
+Broke Mode is a supervised, one-image-at-a-time helper for using ChatGPT web UI while prompt refinement is still budget-sensitive. It is for careful free/local testing before paid API image credits are available.
 
 It does not use the OpenAI API, bypass login, bypass CAPTCHA, bypass payment prompts, bypass rate limits, evade cooldowns, or run unattended bulk generation.
 
-Set up the Playwright Chromium ChatGPT login profile:
+Broke Mode pastes clean prompt text only. It does not paste local file links or folder paths into ChatGPT. Character references should be named as Ember-001, Ember-002, and Ember-003.
+
+Broke Mode has three browser strategies:
+
+- `--browser-mode=existing`: preferred. Connects to an already-open browser over CDP when available, reusing the normal logged-in session without copying cookies or secrets.
+- `--browser-mode=managed`: fallback. Launches a Playwright-managed Chromium/Chrome profile and may be blocked by Google as an insecure browser.
+- `--browser-mode=manual`: no browser automation. Copies the prompt and gives manual save/QA steps.
+
+Default mode is `existing`. It expects a CDP-compatible browser endpoint, usually `http://127.0.0.1:9222`.
+
+Start a normal browser with a separate remote-debugging profile when you want existing-browser mode:
 
 ```powershell
-npm run image:broke-mode -- --setup-login --prompt content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md
+chrome.exe --remote-debugging-port=9222 --user-data-dir="$env:TEMP\ember-chatgpt-cdp-profile"
+```
+
+Log into ChatGPT manually in that browser. Do not automate Google login. Do not copy or expose cookies.
+
+Run setup/login against the existing browser:
+
+```powershell
+npm run image:broke-mode -- --browser-mode=existing --setup-login --prompt=content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md
 ```
 
 Log into ChatGPT manually in the browser, then close it when finished.
 
-If bundled Playwright Chromium gets stuck at normal human verification, use a supervised Chrome-channel profile instead:
+Managed fallback is still available:
 
 ```powershell
-npm run image:broke-mode -- --setup-login --prompt=content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md --browser-channel=chrome --profile-dir=.cache/playwright-chatgpt-chrome-profile
+npm run image:broke-mode -- --browser-mode=managed --setup-login --prompt=content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md --browser-channel=chrome --profile-dir=.cache/playwright-chatgpt-chrome-profile
 ```
 
 This is still manual login. It does not bypass verification, CAPTCHA, rate limits, cooldowns, payment prompts, or account warnings.
@@ -184,12 +202,20 @@ npm run image:qa -- --file=content/outputs/images/pending-review/YOUR-FILE.png
 Run one supervised image attempt:
 
 ```powershell
-npm run image:broke-mode -- --prompt content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md
+npm run image:broke-mode -- --browser-mode=existing --prompt=content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md
 ```
 
-Use the same `--browser-channel` and `--profile-dir` values for the generation command if you used them for setup/login.
+Use the same browser mode/setup values for the generation command that you used for setup/login.
+
+Manual mode:
+
+```powershell
+npm run image:broke-mode -- --browser-mode=manual --prompt=content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md
+```
 
 Default behavior is `--auto-submit=false`: the helper opens ChatGPT, checks for login/limit/payment/warning boundaries, pastes the prompt, and waits for you to type `YES` before submitting. A dry run can validate the prompt and create local preparation artifacts without opening ChatGPT:
+
+Before pasting, Broke Mode strips local paths, markdown links, folder references, and image file links from the final ChatGPT prompt. It keeps project reference labels such as `Ember-001`, `Ember-002`, and `Ember-003`, preserves the written canon/scene instructions, and appends missing KDP format requirements such as `vertical 8.5 x 11 inch page`, `17:22 aspect ratio`, `full-color KDP-style interior page`, and `bleed, trim, and safe-area awareness`.
 
 ```powershell
 npm run image:broke-mode -- --prompt content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md --dry-run

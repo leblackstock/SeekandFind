@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-04T01-16-27-819Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "canceled",
+  "assetName": "book01-page008-glowing-lantern-garden",
+  "assetSlug": "book01-page008-glowing-lantern-garden",
+  "promptPath": "content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/book01-page008-glowing-lantern-garden-2026-05-04T01-16-27-819Z-prompt.md",
+  "warnings": [
+    "Submission declined by human reviewer."
+  ],
+  "dryRun": false,
+  "autoSubmit": false,
+  "maxAttempts": 1,
+  "browserMode": "existing",
+  "cdpUrl": "http://127.0.0.1:9222"
+}

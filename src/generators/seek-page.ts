@@ -1,4 +1,8 @@
 import { DEFAULT_AGE_RANGE, DEFAULT_BOOK_TITLE, DEFAULT_STYLE } from "../config.js";
+import { existsSync } from "node:fs";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
+import { repoRoot } from "../config.js";
 import { GenerateResult, RunOptions, SeekPageInput } from "../types.js";
 import { canonAsPromptBlock, loadCanonBundle } from "../core/canon-loader.js";
 import { renderTemplate } from "../core/template-renderer.js";
@@ -20,7 +24,7 @@ Location: {{location}}
 Mission item: {{missionItem}}
 Audience: children ages {{ageRange}}
 Style: {{style}}
-Format: vertical KDP-style 8.5x11 full-color interior page with bleed, trim, and safe-area awareness.
+Format: vertical KDP-style 8.5x11 full-color interior page, portrait aspect ratio 8.5:11 (17:22), with bleed, trim, and safe-area awareness.
 
 {{canonBlock}}
 
@@ -64,8 +68,66 @@ export function normalizeSeekPageInput(input: Partial<SeekPageInput>): SeekPageI
   };
 }
 
+export interface PageMapRow {
+  spread: number;
+  storyListPage: number;
+  seekPage: number;
+  location: string;
+  missionItem: string;
+}
+
+export function parsePageMap(markdown: string): PageMapRow[] {
+  return markdown
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => /^\|\s*\d+\s*\|/.test(line))
+    .map((line) => line.split("|").slice(1, -1).map((cell) => cell.trim()))
+    .filter((cells) => cells.length >= 5)
+    .map((cells) => ({
+      spread: Number.parseInt(cells[0], 10),
+      storyListPage: Number.parseInt(cells[1], 10),
+      seekPage: Number.parseInt(cells[2], 10),
+      location: cells[3],
+      missionItem: cells[4]
+    }))
+    .filter((row) => Number.isInteger(row.spread) && Number.isInteger(row.storyListPage) && Number.isInteger(row.seekPage));
+}
+
+function canonEqual(left: string, right: string): boolean {
+  return left.trim().toLowerCase() === right.trim().toLowerCase();
+}
+
+export function validateSeekPageAgainstPageMap(input: SeekPageInput, rows: PageMapRow[]): void {
+  const storyRow = rows.find((row) => row.storyListPage === input.pageNumber);
+  if (storyRow && storyRow.seekPage !== input.pageNumber) {
+    throw new Error(`Page ${input.pageNumber} is a story/list page for spread ${storyRow.spread}, not a seek image. Use seek page ${storyRow.seekPage}: ${storyRow.location} / ${storyRow.missionItem}.`);
+  }
+
+  const seekRow = rows.find((row) => row.seekPage === input.pageNumber);
+  if (!seekRow) return;
+
+  const problems: string[] = [];
+  if (!canonEqual(input.location, seekRow.location)) {
+    problems.push(`location should be "${seekRow.location}"`);
+  }
+  if (!canonEqual(input.missionItem, seekRow.missionItem)) {
+    problems.push(`mission item should be "${seekRow.missionItem}"`);
+  }
+  if (problems.length) {
+    throw new Error(`Book 1 page-map conflict for seek page ${input.pageNumber}: ${problems.join("; ")}.`);
+  }
+}
+
+async function loadPageMapRows(rootDir?: string): Promise<PageMapRow[]> {
+  const root = repoRoot(rootDir);
+  const absolute = join(root, "content/workflows/book-01/page-map.md");
+  if (!existsSync(absolute)) return [];
+  return parsePageMap(await readFile(absolute, "utf8"));
+}
+
 export async function generateSeekPage(input: Partial<SeekPageInput>, options: RunOptions = {}): Promise<GenerateResult> {
   const normalized = normalizeSeekPageInput(input);
+  validateSeekPageAgainstPageMap(normalized, await loadPageMapRows(options.rootDir));
   const canon = await loadCanonBundle(options.rootDir);
   const baseName = seekPageBaseName(normalized.pageNumber, normalized.location);
   const prompt = renderTemplate(seekTemplate, {
@@ -92,7 +154,7 @@ export async function generateSeekPage(input: Partial<SeekPageInput>, options: R
     "- Reference images are named",
     "- No readable generated text",
     "- Mission item appears once",
-    "- Vertical KDP-style 8.5x11 format",
+    "- Vertical KDP-style 8.5x11 format with explicit 8.5:11 / 17:22 aspect ratio",
     "- Safe-area awareness included",
     "- Kid-friendly ages 5-8"
   ].join("\n");

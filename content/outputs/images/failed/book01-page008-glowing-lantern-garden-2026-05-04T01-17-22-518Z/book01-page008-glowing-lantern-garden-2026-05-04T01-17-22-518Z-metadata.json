@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-05-04T01-17-22-518Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "failed",
+  "assetName": "book01-page008-glowing-lantern-garden",
+  "assetSlug": "book01-page008-glowing-lantern-garden",
+  "promptPath": "content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/book01-page008-glowing-lantern-garden-2026-05-04T01-17-22-518Z-prompt.md",
+  "screenshotPath": "content/outputs/images/pending-review/book01-page008-glowing-lantern-garden-2026-05-04T01-17-22-518Z-chatgpt-screenshot.png",
+  "failureReason": "No reliable ChatGPT image download button was found. Screenshot evidence was saved for manual download.",
+  "warnings": [
+    "No reliable ChatGPT image download button was found. Screenshot evidence was saved for manual download."
+  ],
+  "dryRun": false,
+  "autoSubmit": false,
+  "maxAttempts": 1,
+  "browserMode": "existing",
+  "cdpUrl": "http://127.0.0.1:9222"
+}

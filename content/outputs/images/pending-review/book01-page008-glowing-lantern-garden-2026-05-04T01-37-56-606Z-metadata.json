@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-05-04T01-37-56-606Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "dry-run",
+  "assetName": "book01-page008-glowing-lantern-garden",
+  "assetSlug": "book01-page008-glowing-lantern-garden",
+  "promptPath": "content/outputs/prompts/book01-page008-glowing-lantern-garden-image-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/book01-page008-glowing-lantern-garden-2026-05-04T01-37-56-606Z-prompt.md",
+  "warnings": [
+    "Removed local file or folder path from ChatGPT prompt.",
+    "Added missing ChatGPT image-generation requirements: vertical full-page children's seek-and-find illustration; vertical 8.5 x 11 inch page; 17:22 aspect ratio; full-color KDP-style interior page"
+  ],
+  "dryRun": true,
+  "autoSubmit": false,
+  "maxAttempts": 1,
+  "browserMode": "existing",
+  "cdpUrl": "http://127.0.0.1:9222"
+}

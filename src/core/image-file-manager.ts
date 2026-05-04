@@ -12,6 +12,7 @@ export const imageOutputFolders = {
 } as const;
 
 export type ImageAttemptStatus = "dry-run" | "canceled" | "pending-review" | "approved" | "failed";
+export type BrowserMode = "existing" | "managed" | "manual";
 
 export interface ImageAttemptMetadata {
   timestamp: string;
@@ -29,6 +30,8 @@ export interface ImageAttemptMetadata {
   dryRun: boolean;
   autoSubmit: boolean;
   maxAttempts: number;
+  browserMode?: BrowserMode;
+  cdpUrl?: string;
 }
 
 export interface ImageWriteOptions {
@@ -42,6 +45,8 @@ export interface BrokeModeRuntimeOptions {
   maxAttempts: number;
   cooldownSeconds: number;
   assetName?: string;
+  browserMode: BrowserMode;
+  cdpUrl: string;
   browserChannel?: string;
   profileDir: string;
   dryRun: boolean;
@@ -73,6 +78,8 @@ export function defaultBrokeModeOptions(prompt: string): BrokeModeRuntimeOptions
     autoSubmit: false,
     maxAttempts: 1,
     cooldownSeconds: 120,
+    browserMode: "existing",
+    cdpUrl: "http://127.0.0.1:9222",
     profileDir: ".cache/playwright-chatgpt-profile",
     dryRun: false,
     force: false

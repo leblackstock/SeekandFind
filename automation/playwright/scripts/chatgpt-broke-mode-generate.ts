@@ -1,14 +1,14 @@
-import { mkdir, writeFile } from "node:fs/promises";
-import { existsSync } from "node:fs";
+import { mkdir } from "node:fs/promises";
 import { basename, extname, join } from "node:path";
 import { createInterface } from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
-import { chromium, Locator, Page } from "@playwright/test";
+import { Browser, BrowserContext, chromium, Locator, Page } from "@playwright/test";
 import { repoRoot } from "../../../src/config.js";
 import { appendSessionLog, updateProductionStatus } from "../../../src/core/progress-tracker.js";
 import {
   archiveFailedAttempt,
   assertPromptFile,
+  BrowserMode,
   BrokeModeRuntimeOptions,
   createSafeAssetSlug,
   createTimestampSlug,
@@ -18,7 +18,7 @@ import {
   imageOutputFolders,
   safeImageFileName,
   saveAttemptMetadata,
-  savePromptCopy
+  saveTextArtifact
 } from "../../../src/core/image-file-manager.js";
 import { saveImageQaReport } from "../../../src/core/image-qa.js";
 import { GenerateResult } from "../../../src/types.js";
@@ -26,7 +26,238 @@ import { GenerateResult } from "../../../src/types.js";
 const chatGptUrl = "https://chatgpt.com/";
 
 const boundaryPattern = /captcha|rate limit|cooldown|try again later|too many requests|payment|upgrade|subscribe|subscription|verify your account|account warning|unusual activity|log in|sign in|couldn.t sign you in|browser or app may not be secure|try using a different browser/i;
+const insecureBrowserPattern = /couldn.t sign you in|browser or app may not be secure|try using a different browser/i;
 const imageReadyPattern = /download|regenerate|share|copy|image/i;
+
+export function isBoundaryText(text: string): boolean {
+  return boundaryPattern.test(text);
+}
+
+export function managedModeBlockedByInsecureBrowser(text: string): boolean {
+  return insecureBrowserPattern.test(text);
+}
+
+export function manualModeMessage(promptPath: string): string {
+  return [
+    "Manual Broke Mode selected. No browser will be opened or controlled.",
+    `Prompt file: ${promptPath}`,
+    "Open ChatGPT in your normal logged-in browser, paste the prompt manually, generate one image, then save it under content/outputs/images/pending-review/.",
+    "After saving, run: npm run image:qa -- --file=content/outputs/images/pending-review/YOUR-FILE.png"
+  ].join("\n");
+}
+
+export function normalizeReferenceNamesForBrokeMode(prompt: string): { prompt: string; warnings: string[] } {
+  const warnings: string[] = [];
+  const normalized = prompt.replace(/(?:sandbox:)?\/mnt\/data\/([A-Za-z0-9_-]+)(?:\.(?:png|jpg|jpeg|webp))?/gi, (_match, name: string) => {
+    warnings.push(`Converted sandbox reference path to project reference name: ${name}`);
+    return name;
+  });
+  return { prompt: normalized, warnings: Array.from(new Set(warnings)) };
+}
+
+const referenceNamePattern = /\b(?:Ember|HootiePuff|Pebblekins|Luma_Leafwhisk|Gemma_Glint|Elder_Glowkeeper|Ember_Cast_Lineup)-\d{3}\b/gi;
+const localPathPattern = /(?:file:\/\/\/|[A-Za-z]:[\\/]|(?:^|[\s`"'(])(?:content|automation|src|tests|\.agents|Ember's Adventures)[\\/][^\s`"')\]]+|\/mnt\/data\/|sandbox:\/mnt\/data\/)/i;
+const localFileNamePattern = /\b[\w .,'()-]+\.(?:md|png|jpe?g|webp|json|ts|tsx)\b/i;
+
+const requiredPromptRequirements: Array<{ label: string; pattern: RegExp }> = [
+  {
+    label: "vertical full-page children's seek-and-find illustration",
+    pattern: /vertical[\s\S]{0,80}seek-and-find|seek-and-find[\s\S]{0,80}vertical/i
+  },
+  {
+    label: "vertical 8.5 x 11 inch page",
+    pattern: /vertical 8\.5 x 11 inch page/i
+  },
+  {
+    label: "17:22 aspect ratio",
+    pattern: /17\s*:\s*22/i
+  },
+  {
+    label: "full-color KDP-style interior page",
+    pattern: /full-color KDP-style interior page/i
+  },
+  {
+    label: "bleed, trim, and safe-area awareness",
+    pattern: /bleed[\s\S]{0,80}trim[\s\S]{0,80}safe[- ]?area|safe[- ]?area[\s\S]{0,80}bleed[\s\S]{0,80}trim/i
+  },
+  {
+    label: "no readable generated text",
+    pattern: /no readable generated text/i
+  },
+  {
+    label: "Ember appears exactly once",
+    pattern: /Ember appears exactly once/i
+  },
+  {
+    label: "Ember is visible as the helper/guide, not hidden",
+    pattern: /Ember is visible[\s\S]{0,120}(helper|guide)[\s\S]{0,120}not hidden|not hidden[\s\S]{0,120}(helper|guide)/i
+  },
+  {
+    label: "mission item appears exactly once and is findable",
+    pattern: /mission item appears exactly once[\s\S]{0,80}findable|findable[\s\S]{0,80}mission item appears exactly once/i
+  },
+  {
+    label: "soft rounded 2.25D children's storybook style",
+    pattern: /soft rounded 2\.25D children's storybook/i
+  },
+  {
+    label: "audience kids ages 5-8",
+    pattern: /children ages 5-8|kids ages 5-8|ages 5-8/i
+  }
+];
+
+function uniqueValues(values: string[]): string[] {
+  return Array.from(new Set(values.map((value) => value.trim()).filter(Boolean)));
+}
+
+function collectReferenceNames(text: string): string[] {
+  return uniqueValues(Array.from(text.matchAll(referenceNamePattern), (match) => match[0]));
+}
+
+function normalizeReferenceFileNames(text: string): string {
+  return text
+    .replace(new RegExp(`(${referenceNamePattern.source})(?:\\.(?:png|jpg|jpeg|webp))?`, "gi"), (_match, name: string) => name)
+    .replace(new RegExp(`\`(${referenceNamePattern.source})\``, "gi"), (_match, name: string) => name);
+}
+
+function stripMarkdownLinks(text: string, warnings: string[]): string {
+  return text.replace(/!?\[([^\]]*)\]\(([^)]*)\)/g, (_match, label: string, target: string) => {
+    const references = uniqueValues([...collectReferenceNames(label), ...collectReferenceNames(target)]);
+    if (references.length) {
+      warnings.push(`Converted markdown reference link to project reference name: ${references.join(", ")}`);
+      return references.join(", ");
+    }
+    if (localPathPattern.test(target) || localFileNamePattern.test(target)) {
+      warnings.push("Removed local markdown link target from ChatGPT prompt.");
+      return label.trim();
+    }
+    return label.trim() || target.trim();
+  });
+}
+
+function lineHasOnlyLocalSourceInfo(line: string): boolean {
+  const trimmed = line.trim();
+  if (!trimmed) return false;
+  if (/^(source mirror|source file|source folder|see folder|see file|file|folder|prompt file)\s*:/i.test(trimmed)) return true;
+  if (/^(?:[-*]\s*)?`?(?:content|automation|src|tests|\.agents|Ember's Adventures)[\\/]/i.test(trimmed)) return true;
+  if (/^(?:[-*]\s*)?`?file:\/\/\//i.test(trimmed)) return true;
+  if (/^(?:[-*]\s*)?`?[A-Za-z]:[\\/]/i.test(trimmed)) return true;
+  return false;
+}
+
+function stripLocalPathMaterial(text: string, warnings: string[]): string {
+  const lines = text.split(/\r?\n/);
+  const cleanedLines = lines.map((line) => {
+    const references = collectReferenceNames(line);
+    const hadLocalPath = localPathPattern.test(line) || /(?:[\\/][^\s`"')\]]+){2,}/.test(line);
+    const hadLocalFile = localFileNamePattern.test(line);
+
+    if (lineHasOnlyLocalSourceInfo(line) || ((hadLocalPath || hadLocalFile) && references.length === 0)) {
+      warnings.push("Removed local file or folder path from ChatGPT prompt.");
+      return "";
+    }
+
+    if (hadLocalPath || hadLocalFile) {
+      warnings.push(`Removed local path details while preserving reference names: ${references.join(", ") || "none"}`);
+    }
+
+    let cleaned = normalizeReferenceFileNames(line);
+    cleaned = cleaned.replace(/(?:sandbox:)?\/mnt\/data\/([A-Za-z0-9_-]+)(?:\.(?:png|jpg|jpeg|webp))?/gi, (_match, name: string) => name);
+    cleaned = cleaned.replace(/file:\/\/\/[^\s`"')\]]+/gi, "");
+    cleaned = cleaned.replace(/[A-Za-z]:[\\/][^\s`"')\]]+/g, "");
+    cleaned = cleaned.replace(/(?:^|[\s`"'(])(?:content|automation|src|tests|\.agents|Ember's Adventures)[\\/][^\s`"')\]]+/g, " ");
+    cleaned = cleaned.replace(/`([^`]*\.(?:md|png|jpe?g|webp|json|ts|tsx))`/gi, "");
+    return cleaned.replace(/[ \t]{2,}/g, " ").trimEnd();
+  });
+
+  return cleanedLines
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+function removeExistingReferenceInstruction(text: string): string {
+  const lines = text.split(/\r?\n/).map((line) => {
+    const trimmed = line.trim();
+    if (/^## Reference Instruction$/i.test(trimmed)) return "";
+    if (!/reference|Ember-001|Ember-002|Ember-003|stop and ask/i.test(trimmed)) return line;
+
+    const sentences = line.match(/[^.!?]+[.!?]|\S.+$/g);
+    if (!sentences) return line;
+
+    const kept = sentences.filter((sentence) => {
+      const sentenceText = sentence.trim();
+      if (/Use .*reference images.*Ember-001.*Ember-002.*Ember-003/i.test(sentenceText)) return false;
+      if (/If (a needed )?references? (file )?(is|are) not (present|available)|If references are unavailable/i.test(sentenceText)) return false;
+      if (/stop and ask before producing a final prompt/i.test(sentenceText)) return false;
+      return true;
+    });
+
+    if (!kept.length && kept.length !== sentences.length) return "";
+    return kept.join(" ").trimEnd();
+  });
+  return lines.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+}
+
+function referenceInstruction(referenceNames: string[]): string {
+  const emberReferences = ["Ember-001", "Ember-002", "Ember-003"];
+  const names = uniqueValues([...emberReferences, ...referenceNames]).join(", ");
+  return [
+    "## Character Reference Handling",
+    "",
+    `Use the character reference images available in this ChatGPT project/source context when available: ${names}.`,
+    "If references are not available, rely strictly on the written Ember canon below."
+  ].join("\n");
+}
+
+function missingRequirements(prompt: string): string[] {
+  return requiredPromptRequirements
+    .filter((requirement) => !requirement.pattern.test(prompt))
+    .map((requirement) => requirement.label);
+}
+
+function appendMissingRequirements(prompt: string): { prompt: string; warnings: string[] } {
+  const missing = missingRequirements(prompt);
+  if (!missing.length) return { prompt, warnings: [] };
+  return {
+    prompt: [
+      prompt.trim(),
+      "",
+      "## Format Requirements",
+      "",
+      ...missing.map((requirement) => `- ${requirement}`)
+    ].join("\n"),
+    warnings: [`Added missing ChatGPT image-generation requirements: ${missing.join("; ")}`]
+  };
+}
+
+export function sanitizePromptForBrokeMode(prompt: string): { prompt: string; warnings: string[] } {
+  const warnings: string[] = [];
+  const linkStripped = stripMarkdownLinks(prompt, warnings);
+  const referenceNames = collectReferenceNames(linkStripped);
+  const pathStripped = stripLocalPathMaterial(linkStripped, warnings);
+  const withoutOldReferenceInstruction = removeExistingReferenceInstruction(pathStripped);
+  const promptWithReferenceInstruction = [
+    referenceInstruction(referenceNames),
+    "",
+    withoutOldReferenceInstruction
+  ].join("\n").replace(/\n{3,}/g, "\n\n").trim();
+  return { prompt: promptWithReferenceInstruction, warnings: uniqueValues(warnings) };
+}
+
+export function ensureImageGenerationPromptRequirements(prompt: string): { prompt: string; warnings: string[] } {
+  return appendMissingRequirements(prompt);
+}
+
+export function preparePromptForChatGPTImageGeneration(prompt: string): { prompt: string; warnings: string[] } {
+  const normalized = normalizeReferenceNamesForBrokeMode(prompt);
+  const sanitized = sanitizePromptForBrokeMode(normalized.prompt);
+  const enforced = ensureImageGenerationPromptRequirements(sanitized.prompt);
+  return {
+    prompt: enforced.prompt,
+    warnings: uniqueValues([...normalized.warnings, ...sanitized.warnings, ...enforced.warnings])
+  };
+}
 
 function option(args: string[], name: string): string | undefined {
   const exactIndex = args.indexOf(`--${name}`);
@@ -50,6 +281,11 @@ function booleanOption(args: string[], name: string, fallback: boolean): boolean
   throw new Error(`--${name} must be true or false.`);
 }
 
+export function parseBrowserMode(value: string): BrowserMode {
+  if (value === "existing" || value === "managed" || value === "manual") return value;
+  throw new Error("--browser-mode must be one of: existing, managed, manual.");
+}
+
 export function parseBrokeModeArgs(args: string[] = process.argv.slice(2)): BrokeModeRuntimeOptions {
   const positionalArgs = args.filter((item) => !item.startsWith("--"));
   const prompt = option(args, "prompt") ?? positionalArgs[0];
@@ -68,6 +304,8 @@ export function parseBrokeModeArgs(args: string[] = process.argv.slice(2)): Brok
     ...defaults,
     prompt,
     assetName: option(args, "asset-name") ?? positionalArgs[1],
+    browserMode: parseBrowserMode(option(args, "browser-mode") ?? defaults.browserMode),
+    cdpUrl: option(args, "cdp-url") ?? defaults.cdpUrl,
     browserChannel: option(args, "browser-channel") ?? option(args, "channel"),
     profileDir: option(args, "profile-dir") ?? defaults.profileDir,
     autoSubmit: booleanOption(args, "auto-submit", defaults.autoSubmit),
@@ -78,12 +316,59 @@ export function parseBrokeModeArgs(args: string[] = process.argv.slice(2)): Brok
   };
 }
 
-async function launchChatGptContext(root: string, options: Pick<BrokeModeRuntimeOptions, "browserChannel" | "profileDir">) {
-  return chromium.launchPersistentContext(join(root, options.profileDir), {
+interface BrowserSession {
+  context: BrowserContext;
+  page: Page;
+  close: () => Promise<void>;
+}
+
+async function choosePage(context: BrowserContext): Promise<Page> {
+  const pages = context.pages();
+  const chatPage = pages.find((candidate) => /chatgpt\.com/.test(candidate.url()));
+  return chatPage ?? pages[0] ?? context.newPage();
+}
+
+async function launchManagedContext(root: string, options: Pick<BrokeModeRuntimeOptions, "browserChannel" | "profileDir">): Promise<BrowserSession> {
+  const context = await chromium.launchPersistentContext(join(root, options.profileDir), {
     headless: false,
     acceptDownloads: true,
     channel: options.browserChannel
   });
+  return { context, page: await choosePage(context), close: () => context.close() };
+}
+
+async function disconnectBrowser(browser: Browser): Promise<void> {
+  const disconnectable = browser as Browser & { disconnect?: () => void };
+  if (typeof disconnectable.disconnect === "function") {
+    disconnectable.disconnect();
+    return;
+  }
+  await browser.close();
+}
+
+async function connectExistingBrowser(options: Pick<BrokeModeRuntimeOptions, "cdpUrl">): Promise<BrowserSession> {
+  let browser: Browser;
+  try {
+    browser = await chromium.connectOverCDP(options.cdpUrl);
+  } catch {
+    throw new Error(`Could not connect to an existing browser at ${options.cdpUrl}. Start a normal browser with remote debugging or use --browser-mode=manual. Example: chrome.exe --remote-debugging-port=9222 --user-data-dir="%TEMP%\\ember-chatgpt-cdp-profile"`);
+  }
+  const context = browser.contexts()[0] ?? await browser.newContext({ acceptDownloads: true });
+  return { context, page: await choosePage(context), close: () => disconnectBrowser(browser) };
+}
+
+async function openBrowserSession(root: string, options: BrokeModeRuntimeOptions): Promise<BrowserSession> {
+  if (options.browserMode === "existing") return connectExistingBrowser(options);
+  if (options.browserMode === "managed") return launchManagedContext(root, options);
+  throw new Error("Manual browser mode does not open or control ChatGPT.");
+}
+
+async function prepareChatGptPage(page: Page, options: BrokeModeRuntimeOptions): Promise<void> {
+  if (options.browserMode === "existing" && /chatgpt\.com/.test(page.url())) {
+    console.log(`Using existing ChatGPT tab: ${page.url()}`);
+    return;
+  }
+  await page.goto(chatGptUrl, { waitUntil: "domcontentloaded", timeout: 60000 });
 }
 
 async function waitForApproval(): Promise<boolean> {
@@ -112,6 +397,8 @@ async function findComposer(page: Page): Promise<Locator> {
 async function pastePrompt(page: Page, prompt: string): Promise<void> {
   const composer = await findComposer(page);
   await composer.click();
+  await page.keyboard.press("Control+A");
+  await page.keyboard.press("Backspace");
   await page.keyboard.insertText(prompt);
 }
 
@@ -130,7 +417,7 @@ async function bodyText(page: Page): Promise<string> {
 
 async function assertNoBoundary(page: Page): Promise<void> {
   const text = await bodyText(page);
-  if (boundaryPattern.test(text) || /auth\/login|\/login/.test(page.url())) {
+  if (isBoundaryText(text) || /auth\/login|\/login/.test(page.url())) {
     throw new Error("ChatGPT showed a login, insecure-browser, limit, cooldown, warning, CAPTCHA, payment, or verification boundary.");
   }
 }
@@ -190,14 +477,23 @@ async function logAttempt(params: {
   }, rootDir);
 }
 
+function metadataCommon(options: BrokeModeRuntimeOptions): Pick<Parameters<typeof saveAttemptMetadata>[0], "browserMode" | "cdpUrl"> {
+  return {
+    browserMode: options.browserMode,
+    cdpUrl: options.browserMode === "existing" ? options.cdpUrl : undefined
+  };
+}
+
 async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
   const root = repoRoot();
   const timestamp = createTimestampSlug();
   await ensureImageOutputFolders(root);
-  const promptText = await assertPromptFile(options.prompt, root);
+  const rawPromptText = await assertPromptFile(options.prompt, root);
+  const preparedPrompt = preparePromptForChatGPTImageGeneration(rawPromptText);
+  const promptText = preparedPrompt.prompt;
   const assetName = options.assetName ?? basename(options.prompt, extname(options.prompt));
   const assetSlug = createSafeAssetSlug(assetName);
-  const promptCopyPath = await savePromptCopy(options.prompt, assetSlug, timestamp, { rootDir: root, force: options.force });
+  const promptCopyPath = await saveTextArtifact(`${imageOutputFolders.pendingReview}/${assetSlug}-${timestamp}-prompt.md`, promptText, { rootDir: root, force: options.force });
 
   if (options.dryRun) {
     const metadataPath = await saveAttemptMetadata({
@@ -208,38 +504,69 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
       assetSlug,
       promptPath: options.prompt,
       promptCopyPath,
-      warnings: [],
+      warnings: preparedPrompt.warnings,
       dryRun: true,
       autoSubmit: options.autoSubmit,
-      maxAttempts: options.maxAttempts
+      maxAttempts: options.maxAttempts,
+      ...metadataCommon(options)
     }, { rootDir: root, force: options.force });
     await logAttempt({
       options,
       status: "dry-run",
       outputs: [promptCopyPath, metadataPath],
-      warnings: [],
+      warnings: preparedPrompt.warnings,
       qaResult: "DRY RUN",
-      nextManualStep: "Run without --dry-run when ready to paste into ChatGPT."
+      nextManualStep: options.browserMode === "existing"
+        ? "Run without --dry-run after confirming an existing CDP-enabled browser is logged into ChatGPT."
+        : "Run without --dry-run when ready to paste into ChatGPT."
     }, root);
-    console.log(JSON.stringify({ ok: true, dryRun: true, promptCharacters: promptText.length, files: [promptCopyPath, metadataPath] }, null, 2));
+    console.log(JSON.stringify({ ok: true, dryRun: true, browserMode: options.browserMode, promptCharacters: promptText.length, files: [promptCopyPath, metadataPath] }, null, 2));
     return;
   }
 
-  const context = await launchChatGptContext(root, options);
-  const page = context.pages()[0] ?? await context.newPage();
+  if (options.browserMode === "manual") {
+    const message = manualModeMessage(options.prompt);
+    const metadataPath = await saveAttemptMetadata({
+      timestamp,
+      workflow: "chatgpt-broke-mode-image-generation",
+      status: "canceled",
+      assetName,
+      assetSlug,
+      promptPath: options.prompt,
+      promptCopyPath,
+      warnings: ["Manual mode selected; no browser automation was run.", ...preparedPrompt.warnings],
+      dryRun: false,
+      autoSubmit: options.autoSubmit,
+      maxAttempts: options.maxAttempts,
+      ...metadataCommon(options)
+    }, { rootDir: root, force: options.force });
+    await logAttempt({
+      options,
+      status: "manual",
+      outputs: [promptCopyPath, metadataPath],
+      warnings: ["Manual mode selected; no browser automation was run.", ...preparedPrompt.warnings],
+      qaResult: "MANUAL",
+      nextManualStep: "Paste the prompt in your normal browser, save the image to pending-review, then run image QA."
+    }, root);
+    console.log(JSON.stringify({ ok: true, manualMode: true, message, files: [promptCopyPath, metadataPath] }, null, 2));
+    return;
+  }
+
+  const session = await openBrowserSession(root, options);
+  const page = session.page;
   let screenshotPath: string | undefined;
   let imagePath: string | undefined;
   let metadataPath: string | undefined;
   let qaReportPath: string | undefined;
 
   try {
-    await page.goto(chatGptUrl, { waitUntil: "domcontentloaded", timeout: 60000 });
+    await prepareChatGptPage(page, options);
     await page.waitForTimeout(3000);
     try {
       await assertNoBoundary(page);
     } catch (error) {
       screenshotPath = await captureScreenshot(page, assetSlug, timestamp, root);
-      throw new Error(`${error instanceof Error ? error.message : error} Log into ChatGPT in the Playwright Chromium browser, then rerun this command.`);
+      throw new Error(`${error instanceof Error ? error.message : error} Log into ChatGPT manually in the existing normal browser, then rerun. If managed mode hits Google's insecure-browser warning, switch to --browser-mode=existing or --browser-mode=manual.`);
     }
 
     await pastePrompt(page, promptText);
@@ -255,16 +582,17 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
           assetSlug,
           promptPath: options.prompt,
           promptCopyPath,
-          warnings: ["Submission declined by human reviewer."],
+          warnings: ["Submission declined by human reviewer.", ...preparedPrompt.warnings],
           dryRun: false,
           autoSubmit: false,
-          maxAttempts: options.maxAttempts
+          maxAttempts: options.maxAttempts,
+          ...metadataCommon(options)
         }, { rootDir: root, force: options.force });
         await logAttempt({
           options,
           status: "canceled",
           outputs: [promptCopyPath, metadataPath],
-          warnings: ["Submission declined by human reviewer."],
+          warnings: ["Submission declined by human reviewer.", ...preparedPrompt.warnings],
           qaResult: "CANCELED",
           nextManualStep: "Rerun when the prompt is ready."
         }, root);
@@ -290,17 +618,18 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
         promptCopyPath,
         screenshotPath,
         failureReason,
-        warnings: [failureReason],
+        warnings: [failureReason, ...preparedPrompt.warnings],
         dryRun: false,
         autoSubmit: options.autoSubmit,
-        maxAttempts: options.maxAttempts
+        maxAttempts: options.maxAttempts,
+        ...metadataCommon(options)
       }, { rootDir: root, force: options.force });
       const archived = await archiveFailedAttempt({ assetSlug, timestamp, promptCopyPath, metadataPath, screenshotPath, failureReason }, { rootDir: root, force: options.force });
       await logAttempt({
         options,
         status: "failed",
         outputs: archived,
-        warnings: [failureReason],
+        warnings: [failureReason, ...preparedPrompt.warnings],
         qaResult: "FAIL",
         nextManualStep: "Download the image manually from ChatGPT, then run image QA."
       }, root);
@@ -318,10 +647,11 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
       promptCopyPath,
       imagePath,
       screenshotPath,
-      warnings: [],
+      warnings: preparedPrompt.warnings,
       dryRun: false,
       autoSubmit: options.autoSubmit,
-      maxAttempts: options.maxAttempts
+      maxAttempts: options.maxAttempts,
+      ...metadataCommon(options)
     }, { rootDir: root, force: options.force });
     const qa = await saveImageQaReport({ imagePath, metadataPath, promptCopyPath, rootDir: root, force: options.force });
     qaReportPath = qa.reportPath;
@@ -385,10 +715,11 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
       screenshotPath,
       qaReportPath,
       failureReason,
-      warnings: [failureReason],
+      warnings: [failureReason, ...preparedPrompt.warnings],
       dryRun: false,
       autoSubmit: options.autoSubmit,
-      maxAttempts: options.maxAttempts
+      maxAttempts: options.maxAttempts,
+      ...metadataCommon(options)
     }, { rootDir: root, force: options.force }).catch(() => undefined);
     const archived = await archiveFailedAttempt({ assetSlug, timestamp, promptCopyPath, metadataPath, qaReportPath, imagePath, screenshotPath, failureReason }, { rootDir: root, force: options.force }).catch(() => []);
     await logAttempt({
@@ -402,7 +733,7 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
     console.error(JSON.stringify({ ok: false, error: failureReason, files: archived }, null, 2));
     process.exitCode = 1;
   } finally {
-    await context.close();
+    await session.close();
   }
 }
 
@@ -422,11 +753,29 @@ if (invokedPath.endsWith("automation\\playwright\\scripts\\chatgpt-broke-mode-ge
   const setupLogin = flag(process.argv.slice(2), "setup-login");
   if (setupLogin) {
     const options = parseBrokeModeArgs();
+    if (options.browserMode === "manual") {
+      console.log(manualModeMessage(options.prompt));
+      process.exit(0);
+    }
     const root = repoRoot();
-    const context = await launchChatGptContext(root, options);
-    const page = context.pages()[0] ?? await context.newPage();
-    await page.goto(chatGptUrl, { waitUntil: "domcontentloaded" });
-    console.log(`Log into ChatGPT in this supervised browser, close the browser when finished, then rerun the command. Profile: ${options.profileDir}. Channel: ${options.browserChannel ?? "playwright chromium"}.`);
+    const session = await openBrowserSession(root, options);
+    try {
+      const page = session.page;
+      await prepareChatGptPage(page, options);
+      await page.waitForTimeout(3000);
+      await assertNoBoundary(page);
+      console.log(options.browserMode === "existing"
+        ? `Connected to existing browser at ${options.cdpUrl}; ChatGPT appears ready without a login/security boundary.`
+        : `Managed browser reached ChatGPT without a login/security boundary. Profile: ${options.profileDir}. Channel: ${options.browserChannel ?? "playwright chromium"}.`);
+    } catch (error) {
+      console.error(error instanceof Error ? error.message : error);
+      console.error(options.browserMode === "existing"
+        ? "Log into ChatGPT manually in the existing normal browser, then rerun. Do not automate login."
+        : "Log into ChatGPT manually in this managed browser if it is allowed. If Google blocks it, use --browser-mode=existing or --browser-mode=manual.");
+      process.exitCode = 1;
+    } finally {
+      if (options.browserMode === "existing") await session.close();
+    }
   } else {
     runBrokeMode(parseBrokeModeArgs()).catch((error) => {
       console.error(error instanceof Error ? error.message : error);

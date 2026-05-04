@@ -9,7 +9,7 @@ This file is the automation working page map for `ember-content-studio`. Update 
 | 1 | 2 | 3 | Sparkleflame Festival entrance | Tiny Sparkleflame Map |
 | 2 | 4 | 5 | Dragon Village Square | Golden Welcome Bell |
 | 3 | 6 | 7 | Cloud Bakery | Glowing Sugar Star |
-| 4 | 8 | 9 | Lantern Garden | Baby Flame Lantern |
+| 4 | 8 | 9 | Lantern Maker's Workshop | Baby Flame Lantern |
 | 5 | 10 | 11 | Firefly Flower Path | Firefly Flower Charm |
 | 6 | 12 | 13 | Shimmer Trail | Shimmer Trail Stone |
 | 7 | 14 | 15 | Echo Glow Cave | Echo Glow Gem |

@@ -4,7 +4,7 @@ import { runImagePromptQa, runKdpQa, runMarketingQa, runStoryboardQa } from "../
 const goodPrompt = `
 Ember appears exactly once. Ember is visible as the guide/helper.
 Use reference images Ember-001, Ember-002, and Ember-003.
-No readable generated text. Vertical KDP-style 8.5x11 for children ages 5-8.
+No readable generated text. Vertical KDP-style 8.5x11 portrait aspect ratio 8.5:11 / 17:22 for children ages 5-8.
 Hide one tiny frosted bell fairly. No labels, arrows, circles, boxes, outlines, or highlights.
 `;
 
@@ -17,6 +17,28 @@ describe("qa engine", () => {
     const qa = runImagePromptQa("Use Ember-001. No readable text. 8.5x11 ages 5-8.", "bell");
     expect(qa.passed).toBe(false);
     expect(qa.failures.join(" ")).toMatch(/Ember appears exactly once/);
+  });
+
+  it("fails when explicit aspect ratio is missing", () => {
+    const qa = runImagePromptQa(`
+Ember appears exactly once. Ember is visible as the guide/helper.
+Use reference images Ember-001, Ember-002, and Ember-003.
+No readable generated text. Vertical KDP-style 8.5x11 for children ages 5-8.
+Hide one tiny frosted bell fairly. No labels, arrows, circles, boxes, outlines, or highlights.
+`, "tiny frosted bell");
+    expect(qa.passed).toBe(false);
+    expect(qa.failures.join(" ")).toMatch(/aspect ratio/);
+  });
+
+  it("fails when reference images use sandbox paths", () => {
+    const qa = runImagePromptQa(`
+Ember appears exactly once. Ember is visible as the guide/helper.
+Use reference images /mnt/data/Ember-001.png, Ember-002, and Ember-003.
+No readable generated text. Vertical KDP-style 8.5x11 portrait aspect ratio 8.5:11 / 17:22 for children ages 5-8.
+Hide one tiny frosted bell fairly. No labels, arrows, circles, boxes, outlines, or highlights.
+`, "tiny frosted bell");
+    expect(qa.passed).toBe(false);
+    expect(qa.failures.join(" ")).toMatch(/project reference IDs/);
   });
 
   it("checks storyboard basics", () => {

@@ -12,7 +12,15 @@ import {
   saveAttemptMetadata,
   savePromptCopy
 } from "../src/core/image-file-manager.js";
-import { parseBrokeModeArgs } from "../automation/playwright/scripts/chatgpt-broke-mode-generate.js";
+import {
+  managedModeBlockedByInsecureBrowser,
+  manualModeMessage,
+  normalizeReferenceNamesForBrokeMode,
+  parseBrokeModeArgs,
+  parseBrowserMode,
+  preparePromptForChatGPTImageGeneration,
+  sanitizePromptForBrokeMode
+} from "../automation/playwright/scripts/chatgpt-broke-mode-generate.js";
 
 let root: string;
 
@@ -99,5 +107,91 @@ describe("image file manager", () => {
     expect(defaultBrokeModeOptions("prompt.md").autoSubmit).toBe(false);
     expect(parseBrokeModeArgs(["--prompt", "prompt.md"]).autoSubmit).toBe(false);
     expect(parseBrokeModeArgs(["--prompt", "prompt.md", "--auto-submit=true"]).autoSubmit).toBe(true);
+  });
+
+  it("defaults to existing browser mode", () => {
+    expect(defaultBrokeModeOptions("prompt.md").browserMode).toBe("existing");
+    expect(parseBrokeModeArgs(["--prompt", "prompt.md"]).browserMode).toBe("existing");
+  });
+
+  it("parses browser modes", () => {
+    expect(parseBrowserMode("existing")).toBe("existing");
+    expect(parseBrokeModeArgs(["--prompt", "prompt.md", "--browser-mode=managed"]).browserMode).toBe("managed");
+    expect(parseBrokeModeArgs(["--prompt", "prompt.md", "--browser-mode=manual"]).browserMode).toBe("manual");
+    expect(() => parseBrowserMode("factory")).toThrow(/browser-mode/);
+  });
+
+  it("detects managed insecure-browser boundary wording", () => {
+    expect(managedModeBlockedByInsecureBrowser("Couldn't sign you in. This browser or app may not be secure.")).toBe(true);
+  });
+
+  it("provides manual mode fallback messaging", () => {
+    const message = manualModeMessage("content/outputs/prompts/example.md");
+    expect(message).toContain("No browser will be opened");
+    expect(message).toContain("npm run image:qa");
+  });
+
+  it("normalizes sandbox reference paths for Broke Mode", () => {
+    const result = normalizeReferenceNamesForBrokeMode("Use /mnt/data/Ember-001.png and sandbox:/mnt/data/HootiePuff-001.webp.");
+    expect(result.prompt).toContain("Ember-001");
+    expect(result.prompt).toContain("HootiePuff-001");
+    expect(result.prompt).not.toContain("/mnt/data");
+    expect(result.warnings.length).toBe(2);
+  });
+
+  it("sanitizes local file paths before Broke Mode paste", () => {
+    const result = preparePromptForChatGPTImageGeneration(`
+Use image at C:\\Users\\outdo\\Documents\\Seek and Find Books\\Ember's Adventures\\EtD Images\\Ember-001.png.
+See folder: content/canon/
+Create a scene in Glowing Lantern Garden with one tiny golden lantern key.
+No readable generated text.
+`);
+
+    expect(result.prompt).toContain("Ember-001");
+    expect(result.prompt).not.toMatch(/C:\\Users|content\/canon|See folder|Ember-001\.png/i);
+  });
+
+  it("keeps only visible reference names from local markdown links", () => {
+    const result = sanitizePromptForBrokeMode(`
+Use [Ember-001](file:///C:/Users/outdo/EtD Images/Ember-001.png), [Ember-002](content/canon/Ember-002.png), and [Ember-003](./Ember-003.webp).
+Mission item: tiny golden lantern key in Glowing Lantern Garden.
+`);
+
+    expect(result.prompt).toContain("Ember-001");
+    expect(result.prompt).toContain("Ember-002");
+    expect(result.prompt).toContain("Ember-003");
+    expect(result.prompt).not.toMatch(/file:\/\/|content\/canon|\.png|\.webp|\]\(/i);
+  });
+
+  it("adds missing aspect ratio and KDP format requirements once", () => {
+    const result = preparePromptForChatGPTImageGeneration(`
+Create a children's seek-and-find image in Glowing Lantern Garden.
+Ember appears exactly once. Ember is visible as the helper/guide, not hidden.
+Use Ember-001, Ember-002, and Ember-003.
+No readable generated text.
+The mission item appears exactly once and is findable: tiny golden lantern key.
+`);
+
+    expect(result.prompt).toContain("17:22 aspect ratio");
+    expect(result.prompt).toContain("vertical 8.5 x 11 inch page");
+    expect(result.prompt).toContain("full-color KDP-style interior page");
+    expect(result.prompt.match(/17:22 aspect ratio/g)?.length).toBe(1);
+  });
+
+  it("preserves QA-relevant scene instructions while cleaning references", () => {
+    const result = preparePromptForChatGPTImageGeneration(`
+Use [Ember-001](content/canon/Ember-001.png).
+Location: Glowing Lantern Garden.
+Hide one tiny golden lantern key fairly.
+No readable generated text.
+Ember appears exactly once and is visible as the helper/guide, not hidden.
+The mission item appears exactly once and is findable.
+`);
+
+    expect(result.prompt).toContain("Glowing Lantern Garden");
+    expect(result.prompt).toContain("tiny golden lantern key");
+    expect(result.prompt).toMatch(/no readable generated text/i);
+    expect(result.prompt).toContain("Ember-001");
+    expect(result.prompt).not.toContain("content/canon");
   });
 });

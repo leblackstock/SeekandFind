@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-05-04T01-20-42-623Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "failed",
+  "assetName": "book01-page009-lantern-maker-s-workshop",
+  "assetSlug": "book01-page009-lantern-maker-s-workshop",
+  "promptPath": "content/outputs/prompts/book01-page009-lantern-maker-s-workshop-image-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/book01-page009-lantern-maker-s-workshop-2026-05-04T01-20-42-623Z-prompt.md",
+  "screenshotPath": "content/outputs/images/pending-review/book01-page009-lantern-maker-s-workshop-2026-05-04T01-20-42-623Z-chatgpt-screenshot.png",
+  "failureReason": "No reliable ChatGPT image download button was found. Screenshot evidence was saved for manual download.",
+  "warnings": [
+    "No reliable ChatGPT image download button was found. Screenshot evidence was saved for manual download."
+  ],
+  "dryRun": false,
+  "autoSubmit": false,
+  "maxAttempts": 1,
+  "browserMode": "existing",
+  "cdpUrl": "http://127.0.0.1:9222"
+}

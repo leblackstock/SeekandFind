@@ -15,9 +15,13 @@ export function runImagePromptQa(prompt: string, missionItem?: string): QaResult
   if (!has(prompt, /Ember appears exactly once/i)) failures.push("Missing rule: Ember appears exactly once.");
   if (!has(prompt, /Ember is visible|visible as the guide/i)) failures.push("Missing rule: Ember is visible, not hidden.");
   if (!has(prompt, /use (the )?(project\/source )?reference images|Ember-001/i)) failures.push("Missing reference-image guidance.");
+  if (has(prompt, /\/mnt\/data|sandbox:\/mnt\/data|\.png\b|\.jpe?g\b|\.webp\b/i) && has(prompt, /Ember-\d{3}|HootiePuff-\d{3}|Pebblekins-\d{3}|Luma_Leafwhisk-\d{3}|Gemma_Glint-\d{3}|Elder_Glowkeeper-\d{3}/i)) {
+    failures.push("Reference images must be named as project reference IDs only, such as Ember-001, not sandbox paths or image filenames.");
+  }
   if (!has(prompt, /no readable (generated )?text|No readable text/i)) failures.push("Missing no-readable-text instruction.");
   if (!has(prompt, /ages? 5-8|age range: 5-8|5-8/i)) failures.push("Missing children ages 5-8 guidance.");
   if (!has(prompt, /8\.5x11|8\.5 x 11|vertical KDP/i)) failures.push("Missing vertical KDP page format.");
+  if (!has(prompt, /8\.5\s*:\s*11|17\s*:\s*22|aspect ratio/i)) failures.push("Missing explicit portrait aspect ratio: 8.5:11 / 17:22.");
   if (has(prompt, /Ember (is|should be) hidden/i)) failures.push("Prompt says Ember is hidden.");
   const forbidsAnswerMarks = has(prompt, /No labels|No .*arrows|Do not.*circle|Avoid:.*answer/i);
   if (!forbidsAnswerMarks && has(prompt, /circle|outline|arrow|box|highlight/i) && has(prompt, /mission item|hidden object/i)) {
