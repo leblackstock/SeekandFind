@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-05-05T04-41-06-225Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "failed",
+  "assetName": "book-1-lantern-maker-workshop-promo-batch-01-01-lantern-workshop-teaser",
+  "assetSlug": "book-1-lantern-maker-workshop-promo-batch-01-01-lantern-workshop-teaser",
+  "promptPath": "content/outputs/marketing/batches/book-1-lantern-maker-workshop-promo-batch-01/prompts/01-lantern-workshop-teaser.md",
+  "promptCopyPath": "content/outputs/images/pending-review/book-1-lantern-maker-workshop-promo-batch-01-01-lantern-workshop-teaser-2026-05-05T04-41-06-225Z-prompt.md",
+  "screenshotPath": "content/outputs/images/pending-review/book-1-lantern-maker-workshop-promo-batch-01-01-lantern-workshop-teaser-2026-05-05T04-41-06-225Z-chatgpt-screenshot.png",
+  "failureReason": "Timed out waiting for ChatGPT marketing image generation to complete.",
+  "warnings": [
+    "Timed out waiting for ChatGPT marketing image generation to complete."
+  ],
+  "dryRun": false,
+  "autoSubmit": true,
+  "maxAttempts": 1,
+  "browserMode": "existing",
+  "cdpUrl": "http://127.0.0.1:9222",
+  "referenceImages": [
+    "Ember's Adventures/EtD Images/Ember-001.png",
+    "Ember's Adventures/EtD Images/Ember-002.png",
+    "Ember's Adventures/EtD Images/Ember-003.png"
+  ]
+}

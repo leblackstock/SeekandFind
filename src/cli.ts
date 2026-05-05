@@ -1,4 +1,5 @@
 import { Command } from "commander";
+import { generateMarketingBatch } from "./generators/marketing-batch.js";
 import { generateMarketingPack } from "./generators/marketing-pack.js";
 import { runKdpQaGenerator } from "./generators/kdp-qa.js";
 import { generateSeekPage } from "./generators/seek-page.js";
@@ -90,6 +91,24 @@ program
       platforms: options.platforms ? String(options.platforms).split(",").map((item) => item.trim()).filter(Boolean) : undefined,
       asset: options.asset,
       goal: options.goal,
+      ageRange: options.age
+    }, { force: globals.force }));
+  });
+
+program
+  .command("marketing-batch")
+  .option("--campaign <campaign>", "campaign name")
+  .option("--asset <asset>", "asset basis")
+  .option("--goal <goal>", "marketing goal")
+  .option("--count <count>", "number of image prompts, capped at 4", (value) => Number.parseInt(value, 10))
+  .option("--age <ageRange>", "age range")
+  .action(async (options) => {
+    const globals = program.opts();
+    printResult(await generateMarketingBatch({
+      campaign: options.campaign,
+      asset: options.asset,
+      goal: options.goal,
+      imageCount: options.count,
       ageRange: options.age
     }, { force: globals.force }));
   });

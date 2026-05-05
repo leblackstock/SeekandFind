@@ -165,6 +165,14 @@ describe("image file manager", () => {
     expect(selected?.src).toContain("backend-api/estuary/content");
   });
 
+  it("does not select uploaded reference images as generated results", () => {
+    const selected = selectGeneratedImageCandidate([
+      { src: "https://chatgpt.com/backend-api/estuary/content?id=uploaded_ref", alt: "Uploaded image", width: 2048, height: 1365, clientWidth: 400, clientHeight: 267 },
+      { src: "https://chatgpt.com/backend-api/estuary/content?id=generated_real", alt: "Generated image", width: 1103, height: 1426, clientWidth: 400, clientHeight: 517 }
+    ]);
+    expect(selected?.src).toContain("generated_real");
+  });
+
   it("provides manual mode fallback messaging", () => {
     const message = manualModeMessage("content/outputs/prompts/example.md");
     expect(message).toContain("No browser will be opened");

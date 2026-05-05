@@ -3,8 +3,10 @@ export type WorkflowName =
   | "title-page"
   | "storyboard"
   | "marketing-pack"
+  | "marketing-batch"
   | "kdp-qa"
-  | "image-broke-mode";
+  | "image-broke-mode"
+  | "image-marketing-batch";
 
 export interface GenerateResult {
   ok: boolean;

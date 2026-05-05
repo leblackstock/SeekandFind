@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-05-05T04-13-14-038Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "pending-review",
+  "assetName": "book01-page008-lantern-maker-workshop-story-list-with-refs",
+  "assetSlug": "book01-page008-lantern-maker-workshop-story-list-with-refs",
+  "promptPath": "content/outputs/prompts/book01-page008-lantern-maker-workshop-story-list-image-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/book01-page008-lantern-maker-workshop-story-list-with-refs-2026-05-05T04-13-14-038Z-prompt.md",
+  "imagePath": "content/outputs/images/pending-review/book01-page008-lantern-maker-workshop-story-list-with-refs-2026-05-05T04-13-14-038Z.png",
+  "screenshotPath": "content/outputs/images/pending-review/book01-page008-lantern-maker-workshop-story-list-with-refs-2026-05-05T04-13-14-038Z-chatgpt-screenshot.png",
+  "warnings": [
+    "Raw prompt mode selected; Broke Mode pasted the prompt file without compacting or appending missing production requirements."
+  ],
+  "dryRun": false,
+  "autoSubmit": true,
+  "maxAttempts": 1,
+  "browserMode": "existing",
+  "cdpUrl": "http://127.0.0.1:9222",
+  "referenceImages": [
+    "Ember's Adventures/EtD Images/Ember-001.png",
+    "Ember's Adventures/EtD Images/Ember-002.png",
+    "Ember's Adventures/EtD Images/Ember-003.png"
+  ]
+}

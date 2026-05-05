@@ -1,0 +1,37 @@
+{
+  "campaign": "Book 1 Lantern Maker Workshop Promo Batch 01",
+  "asset": "Book 1 Lantern Maker's Workshop approved spread",
+  "goal": "promote Ember seek-and-find book without claiming it is published",
+  "imageCount": 4,
+  "ageRange": "5-8",
+  "prompts": [
+    {
+      "id": "01-lantern-workshop-teaser",
+      "title": "Book 1 Promo Image 01 - Lantern Workshop Teaser",
+      "useCase": "Pinterest pin, Instagram post, and Facebook teaser",
+      "promptPath": "content/outputs/marketing/batches/book-1-lantern-maker-workshop-promo-batch-01/prompts/01-lantern-workshop-teaser.md",
+      "assetName": "book-1-lantern-maker-workshop-promo-batch-01-01-lantern-workshop-teaser"
+    },
+    {
+      "id": "02-parent-gift-buyer-hook",
+      "title": "Book 1 Promo Image 02 - Parent Gift-Buyer Hook",
+      "useCase": "gift-buyer ad creative and Facebook post image",
+      "promptPath": "content/outputs/marketing/batches/book-1-lantern-maker-workshop-promo-batch-01/prompts/02-parent-gift-buyer-hook.md",
+      "assetName": "book-1-lantern-maker-workshop-promo-batch-01-02-parent-gift-buyer-hook"
+    },
+    {
+      "id": "03-hidden-treasure-challenge",
+      "title": "Book 1 Promo Image 03 - Hidden Treasure Challenge",
+      "useCase": "short-video thumbnail and reel cover",
+      "promptPath": "content/outputs/marketing/batches/book-1-lantern-maker-workshop-promo-batch-01/prompts/03-hidden-treasure-challenge.md",
+      "assetName": "book-1-lantern-maker-workshop-promo-batch-01-03-hidden-treasure-challenge"
+    },
+    {
+      "id": "04-series-brand-warmth",
+      "title": "Book 1 Promo Image 04 - Series Brand Warmth",
+      "useCase": "general brand awareness image for Ember",
+      "promptPath": "content/outputs/marketing/batches/book-1-lantern-maker-workshop-promo-batch-01/prompts/04-series-brand-warmth.md",
+      "assetName": "book-1-lantern-maker-workshop-promo-batch-01-04-series-brand-warmth"
+    }
+  ]
+}

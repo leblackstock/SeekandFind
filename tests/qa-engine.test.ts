@@ -74,6 +74,11 @@ Hide one tiny frosted bell fairly. No labels, arrows, circles, boxes, outlines, 
     expect(qa.passed).toBe(true);
   });
 
+  it("allows production-status guardrails that say the book is not available yet", () => {
+    const qa = runMarketingQa("Pinterest Facebook Instagram CTA children ages 5-8. Production status: not claimed as published or available for sale. Do not say available now, buy now, or published.", "");
+    expect(qa.passed).toBe(true);
+  });
+
   it("checks KDP essentials", () => {
     const qa = runKdpQa("KDP 8.5x11 safe area bleed trim no readable text Ember density readable");
     expect(qa.passed).toBe(true);

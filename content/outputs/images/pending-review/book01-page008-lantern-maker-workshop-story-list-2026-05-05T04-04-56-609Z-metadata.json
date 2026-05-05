@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-05-05T04-04-56-609Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "canceled",
+  "assetName": "book01-page008-lantern-maker-workshop-story-list",
+  "assetSlug": "book01-page008-lantern-maker-workshop-story-list",
+  "promptPath": "content/outputs/prompts/book01-page008-lantern-maker-workshop-story-list-image-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/book01-page008-lantern-maker-workshop-story-list-2026-05-05T04-04-56-609Z-prompt.md",
+  "warnings": [
+    "Submission declined by human reviewer.",
+    "Raw prompt mode selected; Broke Mode pasted the prompt file without compacting or appending missing production requirements."
+  ],
+  "dryRun": false,
+  "autoSubmit": false,
+  "maxAttempts": 1,
+  "browserMode": "existing",
+  "cdpUrl": "http://127.0.0.1:9222",
+  "referenceImages": []
+}

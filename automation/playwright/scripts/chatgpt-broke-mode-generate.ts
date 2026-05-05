@@ -57,6 +57,7 @@ export function generationStillInProgress(text: string): boolean {
 export function selectGeneratedImageCandidate(candidates: GeneratedImageCandidate[]): GeneratedImageCandidate | undefined {
   const usable = candidates
     .filter((candidate) => candidate.src && !/cdn\.auth0\.com\/avatars/i.test(candidate.src))
+    .filter((candidate) => !/uploaded image/i.test(candidate.alt))
     .filter((candidate) => Math.max(candidate.width, candidate.clientWidth) >= 300)
     .filter((candidate) => Math.max(candidate.height, candidate.clientHeight) >= 300);
 
@@ -627,28 +628,34 @@ async function pastePrompt(page: Page, prompt: string): Promise<void> {
 async function uploadReferenceImages(page: Page, referenceImages: string[]): Promise<void> {
   if (referenceImages.length === 0) return;
 
-  const inputs = page.locator("input[type='file']");
-  if (await inputs.count().catch(() => 0)) {
-    await inputs.last().setInputFiles(referenceImages);
+  const directInput = page.locator("input#upload-photos, input[type='file'][accept*='image'], input[type='file']").first();
+  await directInput.waitFor({ state: "attached", timeout: 10000 }).catch(() => undefined);
+  if (await directInput.count().catch(() => 0)) {
+    await directInput.setInputFiles(referenceImages);
     await page.waitForTimeout(2000 + referenceImages.length * 750);
     return;
   }
 
-  const chooserPromise = page.waitForEvent("filechooser", { timeout: 5000 });
+  const chooserPromise = page.waitForEvent("filechooser", { timeout: 10000 }).catch(() => undefined);
   const addButton = page.getByRole("button", { name: /add files|attach|upload/i }).last();
   if (await addButton.isVisible().catch(() => false)) {
     await addButton.click();
   } else {
     await page.locator("[aria-label*='Add files' i], [aria-label*='Attach' i], [data-testid*='attach' i]").last().click();
   }
+  const uploadMenuItem = page.getByText(/upload photos|upload files|upload photos & files/i).last();
+  if (await uploadMenuItem.isVisible({ timeout: 1500 }).catch(() => false)) {
+    await uploadMenuItem.click();
+  }
   const chooser = await chooserPromise;
+  if (!chooser) throw new Error("Could not open ChatGPT file chooser for reference uploads.");
   await chooser.setFiles(referenceImages);
   await page.waitForTimeout(2000 + referenceImages.length * 750);
 }
 
 function addReferenceUploadGuard(prompt: string): string {
   return [
-    "Attached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. Create the requested full-page seek-and-find scene from the prompt below.",
+    "Attached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. Create the requested full-page image from the prompt below.",
     prompt
   ].join("\n\n");
 }

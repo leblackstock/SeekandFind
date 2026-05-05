@@ -1,0 +1,119 @@
+{
+  "inspectedAt": "2026-05-05T04:51:36.487Z",
+  "inspected": [
+    {
+      "id": "01",
+      "label": "Promo Image Request",
+      "title": "Seek and Find Books - Promo Image Request",
+      "url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f974e6-ed9c-83ea-8f19-3315128dab37",
+      "screenshotRel": "content/outputs/session-logs/screenshots/2026-05-05T04-51-17-114Z-promo-chat-01.png",
+      "hasGeneratingText": true,
+      "candidateCount": 1,
+      "candidates": [
+        {
+          "alt": "Generated image",
+          "naturalWidth": 1122,
+          "naturalHeight": 1402,
+          "clientWidth": 400,
+          "clientHeight": 500,
+          "key": "file_0000000030cc722f8f6e832b54509acb"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "label": "Promo Image Request",
+      "title": "Seek and Find Books - Promo Image Request",
+      "url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f974e8-9ee4-83ea-bf25-27060ab6043a",
+      "screenshotRel": "content/outputs/session-logs/screenshots/2026-05-05T04-51-23-244Z-promo-chat-02.png",
+      "hasGeneratingText": true,
+      "candidateCount": 1,
+      "candidates": [
+        {
+          "alt": "Generated image",
+          "naturalWidth": 941,
+          "naturalHeight": 1672,
+          "clientWidth": 400,
+          "clientHeight": 711,
+          "key": "file_0000000038e0720c930aa06ac12bb429"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "label": "Book Promo Art Request",
+      "title": "Seek and Find Books - Book Promo Art Request",
+      "url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f974e9-1968-83ea-8bfe-7baf8d9e488b",
+      "screenshotRel": "content/outputs/session-logs/screenshots/2026-05-05T04-51-29-569Z-promo-chat-03.png",
+      "hasGeneratingText": true,
+      "candidateCount": 1,
+      "candidates": [
+        {
+          "alt": "Generated image",
+          "naturalWidth": 941,
+          "naturalHeight": 1672,
+          "clientWidth": 400,
+          "clientHeight": 711,
+          "key": "file_00000000b7dc720cb2c9f2dfe3dd802e"
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "label": "Promotional Art Request",
+      "title": "Seek and Find Books - Promotional Art Request",
+      "url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f974f2-9594-83ea-bc2d-c8e276942d58",
+      "screenshotRel": "content/outputs/session-logs/screenshots/2026-05-05T04-51-35-723Z-promo-chat-04.png",
+      "hasGeneratingText": true,
+      "candidateCount": 1,
+      "candidates": [
+        {
+          "alt": "Generated image",
+          "naturalWidth": 1122,
+          "naturalHeight": 1402,
+          "clientWidth": 400,
+          "clientHeight": 500,
+          "key": "file_000000004580720cacc9b36d26ce9428"
+        }
+      ]
+    }
+  ],
+  "recovered": [
+    {
+      "chatId": "01",
+      "rel": "content/outputs/images/pending-review/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-01-image-1-2026-05-05T04-51-17-114Z.png",
+      "naturalWidth": 1122,
+      "naturalHeight": 1402,
+      "alt": "Generated image",
+      "key": "file_0000000030cc722f8f6e832b54509acb",
+      "contentType": "image/png"
+    },
+    {
+      "chatId": "02",
+      "rel": "content/outputs/images/pending-review/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-02-image-1-2026-05-05T04-51-23-244Z.png",
+      "naturalWidth": 941,
+      "naturalHeight": 1672,
+      "alt": "Generated image",
+      "key": "file_0000000038e0720c930aa06ac12bb429",
+      "contentType": "image/png"
+    },
+    {
+      "chatId": "03",
+      "rel": "content/outputs/images/pending-review/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-03-image-1-2026-05-05T04-51-29-569Z.png",
+      "naturalWidth": 941,
+      "naturalHeight": 1672,
+      "alt": "Generated image",
+      "key": "file_00000000b7dc720cb2c9f2dfe3dd802e",
+      "contentType": "image/png"
+    },
+    {
+      "chatId": "04",
+      "rel": "content/outputs/images/pending-review/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-04-image-1-2026-05-05T04-51-35-723Z.png",
+      "naturalWidth": 1122,
+      "naturalHeight": 1402,
+      "alt": "Generated image",
+      "key": "file_000000004580720cacc9b36d26ce9428",
+      "contentType": "image/png"
+    }
+  ]
+}
