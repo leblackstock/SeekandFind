@@ -48,7 +48,8 @@ function promptHeader(title: string, useCase: string, exactText?: string): strin
 - Make the text large, readable, correctly spelled, and inside safe margins.
 - Do not add any extra words.`
     : `No text.
-- Make the image post-usable without added text: suitable as a background, profile/header image, banner, or caption-only post image.`;
+- Make the image post-usable without added text: suitable as a background, profile/header image, banner, or caption-only post image.
+- Avoid large blank parchment, empty sky, empty wall, or open template space.`;
   return `# ${title}
 
 Create one image now.
@@ -66,6 +67,7 @@ Hard marketing guardrails:
 - Do not make a fake interior sample page.
 - Do not imply the book is published, available now, or for sale.
 - Do not make a blank template that requires added text before it can be posted.
+- Avoid promo-template compositions built around large blank/open areas.
 ${textRule}
 - No logos, watermarks, fake captions, page numbers, labels, arrows, circles, boxes, answer marks, or UI mockups.
 - Keep Ember on-model, cheerful, kid-friendly, and safe.
@@ -100,7 +102,7 @@ Scene: Ember holds up a tiny sparkle while peeking playfully around a lantern-wo
       title: "Book 1 Promo Image 04 - Series Brand Warmth",
       useCase: "general brand awareness image for Ember",
       prompt: `${promptHeader("Book 1 Promo Image 04 - Series Brand Warmth", "general brand awareness image for Ember")}
-Scene: Ember walks through a warm Sparkleflame Festival lane at twilight with glowing lanterns overhead, cozy dragon-village stalls in the distance, soft magical sparks, and a welcoming child-safe adventure mood. Keep Ember clear and on-model, with blue-teal scarf and brown satchel. Make it feel like a broader Ember seek-and-find world teaser, not a specific interior spread or book cover.`
+Scene: Ember walks through a warm Sparkleflame Festival lane at twilight with glowing lanterns overhead, cozy dragon-village stalls in the distance, soft magical sparks, and a welcoming child-safe adventure mood. Keep Ember clear and on-model, with blue-teal scarf and brown satchel. Fill the frame with warm lanterns, village details, flowers, banners, and child-friendly visual interest so it works without added text. Make it feel like a broader Ember seek-and-find world teaser, not a specific interior spread or book cover.`
     }
   ];
   return specs.slice(0, input.imageCount);
@@ -164,6 +166,7 @@ ${specs.map((spec, index) => `${index + 1}. ${spec.title}: ${spec.useCase}`).joi
 Do not say available now, buy now, published, on Amazon, order today, or inside the book unless production status later confirms that wording.
 Do not present fresh promo art as a real cover, real interior sample, Amazon listing preview, or finished product mockup.
 Do not create blank promo templates that require Lauren to add text before posting; each image must either include exact approved text or be useful without text as a background, profile/header image, banner, or caption-only post image.
+Avoid promo-template compositions built around large blank parchment, empty sky, empty wall, or open text space.
 `;
 }
 

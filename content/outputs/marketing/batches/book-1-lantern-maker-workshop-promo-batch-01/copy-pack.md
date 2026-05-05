@@ -58,3 +58,4 @@ Can you spot the tiny treasure before Ember does?
 Do not say available now, buy now, published, on Amazon, order today, or inside the book unless production status later confirms that wording.
 Do not present fresh promo art as a real cover, real interior sample, Amazon listing preview, or finished product mockup.
 Do not create blank promo templates that require Lauren to add text before posting; each image must either include exact approved text or be useful without text as a background, profile/header image, banner, or caption-only post image.
+Avoid promo-template compositions built around large blank parchment, empty sky, empty wall, or open text space.

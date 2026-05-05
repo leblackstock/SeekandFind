@@ -15,9 +15,11 @@ Hard marketing guardrails:
 - Do not make a fake interior sample page.
 - Do not imply the book is published, available now, or for sale.
 - Do not make a blank template that requires added text before it can be posted.
+- Avoid promo-template compositions built around large blank/open areas.
 No text.
 - Make the image post-usable without added text: suitable as a background, profile/header image, banner, or caption-only post image.
+- Avoid large blank parchment, empty sky, empty wall, or open template space.
 - No logos, watermarks, fake captions, page numbers, labels, arrows, circles, boxes, answer marks, or UI mockups.
 - Keep Ember on-model, cheerful, kid-friendly, and safe.
 
-Scene: Ember walks through a warm Sparkleflame Festival lane at twilight with glowing lanterns overhead, cozy dragon-village stalls in the distance, soft magical sparks, and a welcoming child-safe adventure mood. Keep Ember clear and on-model, with blue-teal scarf and brown satchel. Make it feel like a broader Ember seek-and-find world teaser, not a specific interior spread or book cover.
+Scene: Ember walks through a warm Sparkleflame Festival lane at twilight with glowing lanterns overhead, cozy dragon-village stalls in the distance, soft magical sparks, and a welcoming child-safe adventure mood. Keep Ember clear and on-model, with blue-teal scarf and brown satchel. Fill the frame with warm lanterns, village details, flowers, banners, and child-friendly visual interest so it works without added text. Make it feel like a broader Ember seek-and-find world teaser, not a specific interior spread or book cover.

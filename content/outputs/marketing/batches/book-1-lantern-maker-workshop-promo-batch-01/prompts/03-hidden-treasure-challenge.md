@@ -15,6 +15,7 @@ Hard marketing guardrails:
 - Do not make a fake interior sample page.
 - Do not imply the book is published, available now, or for sale.
 - Do not make a blank template that requires added text before it can be posted.
+- Avoid promo-template compositions built around large blank/open areas.
 Exact text to render: Find the tiny treasure
 - Render only that exact text.
 - Make the text large, readable, correctly spelled, and inside safe margins.
