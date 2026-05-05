@@ -38,6 +38,8 @@ describe("marketing calendar", () => {
     const claimSurface = text.replace(/## Publication Claim Guardrail[\s\S]*/i, "");
 
     expect(text).toContain("rolling queue");
+    expect(text).toContain("## Step Readiness Procedure");
+    expect(text).toContain("Readiness: ready, ready with warning, or blocked.");
     expect(text).toContain("Do not say available now");
     expect(claimSurface).not.toMatch(/\bavailable now\b/i);
     expect(claimSurface).not.toMatch(/\bbuy now\b/i);

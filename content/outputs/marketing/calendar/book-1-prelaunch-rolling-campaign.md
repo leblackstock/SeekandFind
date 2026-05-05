@@ -43,6 +43,28 @@ npm run generate:marketing-calendar -- -- --start-date 2026-05-05 --completed-co
 | 11 | Day 11 | 2026-05-15 | ready-to-schedule | Instagram/Facebook | Production progress note | content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png | The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time. | Follow along as the book comes together. | Behind-the-scenes copy. Do not present promo art as an interior sample. |
 | 12 | Day 12 | 2026-05-16 | ready-to-schedule | Pinterest primary, Facebook secondary | Giftable cozy adventure | content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png | A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons. | Save for children's book gift ideas. | Gift-buyer angle. Keep links blank until a real store URL exists. |
 
+## Step Readiness Procedure
+
+When Lauren asks about any campaign step, treat the question as a readiness check and output the useful posting information, not just a yes/no answer.
+
+For the requested date or step:
+
+1. Read the matching calendar row from this file or the JSON manifest.
+2. Verify the approved asset file exists.
+3. Check basic image facts when possible: file type, dimensions, and file size.
+4. Confirm the row has platform, theme, caption, CTA, and notes.
+5. Add practical posting copy for the platform: Pinterest title/description, Instagram/Facebook caption, alt text, hashtags, and link status.
+6. Call out anything missing as a blocker or warning.
+7. Keep prelaunch guardrails active: use follow/save/progress wording only until production status confirms stronger sales or listing language.
+
+Readiness answer format:
+
+- Readiness: ready, ready with warning, or blocked.
+- Art: approved asset path plus verified image facts.
+- Words: platform-specific title, caption/description, CTA, alt text, hashtags.
+- Missing or warnings: link, dimensions, approval, copy, or status gaps.
+- Next action: the exact thing Lauren should do next.
+
 ## Batch Rules
 
 - Use only approved images listed in this calendar unless a later human approval tracker adds more.

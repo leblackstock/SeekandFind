@@ -273,6 +273,28 @@ npm run generate:marketing-calendar -- -- --start-date ${normalized.startDate} -
 
 ${markdownTable(slots)}
 
+## Step Readiness Procedure
+
+When Lauren asks about any campaign step, treat the question as a readiness check and output the useful posting information, not just a yes/no answer.
+
+For the requested date or step:
+
+1. Read the matching calendar row from this file or the JSON manifest.
+2. Verify the approved asset file exists.
+3. Check basic image facts when possible: file type, dimensions, and file size.
+4. Confirm the row has platform, theme, caption, CTA, and notes.
+5. Add practical posting copy for the platform: Pinterest title/description, Instagram/Facebook caption, alt text, hashtags, and link status.
+6. Call out anything missing as a blocker or warning.
+7. Keep prelaunch guardrails active: use follow/save/progress wording only until production status confirms stronger sales or listing language.
+
+Readiness answer format:
+
+- Readiness: ready, ready with warning, or blocked.
+- Art: approved asset path plus verified image facts.
+- Words: platform-specific title, caption/description, CTA, alt text, hashtags.
+- Missing or warnings: link, dimensions, approval, copy, or status gaps.
+- Next action: the exact thing Lauren should do next.
+
 ## Batch Rules
 
 - Use only approved images listed in this calendar unless a later human approval tracker adds more.
