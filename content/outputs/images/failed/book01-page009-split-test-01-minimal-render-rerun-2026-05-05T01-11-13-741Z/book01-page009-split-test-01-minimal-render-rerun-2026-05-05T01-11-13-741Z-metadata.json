@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-05-05T01-11-13-741Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "failed",
+  "assetName": "book01-page009-split-test-01-minimal-render-rerun",
+  "assetSlug": "book01-page009-split-test-01-minimal-render-rerun",
+  "promptPath": "content/outputs/prompts/book01-page009-lantern-maker-s-workshop-split-test-01-minimal-render.md",
+  "promptCopyPath": "content/outputs/images/pending-review/book01-page009-split-test-01-minimal-render-rerun-2026-05-05T01-11-13-741Z-prompt.md",
+  "screenshotPath": "content/outputs/images/pending-review/book01-page009-split-test-01-minimal-render-rerun-2026-05-05T01-11-13-741Z-chatgpt-screenshot.png",
+  "failureReason": "Timed out waiting for ChatGPT image generation to complete.",
+  "warnings": [
+    "Timed out waiting for ChatGPT image generation to complete.",
+    "Raw prompt mode selected; Broke Mode pasted the prompt file without compacting or appending missing production requirements."
+  ],
+  "dryRun": false,
+  "autoSubmit": false,
+  "maxAttempts": 1,
+  "browserMode": "existing",
+  "cdpUrl": "http://127.0.0.1:9222"
+}

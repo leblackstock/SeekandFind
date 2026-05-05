@@ -7,6 +7,7 @@ Use this recipe for one supervised ChatGPT web UI image attempt from an existing
 This recipe does not use the OpenAI API and does not run unattended bulk generation.
 
 Broke Mode pastes clean prompt text only. It does not paste local file links or folder paths into ChatGPT. Character references should be named as Ember-001, Ember-002, and Ember-003.
+When reference uploads are enabled, Broke Mode attaches the local character images as real file uploads before it pastes the prompt.
 
 ## Prerequisites
 
@@ -76,16 +77,17 @@ Default behavior:
 
 1. Read the prompt file.
 2. Prepare a clean final ChatGPT prompt.
-3. Open ChatGPT through the selected browser mode.
-4. Confirm there is no login, CAPTCHA, cooldown, rate-limit, payment, or warning boundary.
-5. Paste the prompt into the ChatGPT composer.
-6. Pause for human approval.
-7. Submit only if you type `YES`.
-8. Wait for generation.
-9. Try to download the image.
-10. Save image or screenshot evidence under `content/outputs/images/pending-review/`.
-11. Run basic local image QA.
-12. Log the attempt.
+3. Auto-resolve and upload the local reference images when the prompt names canon characters.
+4. Open ChatGPT through the selected browser mode.
+5. Confirm there is no login, CAPTCHA, cooldown, rate-limit, payment, or warning boundary.
+6. Paste the prompt into the ChatGPT composer.
+7. Pause for human approval.
+8. Submit only if you type `YES`.
+9. Wait for generation.
+10. Try to download the image.
+11. Save image or screenshot evidence under `content/outputs/images/pending-review/`.
+12. Run basic local image QA.
+13. Log the attempt.
 
 Prompt preparation:
 
@@ -95,6 +97,23 @@ Prompt preparation:
 - preserves essential Ember visual canon, scene instructions, mission item, location, and QA-relevant constraints
 - omits internal source-packet material such as book-production assumptions, marketing prompt rules, and post-approval find-list guidance
 - appends missing format requirements, including `vertical 8.5 x 11 inch page`, `17:22 aspect ratio`, `full-color KDP-style interior page`, and `bleed, trim, and safe-area awareness`
+
+Reference upload behavior:
+
+- Default `--reference-images=auto` resolves images from `Ember's Adventures/EtD Images`
+- Ember seek pages upload `Ember-001`, `Ember-002`, and `Ember-003`
+- If the page includes another named canon character such as `Gemma_Glint`, `HootiePuff`, `Pebblekins`, `Luma_Leafwhisk`, or `Elder_Glowkeeper`, Broke Mode uploads that character's `-001`, `-002`, and `-003` images too
+- If any non-Ember canon character is included, Broke Mode also uploads `Ember_Cast_Lineup-001` and `Ember_Cast_Lineup-002`
+- Override the default set with `--reference-images=<path1,path2,...>` or disable uploads with `--reference-images=none`
+- Override the lookup folder with `--reference-image-root=<relative-folder>`
+
+For split-prompt debugging, use `--raw-prompt` with a prompt file that contains only the exact test section. Raw prompt mode skips compacting and skips appended production requirements, so it can isolate whether a minimal prompt routes into image generation or into project/file/path behavior:
+
+```powershell
+npm run image:broke-mode -- --browser-mode=existing --prompt=content/outputs/prompts/book01-page009-lantern-maker-s-workshop-split-test-01-minimal-render.md --asset-name=book01-page009-split-test-01-minimal-render --raw-prompt
+```
+
+For split tests, the helper waits 3 minutes for a generated image. If ChatGPT has only reached a placeholder or is still thinking at that point, archive the attempt and move to the next diagnostic prompt instead of burning time on long waits.
 
 ## Manual Approval Requirement
 

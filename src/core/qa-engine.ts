@@ -25,6 +25,9 @@ export function runImagePromptQa(prompt: string, missionItem?: string): QaResult
   if (!has(prompt, /small friendly guide|small-cat sized|without dominating|cover-art-sized/i)) failures.push("Missing Ember guide-scale control.");
   if (!has(prompt, /visual budget|reduce repeated decorative filler|repeated generic/i)) failures.push("Missing visual-budget control for searchable objects.");
   if (!has(prompt, /visually unique enough to find|searchable motifs|unique enough/i)) failures.push("Missing unique searchable motif guidance.");
+  if (!has(prompt, /exactly 50 hidden objects total|50 hidden objects total/i)) failures.push("Missing exact 50-hidden-object count rule.");
+  if (!has(prompt, /49 additional unique hidden objects|49 unnamed|other 49/i)) failures.push("Missing 49 unnamed additional hidden-object rule.");
+  if (!has(prompt, /Name only the mission item|no exact hidden-object names beyond the mission item/i)) failures.push("Missing rule to name only the mission item.");
   if (has(prompt, /Source mirror:|Marketing Image Prompts|marketing prompt pack/i)) failures.push("Prompt includes stale source-packet or marketing guidance.");
   if (has(prompt, /when available|If references are unavailable|If references are not available|project\/source context|Do not rewrite|turn this into a planning response/i)) failures.push("Prompt includes assistant-routing or uncertain reference language that can stall broke-mode generation.");
   if (has(prompt, /Ember (is|should be) hidden/i)) failures.push("Prompt says Ember is hidden.");

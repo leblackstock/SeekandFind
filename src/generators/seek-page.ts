@@ -37,6 +37,8 @@ Ember appears exactly once as a small friendly guide/helper in the foreground or
 
 Hide one {{missionItem}} fairly in the scene. The mission item appears exactly once and must be findable for children ages {{ageRange}}. Place it naturally on a believable surface or tucked edge, not randomly in a walkway. Do not include duplicate or similar lookalike mission items.
 
+Include exactly 50 hidden objects total in the seek image: 1 exact named mission item plus 49 additional unique hidden objects. Name only the mission item. Do not list exact names for the other 49 hidden objects. Make those 49 additional hidden objects one-of-a-kind, child-nameable, readable at final print size, and clearly different in silhouette, material, scale, edge style, handle/closure/detail pattern, color grouping, and placement. Place them naturally on scene-appropriate surfaces with no duplicate designs, near-duplicate silhouettes, or simple color-swap repeats.
+
 Build a rich but readable seek-and-find scene with 4-6 intentional search zones across foreground, midground, and background: {{searchZones}} Keep paths, doorways, bridge surfaces, and the main eye path mostly open.
 
 Use the page's visual budget carefully: when adding searchable objects, reduce repeated decorative filler. Replace some repeated atmosphere with distinct child-nameable search objects that belong naturally in {{location}}. Theme motifs such as flowers, lanterns, crystals, jars, ribbons, or mushrooms may stay when specific examples are visually unique enough to find; limit repeated generic versions so they do not become clutter.
@@ -48,6 +50,7 @@ Keep the tone warm, magical, cheerful, and child-safe for ages {{ageRange}}.
 ## Hidden Object Category Guidance
 
 - Mission Item: {{missionItem}} appears once.
+- Additional Hidden Objects: 49 unnamed unique objects should be present as visible candidates, but they should be generated from uniqueness traits rather than exact item names in this prompt.
 - Main Finds: leave room for 10 clear objects to be selected after the approved image exists.
 - Bonus Finds: leave room for 5-15 optional objects to be selected from visible approved art.
 
@@ -55,6 +58,171 @@ Keep the tone warm, magical, cheerful, and child-safe for ages {{ageRange}}.
 
 Avoid: off-model Ember, cover-art-sized Ember, duplicate Ember, hidden Ember, duplicate {{missionItem}}, similar lookalike mission items, readable text, fake text, labels, answer marks, circles, boxes, arrows, scary lighting, weapons focus, muddy clutter, random floor scatter, repeated generic flowers or lanterns overwhelming the search, copyrighted character imitation, and important details too close to trim or gutter.
 `;
+
+function renderSplitTestPromptLadder(input: {
+  bookTitle: string;
+  seekPage: number;
+  location: string;
+  missionItem: string;
+  ageRange: string;
+  style: string;
+  searchZones: string;
+}): string {
+  const emberAppearance = [
+    "tiny adorable reddish-orange baby dragon",
+    "tiny shiny golden spiral-comma horns",
+    "large glossy blue-teal eyes",
+    "cream belly",
+    "small-cat sized, not a fox, cat, human wizard, or generic fantasy animal",
+    "plain bright blue-teal scarf",
+    "tiny plain brown crossbody satchel with dull-gold button clasps",
+    "rounded plush-like form",
+    "cheerful, curious expression"
+  ].map((line) => `- ${line}`).join("\n");
+
+  const commonHeader = [
+    `# ${input.bookTitle} - Page ${input.seekPage} Split Prompt Test Ladder`,
+    "",
+    `Location: ${input.location}`,
+    `Mission item: ${input.missionItem}`,
+    `Audience: children ages ${input.ageRange}`,
+    `Style: ${input.style}`,
+    "",
+    "Paste one test at a time. Record whether ChatGPT immediately enters image generation, writes a planning response, stays blank on Thinking, reaches the detailed-image placeholder, times out, or completes.",
+    "",
+    "Do not treat any completed split-test image as approved canon until it passes normal art review.",
+    ""
+  ].join("\n");
+
+  const tests = [
+    {
+      title: "Test 1 - Minimal Render",
+      body: [
+        "Create one image now.",
+        "",
+        `Create one vertical children's seek-and-find image set in ${input.location}.`,
+        "",
+        "Ember appearance:",
+        emberAppearance,
+        "",
+        `Hide one ${input.missionItem} fairly in the scene. No readable text. Vertical 8.5 x 11 inch page, 17:22 aspect ratio.`
+      ].join("\n")
+    },
+    {
+      title: "Test 2 - Add Ember Reference Names",
+      body: [
+        "Create one image now.",
+        "",
+        "Use Ember-001, Ember-002, and Ember-003 as visual references for Ember.",
+        "",
+        `Create one vertical children's seek-and-find image set in ${input.location}.`,
+        "",
+        "Ember appearance:",
+        emberAppearance,
+        "",
+        `Hide one ${input.missionItem} fairly in the scene. No readable text. Vertical 8.5 x 11 inch page, 17:22 aspect ratio.`
+      ].join("\n")
+    },
+    {
+      title: "Test 3 - Add Seek-Play Controls",
+      body: [
+        "Create one image now.",
+        "",
+        "Use Ember-001, Ember-002, and Ember-003 as visual references for Ember.",
+        "",
+        `Create one production-ready children's seek-and-find illustration for ${input.bookTitle}, seek page ${input.seekPage}, set in ${input.location}.`,
+        "",
+        "Ember appearance:",
+        emberAppearance,
+        "",
+        "Ember appears exactly once as a small friendly guide/helper in the foreground or midground. Ember is visible, not hidden, and is not a target object.",
+        "",
+        `Hide one ${input.missionItem} fairly in the scene. The mission item appears exactly once and must be findable for children ages ${input.ageRange}. Do not include duplicate or similar lookalike mission items.`,
+        "",
+        "No readable text. Vertical 8.5 x 11 inch page, 17:22 aspect ratio."
+      ].join("\n")
+    },
+    {
+      title: "Test 4 - Add Scene Zones",
+      body: [
+        "Create one image now.",
+        "",
+        "Use Ember-001, Ember-002, and Ember-003 as visual references for Ember.",
+        "",
+        `Create one production-ready children's seek-and-find illustration for ${input.bookTitle}, seek page ${input.seekPage}, set in ${input.location}.`,
+        "",
+        "Ember appearance:",
+        emberAppearance,
+        "",
+        "Ember appears exactly once as a small friendly guide/helper in the foreground or midground. Ember is visible, not hidden, and is not a target object.",
+        "",
+        `Hide one ${input.missionItem} fairly in the scene. The mission item appears exactly once and must be findable for children ages ${input.ageRange}. Do not include duplicate or similar lookalike mission items.`,
+        "",
+        `Use these intentional search zones: ${input.searchZones} Keep paths, doorways, bridge surfaces, and the main eye path mostly open.`,
+        "",
+        "No readable text. Vertical 8.5 x 11 inch page, 17:22 aspect ratio."
+      ].join("\n")
+    },
+    {
+      title: "Test 5 - Add 50-Object And Visual-Budget Rules",
+      body: [
+        "Create one image now.",
+        "",
+        "Use Ember-001, Ember-002, and Ember-003 as visual references for Ember.",
+        "",
+        `Create one production-ready children's seek-and-find illustration for ${input.bookTitle}, seek page ${input.seekPage}, set in ${input.location}.`,
+        "",
+        "Ember appearance:",
+        emberAppearance,
+        "",
+        "Ember appears exactly once as a small friendly guide/helper in the foreground or midground. Ember is visible, not hidden, and is not a target object.",
+        "",
+        `Hide one ${input.missionItem} fairly in the scene. The mission item appears exactly once and must be findable for children ages ${input.ageRange}. Do not include duplicate or similar lookalike mission items.`,
+        "",
+        "Include exactly 50 hidden objects total: 1 exact named mission item plus 49 additional unique hidden objects. Name only the mission item. Do not list exact names for the other 49 hidden objects. Make those 49 additional hidden objects one-of-a-kind, child-nameable, varied in silhouette/material/scale/detail pattern, and readable at final print size.",
+        "",
+        `Use these intentional search zones: ${input.searchZones} Keep paths, doorways, bridge surfaces, and the main eye path mostly open.`,
+        "",
+        `Use the page's visual budget carefully: when adding searchable objects, reduce repeated decorative filler. Replace repeated atmosphere with distinct child-nameable search objects that belong naturally in ${input.location}.`,
+        "",
+        "No readable text. Vertical 8.5 x 11 inch page, 17:22 aspect ratio."
+      ].join("\n")
+    },
+    {
+      title: "Test 6 - Add Full Avoid And Format Block",
+      body: [
+        "Create one image now.",
+        "",
+        "Use Ember-001, Ember-002, and Ember-003 as visual references for Ember.",
+        "",
+        `Create one production-ready children's seek-and-find illustration for ${input.bookTitle}, seek page ${input.seekPage}, set in ${input.location}.`,
+        "",
+        "Ember appearance:",
+        emberAppearance,
+        "",
+        "Ember appears exactly once as a small friendly guide/helper in the foreground or midground. Ember is visible, not hidden, and is not a target object.",
+        "",
+        `Hide one ${input.missionItem} fairly in the scene. The mission item appears exactly once and must be findable for children ages ${input.ageRange}. Do not include duplicate or similar lookalike mission items.`,
+        "",
+        "Include exactly 50 hidden objects total: 1 exact named mission item plus 49 additional unique hidden objects. Name only the mission item. Do not list exact names for the other 49 hidden objects. Make those 49 additional hidden objects one-of-a-kind, child-nameable, varied in silhouette/material/scale/detail pattern, and readable at final print size.",
+        "",
+        `Use these intentional search zones: ${input.searchZones} Keep paths, doorways, bridge surfaces, and the main eye path mostly open.`,
+        "",
+        `Use the page's visual budget carefully: when adding searchable objects, reduce repeated decorative filler. Replace repeated atmosphere with distinct child-nameable search objects that belong naturally in ${input.location}.`,
+        "",
+        "No readable generated text. No labels, signs, page numbers, watermarks, gibberish text, arrows, circles, boxes, outlines, halos, highlights, or answer marks. Do not imitate protected brands or famous seek-and-find trade dress.",
+        "",
+        "Vertical full-page children's seek-and-find illustration. Vertical 8.5 x 11 inch page. 17:22 aspect ratio. Full-color KDP-style interior page with bleed, trim, and safe-area awareness."
+      ].join("\n")
+    }
+  ];
+
+  return [
+    commonHeader,
+    tests.map((test) => [`## ${test.title}`, "", "```text", test.body, "```"].join("\n")).join("\n\n"),
+    ""
+  ].join("\n");
+}
 
 export function normalizeSeekPageInput(input: Partial<SeekPageInput>): SeekPageInput {
   if (!input.pageNumber) throw new Error("pageNumber is required.");
@@ -179,6 +347,7 @@ export async function generateSeekPage(input: Partial<SeekPageInput>, options: R
   const prompt = renderTemplate(seekTemplate, {
     ...promptInput
   });
+  const splitTestPrompts = renderSplitTestPromptLadder(promptInput);
   const qa = runImagePromptQa(prompt, promptInput.missionItem);
   const qaMarkdown = [
     `# QA Report - ${normalized.bookTitle} Page ${normalized.pageNumber}`,
@@ -199,6 +368,8 @@ export async function generateSeekPage(input: Partial<SeekPageInput>, options: R
     "- Reference images are named",
     "- No readable generated text",
     "- Mission item appears once",
+    "- Exactly 50 hidden objects requested: 1 named mission item plus 49 unnamed unique objects",
+    "- Additional hidden objects are not named individually in the image prompt",
     "- Vertical KDP-style 8.5x11 format with explicit 8.5:11 / 17:22 aspect ratio",
     "- Safe-area awareness included",
     "- Kid-friendly ages 5-8"
@@ -206,16 +377,17 @@ export async function generateSeekPage(input: Partial<SeekPageInput>, options: R
 
   const files = [
     await writeTextFileSafe(`content/outputs/prompts/${baseName}-image-prompt.md`, prompt, options),
+    await writeTextFileSafe(`content/outputs/prompts/${baseName}-split-test-prompts.md`, splitTestPrompts, options),
     await writeTextFileSafe(`content/outputs/qa-reports/${baseName}-qa.md`, qaMarkdown, options)
   ];
 
   const result: GenerateResult = {
     ok: qa.passed,
     workflow: "seek-page",
-    summary: "Generated seek-page prompt and QA report.",
+    summary: "Generated seek-page prompt, split-test ladder, and QA report.",
     files,
     warnings: qa.warnings.concat(qa.failures),
-    nextStep: "Generate the image, then run KDP QA."
+    nextStep: "Run split-prompt tests before the next full live image attempt, then run KDP QA after an image is approved."
   };
 
   await updateProductionStatus(result, options.rootDir);

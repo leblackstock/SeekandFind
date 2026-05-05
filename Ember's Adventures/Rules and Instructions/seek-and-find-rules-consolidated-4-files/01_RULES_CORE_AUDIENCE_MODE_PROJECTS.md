@@ -571,6 +571,8 @@ These rules govern hidden-object lists.
 
 The target list gives the reader a clear reason to explore the page. It should support the theme and difficulty, not feel random.
 
+For final seek-image generation prompts, do not use the later printed target list as a literal object list. Name only the mission item, then request 49 additional unique hidden objects by traits. After art approval, identify visible objects from the finished seek image and use those exact names for the story/list page target list.
+
 ## Object Selection
 
 Good hidden objects are:
@@ -612,7 +614,7 @@ A target list should include a mix of:
 - difficulty levels
 - material types and silhouettes
 
-Prefer varied, child-nameable finds with distinct silhouettes. If a generated scene keeps repeating one decorative object family, revise the prompt's page-specific object list instead of adding a stricter generic ban.
+Prefer varied, child-nameable finds with distinct silhouettes. If a generated seek-image scene keeps repeating one decorative object family, revise the prompt's uniqueness, material, silhouette, scale, and placement language instead of adding exact extra item names to the prompt.
 
 Example fantasy list categories:
 - treasure
@@ -1553,16 +1555,19 @@ Seek image pages are the right-side full-color puzzle scenes. Each seek image pa
 
 - one full-color seek-and-find scene
 - Ember visible as guide/helper, not hidden
-- one special mission item hidden fairly
-- broad-category searchable objects organized in the prompt, not a fixed final checklist
+- exactly 50 hidden objects total in the image prompt: 1 exact named mission item plus 49 additional unique hidden objects
+- the mission item hidden fairly and named exactly
+- additional hidden objects described by uniqueness traits only, not by exact item names
 - no readable text, labels, checklist, arrows, circles, squares, boxes, outlines, shape overlays, page numbers, watermarks, speech bubbles, or answer marks
 - print-safe composition with important objects away from trim/gutter risk
 
-Seek-image prompts should be rich and searchable without being overstuffed. Build clear, intentional prop zones instead of random scatter: named mission items, likely main finds/category items, and decorative details should each have believable locations in the scene. Place category items where they naturally belong, such as bakery items on trays and counters, market items in stalls and baskets, garden items in beds and leaves, trail items along stones and edges, cottage items on shelves and tables, and doorway items around frames or side stones. If generic decorative objects start replacing the page-specific search vocabulary, revise the actual prompt row to name more precise setting objects. Keep walkways, paths, bridge surfaces, trails, door thresholds, aisles, and the main eye path readable while still allowing fair hiding in foreground, midground, and background. This depth rule applies to all findable objects, including the mission item, main finds, bonus finds, and candidate finds.
+Seek-image prompts should be rich and searchable without being overstuffed. Build clear, intentional prop zones instead of random scatter. Name only the mission item as an exact hidden object. For the other 49 hidden objects, do not list exact object names or checklist items; instead require one-of-a-kind silhouettes, varied materials, varied scale, different edge/handle/closure/detail patterns, and clear print-size readability. Use the page setting to guide natural placement and visual flavor, but translate any source-row object vocabulary into broad scene-fit and uniqueness instructions before sending the final image prompt. Keep walkways, paths, bridge surfaces, trails, door thresholds, aisles, and the main eye path readable while still allowing fair hiding in foreground, midground, and background. This depth rule applies to all findable objects, including the mission item, main finds, bonus finds, and candidate finds.
 
 Mission items and hidden objects must be unmarked in the final seek image. Do not circle, square, box, outline, halo, highlight, label, arrow-point, or otherwise frame the mission item or any hidden object. Any marked answer view belongs only in a separate answer-key or hint asset after final art approval.
 
 Seek-image prompts should include scene life when the location calls for it: friendly original background villagers, helpers, customers, festival-goers, or small non-recurring fantasy creatures doing simple actions that make the world feel alive. These figures must stay secondary, not become hidden targets, not crowd the path, and not cover required hidden objects. Use varied child-nameable searchable props with distinct silhouettes.
+
+The final seek-image prompt should not pre-name the 49 additional hidden objects. After the image is approved, identify visible candidates from the art and then choose the printed Main Finds and Bonus Finds from what actually appears.
 
 After seek art approval:
 

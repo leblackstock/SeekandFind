@@ -1,5 +1,6 @@
-import { mkdir } from "node:fs/promises";
-import { basename, extname, join } from "node:path";
+import { existsSync } from "node:fs";
+import { mkdir, writeFile } from "node:fs/promises";
+import { basename, extname, isAbsolute, join, relative } from "node:path";
 import { createInterface } from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
 import { Browser, BrowserContext, chromium, Locator, Page } from "@playwright/test";
@@ -24,11 +25,22 @@ import { saveImageQaReport } from "../../../src/core/image-qa.js";
 import { GenerateResult } from "../../../src/types.js";
 
 const chatGptUrl = "https://chatgpt.com/";
+const generationTimeoutMs = 180000;
 
 const boundaryPattern = /captcha|rate limit|cooldown|try again later|too many requests|payment|upgrade|subscribe|subscription|verify your account|account warning|unusual activity|log in|sign in|couldn.t sign you in|browser or app may not be secure|try using a different browser/i;
 const insecureBrowserPattern = /couldn.t sign you in|browser or app may not be secure|try using a different browser/i;
 const imageReadyPattern = /download|regenerate/i;
 const generationInProgressPattern = /\b(generating|creating|working on it|cancel loading)\b/i;
+const referenceImageExtensions = [".png", ".jpg", ".jpeg", ".webp"];
+
+interface GeneratedImageCandidate {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  clientWidth: number;
+  clientHeight: number;
+}
 
 export function isBoundaryText(text: string): boolean {
   return boundaryPattern.test(text);
@@ -40,6 +52,16 @@ export function managedModeBlockedByInsecureBrowser(text: string): boolean {
 
 export function generationStillInProgress(text: string): boolean {
   return generationInProgressPattern.test(text);
+}
+
+export function selectGeneratedImageCandidate(candidates: GeneratedImageCandidate[]): GeneratedImageCandidate | undefined {
+  const usable = candidates
+    .filter((candidate) => candidate.src && !/cdn\.auth0\.com\/avatars/i.test(candidate.src))
+    .filter((candidate) => Math.max(candidate.width, candidate.clientWidth) >= 300)
+    .filter((candidate) => Math.max(candidate.height, candidate.clientHeight) >= 300);
+
+  const uniqueBySrc = Array.from(new Map(usable.map((candidate) => [candidate.src, candidate])).values());
+  return uniqueBySrc.sort((left, right) => (right.width * right.height) - (left.width * left.height))[0];
 }
 
 export function manualModeMessage(promptPath: string): string {
@@ -117,6 +139,82 @@ function uniqueValues(values: string[]): string[] {
 
 function collectReferenceNames(text: string): string[] {
   return uniqueValues(Array.from(text.matchAll(referenceNamePattern), (match) => match[0]));
+}
+
+function parseListOption(value: string | undefined, fallback: string[]): string[] {
+  if (value === undefined) return fallback;
+  const values = value.split(/[;,]/).map((item) => item.trim()).filter(Boolean);
+  if (values.some((item) => /^(none|off|false|no)$/i.test(item))) return [];
+  return values;
+}
+
+function referenceFamilyName(referenceName: string): string {
+  return referenceName.replace(/-\d{3}$/i, "");
+}
+
+function pageMentionsCharacter(prompt: string, family: string): boolean {
+  const friendly = family.replaceAll("_", "[ _-]?");
+  return new RegExp(`\\b${friendly}\\b`, "i").test(prompt);
+}
+
+function defaultReferenceNamesForPrompt(prompt: string): string[] {
+  const names = new Set(collectReferenceNames(prompt));
+  const familyTriggers = ["Ember", "HootiePuff", "Pebblekins", "Luma_Leafwhisk", "Gemma_Glint", "Elder_Glowkeeper"];
+  const mentionedFamilies = familyTriggers.filter((family) => pageMentionsCharacter(prompt, family));
+
+  if (mentionedFamilies.includes("Ember") || names.size > 0) {
+    for (const name of ["Ember-001", "Ember-002", "Ember-003"]) names.add(name);
+  }
+
+  for (const family of mentionedFamilies) {
+    if (family === "Ember") continue;
+    for (const suffix of ["001", "002", "003"]) names.add(`${family}-${suffix}`);
+  }
+
+  const nonEmberFamilies = Array.from(names).map(referenceFamilyName).filter((family) => family !== "Ember" && family !== "Ember_Cast_Lineup");
+  if (nonEmberFamilies.length > 0) {
+    names.add("Ember_Cast_Lineup-001");
+    names.add("Ember_Cast_Lineup-002");
+  }
+
+  return Array.from(names);
+}
+
+function resolveReferenceName(name: string, root: string, referenceImageRoot: string): string | undefined {
+  const base = join(root, referenceImageRoot);
+  for (const extension of referenceImageExtensions) {
+    const absolute = join(base, `${name}${extension}`);
+    if (existsSync(absolute)) return absolute;
+  }
+  return undefined;
+}
+
+export function resolveReferenceImagePaths(prompt: string, options: Pick<BrokeModeRuntimeOptions, "referenceImages" | "referenceImageRoot">, root: string = repoRoot()): { paths: string[]; warnings: string[] } {
+  const warnings: string[] = [];
+  const values = options.referenceImages;
+  const paths = new Set<string>();
+
+  for (const value of values) {
+    if (/^auto$/i.test(value)) {
+      for (const name of defaultReferenceNamesForPrompt(prompt)) {
+        const resolved = resolveReferenceName(name, root, options.referenceImageRoot);
+        if (resolved) {
+          paths.add(resolved);
+        } else {
+          warnings.push(`Auto reference image not found: ${name}`);
+        }
+      }
+      continue;
+    }
+
+    const absolute = isAbsolute(value) ? value : join(root, value);
+    if (!existsSync(absolute)) {
+      throw new Error(`Reference image file does not exist: ${value}`);
+    }
+    paths.add(absolute);
+  }
+
+  return { paths: Array.from(paths), warnings: Array.from(new Set(warnings)) };
 }
 
 function normalizeReferenceFileNames(text: string): string {
@@ -429,6 +527,9 @@ export function parseBrokeModeArgs(args: string[] = process.argv.slice(2)): Brok
     cdpUrl: option(args, "cdp-url") ?? defaults.cdpUrl,
     browserChannel: option(args, "browser-channel") ?? option(args, "channel"),
     profileDir: option(args, "profile-dir") ?? defaults.profileDir,
+    rawPrompt: flag(args, "raw-prompt"),
+    referenceImages: parseListOption(option(args, "reference-images"), defaults.referenceImages),
+    referenceImageRoot: option(args, "reference-image-root") ?? defaults.referenceImageRoot,
     autoSubmit: booleanOption(args, "auto-submit", defaults.autoSubmit),
     maxAttempts,
     cooldownSeconds,
@@ -523,6 +624,35 @@ async function pastePrompt(page: Page, prompt: string): Promise<void> {
   await page.keyboard.insertText(prompt);
 }
 
+async function uploadReferenceImages(page: Page, referenceImages: string[]): Promise<void> {
+  if (referenceImages.length === 0) return;
+
+  const inputs = page.locator("input[type='file']");
+  if (await inputs.count().catch(() => 0)) {
+    await inputs.last().setInputFiles(referenceImages);
+    await page.waitForTimeout(2000 + referenceImages.length * 750);
+    return;
+  }
+
+  const chooserPromise = page.waitForEvent("filechooser", { timeout: 5000 });
+  const addButton = page.getByRole("button", { name: /add files|attach|upload/i }).last();
+  if (await addButton.isVisible().catch(() => false)) {
+    await addButton.click();
+  } else {
+    await page.locator("[aria-label*='Add files' i], [aria-label*='Attach' i], [data-testid*='attach' i]").last().click();
+  }
+  const chooser = await chooserPromise;
+  await chooser.setFiles(referenceImages);
+  await page.waitForTimeout(2000 + referenceImages.length * 750);
+}
+
+function addReferenceUploadGuard(prompt: string): string {
+  return [
+    "Attached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. Create the requested full-page seek-and-find scene from the prompt below.",
+    prompt
+  ].join("\n\n");
+}
+
 async function submitPrompt(page: Page): Promise<void> {
   const sendButton = page.getByRole("button", { name: /send|submit/i }).last();
   if (await sendButton.isVisible().catch(() => false)) {
@@ -543,21 +673,44 @@ async function assertNoBoundary(page: Page): Promise<void> {
   }
 }
 
-async function waitForGeneration(page: Page): Promise<void> {
-  const deadline = Date.now() + 300000;
+async function generatedImageCandidates(page: Page): Promise<GeneratedImageCandidate[]> {
+  return page.locator("img").evaluateAll((images) => images.map((image) => {
+    const img = image as HTMLImageElement;
+    return {
+      src: img.src,
+      alt: img.alt,
+      width: img.naturalWidth,
+      height: img.naturalHeight,
+      clientWidth: img.clientWidth,
+      clientHeight: img.clientHeight
+    };
+  })).catch(() => []);
+}
+
+async function generatedImageCount(page: Page): Promise<number> {
+  const candidates = await generatedImageCandidates(page);
+  return new Set(candidates
+    .filter((candidate) => selectGeneratedImageCandidate([candidate]))
+    .map((candidate) => candidate.src)).size;
+}
+
+async function waitForGeneration(page: Page, startingGeneratedImageCount: number): Promise<void> {
+  const deadline = Date.now() + generationTimeoutMs;
   while (Date.now() < deadline) {
     await assertNoBoundary(page);
     const text = await bodyText(page);
     const hasDownloadButton = await page.getByRole("button", { name: /download/i }).count().catch(() => 0);
-    const hasImage = await page.locator("img").count().catch(() => 0);
+    const currentGeneratedImageCount = await generatedImageCount(page);
+    const hasNewGeneratedImage = currentGeneratedImageCount > startingGeneratedImageCount;
+    if (hasNewGeneratedImage) return;
     if (generationStillInProgress(text)) {
       await page.waitForTimeout(5000);
       continue;
     }
-    if (hasDownloadButton > 0 || (hasImage > 0 && imageReadyPattern.test(text))) return;
+    if (hasDownloadButton > 0 || imageReadyPattern.test(text)) return;
     await page.waitForTimeout(5000);
   }
-  throw new Error("Timed out waiting for ChatGPT image generation to complete.");
+  throw new Error("Timed out after 3 minutes waiting for ChatGPT image generation to complete.");
 }
 
 async function captureScreenshot(page: Page, assetSlug: string, timestamp: string, rootDir: string): Promise<string> {
@@ -583,6 +736,22 @@ async function tryDownloadImage(page: Page, assetSlug: string, timestamp: string
   return relative;
 }
 
+async function trySaveVisibleGeneratedImage(page: Page, assetSlug: string, timestamp: string, rootDir: string): Promise<string | undefined> {
+  const candidate = selectGeneratedImageCandidate(await generatedImageCandidates(page));
+  if (!candidate) return undefined;
+
+  const response = await page.context().request.get(candidate.src, { timeout: 60000 }).catch(() => undefined);
+  if (!response?.ok()) return undefined;
+
+  const contentType = response.headers()["content-type"] ?? "";
+  const extension = /webp/i.test(contentType) ? ".webp" : /jpe?g/i.test(contentType) ? ".jpg" : ".png";
+  const fileName = safeImageFileName(assetSlug, timestamp, extension);
+  const relative = `${imageOutputFolders.pendingReview}/${fileName}`;
+  await mkdir(join(rootDir, imageOutputFolders.pendingReview), { recursive: true });
+  await writeFile(join(rootDir, relative), await response.body());
+  return relative;
+}
+
 async function logAttempt(params: {
   options: BrokeModeRuntimeOptions;
   status: string;
@@ -602,10 +771,11 @@ async function logAttempt(params: {
   }, rootDir);
 }
 
-function metadataCommon(options: BrokeModeRuntimeOptions): Pick<Parameters<typeof saveAttemptMetadata>[0], "browserMode" | "cdpUrl"> {
+function metadataCommon(options: BrokeModeRuntimeOptions, referenceImages: string[] = []): Pick<Parameters<typeof saveAttemptMetadata>[0], "browserMode" | "cdpUrl" | "referenceImages"> {
   return {
     browserMode: options.browserMode,
-    cdpUrl: options.browserMode === "existing" ? options.cdpUrl : undefined
+    cdpUrl: options.browserMode === "existing" ? options.cdpUrl : undefined,
+    referenceImages
   };
 }
 
@@ -614,8 +784,17 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
   const timestamp = createTimestampSlug();
   await ensureImageOutputFolders(root);
   const rawPromptText = await assertPromptFile(options.prompt, root);
-  const preparedPrompt = preparePromptForChatGPTImageGeneration(rawPromptText);
-  const promptText = preparedPrompt.prompt;
+  const preparedPrompt = options.rawPrompt
+    ? { prompt: rawPromptText.trim(), warnings: ["Raw prompt mode selected; Broke Mode pasted the prompt file without compacting or appending missing production requirements."] }
+    : preparePromptForChatGPTImageGeneration(rawPromptText);
+  let promptText = preparedPrompt.prompt;
+  const referenceResolution = resolveReferenceImagePaths(promptText, options, root);
+  const referenceImagePaths = referenceResolution.paths;
+  const referenceImageMetadata = referenceImagePaths.map((path) => relative(root, path).replace(/\\/g, "/"));
+  const warnings = [...preparedPrompt.warnings, ...referenceResolution.warnings];
+  if (referenceImagePaths.length > 0) {
+    promptText = addReferenceUploadGuard(promptText);
+  }
   const assetName = options.assetName ?? basename(options.prompt, extname(options.prompt));
   const assetSlug = createSafeAssetSlug(assetName);
   const promptCopyPath = await saveTextArtifact(`${imageOutputFolders.pendingReview}/${assetSlug}-${timestamp}-prompt.md`, promptText, { rootDir: root, force: options.force });
@@ -629,23 +808,23 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
       assetSlug,
       promptPath: options.prompt,
       promptCopyPath,
-      warnings: preparedPrompt.warnings,
+      warnings,
       dryRun: true,
       autoSubmit: options.autoSubmit,
       maxAttempts: options.maxAttempts,
-      ...metadataCommon(options)
+      ...metadataCommon(options, referenceImageMetadata)
     }, { rootDir: root, force: options.force });
     await logAttempt({
       options,
       status: "dry-run",
       outputs: [promptCopyPath, metadataPath],
-      warnings: preparedPrompt.warnings,
+      warnings,
       qaResult: "DRY RUN",
       nextManualStep: options.browserMode === "existing"
         ? "Run without --dry-run after confirming an existing CDP-enabled browser is logged into ChatGPT."
         : "Run without --dry-run when ready to paste into ChatGPT."
     }, root);
-    console.log(JSON.stringify({ ok: true, dryRun: true, browserMode: options.browserMode, promptCharacters: promptText.length, files: [promptCopyPath, metadataPath] }, null, 2));
+    console.log(JSON.stringify({ ok: true, dryRun: true, browserMode: options.browserMode, promptCharacters: promptText.length, referenceImages: referenceImageMetadata, files: [promptCopyPath, metadataPath] }, null, 2));
     return;
   }
 
@@ -659,17 +838,17 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
       assetSlug,
       promptPath: options.prompt,
       promptCopyPath,
-      warnings: ["Manual mode selected; no browser automation was run.", ...preparedPrompt.warnings],
+      warnings: ["Manual mode selected; no browser automation was run.", ...warnings],
       dryRun: false,
       autoSubmit: options.autoSubmit,
       maxAttempts: options.maxAttempts,
-      ...metadataCommon(options)
+      ...metadataCommon(options, referenceImageMetadata)
     }, { rootDir: root, force: options.force });
     await logAttempt({
       options,
       status: "manual",
       outputs: [promptCopyPath, metadataPath],
-      warnings: ["Manual mode selected; no browser automation was run.", ...preparedPrompt.warnings],
+      warnings: ["Manual mode selected; no browser automation was run.", ...warnings],
       qaResult: "MANUAL",
       nextManualStep: "Paste the prompt in your normal browser, save the image to pending-review, then run image QA."
     }, root);
@@ -694,6 +873,10 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
       throw new Error(`${error instanceof Error ? error.message : error} Log into ChatGPT manually in the existing normal browser, then rerun. If managed mode hits Google's insecure-browser warning, switch to --browser-mode=existing or --browser-mode=manual.`);
     }
 
+    await uploadReferenceImages(page, referenceImagePaths);
+    if (referenceImagePaths.length) {
+      console.log(`Uploaded ${referenceImagePaths.length} reference image(s) to ChatGPT.`);
+    }
     await pastePrompt(page, promptText);
     console.log("Prompt pasted into ChatGPT. Review it in the browser.");
     if (!options.autoSubmit) {
@@ -707,17 +890,17 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
           assetSlug,
           promptPath: options.prompt,
           promptCopyPath,
-          warnings: ["Submission declined by human reviewer.", ...preparedPrompt.warnings],
+          warnings: ["Submission declined by human reviewer.", ...warnings],
           dryRun: false,
           autoSubmit: false,
           maxAttempts: options.maxAttempts,
-          ...metadataCommon(options)
+          ...metadataCommon(options, referenceImageMetadata)
         }, { rootDir: root, force: options.force });
         await logAttempt({
           options,
           status: "canceled",
           outputs: [promptCopyPath, metadataPath],
-          warnings: ["Submission declined by human reviewer.", ...preparedPrompt.warnings],
+          warnings: ["Submission declined by human reviewer.", ...warnings],
           qaResult: "CANCELED",
           nextManualStep: "Rerun when the prompt is ready."
         }, root);
@@ -726,9 +909,11 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
       }
     }
 
+    const startingGeneratedImageCount = await generatedImageCount(page);
     await submitPrompt(page);
-    await waitForGeneration(page);
+    await waitForGeneration(page, startingGeneratedImageCount);
     imagePath = await tryDownloadImage(page, assetSlug, timestamp, root);
+    if (!imagePath) imagePath = await trySaveVisibleGeneratedImage(page, assetSlug, timestamp, root);
     screenshotPath = await captureScreenshot(page, assetSlug, timestamp, root);
 
     if (!imagePath) {
@@ -743,18 +928,18 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
         promptCopyPath,
         screenshotPath,
         failureReason,
-        warnings: [failureReason, ...preparedPrompt.warnings],
+        warnings: [failureReason, ...warnings],
         dryRun: false,
         autoSubmit: options.autoSubmit,
         maxAttempts: options.maxAttempts,
-        ...metadataCommon(options)
+        ...metadataCommon(options, referenceImageMetadata)
       }, { rootDir: root, force: options.force });
       const archived = await archiveFailedAttempt({ assetSlug, timestamp, promptCopyPath, metadataPath, screenshotPath, failureReason }, { rootDir: root, force: options.force });
       await logAttempt({
         options,
         status: "failed",
         outputs: archived,
-        warnings: [failureReason, ...preparedPrompt.warnings],
+        warnings: [failureReason, ...warnings],
         qaResult: "FAIL",
         nextManualStep: "Download the image manually from ChatGPT, then run image QA."
       }, root);
@@ -772,11 +957,11 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
       promptCopyPath,
       imagePath,
       screenshotPath,
-      warnings: preparedPrompt.warnings,
+      warnings,
       dryRun: false,
       autoSubmit: options.autoSubmit,
       maxAttempts: options.maxAttempts,
-      ...metadataCommon(options)
+      ...metadataCommon(options, referenceImageMetadata)
     }, { rootDir: root, force: options.force });
     const qa = await saveImageQaReport({ imagePath, metadataPath, promptCopyPath, rootDir: root, force: options.force });
     qaReportPath = qa.reportPath;
@@ -840,11 +1025,11 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
       screenshotPath,
       qaReportPath,
       failureReason,
-      warnings: [failureReason, ...preparedPrompt.warnings],
+      warnings: [failureReason, ...warnings],
       dryRun: false,
       autoSubmit: options.autoSubmit,
       maxAttempts: options.maxAttempts,
-      ...metadataCommon(options)
+      ...metadataCommon(options, referenceImageMetadata)
     }, { rootDir: root, force: options.force }).catch(() => undefined);
     const archived = await archiveFailedAttempt({ assetSlug, timestamp, promptCopyPath, metadataPath, qaReportPath, imagePath, screenshotPath, failureReason }, { rootDir: root, force: options.force }).catch(() => []);
     await logAttempt({

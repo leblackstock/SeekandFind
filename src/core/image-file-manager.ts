@@ -32,6 +32,7 @@ export interface ImageAttemptMetadata {
   maxAttempts: number;
   browserMode?: BrowserMode;
   cdpUrl?: string;
+  referenceImages?: string[];
 }
 
 export interface ImageWriteOptions {
@@ -41,6 +42,9 @@ export interface ImageWriteOptions {
 
 export interface BrokeModeRuntimeOptions {
   prompt: string;
+  rawPrompt: boolean;
+  referenceImages: string[];
+  referenceImageRoot: string;
   autoSubmit: boolean;
   maxAttempts: number;
   cooldownSeconds: number;
@@ -75,6 +79,9 @@ export function enforceMaxAttempts(value: number): number {
 export function defaultBrokeModeOptions(prompt: string): BrokeModeRuntimeOptions {
   return {
     prompt,
+    rawPrompt: false,
+    referenceImages: ["auto"],
+    referenceImageRoot: "Ember's Adventures/EtD Images",
     autoSubmit: false,
     maxAttempts: 1,
     cooldownSeconds: 120,

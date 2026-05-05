@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-05-05T02-45-06-668Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "dry-run",
+  "assetName": "book01-page009-known-good-structure-upload-check",
+  "assetSlug": "book01-page009-known-good-structure-upload-check",
+  "promptPath": "content/outputs/prompts/book01-page009-lantern-maker-s-workshop-known-good-structure-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/book01-page009-known-good-structure-upload-check-2026-05-05T02-45-06-668Z-prompt.md",
+  "warnings": [
+    "Raw prompt mode selected; Broke Mode pasted the prompt file without compacting or appending missing production requirements."
+  ],
+  "dryRun": true,
+  "autoSubmit": false,
+  "maxAttempts": 1,
+  "browserMode": "existing",
+  "cdpUrl": "http://127.0.0.1:9222",
+  "referenceImages": [
+    "Ember's Adventures/EtD Images/Ember-001.png",
+    "Ember's Adventures/EtD Images/Ember-002.png",
+    "Ember's Adventures/EtD Images/Ember-003.png"
+  ]
+}

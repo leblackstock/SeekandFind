@@ -8,6 +8,7 @@ No readable generated text. Vertical KDP-style 8.5x11 portrait aspect ratio 8.5:
 Ember stays a small friendly guide without dominating the page like cover art.
 Use the page's visual budget carefully: reduce repeated decorative filler when adding searchable objects.
 Theme motifs may stay when they are visually unique enough to find; limit repeated generic versions.
+Include exactly 50 hidden objects total: 1 named mission item plus 49 additional unique hidden objects. Name only the mission item.
 Hide one tiny frosted bell fairly. No labels, arrows, circles, boxes, outlines, or highlights.
 `;
 

@@ -277,7 +277,7 @@ Recommended prompt order:
 3. Page theme
 4. Main scene
 5. Mascot or target system
-6. Hidden object list
+6. Hidden object count and uniqueness rules
 7. Composition requirements
 8. Art style
 9. Difficulty/hiding instructions
@@ -293,8 +293,10 @@ Include as applicable:
 - print-ready
 - vertical/full-page or spread format
 - organized visual complexity
-- intentional object placement by category
-- varied child-nameable objects with distinct silhouettes
+- intentional object placement by scene surface and hiding zone
+- exactly 50 hidden objects total on seek-image pages: 1 named mission item plus 49 additional unique hidden objects
+- no exact item names for the 49 additional hidden objects in final seek-image prompts
+- varied child-nameable objects with distinct silhouettes, described by uniqueness traits rather than a literal object list
 - scene life such as secondary villagers, helpers, customers, or festival-goers when the location calls for it
 - named mission item placed in a believable hiding spot, not random floor scatter
 - mostly clear walkways, paths, aisles, bridge surfaces, and door thresholds when the scene includes them
@@ -304,6 +306,8 @@ Include as applicable:
 - page-type text policy: seek images use no-text constraints; non-seek text pages request exact approved generated text and forbid extra/unapproved words
 
 For seek-image prompts, include this as a hard negative constraint: no circles, squares, boxes, outlines, arrows, halos, labels, highlights, answer marks, or shape overlays around the mission item or any hidden object. The mission item must be integrated into the scene as ordinary art, not marked as the answer.
+
+For seek-image prompts, name only the exact mission item as a hidden object. The prompt must ask for 49 additional hidden objects without naming them individually: make them one-of-a-kind, non-duplicated, readable at print size, different in silhouette/material/scale/detail rhythm, naturally placed in the scene, and distributed across foreground, midground, and background.
 
 ## Title Page Prompt Rule
 
@@ -568,6 +572,7 @@ Use this checklist for every puzzle page.
 - [ ] Props are arranged in intentional clusters or natural surfaces, not random scatter across floors/routes.
 - [ ] Scene includes appropriate life or activity when the location calls for it, without crowding the search.
 - [ ] Object variety is strong: searchable props have distinct silhouettes and are child-nameable for the target age.
+- [ ] Seek-image art contains 50 hidden objects total when reviewed: 1 mission item plus 49 additional unique hidden objects.
 
 ## Hidden Object Check
 
@@ -581,8 +586,10 @@ Use this checklist for every puzzle page.
 - [ ] Hidden objects are not clustered mostly in the foreground unless the approved page layout specifically calls for it.
 - [ ] No target is hidden only by being tiny or invisible.
 - [ ] No accidental duplicate makes the answer ambiguous.
-- [ ] Category items are placed where they naturally belong in the scene instead of scattered randomly.
-- [ ] If one generic object family dominates the scene, the next prompt revision replaces generic filler wording with more precise page-specific objects.
+- [ ] Additional hidden objects feel one-of-a-kind, with no copy-paste repeats or near-duplicate silhouettes.
+- [ ] Additional hidden objects were not pre-named in the final seek-image prompt; exact Main Finds and Bonus Finds are selected only after art approval.
+- [ ] Hidden objects are placed where they naturally belong in the scene instead of scattered randomly.
+- [ ] If one generic object family dominates the scene, the next prompt revision strengthens uniqueness, material, silhouette, and placement rules without listing exact extra item names.
 - [ ] Mission items and hidden objects are not circled, squared, boxed, outlined, haloed, highlighted, arrow-pointed, labeled, or covered by any answer-mark/shape overlay.
 
 ## Print Check
@@ -792,7 +799,7 @@ Use this before sending an image prompt.
 - [ ] Scene description included.
 - [ ] Mode stated.
 - [ ] Primary target/mascot defined if used.
-- [ ] Hidden-object list included.
+- [ ] Hidden-object count and uniqueness instructions included.
 - [ ] Difficulty target included.
 - [ ] Composition requirements included.
 - [ ] Print requirements included.
@@ -806,6 +813,8 @@ Use this before sending an image prompt.
 - [ ] For story/list pages: image prompt supplies those section headings and item lists exactly.
 - [ ] For story/list pages: image prompt explicitly forbids merging or flattening the mission item, main finds, and bonus finds into one list.
 - [ ] For seek-image pages: image prompt hard-forbids circles, squares, boxes, outlines, arrows, halos, labels, highlights, answer marks, and shape overlays on mission items or hidden objects.
+- [ ] For seek-image pages: image prompt requests exactly 50 hidden objects total: 1 exact named mission item plus 49 additional unique hidden objects.
+- [ ] For seek-image pages: image prompt does not name exact additional hidden objects beyond the mission item.
 
 ## Mascot Prompt Check
 
@@ -830,7 +839,7 @@ Use this before sending an image prompt.
 - [ ] No vague "make it good" dependency.
 - [ ] No contradictory instructions.
 - [ ] Object count is realistic for the audience/mode.
-- [ ] Prompt asks for rich but not overstuffed seek art, with category items intentionally placed.
+- [ ] Prompt asks for rich but not overstuffed seek art, with the unnamed additional hidden objects intentionally placed.
 - [ ] Prompt keeps walkways, paths, aisles, bridge surfaces, and door thresholds mostly open when they exist.
-- [ ] Prompt asks for varied, identifiable, child-nameable objects and uses page-specific vocabulary instead of broad decorative filler.
+- [ ] Prompt asks for varied, identifiable, child-nameable objects by silhouette, material, scale, and detail variation rather than exact extra item names.
 - [ ] Prompt includes appropriate secondary scene life, such as festival-goers or helpers, when the page location needs activity.

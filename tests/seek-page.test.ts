@@ -82,10 +82,20 @@ describe("seek page source-truth validation", () => {
       expect(prompt).toContain("small friendly guide/helper");
       expect(prompt).toContain("visual budget");
       expect(prompt).toContain("visually unique enough to find");
+      expect(prompt).toContain("Include exactly 50 hidden objects total");
+      expect(prompt).toContain("49 additional unique hidden objects");
+      expect(prompt).toContain("Name only the mission item");
       expect(prompt).toContain("sturdy lantern-making workbench");
       expect(prompt).toContain("Use Ember-001, Ember-002, and Ember-003 as visual references for Ember.");
       expect(prompt).toContain("duplicate Baby Flame Lantern");
       expect(prompt).not.toMatch(/Source mirror:|Marketing Image Prompts|marketing prompt pack|Canon To Preserve|when available|If references are unavailable/i);
+
+      const splitTests = await readFile(join(root, "content/outputs/prompts/book01-page009-lantern-maker-s-workshop-split-test-prompts.md"), "utf8");
+      expect(splitTests).toContain("Test 1 - Minimal Render");
+      expect(splitTests).toContain("Test 6 - Add Full Avoid And Format Block");
+      expect(splitTests).toContain("Paste one test at a time");
+      expect(splitTests).toContain("Include exactly 50 hidden objects total");
+      expect(splitTests).not.toMatch(/when available|If references are unavailable|Do not rewrite|project\/source context/i);
     } finally {
       await rm(root, { recursive: true, force: true });
     }

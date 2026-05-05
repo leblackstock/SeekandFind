@@ -27,6 +27,8 @@ Project rules about source matching, row-match blocks, `.md` files, prompt QA, w
 
 Hard rule for seek-image puzzle art: never mark the mission item or any hidden object with a circle, square, box, outline, arrow, halo, label, highlight, or other answer-mark/shape overlay. The object must be hidden as natural scene art. Markers are allowed only in separate answer-key or hint assets created after final art approval, never on the seek page image itself.
 
+Hard rule for seek-image prompt item counts: every final seek-image prompt must request exactly 50 hidden objects total: 1 exact named mission item plus 49 additional unique hidden objects. Do not name exact additional hidden items in the image prompt. Describe the additional 49 by uniqueness, silhouette, material, scale, placement, and scene-fit requirements only, using the page setting to guide the environment rather than a literal object list.
+
 For Ember books, production checklists are not source of truth. The source of truth is this four-file rules bundle plus `CHATGPT_PROJECT_SYSTEM_INSTRUCTIONS.md`; use the canonical Ember project rules, character canon, book plans, story/list source blocks, cover/KDP notes, and preflight rules now embedded inside these four files. Checklists and Word files must be treated as derivative copies and corrected to match the rules if they conflict.
 
 ## Workflow Splitter

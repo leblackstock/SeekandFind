@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-05-05T01-48-52-134Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "failed",
+  "assetName": "book01-page009-known-good-structure",
+  "assetSlug": "book01-page009-known-good-structure",
+  "promptPath": "content/outputs/prompts/book01-page009-lantern-maker-s-workshop-known-good-structure-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/book01-page009-known-good-structure-2026-05-05T01-48-52-134Z-prompt.md",
+  "screenshotPath": "content/outputs/images/pending-review/book01-page009-known-good-structure-2026-05-05T01-48-52-134Z-chatgpt-screenshot.png",
+  "failureReason": "Timed out after 3 minutes waiting for ChatGPT image generation to complete.",
+  "warnings": [
+    "Timed out after 3 minutes waiting for ChatGPT image generation to complete.",
+    "Raw prompt mode selected; Broke Mode pasted the prompt file without compacting or appending missing production requirements."
+  ],
+  "dryRun": false,
+  "autoSubmit": true,
+  "maxAttempts": 1,
+  "browserMode": "existing",
+  "cdpUrl": "http://127.0.0.1:9222"
+}

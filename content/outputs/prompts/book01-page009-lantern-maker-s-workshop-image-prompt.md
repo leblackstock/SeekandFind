@@ -18,6 +18,8 @@ Ember appears exactly once as a small friendly guide/helper in the foreground or
 
 Hide one Baby Flame Lantern fairly in the scene. The mission item appears exactly once and must be findable for children ages 5-8. Place it naturally on a believable surface or tucked edge, not randomly in a walkway. Do not include duplicate or similar lookalike mission items.
 
+Include exactly 50 hidden objects total in the seek image: 1 exact named mission item plus 49 additional unique hidden objects. Name only the mission item. Do not list exact names for the other 49 hidden objects. Make those 49 additional hidden objects one-of-a-kind, child-nameable, readable at final print size, and clearly different in silhouette, material, scale, edge style, handle/closure/detail pattern, color grouping, and placement. Place them naturally on scene-appropriate surfaces with no duplicate designs, near-duplicate silhouettes, or simple color-swap repeats.
+
 Build a rich but readable seek-and-find scene with 4-6 intentional search zones across foreground, midground, and background: a clear foreground entry edge where Ember stands small at the side; a sturdy lantern-making workbench with a few frames, wicks, and safe rounded tools; wall hooks with a limited number of distinct paper shades; ribbon-and-wick shelves with small jars and spools; a finished-lantern display stand; and a side basket or bench corner for tucked child-nameable props. Keep paths, doorways, bridge surfaces, and the main eye path mostly open.
 
 Use the page's visual budget carefully: when adding searchable objects, reduce repeated decorative filler. Replace some repeated atmosphere with distinct child-nameable search objects that belong naturally in Lantern Maker's Workshop. Theme motifs such as flowers, lanterns, crystals, jars, ribbons, or mushrooms may stay when specific examples are visually unique enough to find; limit repeated generic versions so they do not become clutter.
@@ -29,6 +31,7 @@ Keep the tone warm, magical, cheerful, and child-safe for ages 5-8.
 ## Hidden Object Category Guidance
 
 - Mission Item: Baby Flame Lantern appears once.
+- Additional Hidden Objects: 49 unnamed unique objects should be present as visible candidates, but they should be generated from uniqueness traits rather than exact item names in this prompt.
 - Main Finds: leave room for 10 clear objects to be selected after the approved image exists.
 - Bonus Finds: leave room for 5-15 optional objects to be selected from visible approved art.
 

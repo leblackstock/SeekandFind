@@ -16,6 +16,8 @@ QA result: PASS
 - Reference images are named
 - No readable generated text
 - Mission item appears once
+- Exactly 50 hidden objects requested: 1 named mission item plus 49 unnamed unique objects
+- Additional hidden objects are not named individually in the image prompt
 - Vertical KDP-style 8.5x11 format with explicit 8.5:11 / 17:22 aspect ratio
 - Safe-area awareness included
 - Kid-friendly ages 5-8

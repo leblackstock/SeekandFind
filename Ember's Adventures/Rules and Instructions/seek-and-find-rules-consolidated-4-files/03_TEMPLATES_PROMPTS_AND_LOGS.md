@@ -42,9 +42,9 @@ When that line or equivalent wording appears with a complete prompt, use the pro
 
 Title: **Ember and the Sparkleflame Festival Search**.
 
-Book 1 seek-image placement rule: Book 1 Sparkleflame Festival seek-image prompts should be rich but slightly less cluttered than an overpacked hidden-object spread. Use intentional clusters and believable surfaces for named mission items and broad category items. Keep walkways, paths, bridge surfaces, mountain trails, doorway thresholds, market aisles, and the main eye path mostly clear, with only a few small edge details. Do not scatter items randomly across floors or routes.
+Book 1 seek-image placement rule: Book 1 Sparkleflame Festival seek-image prompts should be rich but slightly less cluttered than an overpacked hidden-object spread. Each final seek-image prompt should request exactly 50 hidden objects total: the exact named mission item plus 49 additional unique hidden objects. Use intentional clusters and believable surfaces for the mission item and the 49 unnamed additional hidden objects. Keep walkways, paths, bridge surfaces, mountain trails, doorway thresholds, market aisles, and the main eye path mostly clear, with only a few small edge details. Do not scatter items randomly across floors or routes.
 
-Book 1 scene-life and object-variety rule: Sparkleflame Festival seek-image prompts should include friendly original dragon villagers, festival-goers, helpers, customers, or small background activity when the location is a village square, market, bakery, workshop, bridge, or festival finale. These figures should make the scene feel alive but stay secondary, not become hidden targets, not block the mission item, and not crowd the walkways. Searchable objects should be varied and child-nameable, with distinct silhouettes. Prompt rows should name the actual page-specific object families instead of relying on generic decorative filler. Festival lanterns are an important Book 1 motif and may appear generously as strings, stands, garlands, workshop pieces, and celebration lights. Page-specific objects should lead: cottage pages use cottage belongings, village pages use village/festival props, bakery pages use treats and baking tools, workshop pages use lantern-making parts and safe tools, garden pages use mixed nature details, mountain pages use trail/rock details, cave pages use cave details, door pages use keys/carvings/vines, market pages use market goods, and finale pages use celebration objects.
+Book 1 scene-life and object-variety rule: Sparkleflame Festival seek-image prompts should include friendly original dragon villagers, festival-goers, helpers, customers, or small background activity when the location is a village square, market, bakery, workshop, bridge, or festival finale. These figures should make the scene feel alive but stay secondary, not become hidden targets, not block the mission item, and not crowd the walkways. Searchable objects should be varied and child-nameable, with distinct silhouettes. In final seek-image prompts, do not name exact hidden items except for the mission item. Translate page-specific source vocabulary into broad scene-fit, material, silhouette, scale, and placement guidance so the image generator creates 49 unique additional hidden objects without a literal checklist. Festival lanterns are an important Book 1 motif and may appear generously as environmental lighting, strings, stands, garlands, workshop pieces, and celebration lights, but additional hidden items should still be unnamed and one-of-a-kind.
 
 ### Production Order
 
@@ -71,7 +71,7 @@ Printed order is story/list left page then seek image right page. Production ord
 
 ### Broad Searchable Categories
 
-Use these as curated prop zones, not as permission to fill every open space. Category items should be grouped where they belong naturally, leaving walkways, trails, bridge surfaces, door thresholds, market aisles, and main eye paths mostly open.
+Use these as curated prop zones, not as permission to fill every open space. Category items should be grouped where they belong naturally, leaving walkways, trails, bridge surfaces, door thresholds, market aisles, and main eye paths mostly open. These rows are source/planning guidance only; do not copy non-mission item names from them into final seek-image prompts.
 
 | Seek Page | Broad Searchable Categories |
 |---:|:---|
@@ -295,6 +295,8 @@ Printed order is story/list left page then seek image right page. Production ord
 
 ### Broad Searchable Categories
 
+These rows are source/planning guidance only. Do not copy non-mission item names from these rows into final seek-image prompts. Final seek-image prompts must name only the mission item and request 49 additional unique hidden objects by traits.
+
 | Seek Page | Broad Searchable Categories |
 |---:|:---|
 | 3 | Leafy trail markers, glowing leaves, acorns, mushrooms, berries, twig signs, mossy stones, tiny forest clue objects, soft sparkle details. |
@@ -476,9 +478,9 @@ Text rule: Render the title and closing text exactly. Do not add extra teaser wo
 
 Title: **Ember and the Crystal Castle Search**.
 
-Book 3 material rule: In Crystal Castle prompts, make the castle walls, towers, main architecture, roads, paths, steps, floors, and courtyard surfaces stone, not crystal. Castle roofs and windows should be crystal. Use a balanced amount of crystal as intentional named objects and architectural accents, such as crystal roof caps, crystal trim, crystal windows, crystal vines, crystal lanterns, crystal roses, crystal jars, crystal bookmarks, crystal knobs, crystal mirror frames, crystal keys, crystal tarts, crystal wind chimes, or crystal crown lanterns. Avoid gem-heavy clutter: no loose gems, loose crystals, jewels, shards, crystal piles, gem baskets, gem flowers, or path gems as default scene filler. Searchable objects should lean majority non-crystal: wood, plants/organic materials, metal, fabric, paper, glass, food, and stone props should outnumber crystal/gem props on each seek page.
+Book 3 material rule: In Crystal Castle prompts, make the castle walls, towers, main architecture, roads, paths, steps, floors, and courtyard surfaces stone, not crystal. Castle roofs and windows should be crystal. Crystal accents are allowed as architecture, decor, and page flavor, but final seek-image prompts must not list exact extra crystal objects as hidden targets beyond the mission item. Avoid gem-heavy clutter: no loose gem/crystal scatter, piles, or path-filler sparkles as default scene filler. The 49 unnamed additional hidden objects should lean majority non-crystal by material cue: wood, plant/organic, metal, fabric, paper, glass, food, and stone should outnumber crystal/gem cues on each seek page.
 
-Book 3 non-crystal search rule: Every Book 3 seek-image prompt should include a rich mix of non-crystal searchable items, such as brass bells, metal keys, fabric ribbons, cloth banners, paper guide cards, folded maps with no readable text, books, scrolls, baskets, flower pots, stone planters, rounded stones, tiny tools, flags, cushions, bowls, plates, spoons, hinges, handles, knobs, coins, crowns, chests, shelves, and safe cozy castle props. Do not include signs as searchable props. Crystal items should feel like accents among these objects, not the whole search vocabulary.
+Book 3 non-crystal search rule: Every Book 3 seek-image prompt should request a rich majority of non-crystal material cues among the 49 unnamed additional hidden objects without naming those objects individually. Use broad material, shape, surface, and placement guidance instead of exact non-mission item names. Do not include signs as searchable props. Crystal should feel like accent material and architecture, not the whole search vocabulary.
 
 Book 3 helper rule: Every Book 3 seek-image prompt should show Ember exactly once as the child's visible guide/helper, never as a hidden target, and should directly name Ember reference images `Ember-001`, `Ember-002`, and `Ember-003`. Gemma Glint is the approved pink crystal castle guide, but she is page-specific: use Gemma only for Gemma's Guide Nook, Book 3 seek page 9 / paired story-list page 8, and directly name Gemma reference images `Gemma_Glint-001`, `Gemma_Glint-002`, and `Gemma_Glint-003`, unless the user explicitly requests otherwise. Other Book 3 seek scenes may include friendly castle helpers and tiny original fantasy creatures in the earlier gate-prompt style: preparing the castle for Ember's arrival, polishing crystal trim, carrying little baskets of gems, arranging glowing flowers, hanging jewel lanterns, sweeping stone steps, and adding small magical visual jokes such as a tiny helper polishing the same gem twice, a lantern glowing in rainbow colors, a shy creature peeking from behind a stone planter, or a basket of gems gently wobbling. Keep helpers secondary and organized so they add life without covering hidden objects.
 
@@ -506,6 +508,8 @@ Printed order is story/list left page then seek image right page. Production ord
 | 10 | 20 | 21 | Rainbow Towers and Treasure Chambers | Crystal Castle Finale | Crystal Crown Lantern | Crystal celebration arch; lantern icons |
 
 ### Broad Searchable Categories
+
+These rows are source/planning guidance only. Do not copy non-mission item names from these rows into final seek-image prompts. Final seek-image prompts must name only the mission item and request 49 additional unique hidden objects by traits.
 
 | Seek Page | Broad Searchable Categories |
 |---:|:---|
@@ -730,6 +734,8 @@ Printed order is story/list left page then seek image right page. Production ord
 | 10 | 20 | 21 | Glow Reef and Lighthouse Point | Seaside Glow Finale | Seaside Crown Lantern | Elder Glowkeeper finale cue; lantern checklist string |
 
 ### Broad Searchable Categories
+
+These rows are source/planning guidance only. Do not copy non-mission item names from these rows into final seek-image prompts. Final seek-image prompts must name only the mission item and request 49 additional unique hidden objects by traits.
 
 | Seek Page | Broad Searchable Categories |
 |---:|:---|
@@ -1362,13 +1368,13 @@ Primary target:
 [include consistency details if mascot series]
 
 Hidden objects:
-[list objects]
+[for seek-image pages: exactly 50 hidden objects total; name only the mission item and ask for 49 additional unique hidden objects without exact item names]
 
 Composition requirements:
 - [vertical full-page / two-page spread / cover]
 - organized visual complexity
-- intentional object placement by category
-- varied child-nameable objects with distinct silhouettes
+- intentional object placement by scene surface and natural hiding zone
+- 49 additional hidden objects that are unique, child-nameable, and distinct in silhouette, material, scale, and detail pattern, without being named individually
 - secondary scene life when the location calls for villagers, helpers, customers, or festival-goers
 - layered foreground, midground, and background
 - no empty dead zones
@@ -1382,6 +1388,7 @@ Hiding requirements:
 - this depth rule applies to all findable objects: mission item, main finds, bonus finds, and candidate finds should be allowed across foreground, midground, and background
 - primary target placed in a believable hiding spot, not random floor scatter or the middle of a walkway/threshold
 - hidden targets identifiable once found
+- no exact hidden-object names beyond the mission item in final seek-image prompts
 - use partial cover, playful pose, similar colors, or busy surroundings without making objects invisible
 
 Art style:
@@ -1565,13 +1572,19 @@ The scene should be dense and highly detailed, but organized and readable, with 
 ## Intentional Placement Block
 
 ```text
-Make the seek scene rich but not overstuffed. Arrange named mission items, main find/category items, and decorative details in intentional clusters where they naturally belong in the environment. Keep walkways, paths, aisles, bridge surfaces, door thresholds, and the main eye path mostly open and readable, with only a few small edge details. Do not use random floor scatter or drop important hidden objects in the middle of walking routes.
+Make the seek scene rich but not overstuffed. Arrange the exact named mission item and the 49 unnamed additional hidden objects in intentional clusters where they naturally belong in the environment. Keep walkways, paths, aisles, bridge surfaces, door thresholds, and the main eye path mostly open and readable, with only a few small edge details. Do not use random floor scatter or drop important hidden objects in the middle of walking routes.
 ```
 
 ## Scene Life and Object Variety Block
 
 ```text
-Include appropriate secondary scene life for the location, such as friendly original villagers, helpers, customers, festival-goers, or small non-recurring fantasy creatures doing simple actions. They should make the world feel alive without becoming hidden targets, crowding walkways, or covering required objects. Use varied, identifiable, child-nameable searchable props with distinct silhouettes. If a prompt starts repeating one generic object family, revise the page row to name more specific objects from that page's actual setting.
+Include appropriate secondary scene life for the location, such as friendly original villagers, helpers, customers, festival-goers, or small non-recurring fantasy creatures doing simple actions. They should make the world feel alive without becoming hidden targets, crowding walkways, or covering required objects. Use 49 additional hidden objects that are varied, identifiable, child-nameable, and clearly different in silhouette, material, scale, edge shape, and detail rhythm. Do not name those additional hidden objects individually in the final seek-image prompt; strengthen uniqueness and scene-fit instructions instead.
+```
+
+## 50 Unique Hidden Objects Block
+
+```text
+Include exactly 50 hidden objects total in the seek image: 1 exact named mission item plus 49 additional hidden objects. Name only the mission item. Do not list exact names for the other 49 hidden objects. Make all 49 additional hidden objects one-of-a-kind, with no duplicate designs, no near-duplicate silhouettes, and no simple color-swap repeats. Vary outline shape, size, material cues, edge style, handle/closure/detail pattern, color grouping, and placement. Keep every hidden object readable at final print size and naturally placed on scene-appropriate surfaces.
 ```
 
 ## Fair Hiding Block
@@ -1713,7 +1726,7 @@ Primary target:
 [target description]
 
 Hidden objects:
-[object list]
+[for seek-image pages: exactly 50 hidden objects total; name only the mission item and ask for 49 additional unique hidden objects without exact item names]
 
 Composition:
 - [vertical full-page / spread]
@@ -1721,7 +1734,7 @@ Composition:
 - clear foreground, midground, and background
 - no empty areas
 - hidden objects distributed across the full image
-- named mission items and category items placed intentionally where they naturally belong
+- exact named mission item plus 49 unnamed additional hidden objects placed intentionally where they naturally belong
 - walkways, paths, aisles, bridge surfaces, and door thresholds mostly open when present
 - important objects may appear in foreground, midground, or background, but should not be clipped by trim or lost in the gutter
 
@@ -1731,6 +1744,7 @@ Hiding:
 - all findable objects, including mission item, main finds, bonus finds, and candidate finds, may be hidden across foreground, midground, and background
 - primary target hidden in a believable scene location, not random floor scatter or the middle of a walkway/threshold
 - objects identifiable once found
+- no exact hidden-object names beyond the mission item in final seek-image prompts
 - no unfair invisibility or tiny blob hiding
 
 Style:
@@ -1770,7 +1784,7 @@ Primary target:
 [target description, if applicable]
 
 Hidden objects:
-[object list]
+[for seek-image pages: exactly 50 hidden objects total; name only the mission item and ask for 49 additional unique hidden objects without exact item names]
 
 Art style:
 - clean black-and-white line art
@@ -1844,6 +1858,7 @@ Record rule, template, and workflow changes here.
 
 | Date | File | Change | Reason |
 |---|---|---|---|
+| 2026-05-04 | Four-file rules bundle | Required seek-image prompts to use exactly 50 hidden objects, naming only the mission item and describing 49 additional unique hidden objects by traits instead of exact item names. | Prevent prompt stalls and repeated literal item lists while preserving rich, unique seek-page content. |
 | 2026-05-04 | Four-file rules bundle, system instructions | Routed direct supplied-prompt generation through the user's selected renderer, defaulting Ember production to supervised ChatGPT broke mode. | Keep explicit generate-now requests budget-aware instead of defaulting to the built-in image tool. |
 | 2026-05-04 | Four-file rules bundle, system instructions | Added direct image-generation override for complete supplied prompts. | Prevent prompt/source/QA workflows from blocking explicit generate-now requests. |
 | 2026-05-02 | `03_TEMPLATES_PROMPTS_AND_LOGS.md`, `03_EMBER_BOOK1_10_SPREAD_PLAN.md` | Restored festival lanterns as a positive Book 1 motif across cottage, village, workshop, door, market, and finale prompt vocabulary. | Keep the Sparkleflame Festival visually lantern-rich while still using page-specific objects. |

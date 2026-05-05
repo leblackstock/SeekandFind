@@ -20,7 +20,9 @@ import {
   parseBrokeModeArgs,
   parseBrowserMode,
   preparePromptForChatGPTImageGeneration,
-  sanitizePromptForBrokeMode
+  resolveReferenceImagePaths,
+  sanitizePromptForBrokeMode,
+  selectGeneratedImageCandidate
 } from "../automation/playwright/scripts/chatgpt-broke-mode-generate.js";
 
 let root: string;
@@ -110,6 +112,28 @@ describe("image file manager", () => {
     expect(parseBrokeModeArgs(["--prompt", "prompt.md", "--auto-submit=true"]).autoSubmit).toBe(true);
   });
 
+  it("defaults raw prompt mode off and enables it explicitly", () => {
+    expect(defaultBrokeModeOptions("prompt.md").rawPrompt).toBe(false);
+    expect(parseBrokeModeArgs(["--prompt", "prompt.md"]).rawPrompt).toBe(false);
+    expect(parseBrokeModeArgs(["--prompt", "prompt.md", "--raw-prompt"]).rawPrompt).toBe(true);
+  });
+
+  it("defaults reference image resolution to auto from the EtD images folder", () => {
+    const options = parseBrokeModeArgs(["--prompt", "prompt.md"]);
+    expect(options.referenceImages).toEqual(["auto"]);
+    expect(options.referenceImageRoot).toBe("Ember's Adventures/EtD Images");
+  });
+
+  it("parses explicit reference image arguments", () => {
+    const options = parseBrokeModeArgs([
+      "--prompt", "prompt.md",
+      "--reference-images=content/a.png,content/b.png",
+      "--reference-image-root=content/custom-images"
+    ]);
+    expect(options.referenceImages).toEqual(["content/a.png", "content/b.png"]);
+    expect(options.referenceImageRoot).toBe("content/custom-images");
+  });
+
   it("defaults to existing browser mode", () => {
     expect(defaultBrokeModeOptions("prompt.md").browserMode).toBe("existing");
     expect(parseBrokeModeArgs(["--prompt", "prompt.md"]).browserMode).toBe("existing");
@@ -133,6 +157,14 @@ describe("image file manager", () => {
     expect(generationStillInProgress("Download image")).toBe(false);
   });
 
+  it("selects a real generated image instead of avatar images", () => {
+    const selected = selectGeneratedImageCandidate([
+      { src: "https://cdn.auth0.com/avatars/lc.png", alt: "Profile image", width: 120, height: 120, clientWidth: 24, clientHeight: 24 },
+      { src: "https://chatgpt.com/backend-api/estuary/content?id=file_123", alt: "Generated image", width: 1103, height: 1426, clientWidth: 400, clientHeight: 517 }
+    ]);
+    expect(selected?.src).toContain("backend-api/estuary/content");
+  });
+
   it("provides manual mode fallback messaging", () => {
     const message = manualModeMessage("content/outputs/prompts/example.md");
     expect(message).toContain("No browser will be opened");
@@ -145,6 +177,43 @@ describe("image file manager", () => {
     expect(result.prompt).toContain("HootiePuff-001");
     expect(result.prompt).not.toContain("/mnt/data");
     expect(result.warnings.length).toBe(2);
+  });
+
+  it("auto-resolves Ember references from the local EtD images folder", async () => {
+    await mkdir(join(root, "Ember's Adventures/EtD Images"), { recursive: true });
+    await writeFile(join(root, "Ember's Adventures/EtD Images/Ember-001.png"), "a");
+    await writeFile(join(root, "Ember's Adventures/EtD Images/Ember-002.png"), "b");
+    await writeFile(join(root, "Ember's Adventures/EtD Images/Ember-003.png"), "c");
+
+    const resolved = resolveReferenceImagePaths(
+      "Use Ember-001, Ember-002, and Ember-003 as visual references for Ember.",
+      { referenceImages: ["auto"], referenceImageRoot: "Ember's Adventures/EtD Images" },
+      root
+    );
+
+    expect(resolved.paths).toHaveLength(3);
+    expect(resolved.warnings).toEqual([]);
+  });
+
+  it("auto-adds cast lineup when a non-Ember character appears on the page", async () => {
+    await mkdir(join(root, "Ember's Adventures/EtD Images"), { recursive: true });
+    for (const name of [
+      "Ember-001", "Ember-002", "Ember-003",
+      "Gemma_Glint-001", "Gemma_Glint-002", "Gemma_Glint-003",
+      "Ember_Cast_Lineup-001", "Ember_Cast_Lineup-002"
+    ]) {
+      await writeFile(join(root, `Ember's Adventures/EtD Images/${name}.png`), name);
+    }
+
+    const resolved = resolveReferenceImagePaths(
+      "Create a page with Ember and Gemma_Glint. Use Ember-001 and Gemma_Glint-001 as references.",
+      { referenceImages: ["auto"], referenceImageRoot: "Ember's Adventures/EtD Images" },
+      root
+    );
+
+    expect(resolved.paths.some((path) => path.endsWith("Ember_Cast_Lineup-001.png"))).toBe(true);
+    expect(resolved.paths.some((path) => path.endsWith("Ember_Cast_Lineup-002.png"))).toBe(true);
+    expect(resolved.paths.some((path) => path.endsWith("Gemma_Glint-003.png"))).toBe(true);
   });
 
   it("sanitizes local file paths before Broke Mode paste", () => {
