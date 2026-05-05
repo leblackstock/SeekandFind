@@ -1,0 +1,57 @@
+{
+  "inspectedAt": "2026-05-05T05:36:45.724Z",
+  "chat": {
+    "id": "02-baby-flame-lantern-teaser-regenerate-too-clean",
+    "url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f97ffa-fcfc-83ea-ab8d-5da98fbcf904"
+  },
+  "screenshotRel": "content/outputs/session-logs/screenshots/2026-05-05T05-36-44-238Z-02-baby-flame-lantern-teaser-regenerate-too-clean.png",
+  "candidates": [
+    {
+      "index": 5,
+      "alt": "Generated image",
+      "naturalWidth": 941,
+      "naturalHeight": 1672,
+      "clientWidth": 400,
+      "clientHeight": 711
+    },
+    {
+      "index": 6,
+      "alt": "",
+      "naturalWidth": 941,
+      "naturalHeight": 1672,
+      "clientWidth": 400,
+      "clientHeight": 711
+    },
+    {
+      "index": 7,
+      "alt": "",
+      "naturalWidth": 941,
+      "naturalHeight": 1672,
+      "clientWidth": 400,
+      "clientHeight": 711
+    }
+  ],
+  "recovered": [
+    {
+      "rel": "content/outputs/images/pending-review/book-1-no-blank-promo-batch-02-02-baby-flame-lantern-teaser-regenerate-too-clean-2026-05-05T05-36-44-238Z.png",
+      "alt": "Generated image",
+      "naturalWidth": 941,
+      "naturalHeight": 1672,
+      "contentType": "image/png"
+    },
+    {
+      "rel": "content/outputs/images/pending-review/book-1-no-blank-promo-batch-02-02-baby-flame-lantern-teaser-regenerate-too-clean-2026-05-05T05-36-44-238Z.png",
+      "alt": "",
+      "naturalWidth": 941,
+      "naturalHeight": 1672,
+      "contentType": "image/png"
+    },
+    {
+      "rel": "content/outputs/images/pending-review/book-1-no-blank-promo-batch-02-02-baby-flame-lantern-teaser-regenerate-too-clean-2026-05-05T05-36-44-238Z.png",
+      "alt": "",
+      "naturalWidth": 941,
+      "naturalHeight": 1672,
+      "contentType": "image/png"
+    }
+  ]
+}

@@ -77,32 +77,32 @@ ${textRule}
 function createPromptSpecs(input: MarketingBatchInput): MarketingPromptSpec[] {
   const specs: MarketingPromptSpec[] = [
     {
-      id: "01-lantern-workshop-teaser",
-      title: "Book 1 Promo Image 01 - Lantern Workshop Teaser",
+      id: "01-search-with-ember",
+      title: "Book 1 Promo Image 01 - Search With Ember",
       useCase: "Pinterest pin, Instagram post, and Facebook teaser",
-      prompt: `${promptHeader("Book 1 Promo Image 01 - Lantern Workshop Teaser", "Pinterest pin, Instagram post, and Facebook teaser", "Can you help Ember find it?")}
-Scene: Ember stands small and excited at the edge of a cozy lantern maker's workshop, looking toward glowing paper lanterns, ribbon spools, tiny safe tools, warm wood shelves, and a magical Baby Flame Lantern glow hidden in the atmosphere without being marked. Make the image feel like a warm invitation to a search adventure, not a finished seek page. The image must feel complete and post-ready with the exact text already included.`
+      prompt: `${promptHeader("Book 1 Promo Image 01 - Search With Ember", "Pinterest pin, Instagram post, and Facebook teaser", "Search with Ember!")}
+Scene: Ember stands in a full-frame Sparkleflame Festival market lane packed with warm lanterns, ribbons, baskets, cupcakes, bells, and tiny sparkle treasures arranged in clear cozy clusters. The exact text should sit naturally across the top like polished social-promo lettering, with art and details filling the rest of the frame. Do not create a blank parchment panel, empty sky, or template area.`
     },
     {
-      id: "02-parent-gift-buyer-hook",
-      title: "Book 1 Promo Image 02 - Parent Gift-Buyer Hook",
+      id: "02-baby-flame-lantern-teaser",
+      title: "Book 1 Promo Image 02 - Baby Flame Lantern Teaser",
+      useCase: "story/reel cover and mission-item teaser",
+      prompt: `${promptHeader("Book 1 Promo Image 02 - Baby Flame Lantern Teaser", "story/reel cover and mission-item teaser", "Can you find the Baby Flame Lantern?")}
+Scene: Ember peeks playfully into a cozy lantern maker's workshop filled with warm paper lanterns, ribbon spools, tiny safe tools, shelves, baskets, wood textures, colorful festival ribbons, and child-nameable props. Hide one Baby Flame Lantern fairly somewhere in the midground among other lanterns on a shelf or hanging cluster. Keep the Baby Flame Lantern findable but not marked and not the biggest lantern. Restore a magical festival feeling with a moderate amount of clean sparkle: about 8 to 15 small golden sparkle accents, soft rim glows around a few lanterns, and warm reflections on nearby ribbons and wood. Keep all object shapes clear and separated. Avoid glitter clouds, muddy shimmer, heavy magical dust, or dense all-over speckles. Do not circle, arrow, label, outline, spotlight, or highlight the lantern. Keep the scene visually full and post-ready; do not include blank panels or large open areas.`
+    },
+    {
+      id: "03-screen-free-dragon-fun",
+      title: "Book 1 Promo Image 03 - Screen-Free Dragon Fun",
       useCase: "gift-buyer ad creative and Facebook post image",
-      prompt: `${promptHeader("Book 1 Promo Image 02 - Parent Gift-Buyer Hook", "gift-buyer ad creative and Facebook post image", "Screen-free search fun")}
-Scene: Ember smiles beside a cozy reading nook table with a lantern, soft craft-paper textures, a basket of colored ribbons, and a warm Sparkleflame Festival glow in the background. The mood should suggest screen-free family activity time, gentle fantasy, and a child-friendly search adventure. The image must feel complete and post-ready with the exact text already included.`
+      prompt: `${promptHeader("Book 1 Promo Image 03 - Screen-Free Dragon Fun", "gift-buyer ad creative and Facebook post image", "Screen-free dragon fun")}
+Scene: Ember smiles in a warm reading-and-activity nook that opens into the Sparkleflame Festival, surrounded by lanterns, small treasure bowls, ribbons, cozy books with no readable covers, cupcakes, bells, and sparkle clues. Make it feel like a complete cozy social post for families who want screen-free search fun. Fill the frame with inviting details and avoid blank parchment or empty text-space areas.`
     },
     {
-      id: "03-hidden-treasure-challenge",
-      title: "Book 1 Promo Image 03 - Hidden Treasure Challenge",
-      useCase: "short-video thumbnail and reel cover",
-      prompt: `${promptHeader("Book 1 Promo Image 03 - Hidden Treasure Challenge", "short-video thumbnail and reel cover", "Find the tiny treasure")}
-Scene: Ember holds up a tiny sparkle while peeking playfully around a lantern-workshop shelf filled with distinctive child-nameable objects: star lantern, ribbon spool, tiny pumpkin, glass lantern, butterfly decoration, key, and fabric rolls. The composition should feel like a playful challenge. Do not mark or label any object.`
-    },
-    {
-      id: "04-series-brand-warmth",
-      title: "Book 1 Promo Image 04 - Series Brand Warmth",
-      useCase: "general brand awareness image for Ember",
-      prompt: `${promptHeader("Book 1 Promo Image 04 - Series Brand Warmth", "general brand awareness image for Ember")}
-Scene: Ember walks through a warm Sparkleflame Festival lane at twilight with glowing lanterns overhead, cozy dragon-village stalls in the distance, soft magical sparks, and a welcoming child-safe adventure mood. Keep Ember clear and on-model, with blue-teal scarf and brown satchel. Fill the frame with warm lanterns, village details, flowers, banners, and child-friendly visual interest so it works without added text. Make it feel like a broader Ember seek-and-find world teaser, not a specific interior spread or book cover.`
+      id: "04-meet-ember-guide",
+      title: "Book 1 Promo Image 04 - Meet Ember Guide",
+      useCase: "character intro post and profile-friendly promo image",
+      prompt: `${promptHeader("Book 1 Promo Image 04 - Meet Ember Guide", "character intro post and profile-friendly promo image", "Meet Ember\nYour baby dragon guide")}
+Scene: Ember is the clear cheerful focus, waving beside a full, cozy Sparkleflame Festival scene with glowing lantern strings, little treasure baskets, ribbons, cupcakes, bells, village rooftops, and soft magical sparks. The exact text should be integrated as large clean social-promo lettering, with no extra words. Keep the image full and finished, not a blank character card or template.`
     }
   ];
   return specs.slice(0, input.imageCount);

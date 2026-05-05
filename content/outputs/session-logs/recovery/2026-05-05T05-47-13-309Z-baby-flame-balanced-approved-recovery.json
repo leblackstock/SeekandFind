@@ -1,0 +1,31 @@
+{
+  "inspectedAt": "2026-05-05T05:47:14.065Z",
+  "url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f97ffa-fcfc-83ea-ab8d-5da98fbcf904",
+  "title": "Seek and Find Books - Baby Flame Lantern Promo",
+  "screenshotRel": "content/outputs/session-logs/screenshots/2026-05-05T05-47-13-309Z-baby-flame-balanced-approved-chat.png",
+  "hasBalancedPrompt": false,
+  "textTail": "ow.\n\n# Book 1 Promo Image 02 - Baby Flame Lantern Teaser\n\nCreate one image now.\n\nImage type: promotional art for an Ember children's seek-and-find book.\nUse case: story/reel cover and mission-item teaser.\nAudience: children ages 5-8 and adult gift-buyers.\nCharacter references: use Ember-001, Ember-002, and Ember-003 for Ember.\nFormat: vertical social-promo composition, phone-friendly, warm, polished, full-color.\n\nHard marketing guardrails:\n- Fresh promo art only.\n- Do not make a fake book cover.\n- Do not make an Amazon listing preview.\n- Do not make a fake interior sample page.\n- Do not imply the book is published, available now, or for sale.\n- Do not make a blank template that requires added text before it can be posted.\n- Avoid promo-template compositions built around large blank/open areas.\nExact text to render: Can you find the Baby Flame Lantern?\n- Render only that exact text.\n- Make the text large, readable, correctly spelled, and inside safe margins.\n- Do not add any extra words.\n- No logos, watermarks, fake captions, page numbers, labels, arrows, circles, boxes, answer marks, or UI mockups.\n- Keep Ember on-model, cheerful, kid-friendly, and safe.\n\nScene: Ember peeks playfully into a cozy lantern maker's workshop filled with warm paper lanterns, ribbon spools, tiny safe tools, shelves, baskets, wood textures, and child-nameable festival props. Hide one Baby Flame Lantern fairly somewhere in the scene, tucked among other lanterns on a shelf or hanging cluster. Keep the Baby Flame Lantern findable but not marked. Use clean warm lantern light, clear object edges, and organized clusters. Avoid sparkle overload, glitter clouds, muddy shimmer, busy magical dust, or too many tiny glowing specks. Do not circle, arrow, label, outline, spotlight, or highlight the lantern. Keep the scene visually full and post-ready; do not include blank panels or large open areas.\nThought for 1m 34s\nEdit\n\nThinking\nChatGPT can make mistakes. Check important info. See Cookie Preferences.",
+  "candidates": [
+    {
+      "index": 5,
+      "alt": "Generated image",
+      "naturalWidth": 941,
+      "naturalHeight": 1672,
+      "clientWidth": 400,
+      "clientHeight": 711,
+      "top": 92,
+      "left": 705,
+      "key": "file_00000000f90c722f99a888c65b36a41b"
+    }
+  ],
+  "recovered": [
+    {
+      "rel": "content/outputs/images/pending-review/book-1-no-blank-promo-batch-02-02-baby-flame-lantern-teaser-balanced-approved-recovered-2026-05-05T05-47-13-309Z-1.png",
+      "alt": "Generated image",
+      "naturalWidth": 941,
+      "naturalHeight": 1672,
+      "key": "file_00000000f90c722f99a888c65b36a41b",
+      "contentType": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "inspectedAt": "2026-05-05T05:21:48.568Z",
+  "inspected": [
+    {
+      "id": "01-search-with-ember",
+      "title": "Promo Art Request",
+      "pageTitle": "Seek and Find Books - Promo Art Request",
+      "url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f97b4a-1f60-83ea-a498-4696ad3ba35e",
+      "screenshotRel": "content/outputs/session-logs/screenshots/2026-05-05T05-21-26-346Z-promo-batch-02-01-search-with-ember.png",
+      "hasThinking": true,
+      "candidateCount": 1,
+      "candidates": [
+        {
+          "alt": "Generated image",
+          "naturalWidth": 1122,
+          "naturalHeight": 1402,
+          "clientWidth": 400,
+          "clientHeight": 500,
+          "key": "file_000000004078720cb9cd5ffdd31bb6fd"
+        }
+      ]
+    },
+    {
+      "id": "02-baby-flame-lantern-teaser",
+      "title": "Baby Flame Lantern Promo",
+      "pageTitle": "Seek and Find Books - Baby Flame Lantern Promo",
+      "url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f97b49-3328-83ea-91cd-fcd99d1059c3",
+      "screenshotRel": "content/outputs/session-logs/screenshots/2026-05-05T05-21-33-626Z-promo-batch-02-02-baby-flame-lantern-teaser.png",
+      "hasThinking": true,
+      "candidateCount": 1,
+      "candidates": [
+        {
+          "alt": "Generated image",
+          "naturalWidth": 941,
+          "naturalHeight": 1672,
+          "clientWidth": 400,
+          "clientHeight": 711,
+          "key": "file_00000000db3c71f5892197bc4f587ac4"
+        }
+      ]
+    },
+    {
+      "id": "03-screen-free-dragon-fun",
+      "title": "Screen-Free Dragon Fun",
+      "pageTitle": "Seek and Find Books - Screen-Free Dragon Fun",
+      "url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f97b4b-96d4-83ea-b233-4fb0c0526a96",
+      "screenshotRel": "content/outputs/session-logs/screenshots/2026-05-05T05-21-40-725Z-promo-batch-02-03-screen-free-dragon-fun.png",
+      "hasThinking": true,
+      "candidateCount": 1,
+      "candidates": [
+        {
+          "alt": "Generated image",
+          "naturalWidth": 1122,
+          "naturalHeight": 1402,
+          "clientWidth": 400,
+          "clientHeight": 500,
+          "key": "file_000000002208720c91cd792d0ccfcc07"
+        }
+      ]
+    },
+    {
+      "id": "04-meet-ember-guide",
+      "title": "Promo Image Request",
+      "pageTitle": "Seek and Find Books - Promo Image Request",
+      "url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f97b4c-7708-83ea-b779-682a63de1f87",
+      "screenshotRel": "content/outputs/session-logs/screenshots/2026-05-05T05-21-47-885Z-promo-batch-02-04-meet-ember-guide.png",
+      "hasThinking": true,
+      "candidateCount": 1,
+      "candidates": [
+        {
+          "alt": "Generated image",
+          "naturalWidth": 941,
+          "naturalHeight": 1672,
+          "clientWidth": 400,
+          "clientHeight": 711,
+          "key": "file_000000008b70722fa5f2fd9d4a497d60"
+        }
+      ]
+    }
+  ],
+  "recovered": [
+    {
+      "id": "01-search-with-ember",
+      "rel": "content/outputs/images/pending-review/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
+      "naturalWidth": 1122,
+      "naturalHeight": 1402,
+      "alt": "Generated image",
+      "key": "file_000000004078720cb9cd5ffdd31bb6fd",
+      "contentType": "image/png"
+    },
+    {
+      "id": "02-baby-flame-lantern-teaser",
+      "rel": "content/outputs/images/pending-review/book-1-no-blank-promo-batch-02-02-baby-flame-lantern-teaser-recovered-2026-05-05T05-21-33-626Z.png",
+      "naturalWidth": 941,
+      "naturalHeight": 1672,
+      "alt": "Generated image",
+      "key": "file_00000000db3c71f5892197bc4f587ac4",
+      "contentType": "image/png"
+    },
+    {
+      "id": "03-screen-free-dragon-fun",
+      "rel": "content/outputs/images/pending-review/book-1-no-blank-promo-batch-02-03-screen-free-dragon-fun-recovered-2026-05-05T05-21-40-725Z.png",
+      "naturalWidth": 1122,
+      "naturalHeight": 1402,
+      "alt": "Generated image",
+      "key": "file_000000002208720c91cd792d0ccfcc07",
+      "contentType": "image/png"
+    },
+    {
+      "id": "04-meet-ember-guide",
+      "rel": "content/outputs/images/pending-review/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
+      "naturalWidth": 941,
+      "naturalHeight": 1672,
+      "alt": "Generated image",
+      "key": "file_000000008b70722fa5f2fd9d4a497d60",
+      "contentType": "image/png"
+    }
+  ]
+}

@@ -208,6 +208,20 @@ The archive should include:
 - `File already exists`: rerun with `--force` only when you intentionally want to overwrite a verification artifact.
 - n8n Docker cannot run local Playwright safely: use the manual command from PowerShell instead of forcing browser automation through n8n.
 
+## Marketing Batch Recovery Note
+
+For multi-image marketing batches, a runner timeout does not prove generation failed. ChatGPT may finish after the local waiter times out, and the Seek and Find Books project chat list may not show the new conversations until the project page is reloaded.
+
+After any marketing batch timeout:
+
+1. Reload the open Seek and Find Books project page.
+2. Re-check the project chat list after the reload settles.
+3. Open the newest project chats from the top of that list.
+4. Recover only real `Generated image` assets.
+5. Ignore uploaded reference images.
+6. Save recovered files to `content/outputs/images/pending-review/`.
+7. Run local image QA and hold the results for owner approval.
+
 ## Future Upgrade Path
 
 When paid image credits are available, add an OpenAI Images API integration that reuses the same prompt files, image output folders, metadata JSON, QA reports, and session logging. Keep this supervised ChatGPT web UI workflow as a fallback, not the primary production renderer.

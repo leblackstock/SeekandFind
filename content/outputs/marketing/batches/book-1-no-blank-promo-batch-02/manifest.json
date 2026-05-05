@@ -1,0 +1,37 @@
+{
+  "campaign": "Book 1 No Blank Promo Batch 02",
+  "asset": "Book 1 Sparkleflame Festival social promo art",
+  "goal": "create post-ready no-blank promotional art for Ember without claiming publication",
+  "imageCount": 4,
+  "ageRange": "5-8",
+  "prompts": [
+    {
+      "id": "01-search-with-ember",
+      "title": "Book 1 Promo Image 01 - Search With Ember",
+      "useCase": "Pinterest pin, Instagram post, and Facebook teaser",
+      "promptPath": "content/outputs/marketing/batches/book-1-no-blank-promo-batch-02/prompts/01-search-with-ember.md",
+      "assetName": "book-1-no-blank-promo-batch-02-01-search-with-ember"
+    },
+    {
+      "id": "02-baby-flame-lantern-teaser",
+      "title": "Book 1 Promo Image 02 - Baby Flame Lantern Teaser",
+      "useCase": "story/reel cover and mission-item teaser",
+      "promptPath": "content/outputs/marketing/batches/book-1-no-blank-promo-batch-02/prompts/02-baby-flame-lantern-teaser.md",
+      "assetName": "book-1-no-blank-promo-batch-02-02-baby-flame-lantern-teaser"
+    },
+    {
+      "id": "03-screen-free-dragon-fun",
+      "title": "Book 1 Promo Image 03 - Screen-Free Dragon Fun",
+      "useCase": "gift-buyer ad creative and Facebook post image",
+      "promptPath": "content/outputs/marketing/batches/book-1-no-blank-promo-batch-02/prompts/03-screen-free-dragon-fun.md",
+      "assetName": "book-1-no-blank-promo-batch-02-03-screen-free-dragon-fun"
+    },
+    {
+      "id": "04-meet-ember-guide",
+      "title": "Book 1 Promo Image 04 - Meet Ember Guide",
+      "useCase": "character intro post and profile-friendly promo image",
+      "promptPath": "content/outputs/marketing/batches/book-1-no-blank-promo-batch-02/prompts/04-meet-ember-guide.md",
+      "assetName": "book-1-no-blank-promo-batch-02-04-meet-ember-guide"
+    }
+  ]
+}
