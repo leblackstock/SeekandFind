@@ -2,7 +2,7 @@
   "campaign": "Book 1 Prelaunch Rolling Campaign",
   "startDate": "2026-05-05",
   "resumeDate": null,
-  "completedCount": 0,
+  "completedCount": 1,
   "ageRange": "5-8",
   "movableRule": "Completed slots stay locked; unfinished slots reschedule from resumeDate or the first open day.",
   "slots": [
@@ -10,7 +10,7 @@
       "order": 1,
       "relativeDay": "Day 1",
       "scheduledDate": "2026-05-05",
-      "status": "ready-to-schedule",
+      "status": "locked-complete",
       "platform": "Pinterest primary, Instagram/Facebook secondary",
       "theme": "Meet Ember",
       "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
