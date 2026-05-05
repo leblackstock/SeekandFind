@@ -33,6 +33,7 @@ export interface ImageAttemptMetadata {
   browserMode?: BrowserMode;
   cdpUrl?: string;
   referenceImages?: string[];
+  chatTitle?: string;
 }
 
 export interface ImageWriteOptions {
@@ -49,6 +50,7 @@ export interface BrokeModeRuntimeOptions {
   maxAttempts: number;
   cooldownSeconds: number;
   assetName?: string;
+  chatTitle?: string;
   browserMode: BrowserMode;
   cdpUrl: string;
   browserChannel?: string;

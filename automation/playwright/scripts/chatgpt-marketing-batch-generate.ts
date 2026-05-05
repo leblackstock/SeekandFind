@@ -15,11 +15,12 @@ import {
 import { saveImageQaReport } from "../../../src/core/image-qa.js";
 import { appendSessionLog, updateProductionStatus } from "../../../src/core/progress-tracker.js";
 import { GenerateResult } from "../../../src/types.js";
+import { marketingChatTitle, renameCurrentChat } from "./chatgpt-chat-title.js";
 import { resolveReferenceImagePaths, selectGeneratedImageCandidate } from "./chatgpt-broke-mode-generate.js";
 
 const defaultProjectUrl = "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/project";
 const defaultCdpUrl = "http://127.0.0.1:9222";
-const defaultGenerationTimeoutMs = 180000;
+const defaultGenerationTimeoutMs = 120000;
 const boundaryPattern = /captcha|rate limit|cooldown|try again later|too many requests|payment|upgrade|subscribe|subscription|verify your account|account warning|unusual activity|log in|sign in|couldn.t sign you in|browser or app may not be secure/i;
 
 interface MarketingBatchPrompt {
@@ -37,6 +38,7 @@ interface MarketingBatchManifest {
 
 interface BatchOptions {
   manifest: string;
+  promptId?: string;
   concurrency: number;
   cdpUrl: string;
   projectUrl: string;
@@ -82,6 +84,7 @@ function parseArgs(args = process.argv.slice(2)): BatchOptions {
   }
   return {
     manifest,
+    promptId: option(args, "prompt-id"),
     concurrency,
     cdpUrl: option(args, "cdp-url") ?? defaultCdpUrl,
     projectUrl: option(args, "project-url") ?? defaultProjectUrl,
@@ -134,11 +137,24 @@ async function pastePrompt(page: Page, prompt: string): Promise<void> {
 
 async function uploadReferenceImages(page: Page, referenceImages: string[]): Promise<void> {
   if (!referenceImages.length) return;
+  const waitForAcceptedUploads = async (): Promise<void> => {
+    const expectedCount = referenceImages.length;
+    const deadline = Date.now() + 30000;
+    while (Date.now() < deadline) {
+      const uploadedImages = await page.locator("img").evaluateAll((images) => images
+        .filter((image) => /uploaded image/i.test((image as HTMLImageElement).alt || ""))
+        .length).catch(() => 0);
+      const removeButtons = await page.locator("[aria-label*='Remove' i], [data-testid*='remove' i]").count().catch(() => 0);
+      if (Math.max(uploadedImages, removeButtons) >= expectedCount) return;
+      await page.waitForTimeout(1000);
+    }
+    throw new Error(`Reference upload did not show ${expectedCount} accepted attachment(s) before submit.`);
+  };
   const directInput = page.locator("input#upload-photos, input[type='file'][accept*='image'], input[type='file']").first();
   await directInput.waitFor({ state: "attached", timeout: 10000 }).catch(() => undefined);
   if (await directInput.count().catch(() => 0)) {
     await directInput.setInputFiles(referenceImages);
-    await page.waitForTimeout(2000 + referenceImages.length * 750);
+    await waitForAcceptedUploads();
     return;
   }
   const chooserPromise = page.waitForEvent("filechooser", { timeout: 10000 }).catch(() => undefined);
@@ -155,7 +171,7 @@ async function uploadReferenceImages(page: Page, referenceImages: string[]): Pro
   const chooser = await chooserPromise;
   if (!chooser) throw new Error("Could not open ChatGPT file chooser for reference uploads.");
   await chooser.setFiles(referenceImages);
-  await page.waitForTimeout(2000 + referenceImages.length * 750);
+  await waitForAcceptedUploads();
 }
 
 async function submitPrompt(page: Page): Promise<void> {
@@ -231,6 +247,7 @@ async function captureScreenshot(page: Page, assetSlug: string, timestamp: strin
 async function runOnePrompt(params: {
   context: BrowserContext;
   prompt: MarketingBatchPrompt;
+  campaign?: string;
   options: BatchOptions;
   root: string;
 }): Promise<{ ok: boolean; files: string[]; warnings: string[]; error?: string }> {
@@ -252,6 +269,7 @@ async function runOnePrompt(params: {
   let metadataPath: string | undefined;
   let qaReportPath: string | undefined;
   const warnings = [...referenceResolution.warnings];
+  const chatTitle = marketingChatTitle(params.campaign, prompt.title);
 
   try {
     console.log(`Opening Seek and Find Books project for ${prompt.id}.`);
@@ -265,6 +283,9 @@ async function runOnePrompt(params: {
     await pastePrompt(page, promptText);
     const startingGeneratedImageCount = await generatedImageCount(page);
     await submitPrompt(page);
+    const titleResult = await renameCurrentChat(page, chatTitle);
+    if (titleResult.ok) console.log(`Renamed ChatGPT chat to "${titleResult.title}".`);
+    else if (titleResult.warning) warnings.push(titleResult.warning);
     console.log(`Submitted ${prompt.id}; waiting up to ${Math.round(options.timeoutMs / 1000)} seconds.`);
     await waitForGeneratedImage(page, startingGeneratedImageCount, options.timeoutMs);
     imagePath = await saveGeneratedImage(page, assetSlug, timestamp, root);
@@ -287,7 +308,8 @@ async function runOnePrompt(params: {
       maxAttempts: 1,
       browserMode: "existing",
       cdpUrl: options.cdpUrl,
-      referenceImages: referenceImageMetadata
+      referenceImages: referenceImageMetadata,
+      chatTitle
     }, { rootDir: root, force: options.force });
     const qa = await saveImageQaReport({ imagePath, metadataPath, promptCopyPath, rootDir: root, force: options.force });
     qaReportPath = qa.reportPath;
@@ -315,7 +337,8 @@ async function runOnePrompt(params: {
       maxAttempts: 1,
       browserMode: "existing",
       cdpUrl: options.cdpUrl,
-      referenceImages: referenceImageMetadata
+      referenceImages: referenceImageMetadata,
+      chatTitle
     }, { rootDir: root, force: options.force }).catch(() => undefined);
     const archived = await archiveFailedAttempt({ assetSlug, timestamp, promptCopyPath, metadataPath, qaReportPath, imagePath, screenshotPath, failureReason }, { rootDir: root, force: options.force }).catch(() => []);
     console.log(`Failed ${prompt.id}: ${failureReason}`);
@@ -335,12 +358,16 @@ export async function runMarketingBatch(options: BatchOptions): Promise<void> {
   const root = repoRoot();
   await ensureImageOutputFolders(root);
   const manifest = await readManifest(options.manifest, root);
+  const prompts = options.promptId ? manifest.prompts.filter((prompt) => prompt.id === options.promptId) : manifest.prompts;
+  if (options.promptId && prompts.length === 0) {
+    throw new Error(`No prompt found for --prompt-id ${options.promptId} in ${options.manifest}`);
+  }
   const browser = await chromium.connectOverCDP(options.cdpUrl);
   const context = browser.contexts()[0] ?? await browser.newContext({ acceptDownloads: true });
   const results: Array<{ ok: boolean; files: string[]; warnings: string[]; error?: string }> = [];
   try {
-    for (const group of chunk(manifest.prompts, options.concurrency)) {
-      results.push(...await Promise.all(group.map((prompt) => runOnePrompt({ context, prompt, options, root }))));
+    for (const group of chunk(prompts, options.concurrency)) {
+      results.push(...await Promise.all(group.map((prompt) => runOnePrompt({ context, prompt, campaign: manifest.campaign, options, root }))));
     }
   } finally {
     const disconnectable = browser as typeof browser & { disconnect?: () => void };
@@ -354,7 +381,7 @@ export async function runMarketingBatch(options: BatchOptions): Promise<void> {
   const failed = results.length - successful;
   await appendSessionLog({
     workflow: "image-marketing-batch",
-    inputs: { manifest: options.manifest, concurrency: options.concurrency, timeoutSeconds: Math.round(options.timeoutMs / 1000), projectUrl: options.projectUrl },
+    inputs: { manifest: options.manifest, promptId: options.promptId, concurrency: options.concurrency, timeoutSeconds: Math.round(options.timeoutMs / 1000), projectUrl: options.projectUrl },
     assumptions: [
       "ChatGPT web UI stayed in the Seek and Find Books project.",
       "Uploaded reference images are excluded from generated-result selection.",

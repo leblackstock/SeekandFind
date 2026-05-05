@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-05-05T19-17-53-342Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "failed",
+  "assetName": "book-1-mission-item-promo-batch-03-01-golden-welcome-bell-teaser",
+  "assetSlug": "book-1-mission-item-promo-batch-03-01-golden-welcome-bell-teaser",
+  "promptPath": "content/outputs/marketing/batches/book-1-mission-item-promo-batch-03/prompts/01-golden-welcome-bell-teaser.md",
+  "promptCopyPath": "content/outputs/images/pending-review/book-1-mission-item-promo-batch-03-01-golden-welcome-bell-teaser-2026-05-05T19-17-53-342Z-prompt.md",
+  "screenshotPath": "content/outputs/images/pending-review/book-1-mission-item-promo-batch-03-01-golden-welcome-bell-teaser-2026-05-05T19-17-53-342Z-chatgpt-screenshot.png",
+  "failureReason": "Timed out after 420 seconds waiting for ChatGPT marketing image generation to complete.",
+  "warnings": [
+    "Timed out after 420 seconds waiting for ChatGPT marketing image generation to complete."
+  ],
+  "dryRun": false,
+  "autoSubmit": true,
+  "maxAttempts": 1,
+  "browserMode": "existing",
+  "cdpUrl": "http://127.0.0.1:9222",
+  "referenceImages": [
+    "Ember's Adventures/EtD Images/Ember-001.png",
+    "Ember's Adventures/EtD Images/Ember-002.png",
+    "Ember's Adventures/EtD Images/Ember-003.png"
+  ]
+}

@@ -24,6 +24,7 @@ import {
   sanitizePromptForBrokeMode,
   selectGeneratedImageCandidate
 } from "../automation/playwright/scripts/chatgpt-broke-mode-generate.js";
+import { cleanChatTitle, marketingChatTitle } from "../automation/playwright/scripts/chatgpt-chat-title.js";
 
 let root: string;
 
@@ -110,6 +111,12 @@ describe("image file manager", () => {
     expect(defaultBrokeModeOptions("prompt.md").autoSubmit).toBe(false);
     expect(parseBrokeModeArgs(["--prompt", "prompt.md"]).autoSubmit).toBe(false);
     expect(parseBrokeModeArgs(["--prompt", "prompt.md", "--auto-submit=true"]).autoSubmit).toBe(true);
+  });
+
+  it("parses optional ChatGPT chat titles for future generated chats", () => {
+    expect(parseBrokeModeArgs(["--prompt", "prompt.md", "--chat-title", "B1 Page 09 Lantern Workshop"]).chatTitle).toBe("B1 Page 09 Lantern Workshop");
+    expect(cleanChatTitle("  B1\nPromo <draft>  ")).toBe("B1 Promo draft");
+    expect(marketingChatTitle("Book 1 Mission Item Promo Batch 03", "Book 1 Promo Image 03 - Dragon Door Key Teaser")).toBe("B1 - Promo Batch 03 - Slot 03 - Dragon Door Key");
   });
 
   it("defaults raw prompt mode off and enables it explicitly", () => {

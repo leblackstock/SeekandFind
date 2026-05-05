@@ -77,32 +77,32 @@ ${textRule}
 function createPromptSpecs(input: MarketingBatchInput): MarketingPromptSpec[] {
   const specs: MarketingPromptSpec[] = [
     {
-      id: "01-search-with-ember",
-      title: "Book 1 Promo Image 01 - Search With Ember",
+      id: "01-golden-welcome-bell-teaser",
+      title: "Book 1 Promo Image 01 - Golden Welcome Bell Teaser",
       useCase: "Pinterest pin, Instagram post, and Facebook teaser",
-      prompt: `${promptHeader("Book 1 Promo Image 01 - Search With Ember", "Pinterest pin, Instagram post, and Facebook teaser", "Search with Ember!")}
-Scene: Ember stands in a full-frame Sparkleflame Festival market lane packed with warm lanterns, ribbons, baskets, cupcakes, bells, and tiny sparkle treasures arranged in clear cozy clusters. The exact text should sit naturally across the top like polished social-promo lettering, with art and details filling the rest of the frame. Do not create a blank parchment panel, empty sky, or template area.`
+      prompt: `${promptHeader("Book 1 Promo Image 01 - Golden Welcome Bell Teaser", "Pinterest pin, Instagram post, and Facebook teaser", "Can you find the Golden Welcome Bell?")}
+Scene: Ember smiles at the entrance to the Sparkleflame Festival welcome arch, surrounded by cozy dragon-village stalls, ribbon garlands, warm lanterns, small baskets, cupcakes, and several ordinary bells arranged in clear clusters. Hide one Golden Welcome Bell fairly in the midground among other welcome decorations, not centered, not in Ember's hand, and not the biggest bell. Use warm lantern magic with a moderate amount of clean sparkle accents, clear object edges, and separated shapes. Avoid glitter fog, muddy shimmer, and dense all-over speckles. Do not circle, arrow, label, outline, spotlight, or highlight the bell.`
     },
     {
-      id: "02-baby-flame-lantern-teaser",
-      title: "Book 1 Promo Image 02 - Baby Flame Lantern Teaser",
+      id: "02-firefly-flower-charm-teaser",
+      title: "Book 1 Promo Image 02 - Firefly Flower Charm Teaser",
       useCase: "story/reel cover and mission-item teaser",
-      prompt: `${promptHeader("Book 1 Promo Image 02 - Baby Flame Lantern Teaser", "story/reel cover and mission-item teaser", "Can you find the Baby Flame Lantern?")}
-Scene: Ember peeks playfully into a cozy lantern maker's workshop filled with warm paper lanterns, ribbon spools, tiny safe tools, shelves, baskets, wood textures, colorful festival ribbons, and child-nameable props. Hide one Baby Flame Lantern fairly somewhere in the midground among other lanterns on a shelf or hanging cluster. Keep the Baby Flame Lantern findable but not marked and not the biggest lantern. Restore a magical festival feeling with a moderate amount of clean sparkle: about 8 to 15 small golden sparkle accents, soft rim glows around a few lanterns, and warm reflections on nearby ribbons and wood. Keep all object shapes clear and separated. Avoid glitter clouds, muddy shimmer, heavy magical dust, or dense all-over speckles. Do not circle, arrow, label, outline, spotlight, or highlight the lantern. Keep the scene visually full and post-ready; do not include blank panels or large open areas.`
+      prompt: `${promptHeader("Book 1 Promo Image 02 - Firefly Flower Charm Teaser", "story/reel cover and mission-item teaser", "Find the Firefly Flower Charm")}
+Scene: Ember explores a glowing festival garden nook beside the dragon village, with lantern strings overhead, flower pots, ribbon-wrapped stakes, tiny benches, gem bowls, soft leaves, and warm firefly lights arranged in tidy clusters. Hide one Firefly Flower Charm fairly among the flower and leaf details in the midground. It should look like a small charm shaped like a flower with gentle firefly glow, findable but not marked. Use balanced sparkle: a few firefly glows and small clean golden accents, not a haze. Keep object shapes crisp. Avoid muddy shimmer, glitter clouds, and too many tiny light specks. Do not circle, arrow, label, outline, spotlight, or highlight the charm.`
     },
     {
-      id: "03-screen-free-dragon-fun",
-      title: "Book 1 Promo Image 03 - Screen-Free Dragon Fun",
+      id: "03-dragon-door-key-teaser",
+      title: "Book 1 Promo Image 03 - Dragon Door Key Teaser",
       useCase: "gift-buyer ad creative and Facebook post image",
-      prompt: `${promptHeader("Book 1 Promo Image 03 - Screen-Free Dragon Fun", "gift-buyer ad creative and Facebook post image", "Screen-free dragon fun")}
-Scene: Ember smiles in a warm reading-and-activity nook that opens into the Sparkleflame Festival, surrounded by lanterns, small treasure bowls, ribbons, cozy books with no readable covers, cupcakes, bells, and sparkle clues. Make it feel like a complete cozy social post for families who want screen-free search fun. Fill the frame with inviting details and avoid blank parchment or empty text-space areas.`
+      prompt: `${promptHeader("Book 1 Promo Image 03 - Dragon Door Key Teaser", "gift-buyer ad creative and Facebook post image", "Can you find the Dragon Door Key?")}
+Scene: Ember stands near a cozy rounded dragon cottage doorway during the Sparkleflame Festival. Fill the frame with carved wood details, lanterns, ribbons, flower pots, small bells, baskets, cupcakes, and safe key-like decorations arranged in readable clusters. Hide one Dragon Door Key fairly on a hook, shelf edge, basket rim, or door-side detail in the midground. It should be visible once noticed, not centered, not oversized, and not in Ember's hand. Add warm lantern glows and a moderate number of clean sparkle accents. Avoid muddy glitter, heavy magical dust, and chaotic clutter. Do not circle, arrow, label, outline, spotlight, or highlight the key.`
     },
     {
-      id: "04-meet-ember-guide",
-      title: "Book 1 Promo Image 04 - Meet Ember Guide",
+      id: "04-sparkle-market-token-teaser",
+      title: "Book 1 Promo Image 04 - Sparkle Market Token Teaser",
       useCase: "character intro post and profile-friendly promo image",
-      prompt: `${promptHeader("Book 1 Promo Image 04 - Meet Ember Guide", "character intro post and profile-friendly promo image", "Meet Ember\nYour baby dragon guide")}
-Scene: Ember is the clear cheerful focus, waving beside a full, cozy Sparkleflame Festival scene with glowing lantern strings, little treasure baskets, ribbons, cupcakes, bells, village rooftops, and soft magical sparks. The exact text should be integrated as large clean social-promo lettering, with no extra words. Keep the image full and finished, not a blank character card or template.`
+      prompt: `${promptHeader("Book 1 Promo Image 04 - Sparkle Market Token Teaser", "character intro post and profile-friendly promo image", "Find the Sparkle Market Token")}
+Scene: Ember visits a lively Sparkleflame Festival market table filled with colorful baskets, ribbon rolls, tiny cupcakes, warm lanterns, bells, gem bowls, coins, and friendly dragon-village craft props arranged in clear clusters. Hide one Sparkle Market Token fairly among the market objects in the midground, small but readable, not centered, not huge, and not held by Ember. Keep the image full and polished, with warm magical lighting and controlled sparkle accents. Avoid muddy shimmer, glitter fog, and dense all-over speckles. Do not circle, arrow, label, outline, spotlight, or highlight the token.`
     }
   ];
   return specs.slice(0, input.imageCount);

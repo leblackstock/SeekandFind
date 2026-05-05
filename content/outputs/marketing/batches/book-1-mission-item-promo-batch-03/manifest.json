@@ -1,0 +1,37 @@
+{
+  "campaign": "Book 1 Mission Item Promo Batch 03",
+  "asset": "Book 1 Sparkleflame Festival mission item teaser art",
+  "goal": "create post-ready mission-item promo art with balanced sparkle and no publication claim",
+  "imageCount": 4,
+  "ageRange": "5-8",
+  "prompts": [
+    {
+      "id": "01-golden-welcome-bell-teaser",
+      "title": "Book 1 Promo Image 01 - Golden Welcome Bell Teaser",
+      "useCase": "Pinterest pin, Instagram post, and Facebook teaser",
+      "promptPath": "content/outputs/marketing/batches/book-1-mission-item-promo-batch-03/prompts/01-golden-welcome-bell-teaser.md",
+      "assetName": "book-1-mission-item-promo-batch-03-01-golden-welcome-bell-teaser"
+    },
+    {
+      "id": "02-firefly-flower-charm-teaser",
+      "title": "Book 1 Promo Image 02 - Firefly Flower Charm Teaser",
+      "useCase": "story/reel cover and mission-item teaser",
+      "promptPath": "content/outputs/marketing/batches/book-1-mission-item-promo-batch-03/prompts/02-firefly-flower-charm-teaser.md",
+      "assetName": "book-1-mission-item-promo-batch-03-02-firefly-flower-charm-teaser"
+    },
+    {
+      "id": "03-dragon-door-key-teaser",
+      "title": "Book 1 Promo Image 03 - Dragon Door Key Teaser",
+      "useCase": "gift-buyer ad creative and Facebook post image",
+      "promptPath": "content/outputs/marketing/batches/book-1-mission-item-promo-batch-03/prompts/03-dragon-door-key-teaser.md",
+      "assetName": "book-1-mission-item-promo-batch-03-03-dragon-door-key-teaser"
+    },
+    {
+      "id": "04-sparkle-market-token-teaser",
+      "title": "Book 1 Promo Image 04 - Sparkle Market Token Teaser",
+      "useCase": "character intro post and profile-friendly promo image",
+      "promptPath": "content/outputs/marketing/batches/book-1-mission-item-promo-batch-03/prompts/04-sparkle-market-token-teaser.md",
+      "assetName": "book-1-mission-item-promo-batch-03-04-sparkle-market-token-teaser"
+    }
+  ]
+}

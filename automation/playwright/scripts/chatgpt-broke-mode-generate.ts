@@ -23,6 +23,7 @@ import {
 } from "../../../src/core/image-file-manager.js";
 import { saveImageQaReport } from "../../../src/core/image-qa.js";
 import { GenerateResult } from "../../../src/types.js";
+import { brokeModeChatTitle, renameCurrentChat } from "./chatgpt-chat-title.js";
 
 const chatGptUrl = "https://chatgpt.com/";
 const generationTimeoutMs = 180000;
@@ -524,6 +525,7 @@ export function parseBrokeModeArgs(args: string[] = process.argv.slice(2)): Brok
     ...defaults,
     prompt,
     assetName: option(args, "asset-name") ?? positionalArgs[1],
+    chatTitle: option(args, "chat-title"),
     browserMode: parseBrowserMode(option(args, "browser-mode") ?? defaults.browserMode),
     cdpUrl: option(args, "cdp-url") ?? defaults.cdpUrl,
     browserChannel: option(args, "browser-channel") ?? option(args, "channel"),
@@ -778,11 +780,12 @@ async function logAttempt(params: {
   }, rootDir);
 }
 
-function metadataCommon(options: BrokeModeRuntimeOptions, referenceImages: string[] = []): Pick<Parameters<typeof saveAttemptMetadata>[0], "browserMode" | "cdpUrl" | "referenceImages"> {
+function metadataCommon(options: BrokeModeRuntimeOptions, referenceImages: string[] = [], chatTitle?: string): Pick<Parameters<typeof saveAttemptMetadata>[0], "browserMode" | "cdpUrl" | "referenceImages" | "chatTitle"> {
   return {
     browserMode: options.browserMode,
     cdpUrl: options.browserMode === "existing" ? options.cdpUrl : undefined,
-    referenceImages
+    referenceImages,
+    chatTitle
   };
 }
 
@@ -804,6 +807,7 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
   }
   const assetName = options.assetName ?? basename(options.prompt, extname(options.prompt));
   const assetSlug = createSafeAssetSlug(assetName);
+  const chatTitle = options.chatTitle ?? brokeModeChatTitle(assetName);
   const promptCopyPath = await saveTextArtifact(`${imageOutputFolders.pendingReview}/${assetSlug}-${timestamp}-prompt.md`, promptText, { rootDir: root, force: options.force });
 
   if (options.dryRun) {
@@ -819,7 +823,7 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
       dryRun: true,
       autoSubmit: options.autoSubmit,
       maxAttempts: options.maxAttempts,
-      ...metadataCommon(options, referenceImageMetadata)
+      ...metadataCommon(options, referenceImageMetadata, chatTitle)
     }, { rootDir: root, force: options.force });
     await logAttempt({
       options,
@@ -849,7 +853,7 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
       dryRun: false,
       autoSubmit: options.autoSubmit,
       maxAttempts: options.maxAttempts,
-      ...metadataCommon(options, referenceImageMetadata)
+      ...metadataCommon(options, referenceImageMetadata, chatTitle)
     }, { rootDir: root, force: options.force });
     await logAttempt({
       options,
@@ -901,7 +905,7 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
           dryRun: false,
           autoSubmit: false,
           maxAttempts: options.maxAttempts,
-          ...metadataCommon(options, referenceImageMetadata)
+          ...metadataCommon(options, referenceImageMetadata, chatTitle)
         }, { rootDir: root, force: options.force });
         await logAttempt({
           options,
@@ -918,6 +922,9 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
 
     const startingGeneratedImageCount = await generatedImageCount(page);
     await submitPrompt(page);
+    const titleResult = await renameCurrentChat(page, chatTitle);
+    if (titleResult.ok) console.log(`Renamed ChatGPT chat to "${titleResult.title}".`);
+    else if (titleResult.warning) warnings.push(titleResult.warning);
     await waitForGeneration(page, startingGeneratedImageCount);
     imagePath = await tryDownloadImage(page, assetSlug, timestamp, root);
     if (!imagePath) imagePath = await trySaveVisibleGeneratedImage(page, assetSlug, timestamp, root);
@@ -939,7 +946,7 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
         dryRun: false,
         autoSubmit: options.autoSubmit,
         maxAttempts: options.maxAttempts,
-        ...metadataCommon(options, referenceImageMetadata)
+        ...metadataCommon(options, referenceImageMetadata, chatTitle)
       }, { rootDir: root, force: options.force });
       const archived = await archiveFailedAttempt({ assetSlug, timestamp, promptCopyPath, metadataPath, screenshotPath, failureReason }, { rootDir: root, force: options.force });
       await logAttempt({
@@ -968,7 +975,7 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
       dryRun: false,
       autoSubmit: options.autoSubmit,
       maxAttempts: options.maxAttempts,
-      ...metadataCommon(options, referenceImageMetadata)
+      ...metadataCommon(options, referenceImageMetadata, chatTitle)
     }, { rootDir: root, force: options.force });
     const qa = await saveImageQaReport({ imagePath, metadataPath, promptCopyPath, rootDir: root, force: options.force });
     qaReportPath = qa.reportPath;
@@ -1036,7 +1043,7 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
       dryRun: false,
       autoSubmit: options.autoSubmit,
       maxAttempts: options.maxAttempts,
-      ...metadataCommon(options, referenceImageMetadata)
+      ...metadataCommon(options, referenceImageMetadata, chatTitle)
     }, { rootDir: root, force: options.force }).catch(() => undefined);
     const archived = await archiveFailedAttempt({ assetSlug, timestamp, promptCopyPath, metadataPath, qaReportPath, imagePath, screenshotPath, failureReason }, { rootDir: root, force: options.force }).catch(() => []);
     await logAttempt({

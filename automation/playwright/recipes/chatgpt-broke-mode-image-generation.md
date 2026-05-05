@@ -83,11 +83,19 @@ Default behavior:
 6. Paste the prompt into the ChatGPT composer.
 7. Pause for human approval.
 8. Submit only if you type `YES`.
-9. Wait for generation.
-10. Try to download the image.
-11. Save image or screenshot evidence under `content/outputs/images/pending-review/`.
-12. Run basic local image QA.
-13. Log the attempt.
+9. Rename the new ChatGPT chat to a clear workflow title.
+10. Wait for generation.
+11. Try to download the image.
+12. Save image or screenshot evidence under `content/outputs/images/pending-review/`.
+13. Run basic local image QA.
+14. Log the attempt.
+
+Chat naming rule:
+
+- Every ChatGPT image-generation chat created by Codex must be renamed before recovery or QA when the page exposes a conversation URL.
+- Use compact titles that identify the workflow, batch, slot/page, and object/location, such as `B1 - Promo Batch 03 - Slot 03 - Dragon Door Key`.
+- If ChatGPT does not expose the conversation URL in time, record the rename skip as a warning and rename during recovery.
+- For one-off Broke Mode runs, override the default title with `--chat-title="<clear title>"` when the asset slug is not human-readable enough.
 
 Prompt preparation:
 
@@ -217,10 +225,11 @@ After any marketing batch timeout:
 1. Reload the open Seek and Find Books project page.
 2. Re-check the project chat list after the reload settles.
 3. Open the newest project chats from the top of that list.
-4. Recover only real `Generated image` assets.
-5. Ignore uploaded reference images.
-6. Save recovered files to `content/outputs/images/pending-review/`.
-7. Run local image QA and hold the results for owner approval.
+4. Confirm each chat has a clear workflow title; rename it before recovery if needed.
+5. Recover only real `Generated image` assets.
+6. Ignore uploaded reference images.
+7. Save recovered files to `content/outputs/images/pending-review/`.
+8. Run local image QA and hold the results for owner approval.
 
 ## Future Upgrade Path
 
