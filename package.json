@@ -14,6 +14,7 @@
     "generate:storyboard": "tsx src/cli.ts storyboard",
     "generate:marketing": "tsx src/cli.ts marketing",
     "generate:marketing-batch": "tsx src/cli.ts marketing-batch",
+    "generate:marketing-calendar": "tsx src/cli.ts marketing-calendar",
     "qa:kdp": "tsx src/cli.ts qa",
     "n8n:check": "tsx src/integrations/n8n-client.ts",
     "image:broke-mode": "tsx automation/playwright/scripts/chatgpt-broke-mode-generate.ts --",

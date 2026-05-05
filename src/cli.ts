@@ -1,5 +1,6 @@
 import { Command } from "commander";
 import { generateMarketingBatch } from "./generators/marketing-batch.js";
+import { generateMarketingCalendar } from "./generators/marketing-calendar.js";
 import { generateMarketingPack } from "./generators/marketing-pack.js";
 import { runKdpQaGenerator } from "./generators/kdp-qa.js";
 import { generateSeekPage } from "./generators/seek-page.js";
@@ -109,6 +110,24 @@ program
       asset: options.asset,
       goal: options.goal,
       imageCount: options.count,
+      ageRange: options.age
+    }, { force: globals.force }));
+  });
+
+program
+  .command("marketing-calendar")
+  .option("--campaign <campaign>", "campaign name")
+  .option("--start-date <date>", "first scheduled date, YYYY-MM-DD")
+  .option("--resume-date <date>", "first date for unfinished rows, YYYY-MM-DD")
+  .option("--completed-count <count>", "number of completed rows to keep locked", (value) => Number.parseInt(value, 10))
+  .option("--age <ageRange>", "age range")
+  .action(async (options) => {
+    const globals = program.opts();
+    printResult(await generateMarketingCalendar({
+      campaign: options.campaign,
+      startDate: options.startDate,
+      resumeDate: options.resumeDate,
+      completedCount: options.completedCount,
       ageRange: options.age
     }, { force: globals.force }));
   });

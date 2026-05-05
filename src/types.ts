@@ -4,6 +4,7 @@ export type WorkflowName =
   | "storyboard"
   | "marketing-pack"
   | "marketing-batch"
+  | "marketing-calendar"
   | "kdp-qa"
   | "image-broke-mode"
   | "image-marketing-batch";
