@@ -1,0 +1,162 @@
+{
+  "timestamp": "2026-05-06T02:17:02.760Z",
+  "workflow": "capcut-ratio-9x16-working-checkpoint",
+  "status": "ratio-set-to-9:16",
+  "projectTitle": "20260505215758",
+  "url": "https://www.capcut.com/ai-creator/agent?enter_from=canvas_new_project&fresh=1778032677656&workspaceId=7635130739515736078&spaceId=7635124039241352206&draftId=D89579E9-1ED6-4131-AC8E-652B3F33250C",
+  "requestedRatio": "9:16",
+  "previousRatio": "16:9",
+  "ratioControl": "div[class^=\"ratioSelect-\"] in the preview player controls",
+  "selectedOption": "li[role=\"option\"] text 9:16",
+  "generationClicked": false,
+  "exportClicked": false,
+  "screenshot": "content/outputs/videos/pending-review/day-1-meet-ember-capcut-ratio-9x16-working-2026-05-06T02-17-02-605Z.png",
+  "state": {
+    "title": "CapCut Video Studio | The all-in-one canvas for video creation",
+    "url": "https://www.capcut.com/ai-creator/agent?enter_from=canvas_new_project&fresh=1778032677656&workspaceId=7635130739515736078&spaceId=7635124039241352206&draftId=D89579E9-1ED6-4131-AC8E-652B3F33250C",
+    "ratioText": "9:16",
+    "ratioRect": {
+      "x": 1276,
+      "y": 699,
+      "width": 60,
+      "height": 28
+    },
+    "previewText": "Add music Elements 00:00:00 00:00:03 9:16",
+    "previewRect": {
+      "x": 1016,
+      "y": 242,
+      "width": 356,
+      "height": 508
+    },
+    "editorCount": 4,
+    "editors": [
+      {
+        "index": 1,
+        "text": "0:00-0:03: Start from the Ember source image. Keep one simple cozy backdrop behind Ember: soft warm glow, a few blurred lantern shapes, and no crowd or busy festival detail."
+      },
+      {
+        "index": 2,
+        "text": "0:03-0:07: Ember gives a tiny friendly wave and blinks. Keep the background nearly still, with only very soft light shimmer."
+      },
+      {
+        "index": 3,
+        "text": "0:07-0:11: Add a gentle slow push-in. Use very mild parallax only between Ember and the simple blurred background. Let two or three tiny warm sparkles drift slowly, without adding new props."
+      },
+      {
+        "index": 4,
+        "text": "0:11-0:15: Ember smiles toward the viewer. End on the same simple background and a calm, welcoming character-intro moment that feels like an invitation to search with Ember."
+      }
+    ],
+    "shotCount": 4,
+    "shots": [
+      {
+        "index": 1,
+        "text": "00:03 Add narrator 0:00-0:03: Start from the Ember source image. Keep one simple cozy backdrop behind Ember: soft warm glow, a few blurred lantern shapes, and no crowd or busy festival detail. 0:03",
+        "rect": {
+          "x": 552,
+          "y": 274,
+          "width": 420,
+          "height": 136
+        },
+        "className": "shotItem-xpuLGf modified-xLS4QA"
+      },
+      {
+        "index": 2,
+        "text": "00:00 Add narrator 0:03-0:07: Ember gives a tiny friendly wave and blinks. Keep the background nearly still, with only very soft light shimmer.",
+        "rect": {
+          "x": 552,
+          "y": 418,
+          "width": 420,
+          "height": 96
+        },
+        "className": "shotItem-xpuLGf modified-xLS4QA"
+      },
+      {
+        "index": 3,
+        "text": "00:00 Add narrator 0:07-0:11: Add a gentle slow push-in. Use very mild parallax only between Ember and the simple blurred background. Let two or three tiny warm sparkles drift slowly, without adding new props.",
+        "rect": {
+          "x": 552,
+          "y": 522,
+          "width": 420,
+          "height": 136
+        },
+        "className": "shotItem-xpuLGf modified-xLS4QA"
+      },
+      {
+        "index": 4,
+        "text": "00:00 Add narrator 0:11-0:15: Ember smiles toward the viewer. End on the same simple background and a calm, welcoming character-intro moment that feels like an invitation to search with Ember.",
+        "rect": {
+          "x": 552,
+          "y": 666,
+          "width": 420,
+          "height": 116
+        },
+        "className": "shotItem-xpuLGf modified-xLS4QA"
+      }
+    ],
+    "visibleImageEvidence": [
+      {
+        "index": 0,
+        "alt": "avatar",
+        "naturalWidth": 100,
+        "naturalHeight": 100,
+        "clientWidth": 24,
+        "clientHeight": 24,
+        "rect": {
+          "x": 1450,
+          "y": 14,
+          "width": 24,
+          "height": 24
+        },
+        "src": "https://p16-ulike.capcutcdn-us.com/img/user-avatar-musically/3e5167c555ee2d25417d0adfc88c78df~tplv-resize:100:0.image"
+      },
+      {
+        "index": 1,
+        "alt": "",
+        "naturalWidth": 203,
+        "naturalHeight": 360,
+        "clientWidth": 28,
+        "clientHeight": 50,
+        "rect": {
+          "x": 900,
+          "y": 303,
+          "width": 28,
+          "height": 50
+        },
+        "src": "blob:https://www.capcut.com/e362f4b5-82c5-471d-82e2-5c46e95c4a43"
+      },
+      {
+        "index": 2,
+        "alt": "Cinematic Widescreen Grading",
+        "naturalWidth": 1536,
+        "naturalHeight": 2048,
+        "clientWidth": 22,
+        "clientHeight": 22,
+        "rect": {
+          "x": 1520,
+          "y": 353,
+          "width": 24,
+          "height": 24
+        },
+        "src": "https://p16-vimo-useast5.capcutcdn-us.com/tos-useast5-i-f0k6wfgiqi-tx/21471a0135e74a1db9c57b09b088ba4e"
+      },
+      {
+        "index": 3,
+        "alt": "Snow scene movie",
+        "naturalWidth": 1728,
+        "naturalHeight": 2304,
+        "clientWidth": 22,
+        "clientHeight": 22,
+        "rect": {
+          "x": 1520,
+          "y": 407,
+          "width": 24,
+          "height": 24
+        },
+        "src": "https://p16-vimo-useast5.capcutcdn-us.com/tos-useast5-i-f0k6wfgiqi-tx/b54a484c8e044d2dad9c143e966a96af"
+      }
+    ],
+    "generationClicked": false,
+    "exportClicked": false
+  }
+}

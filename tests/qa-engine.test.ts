@@ -60,7 +60,7 @@ Hide one tiny frosted bell fairly. No labels, arrows, circles, boxes, outlines, 
   });
 
   it("checks storyboard basics", () => {
-    const qa = runStoryboardQa("15-second Beat 1 0:00 reference camera CapCut");
+    const qa = runStoryboardQa("15-second Beat 1 0:00 reference camera CapCut motion-only captioned narration bottom text warning");
     expect(qa.passed).toBe(true);
   });
 

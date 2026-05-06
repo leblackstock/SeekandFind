@@ -1,0 +1,69 @@
+{
+  "timestamp": "2026-05-05T23:36:59.552Z",
+  "workflow": "capcut-fresh-draft-upload-ember-first",
+  "status": "image-uploaded-not-submitted",
+  "capcutUrl": "https://www.capcut.com/ai-creator/agent?enter_from=canvas_new_project&workspaceId=7635130739515736078&spaceId=7635124039241352206&draftId=1B61E35A-2364-43C9-B4F4-43BBC792FFDB",
+  "projectTitle": "20260505193629",
+  "sourceImage": "C:\\Users\\outdo\\Documents\\Seek and Find Books\\content\\outputs\\images\\pending-review\\day-1-meet-ember-seedance-source-image-recovered-2026-05-05T22-47-49-446Z.png",
+  "uploadStatus": "uploaded-via-left-import-menu-after-plus-failed: page.waitForEvent: Timeout 12000ms exceeded while waiting for event \"filechooser\"\n=========================== logs ===========================\nwaiting for event \"filechooser\"\n============================================================",
+  "screenshot": "content/outputs/videos/pending-review/day-1-meet-ember-capcut-fresh-20260505193629-ember-uploaded-first-2026-05-05T23-36-59-375Z.png",
+  "generationClicked": false,
+  "promptPasted": false,
+  "textExcerpt": "20260505193629\n380\nUpgrade\nImage 1\nImage to video\nImage to image\nChats\nHi, user9486639031373!\nDreamina Seedance 2.0 is here. Try it out!\n🔥 Try Dreamina Seedance 2.0\nSnow scene movie\n🔗 Blockchain 101: All the basics explained\n\n\n\n\nAuto\n100%\nImport",
+  "imageEvidence": [
+    {
+      "i": 0,
+      "alt": "avatar",
+      "width": 100,
+      "height": 100,
+      "clientWidth": 24,
+      "clientHeight": 24,
+      "src": "https://p16-ulike.capcutcdn-us.com/img/user-avatar-musically/3e5167c555ee2d25417d0adfc88c78df~tplv-resize:100:0.image"
+    },
+    {
+      "i": 1,
+      "alt": "Image preview",
+      "width": 608,
+      "height": 1080,
+      "clientWidth": 200,
+      "clientHeight": 356,
+      "src": "blob:https://www.capcut.com/3b30d111-0152-43a0-b0b4-d271ba9d90c4"
+    },
+    {
+      "i": 2,
+      "alt": "Snow scene movie",
+      "width": 1728,
+      "height": 2304,
+      "clientWidth": 22,
+      "clientHeight": 22,
+      "src": "https://p16-vimo-useast5.capcutcdn-us.com/tos-useast5-i-f0k6wfgiqi-tx/b54a484c8e044d2dad9c143e966a96af"
+    },
+    {
+      "i": 3,
+      "alt": "avatar",
+      "width": 100,
+      "height": 100,
+      "clientWidth": 0,
+      "clientHeight": 0,
+      "src": "https://p16-ulike.capcutcdn-us.com/img/user-avatar-musically/3e5167c555ee2d25417d0adfc88c78df~tplv-resize:100:0.image"
+    },
+    {
+      "i": 4,
+      "alt": "",
+      "width": 0,
+      "height": 0,
+      "clientWidth": 0,
+      "clientHeight": 0,
+      "src": "https://bat.bing.com/action/0?ti=97063917&Ver=2&mid=bd1b51ff-54d6-4721-b5a0-b1e849efa656&bo=3&sid=d4e1e0b048d511f19870eb"
+    },
+    {
+      "i": 5,
+      "alt": "",
+      "width": 0,
+      "height": 0,
+      "clientWidth": 0,
+      "clientHeight": 0,
+      "src": "https://bat.bing.com/action/0?ti=97063917&Ver=2&mid=a3059d3e-ab6e-496f-9859-4348434d3511&bo=1&sid=d4e1e0b048d511f19870eb"
+    }
+  ]
+}

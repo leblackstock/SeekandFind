@@ -2,15 +2,15 @@
   "campaign": "Book 1 Prelaunch Rolling Campaign",
   "startDate": "2026-05-05",
   "resumeDate": null,
-  "completedCount": 1,
+  "completedCount": 0,
   "ageRange": "5-8",
-  "movableRule": "Completed slots stay locked; unfinished slots reschedule from resumeDate or the first open day.",
+  "movableRule": "Only fully completed campaign days stay locked; in-progress and unfinished days reschedule from resumeDate or the first open day.",
   "slots": [
     {
       "order": 1,
       "relativeDay": "Day 1",
       "scheduledDate": "2026-05-05",
-      "status": "locked-complete",
+      "status": "in-progress",
       "platform": "Pinterest primary, Instagram/Facebook secondary",
       "theme": "Meet Ember",
       "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
@@ -150,5 +150,1287 @@
       "cta": "Save for children's book gift ideas.",
       "notes": "Gift-buyer angle. Keep links blank until a real store URL exists."
     }
-  ]
+  ],
+  "platformTasks": [
+    {
+      "dayOrder": 1,
+      "scheduledDate": "2026-05-05",
+      "status": "posted",
+      "platform": "Pinterest",
+      "placement": "Dragon Books for Kids",
+      "theme": "Meet Ember",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
+      "copy": "Meet Ember, a tiny baby dragon guide for a cozy seek-and-find adventure made for children ages 5-8. Follow for more Ember sneak peeks.",
+      "cta": "Follow for more Ember sneak peeks.",
+      "link": "https://www.pinterest.com/pin/1148417973750217999",
+      "notes": "Posted and verified. Day 1 primary Pinterest Pin is complete."
+    },
+    {
+      "dayOrder": 1,
+      "scheduledDate": "2026-05-05",
+      "status": "posted",
+      "platform": "Pinterest",
+      "placement": "Children's Activity Books",
+      "theme": "Meet Ember Activity Book Sneak Peek",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
+      "copy": "Meet Ember, a tiny baby dragon guide for a cozy seek-and-find adventure made for children ages 5-8. A gentle activity-book sneak peek for families collecting screen-free ideas. Follow for more Ember sneak peeks.",
+      "cta": "Follow for more Ember sneak peeks.",
+      "link": "https://www.pinterest.com/pin/1148417973750222464/",
+      "notes": "Posted and verified. Day 1 second required Pinterest Pin is complete."
+    },
+    {
+      "dayOrder": 1,
+      "scheduledDate": "2026-05-05",
+      "status": "posted",
+      "platform": "Pinterest",
+      "placement": "Gift Ideas for Kids Ages 5-8",
+      "theme": "Meet Ember Gift Idea for Kids Ages 5-8",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
+      "copy": "Meet Ember, a tiny baby dragon guide for a cozy seek-and-find adventure made for children ages 5-8. A coming-soon gift idea for kids who like cozy fantasy, tiny treasures, and gentle search activities. Follow for more Ember sneak peeks.",
+      "cta": "Follow for more Ember sneak peeks.",
+      "link": "https://www.pinterest.com/pin/1148417973750222492/",
+      "notes": "Posted and verified. Day 1 third required Pinterest Pin is complete."
+    },
+    {
+      "dayOrder": 1,
+      "scheduledDate": "2026-05-05",
+      "status": "needs-account",
+      "platform": "Instagram",
+      "placement": "Feed post plus Story reshare",
+      "theme": "Meet Ember",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
+      "copy": "Meet Ember, a tiny baby dragon guide for a cozy seek-and-find adventure made for children ages 5-8.\n\nFollow for more Ember sneak peeks.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #KidsBooks",
+      "cta": "Follow for more Ember sneak peeks.",
+      "link": "profile link only after a real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Post or schedule once Instagram is available."
+    },
+    {
+      "dayOrder": 1,
+      "scheduledDate": "2026-05-05",
+      "status": "needs-account",
+      "platform": "Facebook",
+      "placement": "Page post",
+      "theme": "Meet Ember",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
+      "copy": "Meet Ember, a tiny baby dragon guide for a cozy seek-and-find adventure made for children ages 5-8.\n\nFollow for more Ember sneak peeks.",
+      "cta": "Follow for more Ember sneak peeks.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Use warmer progress-note wording for Facebook."
+    },
+    {
+      "dayOrder": 1,
+      "scheduledDate": "2026-05-05",
+      "status": "setup-needed",
+      "platform": "Short Video",
+      "placement": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels",
+      "theme": "Meet Ember",
+      "asset": "content/outputs/videos/approved/day-1-meet-ember-pixverse-clean-approved-2026-05-06.mp4",
+      "copy": "Meet Ember. A quick cozy search moment with Ember.",
+      "cta": "Follow for more Ember sneak peeks.",
+      "link": "no link in video caption until real landing/store URL exists",
+      "notes": "Approved clean PixVerse export exists. Run Day 1 platform setup first: verify TikTok, YouTube Shorts, Instagram Reels, and Facebook Reels account/page/channel access before upload. Setup checklist: content/outputs/marketing/posts/2026-05-06-day-1-short-video-platform-setup.md"
+    },
+    {
+      "dayOrder": 2,
+      "scheduledDate": "2026-05-06",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Screen-Free Activities for Kids",
+      "theme": "Screen-free activity idea",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-03-screen-free-dragon-fun-recovered-2026-05-05T05-21-40-725Z.png",
+      "copy": "A warm little search adventure for families who love screen-free kids' activity ideas and gentle fantasy worlds. Save this for screen-free activity inspiration.",
+      "cta": "Save this for screen-free activity inspiration.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the primary daily Pin, add alt text, leave destination link blank unless a real URL exists, then record the live URL."
+    },
+    {
+      "dayOrder": 2,
+      "scheduledDate": "2026-05-06",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Children's Activity Books",
+      "theme": "Screen-free activity idea Activity Book Sneak Peek",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-03-screen-free-dragon-fun-recovered-2026-05-05T05-21-40-725Z.png",
+      "copy": "A warm little search adventure for families who love screen-free kids' activity ideas and gentle fantasy worlds. A gentle activity-book sneak peek for families collecting screen-free ideas. Save this for screen-free activity inspiration.",
+      "cta": "Save this for screen-free activity inspiration.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the second daily Pin with distinct board fit and fresh copy; do not duplicate the primary Pin title/description exactly."
+    },
+    {
+      "dayOrder": 2,
+      "scheduledDate": "2026-05-06",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Gift Ideas for Kids Ages 5-8",
+      "theme": "Screen-free activity idea Gift Idea for Kids Ages 5-8",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-03-screen-free-dragon-fun-recovered-2026-05-05T05-21-40-725Z.png",
+      "copy": "A warm little search adventure for families who love screen-free kids' activity ideas and gentle fantasy worlds. A coming-soon gift idea for kids who like cozy fantasy, tiny treasures, and gentle search activities. Save this for screen-free activity inspiration.",
+      "cta": "Save this for screen-free activity inspiration.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the third daily Pin with distinct board fit and fresh copy; if it cannot be meaningfully distinct, record a content-creation blocker."
+    },
+    {
+      "dayOrder": 2,
+      "scheduledDate": "2026-05-06",
+      "status": "needs-account",
+      "platform": "Instagram",
+      "placement": "Feed post plus Story reshare",
+      "theme": "Screen-free activity idea",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-03-screen-free-dragon-fun-recovered-2026-05-05T05-21-40-725Z.png",
+      "copy": "A warm little search adventure for families who love screen-free kids' activity ideas and gentle fantasy worlds.\n\nSave this for screen-free activity inspiration.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #KidsBooks",
+      "cta": "Save this for screen-free activity inspiration.",
+      "link": "profile link only after a real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Post or schedule once Instagram is available."
+    },
+    {
+      "dayOrder": 2,
+      "scheduledDate": "2026-05-06",
+      "status": "needs-account",
+      "platform": "Facebook",
+      "placement": "Page post",
+      "theme": "Screen-free activity idea",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-03-screen-free-dragon-fun-recovered-2026-05-05T05-21-40-725Z.png",
+      "copy": "A warm little search adventure for families who love screen-free kids' activity ideas and gentle fantasy worlds.\n\nSave this for screen-free activity inspiration.",
+      "cta": "Save this for screen-free activity inspiration.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Use warmer progress-note wording for Facebook."
+    },
+    {
+      "dayOrder": 2,
+      "scheduledDate": "2026-05-06",
+      "status": "needs-video-export",
+      "platform": "Short Video",
+      "placement": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels",
+      "theme": "Screen-free activity idea",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-03-screen-free-dragon-fun-recovered-2026-05-05T05-21-40-725Z.png",
+      "copy": "Screen-free activity idea. A quick cozy search moment with Ember.",
+      "cta": "Follow for more Ember sneak peeks.",
+      "link": "no link in video caption until real landing/store URL exists",
+      "notes": "Needs a Seedance image-to-video export using the saved storyboard before posting."
+    },
+    {
+      "dayOrder": 3,
+      "scheduledDate": "2026-05-07",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Dragon Books for Kids",
+      "theme": "Search with Ember",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
+      "copy": "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers. Share with a little dragon fan.",
+      "cta": "Share with a little dragon fan.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the primary daily Pin, add alt text, leave destination link blank unless a real URL exists, then record the live URL."
+    },
+    {
+      "dayOrder": 3,
+      "scheduledDate": "2026-05-07",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Children's Activity Books",
+      "theme": "Search with Ember Activity Book Sneak Peek",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
+      "copy": "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers. A gentle activity-book sneak peek for families collecting screen-free ideas. Share with a little dragon fan.",
+      "cta": "Share with a little dragon fan.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the second daily Pin with distinct board fit and fresh copy; do not duplicate the primary Pin title/description exactly."
+    },
+    {
+      "dayOrder": 3,
+      "scheduledDate": "2026-05-07",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Gift Ideas for Kids Ages 5-8",
+      "theme": "Search with Ember Gift Idea for Kids Ages 5-8",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
+      "copy": "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers. A coming-soon gift idea for kids who like cozy fantasy, tiny treasures, and gentle search activities. Share with a little dragon fan.",
+      "cta": "Share with a little dragon fan.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the third daily Pin with distinct board fit and fresh copy; if it cannot be meaningfully distinct, record a content-creation blocker."
+    },
+    {
+      "dayOrder": 3,
+      "scheduledDate": "2026-05-07",
+      "status": "needs-account",
+      "platform": "Instagram",
+      "placement": "Feed post plus Story reshare",
+      "theme": "Search with Ember",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
+      "copy": "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers.\n\nShare with a little dragon fan.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #KidsBooks",
+      "cta": "Share with a little dragon fan.",
+      "link": "profile link only after a real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Post or schedule once Instagram is available."
+    },
+    {
+      "dayOrder": 3,
+      "scheduledDate": "2026-05-07",
+      "status": "needs-account",
+      "platform": "Facebook",
+      "placement": "Page post",
+      "theme": "Search with Ember",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
+      "copy": "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers.\n\nShare with a little dragon fan.",
+      "cta": "Share with a little dragon fan.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Use warmer progress-note wording for Facebook."
+    },
+    {
+      "dayOrder": 3,
+      "scheduledDate": "2026-05-07",
+      "status": "needs-video-export",
+      "platform": "Short Video",
+      "placement": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels",
+      "theme": "Search with Ember",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
+      "copy": "Search with Ember. A quick cozy search moment with Ember.",
+      "cta": "Follow for more Ember sneak peeks.",
+      "link": "no link in video caption until real landing/store URL exists",
+      "notes": "Needs a Seedance image-to-video export using the saved storyboard before posting."
+    },
+    {
+      "dayOrder": 4,
+      "scheduledDate": "2026-05-08",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Hidden Object Books for Kids",
+      "theme": "Baby Flame Lantern teaser",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-02-baby-flame-lantern-teaser-balanced-approved-recovered-2026-05-05T05-47-13-309Z-1.png",
+      "copy": "Can you find the Baby Flame Lantern hiding in Ember's cozy festival world? Save this tiny-treasure challenge.",
+      "cta": "Save this tiny-treasure challenge.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the primary daily Pin, add alt text, leave destination link blank unless a real URL exists, then record the live URL."
+    },
+    {
+      "dayOrder": 4,
+      "scheduledDate": "2026-05-08",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Fantasy Activity Books for Kids",
+      "theme": "Baby Flame Lantern teaser Fantasy Activity Preview",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-02-baby-flame-lantern-teaser-balanced-approved-recovered-2026-05-05T05-47-13-309Z-1.png",
+      "copy": "Can you find the Baby Flame Lantern hiding in Ember's cozy festival world? A cozy fantasy search moment with a tiny dragon guide and lots of little details to notice. Save this tiny-treasure challenge.",
+      "cta": "Save this tiny-treasure challenge.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the second daily Pin with distinct board fit and fresh copy; do not duplicate the primary Pin title/description exactly."
+    },
+    {
+      "dayOrder": 4,
+      "scheduledDate": "2026-05-08",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Dragon Books for Kids",
+      "theme": "Baby Flame Lantern teaser Pinterest Preview",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-02-baby-flame-lantern-teaser-balanced-approved-recovered-2026-05-05T05-47-13-309Z-1.png",
+      "copy": "Can you find the Baby Flame Lantern hiding in Ember's cozy festival world? A third fresh Pinterest angle for this campaign day. Save this tiny-treasure challenge.",
+      "cta": "Save this tiny-treasure challenge.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the third daily Pin with distinct board fit and fresh copy; if it cannot be meaningfully distinct, record a content-creation blocker."
+    },
+    {
+      "dayOrder": 4,
+      "scheduledDate": "2026-05-08",
+      "status": "needs-account",
+      "platform": "Instagram",
+      "placement": "Feed post plus Story reshare",
+      "theme": "Baby Flame Lantern teaser",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-02-baby-flame-lantern-teaser-balanced-approved-recovered-2026-05-05T05-47-13-309Z-1.png",
+      "copy": "Can you find the Baby Flame Lantern hiding in Ember's cozy festival world?\n\nSave this tiny-treasure challenge.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #KidsBooks",
+      "cta": "Save this tiny-treasure challenge.",
+      "link": "profile link only after a real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Post or schedule once Instagram is available."
+    },
+    {
+      "dayOrder": 4,
+      "scheduledDate": "2026-05-08",
+      "status": "needs-account",
+      "platform": "Facebook",
+      "placement": "Page post",
+      "theme": "Baby Flame Lantern teaser",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-02-baby-flame-lantern-teaser-balanced-approved-recovered-2026-05-05T05-47-13-309Z-1.png",
+      "copy": "Can you find the Baby Flame Lantern hiding in Ember's cozy festival world?\n\nSave this tiny-treasure challenge.",
+      "cta": "Save this tiny-treasure challenge.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Use warmer progress-note wording for Facebook."
+    },
+    {
+      "dayOrder": 4,
+      "scheduledDate": "2026-05-08",
+      "status": "needs-video-export",
+      "platform": "Short Video",
+      "placement": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels",
+      "theme": "Baby Flame Lantern teaser",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-02-baby-flame-lantern-teaser-balanced-approved-recovered-2026-05-05T05-47-13-309Z-1.png",
+      "copy": "Baby Flame Lantern teaser. A quick cozy search moment with Ember.",
+      "cta": "Pause and search.",
+      "link": "no link in video caption until real landing/store URL exists",
+      "notes": "Needs a Seedance image-to-video export using the saved storyboard before posting."
+    },
+    {
+      "dayOrder": 5,
+      "scheduledDate": "2026-05-09",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Dragon Books for Kids",
+      "theme": "Lantern workshop warmth",
+      "asset": "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-02-image-1-2026-05-05T04-51-23-244Z.png",
+      "copy": "The Lantern Maker's Workshop is full of tiny details for young eyes to explore. Follow for the next Ember progress update.",
+      "cta": "Follow for the next Ember progress update.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the primary daily Pin, add alt text, leave destination link blank unless a real URL exists, then record the live URL."
+    },
+    {
+      "dayOrder": 5,
+      "scheduledDate": "2026-05-09",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Children's Activity Books",
+      "theme": "Lantern workshop warmth Activity Book Sneak Peek",
+      "asset": "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-02-image-1-2026-05-05T04-51-23-244Z.png",
+      "copy": "The Lantern Maker's Workshop is full of tiny details for young eyes to explore. A gentle activity-book sneak peek for families collecting screen-free ideas. Follow for the next Ember progress update.",
+      "cta": "Follow for the next Ember progress update.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the second daily Pin with distinct board fit and fresh copy; do not duplicate the primary Pin title/description exactly."
+    },
+    {
+      "dayOrder": 5,
+      "scheduledDate": "2026-05-09",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Gift Ideas for Kids Ages 5-8",
+      "theme": "Lantern workshop warmth Gift Idea for Kids Ages 5-8",
+      "asset": "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-02-image-1-2026-05-05T04-51-23-244Z.png",
+      "copy": "The Lantern Maker's Workshop is full of tiny details for young eyes to explore. A coming-soon gift idea for kids who like cozy fantasy, tiny treasures, and gentle search activities. Follow for the next Ember progress update.",
+      "cta": "Follow for the next Ember progress update.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the third daily Pin with distinct board fit and fresh copy; if it cannot be meaningfully distinct, record a content-creation blocker."
+    },
+    {
+      "dayOrder": 5,
+      "scheduledDate": "2026-05-09",
+      "status": "needs-account",
+      "platform": "Instagram",
+      "placement": "Feed post plus Story reshare",
+      "theme": "Lantern workshop warmth",
+      "asset": "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-02-image-1-2026-05-05T04-51-23-244Z.png",
+      "copy": "The Lantern Maker's Workshop is full of tiny details for young eyes to explore.\n\nFollow for the next Ember progress update.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #KidsBooks",
+      "cta": "Follow for the next Ember progress update.",
+      "link": "profile link only after a real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Post or schedule once Instagram is available."
+    },
+    {
+      "dayOrder": 5,
+      "scheduledDate": "2026-05-09",
+      "status": "needs-account",
+      "platform": "Facebook",
+      "placement": "Page post",
+      "theme": "Lantern workshop warmth",
+      "asset": "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-02-image-1-2026-05-05T04-51-23-244Z.png",
+      "copy": "The Lantern Maker's Workshop is full of tiny details for young eyes to explore.\n\nFollow for the next Ember progress update.",
+      "cta": "Follow for the next Ember progress update.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Use warmer progress-note wording for Facebook."
+    },
+    {
+      "dayOrder": 5,
+      "scheduledDate": "2026-05-09",
+      "status": "needs-video-export",
+      "platform": "Short Video",
+      "placement": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels",
+      "theme": "Lantern workshop warmth",
+      "asset": "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-02-image-1-2026-05-05T04-51-23-244Z.png",
+      "copy": "Lantern workshop warmth. A quick cozy search moment with Ember.",
+      "cta": "Follow for more Ember sneak peeks.",
+      "link": "no link in video caption until real landing/store URL exists",
+      "notes": "Needs a Seedance image-to-video export using the saved storyboard before posting."
+    },
+    {
+      "dayOrder": 6,
+      "scheduledDate": "2026-05-10",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Dragon Books for Kids",
+      "theme": "Cozy search mood",
+      "asset": "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-03-image-1-2026-05-05T04-51-29-569Z.png",
+      "copy": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers. Save for later if you love hidden-object books.",
+      "cta": "Save for later if you love hidden-object books.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the primary daily Pin, add alt text, leave destination link blank unless a real URL exists, then record the live URL."
+    },
+    {
+      "dayOrder": 6,
+      "scheduledDate": "2026-05-10",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Children's Activity Books",
+      "theme": "Cozy search mood Activity Book Sneak Peek",
+      "asset": "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-03-image-1-2026-05-05T04-51-29-569Z.png",
+      "copy": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers. A gentle activity-book sneak peek for families collecting screen-free ideas. Save for later if you love hidden-object books.",
+      "cta": "Save for later if you love hidden-object books.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the second daily Pin with distinct board fit and fresh copy; do not duplicate the primary Pin title/description exactly."
+    },
+    {
+      "dayOrder": 6,
+      "scheduledDate": "2026-05-10",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Gift Ideas for Kids Ages 5-8",
+      "theme": "Cozy search mood Gift Idea for Kids Ages 5-8",
+      "asset": "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-03-image-1-2026-05-05T04-51-29-569Z.png",
+      "copy": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers. A coming-soon gift idea for kids who like cozy fantasy, tiny treasures, and gentle search activities. Save for later if you love hidden-object books.",
+      "cta": "Save for later if you love hidden-object books.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the third daily Pin with distinct board fit and fresh copy; if it cannot be meaningfully distinct, record a content-creation blocker."
+    },
+    {
+      "dayOrder": 6,
+      "scheduledDate": "2026-05-10",
+      "status": "needs-account",
+      "platform": "Instagram",
+      "placement": "Feed post plus Story reshare",
+      "theme": "Cozy search mood",
+      "asset": "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-03-image-1-2026-05-05T04-51-29-569Z.png",
+      "copy": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers.\n\nSave for later if you love hidden-object books.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #KidsBooks",
+      "cta": "Save for later if you love hidden-object books.",
+      "link": "profile link only after a real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Post or schedule once Instagram is available."
+    },
+    {
+      "dayOrder": 6,
+      "scheduledDate": "2026-05-10",
+      "status": "needs-account",
+      "platform": "Facebook",
+      "placement": "Page post",
+      "theme": "Cozy search mood",
+      "asset": "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-03-image-1-2026-05-05T04-51-29-569Z.png",
+      "copy": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers.\n\nSave for later if you love hidden-object books.",
+      "cta": "Save for later if you love hidden-object books.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Use warmer progress-note wording for Facebook."
+    },
+    {
+      "dayOrder": 6,
+      "scheduledDate": "2026-05-10",
+      "status": "needs-video-export",
+      "platform": "Short Video",
+      "placement": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels",
+      "theme": "Cozy search mood",
+      "asset": "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-03-image-1-2026-05-05T04-51-29-569Z.png",
+      "copy": "Cozy search mood. A quick cozy search moment with Ember.",
+      "cta": "Follow for more Ember sneak peeks.",
+      "link": "no link in video caption until real landing/store URL exists",
+      "notes": "Needs a Seedance image-to-video export using the saved storyboard before posting."
+    },
+    {
+      "dayOrder": 7,
+      "scheduledDate": "2026-05-11",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Hidden Object Books for Kids",
+      "theme": "Golden Welcome Bell challenge",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-01-golden-welcome-bell-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "copy": "Can your little seeker find the Golden Welcome Bell among the festival decorations? Save the challenge and try it together.",
+      "cta": "Save the challenge and try it together.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the primary daily Pin, add alt text, leave destination link blank unless a real URL exists, then record the live URL."
+    },
+    {
+      "dayOrder": 7,
+      "scheduledDate": "2026-05-11",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Fantasy Activity Books for Kids",
+      "theme": "Golden Welcome Bell challenge Fantasy Activity Preview",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-01-golden-welcome-bell-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "copy": "Can your little seeker find the Golden Welcome Bell among the festival decorations? A cozy fantasy search moment with a tiny dragon guide and lots of little details to notice. Save the challenge and try it together.",
+      "cta": "Save the challenge and try it together.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the second daily Pin with distinct board fit and fresh copy; do not duplicate the primary Pin title/description exactly."
+    },
+    {
+      "dayOrder": 7,
+      "scheduledDate": "2026-05-11",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Dragon Books for Kids",
+      "theme": "Golden Welcome Bell challenge Pinterest Preview",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-01-golden-welcome-bell-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "copy": "Can your little seeker find the Golden Welcome Bell among the festival decorations? A third fresh Pinterest angle for this campaign day. Save the challenge and try it together.",
+      "cta": "Save the challenge and try it together.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the third daily Pin with distinct board fit and fresh copy; if it cannot be meaningfully distinct, record a content-creation blocker."
+    },
+    {
+      "dayOrder": 7,
+      "scheduledDate": "2026-05-11",
+      "status": "needs-account",
+      "platform": "Instagram",
+      "placement": "Feed post plus Story reshare",
+      "theme": "Golden Welcome Bell challenge",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-01-golden-welcome-bell-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "copy": "Can your little seeker find the Golden Welcome Bell among the festival decorations?\n\nSave the challenge and try it together.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #KidsBooks",
+      "cta": "Save the challenge and try it together.",
+      "link": "profile link only after a real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Post or schedule once Instagram is available."
+    },
+    {
+      "dayOrder": 7,
+      "scheduledDate": "2026-05-11",
+      "status": "needs-account",
+      "platform": "Facebook",
+      "placement": "Page post",
+      "theme": "Golden Welcome Bell challenge",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-01-golden-welcome-bell-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "copy": "Can your little seeker find the Golden Welcome Bell among the festival decorations?\n\nSave the challenge and try it together.",
+      "cta": "Save the challenge and try it together.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Use warmer progress-note wording for Facebook."
+    },
+    {
+      "dayOrder": 7,
+      "scheduledDate": "2026-05-11",
+      "status": "needs-video-export",
+      "platform": "Short Video",
+      "placement": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels",
+      "theme": "Golden Welcome Bell challenge",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-01-golden-welcome-bell-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "copy": "Golden Welcome Bell challenge. A quick cozy search moment with Ember.",
+      "cta": "Pause and search.",
+      "link": "no link in video caption until real landing/store URL exists",
+      "notes": "Needs a Seedance image-to-video export using the saved storyboard before posting."
+    },
+    {
+      "dayOrder": 8,
+      "scheduledDate": "2026-05-12",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Hidden Object Books for Kids",
+      "theme": "Firefly Flower Charm vertical teaser",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-02-firefly-flower-charm-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "copy": "Find the Firefly Flower Charm. Tap, pause, and search.",
+      "cta": "Tap, pause, and search.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the primary daily Pin, add alt text, leave destination link blank unless a real URL exists, then record the live URL."
+    },
+    {
+      "dayOrder": 8,
+      "scheduledDate": "2026-05-12",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Fantasy Activity Books for Kids",
+      "theme": "Firefly Flower Charm vertical teaser Fantasy Activity Preview",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-02-firefly-flower-charm-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "copy": "Find the Firefly Flower Charm. A cozy fantasy search moment with a tiny dragon guide and lots of little details to notice. Tap, pause, and search.",
+      "cta": "Tap, pause, and search.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the second daily Pin with distinct board fit and fresh copy; do not duplicate the primary Pin title/description exactly."
+    },
+    {
+      "dayOrder": 8,
+      "scheduledDate": "2026-05-12",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Dragon Books for Kids",
+      "theme": "Firefly Flower Charm vertical teaser Pinterest Preview",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-02-firefly-flower-charm-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "copy": "Find the Firefly Flower Charm. A third fresh Pinterest angle for this campaign day. Tap, pause, and search.",
+      "cta": "Tap, pause, and search.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the third daily Pin with distinct board fit and fresh copy; if it cannot be meaningfully distinct, record a content-creation blocker."
+    },
+    {
+      "dayOrder": 8,
+      "scheduledDate": "2026-05-12",
+      "status": "needs-account",
+      "platform": "Instagram",
+      "placement": "Story or Reel cover",
+      "theme": "Firefly Flower Charm vertical teaser",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-02-firefly-flower-charm-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "copy": "Find the Firefly Flower Charm.\n\nTap, pause, and search.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #KidsBooks",
+      "cta": "Tap, pause, and search.",
+      "link": "profile link only after a real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Post or schedule once Instagram is available."
+    },
+    {
+      "dayOrder": 8,
+      "scheduledDate": "2026-05-12",
+      "status": "needs-account",
+      "platform": "Facebook",
+      "placement": "Page post",
+      "theme": "Firefly Flower Charm vertical teaser",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-02-firefly-flower-charm-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "copy": "Find the Firefly Flower Charm.\n\nTap, pause, and search.",
+      "cta": "Tap, pause, and search.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Use warmer progress-note wording for Facebook."
+    },
+    {
+      "dayOrder": 8,
+      "scheduledDate": "2026-05-12",
+      "status": "ready",
+      "platform": "Short Video",
+      "placement": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels",
+      "theme": "Firefly Flower Charm vertical teaser",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-02-firefly-flower-charm-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "copy": "Find the Firefly Flower Charm. Pause and search.",
+      "cta": "Pause and search.",
+      "link": "no link in video caption until real landing/store URL exists",
+      "notes": "Tall asset is ready for mobile-first Seedance storyboard/export use."
+    },
+    {
+      "dayOrder": 9,
+      "scheduledDate": "2026-05-13",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Hidden Object Books for Kids",
+      "theme": "Dragon Door Key challenge",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-03-dragon-door-key-teaser-retry-recovered-2026-05-05T19-37-48-357Z.png",
+      "copy": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene. Can you spot it?",
+      "cta": "Can you spot it?",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the primary daily Pin, add alt text, leave destination link blank unless a real URL exists, then record the live URL."
+    },
+    {
+      "dayOrder": 9,
+      "scheduledDate": "2026-05-13",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Fantasy Activity Books for Kids",
+      "theme": "Dragon Door Key challenge Fantasy Activity Preview",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-03-dragon-door-key-teaser-retry-recovered-2026-05-05T19-37-48-357Z.png",
+      "copy": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene. A cozy fantasy search moment with a tiny dragon guide and lots of little details to notice. Can you spot it?",
+      "cta": "Can you spot it?",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the second daily Pin with distinct board fit and fresh copy; do not duplicate the primary Pin title/description exactly."
+    },
+    {
+      "dayOrder": 9,
+      "scheduledDate": "2026-05-13",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Dragon Books for Kids",
+      "theme": "Dragon Door Key challenge Pinterest Preview",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-03-dragon-door-key-teaser-retry-recovered-2026-05-05T19-37-48-357Z.png",
+      "copy": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene. A third fresh Pinterest angle for this campaign day. Can you spot it?",
+      "cta": "Can you spot it?",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the third daily Pin with distinct board fit and fresh copy; if it cannot be meaningfully distinct, record a content-creation blocker."
+    },
+    {
+      "dayOrder": 9,
+      "scheduledDate": "2026-05-13",
+      "status": "needs-account",
+      "platform": "Instagram",
+      "placement": "Feed post plus Story reshare",
+      "theme": "Dragon Door Key challenge",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-03-dragon-door-key-teaser-retry-recovered-2026-05-05T19-37-48-357Z.png",
+      "copy": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene.\n\nCan you spot it?\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #KidsBooks",
+      "cta": "Can you spot it?",
+      "link": "profile link only after a real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Post or schedule once Instagram is available."
+    },
+    {
+      "dayOrder": 9,
+      "scheduledDate": "2026-05-13",
+      "status": "needs-account",
+      "platform": "Facebook",
+      "placement": "Page post",
+      "theme": "Dragon Door Key challenge",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-03-dragon-door-key-teaser-retry-recovered-2026-05-05T19-37-48-357Z.png",
+      "copy": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene.\n\nCan you spot it?",
+      "cta": "Can you spot it?",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Use warmer progress-note wording for Facebook."
+    },
+    {
+      "dayOrder": 9,
+      "scheduledDate": "2026-05-13",
+      "status": "needs-video-export",
+      "platform": "Short Video",
+      "placement": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels",
+      "theme": "Dragon Door Key challenge",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-03-dragon-door-key-teaser-retry-recovered-2026-05-05T19-37-48-357Z.png",
+      "copy": "Dragon Door Key challenge. A quick cozy search moment with Ember.",
+      "cta": "Pause and search.",
+      "link": "no link in video caption until real landing/store URL exists",
+      "notes": "Needs a Seedance image-to-video export using the saved storyboard before posting."
+    },
+    {
+      "dayOrder": 10,
+      "scheduledDate": "2026-05-14",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Hidden Object Books for Kids",
+      "theme": "Sparkle Market Token challenge",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-04-sparkle-market-token-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "copy": "Can you find the Sparkle Market Token among the cozy market treasures? Save this for a quick seek-and-find break.",
+      "cta": "Save this for a quick seek-and-find break.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the primary daily Pin, add alt text, leave destination link blank unless a real URL exists, then record the live URL."
+    },
+    {
+      "dayOrder": 10,
+      "scheduledDate": "2026-05-14",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Fantasy Activity Books for Kids",
+      "theme": "Sparkle Market Token challenge Fantasy Activity Preview",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-04-sparkle-market-token-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "copy": "Can you find the Sparkle Market Token among the cozy market treasures? A cozy fantasy search moment with a tiny dragon guide and lots of little details to notice. Save this for a quick seek-and-find break.",
+      "cta": "Save this for a quick seek-and-find break.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the second daily Pin with distinct board fit and fresh copy; do not duplicate the primary Pin title/description exactly."
+    },
+    {
+      "dayOrder": 10,
+      "scheduledDate": "2026-05-14",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Dragon Books for Kids",
+      "theme": "Sparkle Market Token challenge Pinterest Preview",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-04-sparkle-market-token-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "copy": "Can you find the Sparkle Market Token among the cozy market treasures? A third fresh Pinterest angle for this campaign day. Save this for a quick seek-and-find break.",
+      "cta": "Save this for a quick seek-and-find break.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the third daily Pin with distinct board fit and fresh copy; if it cannot be meaningfully distinct, record a content-creation blocker."
+    },
+    {
+      "dayOrder": 10,
+      "scheduledDate": "2026-05-14",
+      "status": "needs-account",
+      "platform": "Instagram",
+      "placement": "Feed post plus Story reshare",
+      "theme": "Sparkle Market Token challenge",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-04-sparkle-market-token-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "copy": "Can you find the Sparkle Market Token among the cozy market treasures?\n\nSave this for a quick seek-and-find break.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #KidsBooks",
+      "cta": "Save this for a quick seek-and-find break.",
+      "link": "profile link only after a real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Post or schedule once Instagram is available."
+    },
+    {
+      "dayOrder": 10,
+      "scheduledDate": "2026-05-14",
+      "status": "needs-account",
+      "platform": "Facebook",
+      "placement": "Page post",
+      "theme": "Sparkle Market Token challenge",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-04-sparkle-market-token-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "copy": "Can you find the Sparkle Market Token among the cozy market treasures?\n\nSave this for a quick seek-and-find break.",
+      "cta": "Save this for a quick seek-and-find break.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Use warmer progress-note wording for Facebook."
+    },
+    {
+      "dayOrder": 10,
+      "scheduledDate": "2026-05-14",
+      "status": "needs-video-export",
+      "platform": "Short Video",
+      "placement": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels",
+      "theme": "Sparkle Market Token challenge",
+      "asset": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-04-sparkle-market-token-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "copy": "Sparkle Market Token challenge. A quick cozy search moment with Ember.",
+      "cta": "Pause and search.",
+      "link": "no link in video caption until real landing/store URL exists",
+      "notes": "Needs a Seedance image-to-video export using the saved storyboard before posting."
+    },
+    {
+      "dayOrder": 11,
+      "scheduledDate": "2026-05-15",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Dragon Books for Kids",
+      "theme": "Production progress note",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
+      "copy": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time. Follow along as the book comes together.",
+      "cta": "Follow along as the book comes together.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the primary daily Pin, add alt text, leave destination link blank unless a real URL exists, then record the live URL."
+    },
+    {
+      "dayOrder": 11,
+      "scheduledDate": "2026-05-15",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Children's Activity Books",
+      "theme": "Production progress note Activity Book Sneak Peek",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
+      "copy": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time. A gentle activity-book sneak peek for families collecting screen-free ideas. Follow along as the book comes together.",
+      "cta": "Follow along as the book comes together.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the second daily Pin with distinct board fit and fresh copy; do not duplicate the primary Pin title/description exactly."
+    },
+    {
+      "dayOrder": 11,
+      "scheduledDate": "2026-05-15",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Gift Ideas for Kids Ages 5-8",
+      "theme": "Production progress note Gift Idea for Kids Ages 5-8",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
+      "copy": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time. A coming-soon gift idea for kids who like cozy fantasy, tiny treasures, and gentle search activities. Follow along as the book comes together.",
+      "cta": "Follow along as the book comes together.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the third daily Pin with distinct board fit and fresh copy; if it cannot be meaningfully distinct, record a content-creation blocker."
+    },
+    {
+      "dayOrder": 11,
+      "scheduledDate": "2026-05-15",
+      "status": "needs-account",
+      "platform": "Instagram",
+      "placement": "Feed post plus Story reshare",
+      "theme": "Production progress note",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
+      "copy": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time.\n\nFollow along as the book comes together.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #KidsBooks",
+      "cta": "Follow along as the book comes together.",
+      "link": "profile link only after a real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Post or schedule once Instagram is available."
+    },
+    {
+      "dayOrder": 11,
+      "scheduledDate": "2026-05-15",
+      "status": "needs-account",
+      "platform": "Facebook",
+      "placement": "Page post",
+      "theme": "Production progress note",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
+      "copy": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time.\n\nFollow along as the book comes together.",
+      "cta": "Follow along as the book comes together.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Use warmer progress-note wording for Facebook."
+    },
+    {
+      "dayOrder": 11,
+      "scheduledDate": "2026-05-15",
+      "status": "needs-video-export",
+      "platform": "Short Video",
+      "placement": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels",
+      "theme": "Production progress note",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
+      "copy": "Production progress note. A quick cozy search moment with Ember.",
+      "cta": "Follow for more Ember sneak peeks.",
+      "link": "no link in video caption until real landing/store URL exists",
+      "notes": "Needs a Seedance image-to-video export using the saved storyboard before posting."
+    },
+    {
+      "dayOrder": 12,
+      "scheduledDate": "2026-05-16",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Gift Ideas for Kids Ages 5-8",
+      "theme": "Giftable cozy adventure",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
+      "copy": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons. Save for children's book gift ideas.",
+      "cta": "Save for children's book gift ideas.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the primary daily Pin, add alt text, leave destination link blank unless a real URL exists, then record the live URL."
+    },
+    {
+      "dayOrder": 12,
+      "scheduledDate": "2026-05-16",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Children's Activity Books",
+      "theme": "Giftable cozy adventure Activity Book Sneak Peek",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
+      "copy": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons. A gentle activity-book sneak peek for families collecting screen-free ideas. Save for children's book gift ideas.",
+      "cta": "Save for children's book gift ideas.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the second daily Pin with distinct board fit and fresh copy; do not duplicate the primary Pin title/description exactly."
+    },
+    {
+      "dayOrder": 12,
+      "scheduledDate": "2026-05-16",
+      "status": "ready",
+      "platform": "Pinterest",
+      "placement": "Fantasy Activity Books for Kids",
+      "theme": "Giftable cozy adventure Fantasy Activity Preview",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
+      "copy": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons. A magical activity-book preview with a friendly baby dragon and a soft fantasy search mood. Save for children's book gift ideas.",
+      "cta": "Save for children's book gift ideas.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Create or schedule the third daily Pin with distinct board fit and fresh copy; if it cannot be meaningfully distinct, record a content-creation blocker."
+    },
+    {
+      "dayOrder": 12,
+      "scheduledDate": "2026-05-16",
+      "status": "needs-account",
+      "platform": "Instagram",
+      "placement": "Feed post plus Story reshare",
+      "theme": "Giftable cozy adventure",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
+      "copy": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons.\n\nSave for children's book gift ideas.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #KidsBooks",
+      "cta": "Save for children's book gift ideas.",
+      "link": "profile link only after a real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Post or schedule once Instagram is available."
+    },
+    {
+      "dayOrder": 12,
+      "scheduledDate": "2026-05-16",
+      "status": "needs-account",
+      "platform": "Facebook",
+      "placement": "Page post",
+      "theme": "Giftable cozy adventure",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
+      "copy": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons.\n\nSave for children's book gift ideas.",
+      "cta": "Save for children's book gift ideas.",
+      "link": "blank until real landing/store URL exists",
+      "notes": "Account access is not verified in this repo yet. Use warmer progress-note wording for Facebook."
+    },
+    {
+      "dayOrder": 12,
+      "scheduledDate": "2026-05-16",
+      "status": "needs-video-export",
+      "platform": "Short Video",
+      "placement": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels",
+      "theme": "Giftable cozy adventure",
+      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
+      "copy": "Giftable cozy adventure. A quick cozy search moment with Ember.",
+      "cta": "Follow for more Ember sneak peeks.",
+      "link": "no link in video caption until real landing/store URL exists",
+      "notes": "Needs a Seedance image-to-video export using the saved storyboard before posting."
+    }
+  ],
+  "launchPlan": {
+    "sourceChecks": [
+      {
+        "platform": "Pinterest",
+        "source": "https://help.pinterest.com/en/business/article/create-a-board",
+        "useInPlan": "Pinterest boards organize Pins from the business profile or Pin creation flow; this workflow uses three distinct Pinterest Pins per campaign day."
+      },
+      {
+        "platform": "YouTube",
+        "source": "https://support.google.com/youtube/answer/57792",
+        "useInPlan": "YouTube playlists can collect videos or Shorts; playlist creation and daily limits should be rechecked before batching."
+      },
+      {
+        "platform": "Meta / Facebook",
+        "source": "https://www.facebook.com/help/389849807718635",
+        "useInPlan": "Meta Business Suite is the planned scheduling/checking surface for Facebook Page posts and, after connection, Instagram."
+      },
+      {
+        "platform": "TikTok",
+        "source": "https://support.tiktok.com/en/using-tiktok/creating-videos/creator-playlist",
+        "useInPlan": "TikTok creator playlists are account-gated; if the option is missing, use pinned videos and consistent naming instead."
+      }
+    ],
+    "platformSetups": [
+      {
+        "platform": "Pinterest",
+        "currentState": "3 posted; 33 ready from the current calendar.",
+        "setupChecks": [
+          "Confirm business/profile access.",
+          "Confirm the Day 1 Pin URL and screenshot remain saved.",
+          "Create or verify all campaign boards before their first use.",
+          "Plan three distinct Pinterest Pins per campaign day.",
+          "If any daily Pin cannot be made meaningfully distinct, record a content-creation blocker instead of skipping it.",
+          "Keep destination links blank until a real landing/store URL exists."
+        ],
+        "structureToCreate": "Boards for dragon books, screen-free activities, hidden-object challenges, gift ideas, activity books, and fantasy activity books.",
+        "dailyCheck": "Open all three daily Pinterest tasks, verify each board, asset, title, description, alt text, and link status.",
+        "blocker": "Missing board or account access blocks that platform task only, not the whole day."
+      },
+      {
+        "platform": "Instagram",
+        "currentState": "Account not created yet. Gmail/Google account exists for setup support.",
+        "setupChecks": [
+          "Create or confirm Instagram account and profile name.",
+          "Confirm whether a professional account is needed for scheduling/insights.",
+          "Create highlights after the first stories exist.",
+          "Check whether Meta Business Suite can see the account."
+        ],
+        "structureToCreate": "Highlights: Meet Ember, Search Challenges, Behind the Scenes.",
+        "dailyCheck": "Create Instagram first, then post/schedule feed, story, or Reel version when access is ready; otherwise record needs-account.",
+        "blocker": "No Instagram account yet."
+      },
+      {
+        "platform": "Facebook",
+        "currentState": "Page not created yet. Gmail/Google account exists for setup support.",
+        "setupChecks": [
+          "Create or confirm Facebook Page.",
+          "Confirm Lauren can switch into it.",
+          "Confirm Meta Business Suite access.",
+          "Confirm whether posts can be scheduled from the planner.",
+          "Create pinned intro post and optional promo-art album."
+        ],
+        "structureToCreate": "Pinned Meet Ember post plus Ember Sneak Peeks album.",
+        "dailyCheck": "Create Facebook Page / Meta setup first, then post/schedule warmer parent/gift-buyer copy or record the account blocker.",
+        "blocker": "No Facebook Page or Meta Business Suite access yet."
+      },
+      {
+        "platform": "YouTube Shorts",
+        "currentState": "Day 1 approved export exists; Gmail/Google account exists, but Ember YouTube channel is not confirmed yet.",
+        "setupChecks": [
+          "Create or confirm the Ember YouTube channel.",
+          "Verify Shorts upload access.",
+          "Create playlists only after the first video or Short exists.",
+          "Check playlist creation limits before batching many playlists.",
+          "Keep Shorts titles tied to the daily theme."
+        ],
+        "structureToCreate": "Playlists after first upload: Ember Seek-and-Find Challenges, Screen-Free Kids Activities, Ember Book 1 Sneak Peeks.",
+        "dailyCheck": "Create/confirm the YouTube channel, then upload/schedule only after access is verified; otherwise record account/channel blocker.",
+        "blocker": "No confirmed Ember YouTube channel yet."
+      },
+      {
+        "platform": "TikTok",
+        "currentState": "Account not created yet.",
+        "setupChecks": [
+          "Create or confirm TikTok account access.",
+          "Check whether creator playlists are available.",
+          "If playlists are missing, use pinned videos and recurring caption labels.",
+          "Reuse the same short-video exports prepared for Shorts/Reels."
+        ],
+        "structureToCreate": "Playlists if available: Seek-and-Find Challenges, Meet Ember.",
+        "dailyCheck": "Create TikTok account, then post/upload a short-video task when access is ready; otherwise record blocker.",
+        "blocker": "No TikTok account yet."
+      },
+      {
+        "platform": "Landing / Store Link",
+        "currentState": "No real landing/store URL is recorded.",
+        "setupChecks": [
+          "Confirm the real destination before adding links.",
+          "Update CTA language only after the link exists.",
+          "Backfill active platform bios and future Pins/posts after approval."
+        ],
+        "structureToCreate": "One approved link field shared across platform tasks.",
+        "dailyCheck": "Leave links blank until the real destination exists.",
+        "blocker": "No live destination."
+      }
+    ],
+    "structures": [
+      {
+        "platform": "Pinterest",
+        "type": "Board",
+        "name": "Dragon Books for Kids",
+        "status": "active",
+        "use": "Meet Ember, baby dragon, and general Book 1 discovery Pins.",
+        "nextAction": "Keep Day 1 Pin here; add future broad Ember/dragon discovery Pins."
+      },
+      {
+        "platform": "Pinterest",
+        "type": "Board",
+        "name": "Screen-Free Activities for Kids",
+        "status": "create-or-check",
+        "use": "Day 2 and parent-facing screen-free activity posts.",
+        "nextAction": "Create or verify before posting Day 2."
+      },
+      {
+        "platform": "Pinterest",
+        "type": "Board",
+        "name": "Hidden Object Books for Kids",
+        "status": "create-or-check",
+        "use": "Can-you-find-it mission-item challenge Pins.",
+        "nextAction": "Create or verify before Day 4 and Batch 03 mission-item Pins."
+      },
+      {
+        "platform": "Pinterest",
+        "type": "Board",
+        "name": "Gift Ideas for Kids Ages 5-8",
+        "status": "create-or-check",
+        "use": "Gift-buyer and cozy adventure Pins.",
+        "nextAction": "Create or verify before the giftable Day 12 row."
+      },
+      {
+        "platform": "Pinterest",
+        "type": "Board",
+        "name": "Children's Activity Books",
+        "status": "create-or-check",
+        "use": "Activity-book positioning and broad children's book discovery.",
+        "nextAction": "Use for reused storybook search and activity-book content."
+      },
+      {
+        "platform": "Pinterest",
+        "type": "Board",
+        "name": "Fantasy Activity Books for Kids",
+        "status": "create-or-check",
+        "use": "Fantasy, dragon village, magical search content.",
+        "nextAction": "Use for magical seek-and-find and festival-world content."
+      },
+      {
+        "platform": "Instagram",
+        "type": "Highlight",
+        "name": "Meet Ember",
+        "status": "create-when-account-ready",
+        "use": "Profile intro and character identity.",
+        "nextAction": "Create after Instagram access is verified."
+      },
+      {
+        "platform": "Instagram",
+        "type": "Highlight",
+        "name": "Search Challenges",
+        "status": "create-when-account-ready",
+        "use": "Mission-item teasers and story/reel resharing.",
+        "nextAction": "Create after the first search challenge story is posted."
+      },
+      {
+        "platform": "Instagram",
+        "type": "Highlight",
+        "name": "Behind the Scenes",
+        "status": "create-when-account-ready",
+        "use": "Progress notes, approved art, and workflow updates.",
+        "nextAction": "Create after Facebook/Instagram account connection is checked."
+      },
+      {
+        "platform": "Facebook",
+        "type": "Page Surface",
+        "name": "Pinned Meet Ember Post",
+        "status": "create-when-account-ready",
+        "use": "First profile signal for parents and gift-buyers.",
+        "nextAction": "Post or pin a Day 1-style intro after Page access is verified."
+      },
+      {
+        "platform": "Facebook",
+        "type": "Album",
+        "name": "Ember Sneak Peeks",
+        "status": "create-when-account-ready",
+        "use": "Organize approved promo art without calling it interior or listing art.",
+        "nextAction": "Create once Page media tools are available."
+      },
+      {
+        "platform": "YouTube Shorts",
+        "type": "Playlist",
+        "name": "Ember Seek-and-Find Challenges",
+        "status": "create-when-account-ready",
+        "use": "Short challenge videos made from mission-item assets.",
+        "nextAction": "Create after the channel exists and first Short export is ready."
+      },
+      {
+        "platform": "YouTube Shorts",
+        "type": "Playlist",
+        "name": "Screen-Free Kids Activities",
+        "status": "create-when-account-ready",
+        "use": "Parent-facing activity idea Shorts.",
+        "nextAction": "Create after channel access is verified."
+      },
+      {
+        "platform": "YouTube Shorts",
+        "type": "Playlist",
+        "name": "Ember Book 1 Sneak Peeks",
+        "status": "create-when-account-ready",
+        "use": "General Book 1 prelaunch and progress videos.",
+        "nextAction": "Create after channel access is verified."
+      },
+      {
+        "platform": "TikTok",
+        "type": "Playlist",
+        "name": "Seek-and-Find Challenges",
+        "status": "account-gated",
+        "use": "Mission-item videos if creator playlists are enabled.",
+        "nextAction": "Check whether playlists are available; if not, use pinned videos and recurring caption labels."
+      },
+      {
+        "platform": "TikTok",
+        "type": "Playlist",
+        "name": "Meet Ember",
+        "status": "account-gated",
+        "use": "Character intro and cozy baby-dragon posts.",
+        "nextAction": "Check whether playlists are available; if not, use pinned videos."
+      }
+    ],
+    "reusePlan": [
+      {
+        "source": "Approved square or vertical promo image",
+        "reuseSurfaces": "Pinterest Pin; Instagram feed/story; Facebook Page post; short-video cover; later newsletter or website slot.",
+        "creationNeeded": "Platform-specific caption, alt text, hashtags, and a motion-only Seedance image-to-video export from the saved storyboard.",
+        "guardrail": "Do not call fresh promo art a real cover, real interior page, listing preview, or sample page."
+      },
+      {
+        "source": "Mission-item teaser asset",
+        "reuseSurfaces": "Pinterest challenge Pin; Instagram story; Facebook family post; TikTok/Shorts/Reels pause-and-search clip.",
+        "creationNeeded": "One short challenge caption plus either a motion-only Seedance image-to-video export or a separate captioned narration short.",
+        "guardrail": "Do not mark, circle, point to, or reveal the hidden item."
+      },
+      {
+        "source": "CapCut captioned narration storyboard",
+        "reuseSurfaces": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels, and Pinterest Idea Pins where bottom text/narration is desired.",
+        "creationNeeded": "Scene-by-scene script blocks that intentionally become visible bottom text, plus a clean image/media assignment and 9:16 ratio. This lane may later support AI animation too, but that workflow is not proven yet.",
+        "guardrail": "Do not use this subtype for clean motion-only videos; the words appear on the video."
+      },
+      {
+        "source": "Meet Ember asset",
+        "reuseSurfaces": "Pinned/profile intro; Page banner candidate; first post on each platform; welcome story highlight.",
+        "creationNeeded": "Account bio copy, alt text, and platform profile checklist.",
+        "guardrail": "Present Ember as guide/mascot, not as a licensed or borrowed character."
+      },
+      {
+        "source": "Approved interior or final cover asset",
+        "reuseSurfaces": "Listing images, store page, launch post, and stronger sales copy only after the real asset exists.",
+        "creationNeeded": "KDP-safe listing image set, real cover mockup, real interior previews, and live URL.",
+        "guardrail": "Real listing and inside-book claims require real book assets."
+      }
+    ],
+    "creationBacklog": [
+      {
+        "priority": "Now",
+        "item": "Day 2 Pinterest post record and board check",
+        "output": "Post record for Screen-free activity idea plus board status.",
+        "ownerAction": "Create or verify the Screen-Free Activities for Kids board, then post/schedule Day 2."
+      },
+      {
+        "priority": "Now",
+        "item": "Platform access tracker",
+        "output": "Confirmed status for Instagram, Facebook Page, YouTube channel, TikTok account, and Meta Business Suite.",
+        "ownerAction": "Open each platform, verify account/page/channel access, and record blockers."
+      },
+      {
+        "priority": "Next",
+        "item": "Motion-only Seedance short-video export template",
+        "output": "Reusable 15-second Seedance storyboard and manual export checklist for approved art with no on-video words.",
+        "ownerAction": "Create the Day 1 Meet Ember motion-only export from the saved prompt, not from CapCut storyboard text blocks."
+      },
+      {
+        "priority": "Next",
+        "item": "CapCut captioned narration short workflow",
+        "output": "Reusable marketing subtype for Shorts/Reels/TikToks where script words intentionally appear across the bottom of the image.",
+        "ownerAction": "Use the saved Day 1 CapCut discovery as the template for captioned narration clips, separate from clean motion-only exports. AI animation may become part of this lane later, but it still needs a tested checkpoint."
+      },
+      {
+        "priority": "Next",
+        "item": "Board/playlist/profile setup pass",
+        "output": "Pinterest boards, Instagram highlights, Facebook pinned/albums, YouTube playlists, TikTok fallback labels.",
+        "ownerAction": "Create only the structures that match active accounts and current platform options."
+      },
+      {
+        "priority": "Soon",
+        "item": "Reusable caption and alt-text bank",
+        "output": "Copy snippets by lane: Meet Ember, screen-free, challenge, progress, giftable.",
+        "ownerAction": "Approve wording style after Day 2 and Day 3 posts."
+      },
+      {
+        "priority": "Blocked",
+        "item": "Landing/store URL",
+        "output": "A real link for Pins/posts once the book or landing page is ready.",
+        "ownerAction": "Do not add a sales/store link until there is a real destination."
+      },
+      {
+        "priority": "Blocked",
+        "item": "Real cover and listing asset set",
+        "output": "Real cover preview, real interior preview images, and store-safe listing graphics.",
+        "ownerAction": "Wait for final cover/interior assets; do not use fresh promo art as fake listing material."
+      }
+    ],
+    "dailyOperatingSchedule": [
+      "Read the next open calendar day and its platform tasks.",
+      "Verify the approved asset exists and check any image warning from the post record or QA notes.",
+      "Post or schedule the primary Pinterest Pin first because Pinterest is the active discovery platform.",
+      "Post or schedule the second and third daily Pinterest Pins with distinct board angles, titles, and descriptions.",
+      "If the third Pin cannot be made meaningfully different, record a content-creation blocker instead of treating it as optional.",
+      "Post, schedule, or record blockers for Instagram, Facebook, YouTube Shorts, and TikTok.",
+      "Reuse the same approved image only with platform-specific copy, alt text, hashtags, and link status.",
+      "Create one missing asset or export only when it supports the next open calendar row.",
+      "Save a post record with live URL, platform, board/playlist/placement, copy used, warnings, and next action.",
+      "Regenerate the calendar only after completion state changes."
+    ],
+    "weeklyReview": [
+      "Check whether boards/playlists/highlights still match the active campaign lanes.",
+      "Review live URLs, broken links, image warnings, and account blockers.",
+      "Add one new reusable asset only if the next calendar week needs it.",
+      "Review performance signals lightly: saves, clicks if available, follows, comments, and posts that are worth reusing.",
+      "Confirm no customer-facing copy claims sale/listing status before the real link exists."
+    ],
+    "phaseGates": [
+      "Prelaunch now: follow, save, sneak peek, progress, and challenge wording only.",
+      "Listing-ready later: switch to real cover, real interior previews, real store URL, and stronger product copy.",
+      "Launch week: use the same platform structure, but update CTAs to the approved live-link wording.",
+      "Post-launch: keep evergreen Pinterest boards alive, recycle best challenge assets, and add real reader-facing assets only after approval."
+    ]
+  }
 }

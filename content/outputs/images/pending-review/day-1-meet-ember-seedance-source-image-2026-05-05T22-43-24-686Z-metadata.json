@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-05-05T22-43-24-686Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "dry-run",
+  "assetName": "day-1-meet-ember-seedance-source-image",
+  "assetSlug": "day-1-meet-ember-seedance-source-image",
+  "promptPath": "content/outputs/prompts/day-1-meet-ember-seedance-source-image-broke-mode-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/day-1-meet-ember-seedance-source-image-2026-05-05T22-43-24-686Z-prompt.md",
+  "warnings": [
+    "Raw prompt mode selected; Broke Mode pasted the prompt file without compacting or appending missing production requirements."
+  ],
+  "dryRun": true,
+  "autoSubmit": false,
+  "maxAttempts": 1,
+  "browserMode": "existing",
+  "cdpUrl": "http://127.0.0.1:9222",
+  "referenceImages": [
+    "Ember's Adventures/EtD Images/Ember-001.png",
+    "Ember's Adventures/EtD Images/Ember-002.png",
+    "Ember's Adventures/EtD Images/Ember-003.png"
+  ],
+  "chatTitle": "B1 - Day 1 - Meet Ember Seedance Source"
+}

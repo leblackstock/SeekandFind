@@ -23,6 +23,14 @@ Beat 2, 0:03-0:07: Ember moves gently through the scene: {{scene}}.
 Beat 3, 0:07-0:11: A glowing clue or search moment gives the clip visual payoff.
 Beat 4, 0:11-0:15: Ember smiles toward the viewer with a cozy invitation to search.
 
+## Storyboard Type Warning
+
+This file is a motion-only image-to-video storyboard unless it explicitly says otherwise.
+
+Do not paste the timed beat text into CapCut storyboard/script blocks for a motion-only video. CapCut renders those block words across the bottom of the image, which turns the result into a captioned narration short. That is useful for narrator/descriptive marketing clips, but it is a different marketing type from a clean no-text character animation.
+
+The captioned narration short lane may also become an AI-animation workflow later, but that path has not been worked through yet.
+
 ## Image-To-Video Prompt
 
 Use Ember reference images Ember-001, Ember-002, and Ember-003 for character consistency. Keep Ember's scarf, satchel, horns, eyes, and reddish-orange baby-dragon proportions on-model.
@@ -38,6 +46,8 @@ Animate a soft 2.25D children's storybook scene. Use gentle camera motion: slow 
 ## CapCut Edit Notes
 
 - Add real editable text outside the video model if captions are needed.
+- Use CapCut storyboard/script blocks only when intentionally making a captioned narration short with bottom text.
+- Do not treat CapCut AI animation from captioned narration blocks as the default until that workflow has been tested and logged.
 - Keep music soft, magical, and upbeat.
 - Export a short vertical and square crop only after reviewing composition.
 

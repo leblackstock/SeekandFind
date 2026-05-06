@@ -42,6 +42,37 @@ Alt text:
 Destination link:
 None.
 
+## Required Day 1 Pinterest Set
+
+Status: complete for Pinterest.
+
+Required Day 1 Pins:
+
+| Board | Title | Pin URL | Status |
+| --- | --- | --- | --- |
+| Dragon Books for Kids | Meet Ember, the Baby Dragon Guide | https://www.pinterest.com/pin/1148417973750217999 | posted and verified |
+| Children's Activity Books | Meet Ember Activity Book Sneak Peek | https://www.pinterest.com/pin/1148417973750222464/ | posted and verified |
+| Gift Ideas for Kids Ages 5-8 | Meet Ember Gift Idea for Kids Ages 5-8 | https://www.pinterest.com/pin/1148417973750222492/ | posted and verified |
+
+Second Pin description:
+`Meet Ember, a tiny baby dragon guide for a cozy seek-and-find adventure made for children ages 5-8. A gentle activity-book sneak peek for families collecting screen-free ideas. Follow for more Ember sneak peeks.`
+
+Third Pin description:
+`Meet Ember, a tiny baby dragon guide for a cozy seek-and-find adventure made for children ages 5-8. A coming-soon gift idea for kids who like cozy fantasy, tiny treasures, and gentle search activities. Follow for more Ember sneak peeks.`
+
+Shared alt text for the second and third Pins:
+`A cheerful baby dragon named Ember in a warm, cozy fantasy seek-and-find style promo image for children ages 5-8.`
+
+Second and third Pin destination links:
+None.
+
+Verification evidence:
+
+- `content/outputs/marketing/posts/audits/day-1-pinterest-activity-books-audit-2026-05-05T22-15-25-155Z.png`
+- `content/outputs/marketing/posts/audits/day-1-pinterest-activity-books-audit-2026-05-05T22-15-25-155Z.json`
+- `content/outputs/marketing/posts/audits/day-1-pinterest-gift-ideas-audit-2026-05-05T22-15-31-106Z.png`
+- `content/outputs/marketing/posts/audits/day-1-pinterest-gift-ideas-audit-2026-05-05T22-15-31-106Z.json`
+
 ## Guardrails
 
 - No sales link was added.
@@ -57,4 +88,13 @@ None.
 
 ## Next Step
 
-Move to Day 2: Screen-free activity idea.
+Day 1 is still in progress across the full launch workflow.
+
+Chromium audit saved:
+`content/outputs/marketing/posts/audits/2026-05-05-day-1-pinterest-audit.md`
+
+Pinterest Day 1 is verified: the live Pin is on the `Dragon Books for Kids` board, the profile and board exist, the Pin copy/hashtags/alt text are visible, and no destination link is visible. Lauren clarified that the profile phrase `Book 1 coming soon on Amazon` is acceptable prelaunch wording because it is not a live/available-now claim.
+
+Pinterest Day 1 is complete at 3 required Pins.
+
+Remaining Day 1 work is outside Pinterest: Instagram needs-account, Facebook needs-account, and Short Video has an approved export but needs TikTok/YouTube/Instagram/Facebook setup verification before upload.

@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-05-05T22-47-49-446Z",
+  "workflow": "chatgpt-broke-mode-image-generation-recovery",
+  "status": "pending-review",
+  "assetName": "day-1-meet-ember-seedance-source-image",
+  "imagePath": "content/outputs/images/pending-review/day-1-meet-ember-seedance-source-image-recovered-2026-05-05T22-47-49-446Z.png",
+  "screenshotPath": "content/outputs/images/pending-review/day-1-meet-ember-seedance-source-image-recovered-2026-05-05T22-47-49-446Z-chatgpt-screenshot.png",
+  "promptPath": "content/outputs/prompts/day-1-meet-ember-seedance-source-image-broke-mode-prompt.md",
+  "recoveredFromFailedAttempt": "content/outputs/images/failed/day-1-meet-ember-seedance-source-image-2026-05-05T22-43-38-168Z",
+  "chatTitle": "B1 - Day 1 - Meet Ember Seedance Source",
+  "chatUrl": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fa729a-2b1c-83ea-b1eb-6feb376c4932",
+  "generatedImageCandidate": {
+    "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000055071f5ba38624974824dc6&ts=493894&p=fs&cid=1&sig=e1617efd40c531d9571181f70014a9865beefada5c1b864f0364c0e62f14235f&v=0",
+    "alt": "Generated image",
+    "width": 941,
+    "height": 1672,
+    "clientWidth": 400,
+    "clientHeight": 711
+  },
+  "referenceImages": [
+    "Ember's Adventures/EtD Images/Ember-001.png",
+    "Ember's Adventures/EtD Images/Ember-002.png",
+    "Ember's Adventures/EtD Images/Ember-003.png"
+  ],
+  "warnings": [
+    "Recovered after local Broke Mode runner timed out while ChatGPT continued generation."
+  ]
+}

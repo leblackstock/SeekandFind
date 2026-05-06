@@ -1,0 +1,97 @@
+{
+  "timestamp": "2026-05-05T22:55:54.362Z",
+  "workflow": "seedance-image-to-video-setup-configure",
+  "status": "setup-uploaded-not-generated",
+  "url": "https://www.seedance.tv/image-to-video",
+  "ratioSet": "9:16",
+  "durationSet": "longest-visible-clicked",
+  "generationClicked": false,
+  "setupScreenshot": "content/outputs/videos/pending-review/day-1-meet-ember-seedance-2026-05-05T22-55-54-089Z-setup-configured.png",
+  "checked": [
+    {
+      "i": 0,
+      "name": "ratio",
+      "checked": false,
+      "value": "16:9",
+      "id": ""
+    },
+    {
+      "i": 1,
+      "name": "ratio",
+      "checked": true,
+      "value": "9:16",
+      "id": ""
+    },
+    {
+      "i": 2,
+      "name": "ratio",
+      "checked": false,
+      "value": "1:1",
+      "id": ""
+    },
+    {
+      "i": 3,
+      "name": "ratio",
+      "checked": false,
+      "value": "4:3",
+      "id": ""
+    },
+    {
+      "i": 4,
+      "name": "ratio",
+      "checked": false,
+      "value": "3:4",
+      "id": ""
+    },
+    {
+      "i": 5,
+      "name": "ratio",
+      "checked": false,
+      "value": "21:9",
+      "id": ""
+    },
+    {
+      "i": 6,
+      "name": "duration",
+      "checked": false,
+      "value": "5s",
+      "id": ""
+    },
+    {
+      "i": 7,
+      "name": "duration",
+      "checked": false,
+      "value": "8s",
+      "id": ""
+    },
+    {
+      "i": 8,
+      "name": "duration",
+      "checked": true,
+      "value": "10s",
+      "id": ""
+    },
+    {
+      "i": 9,
+      "name": "duration",
+      "checked": false,
+      "value": "15s",
+      "id": ""
+    },
+    {
+      "i": 10,
+      "name": "resolution",
+      "checked": true,
+      "value": "480p",
+      "id": ""
+    },
+    {
+      "i": 11,
+      "name": "resolution",
+      "checked": false,
+      "value": "720p",
+      "id": ""
+    }
+  ],
+  "visibleTextExcerpt": "Seedance\nImage to Video\nText to Video\nReference to Video\n🍌\nText to Image\n🍌\nImage to Image\nMy Creations\nFeedback? DM us!\nJoin Telegram\nJoin Discord\nUpgrade Now\nEnglish\nImage to Video\nPrompt\nImage(1-2 images)\nFirst Frame\nLast Frame\n\nClick to upload\n\nMy Creations\nSettings\nModel\nSeedance 2.0\nRatio\n16:9\n9:16\n1:1\n4:3\n3:4\n21:9\nDuration\n5s\n8s\n10s\n15s\nResolution\n480p\n720p\nSound\nWatermark\nCredits: 6\nCost: 50 ⚡\nRecharge\nGenerate Video\nExplore Examples\nAll-in-One AI Image to Video Generator\n\nSeedance is the ultimate, all-in-one AI image to video generator. We offer access to industry-leading video models including Veo3, Seedance, Hailuo, and Wan2.2, all in one single place. Try them seamlessly and create stunning visuals without juggling multiple platforms!\n\nSora 2\nVeo 3\nSeedance\nHailuo\n+\nMore Models\nAnimate Your Images with Our Image to Video AI Generator\n\nTurn any static image into a vivid story with Seedance! Generate creative videos from your uploaded photos with our smart AI image to video generator. Whether it's a realistic scene or animation you want to create, Seedance can produce it quickly, and the way you want.\n\nOriginal image\nPrompt\n\nThe little girl keeps smiling at the camera and pokes the lens with her finger.\n\nExpand\nVideo\nPerfect for Every Image-to-Video Creator\nPhotographers\nSocial Media Managers\nE-commerce Brands\nDigital Artists\nPhotographers\nTransform photos into cinematic stories\n\nBring your photography portfolio to life by animating static images. Create stunning visual narratives and showcase your work in dynamic new ways that captivate audiences.\n\nFAQs\n\nFind answers to common questions about our AI image to video generation service.\n\nWhat is an AI image to video generator?\nWhat is the best image to video AI generator?\nWhat makes Seedance's image to video generator stand out?\nWhat types of images work best with Seedance?\nIs Seedance's image to video generator free?\nLearn More About AI Video\nHow to Create AI Videos for TikTok: Complete Guide 2026\n\nLearn how to create viral AI videos for TikTok using free tools. Step-by-step guide with prompt templates, editing tips, and viral strategies.\n\nTop 10 Best Runway Alternatives in 2026 (Free & Paid)\n\nCompare the 10 best Runway alternatives including free options. Find the perfect AI video generator for your needs.\n\nHow to Turn Photos into Videos with AI (Free Guide 2026)\n\nLearn how to turn any photo into a video using free AI tools. Step-by-step guide with prompts and tips.\n\nBreathe Life into Your Stati"
+}

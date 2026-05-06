@@ -1,0 +1,78 @@
+{
+    "timestamp":  "2026-05-06T01:58:18.018Z",
+    "workflow":  "capcut-fresh-upload-create-storyboard-stop",
+    "status":  "stopped-after-create-storyboard",
+    "projectTitle":  "20260505215758",
+    "url":  "https://www.capcut.com/ai-creator/agent?enter_from=canvas_new_project\u0026fresh=1778032677656\u0026workspaceId=7635130739515736078\u0026spaceId=7635124039241352206\u0026draftId=D89579E9-1ED6-4131-AC8E-652B3F33250C",
+    "sourceImage":  "C:\\Users\\outdo\\Documents\\Seek and Find Books\\content\\outputs\\images\\pending-review\\day-1-meet-ember-seedance-source-image-recovered-2026-05-05T22-47-49-446Z.png",
+    "uploadStatus":  "uploaded-via-left-import-menu",
+    "screenshot":  "content/outputs/videos/pending-review/day-1-meet-ember-capcut-fresh-upload-create-storyboard-stop-2026-05-06T01-58-17-845Z.png",
+    "promptEntered":  false,
+    "generationClicked":  false,
+    "imageEvidence":  [
+                          {
+                              "i":  0,
+                              "alt":  "avatar",
+                              "width":  100,
+                              "height":  100,
+                              "clientWidth":  24,
+                              "clientHeight":  24,
+                              "src":  "https://p16-ulike.capcutcdn-us.com/img/user-avatar-musically/3e5167c555ee2d25417d0adfc88c78df~tplv-resize:100:0.image"
+                          },
+                          {
+                              "i":  1,
+                              "alt":  "Image preview",
+                              "width":  608,
+                              "height":  1080,
+                              "clientWidth":  200,
+                              "clientHeight":  356,
+                              "src":  "blob:https://www.capcut.com/d1e96d98-aa39-4ed9-aa0e-948c257781f4"
+                          },
+                          {
+                              "i":  2,
+                              "alt":  "Cinematic Widescreen Grading",
+                              "width":  1536,
+                              "height":  2048,
+                              "clientWidth":  22,
+                              "clientHeight":  22,
+                              "src":  "https://p16-vimo-useast5.capcutcdn-us.com/tos-useast5-i-f0k6wfgiqi-tx/21471a0135e74a1db9c57b09b088ba4e"
+                          },
+                          {
+                              "i":  3,
+                              "alt":  "Snow scene movie",
+                              "width":  1728,
+                              "height":  2304,
+                              "clientWidth":  22,
+                              "clientHeight":  22,
+                              "src":  "https://p16-vimo-useast5.capcutcdn-us.com/tos-useast5-i-f0k6wfgiqi-tx/b54a484c8e044d2dad9c143e966a96af"
+                          },
+                          {
+                              "i":  4,
+                              "alt":  "avatar",
+                              "width":  100,
+                              "height":  100,
+                              "clientWidth":  0,
+                              "clientHeight":  0,
+                              "src":  "https://p16-ulike.capcutcdn-us.com/img/user-avatar-musically/3e5167c555ee2d25417d0adfc88c78df~tplv-resize:100:0.image"
+                          },
+                          {
+                              "i":  5,
+                              "alt":  "",
+                              "width":  0,
+                              "height":  0,
+                              "clientWidth":  0,
+                              "clientHeight":  0,
+                              "src":  "https://bat.bing.com/action/0?ti=97063917\u0026Ver=2\u0026mid=fb18ed7f-1373-41c7-b730-9b3fc7a0386b\u0026bo=3\u0026sid=d4e1e0b048d511f19870eb"
+                          },
+                          {
+                              "i":  6,
+                              "alt":  "",
+                              "width":  0,
+                              "height":  0,
+                              "clientWidth":  0,
+                              "clientHeight":  0,
+                              "src":  "https://bat.bing.com/action/0?ti=97063917\u0026Ver=2\u0026mid=ee78013d-5818-4c9d-b2e2-1906f108c402\u0026bo=1\u0026sid=d4e1e0b048d511f19870eb"
+                          }
+                      ],
+    "textSummary":  "CapCut draft 20260505215758 shows Image 1, Storyboard 1, a blank script area with Enter your script here, 380 credits, and no prompt or generation started."
+}

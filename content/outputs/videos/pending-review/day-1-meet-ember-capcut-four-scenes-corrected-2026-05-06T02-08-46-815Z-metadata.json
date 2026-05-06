@@ -1,0 +1,176 @@
+{
+  "timestamp": "2026-05-06T02:08:46.977Z",
+  "workflow": "capcut-four-scene-storyboard-insertion",
+  "status": "four-scenes-inserted-corrected-in-existing-blocks",
+  "projectTitle": "20260505215758",
+  "url": "https://www.capcut.com/ai-creator/agent?enter_from=canvas_new_project&fresh=1778032677656&workspaceId=7635130739515736078&spaceId=7635124039241352206&draftId=D89579E9-1ED6-4131-AC8E-652B3F33250C",
+  "controlsRecorded": {
+    "storyboardTextInsertionElement": "div.tiptap.ProseMirror[contenteditable=\"true\"] inside selected Storyboard 1 shot block",
+    "addSceneElement": "div[class*=\"linearAdder\"][class*=\"bottom\"] / svg.dividerIcon tooltip Add scene, under the current shot block",
+    "knownAddScenePoint": {
+      "x": 554,
+      "y": 363
+    }
+  },
+  "insertedScenes": [
+    "0:00-0:03: Start from the Ember source image. Keep one simple cozy backdrop behind Ember: soft warm glow, a few blurred lantern shapes, and no crowd or busy festival detail.",
+    "0:03-0:07: Ember gives a tiny friendly wave and blinks. Keep the background nearly still, with only very soft light shimmer.",
+    "0:07-0:11: Add a gentle slow push-in. Use very mild parallax only between Ember and the simple blurred background. Let two or three tiny warm sparkles drift slowly, without adding new props.",
+    "0:11-0:15: Ember smiles toward the viewer. End on the same simple background and a calm, welcoming character-intro moment that feels like an invitation to search with Ember."
+  ],
+  "finalShotCount": 4,
+  "state": {
+    "title": "CapCut Video Studio | The all-in-one canvas for video creation",
+    "url": "https://www.capcut.com/ai-creator/agent?enter_from=canvas_new_project&fresh=1778032677656&workspaceId=7635130739515736078&spaceId=7635124039241352206&draftId=D89579E9-1ED6-4131-AC8E-652B3F33250C",
+    "shotCount": 4,
+    "shots": [
+      {
+        "index": 1,
+        "text": "00:00 Add narrator 0:00-0:03: Start from the Ember source image. Keep one simple cozy backdrop behind Ember: soft warm glow, a few blurred lantern shapes, and no crowd or busy festival detail.",
+        "rect": {
+          "x": 554,
+          "y": 252,
+          "width": 420,
+          "height": 136
+        },
+        "className": "shotItem-xpuLGf modified-xLS4QA"
+      },
+      {
+        "index": 2,
+        "text": "00:00 Add narrator 0:03-0:07: Ember gives a tiny friendly wave and blinks. Keep the background nearly still, with only very soft light shimmer.",
+        "rect": {
+          "x": 554,
+          "y": 396,
+          "width": 420,
+          "height": 96
+        },
+        "className": "shotItem-xpuLGf modified-xLS4QA"
+      },
+      {
+        "index": 3,
+        "text": "00:00 Add narrator 0:07-0:11: Add a gentle slow push-in. Use very mild parallax only between Ember and the simple blurred background. Let two or three tiny warm sparkles drift slowly, without adding new props.",
+        "rect": {
+          "x": 554,
+          "y": 500,
+          "width": 420,
+          "height": 136
+        },
+        "className": "shotItem-xpuLGf modified-xLS4QA"
+      },
+      {
+        "index": 4,
+        "text": "00:00 Add narrator 0:11-0:15: Ember smiles toward the viewer. End on the same simple background and a calm, welcoming character-intro moment that feels like an invitation to search with Ember.",
+        "rect": {
+          "x": 554,
+          "y": 644,
+          "width": 420,
+          "height": 116
+        },
+        "className": "shotItem-xpuLGf selected-vw3QUY focused-wnw73h modified-xLS4QA"
+      }
+    ],
+    "editorCount": 4,
+    "editors": [
+      {
+        "index": 1,
+        "text": "0:00-0:03: Start from the Ember source image. Keep one simple cozy backdrop behind Ember: soft warm glow, a few blurred lantern shapes, and no crowd or busy festival detail.",
+        "rect": {
+          "x": 566,
+          "y": 280,
+          "width": 302,
+          "height": 100
+        },
+        "className": "tiptap ProseMirror editorContent-CbaFGw editor-df5z55"
+      },
+      {
+        "index": 2,
+        "text": "0:03-0:07: Ember gives a tiny friendly wave and blinks. Keep the background nearly still, with only very soft light shimmer.",
+        "rect": {
+          "x": 566,
+          "y": 424,
+          "width": 302,
+          "height": 60
+        },
+        "className": "tiptap ProseMirror editorContent-CbaFGw editor-df5z55"
+      },
+      {
+        "index": 3,
+        "text": "0:07-0:11: Add a gentle slow push-in. Use very mild parallax only between Ember and the simple blurred background. Let two or three tiny warm sparkles drift slowly, without adding new props.",
+        "rect": {
+          "x": 566,
+          "y": 528,
+          "width": 302,
+          "height": 100
+        },
+        "className": "tiptap ProseMirror editorContent-CbaFGw editor-df5z55"
+      },
+      {
+        "index": 4,
+        "text": "0:11-0:15: Ember smiles toward the viewer. End on the same simple background and a calm, welcoming character-intro moment that feels like an invitation to search with Ember.",
+        "rect": {
+          "x": 566,
+          "y": 672,
+          "width": 302,
+          "height": 80
+        },
+        "className": "tiptap ProseMirror editorContent-CbaFGw editor-df5z55 ProseMirror-focused"
+      }
+    ],
+    "addSceneCount": 5,
+    "adders": [
+      {
+        "index": 1,
+        "rect": {
+          "x": 554,
+          "y": 238,
+          "width": 420,
+          "height": 20
+        },
+        "className": "linearAdder-f5T3gZ top-QZ6vtp"
+      },
+      {
+        "index": 2,
+        "rect": {
+          "x": 554,
+          "y": 382,
+          "width": 420,
+          "height": 20
+        },
+        "className": "linearAdder-f5T3gZ bottom-N2582b"
+      },
+      {
+        "index": 3,
+        "rect": {
+          "x": 554,
+          "y": 486,
+          "width": 420,
+          "height": 20
+        },
+        "className": "linearAdder-f5T3gZ bottom-N2582b"
+      },
+      {
+        "index": 4,
+        "rect": {
+          "x": 554,
+          "y": 630,
+          "width": 420,
+          "height": 20
+        },
+        "className": "linearAdder-f5T3gZ bottom-N2582b"
+      },
+      {
+        "index": 5,
+        "rect": {
+          "x": 554,
+          "y": 754,
+          "width": 420,
+          "height": 20
+        },
+        "className": "linearAdder-f5T3gZ bottom-N2582b"
+      }
+    ]
+  },
+  "screenshot": "content/outputs/videos/pending-review/day-1-meet-ember-capcut-four-scenes-corrected-2026-05-06T02-08-46-815Z.png",
+  "generationClicked": false,
+  "exportClicked": false
+}

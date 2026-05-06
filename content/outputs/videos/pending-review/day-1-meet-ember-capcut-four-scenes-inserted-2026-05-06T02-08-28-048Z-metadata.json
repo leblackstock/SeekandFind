@@ -1,0 +1,151 @@
+{
+  "timestamp": "2026-05-06T02:08:28.202Z",
+  "workflow": "capcut-four-scene-storyboard-insertion",
+  "status": "attempted-four-scenes",
+  "projectTitle": "20260505215758",
+  "url": "https://www.capcut.com/ai-creator/agent?enter_from=canvas_new_project&fresh=1778032677656&workspaceId=7635130739515736078&spaceId=7635124039241352206&draftId=D89579E9-1ED6-4131-AC8E-652B3F33250C",
+  "controlsRecorded": {
+    "storyboardTextInsertionElement": "div.tiptap.ProseMirror[contenteditable=\"true\"] inside selected Storyboard 1 shot block",
+    "addSceneElement": "div[class*=\"linearAdder\"][class*=\"bottom\"] / svg.dividerIcon tooltip Add scene, under the current shot block",
+    "knownAddScenePoint": {
+      "x": 554,
+      "y": 363
+    }
+  },
+  "insertedScenes": [
+    "0:00-0:03: Start from the Ember source image. Keep one simple cozy backdrop behind Ember: soft warm glow, a few blurred lantern shapes, and no crowd or busy festival detail.",
+    "0:03-0:07: Ember gives a tiny friendly wave and blinks. Keep the background nearly still, with only very soft light shimmer.",
+    "0:07-0:11: Add a gentle slow push-in. Use very mild parallax only between Ember and the simple blurred background. Let two or three tiny warm sparkles drift slowly, without adding new props.",
+    "0:11-0:15: Ember smiles toward the viewer. End on the same simple background and a calm, welcoming character-intro moment that feels like an invitation to search with Ember."
+  ],
+  "initialShots": 1,
+  "finalShotCount": 4,
+  "fillMethods": [
+    "focused",
+    "focused",
+    "focused",
+    "focused"
+  ],
+  "state": {
+    "title": "CapCut Video Studio | The all-in-one canvas for video creation",
+    "url": "https://www.capcut.com/ai-creator/agent?enter_from=canvas_new_project&fresh=1778032677656&workspaceId=7635130739515736078&spaceId=7635124039241352206&draftId=D89579E9-1ED6-4131-AC8E-652B3F33250C",
+    "shotCount": 4,
+    "shots": [
+      {
+        "index": 1,
+        "text": "00:00 Add narrator 0:00-0:03: Start from the Ember source image. Keep one simple cozy backdrop behind Ember: soft warm glow, a few blurred lantern shapes, and no crowd or busy festival detail.",
+        "rect": {
+          "x": 554,
+          "y": 276,
+          "width": 420,
+          "height": 136
+        },
+        "classes": "shotItem-xpuLGf selected-vw3QUY modified-xLS4QA"
+      },
+      {
+        "index": 2,
+        "text": "00:00 Add narrator 0:11-0:15: Ember smiles toward the viewer. End on the same simple background and a calm, welcoming character-intro moment that feels like an invitation to search with Ember.",
+        "rect": {
+          "x": 554,
+          "y": 420,
+          "width": 420,
+          "height": 116
+        },
+        "classes": "shotItem-xpuLGf focused-wnw73h"
+      },
+      {
+        "index": 3,
+        "text": "00:00 Add narrator 0:07-0:11: Add a gentle slow push-in. Use very mild parallax only between Ember and the simple blurred background. Let two or three tiny warm sparkles drift slowly, without adding new props.",
+        "rect": {
+          "x": 554,
+          "y": 544,
+          "width": 420,
+          "height": 136
+        },
+        "classes": "shotItem-xpuLGf modified-xLS4QA"
+      },
+      {
+        "index": 4,
+        "text": "00:00 Add narrator 0:03-0:07: Ember gives a tiny friendly wave and blinks. Keep the background nearly still, with only very soft light shimmer.",
+        "rect": {
+          "x": 554,
+          "y": 688,
+          "width": 420,
+          "height": 96
+        },
+        "classes": "shotItem-xpuLGf modified-xLS4QA"
+      }
+    ],
+    "selected": [
+      {
+        "tag": "div",
+        "text": "Storyboard 1 00:00 Add narrator 0:00-0:03: Start from the Ember source image. Keep one simple cozy backdrop behind Ember: soft warm glow, a few blurred lantern shapes, and no crowd or busy festival de",
+        "className": "react-flow__node react-flow__node-NodeStoryboard nopan selected selectable draggable",
+        "rect": {
+          "x": 524,
+          "y": 243,
+          "width": 875,
+          "height": 510
+        }
+      },
+      {
+        "tag": "div",
+        "text": "Storyboard 1 00:00 Add narrator 0:00-0:03: Start from the Ember source image. Keep one simple cozy backdrop behind Ember: soft warm glow, a few blurred lantern shapes, and no crowd or busy festival de",
+        "className": "node-selected",
+        "rect": {
+          "x": 524,
+          "y": 243,
+          "width": 875,
+          "height": 510
+        }
+      },
+      {
+        "tag": "div",
+        "text": "00:00 Add narrator 0:00-0:03: Start from the Ember source image. Keep one simple cozy backdrop behind Ember: soft warm glow, a few blurred lantern shapes, and no crowd or busy festival detail. 00:00 A",
+        "className": "nodeContainer-Nru0hf selected-r2SIgl",
+        "rect": {
+          "x": 524,
+          "y": 243,
+          "width": 875,
+          "height": 510
+        }
+      },
+      {
+        "tag": "div",
+        "text": "00:00 Add narrator 0:00-0:03: Start from the Ember source image. Keep one simple cozy backdrop behind Ember: soft warm glow, a few blurred lantern shapes, and no crowd or busy festival detail.",
+        "className": "shotItem-xpuLGf selected-vw3QUY modified-xLS4QA",
+        "rect": {
+          "x": 554,
+          "y": 276,
+          "width": 420,
+          "height": 136
+        }
+      },
+      {
+        "tag": "div",
+        "text": "00:00 Add narrator 0:11-0:15: Ember smiles toward the viewer. End on the same simple background and a calm, welcoming character-intro moment that feels like an invitation to search with Ember.",
+        "className": "shotItem-xpuLGf focused-wnw73h",
+        "rect": {
+          "x": 554,
+          "y": 420,
+          "width": 420,
+          "height": 116
+        }
+      },
+      {
+        "tag": "div",
+        "text": "0:11-0:15: Ember smiles toward the viewer. End on the same simple background and a calm, welcoming character-intro moment that feels like an invitation to search with Ember.",
+        "className": "tiptap ProseMirror editorContent-CbaFGw editor-df5z55 ProseMirror-focused",
+        "rect": {
+          "x": 566,
+          "y": 448,
+          "width": 302,
+          "height": 80
+        }
+      }
+    ]
+  },
+  "screenshot": "content/outputs/videos/pending-review/day-1-meet-ember-capcut-four-scenes-inserted-2026-05-06T02-08-28-048Z.png",
+  "generationClicked": false,
+  "exportClicked": false
+}

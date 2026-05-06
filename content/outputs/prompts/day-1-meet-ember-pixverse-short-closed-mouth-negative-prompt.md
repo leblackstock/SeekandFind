@@ -1,0 +1,1 @@
+talking, speech, lip sync, lip movement, moving mouth, open mouth, jaw movement, face distortion, warped eyes, stretched pupils, text, captions, subtitles, logos, watermark, extra characters, new props, scene changes, fast motion, realistic redesign

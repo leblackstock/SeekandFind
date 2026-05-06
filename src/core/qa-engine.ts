@@ -55,6 +55,7 @@ export function runStoryboardQa(text: string): QaResult {
   if (!has(text, /reference/i)) failures.push("Missing image/video reference guidance.");
   if (!has(text, /camera/i)) failures.push("Missing camera movement notes.");
   if (!has(text, /CapCut/i)) failures.push("Missing CapCut edit notes.");
+  if (!has(text, /captioned narration|motion-only|bottom text/i)) failures.push("Missing storyboard type warning for CapCut bottom text behavior.");
   return result(failures);
 }
 
