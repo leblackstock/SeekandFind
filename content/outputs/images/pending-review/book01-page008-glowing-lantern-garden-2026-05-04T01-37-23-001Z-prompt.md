@@ -66,7 +66,7 @@ Sparkleflame Festival language is Book 1-specific. Do not treat Sparkleflame as 
 - Echo Glow Gem
 - Dragon Door Key
 - Sparkle Market Token
-- Sparkleflame Crown Lantern
+- Look-a-head Telescope
 
 ## KDP Working Assumptions
 

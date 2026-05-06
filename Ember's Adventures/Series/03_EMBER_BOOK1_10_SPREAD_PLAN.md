@@ -27,7 +27,7 @@ Printed order is story/list left page then seek image right page. Production ord
 | 7 | 14 | 15 | Magical Dragon Mountain | Crystal Echo Cavern | Echo Glow Gem | Crystal frame; glowing checklist pockets |
 | 8 | 16 | 17 | Magical Dragon Mountain | Ancient Dragon Door | Dragon Door Key | Ancient-door parchment; keyhole icon markers |
 | 9 | 18 | 19 | Sparkleflame Festival Valley | Festival Market Stalls | Sparkle Market Token | Market stall label card; token-themed icons |
-| 10 | 20 | 21 | Sparkleflame Festival Valley | Sparkleflame Festival Finale | Sparkleflame Crown Lantern | Celebration arch; checklist lantern string |
+| 10 | 20 | 21 | Sparkleflame Festival Valley | Sparkleflame Festival Finale | Look-a-head Telescope | Celebration arch; lookout-telescope checklist cue |
 
 ## Broad Searchable Categories
 
@@ -42,7 +42,7 @@ Printed order is story/list left page then seek image right page. Production ord
 | 15 | Cave pools, reflections, carved stones, glowing cracks, hidden dragon symbols, echo marks, ledges, smooth rock shelves, cave shadows, small festival keepsakes, and the Echo Glow Gem as the only required gem focus. |
 | 17 | Keys, carved stones, vines, old symbols, glowing cracks, moss patches, door hinges, keyholes, handles, dragon-scale patterns, side stones, tiny festival lanterns along the approach, and hidden clue objects around the ancient door. |
 | 19 | Market goods, baskets, tiny trinkets, treats, fabric pouches, painted tokens, souvenir boxes, small dragon-made objects, counter displays, stall shelves, hand-carried parcels, and festival lantern strings over the stalls. |
-| 21 | Festival lantern strings, lantern garlands, glowing lantern stands, musical objects, friendly dragon details, treat tables, celebration arches, pennants, drums, tiny horns, side stalls, dance-path details, and the Sparkleflame Crown Lantern as the main crown-shaped lantern focus. |
+| 21 | Festival lantern strings, lantern garlands, glowing lantern stands, musical objects, friendly dragon details, treat tables, celebration arches, pennants, drums, tiny horns, side stalls, dance-path details, and one Look-a-head Telescope as the main lookout focus. |
 
 ## Story/List Source Blocks
 
@@ -176,20 +176,20 @@ Layout: market stall label card; checklist tokens run toward the right side.
 
 Title: `The Festival Shines`
 
-Story: `Ember reached the bright festival finale just as the last lanterns began to glow. Music, treats, and friendly dragon cheers filled the valley. One crown-shaped lantern held the final sparkle needed to make the whole festival shine.`
+Story: `Ember reached the bright festival finale just as the last lanterns began to glow. Music, treats, and friendly dragon cheers filled the valley. The festival was shining again, and the Look-a-head Telescope waited to show Ember where his next adventure would begin.`
 
-Mission line: `Can you help Ember find the Sparkleflame Crown Lantern?`
+Mission line: `Can you help Ember find the Look-a-head Telescope?`
 
-Checklist rule: Sparkleflame Crown Lantern first, then 10 main printed finds and 5-15 bonus finds from approved page 21 art.
+Checklist rule: Look-a-head Telescope first, then 10 main printed finds and 5-15 bonus finds from approved page 21 art.
 
-Icon plan: lantern, crown, bell, banner, treat, gem, and music icons.
+Icon plan: telescope, sparkle, bell, banner, treat, gem, and music icons.
 
-Layout: celebration arch; checklist appears as a lantern string flowing right.
+Layout: celebration arch; checklist follows a lookout ribbon flowing right.
 
 ## Pages 22-23 Recap / Reward Spread
 
 Show Ember proudly celebrating the 10 recovered mission items:
 
-Tiny Sparkleflame Map; Golden Welcome Bell; Glowing Sugar Star; Baby Flame Lantern; Firefly Flower Charm; Shimmer Trail Stone; Echo Glow Gem; Dragon Door Key; Sparkle Market Token; Sparkleflame Crown Lantern.
+Tiny Sparkleflame Map; Golden Welcome Bell; Glowing Sugar Star; Baby Flame Lantern; Firefly Flower Charm; Shimmer Trail Stone; Echo Glow Gem; Dragon Door Key; Sparkle Market Token; Look-a-head Telescope.
 
 Do not show answer locations. This is a reward spread, not an answer key.

@@ -88,7 +88,7 @@ Verification evidence:
 
 ## Next Step
 
-Day 1 is still in progress across the full launch workflow.
+Day 1 is now handled with blockers across the full launch workflow.
 
 Chromium audit saved:
 `content/outputs/marketing/posts/audits/2026-05-05-day-1-pinterest-audit.md`
@@ -97,4 +97,4 @@ Pinterest Day 1 is verified: the live Pin is on the `Dragon Books for Kids` boar
 
 Pinterest Day 1 is complete at 3 required Pins.
 
-Remaining Day 1 work is outside Pinterest: Instagram needs-account, Facebook needs-account, and Short Video has an approved export but needs TikTok/YouTube/Instagram/Facebook setup verification before upload.
+Remaining Day 1 work outside Pinterest was handled on 2026-05-06 as far as safe access allowed: Instagram feed and Reel posted, YouTube Short public, Facebook blocked at login/Page setup, and TikTok blocked at login/sign-up.

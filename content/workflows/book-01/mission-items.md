@@ -9,4 +9,4 @@
 - Echo Glow Gem
 - Dragon Door Key
 - Sparkle Market Token
-- Sparkleflame Crown Lantern
+- Look-a-head Telescope

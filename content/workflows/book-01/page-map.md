@@ -15,4 +15,4 @@ This file is the automation working page map for `ember-content-studio`. Update 
 | 7 | 14 | 15 | Echo Glow Cave | Echo Glow Gem |
 | 8 | 16 | 17 | Dragon Door Cottage | Dragon Door Key |
 | 9 | 18 | 19 | Sparkle Market | Sparkle Market Token |
-| 10 | 20 | 21 | Sparkleflame Finale | Sparkleflame Crown Lantern |
+| 10 | 20 | 21 | Sparkleflame Finale | Look-a-head Telescope |

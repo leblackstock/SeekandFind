@@ -102,7 +102,7 @@ Use this order only if page 2 is the first story/list page. If another front-mat
 | 8 | 15 then 14 | Spread 7 | Crystal Echo Cavern | Echo Glow Gem | ? |
 | 9 | 17 then 16 | Spread 8 | Ancient Dragon Door | Dragon Door Key | ? |
 | 10 | 19 then 18 | Spread 9 | Festival Market Stalls | Sparkle Market Token | ? |
-| 11 | 21 then 20 | Spread 10 | Sparkleflame Festival Finale | Sparkleflame Crown Lantern | ? |
+| 11 | 21 then 20 | Spread 10 | Sparkleflame Festival Finale | Look-a-head Telescope | ? |
 | 12 | 22-23 | Recap/reward spread | 10 mission items | all 10 | ? |
 | 13 | 24 | Closing/teaser | Where Will Ember Search Next? / Book 2 teaser | n/a | ? |
 
@@ -178,7 +178,7 @@ These rows mirror `seek-and-find-rules-consolidated-4-files/03_TEMPLATES_PROMPTS
 | `b1p15` / `b1p15 list 20-30` / `b1p14 md` / `b1p14` / `Book 1 page 15` | 1 | 15 then 14 | seek image + paired story/list | 14 story/list | Echoes in the Crystal Cave | Crystal Echo Cavern | Echo Glow Gem | `B1P15.png`, `B1P14.md`, `B1P14.png` |
 | `b1p17` / `b1p17 list 20-30` / `b1p16 md` / `b1p16` / `Book 1 page 17` | 1 | 17 then 16 | seek image + paired story/list | 16 story/list | The Ancient Dragon Door | Ancient Dragon Door | Dragon Door Key | `B1P17.png`, `B1P16.md`, `B1P16.png` |
 | `b1p19` / `b1p19 list 20-30` / `b1p18 md` / `b1p18` / `Book 1 page 19` | 1 | 19 then 18 | seek image + paired story/list | 18 story/list | Market Lights Waking Up | Festival Market Stalls | Sparkle Market Token | `B1P19.png`, `B1P18.md`, `B1P18.png` |
-| `b1p21` / `b1p21 list 20-30` / `b1p20 md` / `b1p20` / `Book 1 page 21` | 1 | 21 then 20 | seek image + paired story/list | 20 story/list | The Festival Shines | Sparkleflame Festival Finale | Sparkleflame Crown Lantern | `B1P21.png`, `B1P20.md`, `B1P20.png` |
+| `b1p21` / `b1p21 list 20-30` / `b1p20 md` / `b1p20` / `Book 1 page 21` | 1 | 21 then 20 | seek image + paired story/list | 20 story/list | The Festival Shines | Sparkleflame Festival Finale | Look-a-head Telescope | `B1P21.png`, `B1P20.md`, `B1P20.png` |
 | `b1p22-23` / `Book 1 pages 22-23` | 1 | 22-23 | recap / reward spread | n/a | Recap / reward spread | 10 mission items | all 10 mission items | `B1P22-23.png` |
 | `b1p24` / `Book 1 page 24` | 1 | 24 | closing / teaser | n/a | Where Will Ember Search Next? | Book 2 teaser | n/a | `B1P24.png` |
 | `b2p1` / `Book 2 page 1` | 2 | 1 | title page | n/a | Ember and the Enchanted Forest Search | title page | n/a | `B2P01.png` |

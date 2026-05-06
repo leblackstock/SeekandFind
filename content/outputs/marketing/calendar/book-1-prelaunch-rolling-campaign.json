@@ -10,13 +10,13 @@
       "order": 1,
       "relativeDay": "Day 1",
       "scheduledDate": "2026-05-05",
-      "status": "in-progress",
-      "platform": "Pinterest primary, Instagram/Facebook secondary",
+      "status": "complete",
+      "platform": "Pinterest, Instagram, Facebook, YouTube Shorts/Reels, TikTok",
       "theme": "Meet Ember",
       "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
       "caption": "Meet Ember, a tiny baby dragon guide for a cozy seek-and-find adventure made for children ages 5-8.",
       "cta": "Follow for more Ember sneak peeks.",
-      "notes": "Good first pinned or profile-intro post. Keep it as a character intro, not a cover claim."
+      "notes": "Day 1 is complete across tracked platforms: 3 Pinterest Pins, Instagram feed/Reel, Facebook Page post/Reel, YouTube Short, and TikTok video are posted."
     },
     {
       "order": 2,
@@ -35,12 +35,12 @@
       "relativeDay": "Day 3",
       "scheduledDate": "2026-05-07",
       "status": "ready-to-schedule",
-      "platform": "Instagram/Facebook",
+      "platform": "Instagram/Facebook, YouTube channel branding, Facebook Page cover",
       "theme": "Search with Ember",
       "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
       "caption": "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers.",
       "cta": "Share with a little dragon fan.",
-      "notes": "Simple caption-only post. No added image text required."
+      "notes": "Simple caption-only post. Also create/upload proper wide YouTube banner and proper wide Facebook Page cover image; do not use a vertical promo crop for either banner surface."
     },
     {
       "order": 4,
@@ -194,41 +194,41 @@
     {
       "dayOrder": 1,
       "scheduledDate": "2026-05-05",
-      "status": "needs-account",
+      "status": "posted",
       "platform": "Instagram",
-      "placement": "Feed post plus Story reshare",
+      "placement": "Feed post",
       "theme": "Meet Ember",
       "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
       "copy": "Meet Ember, a tiny baby dragon guide for a cozy seek-and-find adventure made for children ages 5-8.\n\nFollow for more Ember sneak peeks.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #KidsBooks",
       "cta": "Follow for more Ember sneak peeks.",
-      "link": "profile link only after a real landing/store URL exists",
-      "notes": "Account access is not verified in this repo yet. Post or schedule once Instagram is available."
+      "link": "https://www.instagram.com/emberdragonbooks/p/DYAfOQbiY2F/",
+      "notes": "Posted from the verified @emberdragonbooks Instagram account on 2026-05-06. Profile showed 2 posts after posting the feed image and Reel. Story reshare/highlights are deferred until the account has story/highlight workflow ready."
     },
     {
       "dayOrder": 1,
       "scheduledDate": "2026-05-05",
-      "status": "needs-account",
+      "status": "posted",
       "platform": "Facebook",
       "placement": "Page post",
       "theme": "Meet Ember",
       "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
       "copy": "Meet Ember, a tiny baby dragon guide for a cozy seek-and-find adventure made for children ages 5-8.\n\nFollow for more Ember sneak peeks.",
       "cta": "Follow for more Ember sneak peeks.",
-      "link": "blank until real landing/store URL exists",
-      "notes": "Account access is not verified in this repo yet. Use warmer progress-note wording for Facebook."
+      "link": "https://www.facebook.com/photo/?fbid=122097466095308464&set=a.122097467409308464",
+      "notes": "Posted to the Ember Dragon Books Facebook Page on 2026-05-06. Facebook offered a WhatsApp/contact upsell after posting; Not now was selected."
     },
     {
       "dayOrder": 1,
       "scheduledDate": "2026-05-05",
-      "status": "setup-needed",
+      "status": "posted",
       "platform": "Short Video",
-      "placement": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels",
+      "placement": "YouTube Shorts public; Instagram Reels public; Facebook Reels public; TikTok public",
       "theme": "Meet Ember",
       "asset": "content/outputs/videos/approved/day-1-meet-ember-pixverse-clean-approved-2026-05-06.mp4",
       "copy": "Meet Ember. A quick cozy search moment with Ember.",
       "cta": "Follow for more Ember sneak peeks.",
-      "link": "no link in video caption until real landing/store URL exists",
-      "notes": "Approved clean PixVerse export exists. Run Day 1 platform setup first: verify TikTok, YouTube Shorts, Instagram Reels, and Facebook Reels account/page/channel access before upload. Setup checklist: content/outputs/marketing/posts/2026-05-06-day-1-short-video-platform-setup.md"
+      "link": "YouTube: https://youtube.com/shorts/HSCae6g57M0?feature=share; Instagram Reel: https://www.instagram.com/emberdragonbooks/reel/DYAeycuKIkj/; Facebook Reel: https://www.facebook.com/reel/1266865735613117/; TikTok: https://www.tiktok.com/@emberdragonbooks/video/7636862024382811422",
+      "notes": "Fixed replacement YouTube Short is public. Instagram Reel posted from @emberdragonbooks; Facebook Reel posted from the Ember Dragon Books Page; TikTok posted from @emberdragonbooks on 2026-05-06."
     },
     {
       "dayOrder": 2,
@@ -1130,7 +1130,7 @@
       },
       {
         "platform": "Instagram",
-        "currentState": "Account not created yet. Gmail/Google account exists for setup support.",
+        "currentState": "Instagram account exists and is accessible: @emberdragonbooks. Day 1 feed post and Reel are live.",
         "setupChecks": [
           "Create or confirm Instagram account and profile name.",
           "Confirm whether a professional account is needed for scheduling/insights.",
@@ -1138,49 +1138,45 @@
           "Check whether Meta Business Suite can see the account."
         ],
         "structureToCreate": "Highlights: Meet Ember, Search Challenges, Behind the Scenes.",
-        "dailyCheck": "Create Instagram first, then post/schedule feed, story, or Reel version when access is ready; otherwise record needs-account.",
-        "blocker": "No Instagram account yet."
+        "dailyCheck": "Post or schedule Instagram feed/Reel tasks from the logged-in @emberdragonbooks account; create highlights after story/highlight workflow is ready.",
+        "blocker": "No basic posting blocker. Meta Business Suite connection and highlights are not yet verified."
       },
       {
         "platform": "Facebook",
-        "currentState": "Page not created yet. Gmail/Google account exists for setup support.",
+        "currentState": "Facebook Page exists and is accessible: Ember Dragon Books. Day 1 Page post and Reel are live.",
         "setupChecks": [
-          "Create or confirm Facebook Page.",
-          "Confirm Lauren can switch into it.",
           "Confirm Meta Business Suite access.",
           "Confirm whether posts can be scheduled from the planner.",
-          "Create pinned intro post and optional promo-art album."
+          "Create/upload a proper wide Facebook Page cover image on Day 3, 2026-05-07.",
+          "Create pinned intro post and optional promo-art album later."
         ],
         "structureToCreate": "Pinned Meet Ember post plus Ember Sneak Peeks album.",
-        "dailyCheck": "Create Facebook Page / Meta setup first, then post/schedule warmer parent/gift-buyer copy or record the account blocker.",
-        "blocker": "No Facebook Page or Meta Business Suite access yet."
+        "dailyCheck": "Post or schedule warmer parent/gift-buyer copy from the verified Page; avoid ads/boost/payment surfaces unless explicitly chosen.",
+        "blocker": "No current Page-posting blocker."
       },
       {
         "platform": "YouTube Shorts",
-        "currentState": "Day 1 approved export exists; Gmail/Google account exists, but Ember YouTube channel is not confirmed yet.",
+        "currentState": "Fixed Day 1 YouTube Short is public. Owner-provided URL: https://youtube.com/shorts/HSCae6g57M0?feature=share. Channel: https://www.youtube.com/channel/UC9I5x3-uPYURdn__A8x9xuA. Handle: @EmberDragonBooks.",
         "setupChecks": [
-          "Create or confirm the Ember YouTube channel.",
-          "Verify Shorts upload access.",
           "Create playlists only after the first video or Short exists.",
           "Check playlist creation limits before batching many playlists.",
           "Keep Shorts titles tied to the daily theme."
         ],
         "structureToCreate": "Playlists after first upload: Ember Seek-and-Find Challenges, Screen-Free Kids Activities, Ember Book 1 Sneak Peeks.",
-        "dailyCheck": "Create/confirm the YouTube channel, then upload/schedule only after access is verified; otherwise record account/channel blocker.",
-        "blocker": "No confirmed Ember YouTube channel yet."
+        "dailyCheck": "Record channel details; create playlists only if useful after the first Short exists.",
+        "blocker": "Public live page not independently inspected by Codex."
       },
       {
         "platform": "TikTok",
-        "currentState": "Account not created yet.",
+        "currentState": "TikTok account exists and is accessible: @emberdragonbooks. Day 1 video is live.",
         "setupChecks": [
-          "Create or confirm TikTok account access.",
-          "Check whether creator playlists are available.",
+          "Check whether creator playlists are available later.",
           "If playlists are missing, use pinned videos and recurring caption labels.",
           "Reuse the same short-video exports prepared for Shorts/Reels."
         ],
         "structureToCreate": "Playlists if available: Seek-and-Find Challenges, Meet Ember.",
-        "dailyCheck": "Create TikTok account, then post/upload a short-video task when access is ready; otherwise record blocker.",
-        "blocker": "No TikTok account yet."
+        "dailyCheck": "Upload approved short-video tasks from the verified TikTok account; stop at CAPTCHA, security, or account prompts.",
+        "blocker": "No current TikTok posting blocker."
       },
       {
         "platform": "Landing / Store Link",
@@ -1272,17 +1268,17 @@
         "platform": "Facebook",
         "type": "Page Surface",
         "name": "Pinned Meet Ember Post",
-        "status": "create-when-account-ready",
+        "status": "optional-later",
         "use": "First profile signal for parents and gift-buyers.",
-        "nextAction": "Post or pin a Day 1-style intro after Page access is verified."
+        "nextAction": "Pin the posted Day 1 intro or create a pinned intro later if useful."
       },
       {
         "platform": "Facebook",
         "type": "Album",
         "name": "Ember Sneak Peeks",
-        "status": "create-when-account-ready",
+        "status": "optional-later",
         "use": "Organize approved promo art without calling it interior or listing art.",
-        "nextAction": "Create once Page media tools are available."
+        "nextAction": "Create only if the Page media tools make it useful."
       },
       {
         "platform": "YouTube Shorts",
@@ -1369,6 +1365,18 @@
         "item": "Platform access tracker",
         "output": "Confirmed status for Instagram, Facebook Page, YouTube channel, TikTok account, and Meta Business Suite.",
         "ownerAction": "Open each platform, verify account/page/channel access, and record blockers."
+      },
+      {
+        "priority": "Day 3 - 2026-05-07",
+        "item": "YouTube channel banner",
+        "output": "Proper 2560 x 1440 wide banner with central safe-area composition.",
+        "ownerAction": "Create/upload after the channel and first Short are stable; do not crop a vertical promo image."
+      },
+      {
+        "priority": "Day 3 - 2026-05-07",
+        "item": "Facebook Page cover image",
+        "output": "Proper wide Facebook cover image sized for the Page cover surface, with safe-area composition and no tiny unreadable text.",
+        "ownerAction": "Create/upload after Day 1 Page post and Reel are stable; do not crop a vertical promo image."
       },
       {
         "priority": "Next",

@@ -78,7 +78,7 @@ Use this as the working image checklist for Book 1 marketing. Fresh promotional 
 - [ ] Echo Glow Gem teaser.
 - [ ] Dragon Door Key teaser.
 - [ ] Sparkle Market Token teaser.
-- [ ] Sparkleflame Crown Lantern teaser.
+- [ ] Look-a-head Telescope teaser.
 
 ### Next Pinterest Batch Image Needs
 
@@ -385,7 +385,7 @@ CAN YOU FIND THE SPARKLE MARKET TOKEN?
 
 ```text
 Hidden mission item:
-Hide one Sparkleflame Crown Lantern fairly somewhere in the scene.
+Hide one Look-a-head Telescope fairly somewhere in the scene.
 
 Exact headline:
 CAN YOU FIND THE SPARKLEFLAME CROWN LANTERN?
@@ -1214,7 +1214,7 @@ Printed order is story/list left page then seek image right page. Production ord
 | 7 | 14 | 15 | Magical Dragon Mountain | Crystal Echo Cavern | Echo Glow Gem | Crystal frame; glowing checklist pockets |
 | 8 | 16 | 17 | Magical Dragon Mountain | Ancient Dragon Door | Dragon Door Key | Ancient-door parchment; keyhole icon markers |
 | 9 | 18 | 19 | Sparkleflame Festival Valley | Festival Market Stalls | Sparkle Market Token | Market stall label card; token-themed icons |
-| 10 | 20 | 21 | Sparkleflame Festival Valley | Sparkleflame Festival Finale | Sparkleflame Crown Lantern | Celebration arch; checklist lantern string |
+| 10 | 20 | 21 | Sparkleflame Festival Valley | Sparkleflame Festival Finale | Look-a-head Telescope | Celebration arch; lookout-telescope checklist cue |
 
 ## Broad Searchable Categories
 
@@ -1373,15 +1373,15 @@ Seek image placement note: Keep the market aisle/walkway mostly clear. Cluster b
 
 Title: `The Festival Shines`
 
-Story: `Ember reached the bright festival finale just as the last lanterns began to glow. Music, treats, and friendly dragon cheers filled the valley. One crown-shaped lantern held the final sparkle needed to make the whole festival shine.`
+Story: `Ember reached the bright festival finale just as the last lanterns began to glow. Music, treats, and friendly dragon cheers filled the valley. The festival was shining again, and the Look-a-head Telescope waited to show Ember where his next adventure would begin.`
 
-Mission line: `Can you help Ember find the Sparkleflame Crown Lantern?`
+Mission line: `Can you help Ember find the Look-a-head Telescope?`
 
-Checklist rule: Sparkleflame Crown Lantern first, then 10 main printed finds and 5-15 bonus finds from approved page 21 art.
+Checklist rule: Look-a-head Telescope first, then 10 main printed finds and 5-15 bonus finds from approved page 21 art.
 
-Icon plan: lantern, crown, bell, banner, treat, gem, and music icons.
+Icon plan: telescope, sparkle, bell, banner, treat, gem, and music icons.
 
-Layout: celebration arch; checklist appears as a lantern string flowing right.
+Layout: celebration arch; checklist follows a lookout ribbon flowing right.
 
 Seek image placement note: Keep the central celebration path open. Place lanterns, bells, banners, treats, gems, music objects, and sparkle shapes around the arch, stalls, side tables, and hanging decorations.
 
@@ -1389,7 +1389,7 @@ Seek image placement note: Keep the central celebration path open. Place lantern
 
 Show Ember proudly celebrating the 10 recovered mission items:
 
-Tiny Sparkleflame Map; Golden Welcome Bell; Glowing Sugar Star; Baby Flame Lantern; Firefly Flower Charm; Shimmer Trail Stone; Echo Glow Gem; Dragon Door Key; Sparkle Market Token; Sparkleflame Crown Lantern.
+Tiny Sparkleflame Map; Golden Welcome Bell; Glowing Sugar Star; Baby Flame Lantern; Firefly Flower Charm; Shimmer Trail Stone; Echo Glow Gem; Dragon Door Key; Sparkle Market Token; Look-a-head Telescope.
 
 Do not show answer locations. This is a reward spread, not an answer key.
 
@@ -1905,7 +1905,7 @@ Active mission-item motifs:
 - Echo Glow Gem
 - Dragon Door Key
 - Sparkle Market Token
-- Sparkleflame Crown Lantern
+- Look-a-head Telescope
 
 Cover/back-cover art may hint at these items without showing answer locations. Do not feature mission items from the superseded 18-scene plan.
 

@@ -100,7 +100,7 @@ Title: **Ember and the Sparkleflame Festival Search**
 | 8 | 15 then 14 | `b1p15`, `b1p15 list 20-30`, `b1p14 md`, `b1p14` | seek image + paired story/list | 14 | Echoes in the Crystal Cave / Crystal Echo Cavern | Echo Glow Gem | `B1P15.png`, `B1P14.md`, `B1P14.png` | ? | ? | ? | ? |
 | 9 | 17 then 16 | `b1p17`, `b1p17 list 20-30`, `b1p16 md`, `b1p16` | seek image + paired story/list | 16 | The Ancient Dragon Door / Ancient Dragon Door | Dragon Door Key | `B1P17.png`, `B1P16.md`, `B1P16.png` | ? | ? | ? | ? |
 | 10 | 19 then 18 | `b1p19`, `b1p19 list 20-30`, `b1p18 md`, `b1p18` | seek image + paired story/list | 18 | Market Lights Waking Up / Festival Market Stalls | Sparkle Market Token | `B1P19.png`, `B1P18.md`, `B1P18.png` | ? | ? | ? | ? |
-| 11 | 21 then 20 | `b1p21`, `b1p21 list 20-30`, `b1p20 md`, `b1p20` | seek image + paired story/list | 20 | The Festival Shines / Sparkleflame Festival Finale | Sparkleflame Crown Lantern | `B1P21.png`, `B1P20.md`, `B1P20.png` | ? | ? | ? | ? |
+| 11 | 21 then 20 | `b1p21`, `b1p21 list 20-30`, `b1p20 md`, `b1p20` | seek image + paired story/list | 20 | The Festival Shines / Sparkleflame Festival Finale | Look-a-head Telescope | `B1P21.png`, `B1P20.md`, `B1P20.png` | ? | ? | ? | ? |
 | 12 | 22-23 | `b1p22-23` | recap / reward spread | n/a | Recap / reward spread / all 10 mission items | all 10 mission items | `B1P22-23.png` | ? | ? | ? | ? |
 | 13 | 24 | `b1p24` | closing / teaser | n/a | Where Will Ember Search Next? / Book 2 teaser | n/a | `B1P24.png` | ? | n/a | ? | ? |
 

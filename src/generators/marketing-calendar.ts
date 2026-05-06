@@ -140,12 +140,12 @@ const basePlan: CalendarPlanSlot[] = [
     notes: "Use on activity-book and screen-free boards."
   },
   {
-    platform: "Instagram/Facebook",
+    platform: "Instagram/Facebook, YouTube channel branding, Facebook Page cover",
     theme: "Search with Ember",
     asset: approvedAssets.searchWithEmber,
     caption: "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers.",
     cta: "Share with a little dragon fan.",
-    notes: "Simple caption-only post. No added image text required."
+    notes: "Simple caption-only post. Also create/upload proper wide YouTube banner and proper wide Facebook Page cover image; do not use a vertical promo crop for either banner surface."
   },
   {
     platform: "Pinterest",
@@ -446,6 +446,18 @@ const creationBacklog: ContentCreationItem[] = [
     item: "Platform access tracker",
     output: "Confirmed status for Instagram, Facebook Page, YouTube channel, TikTok account, and Meta Business Suite.",
     ownerAction: "Open each platform, verify account/page/channel access, and record blockers."
+  },
+  {
+    priority: "Day 3 - 2026-05-07",
+    item: "YouTube channel banner",
+    output: "Proper 2560 x 1440 wide banner with central safe-area composition.",
+    ownerAction: "Create/upload after the channel and first Short are stable; do not crop a vertical promo image."
+  },
+  {
+    priority: "Day 3 - 2026-05-07",
+    item: "Facebook Page cover image",
+    output: "Proper wide Facebook cover image sized for the Page cover surface, with safe-area composition and no tiny unreadable text.",
+    ownerAction: "Create/upload after Day 1 Page post and Reel are stable; do not crop a vertical promo image."
   },
   {
     priority: "Next",
@@ -977,6 +989,7 @@ function buildPlatformSetups(tasks: MarketingPlatformTask[]): LaunchPlatformSetu
         "Verify Page exists and Lauren can switch into it.",
         "Confirm Meta Business Suite access.",
         "Confirm whether posts can be scheduled from the planner.",
+        "Create/upload a proper wide Facebook Page cover image on Day 3, 2026-05-07.",
         "Create pinned intro post and optional promo-art album."
       ],
       structureToCreate: "Pinned Meet Ember post plus Ember Sneak Peeks album.",
