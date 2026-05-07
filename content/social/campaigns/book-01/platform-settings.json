@@ -1,0 +1,78 @@
+{
+  "campaign_id": "book-01-prelaunch-rolling-campaign",
+  "canonical_queue": "content/social/campaigns/book-01/queue.json",
+  "platforms": [
+    {
+      "platform": "Pinterest",
+      "account_name": "Ember Dragon Books",
+      "account_handle": null,
+      "posting_surface": "Pinterest web UI",
+      "api_connector": {
+        "enabled": false,
+        "auth_env_var": null
+      },
+      "default_timezone": "America/New_York",
+      "notes": "Placeholder only. No API keys or OAuth configured."
+    },
+    {
+      "platform": "Instagram",
+      "account_name": "emberdragonbooks",
+      "account_handle": "@emberdragonbooks",
+      "posting_surface": "Instagram / Meta Business Suite",
+      "api_connector": {
+        "enabled": false,
+        "auth_env_var": null
+      },
+      "default_timezone": "America/New_York",
+      "notes": "Placeholder only. No API keys or OAuth configured."
+    },
+    {
+      "platform": "Facebook",
+      "account_name": "Ember Dragon Books",
+      "account_handle": null,
+      "posting_surface": "Facebook Page / Meta Business Suite",
+      "api_connector": {
+        "enabled": false,
+        "auth_env_var": null
+      },
+      "default_timezone": "America/New_York",
+      "notes": "Placeholder only. No API keys or OAuth configured."
+    },
+    {
+      "platform": "YouTube Shorts",
+      "account_name": "Ember Dragon Books",
+      "account_handle": "@EmberDragonBooks",
+      "posting_surface": "YouTube Studio",
+      "api_connector": {
+        "enabled": false,
+        "auth_env_var": null
+      },
+      "default_timezone": "America/New_York",
+      "notes": "Placeholder only. No API keys or OAuth configured."
+    },
+    {
+      "platform": "TikTok",
+      "account_name": "emberdragonbooks",
+      "account_handle": "@emberdragonbooks",
+      "posting_surface": "TikTok Studio",
+      "api_connector": {
+        "enabled": false,
+        "auth_env_var": null
+      },
+      "default_timezone": "America/New_York",
+      "notes": "Placeholder only. No API keys or OAuth configured."
+    },
+    {
+      "platform": "Meta Business Suite",
+      "account_name": "Ember Dragon Books / emberdragonbooks",
+      "account_handle": null,
+      "posting_surface": "Meta Business Suite",
+      "api_connector": {
+        "enabled": false,
+        "auth_env_var": null
+      },
+      "default_timezone": "America/New_York",
+      "notes": "Manual posting surface placeholder for Facebook and Instagram."
+    }
+  ]
+}

@@ -1,0 +1,1183 @@
+{
+  "campaign_id": "book-01-prelaunch-rolling-campaign",
+  "campaign_name": "Book 1 Prelaunch Rolling Campaign",
+  "source_files_used": [
+    "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
+    "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
+    "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md",
+    "content/outputs/session-logs/2026-05-06-session.md",
+    "content/workflows/book-01/production-status.md",
+    "content/outputs/marketing/posts"
+  ],
+  "allowed_task_statuses": [
+    "posted",
+    "posted-early",
+    "ready",
+    "needs-account",
+    "needs-video-export",
+    "error",
+    "skipped"
+  ],
+  "posts": [
+    {
+      "post_id": "book01-day-01",
+      "campaign_day": 1,
+      "status": "complete",
+      "scheduled_date": "2026-05-05",
+      "platforms": [
+        "Pinterest",
+        "Instagram",
+        "Facebook",
+        "Short Video"
+      ],
+      "media_assets": [
+        "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
+        "content/outputs/videos/approved/day-1-meet-ember-pixverse-clean-approved-2026-05-06.mp4"
+      ],
+      "caption_source": {
+        "type": "calendar_slot",
+        "text": "Meet Ember, a tiny baby dragon guide for a cozy seek-and-find adventure made for children ages 5-8.",
+        "cta": "Follow for more Ember sneak peeks."
+      },
+      "platform_tasks": [
+        {
+          "platform": "Pinterest",
+          "status": "posted",
+          "scheduled_time": null,
+          "posted_url": "https://www.pinterest.com/pin/1148417973750217999",
+          "posted_at": "2026-05-05",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-01/pinterest-dragon-books-for-kids.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/day-01/pinterest-dragon-books-for-kids/",
+          "error": null,
+          "idempotency_key": "book01-day01-pinterest-dragon-books-for-kids"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "posted",
+          "scheduled_time": null,
+          "posted_url": "https://www.pinterest.com/pin/1148417973750222464/",
+          "posted_at": "2026-05-05",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-01/pinterest-children-s-activity-books.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/day-01/pinterest-children-s-activity-books/",
+          "error": null,
+          "idempotency_key": "book01-day01-pinterest-children-s-activity-books"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "posted",
+          "scheduled_time": null,
+          "posted_url": "https://www.pinterest.com/pin/1148417973750222492/",
+          "posted_at": "2026-05-05",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-01/pinterest-gift-ideas-for-kids-ages-5-8.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/day-01/pinterest-gift-ideas-for-kids-ages-5-8/",
+          "error": null,
+          "idempotency_key": "book01-day01-pinterest-gift-ideas-for-kids-ages-5-8"
+        },
+        {
+          "platform": "Instagram",
+          "status": "posted",
+          "scheduled_time": null,
+          "posted_url": "https://www.instagram.com/emberdragonbooks/p/DYAfOQbiY2F/",
+          "posted_at": "2026-05-06",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-01/instagram-feed-post.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/day-01/instagram-feed-post/",
+          "error": null,
+          "idempotency_key": "book01-day01-instagram-feed-post"
+        },
+        {
+          "platform": "Facebook",
+          "status": "posted",
+          "scheduled_time": null,
+          "posted_url": "https://www.facebook.com/photo/?fbid=122097466095308464&set=a.122097467409308464",
+          "posted_at": "2026-05-06",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-01/facebook-page-post.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/day-01/facebook-page-post/",
+          "error": null,
+          "idempotency_key": "book01-day01-facebook-page-post"
+        },
+        {
+          "platform": "Short Video",
+          "status": "posted",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": "2026-05-06",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-01/short-video-youtube-shorts-public-instagram-reels-public-facebook-reels-public-tiktok-public.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/day-01/short-video-youtube-shorts-public-instagram-reels-public-facebook-reels-public-tiktok-public/",
+          "error": null,
+          "idempotency_key": "book01-day01-short-video-youtube-shorts-public-instagram-reels-public-facebook-reels-public-tiktok-public"
+        }
+      ],
+      "idempotency_key": "book01-day01",
+      "notes": "Day 1 is complete across tracked platforms: 3 Pinterest Pins, Instagram feed/Reel, Facebook Page post/Reel, YouTube Short, and TikTok video are posted.",
+      "source_refs": [
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
+        "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md",
+        "content/outputs/session-logs/2026-05-06-session.md",
+        "content/workflows/book-01/production-status.md",
+        "content/outputs/marketing/posts/2026-05-05-meet-ember-pinterest.md",
+        "content/outputs/marketing/posts/2026-05-06-day-1-posting-methods-and-workarounds.md",
+        "content/outputs/marketing/posts/2026-05-06-day-1-short-video-platform-setup.md",
+        "content/outputs/marketing/posts/2026-05-06-facebook-day-1-meet-ember.md",
+        "content/outputs/marketing/posts/2026-05-06-instagram-day-1-meet-ember.md",
+        "content/outputs/marketing/posts/2026-05-06-tiktok-day-1-meet-ember.md",
+        "content/outputs/marketing/posts/2026-05-06-youtube-shorts-channel-setup.md",
+        "content/outputs/marketing/posts/2026-05-06-youtube-shorts-day-1-meet-ember.md"
+      ]
+    },
+    {
+      "post_id": "book01-day-02",
+      "campaign_day": 2,
+      "status": "complete",
+      "scheduled_date": "2026-05-06",
+      "platforms": [
+        "Pinterest",
+        "Instagram",
+        "Facebook",
+        "Short Video"
+      ],
+      "media_assets": [
+        "content/outputs/images/approved/book-1-no-blank-promo-batch-02-03-screen-free-dragon-fun-recovered-2026-05-05T05-21-40-725Z.png",
+        "content/outputs/videos/approved/day-2-screen-free-activity-capcut-approved-2026-05-06.mp4"
+      ],
+      "caption_source": {
+        "type": "calendar_slot",
+        "text": "A warm little search adventure for families who love screen-free kids' activity ideas and gentle fantasy worlds.",
+        "cta": "Save this for screen-free activity inspiration."
+      },
+      "platform_tasks": [
+        {
+          "platform": "Pinterest",
+          "status": "posted",
+          "scheduled_time": null,
+          "posted_url": "https://www.pinterest.com/pin/1148417973750306698",
+          "posted_at": "2026-05-06",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-02/pinterest-screen-free-activities-for-kids.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/day-02/pinterest-screen-free-activities-for-kids/",
+          "error": null,
+          "idempotency_key": "book01-day02-pinterest-screen-free-activities-for-kids"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "posted",
+          "scheduled_time": null,
+          "posted_url": "https://www.pinterest.com/pin/1148417973750306763",
+          "posted_at": "2026-05-06",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-02/pinterest-children-s-activity-books.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/day-02/pinterest-children-s-activity-books/",
+          "error": null,
+          "idempotency_key": "book01-day02-pinterest-children-s-activity-books"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "posted",
+          "scheduled_time": null,
+          "posted_url": "https://www.pinterest.com/pin/1148417973750306819",
+          "posted_at": "2026-05-06",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-02/pinterest-gift-ideas-for-kids-ages-5-8.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/day-02/pinterest-gift-ideas-for-kids-ages-5-8/",
+          "error": null,
+          "idempotency_key": "book01-day02-pinterest-gift-ideas-for-kids-ages-5-8"
+        },
+        {
+          "platform": "Instagram",
+          "status": "posted",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": "2026-05-06",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-02/instagram-feed-post-plus-story-reshare.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/day-02/instagram-feed-post-plus-story-reshare/",
+          "error": null,
+          "idempotency_key": "book01-day02-instagram-feed-post-plus-story-reshare"
+        },
+        {
+          "platform": "Facebook",
+          "status": "posted",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": "2026-05-06",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-02/facebook-page-post.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/day-02/facebook-page-post/",
+          "error": null,
+          "idempotency_key": "book01-day02-facebook-page-post"
+        },
+        {
+          "platform": "Short Video",
+          "status": "posted",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": "2026-05-06",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-02/short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/day-02/short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public/",
+          "error": null,
+          "idempotency_key": "book01-day02-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public"
+        }
+      ],
+      "idempotency_key": "book01-day02",
+      "notes": "Day 2 is complete across tracked platforms: 3 Pinterest still Pins, Pinterest video Pin, Instagram/Facebook feed post, Instagram/Facebook Reel, YouTube Short, and TikTok video are posted.",
+      "source_refs": [
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
+        "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md",
+        "content/outputs/session-logs/2026-05-06-session.md",
+        "content/workflows/book-01/production-status.md",
+        "content/outputs/marketing/posts/2026-05-06-day-2-screen-free-meta-feed-posts.md",
+        "content/outputs/marketing/posts/2026-05-06-day-2-screen-free-pinterest-still-pins.md",
+        "content/outputs/marketing/posts/2026-05-06-day-2-screen-free-short-video-platform-posts.md"
+      ]
+    },
+    {
+      "post_id": "book01-day-03",
+      "campaign_day": 3,
+      "status": "in-progress",
+      "scheduled_date": "2026-05-07",
+      "platforms": [
+        "Pinterest",
+        "Instagram",
+        "Facebook",
+        "Short Video"
+      ],
+      "media_assets": [
+        "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png"
+      ],
+      "caption_source": {
+        "type": "calendar_slot",
+        "text": "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers.",
+        "cta": "Share with a little dragon fan."
+      },
+      "platform_tasks": [
+        {
+          "platform": "Pinterest",
+          "status": "posted-early",
+          "scheduled_time": null,
+          "posted_url": "https://www.pinterest.com/pin/1148417973750307600",
+          "posted_at": "2026-05-06",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-03/pinterest-dragon-books-for-kids.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/day-03/pinterest-dragon-books-for-kids/",
+          "error": null,
+          "idempotency_key": "book01-day03-pinterest-dragon-books-for-kids"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "posted-early",
+          "scheduled_time": null,
+          "posted_url": "https://www.pinterest.com/pin/1148417973750307643",
+          "posted_at": "2026-05-06",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-03/pinterest-children-s-activity-books.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/day-03/pinterest-children-s-activity-books/",
+          "error": null,
+          "idempotency_key": "book01-day03-pinterest-children-s-activity-books"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "posted-early",
+          "scheduled_time": null,
+          "posted_url": "https://www.pinterest.com/pin/1148417973750307674",
+          "posted_at": "2026-05-06",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-03/pinterest-gift-ideas-for-kids-ages-5-8.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/day-03/pinterest-gift-ideas-for-kids-ages-5-8/",
+          "error": null,
+          "idempotency_key": "book01-day03-pinterest-gift-ideas-for-kids-ages-5-8"
+        },
+        {
+          "platform": "Instagram",
+          "status": "needs-account",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-account",
+          "idempotency_key": "book01-day03-instagram-feed-post-plus-story-reshare"
+        },
+        {
+          "platform": "Facebook",
+          "status": "needs-account",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-account",
+          "idempotency_key": "book01-day03-facebook-page-post"
+        },
+        {
+          "platform": "Short Video",
+          "status": "needs-video-export",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-video-export",
+          "idempotency_key": "book01-day03-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels"
+        }
+      ],
+      "idempotency_key": "book01-day03",
+      "notes": "Simple caption-only post. Also create/upload proper wide YouTube banner and proper wide Facebook Page cover image; do not use a vertical promo crop for either banner surface.",
+      "source_refs": [
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
+        "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md",
+        "content/outputs/session-logs/2026-05-06-session.md",
+        "content/workflows/book-01/production-status.md",
+        "content/outputs/marketing/posts/2026-05-06-early-day-3-search-with-ember-pinterest-pins.md"
+      ]
+    },
+    {
+      "post_id": "book01-day-04",
+      "campaign_day": 4,
+      "status": "ready-to-schedule",
+      "scheduled_date": "2026-05-08",
+      "platforms": [
+        "Pinterest",
+        "Instagram",
+        "Facebook",
+        "Short Video"
+      ],
+      "media_assets": [
+        "content/outputs/images/approved/book-1-no-blank-promo-batch-02-02-baby-flame-lantern-teaser-balanced-approved-recovered-2026-05-05T05-47-13-309Z-1.png"
+      ],
+      "caption_source": {
+        "type": "calendar_slot",
+        "text": "Can you find the Baby Flame Lantern hiding in Ember's cozy festival world?",
+        "cta": "Save this tiny-treasure challenge."
+      },
+      "platform_tasks": [
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day04-pinterest-hidden-object-books-for-kids"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day04-pinterest-fantasy-activity-books-for-kids"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day04-pinterest-dragon-books-for-kids"
+        },
+        {
+          "platform": "Instagram",
+          "status": "needs-account",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-account",
+          "idempotency_key": "book01-day04-instagram-feed-post-plus-story-reshare"
+        },
+        {
+          "platform": "Facebook",
+          "status": "needs-account",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-account",
+          "idempotency_key": "book01-day04-facebook-page-post"
+        },
+        {
+          "platform": "Short Video",
+          "status": "needs-video-export",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-video-export",
+          "idempotency_key": "book01-day04-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels"
+        }
+      ],
+      "idempotency_key": "book01-day04",
+      "notes": "Use the balanced approved regenerate. Avoid the failed muddy-sparkle version.",
+      "source_refs": [
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
+        "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md"
+      ]
+    },
+    {
+      "post_id": "book01-day-05",
+      "campaign_day": 5,
+      "status": "ready-to-schedule",
+      "scheduled_date": "2026-05-09",
+      "platforms": [
+        "Pinterest",
+        "Instagram",
+        "Facebook",
+        "Short Video"
+      ],
+      "media_assets": [
+        "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-02-image-1-2026-05-05T04-51-23-244Z.png"
+      ],
+      "caption_source": {
+        "type": "calendar_slot",
+        "text": "The Lantern Maker's Workshop is full of tiny details for young eyes to explore.",
+        "cta": "Follow for the next Ember progress update."
+      },
+      "platform_tasks": [
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day05-pinterest-dragon-books-for-kids"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day05-pinterest-children-s-activity-books"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day05-pinterest-gift-ideas-for-kids-ages-5-8"
+        },
+        {
+          "platform": "Instagram",
+          "status": "needs-account",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-account",
+          "idempotency_key": "book01-day05-instagram-feed-post-plus-story-reshare"
+        },
+        {
+          "platform": "Facebook",
+          "status": "needs-account",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-account",
+          "idempotency_key": "book01-day05-facebook-page-post"
+        },
+        {
+          "platform": "Short Video",
+          "status": "needs-video-export",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-video-export",
+          "idempotency_key": "book01-day05-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels"
+        }
+      ],
+      "idempotency_key": "book01-day05",
+      "notes": "Approved Batch 01 image with no blank-template issue.",
+      "source_refs": [
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
+        "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md"
+      ]
+    },
+    {
+      "post_id": "book01-day-06",
+      "campaign_day": 6,
+      "status": "ready-to-schedule",
+      "scheduled_date": "2026-05-10",
+      "platforms": [
+        "Pinterest",
+        "Instagram",
+        "Facebook",
+        "Short Video"
+      ],
+      "media_assets": [
+        "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-03-image-1-2026-05-05T04-51-29-569Z.png"
+      ],
+      "caption_source": {
+        "type": "calendar_slot",
+        "text": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers.",
+        "cta": "Save for later if you love hidden-object books."
+      },
+      "platform_tasks": [
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day06-pinterest-dragon-books-for-kids"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day06-pinterest-children-s-activity-books"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day06-pinterest-gift-ideas-for-kids-ages-5-8"
+        },
+        {
+          "platform": "Instagram",
+          "status": "needs-account",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-account",
+          "idempotency_key": "book01-day06-instagram-feed-post-plus-story-reshare"
+        },
+        {
+          "platform": "Facebook",
+          "status": "needs-account",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-account",
+          "idempotency_key": "book01-day06-facebook-page-post"
+        },
+        {
+          "platform": "Short Video",
+          "status": "needs-video-export",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-video-export",
+          "idempotency_key": "book01-day06-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels"
+        }
+      ],
+      "idempotency_key": "book01-day06",
+      "notes": "Approved Batch 01 image with no blank-template issue.",
+      "source_refs": [
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
+        "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md"
+      ]
+    },
+    {
+      "post_id": "book01-day-07",
+      "campaign_day": 7,
+      "status": "ready-to-schedule",
+      "scheduled_date": "2026-05-11",
+      "platforms": [
+        "Pinterest",
+        "Instagram",
+        "Facebook",
+        "Short Video"
+      ],
+      "media_assets": [
+        "content/outputs/images/approved/book-1-mission-item-promo-batch-03-01-golden-welcome-bell-teaser-recovered-2026-05-05T19-29-49-208Z.png"
+      ],
+      "caption_source": {
+        "type": "calendar_slot",
+        "text": "Can your little seeker find the Golden Welcome Bell among the festival decorations?",
+        "cta": "Save the challenge and try it together."
+      },
+      "platform_tasks": [
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day07-pinterest-hidden-object-books-for-kids"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day07-pinterest-fantasy-activity-books-for-kids"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day07-pinterest-dragon-books-for-kids"
+        },
+        {
+          "platform": "Instagram",
+          "status": "needs-account",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-account",
+          "idempotency_key": "book01-day07-instagram-feed-post-plus-story-reshare"
+        },
+        {
+          "platform": "Facebook",
+          "status": "needs-account",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-account",
+          "idempotency_key": "book01-day07-facebook-page-post"
+        },
+        {
+          "platform": "Short Video",
+          "status": "needs-video-export",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-video-export",
+          "idempotency_key": "book01-day07-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels"
+        }
+      ],
+      "idempotency_key": "book01-day07",
+      "notes": "Mission-item teaser. Keep copy playful and low-pressure.",
+      "source_refs": [
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
+        "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md"
+      ]
+    },
+    {
+      "post_id": "book01-day-08",
+      "campaign_day": 8,
+      "status": "ready-to-schedule",
+      "scheduled_date": "2026-05-12",
+      "platforms": [
+        "Pinterest",
+        "Instagram",
+        "Facebook",
+        "Short Video"
+      ],
+      "media_assets": [
+        "content/outputs/images/approved/book-1-mission-item-promo-batch-03-02-firefly-flower-charm-teaser-recovered-2026-05-05T19-29-49-208Z.png"
+      ],
+      "caption_source": {
+        "type": "calendar_slot",
+        "text": "Find the Firefly Flower Charm.",
+        "cta": "Tap, pause, and search."
+      },
+      "platform_tasks": [
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day08-pinterest-hidden-object-books-for-kids"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day08-pinterest-fantasy-activity-books-for-kids"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day08-pinterest-dragon-books-for-kids"
+        },
+        {
+          "platform": "Instagram",
+          "status": "needs-account",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-account",
+          "idempotency_key": "book01-day08-instagram-story-or-reel-cover"
+        },
+        {
+          "platform": "Facebook",
+          "status": "needs-account",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-account",
+          "idempotency_key": "book01-day08-facebook-page-post"
+        },
+        {
+          "platform": "Short Video",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day08-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels"
+        }
+      ],
+      "idempotency_key": "book01-day08",
+      "notes": "Tall/mobile-first asset. Best for Story, Reel cover, Shorts cover, or Pinterest Idea Pin.",
+      "source_refs": [
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
+        "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md"
+      ]
+    },
+    {
+      "post_id": "book01-day-09",
+      "campaign_day": 9,
+      "status": "ready-to-schedule",
+      "scheduled_date": "2026-05-13",
+      "platforms": [
+        "Pinterest",
+        "Instagram",
+        "Facebook",
+        "Short Video"
+      ],
+      "media_assets": [
+        "content/outputs/images/approved/book-1-mission-item-promo-batch-03-03-dragon-door-key-teaser-retry-recovered-2026-05-05T19-37-48-357Z.png"
+      ],
+      "caption_source": {
+        "type": "calendar_slot",
+        "text": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene.",
+        "cta": "Can you spot it?"
+      },
+      "platform_tasks": [
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day09-pinterest-hidden-object-books-for-kids"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day09-pinterest-fantasy-activity-books-for-kids"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day09-pinterest-dragon-books-for-kids"
+        },
+        {
+          "platform": "Instagram",
+          "status": "needs-account",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-account",
+          "idempotency_key": "book01-day09-instagram-feed-post-plus-story-reshare"
+        },
+        {
+          "platform": "Facebook",
+          "status": "needs-account",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-account",
+          "idempotency_key": "book01-day09-facebook-page-post"
+        },
+        {
+          "platform": "Short Video",
+          "status": "needs-video-export",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-video-export",
+          "idempotency_key": "book01-day09-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels"
+        }
+      ],
+      "idempotency_key": "book01-day09",
+      "notes": "Mission-item teaser. Do not add answer marks or hint overlays.",
+      "source_refs": [
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
+        "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md"
+      ]
+    },
+    {
+      "post_id": "book01-day-10",
+      "campaign_day": 10,
+      "status": "ready-to-schedule",
+      "scheduled_date": "2026-05-14",
+      "platforms": [
+        "Pinterest",
+        "Instagram",
+        "Facebook",
+        "Short Video"
+      ],
+      "media_assets": [
+        "content/outputs/images/approved/book-1-mission-item-promo-batch-03-04-sparkle-market-token-teaser-recovered-2026-05-05T19-29-49-208Z.png"
+      ],
+      "caption_source": {
+        "type": "calendar_slot",
+        "text": "Can you find the Sparkle Market Token among the cozy market treasures?",
+        "cta": "Save this for a quick seek-and-find break."
+      },
+      "platform_tasks": [
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day10-pinterest-hidden-object-books-for-kids"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day10-pinterest-fantasy-activity-books-for-kids"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day10-pinterest-dragon-books-for-kids"
+        },
+        {
+          "platform": "Instagram",
+          "status": "needs-account",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-account",
+          "idempotency_key": "book01-day10-instagram-feed-post-plus-story-reshare"
+        },
+        {
+          "platform": "Facebook",
+          "status": "needs-account",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-account",
+          "idempotency_key": "book01-day10-facebook-page-post"
+        },
+        {
+          "platform": "Short Video",
+          "status": "needs-video-export",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-video-export",
+          "idempotency_key": "book01-day10-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels"
+        }
+      ],
+      "idempotency_key": "book01-day10",
+      "notes": "Mission-item teaser. Good for hidden-object and activity-book boards.",
+      "source_refs": [
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
+        "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md"
+      ]
+    },
+    {
+      "post_id": "book01-day-11",
+      "campaign_day": 11,
+      "status": "ready-to-schedule",
+      "scheduled_date": "2026-05-15",
+      "platforms": [
+        "Pinterest",
+        "Instagram",
+        "Facebook",
+        "Short Video"
+      ],
+      "media_assets": [
+        "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png"
+      ],
+      "caption_source": {
+        "type": "calendar_slot",
+        "text": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time.",
+        "cta": "Follow along as the book comes together."
+      },
+      "platform_tasks": [
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day11-pinterest-dragon-books-for-kids"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day11-pinterest-children-s-activity-books"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day11-pinterest-gift-ideas-for-kids-ages-5-8"
+        },
+        {
+          "platform": "Instagram",
+          "status": "needs-account",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-account",
+          "idempotency_key": "book01-day11-instagram-feed-post-plus-story-reshare"
+        },
+        {
+          "platform": "Facebook",
+          "status": "needs-account",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-account",
+          "idempotency_key": "book01-day11-facebook-page-post"
+        },
+        {
+          "platform": "Short Video",
+          "status": "needs-video-export",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-video-export",
+          "idempotency_key": "book01-day11-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels"
+        }
+      ],
+      "idempotency_key": "book01-day11",
+      "notes": "Behind-the-scenes copy. Do not present promo art as an interior sample.",
+      "source_refs": [
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
+        "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md"
+      ]
+    },
+    {
+      "post_id": "book01-day-12",
+      "campaign_day": 12,
+      "status": "ready-to-schedule",
+      "scheduled_date": "2026-05-16",
+      "platforms": [
+        "Pinterest",
+        "Instagram",
+        "Facebook",
+        "Short Video"
+      ],
+      "media_assets": [
+        "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png"
+      ],
+      "caption_source": {
+        "type": "calendar_slot",
+        "text": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons.",
+        "cta": "Save for children's book gift ideas."
+      },
+      "platform_tasks": [
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day12-pinterest-gift-ideas-for-kids-ages-5-8"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day12-pinterest-children-s-activity-books"
+        },
+        {
+          "platform": "Pinterest",
+          "status": "ready",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": null,
+          "idempotency_key": "book01-day12-pinterest-fantasy-activity-books-for-kids"
+        },
+        {
+          "platform": "Instagram",
+          "status": "needs-account",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-account",
+          "idempotency_key": "book01-day12-instagram-feed-post-plus-story-reshare"
+        },
+        {
+          "platform": "Facebook",
+          "status": "needs-account",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-account",
+          "idempotency_key": "book01-day12-facebook-page-post"
+        },
+        {
+          "platform": "Short Video",
+          "status": "needs-video-export",
+          "scheduled_time": null,
+          "posted_url": null,
+          "posted_at": null,
+          "receipt_path": null,
+          "evidence_path": null,
+          "error": "needs-video-export",
+          "idempotency_key": "book01-day12-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels"
+        }
+      ],
+      "idempotency_key": "book01-day12",
+      "notes": "Gift-buyer angle. Keep links blank until a real store URL exists.",
+      "source_refs": [
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
+        "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
+        "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md"
+      ]
+    }
+  ]
+}

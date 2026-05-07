@@ -1,0 +1,18 @@
+# Book 1 Social Campaign Queue
+
+This folder contains the canonical social posting state for Book 1.
+
+## Source Of Truth
+
+- `queue.json` is the canonical live state for posting automation.
+- `platform-settings.json` stores platform/account placeholders only. It must not contain API keys, OAuth tokens, passwords, or secrets.
+- `archive/legacy-source-snapshot.json` is historical reference only. It preserves migrated legacy detail so the live queue can stay compact.
+- Markdown files under `views/` are human-readable reports or generated views. They are not live state.
+
+## Automation Rule
+
+Automation must read `queue.json` for current posting state. Do not read old campaign files under `content/outputs/marketing/` or other legacy locations unless a human explicitly requests a migration or rebuild.
+
+## Boundaries
+
+Do not use files inside `Ember's Adventures/` for this queue. This campaign queue was built from non-`Ember's Adventures/` sources only.
