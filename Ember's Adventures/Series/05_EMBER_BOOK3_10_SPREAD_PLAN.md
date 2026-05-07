@@ -188,4 +188,6 @@ Show Ember proudly celebrating the 10 recovered mission items:
 
 Crystal Castle Key; Rainbow Glass Star; Silver Paw Charm; Pink Guide Gem; Golden Map Lens; Moon Mirror Charm; Crystal Berry Tart; Hidden Door Button; Treasure Glow Orb; Crystal Crown Lantern.
 
+Display the 10 recovered mission items on separate small Crystal Castle pedestals, like a cheerful reward exhibit. Use smooth stone bases with crystal accents, polished edges, jewel glow, and a balanced mix of castle-stone structure plus magical crystal details. Split the display into five pedestals on the left page and five pedestals on the right page. Keep every pedestal and mission item fully outside the center gutter/crease safety lane. Ember may celebrate from one page, but keep Ember's face, eyes, horns, scarf knot, satchel, tail, and main body entirely on one printed page and away from the crease.
+
 Do not show answer locations. This is a reward spread, not an answer key.

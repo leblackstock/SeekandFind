@@ -395,6 +395,9 @@ For two-page spreads:
 - do not hide important objects across the gutter
 - do not place mascot face or critical details in the binding fold
 - ensure the page still works if slightly misaligned
+- for recap/reward spreads, display the 10 recovered mission items on separate theme-matched pedestals or stands, split across the left and right pages
+- keep every pedestal, named mission item, mascot face, mascot body silhouette, and important detail fully outside a clear center gutter safety lane; the fold may contain only nonessential background, glow, path, sky, mist, ribbon, confetti, or texture
+- if Ember appears on a two-page spread, keep Ember's face, eyes, horns, scarf knot, satchel, tail, and main body entirely on one printed page rather than split across the fold
 
 ## Coloring Books
 

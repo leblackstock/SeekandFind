@@ -206,4 +206,6 @@ Show Ember proudly celebrating the 10 recovered mission items:
 
 Snow Lantern Map; Warm Hearth Charm; Snowflake Cookie Star; Moon Mitten Clue; Evergreen Ribbon Bell; Little Sled Key; Blue Ice Gem Button; Story Snow Globe; Clock Glow Lens; Snow Crown Lantern.
 
+Display the 10 recovered mission items on separate small Cozy Snow Village pedestals, like a cheerful reward exhibit. Use warm hearth-wood stands, smooth snow-topped stones, evergreen ribbon trim, blue ice accents, cozy lantern glow, and rounded winter details. Split the display into five pedestals on the left page and five pedestals on the right page. Keep every pedestal and mission item fully outside the center gutter/crease safety lane. Ember may celebrate from one page, but keep Ember's face, eyes, horns, scarf knot, satchel, tail, and main body entirely on one printed page and away from the crease.
+
 Do not show answer locations. This is a reward spread, not an answer key.

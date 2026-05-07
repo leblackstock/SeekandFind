@@ -217,4 +217,6 @@ Show Ember proudly celebrating the 10 recovered mission items:
 
 Moon Shell Map; Pearl Glow Lantern; Tiny Starfish Compass; Driftwood Door Charm; Coral Berry Cupcake; Kelp Ribbon Clue; Seahorse Garden Key; Shimmer Scroll Shell; Moonbeam Lens; Seaside Crown Lantern.
 
+Display the 10 recovered mission items on separate small Moonlit Seaside pedestals, like a cheerful reward exhibit. Use driftwood stands, shell trim, rope details, smooth beach stones, kelp ribbons, and soft moonlit blue glow. Split the display into five pedestals on the left page and five pedestals on the right page. Keep every pedestal and mission item fully outside the center gutter/crease safety lane. Ember may celebrate from one page, but keep Ember's face, eyes, horns, scarf knot, satchel, tail, and main body entirely on one printed page and away from the crease.
+
 Do not show answer locations. This is a reward spread, not an answer key.

@@ -208,4 +208,6 @@ Show Ember proudly celebrating the 10 recovered mission items:
 
 Sky Kingdom Key; Cloud Feather Clue; Floating Stone Token; Cloudflower Compass; Prism Star Button; Sunbeam Tart; Wind Ribbon Lens; Sky Archive Scroll; Dragon Star Gem; Sky Crown Lantern.
 
+Display the 10 recovered mission items on separate small Hidden Sky Kingdom pedestals, like a cheerful reward exhibit. Use cloud-soft bases, floating-stone shapes, gold rail details, tiny star accents, prism glow, and rounded sky-kingdom details. Split the display into five pedestals on the left page and five pedestals on the right page. Keep every pedestal and mission item fully outside the center gutter/crease safety lane. Ember may celebrate from one page, but keep Ember's face, eyes, horns, scarf knot, satchel, tail, and main body entirely on one printed page and away from the crease.
+
 Do not show answer locations. This is a reward spread, not an answer key.

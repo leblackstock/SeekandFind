@@ -206,4 +206,6 @@ Show Ember proudly celebrating the 10 recovered mission items:
 
 Storybook Door Key; Feather Bookmark Clue; Jam Tart Page Token; Paper Petal Compass; Carved Stone Page; Golden Page Lens; Crystal Bookmark Star; Tiny Lantern Scroll; Story Lamp Glow Gem; Story Crown Lantern.
 
+Display the 10 recovered mission items on separate small Secret Storybook pedestals, like a cheerful reward exhibit. Use stacked-book stands, carved page-shaped bases, bookmark ribbons, paper-petal trim, warm story-lamp glow, and rounded library details. Split the display into five pedestals on the left page and five pedestals on the right page. Keep every pedestal and mission item fully outside the center gutter/crease safety lane. Ember may celebrate from one page, but keep Ember's face, eyes, horns, scarf knot, satchel, tail, and main body entirely on one printed page and away from the crease.
+
 Do not show answer locations. This is a reward spread, not an answer key.

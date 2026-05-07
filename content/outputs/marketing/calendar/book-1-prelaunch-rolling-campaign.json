@@ -22,13 +22,13 @@
       "order": 2,
       "relativeDay": "Day 2",
       "scheduledDate": "2026-05-06",
-      "status": "ready-to-schedule",
-      "platform": "Pinterest",
+      "status": "complete",
+      "platform": "Pinterest, Instagram/Facebook, YouTube Shorts, TikTok",
       "theme": "Screen-free activity idea",
       "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-03-screen-free-dragon-fun-recovered-2026-05-05T05-21-40-725Z.png",
       "caption": "A warm little search adventure for families who love screen-free kids' activity ideas and gentle fantasy worlds.",
       "cta": "Save this for screen-free activity inspiration.",
-      "notes": "Use on activity-book and screen-free boards."
+      "notes": "Day 2 is complete across tracked platforms: 3 Pinterest still Pins, Pinterest video Pin, Instagram/Facebook feed post, Instagram/Facebook Reel, YouTube Short, and TikTok video are posted."
     },
     {
       "order": 3,
@@ -233,119 +233,119 @@
     {
       "dayOrder": 2,
       "scheduledDate": "2026-05-06",
-      "status": "ready",
+      "status": "posted",
       "platform": "Pinterest",
       "placement": "Screen-Free Activities for Kids",
       "theme": "Screen-free activity idea",
       "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-03-screen-free-dragon-fun-recovered-2026-05-05T05-21-40-725Z.png",
       "copy": "A warm little search adventure for families who love screen-free kids' activity ideas and gentle fantasy worlds. Save this for screen-free activity inspiration.",
       "cta": "Save this for screen-free activity inspiration.",
-      "link": "blank until real landing/store URL exists",
-      "notes": "Create or schedule the primary daily Pin, add alt text, leave destination link blank unless a real URL exists, then record the live URL."
+      "link": "https://www.pinterest.com/pin/1148417973750306698",
+      "notes": "Posted and verified."
     },
     {
       "dayOrder": 2,
       "scheduledDate": "2026-05-06",
-      "status": "ready",
+      "status": "posted",
       "platform": "Pinterest",
       "placement": "Children's Activity Books",
       "theme": "Screen-free activity idea Activity Book Sneak Peek",
       "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-03-screen-free-dragon-fun-recovered-2026-05-05T05-21-40-725Z.png",
       "copy": "A warm little search adventure for families who love screen-free kids' activity ideas and gentle fantasy worlds. A gentle activity-book sneak peek for families collecting screen-free ideas. Save this for screen-free activity inspiration.",
       "cta": "Save this for screen-free activity inspiration.",
-      "link": "blank until real landing/store URL exists",
-      "notes": "Create or schedule the second daily Pin with distinct board fit and fresh copy; do not duplicate the primary Pin title/description exactly."
+      "link": "https://www.pinterest.com/pin/1148417973750306763",
+      "notes": "Posted and verified."
     },
     {
       "dayOrder": 2,
       "scheduledDate": "2026-05-06",
-      "status": "ready",
+      "status": "posted",
       "platform": "Pinterest",
       "placement": "Gift Ideas for Kids Ages 5-8",
       "theme": "Screen-free activity idea Gift Idea for Kids Ages 5-8",
       "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-03-screen-free-dragon-fun-recovered-2026-05-05T05-21-40-725Z.png",
       "copy": "A warm little search adventure for families who love screen-free kids' activity ideas and gentle fantasy worlds. A coming-soon gift idea for kids who like cozy fantasy, tiny treasures, and gentle search activities. Save this for screen-free activity inspiration.",
       "cta": "Save this for screen-free activity inspiration.",
-      "link": "blank until real landing/store URL exists",
-      "notes": "Create or schedule the third daily Pin with distinct board fit and fresh copy; if it cannot be meaningfully distinct, record a content-creation blocker."
+      "link": "https://www.pinterest.com/pin/1148417973750306819",
+      "notes": "Posted and verified."
     },
     {
       "dayOrder": 2,
       "scheduledDate": "2026-05-06",
-      "status": "needs-account",
+      "status": "posted",
       "platform": "Instagram",
       "placement": "Feed post plus Story reshare",
       "theme": "Screen-free activity idea",
       "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-03-screen-free-dragon-fun-recovered-2026-05-05T05-21-40-725Z.png",
       "copy": "A warm little search adventure for families who love screen-free kids' activity ideas and gentle fantasy worlds.\n\nSave this for screen-free activity inspiration.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #KidsBooks",
       "cta": "Save this for screen-free activity inspiration.",
-      "link": "profile link only after a real landing/store URL exists",
-      "notes": "Account access is not verified in this repo yet. Post or schedule once Instagram is available."
+      "link": "Feed: https://www.instagram.com/emberdragonbooks/p/DYBXAann6IO/; Reel: https://www.instagram.com/emberdragonbooks/reel/DYBWXp7Dq9R/",
+      "notes": "Feed and Reel posted through Meta Business Suite. Story reshare/highlights remain optional later setup."
     },
     {
       "dayOrder": 2,
       "scheduledDate": "2026-05-06",
-      "status": "needs-account",
+      "status": "posted",
       "platform": "Facebook",
       "placement": "Page post",
       "theme": "Screen-free activity idea",
       "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-03-screen-free-dragon-fun-recovered-2026-05-05T05-21-40-725Z.png",
       "copy": "A warm little search adventure for families who love screen-free kids' activity ideas and gentle fantasy worlds.\n\nSave this for screen-free activity inspiration.",
       "cta": "Save this for screen-free activity inspiration.",
-      "link": "blank until real landing/store URL exists",
-      "notes": "Account access is not verified in this repo yet. Use warmer progress-note wording for Facebook."
+      "link": "Photo: https://www.facebook.com/photo.php?fbid=122097672171308464&set=pb.61589253935031.-2207520000&type=3; Reel: https://www.facebook.com/reel/3307595826062013/",
+      "notes": "Feed photo and Reel posted through Meta Business Suite; no boost/ad flow used."
     },
     {
       "dayOrder": 2,
       "scheduledDate": "2026-05-06",
-      "status": "needs-video-export",
+      "status": "posted",
       "platform": "Short Video",
-      "placement": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels",
+      "placement": "YouTube Shorts public; TikTok public; Instagram Reels public; Facebook Reels public; Pinterest Video Pin public",
       "theme": "Screen-free activity idea",
-      "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-03-screen-free-dragon-fun-recovered-2026-05-05T05-21-40-725Z.png",
-      "copy": "Screen-free activity idea. A quick cozy search moment with Ember.",
+      "asset": "content/outputs/videos/approved/day-2-screen-free-activity-capcut-approved-2026-05-06.mp4",
+      "copy": "Can your little seeker help Ember find the star? A cozy screen-free activity idea for kids who love dragons, picture books, and seek-and-find fun.",
       "cta": "Follow for more Ember sneak peeks.",
-      "link": "no link in video caption until real landing/store URL exists",
-      "notes": "Needs a Seedance image-to-video export using the saved storyboard before posting."
+      "link": "YouTube: https://youtube.com/shorts/MrVtsvC9fTk; TikTok: https://www.tiktok.com/@emberdragonbooks/video/7636971591527664927; Instagram Reel: https://www.instagram.com/emberdragonbooks/reel/DYBWXp7Dq9R/; Facebook Reel: https://www.facebook.com/reel/3307595826062013/; Pinterest Video Pin: https://www.pinterest.com/pin/1148417973750307959",
+      "notes": "Owner-approved Day 2 CapCut MP4 posted across tracked short-video platforms; no destination link, location, boost, ad, or payment flow used."
     },
     {
       "dayOrder": 3,
       "scheduledDate": "2026-05-07",
-      "status": "ready",
+      "status": "posted-early",
       "platform": "Pinterest",
       "placement": "Dragon Books for Kids",
       "theme": "Search with Ember",
       "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
       "copy": "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers. Share with a little dragon fan.",
       "cta": "Share with a little dragon fan.",
-      "link": "blank until real landing/store URL exists",
-      "notes": "Create or schedule the primary daily Pin, add alt text, leave destination link blank unless a real URL exists, then record the live URL."
+      "link": "https://www.pinterest.com/pin/1148417973750307600",
+      "notes": "Posted early during Day 2 run; do not undo. Counts toward Day 3 Pinterest."
     },
     {
       "dayOrder": 3,
       "scheduledDate": "2026-05-07",
-      "status": "ready",
+      "status": "posted-early",
       "platform": "Pinterest",
       "placement": "Children's Activity Books",
       "theme": "Search with Ember Activity Book Sneak Peek",
       "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
       "copy": "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers. A gentle activity-book sneak peek for families collecting screen-free ideas. Share with a little dragon fan.",
       "cta": "Share with a little dragon fan.",
-      "link": "blank until real landing/store URL exists",
-      "notes": "Create or schedule the second daily Pin with distinct board fit and fresh copy; do not duplicate the primary Pin title/description exactly."
+      "link": "https://www.pinterest.com/pin/1148417973750307643",
+      "notes": "Posted early during Day 2 run; do not undo. Counts toward Day 3 Pinterest."
     },
     {
       "dayOrder": 3,
       "scheduledDate": "2026-05-07",
-      "status": "ready",
+      "status": "posted-early",
       "platform": "Pinterest",
       "placement": "Gift Ideas for Kids Ages 5-8",
       "theme": "Search with Ember Gift Idea for Kids Ages 5-8",
       "asset": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
       "copy": "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers. A coming-soon gift idea for kids who like cozy fantasy, tiny treasures, and gentle search activities. Share with a little dragon fan.",
       "cta": "Share with a little dragon fan.",
-      "link": "blank until real landing/store URL exists",
-      "notes": "Create or schedule the third daily Pin with distinct board fit and fresh copy; if it cannot be meaningfully distinct, record a content-creation blocker."
+      "link": "https://www.pinterest.com/pin/1148417973750307674",
+      "notes": "Posted early during Day 2 run; do not undo. Counts toward Day 3 Pinterest."
     },
     {
       "dayOrder": 3,

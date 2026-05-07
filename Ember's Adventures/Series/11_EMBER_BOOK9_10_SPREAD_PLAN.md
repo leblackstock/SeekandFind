@@ -206,4 +206,6 @@ Show Ember proudly celebrating the 10 recovered mission items:
 
 Oasis Star Map; Sandstone Moon Key; Dateberry Glow Tart; Palm Feather Clue; Water Lily Compass; Moon Glass Token; Star Glass Button; Tiny Dune Scroll; Star Tower Lens; Oasis Crown Lantern.
 
+Display the 10 recovered mission items on separate small Starlight Oasis pedestals, like a cheerful reward exhibit. Use smooth sandstone bases, moon-glass accents, palm-leaf trim, water-lily details, starlight glow, and rounded oasis shapes. Split the display into five pedestals on the left page and five pedestals on the right page. Keep every pedestal and mission item fully outside the center gutter/crease safety lane. Ember may celebrate from one page, but keep Ember's face, eyes, horns, scarf knot, satchel, tail, and main body entirely on one printed page and away from the crease.
+
 Do not show answer locations. This is a reward spread, not an answer key.

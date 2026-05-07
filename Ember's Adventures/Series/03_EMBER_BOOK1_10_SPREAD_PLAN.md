@@ -192,4 +192,6 @@ Show Ember proudly celebrating the 10 recovered mission items:
 
 Tiny Sparkleflame Map; Golden Welcome Bell; Glowing Sugar Star; Baby Flame Lantern; Firefly Flower Charm; Shimmer Trail Stone; Echo Glow Gem; Dragon Door Key; Sparkle Market Token; Look-a-head Telescope.
 
+Display the 10 recovered mission items on separate small Sparkleflame Festival pedestals, like a cheerful reward exhibit. Use warm wood or smooth stone stands, ribbon wraps, lantern glow, cloth toppers, and tiny festival accents. Split the display into five pedestals on the left page and five pedestals on the right page. Keep every pedestal and mission item fully outside the center gutter/crease safety lane. Ember may celebrate from one page, but keep Ember's face, eyes, horns, scarf knot, satchel, tail, and main body entirely on one printed page and away from the crease.
+
 Do not show answer locations. This is a reward spread, not an answer key.

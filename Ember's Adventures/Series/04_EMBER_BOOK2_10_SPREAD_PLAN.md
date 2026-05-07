@@ -188,4 +188,6 @@ Show Ember proudly celebrating the 10 recovered mission items:
 
 Leaflight Trail Marker; Mushroom Glow Lantern; Tiny Acorn Door Key; Moonfeather Clue; Leafcup Tea Token; Firefly Fern Star; Dewdrop Lily Pearl; Leaf Scroll Ribbon; Heartwood Door Gem; Enchanted Forest Crown Leaf.
 
+Display the 10 recovered mission items on separate small Enchanted Forest pedestals, like a cheerful reward exhibit. Use mossy stones, carved roots, leaves, tiny mushroom accents, soft green glow, and rounded forest details. Split the display into five pedestals on the left page and five pedestals on the right page. Keep every pedestal and mission item fully outside the center gutter/crease safety lane. Ember may celebrate from one page, but keep Ember's face, eyes, horns, scarf knot, satchel, tail, and main body entirely on one printed page and away from the crease.
+
 Do not show answer locations. This is a reward spread, not an answer key.

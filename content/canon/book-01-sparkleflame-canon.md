@@ -32,5 +32,6 @@ Sparkleflame Festival language is Book 1-specific. Do not treat Sparkleflame as 
 - Color: full-color children's interior.
 - Pages 2-21 are 10 story/list + seek-image spreads.
 - Pages 22-23 are the reward recap spread.
+- Pages 22-23 should display the 10 mission items on separate Sparkleflame Festival-themed pedestals, split five per page, with all pedestals, items, and Ember details outside the center gutter/crease safety lane.
 - Page 24 is closing/teaser.
 - Front and back cover are separate cover assets.

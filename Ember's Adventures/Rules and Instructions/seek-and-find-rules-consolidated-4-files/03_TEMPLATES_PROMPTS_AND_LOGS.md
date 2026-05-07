@@ -254,6 +254,8 @@ Show Ember proudly celebrating the 10 recovered mission items:
 
 Tiny Sparkleflame Map; Golden Welcome Bell; Glowing Sugar Star; Baby Flame Lantern; Firefly Flower Charm; Shimmer Trail Stone; Echo Glow Gem; Dragon Door Key; Sparkle Market Token; Look-a-head Telescope.
 
+Display the 10 recovered mission items on separate small Sparkleflame Festival pedestals, like a cheerful reward exhibit. Use warm wood or smooth stone stands, ribbon wraps, lantern glow, cloth toppers, and tiny festival accents. Split the display into five pedestals on the left page and five pedestals on the right page. Keep every pedestal and mission item fully outside the center gutter/crease safety lane. Ember may celebrate from one page, but keep Ember's face, eyes, horns, scarf knot, satchel, tail, and main body entirely on one printed page and away from the crease.
+
 Do not show answer locations. This is a reward spread, not an answer key.
 
 ### Page 24 Closing / Teaser Source
@@ -461,6 +463,8 @@ Layout: glow-grove arch; leaf lantern checklist flows right.
 Show Ember proudly celebrating the 10 recovered mission items:
 
 Leaflight Trail Marker; Mushroom Glow Lantern; Tiny Acorn Door Key; Moonfeather Clue; Leafcup Tea Token; Firefly Fern Star; Dewdrop Lily Pearl; Leaf Scroll Ribbon; Heartwood Door Gem; Enchanted Forest Crown Leaf.
+
+Display the 10 recovered mission items on separate small Enchanted Forest pedestals, like a cheerful reward exhibit. Use mossy stones, carved roots, leaves, tiny mushroom accents, soft green glow, and rounded forest details. Split the display into five pedestals on the left page and five pedestals on the right page. Keep every pedestal and mission item fully outside the center gutter/crease safety lane. Ember may celebrate from one page, but keep Ember's face, eyes, horns, scarf knot, satchel, tail, and main body entirely on one printed page and away from the crease.
 
 Do not show answer locations. This is a reward spread, not an answer key.
 
@@ -673,6 +677,8 @@ Layout: crystal celebration arch; Ember celebrates on the left while lantern ico
 Show Ember proudly celebrating the 10 recovered mission items:
 
 Crystal Castle Key; Rainbow Glass Star; Silver Paw Charm; Pink Guide Gem; Golden Map Lens; Moon Mirror Charm; Crystal Berry Tart; Hidden Door Button; Treasure Glow Orb; Crystal Crown Lantern.
+
+Display the 10 recovered mission items on separate small Crystal Castle pedestals, like a cheerful reward exhibit. Use smooth stone bases with crystal accents, polished edges, jewel glow, and a balanced mix of castle-stone structure plus magical crystal details. Split the display into five pedestals on the left page and five pedestals on the right page. Keep every pedestal and mission item fully outside the center gutter/crease safety lane. Ember may celebrate from one page, but keep Ember's face, eyes, horns, scarf knot, satchel, tail, and main body entirely on one printed page and away from the crease.
 
 Do not show answer locations. This is a reward spread, not an answer key.
 
@@ -913,6 +919,8 @@ Character reference line: Use Elder Glowkeeper reference images `Elder_Glowkeepe
 Show Ember proudly celebrating the 10 recovered mission items:
 
 Moon Shell Map; Pearl Glow Lantern; Tiny Starfish Compass; Driftwood Door Charm; Coral Berry Cupcake; Kelp Ribbon Clue; Seahorse Garden Key; Shimmer Scroll Shell; Moonbeam Lens; Seaside Crown Lantern.
+
+Display the 10 recovered mission items on separate small Moonlit Seaside pedestals, like a cheerful reward exhibit. Use driftwood stands, shell trim, rope details, smooth beach stones, kelp ribbons, and soft moonlit blue glow. Split the display into five pedestals on the left page and five pedestals on the right page. Keep every pedestal and mission item fully outside the center gutter/crease safety lane. Ember may celebrate from one page, but keep Ember's face, eyes, horns, scarf knot, satchel, tail, and main body entirely on one printed page and away from the crease.
 
 Do not show answer locations. This is a reward spread, not an answer key.
 
@@ -1613,6 +1621,12 @@ Use this block only for seek images and other puzzle-art pages that are not supp
 Generate the exact approved text supplied for this non-seek page. Preserve spelling, capitalization, punctuation, line order, and object names exactly. Do not add extra words, fake text, gibberish, unapproved labels, watermarks, page numbers, or speech bubbles.
 ```
 
+## Two-Page Recap Pedestal Display Block
+
+```text
+For a pages 22-23 reward recap spread, display the 10 recovered mission items on separate small pedestals or stands that match the book's theme, materials, colors, and world. Use five pedestals on the left page and five pedestals on the right page. Each pedestal holds exactly one mission item. Leave a clear vertical center gutter safety lane from top to bottom of the full spread; no pedestal, mission item, item edge, Ember face, Ember body silhouette, readable detail, or important silhouette may touch, cross, or sit inside the center crease lane. The gutter lane may contain only nonessential decorative background such as glow, path texture, sky, mist, confetti, ribbon curves, distant lights, or soft environmental texture. If Ember appears, place Ember entirely on one printed page and away from the crease. Do not split Ember's face, eyes, horns, scarf knot, satchel, tail, or main body across the gutter. Do not add readable labels, plaques, captions, page numbers, answer marks, arrows, circles, boxes, outlines, halos, highlights, or typography.
+```
+
 ## Story/List Markdown Source Structure
 
 When producing a story/list `.md` source file, use this structure and keep the three checklist groups separate:
@@ -1858,6 +1872,7 @@ Record rule, template, and workflow changes here.
 
 | Date | File | Change | Reason |
 |---|---|---|---|
+| 2026-05-06 | `01_RULES_CORE_AUDIENCE_MODE_PROJECTS.md`, `03_TEMPLATES_PROMPTS_AND_LOGS.md`, Series spread plans, Book 1 recap prompt output | Made pages 22-23 recap/reward prompts use theme-matched pedestal displays, five items per page, a clear center gutter safety lane, and Ember entirely on one printed page. | Prevent mission items, pedestals, and Ember details from landing in the center crease while keeping each book's recap display visually themed. |
 | 2026-05-04 | Four-file rules bundle | Required seek-image prompts to use exactly 50 hidden objects, naming only the mission item and describing 49 additional unique hidden objects by traits instead of exact item names. | Prevent prompt stalls and repeated literal item lists while preserving rich, unique seek-page content. |
 | 2026-05-04 | Four-file rules bundle, system instructions | Routed direct supplied-prompt generation through the user's selected renderer, defaulting Ember production to supervised ChatGPT broke mode. | Keep explicit generate-now requests budget-aware instead of defaulting to the built-in image tool. |
 | 2026-05-04 | Four-file rules bundle, system instructions | Added direct image-generation override for complete supplied prompts. | Prevent prompt/source/QA workflows from blocking explicit generate-now requests. |
