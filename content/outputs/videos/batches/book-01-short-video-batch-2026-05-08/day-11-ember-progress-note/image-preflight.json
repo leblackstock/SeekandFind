@@ -1,0 +1,26 @@
+{
+  "day": 11,
+  "slug": "day-11-ember-progress-note",
+  "idempotency_key": "book01-day11-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+  "current_queue_status": "needs-video-export",
+  "caption": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time.\n\nComing soon to Amazon.\n\nCTA: Follow along as the book comes together.",
+  "current_media_asset_path": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
+  "source_image_found": true,
+  "readable_text_detected": "yes",
+  "visible_text_found": [
+    "Meet Ember",
+    "Your baby dragon guide"
+  ],
+  "branch_classification": "C",
+  "direct_image_to_video_recommendation": "no",
+  "exact_next_asset_needed": "Clean no-text vertical 9:16 video-source image, then image-to-video prompt/export after that source image is approved.",
+  "approved_video_export_exists": false,
+  "readiness_mismatch": false,
+  "output_files": {
+    "image_preflight_json": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-11-ember-progress-note/image-preflight.json",
+    "image_preflight_md": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-11-ember-progress-note/image-preflight.md",
+    "video_source_image_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-11-ember-progress-note/day-11-ember-progress-note-video-source-image-prompt.md",
+    "image_to_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-11-ember-progress-note/day-11-ember-progress-note-image-to-video-prompt.md",
+    "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-11-ember-progress-note/day-11-ember-progress-note-review-checklist.md"
+  }
+}

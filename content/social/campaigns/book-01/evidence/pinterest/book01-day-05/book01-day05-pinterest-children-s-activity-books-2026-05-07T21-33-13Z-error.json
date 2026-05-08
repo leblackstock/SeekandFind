@@ -1,0 +1,26 @@
+{
+  "ok": false,
+  "mode": "dry-run-error",
+  "platform": "Pinterest",
+  "idempotency_key": "book01-day05-pinterest-children-s-activity-books",
+  "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:302:30), <anonymous>:1:35)\n    at UtilityScript.evaluate (<anonymous>:304:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+  "url": "https://www.pinterest.com/pin-builder/",
+  "stopped_before_publish": true,
+  "browser_mode": "cdp",
+  "browser_left_open": true,
+  "reused_existing_pinterest_tab": true,
+  "cdp_url": "http://127.0.0.1:9222",
+  "profile_path": null,
+  "message": "Browser left open for manual login/review.",
+  "actions": [
+    "browser_mode:cdp",
+    "reused_existing_pinterest_tab",
+    "opened_pinterest_builder",
+    "media_uploaded",
+    "title_filled",
+    "description_filled",
+    "board_dropdown_opened:Dragon Books for Kids",
+    "board_search_filled"
+  ],
+  "timestamp": "2026-05-07T21:33:20.426Z"
+}

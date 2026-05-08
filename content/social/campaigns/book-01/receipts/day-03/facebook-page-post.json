@@ -1,0 +1,32 @@
+{
+  "idempotency_key": "book01-day03-facebook-page-post",
+  "post_id": "book01-day-03",
+  "campaign_day": 3,
+  "campaign_date": "2026-05-07",
+  "posted_at": "2026-05-07",
+  "verified_at": "2026-05-07T23:15:38Z",
+  "status": "posted",
+  "primary_posted_url": "https://facebook.com/permalink.php?story_fbid=pfbid0jTuUrmPJTKaGTruHJvNtt5NyDBVMZSL4Xy8C5jUxXQXuj93oPaAuLmyP5CcHRFrbl&id=61589253935031",
+  "platform_urls": [
+    {
+      "platform": "Facebook Page Post",
+      "url": "https://facebook.com/permalink.php?story_fbid=pfbid0jTuUrmPJTKaGTruHJvNtt5NyDBVMZSL4Xy8C5jUxXQXuj93oPaAuLmyP5CcHRFrbl&id=61589253935031",
+      "verification_status": "verified_in_cdp_browser",
+      "verification_title": "Lanterns, tiny treasures, and one curious... - Ember Dragon Books | Facebook"
+    },
+    {
+      "platform": "Facebook Photo",
+      "url": "https://www.facebook.com/photo.php?fbid=122098467609308464&set=a.122097467409308464&type=3",
+      "verification_status": "verified_in_cdp_browser",
+      "verification_title": "Facebook"
+    }
+  ],
+  "source_records": [
+    "content/social/campaigns/book-01/queue.json",
+    "content/social/campaigns/book-01/evidence/day-03/meta-dry-run/meta-dry-run.json",
+    "content/social/campaigns/book-01/evidence/day-03/meta-publish/publish-result.json",
+    "content/social/campaigns/book-01/evidence/day-03/meta-publish/url-verification.json"
+  ],
+  "verification_method": "Published through the existing Meta Business Suite CDP browser session, then opened the Facebook permalink and photo URLs in the same browser and verified the Day 3 caption text.",
+  "notes": "Crossposted Meta Business Suite photo post to Facebook Page Ember Dragon Books and Instagram emberdragonbooks. Caption included: Coming soon to Amazon."
+}

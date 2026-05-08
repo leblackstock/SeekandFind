@@ -1,0 +1,26 @@
+{
+  "idempotency_key": "book01-day03-instagram-feed-post-plus-story-reshare",
+  "post_id": "book01-day-03",
+  "campaign_day": 3,
+  "campaign_date": "2026-05-07",
+  "posted_at": "2026-05-07",
+  "verified_at": "2026-05-07T23:15:38Z",
+  "status": "posted",
+  "primary_posted_url": "https://www.instagram.com/p/DYDi0z-ieoz/",
+  "platform_urls": [
+    {
+      "platform": "Instagram Feed",
+      "url": "https://www.instagram.com/p/DYDi0z-ieoz/",
+      "verification_status": "verified_in_cdp_browser",
+      "verification_title": "Instagram"
+    }
+  ],
+  "source_records": [
+    "content/social/campaigns/book-01/queue.json",
+    "content/social/campaigns/book-01/evidence/day-03/meta-dry-run/meta-dry-run.json",
+    "content/social/campaigns/book-01/evidence/day-03/meta-publish/publish-result.json",
+    "content/social/campaigns/book-01/evidence/day-03/meta-publish/url-verification.json"
+  ],
+  "verification_method": "Published through the existing Meta Business Suite CDP browser session, then opened the Instagram post URL in the same browser and verified the Day 3 caption text.",
+  "notes": "Crossposted Meta Business Suite photo post to Facebook Page Ember Dragon Books and Instagram emberdragonbooks. Caption included: Coming soon to Amazon."
+}

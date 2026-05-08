@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-05-08T05:19:29.920Z",
+  "workflow": "chatgpt-project-chat-rename-live-test",
+  "promptSubmitted": true,
+  "promptText": "Create a random image for a chat renaming test. Keep it simple and child-friendly: a tiny glowing lantern on a wooden table, no readable text, no logos, no watermark.",
+  "conversation_id": "69fd720c-a0fc-83ea-843b-5d0f8df9c571",
+  "expected_chat_title": "Rename Test - Random Image - 2026-05-08 05:18",
+  "chat_rename_method": "project-list-row-menu",
+  "chat_rename_requested": true,
+  "chat_rename_api_verified": false,
+  "chat_rename_visible_verified": true,
+  "observed_visible_chat_title": "Rename Test - Random Image - 2026-05-08 05:18Create a random image for a chat renaming test. Keep it simple and child-friendly: a tiny glowing lantern on a wooden table, no readable text, no logos, no watermark.",
+  "chat_rename_warning": "",
+  "active": {
+    "url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fd720c-a0fc-83ea-843b-5d0f8df9c571",
+    "pageTitle": "Seek and Find Books - Rename Test - Random Image - 2026-05-08 05:18",
+    "bodyHasPrompt": true,
+    "bodyHasExpectedTitle": true,
+    "bodyHasGeneratingText": true,
+    "downloadButtons": 0,
+    "imageCandidateCount": 3,
+    "imageCandidates": [
+      {
+        "alt": "Generated image",
+        "width": 1254,
+        "height": 1254,
+        "clientWidth": 480,
+        "clientHeight": 480,
+        "srcStart": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000e0f871fdb891dd362fa45017&t"
+      },
+      {
+        "alt": "",
+        "width": 1254,
+        "height": 1254,
+        "clientWidth": 480,
+        "clientHeight": 480,
+        "srcStart": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000e0f871fdb891dd362fa45017&t"
+      },
+      {
+        "alt": "",
+        "width": 1254,
+        "height": 1254,
+        "clientWidth": 528,
+        "clientHeight": 528,
+        "srcStart": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000e0f871fdb891dd362fa45017&t"
+      }
+    ]
+  },
+  "project": {
+    "url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/project",
+    "pageTitle": "ChatGPT - Seek and Find Books",
+    "queuedAttachmentCount": 0,
+    "duplicateModal": false,
+    "promptText": "",
+    "rows": [
+      {
+        "text": "Rename Test - Random Image - 2026-05-08 05:18Create a random image for a chat renaming test. Keep it simple and child-friendly: a tiny glowing lantern on a wooden table, no readable text, no logos, no watermark.",
+        "href": "/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fd720c-a0fc-83ea-843b-5d0f8df9c571",
+        "visible": true,
+        "rect": {
+          "x": 717,
+          "y": 354,
+          "w": 688,
+          "h": 40
+        }
+      }
+    ],
+    "visibleVerified": true,
+    "observedVisibleChatTitle": "Rename Test - Random Image - 2026-05-08 05:18Create a random image for a chat renaming test. Keep it simple and child-friendly: a tiny glowing lantern on a wooden table, no readable text, no logos, no watermark."
+  }
+}

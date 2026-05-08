@@ -16,6 +16,11 @@ This repo contains the Ember seek-and-find source files plus `ember-content-stud
 - Do not automate bypassing payment, login protections, CAPTCHA, rate limits, free-credit limits, or platform restrictions.
 - Browser automation must be transparent, reviewable, and stopped at any sensitive account/payment boundary.
 
+## Workflow Constraints
+
+- Token efficiency: When summarizing file contents, use a diff format, bullet points, or a short targeted excerpt. Do not rewrite an entire file in chat unless Lauren explicitly asks to see the full code.
+- Self-correction: If a command returns a 404, 500, missing-file, or missing-route error, immediately list or inspect the parent directory or route group before trying a new path. Do not keep guessing alternate paths without verifying what actually exists.
+
 ## Build Standards
 
 - Use TypeScript.

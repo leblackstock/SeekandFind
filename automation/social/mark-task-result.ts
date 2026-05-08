@@ -4,6 +4,7 @@ import { pathToFileURL } from "node:url";
 import { PlatformTask, QueuePost, queuePath, validateSocialQueue } from "./validate-queue.js";
 
 const allowedNewStatuses = new Set(["posted", "posted-early", "error", "skipped"]);
+const valueOptionNames = ["idempotency-key", "status", "posted-url", "posted-at", "receipt-path", "evidence-path", "error"];
 
 interface CliOptions {
   idempotencyKey?: string;
@@ -21,6 +22,48 @@ interface TaskMatch {
   task: PlatformTask;
 }
 
+function npmConfigName(name: string): string {
+  return `npm_config_${name.replaceAll("-", "_")}`;
+}
+
+function npmConfigValue(name: string): string | undefined {
+  return process.env[npmConfigName(name)];
+}
+
+function isNpmBooleanConfig(value: string | undefined): boolean {
+  return value === "true" || value === "false";
+}
+
+function normalizeNpmConsumedArgs(args: string[]): string[] {
+  if (args.some((arg) => arg.startsWith("--"))) return args;
+
+  const namesConsumedByNpm = valueOptionNames.filter((name) => npmConfigValue(name) === "true");
+  if (!namesConsumedByNpm.length) return args;
+
+  const normalized: string[] = [];
+  let positionalIndex = 0;
+
+  for (const name of valueOptionNames) {
+    const envValue = npmConfigValue(name);
+    if (envValue === undefined) continue;
+    if (isNpmBooleanConfig(envValue)) {
+      if (envValue === "true") {
+        const positionalValue = args[positionalIndex];
+        if (positionalValue !== undefined) {
+          normalized.push(`--${name}`, positionalValue);
+          positionalIndex += 1;
+        }
+      }
+      continue;
+    }
+    normalized.push(`--${name}`, envValue);
+  }
+
+  normalized.push(...args.slice(positionalIndex));
+  if (npmConfigValue("force") === "true") normalized.push("--force");
+  return normalized;
+}
+
 function readOption(args: string[], name: string): string | undefined {
   const prefix = `--${name}=`;
   const inline = args.find((arg) => arg.startsWith(prefix));
@@ -28,24 +71,32 @@ function readOption(args: string[], name: string): string | undefined {
 
   const index = args.indexOf(`--${name}`);
   if (index >= 0) return args[index + 1];
-  return undefined;
+  const envValue = npmConfigValue(name);
+  return isNpmBooleanConfig(envValue) ? undefined : envValue;
+}
+
+function readFlag(args: string[], name: string): boolean {
+  const value = readOption(args, name);
+  if (value !== undefined) return !/^(false|0|no)$/i.test(value);
+  return args.includes(`--${name}`);
 }
 
 function parseArgs(args: string[]): CliOptions {
-  const positional = args.filter((arg) => !arg.startsWith("--"));
-  const positionalStatus = readOption(args, "status") ?? positional[1];
+  const normalizedArgs = normalizeNpmConsumedArgs(args);
+  const positional = normalizedArgs.filter((arg) => !arg.startsWith("--"));
+  const positionalStatus = readOption(normalizedArgs, "status") ?? positional[1];
   const positionalRemainder = positional.slice(2);
   const positionalIsError = positionalStatus === "error" && positionalRemainder.length > 0;
 
   return {
-    idempotencyKey: readOption(args, "idempotency-key") ?? positional[0],
+    idempotencyKey: readOption(normalizedArgs, "idempotency-key") ?? positional[0],
     status: positionalStatus,
-    postedUrl: readOption(args, "posted-url") ?? (!positionalIsError ? positionalRemainder[0] : undefined),
-    postedAt: readOption(args, "posted-at") ?? (!positionalIsError ? positionalRemainder[1] : undefined),
-    receiptPath: readOption(args, "receipt-path") ?? (!positionalIsError ? positionalRemainder[2] : undefined),
-    evidencePath: readOption(args, "evidence-path") ?? (!positionalIsError ? positionalRemainder[3] : undefined),
-    error: readOption(args, "error") ?? (positionalIsError ? positionalRemainder.join(" ") : positionalRemainder[4]),
-    force: args.includes("--force")
+    postedUrl: readOption(normalizedArgs, "posted-url") ?? (!positionalIsError ? positionalRemainder[0] : undefined),
+    postedAt: readOption(normalizedArgs, "posted-at") ?? (!positionalIsError ? positionalRemainder[1] : undefined),
+    receiptPath: readOption(normalizedArgs, "receipt-path") ?? (!positionalIsError ? positionalRemainder[2] : undefined),
+    evidencePath: readOption(normalizedArgs, "evidence-path") ?? (!positionalIsError ? positionalRemainder[3] : undefined),
+    error: readOption(normalizedArgs, "error") ?? (positionalIsError ? positionalRemainder.join(" ") : positionalRemainder[4]),
+    force: readFlag(normalizedArgs, "force")
   };
 }
 

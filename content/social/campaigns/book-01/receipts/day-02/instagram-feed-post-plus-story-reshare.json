@@ -1,0 +1,23 @@
+{
+  "idempotency_key": "book01-day02-instagram-feed-post-plus-story-reshare",
+  "post_id": "book01-day-02",
+  "campaign_day": 2,
+  "campaign_date": "2026-05-06",
+  "posted_at": "2026-05-06",
+  "verified_at": "2026-05-07T21:22:57Z",
+  "status": "posted",
+  "primary_posted_url": "https://www.instagram.com/emberdragonbooks/p/DYBXAann6IO/",
+  "platform_urls": [
+    {
+      "platform": "Instagram Feed",
+      "url": "https://www.instagram.com/emberdragonbooks/p/DYBXAann6IO/",
+      "verification_status": 200,
+      "verification_title": "Instagram"
+    }
+  ],
+  "source_records": [
+    "content/outputs/marketing/posts/2026-05-06-day-2-screen-free-meta-feed-posts.md"
+  ],
+  "verification_method": "Opened the candidate URL through the existing Chrome CDP session at http://127.0.0.1:9222 and recorded HTTP status, final URL, and page title.",
+  "notes": "Instagram Story reshare/highlight setup remains optional later setup, not a Day 2 blocker."
+}

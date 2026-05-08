@@ -1,0 +1,273 @@
+{
+  "batch_id": "book-01-short-video-batch-2026-05-08",
+  "batch_date": "2026-05-08",
+  "batch_dir": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08",
+  "day_range": {
+    "from": 3,
+    "to": 12
+  },
+  "branch_counts": {
+    "A": 0,
+    "B": 0,
+    "C": 10,
+    "D": 0
+  },
+  "readiness_mismatches": [],
+  "records": [
+    {
+      "day": 3,
+      "slug": "day-03-search-with-ember",
+      "idempotency_key": "book01-day03-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+      "current_queue_status": "needs-video-export",
+      "caption": "Lanterns, tiny treasures, and one curious baby dragon. Ember’s world is built for little seekers.\n\nComing soon to Amazon.\n\nCTA: Share with a little dragon fan.",
+      "current_media_asset_path": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
+      "source_image_found": true,
+      "readable_text_detected": "yes",
+      "visible_text_found": [
+        "Search with Ember!"
+      ],
+      "branch_classification": "C",
+      "direct_image_to_video_recommendation": "no",
+      "exact_next_asset_needed": "Clean no-text vertical 9:16 video-source image, then image-to-video prompt/export after that source image is approved.",
+      "approved_video_export_exists": false,
+      "readiness_mismatch": false,
+      "output_files": {
+        "image_preflight_json": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-03-search-with-ember/image-preflight.json",
+        "image_preflight_md": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-03-search-with-ember/image-preflight.md",
+        "video_source_image_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-03-search-with-ember/day-03-search-with-ember-video-source-image-prompt.md",
+        "image_to_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-03-search-with-ember/day-03-search-with-ember-image-to-video-prompt.md",
+        "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-03-search-with-ember/day-03-search-with-ember-review-checklist.md"
+      }
+    },
+    {
+      "day": 4,
+      "slug": "day-04-baby-flame-lantern",
+      "idempotency_key": "book01-day04-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+      "current_queue_status": "needs-video-export",
+      "caption": "Can you find the Baby Flame Lantern hiding in Ember's cozy festival world?\n\nComing soon to Amazon.\n\nCTA: Save this tiny-treasure challenge.",
+      "current_media_asset_path": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-02-baby-flame-lantern-teaser-balanced-approved-recovered-2026-05-05T05-47-13-309Z-1.png",
+      "source_image_found": true,
+      "readable_text_detected": "yes",
+      "visible_text_found": [
+        "Can you find the Baby Flame Lantern?"
+      ],
+      "branch_classification": "C",
+      "direct_image_to_video_recommendation": "no",
+      "exact_next_asset_needed": "Clean no-text vertical 9:16 video-source image, then image-to-video prompt/export after that source image is approved.",
+      "approved_video_export_exists": false,
+      "readiness_mismatch": false,
+      "output_files": {
+        "image_preflight_json": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-04-baby-flame-lantern/image-preflight.json",
+        "image_preflight_md": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-04-baby-flame-lantern/image-preflight.md",
+        "video_source_image_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-04-baby-flame-lantern/day-04-baby-flame-lantern-video-source-image-prompt.md",
+        "image_to_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-04-baby-flame-lantern/day-04-baby-flame-lantern-image-to-video-prompt.md",
+        "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-04-baby-flame-lantern/day-04-baby-flame-lantern-review-checklist.md"
+      }
+    },
+    {
+      "day": 5,
+      "slug": "day-05-lantern-maker-workshop",
+      "idempotency_key": "book01-day05-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+      "current_queue_status": "needs-video-export",
+      "caption": "The Lantern Maker’s Workshop is full of tiny details for young eyes to explore.\n\nComing soon to Amazon.\n\nCTA: Follow for the next Ember progress update.",
+      "current_media_asset_path": "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-02-image-1-2026-05-05T04-51-23-244Z.png",
+      "source_image_found": true,
+      "readable_text_detected": "yes",
+      "visible_text_found": [
+        "Can you help Ember find it?"
+      ],
+      "branch_classification": "C",
+      "direct_image_to_video_recommendation": "no",
+      "exact_next_asset_needed": "Clean no-text vertical 9:16 video-source image, then image-to-video prompt/export after that source image is approved.",
+      "approved_video_export_exists": false,
+      "readiness_mismatch": false,
+      "output_files": {
+        "image_preflight_json": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-05-lantern-maker-workshop/image-preflight.json",
+        "image_preflight_md": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-05-lantern-maker-workshop/image-preflight.md",
+        "video_source_image_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-video-source-image-prompt.md",
+        "image_to_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-image-to-video-prompt.md",
+        "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-review-checklist.md"
+      }
+    },
+    {
+      "day": 6,
+      "slug": "day-06-cozy-dragon-village",
+      "idempotency_key": "book01-day06-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+      "current_queue_status": "needs-video-export",
+      "caption": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers.\n\nComing soon to Amazon.\n\nCTA: Save for later if you love hidden-object books.",
+      "current_media_asset_path": "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-03-image-1-2026-05-05T04-51-29-569Z.png",
+      "source_image_found": true,
+      "readable_text_detected": "yes",
+      "visible_text_found": [
+        "Find the tiny treasure"
+      ],
+      "branch_classification": "C",
+      "direct_image_to_video_recommendation": "no",
+      "exact_next_asset_needed": "Clean no-text vertical 9:16 video-source image, then image-to-video prompt/export after that source image is approved.",
+      "approved_video_export_exists": false,
+      "readiness_mismatch": false,
+      "output_files": {
+        "image_preflight_json": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-06-cozy-dragon-village/image-preflight.json",
+        "image_preflight_md": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-06-cozy-dragon-village/image-preflight.md",
+        "video_source_image_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-06-cozy-dragon-village/day-06-cozy-dragon-village-video-source-image-prompt.md",
+        "image_to_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-06-cozy-dragon-village/day-06-cozy-dragon-village-image-to-video-prompt.md",
+        "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-06-cozy-dragon-village/day-06-cozy-dragon-village-review-checklist.md"
+      }
+    },
+    {
+      "day": 7,
+      "slug": "day-07-golden-welcome-bell",
+      "idempotency_key": "book01-day07-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+      "current_queue_status": "needs-video-export",
+      "caption": "Can your little seeker find the Golden Welcome Bell among the festival decorations?\n\nComing soon to Amazon.\n\nCTA: Save the challenge and try it together.",
+      "current_media_asset_path": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-01-golden-welcome-bell-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "source_image_found": true,
+      "readable_text_detected": "yes",
+      "visible_text_found": [
+        "Can you find the Golden Welcome Bell?"
+      ],
+      "branch_classification": "C",
+      "direct_image_to_video_recommendation": "no",
+      "exact_next_asset_needed": "Clean no-text vertical 9:16 video-source image, then image-to-video prompt/export after that source image is approved.",
+      "approved_video_export_exists": false,
+      "readiness_mismatch": false,
+      "output_files": {
+        "image_preflight_json": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-07-golden-welcome-bell/image-preflight.json",
+        "image_preflight_md": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-07-golden-welcome-bell/image-preflight.md",
+        "video_source_image_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-07-golden-welcome-bell/day-07-golden-welcome-bell-video-source-image-prompt.md",
+        "image_to_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-07-golden-welcome-bell/day-07-golden-welcome-bell-image-to-video-prompt.md",
+        "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-07-golden-welcome-bell/day-07-golden-welcome-bell-review-checklist.md"
+      }
+    },
+    {
+      "day": 8,
+      "slug": "day-08-firefly-flower-charm",
+      "idempotency_key": "book01-day08-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+      "current_queue_status": "needs-video-export",
+      "caption": "Find the Firefly Flower Charm.\n\nComing soon to Amazon.\n\nCTA: Tap, pause, and search.",
+      "current_media_asset_path": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-02-firefly-flower-charm-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "source_image_found": true,
+      "readable_text_detected": "yes",
+      "visible_text_found": [
+        "Find the Firefly Flower Charm"
+      ],
+      "branch_classification": "C",
+      "direct_image_to_video_recommendation": "no",
+      "exact_next_asset_needed": "Clean no-text vertical 9:16 video-source image, then image-to-video prompt/export after that source image is approved.",
+      "approved_video_export_exists": false,
+      "readiness_mismatch": false,
+      "output_files": {
+        "image_preflight_json": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-08-firefly-flower-charm/image-preflight.json",
+        "image_preflight_md": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-08-firefly-flower-charm/image-preflight.md",
+        "video_source_image_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-08-firefly-flower-charm/day-08-firefly-flower-charm-video-source-image-prompt.md",
+        "image_to_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-08-firefly-flower-charm/day-08-firefly-flower-charm-image-to-video-prompt.md",
+        "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-08-firefly-flower-charm/day-08-firefly-flower-charm-review-checklist.md"
+      }
+    },
+    {
+      "day": 9,
+      "slug": "day-09-dragon-door-key",
+      "idempotency_key": "book01-day09-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+      "current_queue_status": "needs-video-export",
+      "caption": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene.\n\nComing soon to Amazon.\n\nCTA: Can you spot it?",
+      "current_media_asset_path": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-03-dragon-door-key-teaser-retry-recovered-2026-05-05T19-37-48-357Z.png",
+      "source_image_found": true,
+      "readable_text_detected": "yes",
+      "visible_text_found": [
+        "Can you find the Dragon Door Key?"
+      ],
+      "branch_classification": "C",
+      "direct_image_to_video_recommendation": "no",
+      "exact_next_asset_needed": "Clean no-text vertical 9:16 video-source image, then image-to-video prompt/export after that source image is approved.",
+      "approved_video_export_exists": false,
+      "readiness_mismatch": false,
+      "output_files": {
+        "image_preflight_json": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-09-dragon-door-key/image-preflight.json",
+        "image_preflight_md": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-09-dragon-door-key/image-preflight.md",
+        "video_source_image_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-09-dragon-door-key/day-09-dragon-door-key-video-source-image-prompt.md",
+        "image_to_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-09-dragon-door-key/day-09-dragon-door-key-image-to-video-prompt.md",
+        "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-09-dragon-door-key/day-09-dragon-door-key-review-checklist.md"
+      }
+    },
+    {
+      "day": 10,
+      "slug": "day-10-sparkle-market-token",
+      "idempotency_key": "book01-day10-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+      "current_queue_status": "needs-video-export",
+      "caption": "Can you find the Sparkle Market Token among the cozy market treasures?\n\nComing soon to Amazon.\n\nCTA: Save this for a quick seek-and-find break.",
+      "current_media_asset_path": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-04-sparkle-market-token-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+      "source_image_found": true,
+      "readable_text_detected": "yes",
+      "visible_text_found": [
+        "Find the Sparkle Market Token"
+      ],
+      "branch_classification": "C",
+      "direct_image_to_video_recommendation": "no",
+      "exact_next_asset_needed": "Clean no-text vertical 9:16 video-source image, then image-to-video prompt/export after that source image is approved.",
+      "approved_video_export_exists": false,
+      "readiness_mismatch": false,
+      "output_files": {
+        "image_preflight_json": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-10-sparkle-market-token/image-preflight.json",
+        "image_preflight_md": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-10-sparkle-market-token/image-preflight.md",
+        "video_source_image_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-10-sparkle-market-token/day-10-sparkle-market-token-video-source-image-prompt.md",
+        "image_to_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-10-sparkle-market-token/day-10-sparkle-market-token-image-to-video-prompt.md",
+        "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-10-sparkle-market-token/day-10-sparkle-market-token-review-checklist.md"
+      }
+    },
+    {
+      "day": 11,
+      "slug": "day-11-ember-progress-note",
+      "idempotency_key": "book01-day11-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+      "current_queue_status": "needs-video-export",
+      "caption": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time.\n\nComing soon to Amazon.\n\nCTA: Follow along as the book comes together.",
+      "current_media_asset_path": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
+      "source_image_found": true,
+      "readable_text_detected": "yes",
+      "visible_text_found": [
+        "Meet Ember",
+        "Your baby dragon guide"
+      ],
+      "branch_classification": "C",
+      "direct_image_to_video_recommendation": "no",
+      "exact_next_asset_needed": "Clean no-text vertical 9:16 video-source image, then image-to-video prompt/export after that source image is approved.",
+      "approved_video_export_exists": false,
+      "readiness_mismatch": false,
+      "output_files": {
+        "image_preflight_json": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-11-ember-progress-note/image-preflight.json",
+        "image_preflight_md": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-11-ember-progress-note/image-preflight.md",
+        "video_source_image_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-11-ember-progress-note/day-11-ember-progress-note-video-source-image-prompt.md",
+        "image_to_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-11-ember-progress-note/day-11-ember-progress-note-image-to-video-prompt.md",
+        "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-11-ember-progress-note/day-11-ember-progress-note-review-checklist.md"
+      }
+    },
+    {
+      "day": 12,
+      "slug": "day-12-cozy-seek-and-find-adventure",
+      "idempotency_key": "book01-day12-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+      "current_queue_status": "needs-video-export",
+      "caption": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons.\n\nComing soon to Amazon.\n\nCTA: Save for children's book gift ideas.",
+      "current_media_asset_path": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
+      "source_image_found": true,
+      "readable_text_detected": "yes",
+      "visible_text_found": [
+        "Search with Ember!"
+      ],
+      "branch_classification": "C",
+      "direct_image_to_video_recommendation": "no",
+      "exact_next_asset_needed": "Clean no-text vertical 9:16 video-source image, then image-to-video prompt/export after that source image is approved.",
+      "approved_video_export_exists": false,
+      "readiness_mismatch": false,
+      "output_files": {
+        "image_preflight_json": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-12-cozy-seek-and-find-adventure/image-preflight.json",
+        "image_preflight_md": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-12-cozy-seek-and-find-adventure/image-preflight.md",
+        "video_source_image_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-video-source-image-prompt.md",
+        "image_to_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-image-to-video-prompt.md",
+        "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-review-checklist.md"
+      }
+    }
+  ],
+  "output_files": {
+    "manifest": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/batch-manifest.json",
+    "summary": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/batch-summary.md"
+  }
+}

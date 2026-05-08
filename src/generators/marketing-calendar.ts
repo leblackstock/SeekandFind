@@ -127,7 +127,7 @@ const basePlan: CalendarPlanSlot[] = [
     platform: "Pinterest primary, Instagram/Facebook secondary",
     theme: "Meet Ember",
     asset: approvedAssets.meetEmber,
-    caption: "Meet Ember, a tiny baby dragon guide for a cozy seek-and-find adventure made for children ages 5-8.",
+    caption: "Meet Ember, a tiny baby dragon guide for a cozy seek-and-find adventure made for children ages 5–8.",
     cta: "Follow for more Ember sneak peeks.",
     notes: "Good first pinned or profile-intro post. Keep it as a character intro, not a cover claim."
   },
@@ -135,7 +135,7 @@ const basePlan: CalendarPlanSlot[] = [
     platform: "Pinterest",
     theme: "Screen-free activity idea",
     asset: approvedAssets.screenFree,
-    caption: "A warm little search adventure for families who love screen-free kids' activity ideas and gentle fantasy worlds.",
+    caption: "A warm little search adventure for families who love screen-free kids’ activity ideas and gentle fantasy worlds.",
     cta: "Save this for screen-free activity inspiration.",
     notes: "Use on activity-book and screen-free boards."
   },
@@ -143,7 +143,7 @@ const basePlan: CalendarPlanSlot[] = [
     platform: "Instagram/Facebook, YouTube channel branding, Facebook Page cover",
     theme: "Search with Ember",
     asset: approvedAssets.searchWithEmber,
-    caption: "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers.",
+    caption: "Lanterns, tiny treasures, and one curious baby dragon. Ember’s world is built for little seekers.",
     cta: "Share with a little dragon fan.",
     notes: "Simple caption-only post. Also create/upload proper wide YouTube banner and proper wide Facebook Page cover image; do not use a vertical promo crop for either banner surface."
   },
@@ -159,7 +159,7 @@ const basePlan: CalendarPlanSlot[] = [
     platform: "Facebook",
     theme: "Lantern workshop warmth",
     asset: approvedAssets.lanternWorkshop02,
-    caption: "The Lantern Maker's Workshop is full of tiny details for young eyes to explore.",
+    caption: "The Lantern Maker’s Workshop is full of tiny details for young eyes to explore.",
     cta: "Follow for the next Ember progress update.",
     notes: "Approved Batch 01 image with no blank-template issue."
   },
@@ -232,7 +232,7 @@ const postedPlatformTasks: PostedPlatformTask[] = [
   {
     dayOrder: 1,
     platform: "Pinterest",
-    placement: "Children's Activity Books",
+    placement: "Children’s Activity Books",
     theme: "Meet Ember Activity Book Sneak Peek",
     link: "https://www.pinterest.com/pin/1148417973750222464/",
     notes: "Posted and verified. Day 1 second required Pinterest Pin is complete."
@@ -240,7 +240,7 @@ const postedPlatformTasks: PostedPlatformTask[] = [
   {
     dayOrder: 1,
     platform: "Pinterest",
-    placement: "Gift Ideas for Kids Ages 5-8",
+    placement: "Gift Ideas for Kids Ages 5–8",
     theme: "Meet Ember Gift Idea for Kids Ages 5-8",
     link: "https://www.pinterest.com/pin/1148417973750222492/",
     notes: "Posted and verified. Day 1 third required Pinterest Pin is complete."
@@ -298,7 +298,7 @@ const baseStructures: LaunchStructure[] = [
   {
     platform: "Pinterest",
     type: "Board",
-    name: "Gift Ideas for Kids Ages 5-8",
+    name: "Gift Ideas for Kids Ages 5–8",
     status: "create-or-check",
     use: "Gift-buyer and cozy adventure Pins.",
     nextAction: "Create or verify before the giftable Day 12 row."
@@ -306,7 +306,7 @@ const baseStructures: LaunchStructure[] = [
   {
     platform: "Pinterest",
     type: "Board",
-    name: "Children's Activity Books",
+    name: "Children’s Activity Books",
     status: "create-or-check",
     use: "Activity-book positioning and broad children's book discovery.",
     nextAction: "Use for reused storybook search and activity-book content."
@@ -633,44 +633,44 @@ function copyForPlatform(slot: MarketingCalendarSlot, platform: string): string 
 
 function primaryPinterestBoard(slot: MarketingCalendarSlot): string {
   if (slot.theme.includes("Screen-free")) return "Screen-Free Activities for Kids";
-  if (slot.theme.includes("Giftable")) return "Gift Ideas for Kids Ages 5-8";
+  if (slot.theme.includes("Giftable")) return "Gift Ideas for Kids Ages 5–8";
   if (slot.theme.includes("challenge") || slot.theme.includes("teaser")) return "Hidden Object Books for Kids";
   return "Dragon Books for Kids";
 }
 
 function secondaryPinterestBoard(slot: MarketingCalendarSlot, primaryBoard: string): string {
   const preferred = slot.theme.includes("Screen-free") || slot.theme.includes("Giftable")
-    ? "Children's Activity Books"
+    ? "Children’s Activity Books"
     : slot.theme.includes("challenge") || slot.theme.includes("teaser")
       ? "Fantasy Activity Books for Kids"
-      : "Children's Activity Books";
+      : "Children’s Activity Books";
   return preferred === primaryBoard ? "Fantasy Activity Books for Kids" : preferred;
 }
 
 function tertiaryPinterestBoard(slot: MarketingCalendarSlot, primaryBoard: string, secondaryBoard: string): string {
   const candidates = slot.theme.includes("Giftable")
-    ? ["Gift Ideas for Kids Ages 5-8", "Fantasy Activity Books for Kids", "Dragon Books for Kids"]
+    ? ["Gift Ideas for Kids Ages 5–8", "Fantasy Activity Books for Kids", "Dragon Books for Kids"]
     : slot.theme.includes("challenge") || slot.theme.includes("teaser")
-      ? ["Dragon Books for Kids", "Children's Activity Books", "Screen-Free Activities for Kids"]
-      : ["Gift Ideas for Kids Ages 5-8", "Fantasy Activity Books for Kids", "Screen-Free Activities for Kids"];
-  return candidates.find((board) => board !== primaryBoard && board !== secondaryBoard) ?? "Gift Ideas for Kids Ages 5-8";
+      ? ["Dragon Books for Kids", "Children’s Activity Books", "Screen-Free Activities for Kids"]
+      : ["Gift Ideas for Kids Ages 5–8", "Fantasy Activity Books for Kids", "Screen-Free Activities for Kids"];
+  return candidates.find((board) => board !== primaryBoard && board !== secondaryBoard) ?? "Gift Ideas for Kids Ages 5–8";
 }
 
 function secondaryPinterestCopy(slot: MarketingCalendarSlot, board: string): string {
-  if (board === "Children's Activity Books") {
+  if (board === "Children’s Activity Books") {
     return `${slot.caption} A gentle activity-book sneak peek for families collecting screen-free ideas. ${slot.cta}`;
   }
   if (board === "Fantasy Activity Books for Kids") {
     return `${slot.caption} A cozy fantasy search moment with a tiny dragon guide and lots of little details to notice. ${slot.cta}`;
   }
-  if (board === "Gift Ideas for Kids Ages 5-8") {
+  if (board === "Gift Ideas for Kids Ages 5–8") {
     return `${slot.caption} A warm giftable book-world preview for kids who enjoy tiny treasures and gentle fantasy. ${slot.cta}`;
   }
   return `${slot.caption} Another fresh Ember angle for this campaign day. ${slot.cta}`;
 }
 
 function tertiaryPinterestCopy(slot: MarketingCalendarSlot, board: string): string {
-  if (board === "Gift Ideas for Kids Ages 5-8") {
+  if (board === "Gift Ideas for Kids Ages 5–8") {
     return `${slot.caption} A coming-soon gift idea for kids who like cozy fantasy, tiny treasures, and gentle search activities. ${slot.cta}`;
   }
   if (board === "Fantasy Activity Books for Kids") {
@@ -684,8 +684,8 @@ function tertiaryPinterestCopy(slot: MarketingCalendarSlot, board: string): stri
 
 function pinterestTitle(slot: MarketingCalendarSlot, placement: string, variant: "primary" | "secondary" | "third"): string {
   if (variant === "primary") return slot.theme;
-  if (placement === "Children's Activity Books") return `${slot.theme} Activity Book Sneak Peek`;
-  if (placement === "Gift Ideas for Kids Ages 5-8") return `${slot.theme} Gift Idea for Kids Ages 5-8`;
+  if (placement === "Children’s Activity Books") return `${slot.theme} Activity Book Sneak Peek`;
+  if (placement === "Gift Ideas for Kids Ages 5–8") return `${slot.theme} Gift Idea for Kids Ages 5-8`;
   if (placement === "Fantasy Activity Books for Kids") return `${slot.theme} Fantasy Activity Preview`;
   if (placement === "Screen-Free Activities for Kids") return `${slot.theme} Screen-Free Activity Idea`;
   return `${slot.theme} Pinterest Preview`;

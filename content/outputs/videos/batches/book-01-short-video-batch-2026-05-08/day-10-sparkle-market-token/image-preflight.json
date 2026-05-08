@@ -1,0 +1,25 @@
+{
+  "day": 10,
+  "slug": "day-10-sparkle-market-token",
+  "idempotency_key": "book01-day10-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+  "current_queue_status": "needs-video-export",
+  "caption": "Can you find the Sparkle Market Token among the cozy market treasures?\n\nComing soon to Amazon.\n\nCTA: Save this for a quick seek-and-find break.",
+  "current_media_asset_path": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-04-sparkle-market-token-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+  "source_image_found": true,
+  "readable_text_detected": "yes",
+  "visible_text_found": [
+    "Find the Sparkle Market Token"
+  ],
+  "branch_classification": "C",
+  "direct_image_to_video_recommendation": "no",
+  "exact_next_asset_needed": "Clean no-text vertical 9:16 video-source image, then image-to-video prompt/export after that source image is approved.",
+  "approved_video_export_exists": false,
+  "readiness_mismatch": false,
+  "output_files": {
+    "image_preflight_json": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-10-sparkle-market-token/image-preflight.json",
+    "image_preflight_md": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-10-sparkle-market-token/image-preflight.md",
+    "video_source_image_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-10-sparkle-market-token/day-10-sparkle-market-token-video-source-image-prompt.md",
+    "image_to_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-10-sparkle-market-token/day-10-sparkle-market-token-image-to-video-prompt.md",
+    "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-10-sparkle-market-token/day-10-sparkle-market-token-review-checklist.md"
+  }
+}

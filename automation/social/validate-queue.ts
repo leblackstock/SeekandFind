@@ -24,6 +24,8 @@ export interface PlatformTask {
   evidence_path?: unknown;
   error?: unknown;
   idempotency_key?: unknown;
+  board_name?: unknown;
+  caption_source?: unknown;
   source_refs?: unknown;
 }
 
@@ -142,6 +144,10 @@ export async function validateSocialQueue(): Promise<QueueValidationResult> {
         !hasSourceRefs(post, task)
       ) {
         errors.push(`${label} is ${task.status} but has no posted_url or source_refs.`);
+      }
+
+      if (task.platform === "Pinterest" && task.status === "ready" && !isNonEmptyString(task.board_name)) {
+        errors.push(`${label} is a ready Pinterest task but missing board_name.`);
       }
     });
   });

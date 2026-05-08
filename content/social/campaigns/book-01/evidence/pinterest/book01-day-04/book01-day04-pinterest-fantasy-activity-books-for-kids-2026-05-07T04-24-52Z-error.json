@@ -1,0 +1,25 @@
+{
+  "ok": false,
+  "mode": "dry-run-error",
+  "platform": "Pinterest",
+  "idempotency_key": "book01-day04-pinterest-fantasy-activity-books-for-kids",
+  "error": "Pinterest board \"Fantasy Activity Books for Kids\" was not found/selectable.",
+  "url": "https://www.pinterest.com/pin-builder/",
+  "stopped_before_publish": true,
+  "browser_mode": "cdp",
+  "browser_left_open": true,
+  "reused_existing_pinterest_tab": true,
+  "cdp_url": "http://127.0.0.1:9222",
+  "profile_path": null,
+  "message": "Browser left open for manual login/review.",
+  "actions": [
+    "browser_mode:cdp",
+    "reused_existing_pinterest_tab",
+    "opened_pinterest_builder",
+    "media_uploaded",
+    "title_filled",
+    "description_filled",
+    "board_dropdown_opened"
+  ],
+  "timestamp": "2026-05-07T04:24:57.945Z"
+}

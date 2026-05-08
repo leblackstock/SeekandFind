@@ -1,0 +1,140 @@
+{
+  "ok": true,
+  "mode": "pinterest-board-selector-search-dry-run",
+  "stopped_before_publish": true,
+  "timestamp": "2026-05-07T21:52:18.609Z",
+  "page_url": "https://www.pinterest.com/pin-builder/",
+  "start_selected": "Dragon Books for Kids",
+  "queue_boards": [
+    "Dragon Books for Kids",
+    "Children’s Activity Books",
+    "Gift Ideas for Kids Ages 5–8",
+    "Screen-Free Activities for Kids",
+    "Hidden Object Books for Kids",
+    "Fantasy Activity Books for Kids"
+  ],
+  "restored_selected_board": {
+    "before": "Fantasy Activity Books for Kids",
+    "target": "Dragon Books for Kids",
+    "board": "Dragon Books for Kids",
+    "search_text": "Dragon Books for Kids",
+    "exact_search_result_visible": true,
+    "visible_results": [
+      "Dragon Books for Kids"
+    ],
+    "selected_after_click": "Dragon Books for Kids",
+    "selectable": true,
+    "stayed_on_builder": true,
+    "publish_not_clicked": true,
+    "main_publish_button_still_visible": true,
+    "clicked_x": 1078,
+    "clicked_y": 314,
+    "row_label": "Dragon Books for KidsPublish"
+  },
+  "report_path": "content/social/campaigns/book-01/evidence/pinterest/board-selector-search-dry-run-2026-05-07.json",
+  "screenshot_path": "content/social/campaigns/book-01/evidence/pinterest/board-selector-search-dry-run-2026-05-07-final.png",
+  "results": [
+    {
+      "board": "Dragon Books for Kids",
+      "before": "Dragon Books for Kids",
+      "search_text": "Dragon Books for Kids",
+      "exact_search_result_visible": true,
+      "visible_results": [
+        "Dragon Books for Kids"
+      ],
+      "selected_after_click": "Dragon Books for Kids",
+      "selectable": true,
+      "stayed_on_builder": true,
+      "publish_not_clicked": true,
+      "main_publish_button_still_visible": true,
+      "clicked_x": 1078,
+      "clicked_y": 314,
+      "row_label": "Dragon Books for KidsPublish"
+    },
+    {
+      "board": "Children’s Activity Books",
+      "before": "Dragon Books for Kids",
+      "search_text": "Children’s Activity Books",
+      "exact_search_result_visible": true,
+      "visible_results": [
+        "Children’s Activity Books"
+      ],
+      "selected_after_click": "Children’s Activity Books",
+      "selectable": true,
+      "stayed_on_builder": true,
+      "publish_not_clicked": true,
+      "main_publish_button_still_visible": true,
+      "clicked_x": 1078,
+      "clicked_y": 314,
+      "row_label": "Children’s Activity BooksPublish"
+    },
+    {
+      "board": "Gift Ideas for Kids Ages 5–8",
+      "before": "Children’s Activity Books",
+      "search_text": "Gift Ideas for Kids Ages 5–8",
+      "exact_search_result_visible": true,
+      "visible_results": [
+        "Gift Ideas for Kids Ages 5–8"
+      ],
+      "selected_after_click": "Gift Ideas for Kids Ages 5–8",
+      "selectable": true,
+      "stayed_on_builder": true,
+      "publish_not_clicked": true,
+      "main_publish_button_still_visible": true,
+      "clicked_x": 1078,
+      "clicked_y": 314,
+      "row_label": "Gift Ideas for Kids Ages 5–8Publish"
+    },
+    {
+      "board": "Screen-Free Activities for Kids",
+      "before": "Gift Ideas for Kids Ages 5–8",
+      "search_text": "Screen-Free Activities for Kids",
+      "exact_search_result_visible": true,
+      "visible_results": [
+        "Screen-Free Activities for Kids"
+      ],
+      "selected_after_click": "Screen-Free Activities for Kids",
+      "selectable": true,
+      "stayed_on_builder": true,
+      "publish_not_clicked": true,
+      "main_publish_button_still_visible": true,
+      "clicked_x": 1078,
+      "clicked_y": 314,
+      "row_label": "Screen-Free Activities for KidsPublish"
+    },
+    {
+      "board": "Hidden Object Books for Kids",
+      "before": "Screen-Free Activities for Kids",
+      "search_text": "Hidden Object Books for Kids",
+      "exact_search_result_visible": true,
+      "visible_results": [
+        "Hidden Object Books for Kids"
+      ],
+      "selected_after_click": "Hidden Object Books for Kids",
+      "selectable": true,
+      "stayed_on_builder": true,
+      "publish_not_clicked": true,
+      "main_publish_button_still_visible": true,
+      "clicked_x": 1078,
+      "clicked_y": 314,
+      "row_label": "Hidden Object Books for KidsPublish"
+    },
+    {
+      "board": "Fantasy Activity Books for Kids",
+      "before": "Hidden Object Books for Kids",
+      "search_text": "Fantasy Activity Books for Kids",
+      "exact_search_result_visible": true,
+      "visible_results": [
+        "Fantasy Activity Books for Kids"
+      ],
+      "selected_after_click": "Fantasy Activity Books for Kids",
+      "selectable": true,
+      "stayed_on_builder": true,
+      "publish_not_clicked": true,
+      "main_publish_button_still_visible": true,
+      "clicked_x": 1078,
+      "clicked_y": 314,
+      "row_label": "Fantasy Activity Books for KidsPublish"
+    }
+  ]
+}

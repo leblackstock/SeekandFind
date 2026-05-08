@@ -54,8 +54,8 @@ describe("marketing calendar", () => {
     const dayOnePrimaryPinterest = dayOnePinterestTasks.find((task) => task.placement === "Dragon Books for Kids");
     const dayTwoPinterestTasks = tasks.filter((task) => task.dayOrder === 2 && task.platform === "Pinterest");
     const dayTwoPrimaryPinterest = dayTwoPinterestTasks.find((task) => task.placement === "Screen-Free Activities for Kids");
-    const dayTwoSecondaryPinterest = dayTwoPinterestTasks.find((task) => task.placement === "Children's Activity Books");
-    const dayTwoThirdPinterest = dayTwoPinterestTasks.find((task) => task.placement === "Gift Ideas for Kids Ages 5-8");
+    const dayTwoSecondaryPinterest = dayTwoPinterestTasks.find((task) => task.placement === "Children’s Activity Books");
+    const dayTwoThirdPinterest = dayTwoPinterestTasks.find((task) => task.placement === "Gift Ideas for Kids Ages 5–8");
     const fireflyVideo = tasks.find((task) => task.theme.includes("Firefly Flower Charm") && task.platform === "Short Video");
 
     expect(tasks).toHaveLength(slots.length * 6);
@@ -72,12 +72,12 @@ describe("marketing calendar", () => {
     });
     expect(dayTwoSecondaryPinterest).toMatchObject({
       status: "ready",
-      placement: "Children's Activity Books",
+      placement: "Children’s Activity Books",
       theme: "Screen-free activity idea Activity Book Sneak Peek"
     });
     expect(dayTwoThirdPinterest).toMatchObject({
       status: "ready",
-      placement: "Gift Ideas for Kids Ages 5-8",
+      placement: "Gift Ideas for Kids Ages 5–8",
       theme: "Screen-free activity idea Gift Idea for Kids Ages 5-8"
     });
     expect(dayOnePinterestTasks.map((task) => task.theme).join(" ")).not.toContain("Pinterest angle");

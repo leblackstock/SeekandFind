@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-05-08T02-05-53-140Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "pending-review",
+  "assetName": "day-04-baby-flame-lantern-video-source-no-text-v01",
+  "assetSlug": "day-04-baby-flame-lantern-video-source-no-text-v01",
+  "promptPath": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/broke-mode-prompts/day-04-baby-flame-lantern-broke-video-source-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/video-source/book-01/day-04-baby-flame-lantern-video-source-no-text-v01-2026-05-08T02-05-53-140Z-prompt.md",
+  "imagePath": "content/outputs/images/pending-review/video-source/book-01/day-04-baby-flame-lantern-video-source-no-text-v01-2026-05-08T02-05-53-140Z.png",
+  "screenshotPath": "content/outputs/images/pending-review/video-source/book-01/day-04-baby-flame-lantern-video-source-no-text-v01-2026-05-08T02-05-53-140Z-chatgpt-screenshot.png",
+  "warnings": [
+    "Raw prompt mode selected; Broke Mode pasted the prompt file without compacting or appending missing production requirements.",
+    "Generation watcher success: image action control visible; elapsed=90s; candidates=1; downloads=0; actions=11."
+  ],
+  "dryRun": false,
+  "autoSubmit": true,
+  "maxAttempts": 1,
+  "browserMode": "existing",
+  "cdpUrl": "http://127.0.0.1:9222",
+  "referenceImages": [
+    "../../Downloads/day-04-reference-baby-flame-lantern.png",
+    "Ember's Adventures/EtD Images/Ember-001.png",
+    "Ember's Adventures/EtD Images/Ember-002.png",
+    "Ember's Adventures/EtD Images/Ember-003.png"
+  ],
+  "chatTitle": "Book 1 Day 04 Video Source Image - Baby Flame Lantern"
+}

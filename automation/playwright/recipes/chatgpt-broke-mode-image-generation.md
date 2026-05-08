@@ -110,6 +110,14 @@ Reference upload behavior:
 
 - Default `--reference-images=auto` resolves images from `Ember's Adventures/EtD Images`
 - Ember seek pages upload `Ember-001`, `Ember-002`, and `Ember-003`
+- Book 1 social video-source Broke Mode uses explicit references from `automation/social/broke-video-source.ts`: 1 day-specific Downloads promo image for composition/mood plus `Ember-001`, `Ember-002`, and `Ember-003` as character references
+- The social video-source prompt must say the day promo image is static promo art for visual reference only, while the three Ember images control Ember's appearance, proportions, scarf, satchel, horns, eyes, and colors
+- Book 1 social video-source prompts must not include CTA text, Amazon availability copy, social caption text, or other publish copy that could be rendered into the image
+- After successful prompt submission, the social video-source wrapper requests a ChatGPT chat title like `Book 1 Day 03 Video Source Image - Search with Ember`; rename failures are warnings, not generation blockers
+- Chat title rename is only reported successful after the active ChatGPT conversation's visible sidebar/chat title shows the requested title. API-only confirmation is a warning (`chat_rename_api_verified: true`, `chat_rename_visible_verified: false`) and must not be reported as full rename success.
+- Image generation waits up to 3 minutes by default and polls every 15 seconds for generated image previews, download controls, image action controls, assistant image responses, and fetchable image URLs
+- Use `--timeout-minutes 6` only when a longer active watch is intentionally needed
+- If a generation finishes after a local timeout, use `npm run social:broke-video-source -- --recover day-03` to inspect the existing ChatGPT chat and save the generated image without uploading files or submitting a new prompt
 - If the page includes another named canon character such as `Gemma_Glint`, `HootiePuff`, `Pebblekins`, `Luma_Leafwhisk`, or `Elder_Glowkeeper`, Broke Mode uploads that character's `-001`, `-002`, and `-003` images too
 - If any non-Ember canon character is included, Broke Mode also uploads `Ember_Cast_Lineup-001` and `Ember_Cast_Lineup-002`
 - Override the default set with `--reference-images=<path1,path2,...>` or disable uploads with `--reference-images=none`

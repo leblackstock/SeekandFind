@@ -36,7 +36,7 @@
       ],
       "caption_source": {
         "type": "calendar_slot",
-        "text": "Meet Ember, a tiny baby dragon guide for a cozy seek-and-find adventure made for children ages 5-8.",
+        "text": "Meet Ember, a tiny baby dragon guide for a cozy seek-and-find adventure made for children ages 5–8.",
         "cta": "Follow for more Ember sneak peeks."
       },
       "platform_tasks": [
@@ -49,7 +49,8 @@
           "receipt_path": "content/social/campaigns/book-01/receipts/day-01/pinterest-dragon-books-for-kids.json",
           "evidence_path": "content/social/campaigns/book-01/evidence/day-01/pinterest-dragon-books-for-kids/",
           "error": null,
-          "idempotency_key": "book01-day01-pinterest-dragon-books-for-kids"
+          "idempotency_key": "book01-day01-pinterest-dragon-books-for-kids",
+          "board_name": "Dragon Books for Kids"
         },
         {
           "platform": "Pinterest",
@@ -60,7 +61,8 @@
           "receipt_path": "content/social/campaigns/book-01/receipts/day-01/pinterest-children-s-activity-books.json",
           "evidence_path": "content/social/campaigns/book-01/evidence/day-01/pinterest-children-s-activity-books/",
           "error": null,
-          "idempotency_key": "book01-day01-pinterest-children-s-activity-books"
+          "idempotency_key": "book01-day01-pinterest-children-s-activity-books",
+          "board_name": "Children’s Activity Books"
         },
         {
           "platform": "Pinterest",
@@ -71,7 +73,8 @@
           "receipt_path": "content/social/campaigns/book-01/receipts/day-01/pinterest-gift-ideas-for-kids-ages-5-8.json",
           "evidence_path": "content/social/campaigns/book-01/evidence/day-01/pinterest-gift-ideas-for-kids-ages-5-8/",
           "error": null,
-          "idempotency_key": "book01-day01-pinterest-gift-ideas-for-kids-ages-5-8"
+          "idempotency_key": "book01-day01-pinterest-gift-ideas-for-kids-ages-5-8",
+          "board_name": "Gift Ideas for Kids Ages 5–8"
         },
         {
           "platform": "Instagram",
@@ -99,7 +102,7 @@
           "platform": "Short Video",
           "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
+          "posted_url": "https://www.youtube.com/shorts/HSCae6g57M0?feature=share",
           "posted_at": "2026-05-06",
           "receipt_path": "content/social/campaigns/book-01/receipts/day-01/short-video-youtube-shorts-public-instagram-reels-public-facebook-reels-public-tiktok-public.json",
           "evidence_path": "content/social/campaigns/book-01/evidence/day-01/short-video-youtube-shorts-public-instagram-reels-public-facebook-reels-public-tiktok-public/",
@@ -142,7 +145,7 @@
       ],
       "caption_source": {
         "type": "calendar_slot",
-        "text": "A warm little search adventure for families who love screen-free kids' activity ideas and gentle fantasy worlds.",
+        "text": "A warm little search adventure for families who love screen-free kids’ activity ideas and gentle fantasy worlds.",
         "cta": "Save this for screen-free activity inspiration."
       },
       "platform_tasks": [
@@ -155,7 +158,8 @@
           "receipt_path": "content/social/campaigns/book-01/receipts/day-02/pinterest-screen-free-activities-for-kids.json",
           "evidence_path": "content/social/campaigns/book-01/evidence/day-02/pinterest-screen-free-activities-for-kids/",
           "error": null,
-          "idempotency_key": "book01-day02-pinterest-screen-free-activities-for-kids"
+          "idempotency_key": "book01-day02-pinterest-screen-free-activities-for-kids",
+          "board_name": "Screen-Free Activities for Kids"
         },
         {
           "platform": "Pinterest",
@@ -166,7 +170,8 @@
           "receipt_path": "content/social/campaigns/book-01/receipts/day-02/pinterest-children-s-activity-books.json",
           "evidence_path": "content/social/campaigns/book-01/evidence/day-02/pinterest-children-s-activity-books/",
           "error": null,
-          "idempotency_key": "book01-day02-pinterest-children-s-activity-books"
+          "idempotency_key": "book01-day02-pinterest-children-s-activity-books",
+          "board_name": "Children’s Activity Books"
         },
         {
           "platform": "Pinterest",
@@ -177,13 +182,14 @@
           "receipt_path": "content/social/campaigns/book-01/receipts/day-02/pinterest-gift-ideas-for-kids-ages-5-8.json",
           "evidence_path": "content/social/campaigns/book-01/evidence/day-02/pinterest-gift-ideas-for-kids-ages-5-8/",
           "error": null,
-          "idempotency_key": "book01-day02-pinterest-gift-ideas-for-kids-ages-5-8"
+          "idempotency_key": "book01-day02-pinterest-gift-ideas-for-kids-ages-5-8",
+          "board_name": "Gift Ideas for Kids Ages 5–8"
         },
         {
           "platform": "Instagram",
           "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
+          "posted_url": "https://www.instagram.com/emberdragonbooks/p/DYBXAann6IO/",
           "posted_at": "2026-05-06",
           "receipt_path": "content/social/campaigns/book-01/receipts/day-02/instagram-feed-post-plus-story-reshare.json",
           "evidence_path": "content/social/campaigns/book-01/evidence/day-02/instagram-feed-post-plus-story-reshare/",
@@ -194,7 +200,7 @@
           "platform": "Facebook",
           "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
+          "posted_url": "https://www.facebook.com/photo.php?fbid=122097672171308464&set=pb.61589253935031.-2207520000&type=3",
           "posted_at": "2026-05-06",
           "receipt_path": "content/social/campaigns/book-01/receipts/day-02/facebook-page-post.json",
           "evidence_path": "content/social/campaigns/book-01/evidence/day-02/facebook-page-post/",
@@ -205,7 +211,7 @@
           "platform": "Short Video",
           "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
+          "posted_url": "https://www.youtube.com/shorts/MrVtsvC9fTk",
           "posted_at": "2026-05-06",
           "receipt_path": "content/social/campaigns/book-01/receipts/day-02/short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public.json",
           "evidence_path": "content/social/campaigns/book-01/evidence/day-02/short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public/",
@@ -242,7 +248,7 @@
       ],
       "caption_source": {
         "type": "calendar_slot",
-        "text": "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers.",
+        "text": "Lanterns, tiny treasures, and one curious baby dragon. Ember’s world is built for little seekers.",
         "cta": "Share with a little dragon fan."
       },
       "platform_tasks": [
@@ -255,7 +261,8 @@
           "receipt_path": "content/social/campaigns/book-01/receipts/day-03/pinterest-dragon-books-for-kids.json",
           "evidence_path": "content/social/campaigns/book-01/evidence/day-03/pinterest-dragon-books-for-kids/",
           "error": null,
-          "idempotency_key": "book01-day03-pinterest-dragon-books-for-kids"
+          "idempotency_key": "book01-day03-pinterest-dragon-books-for-kids",
+          "board_name": "Dragon Books for Kids"
         },
         {
           "platform": "Pinterest",
@@ -266,7 +273,8 @@
           "receipt_path": "content/social/campaigns/book-01/receipts/day-03/pinterest-children-s-activity-books.json",
           "evidence_path": "content/social/campaigns/book-01/evidence/day-03/pinterest-children-s-activity-books/",
           "error": null,
-          "idempotency_key": "book01-day03-pinterest-children-s-activity-books"
+          "idempotency_key": "book01-day03-pinterest-children-s-activity-books",
+          "board_name": "Children’s Activity Books"
         },
         {
           "platform": "Pinterest",
@@ -277,29 +285,40 @@
           "receipt_path": "content/social/campaigns/book-01/receipts/day-03/pinterest-gift-ideas-for-kids-ages-5-8.json",
           "evidence_path": "content/social/campaigns/book-01/evidence/day-03/pinterest-gift-ideas-for-kids-ages-5-8/",
           "error": null,
-          "idempotency_key": "book01-day03-pinterest-gift-ideas-for-kids-ages-5-8"
+          "idempotency_key": "book01-day03-pinterest-gift-ideas-for-kids-ages-5-8",
+          "board_name": "Gift Ideas for Kids Ages 5–8"
         },
         {
           "platform": "Instagram",
-          "status": "needs-account",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
-          "error": "needs-account",
-          "idempotency_key": "book01-day03-instagram-feed-post-plus-story-reshare"
+          "posted_url": "https://www.instagram.com/p/DYDi0z-ieoz/",
+          "posted_at": "2026-05-07",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-03/instagram-feed-post-plus-story-reshare.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/day-03/meta-publish/",
+          "error": null,
+          "idempotency_key": "book01-day03-instagram-feed-post-plus-story-reshare",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Lanterns, tiny treasures, and one curious baby dragon. Ember’s world is built for little seekers.\n\nComing soon to Amazon.",
+            "cta": "Share with a little dragon fan."
+          }
         },
         {
           "platform": "Facebook",
-          "status": "needs-account",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
-          "error": "needs-account",
-          "idempotency_key": "book01-day03-facebook-page-post"
+          "posted_url": "https://facebook.com/permalink.php?story_fbid=pfbid0jTuUrmPJTKaGTruHJvNtt5NyDBVMZSL4Xy8C5jUxXQXuj93oPaAuLmyP5CcHRFrbl&id=61589253935031",
+          "posted_at": "2026-05-07",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-03/facebook-page-post.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/day-03/meta-publish/",
+          "error": null,
+          "idempotency_key": "book01-day03-facebook-page-post",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Lanterns, tiny treasures, and one curious baby dragon. Ember’s world is built for little seekers.\n\nComing soon to Amazon.",
+            "cta": "Share with a little dragon fan."
+          }
         },
         {
           "platform": "Short Video",
@@ -310,7 +329,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-video-export",
-          "idempotency_key": "book01-day03-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels"
+          "idempotency_key": "book01-day03-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Lanterns, tiny treasures, and one curious baby dragon. Ember’s world is built for little seekers.\n\nComing soon to Amazon.",
+            "cta": "Share with a little dragon fan."
+          }
         }
       ],
       "idempotency_key": "book01-day03",
@@ -346,36 +370,39 @@
       "platform_tasks": [
         {
           "platform": "Pinterest",
-          "status": "ready",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
+          "posted_url": "https://www.pinterest.com/pin/1148417973750312419/",
+          "posted_at": "2026-05-07T04:09:05.9945644Z",
+          "receipt_path": "content/social/campaigns/book-01/evidence/pinterest/book01-day-04/book01-day04-pinterest-hidden-object-books-for-kids-2026-05-07T04-03-25Z.png",
+          "evidence_path": "content/social/campaigns/book-01/evidence/pinterest/book01-day-04/book01-day04-pinterest-hidden-object-books-for-kids-2026-05-07T04-03-25Z.png",
           "error": null,
-          "idempotency_key": "book01-day04-pinterest-hidden-object-books-for-kids"
+          "idempotency_key": "book01-day04-pinterest-hidden-object-books-for-kids",
+          "board_name": "Hidden Object Books for Kids"
         },
         {
           "platform": "Pinterest",
-          "status": "ready",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
+          "posted_url": "https://www.pinterest.com/pin/1148417973750313577",
+          "posted_at": "2026-05-07T04:39:23Z",
+          "receipt_path": "content/social/campaigns/book-01/evidence/pinterest/book01-day-04/book01-day04-pinterest-fantasy-activity-books-for-kids-2026-05-07T04-31-59Z.png",
+          "evidence_path": "content/social/campaigns/book-01/evidence/pinterest/book01-day-04/book01-day04-pinterest-fantasy-activity-books-for-kids-2026-05-07T04-31-59Z.png",
           "error": null,
-          "idempotency_key": "book01-day04-pinterest-fantasy-activity-books-for-kids"
+          "idempotency_key": "book01-day04-pinterest-fantasy-activity-books-for-kids",
+          "board_name": "Fantasy Activity Books for Kids"
         },
         {
           "platform": "Pinterest",
-          "status": "ready",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
+          "posted_url": "https://www.pinterest.com/pin/1148417973750314215",
+          "posted_at": "2026-05-07T04:55:01Z",
+          "receipt_path": "content/social/campaigns/book-01/evidence/pinterest/book01-day-04/book01-day04-pinterest-dragon-books-for-kids-2026-05-07T04-54-48Z.png",
+          "evidence_path": "content/social/campaigns/book-01/evidence/pinterest/book01-day-04/book01-day04-pinterest-dragon-books-for-kids-2026-05-07T04-54-48Z.png",
           "error": null,
-          "idempotency_key": "book01-day04-pinterest-dragon-books-for-kids"
+          "idempotency_key": "book01-day04-pinterest-dragon-books-for-kids",
+          "board_name": "Dragon Books for Kids"
         },
         {
           "platform": "Instagram",
@@ -386,7 +413,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-account",
-          "idempotency_key": "book01-day04-instagram-feed-post-plus-story-reshare"
+          "idempotency_key": "book01-day04-instagram-feed-post-plus-story-reshare",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Can you find the Baby Flame Lantern hiding in Ember's cozy festival world?\n\nComing soon to Amazon.",
+            "cta": "Save this tiny-treasure challenge."
+          }
         },
         {
           "platform": "Facebook",
@@ -397,7 +429,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-account",
-          "idempotency_key": "book01-day04-facebook-page-post"
+          "idempotency_key": "book01-day04-facebook-page-post",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Can you find the Baby Flame Lantern hiding in Ember's cozy festival world?\n\nComing soon to Amazon.",
+            "cta": "Save this tiny-treasure challenge."
+          }
         },
         {
           "platform": "Short Video",
@@ -408,7 +445,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-video-export",
-          "idempotency_key": "book01-day04-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels"
+          "idempotency_key": "book01-day04-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Can you find the Baby Flame Lantern hiding in Ember's cozy festival world?\n\nComing soon to Amazon.",
+            "cta": "Save this tiny-treasure challenge."
+          }
         }
       ],
       "idempotency_key": "book01-day04",
@@ -435,42 +477,45 @@
       ],
       "caption_source": {
         "type": "calendar_slot",
-        "text": "The Lantern Maker's Workshop is full of tiny details for young eyes to explore.",
+        "text": "The Lantern Maker’s Workshop is full of tiny details for young eyes to explore.",
         "cta": "Follow for the next Ember progress update."
       },
       "platform_tasks": [
         {
           "platform": "Pinterest",
-          "status": "ready",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
+          "posted_url": "https://www.pinterest.com/pin/1148417973750357018",
+          "posted_at": "2026-05-07T21:32:57Z",
+          "receipt_path": "content/social/campaigns/book-01/evidence/pinterest/book01-day-05/book01-day05-pinterest-dragon-books-for-kids-2026-05-07T21-32-43Z.png",
+          "evidence_path": "content/social/campaigns/book-01/evidence/pinterest/book01-day-05/book01-day05-pinterest-dragon-books-for-kids-2026-05-07T21-32-43Z.png",
           "error": null,
-          "idempotency_key": "book01-day05-pinterest-dragon-books-for-kids"
+          "idempotency_key": "book01-day05-pinterest-dragon-books-for-kids",
+          "board_name": "Dragon Books for Kids"
         },
         {
           "platform": "Pinterest",
-          "status": "ready",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
+          "posted_url": "https://www.pinterest.com/pin/1148417973750357203",
+          "posted_at": "2026-05-07T21:37:52Z",
+          "receipt_path": "content/social/campaigns/book-01/evidence/pinterest/book01-day-05/book01-day05-pinterest-children-s-activity-books-2026-05-07T21-37-40Z.png",
+          "evidence_path": "content/social/campaigns/book-01/evidence/pinterest/book01-day-05/book01-day05-pinterest-children-s-activity-books-2026-05-07T21-37-40Z.png",
           "error": null,
-          "idempotency_key": "book01-day05-pinterest-children-s-activity-books"
+          "idempotency_key": "book01-day05-pinterest-children-s-activity-books",
+          "board_name": "Children’s Activity Books"
         },
         {
           "platform": "Pinterest",
-          "status": "ready",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
+          "posted_url": "https://www.pinterest.com/pin/1148417973750357430",
+          "posted_at": "2026-05-07T21:42:25Z",
+          "receipt_path": "content/social/campaigns/book-01/evidence/pinterest/book01-day-05/book01-day05-pinterest-gift-ideas-for-kids-ages-5-8-2026-05-07T21-44-30Z.png",
+          "evidence_path": "content/social/campaigns/book-01/evidence/pinterest/book01-day-05/book01-day05-pinterest-gift-ideas-for-kids-ages-5-8-2026-05-07T21-44-30Z.png",
           "error": null,
-          "idempotency_key": "book01-day05-pinterest-gift-ideas-for-kids-ages-5-8"
+          "idempotency_key": "book01-day05-pinterest-gift-ideas-for-kids-ages-5-8",
+          "board_name": "Gift Ideas for Kids Ages 5–8"
         },
         {
           "platform": "Instagram",
@@ -481,7 +526,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-account",
-          "idempotency_key": "book01-day05-instagram-feed-post-plus-story-reshare"
+          "idempotency_key": "book01-day05-instagram-feed-post-plus-story-reshare",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "The Lantern Maker’s Workshop is full of tiny details for young eyes to explore.\n\nComing soon to Amazon.",
+            "cta": "Follow for the next Ember progress update."
+          }
         },
         {
           "platform": "Facebook",
@@ -492,7 +542,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-account",
-          "idempotency_key": "book01-day05-facebook-page-post"
+          "idempotency_key": "book01-day05-facebook-page-post",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "The Lantern Maker’s Workshop is full of tiny details for young eyes to explore.\n\nComing soon to Amazon.",
+            "cta": "Follow for the next Ember progress update."
+          }
         },
         {
           "platform": "Short Video",
@@ -503,7 +558,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-video-export",
-          "idempotency_key": "book01-day05-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels"
+          "idempotency_key": "book01-day05-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "The Lantern Maker’s Workshop is full of tiny details for young eyes to explore.\n\nComing soon to Amazon.",
+            "cta": "Follow for the next Ember progress update."
+          }
         }
       ],
       "idempotency_key": "book01-day05",
@@ -543,7 +603,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day06-pinterest-dragon-books-for-kids"
+          "idempotency_key": "book01-day06-pinterest-dragon-books-for-kids",
+          "board_name": "Dragon Books for Kids",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers.\n\nComing soon to Amazon.",
+            "cta": "Save for later if you love hidden-object books."
+          }
         },
         {
           "platform": "Pinterest",
@@ -554,7 +620,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day06-pinterest-children-s-activity-books"
+          "idempotency_key": "book01-day06-pinterest-children-s-activity-books",
+          "board_name": "Children’s Activity Books",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers.\n\nComing soon to Amazon.",
+            "cta": "Save for later if you love hidden-object books."
+          }
         },
         {
           "platform": "Pinterest",
@@ -565,7 +637,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day06-pinterest-gift-ideas-for-kids-ages-5-8"
+          "idempotency_key": "book01-day06-pinterest-seek-and-find-books-for-kids",
+          "board_name": "Seek-and-Find Books for Kids",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers.\n\nComing soon to Amazon.",
+            "cta": "Save for later if you love hidden-object books."
+          }
         },
         {
           "platform": "Instagram",
@@ -576,7 +654,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-account",
-          "idempotency_key": "book01-day06-instagram-feed-post-plus-story-reshare"
+          "idempotency_key": "book01-day06-instagram-feed-post-plus-story-reshare",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers.\n\nComing soon to Amazon.",
+            "cta": "Save for later if you love hidden-object books."
+          }
         },
         {
           "platform": "Facebook",
@@ -587,7 +670,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-account",
-          "idempotency_key": "book01-day06-facebook-page-post"
+          "idempotency_key": "book01-day06-facebook-page-post",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers.\n\nComing soon to Amazon.",
+            "cta": "Save for later if you love hidden-object books."
+          }
         },
         {
           "platform": "Short Video",
@@ -598,7 +686,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-video-export",
-          "idempotency_key": "book01-day06-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels"
+          "idempotency_key": "book01-day06-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers.\n\nComing soon to Amazon.",
+            "cta": "Save for later if you love hidden-object books."
+          }
         }
       ],
       "idempotency_key": "book01-day06",
@@ -638,7 +731,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day07-pinterest-hidden-object-books-for-kids"
+          "idempotency_key": "book01-day07-pinterest-hidden-object-books-for-kids",
+          "board_name": "Hidden Object Books for Kids",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Can your little seeker find the Golden Welcome Bell among the festival decorations?\n\nComing soon to Amazon.",
+            "cta": "Save the challenge and try it together."
+          }
         },
         {
           "platform": "Pinterest",
@@ -649,7 +748,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day07-pinterest-fantasy-activity-books-for-kids"
+          "idempotency_key": "book01-day07-pinterest-fantasy-activity-books-for-kids",
+          "board_name": "Fantasy Activity Books for Kids",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Can your little seeker find the Golden Welcome Bell among the festival decorations?\n\nComing soon to Amazon.",
+            "cta": "Save the challenge and try it together."
+          }
         },
         {
           "platform": "Pinterest",
@@ -660,7 +765,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day07-pinterest-dragon-books-for-kids"
+          "idempotency_key": "book01-day07-pinterest-seek-and-find-books-for-kids",
+          "board_name": "Seek-and-Find Books for Kids",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Can your little seeker find the Golden Welcome Bell among the festival decorations?\n\nComing soon to Amazon.",
+            "cta": "Save the challenge and try it together."
+          }
         },
         {
           "platform": "Instagram",
@@ -671,7 +782,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-account",
-          "idempotency_key": "book01-day07-instagram-feed-post-plus-story-reshare"
+          "idempotency_key": "book01-day07-instagram-feed-post-plus-story-reshare",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Can your little seeker find the Golden Welcome Bell among the festival decorations?\n\nComing soon to Amazon.",
+            "cta": "Save the challenge and try it together."
+          }
         },
         {
           "platform": "Facebook",
@@ -682,7 +798,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-account",
-          "idempotency_key": "book01-day07-facebook-page-post"
+          "idempotency_key": "book01-day07-facebook-page-post",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Can your little seeker find the Golden Welcome Bell among the festival decorations?\n\nComing soon to Amazon.",
+            "cta": "Save the challenge and try it together."
+          }
         },
         {
           "platform": "Short Video",
@@ -693,7 +814,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-video-export",
-          "idempotency_key": "book01-day07-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels"
+          "idempotency_key": "book01-day07-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Can your little seeker find the Golden Welcome Bell among the festival decorations?\n\nComing soon to Amazon.",
+            "cta": "Save the challenge and try it together."
+          }
         }
       ],
       "idempotency_key": "book01-day07",
@@ -733,7 +859,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day08-pinterest-hidden-object-books-for-kids"
+          "idempotency_key": "book01-day08-pinterest-hidden-object-books-for-kids",
+          "board_name": "Hidden Object Books for Kids",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Find the Firefly Flower Charm.\n\nComing soon to Amazon.",
+            "cta": "Tap, pause, and search."
+          }
         },
         {
           "platform": "Pinterest",
@@ -744,7 +876,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day08-pinterest-fantasy-activity-books-for-kids"
+          "idempotency_key": "book01-day08-pinterest-fantasy-activity-books-for-kids",
+          "board_name": "Fantasy Activity Books for Kids",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Find the Firefly Flower Charm.\n\nComing soon to Amazon.",
+            "cta": "Tap, pause, and search."
+          }
         },
         {
           "platform": "Pinterest",
@@ -755,7 +893,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day08-pinterest-dragon-books-for-kids"
+          "idempotency_key": "book01-day08-pinterest-seek-and-find-books-for-kids",
+          "board_name": "Seek-and-Find Books for Kids",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Find the Firefly Flower Charm.\n\nComing soon to Amazon.",
+            "cta": "Tap, pause, and search."
+          }
         },
         {
           "platform": "Instagram",
@@ -766,7 +910,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-account",
-          "idempotency_key": "book01-day08-instagram-story-or-reel-cover"
+          "idempotency_key": "book01-day08-instagram-story-or-reel-cover",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Find the Firefly Flower Charm.\n\nComing soon to Amazon.",
+            "cta": "Tap, pause, and search."
+          }
         },
         {
           "platform": "Facebook",
@@ -777,18 +926,28 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-account",
-          "idempotency_key": "book01-day08-facebook-page-post"
+          "idempotency_key": "book01-day08-facebook-page-post",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Find the Firefly Flower Charm.\n\nComing soon to Amazon.",
+            "cta": "Tap, pause, and search."
+          }
         },
         {
           "platform": "Short Video",
-          "status": "ready",
+          "status": "needs-video-export",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": null,
-          "idempotency_key": "book01-day08-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels"
+          "error": "needs-video-export",
+          "idempotency_key": "book01-day08-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Find the Firefly Flower Charm.\n\nComing soon to Amazon.",
+            "cta": "Tap, pause, and search."
+          }
         }
       ],
       "idempotency_key": "book01-day08",
@@ -828,7 +987,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day09-pinterest-hidden-object-books-for-kids"
+          "idempotency_key": "book01-day09-pinterest-hidden-object-books-for-kids",
+          "board_name": "Hidden Object Books for Kids",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene.\n\nComing soon to Amazon.",
+            "cta": "Can you spot it?"
+          }
         },
         {
           "platform": "Pinterest",
@@ -839,7 +1004,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day09-pinterest-fantasy-activity-books-for-kids"
+          "idempotency_key": "book01-day09-pinterest-fantasy-activity-books-for-kids",
+          "board_name": "Fantasy Activity Books for Kids",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene.\n\nComing soon to Amazon.",
+            "cta": "Can you spot it?"
+          }
         },
         {
           "platform": "Pinterest",
@@ -850,7 +1021,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day09-pinterest-dragon-books-for-kids"
+          "idempotency_key": "book01-day09-pinterest-dragon-books-for-kids",
+          "board_name": "Dragon Books for Kids",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene.\n\nComing soon to Amazon.",
+            "cta": "Can you spot it?"
+          }
         },
         {
           "platform": "Instagram",
@@ -861,7 +1038,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-account",
-          "idempotency_key": "book01-day09-instagram-feed-post-plus-story-reshare"
+          "idempotency_key": "book01-day09-instagram-feed-post-plus-story-reshare",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene.\n\nComing soon to Amazon.",
+            "cta": "Can you spot it?"
+          }
         },
         {
           "platform": "Facebook",
@@ -872,7 +1054,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-account",
-          "idempotency_key": "book01-day09-facebook-page-post"
+          "idempotency_key": "book01-day09-facebook-page-post",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene.\n\nComing soon to Amazon.",
+            "cta": "Can you spot it?"
+          }
         },
         {
           "platform": "Short Video",
@@ -883,7 +1070,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-video-export",
-          "idempotency_key": "book01-day09-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels"
+          "idempotency_key": "book01-day09-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene.\n\nComing soon to Amazon.",
+            "cta": "Can you spot it?"
+          }
         }
       ],
       "idempotency_key": "book01-day09",
@@ -923,7 +1115,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day10-pinterest-hidden-object-books-for-kids"
+          "idempotency_key": "book01-day10-pinterest-hidden-object-books-for-kids",
+          "board_name": "Hidden Object Books for Kids",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Can you find the Sparkle Market Token among the cozy market treasures?\n\nComing soon to Amazon.",
+            "cta": "Save this for a quick seek-and-find break."
+          }
         },
         {
           "platform": "Pinterest",
@@ -934,7 +1132,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day10-pinterest-fantasy-activity-books-for-kids"
+          "idempotency_key": "book01-day10-pinterest-fantasy-activity-books-for-kids",
+          "board_name": "Fantasy Activity Books for Kids",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Can you find the Sparkle Market Token among the cozy market treasures?\n\nComing soon to Amazon.",
+            "cta": "Save this for a quick seek-and-find break."
+          }
         },
         {
           "platform": "Pinterest",
@@ -945,7 +1149,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day10-pinterest-dragon-books-for-kids"
+          "idempotency_key": "book01-day10-pinterest-seek-and-find-books-for-kids",
+          "board_name": "Seek-and-Find Books for Kids",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Can you find the Sparkle Market Token among the cozy market treasures?\n\nComing soon to Amazon.",
+            "cta": "Save this for a quick seek-and-find break."
+          }
         },
         {
           "platform": "Instagram",
@@ -956,7 +1166,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-account",
-          "idempotency_key": "book01-day10-instagram-feed-post-plus-story-reshare"
+          "idempotency_key": "book01-day10-instagram-feed-post-plus-story-reshare",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Can you find the Sparkle Market Token among the cozy market treasures?\n\nComing soon to Amazon.",
+            "cta": "Save this for a quick seek-and-find break."
+          }
         },
         {
           "platform": "Facebook",
@@ -967,7 +1182,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-account",
-          "idempotency_key": "book01-day10-facebook-page-post"
+          "idempotency_key": "book01-day10-facebook-page-post",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Can you find the Sparkle Market Token among the cozy market treasures?\n\nComing soon to Amazon.",
+            "cta": "Save this for a quick seek-and-find break."
+          }
         },
         {
           "platform": "Short Video",
@@ -978,7 +1198,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-video-export",
-          "idempotency_key": "book01-day10-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels"
+          "idempotency_key": "book01-day10-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "Can you find the Sparkle Market Token among the cozy market treasures?\n\nComing soon to Amazon.",
+            "cta": "Save this for a quick seek-and-find break."
+          }
         }
       ],
       "idempotency_key": "book01-day10",
@@ -1018,7 +1243,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day11-pinterest-dragon-books-for-kids"
+          "idempotency_key": "book01-day11-pinterest-dragon-books-for-kids",
+          "board_name": "Dragon Books for Kids",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time.\n\nComing soon to Amazon.",
+            "cta": "Follow along as the book comes together."
+          }
         },
         {
           "platform": "Pinterest",
@@ -1029,7 +1260,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day11-pinterest-children-s-activity-books"
+          "idempotency_key": "book01-day11-pinterest-children-s-activity-books",
+          "board_name": "Children’s Activity Books",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time.\n\nComing soon to Amazon.",
+            "cta": "Follow along as the book comes together."
+          }
         },
         {
           "platform": "Pinterest",
@@ -1040,7 +1277,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day11-pinterest-gift-ideas-for-kids-ages-5-8"
+          "idempotency_key": "book01-day11-pinterest-gift-ideas-for-kids-ages-5-8",
+          "board_name": "Gift Ideas for Kids Ages 5–8",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time.\n\nComing soon to Amazon.",
+            "cta": "Follow along as the book comes together."
+          }
         },
         {
           "platform": "Instagram",
@@ -1051,7 +1294,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-account",
-          "idempotency_key": "book01-day11-instagram-feed-post-plus-story-reshare"
+          "idempotency_key": "book01-day11-instagram-feed-post-plus-story-reshare",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time.\n\nComing soon to Amazon.",
+            "cta": "Follow along as the book comes together."
+          }
         },
         {
           "platform": "Facebook",
@@ -1062,7 +1310,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-account",
-          "idempotency_key": "book01-day11-facebook-page-post"
+          "idempotency_key": "book01-day11-facebook-page-post",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time.\n\nComing soon to Amazon.",
+            "cta": "Follow along as the book comes together."
+          }
         },
         {
           "platform": "Short Video",
@@ -1073,7 +1326,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-video-export",
-          "idempotency_key": "book01-day11-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels"
+          "idempotency_key": "book01-day11-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time.\n\nComing soon to Amazon.",
+            "cta": "Follow along as the book comes together."
+          }
         }
       ],
       "idempotency_key": "book01-day11",
@@ -1113,7 +1371,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day12-pinterest-gift-ideas-for-kids-ages-5-8"
+          "idempotency_key": "book01-day12-pinterest-gift-ideas-for-kids-ages-5-8",
+          "board_name": "Gift Ideas for Kids Ages 5–8",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons.\n\nComing soon to Amazon.",
+            "cta": "Save for children's book gift ideas."
+          }
         },
         {
           "platform": "Pinterest",
@@ -1124,7 +1388,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day12-pinterest-children-s-activity-books"
+          "idempotency_key": "book01-day12-pinterest-children-s-activity-books",
+          "board_name": "Children’s Activity Books",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons.\n\nComing soon to Amazon.",
+            "cta": "Save for children's book gift ideas."
+          }
         },
         {
           "platform": "Pinterest",
@@ -1135,7 +1405,13 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day12-pinterest-fantasy-activity-books-for-kids"
+          "idempotency_key": "book01-day12-pinterest-fantasy-activity-books-for-kids",
+          "board_name": "Fantasy Activity Books for Kids",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons.\n\nComing soon to Amazon.",
+            "cta": "Save for children's book gift ideas."
+          }
         },
         {
           "platform": "Instagram",
@@ -1146,7 +1422,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-account",
-          "idempotency_key": "book01-day12-instagram-feed-post-plus-story-reshare"
+          "idempotency_key": "book01-day12-instagram-feed-post-plus-story-reshare",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons.\n\nComing soon to Amazon.",
+            "cta": "Save for children's book gift ideas."
+          }
         },
         {
           "platform": "Facebook",
@@ -1157,7 +1438,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-account",
-          "idempotency_key": "book01-day12-facebook-page-post"
+          "idempotency_key": "book01-day12-facebook-page-post",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons.\n\nComing soon to Amazon.",
+            "cta": "Save for children's book gift ideas."
+          }
         },
         {
           "platform": "Short Video",
@@ -1168,7 +1454,12 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": "needs-video-export",
-          "idempotency_key": "book01-day12-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels"
+          "idempotency_key": "book01-day12-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+          "caption_source": {
+            "type": "calendar_slot",
+            "text": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons.\n\nComing soon to Amazon.",
+            "cta": "Save for children's book gift ideas."
+          }
         }
       ],
       "idempotency_key": "book01-day12",

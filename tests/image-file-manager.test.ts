@@ -24,7 +24,7 @@ import {
   sanitizePromptForBrokeMode,
   selectGeneratedImageCandidate
 } from "../automation/playwright/scripts/chatgpt-broke-mode-generate.js";
-import { cleanChatTitle, marketingChatTitle } from "../automation/playwright/scripts/chatgpt-chat-title.js";
+import { chatGptProjectRootUrlFromConversation, cleanChatTitle, marketingChatTitle, visibleSidebarTextVerifiesChatTitle, visibleTextVerifiesChatTitle } from "../automation/playwright/scripts/chatgpt-chat-title.js";
 
 let root: string;
 
@@ -64,6 +64,38 @@ describe("image file manager", () => {
     };
     await saveAttemptMetadata(metadata, { rootDir: root });
     await expect(saveAttemptMetadata(metadata, { rootDir: root })).rejects.toThrow(/already exists/);
+  });
+
+  it("saves visible chat rename evidence fields in attempt metadata", async () => {
+    const metadataPath = await saveAttemptMetadata({
+      timestamp: "rename-stamp",
+      workflow: "chatgpt-broke-mode-image-generation",
+      status: "pending-review",
+      assetName: "Asset",
+      assetSlug: "asset",
+      promptPath: "prompt.md",
+      warnings: [],
+      dryRun: false,
+      autoSubmit: false,
+      maxAttempts: 1,
+      chat_rename_requested: true,
+      chat_rename_visible_verified: true,
+      chat_rename_method: "project-list-row-menu",
+      conversation_id: "abc123",
+      expected_chat_title: "Expected Title",
+      observed_visible_chat_title: "Expected TitleAttached images...",
+      chat_rename_evidence_path: "content/outputs/images/pending-review/asset-rename-evidence.json",
+      chat_rename_screenshot_path: "content/outputs/images/pending-review/asset-rename-project-row.png"
+    }, { rootDir: root });
+
+    const saved = JSON.parse(await readFile(join(root, metadataPath), "utf8"));
+    expect(saved).toMatchObject({
+      chat_rename_method: "project-list-row-menu",
+      conversation_id: "abc123",
+      expected_chat_title: "Expected Title",
+      observed_visible_chat_title: "Expected TitleAttached images...",
+      chat_rename_visible_verified: true
+    });
   });
 
   it("archives failed attempts with prompt, metadata, QA report, and failure reason", async () => {
@@ -113,10 +145,33 @@ describe("image file manager", () => {
     expect(parseBrokeModeArgs(["--prompt", "prompt.md", "--auto-submit=true"]).autoSubmit).toBe(true);
   });
 
+  it("uses a three-minute image watcher timeout and 15-second polling by default", () => {
+    const options = defaultBrokeModeOptions("prompt.md");
+
+    expect(options.generationTimeoutMs).toBe(180000);
+    expect(options.pollIntervalMs).toBe(15000);
+    expect(parseBrokeModeArgs(["--prompt", "prompt.md"]).generationTimeoutMs).toBe(180000);
+    expect(parseBrokeModeArgs(["--prompt", "prompt.md"]).pollIntervalMs).toBe(15000);
+    expect(parseBrokeModeArgs(["--prompt", "prompt.md", "--timeout-minutes=6"]).generationTimeoutMs).toBe(360000);
+    expect(() => parseBrokeModeArgs(["--prompt", "prompt.md", "--generation-timeout-ms=30000"])).toThrow(/at least 60000/);
+  });
+
+  it("parses recovery-only mode without changing prompt submission defaults", () => {
+    const options = parseBrokeModeArgs(["--prompt", "prompt.md", "--recover-only"]);
+
+    expect(options.recoverOnly).toBe(true);
+    expect(options.autoSubmit).toBe(false);
+  });
+
   it("parses optional ChatGPT chat titles for future generated chats", () => {
     expect(parseBrokeModeArgs(["--prompt", "prompt.md", "--chat-title", "B1 Page 09 Lantern Workshop"]).chatTitle).toBe("B1 Page 09 Lantern Workshop");
     expect(cleanChatTitle("  B1\nPromo <draft>  ")).toBe("B1 Promo draft");
     expect(marketingChatTitle("Book 1 Mission Item Promo Batch 03", "Book 1 Promo Image 03 - Dragon Door Key Teaser")).toBe("B1 - Promo Batch 03 - Slot 03 - Dragon Door Key");
+  });
+
+  it("derives the ChatGPT project root URL from a project conversation URL", () => {
+    expect(chatGptProjectRootUrlFromConversation("https://chatgpt.com/g/g-p-abc-seek-and-find-books/c/1234")).toBe("https://chatgpt.com/g/g-p-abc-seek-and-find-books/project");
+    expect(chatGptProjectRootUrlFromConversation("https://chatgpt.com/c/1234")).toBeUndefined();
   });
 
   it("defaults raw prompt mode off and enables it explicitly", () => {
@@ -166,18 +221,36 @@ describe("image file manager", () => {
 
   it("selects a real generated image instead of avatar images", () => {
     const selected = selectGeneratedImageCandidate([
-      { src: "https://cdn.auth0.com/avatars/lc.png", alt: "Profile image", width: 120, height: 120, clientWidth: 24, clientHeight: 24 },
-      { src: "https://chatgpt.com/backend-api/estuary/content?id=file_123", alt: "Generated image", width: 1103, height: 1426, clientWidth: 400, clientHeight: 517 }
+      candidate({ src: "https://cdn.auth0.com/avatars/lc.png", alt: "Profile image", width: 120, height: 120, clientWidth: 24, clientHeight: 24 }),
+      candidate({ src: "https://chatgpt.com/backend-api/estuary/content?id=file_123", alt: "Generated image", width: 1103, height: 1426, clientWidth: 400, clientHeight: 517 })
     ]);
     expect(selected?.src).toContain("backend-api/estuary/content");
   });
 
   it("does not select uploaded reference images as generated results", () => {
     const selected = selectGeneratedImageCandidate([
-      { src: "https://chatgpt.com/backend-api/estuary/content?id=uploaded_ref", alt: "Uploaded image", width: 2048, height: 1365, clientWidth: 400, clientHeight: 267 },
-      { src: "https://chatgpt.com/backend-api/estuary/content?id=generated_real", alt: "Generated image", width: 1103, height: 1426, clientWidth: 400, clientHeight: 517 }
+      candidate({ src: "https://chatgpt.com/backend-api/estuary/content?id=uploaded_ref", alt: "Uploaded image", width: 2048, height: 1365, clientWidth: 400, clientHeight: 267 }),
+      candidate({ src: "https://chatgpt.com/backend-api/estuary/content?id=generated_real", alt: "Generated image", width: 1103, height: 1426, clientWidth: 400, clientHeight: 517 })
     ]);
     expect(selected?.src).toContain("generated_real");
+  });
+
+  it("verifies chat rename success only from an isolated visible title surface", () => {
+    expect(visibleTextVerifiesChatTitle("Book 1 Day 03 Video Source Image - Search with Ember", "Book 1 Day 03 Video Source Image - Search with Ember")).toBe(true);
+    expect(visibleTextVerifiesChatTitle("Project chats Book 1 Day 03 Video Source Image - Search with Ember", "Book 1 Day 03 Video Source Image - Search with Ember")).toBe(false);
+    expect(visibleTextVerifiesChatTitle("Prompt text says Book 1 Day 03 Video Source Image - Search with Ember", "Book 1 Day 03 Video Source Image - Search with Ember")).toBe(false);
+    expect(visibleTextVerifiesChatTitle("Untitled", "Book 1 Day 03 Video Source Image - Search with Ember")).toBe(false);
+  });
+
+  it("allows a visible sidebar row title followed by a prompt snippet, but not broad page text", () => {
+    const title = "Book 1 Day 03 Video Source Image - Search with Ember";
+    expect(visibleSidebarTextVerifiesChatTitle(`${title} Attached images are visual references only.`, title)).toBe(true);
+    expect(visibleSidebarTextVerifiesChatTitle(`${title}Attached images are visual references only.`, title)).toBe(true);
+    expect(visibleSidebarTextVerifiesChatTitle(title, title)).toBe(true);
+    expect(visibleSidebarTextVerifiesChatTitle("Book 1 Day 04 Video Source Image - Baby Flame Lantern", title)).toBe(false);
+    expect(visibleSidebarTextVerifiesChatTitle(`Project chats ${title}`, title)).toBe(false);
+    expect(visibleSidebarTextVerifiesChatTitle(`Prompt text says ${title}`, title)).toBe(false);
+    expect(visibleSidebarTextVerifiesChatTitle("Ember video-source image", title)).toBe(false);
   });
 
   it("provides manual mode fallback messaging", () => {
@@ -428,3 +501,21 @@ Avoid: off-model Ember, cover-art-sized Ember, duplicate Ember, hidden Ember, du
     expect(result.prompt).not.toMatch(/when available|If references are unavailable|If references are not available|project\/source context|Do not rewrite|summarize|planning response/i);
   });
 });
+
+function candidate(overrides: Partial<ReturnType<typeof baseCandidate>>): ReturnType<typeof baseCandidate> {
+  return { ...baseCandidate(), ...overrides };
+}
+
+function baseCandidate() {
+  return {
+    src: "https://chatgpt.com/backend-api/estuary/content?id=file",
+    alt: "Generated image",
+    width: 1024,
+    height: 1024,
+    clientWidth: 400,
+    clientHeight: 400,
+    ariaLabel: "",
+    parentText: "",
+    role: null
+  };
+}

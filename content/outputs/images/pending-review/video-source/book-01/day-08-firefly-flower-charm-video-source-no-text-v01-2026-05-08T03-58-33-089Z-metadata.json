@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-05-08T03-58-33-089Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "pending-review",
+  "assetName": "day-08-firefly-flower-charm-video-source-no-text-v01",
+  "assetSlug": "day-08-firefly-flower-charm-video-source-no-text-v01",
+  "promptPath": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/broke-mode-prompts/day-08-firefly-flower-charm-broke-video-source-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/video-source/book-01/day-08-firefly-flower-charm-video-source-no-text-v01-2026-05-08T03-58-33-089Z-prompt.md",
+  "imagePath": "content/outputs/images/pending-review/video-source/book-01/day-08-firefly-flower-charm-video-source-no-text-v01-2026-05-08T03-58-33-089Z.png",
+  "screenshotPath": "content/outputs/images/pending-review/video-source/book-01/day-08-firefly-flower-charm-video-source-no-text-v01-2026-05-08T03-58-33-089Z-chatgpt-screenshot.png",
+  "warnings": [
+    "Raw prompt mode selected; Broke Mode pasted the prompt file without compacting or appending missing production requirements.",
+    "chat_rename_verified: true; verification_method=api; watcher_started_after=api-verified rename.",
+    "Generation watcher success: new generated image candidate; elapsed=75s; candidates=1; downloads=0; actions=11."
+  ],
+  "dryRun": false,
+  "autoSubmit": false,
+  "maxAttempts": 1,
+  "chat_rename_verified": true,
+  "chat_rename_verification_method": "api",
+  "watcher_started_after_chat_rename": "api-verified rename",
+  "browserMode": "existing",
+  "cdpUrl": "http://127.0.0.1:9222",
+  "referenceImages": [
+    "../../Downloads/day-08-reference-firefly-flower-charm.png",
+    "Ember's Adventures/EtD Images/Ember-001.png",
+    "Ember's Adventures/EtD Images/Ember-002.png",
+    "Ember's Adventures/EtD Images/Ember-003.png"
+  ],
+  "chatTitle": "Book 1 Day 08 Video Source Image - Firefly Flower Charm"
+}

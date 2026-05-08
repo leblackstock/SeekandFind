@@ -1,0 +1,25 @@
+{
+  "day": 8,
+  "slug": "day-08-firefly-flower-charm",
+  "idempotency_key": "book01-day08-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+  "current_queue_status": "needs-video-export",
+  "caption": "Find the Firefly Flower Charm.\n\nComing soon to Amazon.\n\nCTA: Tap, pause, and search.",
+  "current_media_asset_path": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-02-firefly-flower-charm-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+  "source_image_found": true,
+  "readable_text_detected": "yes",
+  "visible_text_found": [
+    "Find the Firefly Flower Charm"
+  ],
+  "branch_classification": "C",
+  "direct_image_to_video_recommendation": "no",
+  "exact_next_asset_needed": "Clean no-text vertical 9:16 video-source image, then image-to-video prompt/export after that source image is approved.",
+  "approved_video_export_exists": false,
+  "readiness_mismatch": false,
+  "output_files": {
+    "image_preflight_json": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-08-firefly-flower-charm/image-preflight.json",
+    "image_preflight_md": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-08-firefly-flower-charm/image-preflight.md",
+    "video_source_image_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-08-firefly-flower-charm/day-08-firefly-flower-charm-video-source-image-prompt.md",
+    "image_to_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-08-firefly-flower-charm/day-08-firefly-flower-charm-image-to-video-prompt.md",
+    "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-08-firefly-flower-charm/day-08-firefly-flower-charm-review-checklist.md"
+  }
+}

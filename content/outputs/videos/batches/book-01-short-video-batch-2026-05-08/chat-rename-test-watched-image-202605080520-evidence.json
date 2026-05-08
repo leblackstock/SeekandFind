@@ -1,0 +1,167 @@
+{
+  "timestamp": "2026-05-08T05:21:35.079Z",
+  "workflow": "chatgpt-project-chat-rename-and-image-watch-live-test",
+  "promptSubmitted": true,
+  "promptText": "Create a random image for a chat renaming and watcher test. Keep it simple and child-friendly: a tiny blue kite floating above a sunny meadow, no readable text, no logos, no watermark.",
+  "conversation_id": "69fd72b5-f840-83ea-beea-aeae02bad40d",
+  "expected_chat_title": "Rename Test - Watched Image - 2026-05-08 05:20",
+  "chat_rename_method": "project-list-row-menu",
+  "chat_rename_requested": true,
+  "chat_rename_api_verified": false,
+  "chat_rename_visible_verified": true,
+  "observed_visible_chat_title": "Rename Test - Watched Image - 2026-05-08 05:20Create a random image for a chat renaming and watcher test. Keep it simple and child-friendly: a tiny blue kite floating above a sunny meadow, no readable text, no logos, no watermark.",
+  "chat_rename_warning": "",
+  "image_watch_ok": true,
+  "image_watch_signal": "new generated image candidate visible",
+  "image_watch_elapsed_ms": 30063,
+  "preState": {
+    "url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/project",
+    "title": "ChatGPT - Seek and Find Books",
+    "queuedAttachmentCount": 0,
+    "duplicateModal": false,
+    "promptText": ""
+  },
+  "activePromptCheck": {
+    "url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fd72b5-f840-83ea-beea-aeae02bad40d",
+    "pageTitle": "ChatGPT - Seek and Find Books",
+    "bodyHasPrompt": true
+  },
+  "oldInputValue": "Image Request for Test",
+  "beforeRows": [
+    {
+      "text": "Image Request for TestCreate a random image for a chat renaming and watcher test. Keep it simple and child-friendly: a tiny blue kite floating above a sunny meadow, no readable text, no logos, no watermark.",
+      "href": "/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fd72b5-f840-83ea-beea-aeae02bad40d",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 354,
+        "w": 688,
+        "h": 40
+      }
+    }
+  ],
+  "renameVerify": {
+    "ok": true,
+    "observed": "Rename Test - Watched Image - 2026-05-08 05:20Create a random image for a chat renaming and watcher test. Keep it simple and child-friendly: a tiny blue kite floating above a sunny meadow, no readable text, no logos, no watermark.",
+    "rows": [
+      {
+        "text": "Rename Test - Watched Image - 2026-05-08 05:20Create a random image for a chat renaming and watcher test. Keep it simple and child-friendly: a tiny blue kite floating above a sunny meadow, no readable text, no logos, no watermark.",
+        "href": "/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fd72b5-f840-83ea-beea-aeae02bad40d",
+        "visible": true,
+        "rect": {
+          "x": 717,
+          "y": 354,
+          "w": 688,
+          "h": 40
+        }
+      }
+    ]
+  },
+  "imageWatch": {
+    "ok": true,
+    "signal": "new generated image candidate visible",
+    "elapsedMs": 30063,
+    "samples": [
+      {
+        "elapsedSeconds": 0,
+        "candidateCount": 0,
+        "newCandidateCount": 0,
+        "stopButtons": 1,
+        "downloadButtons": 0
+      },
+      {
+        "elapsedSeconds": 10,
+        "candidateCount": 0,
+        "newCandidateCount": 0,
+        "stopButtons": 1,
+        "downloadButtons": 0
+      },
+      {
+        "elapsedSeconds": 20,
+        "candidateCount": 0,
+        "newCandidateCount": 0,
+        "stopButtons": 1,
+        "downloadButtons": 0
+      },
+      {
+        "elapsedSeconds": 30,
+        "candidateCount": 3,
+        "newCandidateCount": 3,
+        "stopButtons": 0,
+        "downloadButtons": 0,
+        "firstNewCandidate": {
+          "alt": "Generated image",
+          "width": 1448,
+          "height": 1086,
+          "clientWidth": 480,
+          "clientHeight": 360,
+          "srcStart": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000109c71f8a476041186a89190&ts=493949&p"
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "index": 2,
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000109c71f8a476041186a89190&ts=493949&p=fs&cid=1&sig=841490f9047a6ec5deda752c5a35df8149b7facba817222559552f8ffb72a197&v=0",
+        "alt": "Generated image",
+        "width": 1448,
+        "height": 1086,
+        "clientWidth": 480,
+        "clientHeight": 360,
+        "visible": true,
+        "looksGenerated": true
+      },
+      {
+        "index": 3,
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000109c71f8a476041186a89190&ts=493949&p=fs&cid=1&sig=841490f9047a6ec5deda752c5a35df8149b7facba817222559552f8ffb72a197&v=0",
+        "alt": "",
+        "width": 1448,
+        "height": 1086,
+        "clientWidth": 480,
+        "clientHeight": 360,
+        "visible": true,
+        "looksGenerated": true
+      },
+      {
+        "index": 4,
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000109c71f8a476041186a89190&ts=493949&p=fs&cid=1&sig=841490f9047a6ec5deda752c5a35df8149b7facba817222559552f8ffb72a197&v=0",
+        "alt": "",
+        "width": 1448,
+        "height": 1086,
+        "clientWidth": 528,
+        "clientHeight": 396,
+        "visible": true,
+        "looksGenerated": true
+      }
+    ]
+  },
+  "activeFinal": {
+    "url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fd72b5-f840-83ea-beea-aeae02bad40d",
+    "pageTitle": "ChatGPT - Seek and Find Books",
+    "bodyHasExpectedTitle": false,
+    "bodyHasPrompt": true,
+    "bodyHasBoundary": false
+  },
+  "projectFinal": {
+    "url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/project",
+    "pageTitle": "ChatGPT - Seek and Find Books",
+    "queuedAttachmentCount": 0,
+    "duplicateModal": false,
+    "promptText": "",
+    "rows": [
+      {
+        "text": "Rename Test - Watched Image - 2026-05-08 05:20Create a random image for a chat renaming and watcher test. Keep it simple and child-friendly: a tiny blue kite floating above a sunny meadow, no readable text, no logos, no watermark.",
+        "href": "/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fd72b5-f840-83ea-beea-aeae02bad40d",
+        "visible": true,
+        "rect": {
+          "x": 717,
+          "y": 354,
+          "w": 688,
+          "h": 40
+        }
+      }
+    ],
+    "visibleVerified": true,
+    "observedVisibleChatTitle": "Rename Test - Watched Image - 2026-05-08 05:20Create a random image for a chat renaming and watcher test. Keep it simple and child-friendly: a tiny blue kite floating above a sunny meadow, no readable text, no logos, no watermark."
+  }
+}

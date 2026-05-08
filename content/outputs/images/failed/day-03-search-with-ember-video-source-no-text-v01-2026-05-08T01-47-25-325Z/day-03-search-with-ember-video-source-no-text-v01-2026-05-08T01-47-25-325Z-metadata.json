@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-05-08T01-47-25-325Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "failed",
+  "assetName": "day-03-search-with-ember-video-source-no-text-v01",
+  "assetSlug": "day-03-search-with-ember-video-source-no-text-v01",
+  "promptPath": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/broke-mode-prompts/day-03-search-with-ember-broke-video-source-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/video-source/book-01/day-03-search-with-ember-video-source-no-text-v01-2026-05-08T01-47-25-325Z-prompt.md",
+  "screenshotPath": "content/outputs/images/pending-review/video-source/book-01/day-03-search-with-ember-video-source-no-text-v01-2026-05-08T01-47-25-325Z-chatgpt-screenshot.png",
+  "failureReason": "Timed out after 3 minutes waiting for ChatGPT image generation to complete.",
+  "warnings": [
+    "Timed out after 3 minutes waiting for ChatGPT image generation to complete.",
+    "Raw prompt mode selected; Broke Mode pasted the prompt file without compacting or appending missing production requirements."
+  ],
+  "dryRun": false,
+  "autoSubmit": true,
+  "maxAttempts": 1,
+  "browserMode": "existing",
+  "cdpUrl": "http://127.0.0.1:9222",
+  "referenceImages": [
+    "../../Downloads/day-03-reference-search-with-ember.png",
+    "Ember's Adventures/EtD Images/Ember-001.png",
+    "Ember's Adventures/EtD Images/Ember-002.png",
+    "Ember's Adventures/EtD Images/Ember-003.png"
+  ],
+  "chatTitle": "Book 1 Day 03 Video Source Image - Search with Ember"
+}

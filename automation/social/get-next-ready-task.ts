@@ -8,6 +8,7 @@ export interface NextReadyTask {
   platform: unknown;
   status: unknown;
   idempotency_key: unknown;
+  board_name: unknown;
   media_assets: unknown;
   caption_source: unknown;
   source_refs: unknown;
@@ -26,8 +27,9 @@ function buildNextTask(post: QueuePost, task: PlatformTask): NextReadyTask {
     platform: task.platform,
     status: task.status,
     idempotency_key: task.idempotency_key,
+    board_name: task.board_name,
     media_assets: post.media_assets,
-    caption_source: post.caption_source,
+    caption_source: task.caption_source ?? post.caption_source,
     source_refs: post.source_refs,
     notes: post.notes
   };

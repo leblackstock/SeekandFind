@@ -14,6 +14,15 @@ Separate two short-video types before generating or using a storyboard:
 - `motion-only image-to-video`: the model receives a visual prompt and should not create on-screen words.
 - `captioned narration short`: CapCut storyboard/script blocks intentionally create visible bottom text, useful for narrated/descriptive Shorts/Reels/TikToks.
 
+Before recommending a source image for `motion-only image-to-video`, inspect the proposed source image for visible text. If the image contains readable text, title graphics, captions, labels, UI, signs, or words, do not recommend using it directly as the image-to-video source unless the user explicitly approves animating that text-heavy graphic. Treat the text-heavy image as a visual reference only, create a clean no-text video-source image prompt first, then use the clean no-text image for image-to-video.
+
+Every image-to-video prep package should record the source-image text preflight:
+
+- whether visible text exists
+- the visible text, if known
+- direct image-to-video recommendation: yes/no
+- recommended path when text exists
+
 Do not paste timed beat text into CapCut storyboard/script blocks for a motion-only video. CapCut renders those block words across the bottom of the video.
 
 For CapCut/Dreamina, do not use `Full video` as the default motion-only lane. The first Day 1 test turned a 15-second brief into a multi-clip storyboard with visible text and off-model/generated media. For clean no-caption Ember motion tests, prefer `Video clip` / single-scene image-to-video, even if that means using a shorter clip under 15 seconds.

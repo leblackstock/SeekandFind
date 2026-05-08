@@ -13,6 +13,12 @@ This folder contains the canonical social posting state for Book 1.
 
 Automation must read `queue.json` for current posting state. Do not read old campaign files under `content/outputs/marketing/` or other legacy locations unless a human explicitly requests a migration or rebuild.
 
+## Queue Commands
+
+- `npm run social:handoff` returns the next publishable `ready` task and its evidence plan.
+- `npm run social:next-blocker` returns the earliest blocked task to fix, checking `needs-account`, then `needs-video-export`, then `error` within each campaign day.
+- Use `npm run social:next-blocker` when we are not posting and want to clean up account or video issues instead of advancing to future ready posts.
+
 ## Boundaries
 
 Do not use files inside `Ember's Adventures/` for this queue. This campaign queue was built from non-`Ember's Adventures/` sources only.

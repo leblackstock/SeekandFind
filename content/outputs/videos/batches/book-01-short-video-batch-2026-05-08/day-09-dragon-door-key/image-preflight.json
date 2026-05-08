@@ -1,0 +1,25 @@
+{
+  "day": 9,
+  "slug": "day-09-dragon-door-key",
+  "idempotency_key": "book01-day09-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+  "current_queue_status": "needs-video-export",
+  "caption": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene.\n\nComing soon to Amazon.\n\nCTA: Can you spot it?",
+  "current_media_asset_path": "content/outputs/images/approved/book-1-mission-item-promo-batch-03-03-dragon-door-key-teaser-retry-recovered-2026-05-05T19-37-48-357Z.png",
+  "source_image_found": true,
+  "readable_text_detected": "yes",
+  "visible_text_found": [
+    "Can you find the Dragon Door Key?"
+  ],
+  "branch_classification": "C",
+  "direct_image_to_video_recommendation": "no",
+  "exact_next_asset_needed": "Clean no-text vertical 9:16 video-source image, then image-to-video prompt/export after that source image is approved.",
+  "approved_video_export_exists": false,
+  "readiness_mismatch": false,
+  "output_files": {
+    "image_preflight_json": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-09-dragon-door-key/image-preflight.json",
+    "image_preflight_md": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-09-dragon-door-key/image-preflight.md",
+    "video_source_image_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-09-dragon-door-key/day-09-dragon-door-key-video-source-image-prompt.md",
+    "image_to_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-09-dragon-door-key/day-09-dragon-door-key-image-to-video-prompt.md",
+    "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-09-dragon-door-key/day-09-dragon-door-key-review-checklist.md"
+  }
+}

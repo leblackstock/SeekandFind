@@ -1,0 +1,25 @@
+{
+  "day": 6,
+  "slug": "day-06-cozy-dragon-village",
+  "idempotency_key": "book01-day06-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+  "current_queue_status": "needs-video-export",
+  "caption": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers.\n\nComing soon to Amazon.\n\nCTA: Save for later if you love hidden-object books.",
+  "current_media_asset_path": "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-03-image-1-2026-05-05T04-51-29-569Z.png",
+  "source_image_found": true,
+  "readable_text_detected": "yes",
+  "visible_text_found": [
+    "Find the tiny treasure"
+  ],
+  "branch_classification": "C",
+  "direct_image_to_video_recommendation": "no",
+  "exact_next_asset_needed": "Clean no-text vertical 9:16 video-source image, then image-to-video prompt/export after that source image is approved.",
+  "approved_video_export_exists": false,
+  "readiness_mismatch": false,
+  "output_files": {
+    "image_preflight_json": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-06-cozy-dragon-village/image-preflight.json",
+    "image_preflight_md": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-06-cozy-dragon-village/image-preflight.md",
+    "video_source_image_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-06-cozy-dragon-village/day-06-cozy-dragon-village-video-source-image-prompt.md",
+    "image_to_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-06-cozy-dragon-village/day-06-cozy-dragon-village-image-to-video-prompt.md",
+    "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-06-cozy-dragon-village/day-06-cozy-dragon-village-review-checklist.md"
+  }
+}

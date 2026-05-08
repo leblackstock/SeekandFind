@@ -1,0 +1,161 @@
+{
+  "timestamp": "2026-05-08T06:23:22.132Z",
+  "keepVerification": [
+    {
+      "day": "03",
+      "id": "69fd409f-a278-83ea-9dfd-7e759f15f117",
+      "title": "Book 1 Day 03 Video Source Image - Search with Ember",
+      "titleVerified": true,
+      "documentTitle": "Book 1 Day 03 Video Source Image - Search with Ember",
+      "bodyHasPrompt": true,
+      "uploadedImageCount": 4,
+      "generatedImageCount": 1,
+      "generatedImageIds": [
+        "file_00000000d500722fb350b6d1555a68ff"
+      ],
+      "cleanComposer": true
+    },
+    {
+      "day": "04",
+      "id": "69fd4bf5-1bd4-83ea-a53c-152d2711d56e",
+      "title": "Book 1 Day 04 Video Source Image - Baby Flame Lantern",
+      "titleVerified": true,
+      "documentTitle": "Book 1 Day 04 Video Source Image - Baby Flame Lantern",
+      "bodyHasPrompt": true,
+      "uploadedImageCount": 4,
+      "generatedImageCount": 1,
+      "generatedImageIds": [
+        "file_000000003e44720c959fcff818fb14c9"
+      ],
+      "cleanComposer": true
+    },
+    {
+      "day": "05",
+      "id": "69fd53c0-aa84-83ea-9ef8-415f3d8b0afa",
+      "title": "Book 1 Day 05 Video Source Image - Lantern Maker Workshop",
+      "titleVerified": true,
+      "documentTitle": "Book 1 Day 05 Video Source Image - Lantern Maker Workshop",
+      "bodyHasPrompt": true,
+      "uploadedImageCount": 4,
+      "generatedImageCount": 1,
+      "generatedImageIds": [
+        "file_00000000928871f8aeb4081213c59db9"
+      ],
+      "cleanComposer": true
+    },
+    {
+      "day": "06",
+      "id": "69fd5443-f148-83ea-bf5d-805761fe234b",
+      "title": "Book 1 Day 06 Video Source Image - Cozy Dragon Village",
+      "titleVerified": true,
+      "documentTitle": "Book 1 Day 06 Video Source Image - Cozy Dragon Village",
+      "bodyHasPrompt": true,
+      "uploadedImageCount": 4,
+      "generatedImageCount": 1,
+      "generatedImageIds": [
+        "file_000000003fe071f895918b8218d4c54f"
+      ],
+      "cleanComposer": true
+    },
+    {
+      "day": "07",
+      "id": "69fd54c5-f1d8-83ea-95d3-9c575e352f19",
+      "title": "Book 1 Day 07 Video Source Image - Golden Welcome Bell",
+      "titleVerified": true,
+      "documentTitle": "Book 1 Day 07 Video Source Image - Golden Welcome Bell",
+      "bodyHasPrompt": true,
+      "uploadedImageCount": 4,
+      "generatedImageCount": 1,
+      "generatedImageIds": [
+        "file_00000000bca071fd96d98974e1c2cb73"
+      ],
+      "cleanComposer": true
+    },
+    {
+      "day": "08",
+      "id": "69fd5f33-d6e0-83ea-8982-4d32f5c1a901",
+      "title": "Book 1 Day 08 Video Source Image - Firefly Flower Charm",
+      "titleVerified": true,
+      "documentTitle": "Book 1 Day 08 Video Source Image - Firefly Flower Charm",
+      "bodyHasPrompt": true,
+      "uploadedImageCount": 4,
+      "generatedImageCount": 1,
+      "generatedImageIds": [
+        "file_00000000cfec71fdbf5c60541ed4d89b"
+      ],
+      "cleanComposer": true
+    },
+    {
+      "day": "09",
+      "id": "69fd6175-71f8-83ea-aaa5-a15318e32c8e",
+      "title": "Book 1 Day 09 Video Source Image - Dragon Door Key",
+      "titleVerified": true,
+      "documentTitle": "Book 1 Day 09 Video Source Image - Dragon Door Key",
+      "bodyHasPrompt": true,
+      "uploadedImageCount": 4,
+      "generatedImageCount": 1,
+      "generatedImageIds": [
+        "file_00000000846871fd9dfe43dd9ab0a3b0"
+      ],
+      "cleanComposer": true
+    },
+    {
+      "day": "10",
+      "id": "69fd61fc-904c-83ea-a94e-beed5c1869f7",
+      "title": "Book 1 Day 10 Video Source Image - Sparkle Market Token",
+      "titleVerified": true,
+      "documentTitle": "Book 1 Day 10 Video Source Image - Sparkle Market Token",
+      "bodyHasPrompt": true,
+      "uploadedImageCount": 4,
+      "generatedImageCount": 1,
+      "generatedImageIds": [
+        "file_00000000515071f894f4ef4b6bce6698"
+      ],
+      "cleanComposer": true
+    },
+    {
+      "day": "11",
+      "id": "69fd7a63-00e4-83ea-8797-e8a42007c0ec",
+      "title": "Book 1 Day 11 Video Source Image - Ember Progress Note",
+      "titleVerified": true,
+      "documentTitle": "Book 1 Day 11 Video Source Image - Ember Progress Note",
+      "bodyHasPrompt": true,
+      "uploadedImageCount": 4,
+      "generatedImageCount": 1,
+      "generatedImageIds": [
+        "file_00000000473c71fd85b2f43a6c4b777b"
+      ],
+      "cleanComposer": true
+    },
+    {
+      "day": "12",
+      "id": "69fd7b6a-a524-83ea-8784-9c224c35d657",
+      "title": "Book 1 Day 12 Video Source Image - Cozy Seek-and-Find Adventure",
+      "titleVerified": true,
+      "documentTitle": "Book 1 Day 12 Video Source Image - Cozy Seek-and-Find Adventure",
+      "bodyHasPrompt": true,
+      "uploadedImageCount": 4,
+      "generatedImageCount": 1,
+      "generatedImageIds": [
+        "file_00000000432c71f89ca222ec02174d66"
+      ],
+      "cleanComposer": true
+    }
+  ],
+  "archivedVerification": [
+    {
+      "id": "69fd3beb-9878-83ea-ad18-3dea9451a0d8",
+      "row": null
+    },
+    {
+      "id": "69fd44f3-7e9c-83ea-8207-575d786ed3ab",
+      "row": null
+    },
+    {
+      "id": "69fd4924-48ec-83ea-bbb9-49b2f74c2dfc",
+      "row": null
+    }
+  ],
+  "evidencePath": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/days-03-12-chat-cleanup-final-verification-2026-05-08-evidence.json",
+  "screenshotPath": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/days-03-12-chat-cleanup-final-verification-2026-05-08.png"
+}

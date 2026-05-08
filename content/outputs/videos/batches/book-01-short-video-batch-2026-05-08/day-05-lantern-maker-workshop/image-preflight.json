@@ -1,0 +1,25 @@
+{
+  "day": 5,
+  "slug": "day-05-lantern-maker-workshop",
+  "idempotency_key": "book01-day05-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+  "current_queue_status": "needs-video-export",
+  "caption": "The Lantern Maker’s Workshop is full of tiny details for young eyes to explore.\n\nComing soon to Amazon.\n\nCTA: Follow for the next Ember progress update.",
+  "current_media_asset_path": "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-02-image-1-2026-05-05T04-51-23-244Z.png",
+  "source_image_found": true,
+  "readable_text_detected": "yes",
+  "visible_text_found": [
+    "Can you help Ember find it?"
+  ],
+  "branch_classification": "C",
+  "direct_image_to_video_recommendation": "no",
+  "exact_next_asset_needed": "Clean no-text vertical 9:16 video-source image, then image-to-video prompt/export after that source image is approved.",
+  "approved_video_export_exists": false,
+  "readiness_mismatch": false,
+  "output_files": {
+    "image_preflight_json": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-05-lantern-maker-workshop/image-preflight.json",
+    "image_preflight_md": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-05-lantern-maker-workshop/image-preflight.md",
+    "video_source_image_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-video-source-image-prompt.md",
+    "image_to_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-image-to-video-prompt.md",
+    "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-review-checklist.md"
+  }
+}

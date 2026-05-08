@@ -1,0 +1,47 @@
+{
+  "idempotency_key": "book01-day02-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
+  "post_id": "book01-day-02",
+  "campaign_day": 2,
+  "campaign_date": "2026-05-06",
+  "posted_at": "2026-05-06",
+  "verified_at": "2026-05-07T21:22:57Z",
+  "status": "posted",
+  "primary_posted_url": "https://www.youtube.com/shorts/MrVtsvC9fTk",
+  "platform_urls": [
+    {
+      "platform": "YouTube Shorts",
+      "url": "https://www.youtube.com/shorts/MrVtsvC9fTk",
+      "verification_status": 200,
+      "verification_title": "Screen-Free Kids Activity with Ember #Shorts - YouTube"
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@emberdragonbooks/video/7636971591527664927",
+      "verification_status": 200,
+      "verification_title": "TikTok - Make Your Day"
+    },
+    {
+      "platform": "Instagram Reel",
+      "url": "https://www.instagram.com/emberdragonbooks/reel/DYBWXp7Dq9R/",
+      "verification_status": 200,
+      "verification_title": "Instagram"
+    },
+    {
+      "platform": "Facebook Reel",
+      "url": "https://www.facebook.com/reel/3307595826062013",
+      "verification_status": 200,
+      "verification_title": "(3) Facebook"
+    },
+    {
+      "platform": "Pinterest Video Pin",
+      "url": "https://www.pinterest.com/pin/1148417973750307959/",
+      "verification_status": 200,
+      "verification_title": "Screen-Free Kids Activity with Ember"
+    }
+  ],
+  "source_records": [
+    "content/outputs/marketing/posts/2026-05-06-day-2-screen-free-short-video-platform-posts.md"
+  ],
+  "verification_method": "Opened candidate URLs through the existing Chrome CDP session at http://127.0.0.1:9222 and recorded HTTP status, final URL, and page title.",
+  "notes": "The queue stores the YouTube Shorts URL as the primary posted_url for this bundled short-video task; this receipt preserves the full platform URL set."
+}

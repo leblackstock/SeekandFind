@@ -1,0 +1,25 @@
+{
+  "day": 12,
+  "slug": "day-12-cozy-seek-and-find-adventure",
+  "idempotency_key": "book01-day12-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+  "current_queue_status": "needs-video-export",
+  "caption": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons.\n\nComing soon to Amazon.\n\nCTA: Save for children's book gift ideas.",
+  "current_media_asset_path": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
+  "source_image_found": true,
+  "readable_text_detected": "yes",
+  "visible_text_found": [
+    "Search with Ember!"
+  ],
+  "branch_classification": "C",
+  "direct_image_to_video_recommendation": "no",
+  "exact_next_asset_needed": "Clean no-text vertical 9:16 video-source image, then image-to-video prompt/export after that source image is approved.",
+  "approved_video_export_exists": false,
+  "readiness_mismatch": false,
+  "output_files": {
+    "image_preflight_json": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-12-cozy-seek-and-find-adventure/image-preflight.json",
+    "image_preflight_md": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-12-cozy-seek-and-find-adventure/image-preflight.md",
+    "video_source_image_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-video-source-image-prompt.md",
+    "image_to_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-image-to-video-prompt.md",
+    "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-review-checklist.md"
+  }
+}

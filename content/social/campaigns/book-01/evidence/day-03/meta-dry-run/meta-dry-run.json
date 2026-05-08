@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "mode": "ready-for-review",
+  "stopped_before_publish": true,
+  "meta_opened": true,
+  "composer_opened": true,
+  "destinations_selected": {
+    "facebook_page": true,
+    "instagram": true
+  },
+  "media_used": "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
+  "media_attached": true,
+  "caption_used": "Lanterns, tiny treasures, and one curious baby dragon. Ember’s world is built for little seekers.\n\nComing soon to Amazon.\n\nShare with a little dragon fan.",
+  "caption_filled": true,
+  "blocker_seen": null,
+  "screenshots": [
+    "content/social/campaigns/book-01/evidence/day-03/meta-dry-run/01-composer-opened.png",
+    "content/social/campaigns/book-01/evidence/day-03/meta-dry-run/02-before-fill.png",
+    "content/social/campaigns/book-01/evidence/day-03/meta-dry-run/03-pre-publish-ready.png"
+  ],
+  "inspected_tasks": [
+    {
+      "idempotency_key": "book01-day03-instagram-feed-post-plus-story-reshare",
+      "platform": "Instagram",
+      "status": "ready",
+      "error": null
+    },
+    {
+      "idempotency_key": "book01-day03-facebook-page-post",
+      "platform": "Facebook",
+      "status": "ready",
+      "error": null
+    }
+  ],
+  "actions": [
+    "No Post, Publish, Schedule, Boost, or Promote action clicked.",
+    "destinations_visible_before_selector_probe",
+    "clicked_add_photo",
+    "clicked_upload_from_desktop",
+    "media_uploaded_via_upload_from_desktop",
+    "caption_filled:[contenteditable='true']:0",
+    "final_action_buttons_visible_but_not_clicked"
+  ],
+  "ready_for_manual_publish": true,
+  "ready_for_auto_publish_implementation": true,
+  "evidence_json_path": "content/social/campaigns/book-01/evidence/day-03/meta-dry-run/meta-dry-run.json"
+}

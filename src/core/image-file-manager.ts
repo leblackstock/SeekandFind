@@ -34,11 +34,29 @@ export interface ImageAttemptMetadata {
   cdpUrl?: string;
   referenceImages?: string[];
   chatTitle?: string;
+  chat_rename_requested?: boolean;
+  chat_rename_verified?: boolean;
+  chat_rename_api_verified?: boolean;
+  chat_rename_visible_verified?: boolean;
+  chat_rename_verification_method?: "visible" | "warning";
+  chat_rename_method?: string;
+  chat_rename_conversation_id?: string;
+  chat_rename_api_title?: string;
+  chat_rename_visible_title?: string;
+  chat_rename_visible_candidates?: string[];
+  chat_rename_warning?: string;
+  chat_rename_evidence_path?: string;
+  chat_rename_screenshot_path?: string;
+  conversation_id?: string;
+  expected_chat_title?: string;
+  observed_visible_chat_title?: string;
+  watcher_started_after_chat_rename?: "visible-title-verified rename" | "rename-failed warning";
 }
 
 export interface ImageWriteOptions {
   rootDir?: string;
   force?: boolean;
+  outputFolder?: string;
 }
 
 export interface BrokeModeRuntimeOptions {
@@ -46,6 +64,11 @@ export interface BrokeModeRuntimeOptions {
   rawPrompt: boolean;
   referenceImages: string[];
   referenceImageRoot: string;
+  outputFolder?: string;
+  referenceUploadGuard?: string;
+  generationTimeoutMs: number;
+  pollIntervalMs: number;
+  recoverOnly: boolean;
   autoSubmit: boolean;
   maxAttempts: number;
   cooldownSeconds: number;
@@ -84,9 +107,13 @@ export function defaultBrokeModeOptions(prompt: string): BrokeModeRuntimeOptions
     rawPrompt: false,
     referenceImages: ["auto"],
     referenceImageRoot: "Ember's Adventures/EtD Images",
+    outputFolder: imageOutputFolders.pendingReview,
     autoSubmit: false,
     maxAttempts: 1,
     cooldownSeconds: 120,
+    generationTimeoutMs: 180000,
+    pollIntervalMs: 15000,
+    recoverOnly: false,
     browserMode: "existing",
     cdpUrl: "http://127.0.0.1:9222",
     profileDir: ".cache/playwright-chatgpt-profile",
@@ -124,7 +151,8 @@ async function writeSafeAbsolute(absolutePath: string, content: string | Buffer,
 
 export async function saveAttemptMetadata(metadata: ImageAttemptMetadata, options: ImageWriteOptions = {}): Promise<string> {
   const root = repoRoot(options.rootDir);
-  const relative = `${imageOutputFolders.pendingReview}/${metadata.assetSlug}-${metadata.timestamp}-metadata.json`;
+  const outputFolder = options.outputFolder ?? imageOutputFolders.pendingReview;
+  const relative = `${outputFolder}/${metadata.assetSlug}-${metadata.timestamp}-metadata.json`;
   const absolute = join(root, relative);
   await writeSafeAbsolute(absolute, `${JSON.stringify(metadata, null, 2)}\n`, options.force);
   return toRepoRelative(root, absolute);
@@ -133,7 +161,8 @@ export async function saveAttemptMetadata(metadata: ImageAttemptMetadata, option
 export async function savePromptCopy(promptPath: string, assetSlug: string, timestamp: string, options: ImageWriteOptions = {}): Promise<string> {
   const root = repoRoot(options.rootDir);
   const source = join(root, promptPath);
-  const relative = `${imageOutputFolders.pendingReview}/${assetSlug}-${timestamp}-prompt.md`;
+  const outputFolder = options.outputFolder ?? imageOutputFolders.pendingReview;
+  const relative = `${outputFolder}/${assetSlug}-${timestamp}-prompt.md`;
   const absolute = join(root, relative);
   if (existsSync(absolute) && !options.force) {
     throw new Error(`File already exists: ${relative}. Re-run with --force to overwrite.`);
