@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-05-09T03-05-44-618Z",
+  "workflow": "chatgpt-project-chat-rename",
+  "chat_rename_requested": true,
+  "chat_rename_api_verified": false,
+  "chat_rename_visible_verified": true,
+  "chat_rename_method": "project-list-row-menu",
+  "conversation_id": "69fea48d-4a04-83ea-ae21-8b9c9c65ff27",
+  "expected_chat_title": "Book 1 Day 04 End Frame - Baby Flame Lantern",
+  "observed_visible_chat_title": "Book 1 Day 04 End Frame - Baby Flame LanternAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+  "active_chat_url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fea48d-4a04-83ea-ae21-8b9c9c65ff27",
+  "project_url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/project",
+  "visible_row_href": "/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fea48d-4a04-83ea-ae21-8b9c9c65ff27",
+  "visible_row_rect": {
+    "x": 717,
+    "y": 354,
+    "w": 688,
+    "h": 40
+  },
+  "visible_candidates": [
+    "Book 1 Day 04 End Frame - Baby Flame LanternAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C"
+  ],
+  "prompt_fingerprint": [
+    "day-04-baby-flame-lantern-end-frame-v01",
+    "Attached images are visual references only for character appearance and proportions. Do not create a character reference"
+  ],
+  "prompt_fingerprint_verified": true,
+  "screenshot_path": "content/outputs/images/pending-review/start-end-frames/book-01/day-04-baby-flame-lantern/day-04-baby-flame-lantern-end-frame-v01-2026-05-09T03-05-44-618Z-chat-rename-project-row.png"
+}

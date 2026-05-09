@@ -1,0 +1,22 @@
+{
+  "day": 11,
+  "slug": "day-11-ember-progress-note",
+  "idempotency_key": "book01-day11-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+  "caption": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time.\n\nComing soon to Amazon.\n\nCTA: Follow along as the book comes together.",
+  "start_frame_mode": "approved-still",
+  "source_image": "content/outputs/images/approved/video-source/book-01/day-11-ember-progress-note-video-source-no-text-v01-2026-05-08T05-54-04-371Z.png",
+  "start_frame": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-11-ember-progress-note/day-11-ember-progress-note-start-frame.png",
+  "expected_end_frame": "content/outputs/images/pending-review/start-end-frames/book-01/day-11-ember-progress-note/day-11-ember-progress-note-end-frame-v01.png",
+  "owner_review": {
+    "status": "regenerate",
+    "reviewed_at": "2026-05-09T00:21:19-04:00",
+    "reason": "Owner requested regeneration."
+  },
+  "output_files": {
+    "manifest": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-11-ember-progress-note/day-11-ember-progress-note-start-end-frame-manifest.json",
+    "start_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-11-ember-progress-note/day-11-ember-progress-note-start-frame-prompt.md",
+    "end_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-11-ember-progress-note/day-11-ember-progress-note-end-frame-prompt.md",
+    "keyframe_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-11-ember-progress-note/day-11-ember-progress-note-keyframe-image-to-video-prompt.md",
+    "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-11-ember-progress-note/day-11-ember-progress-note-start-end-frame-review-checklist.md"
+  }
+}

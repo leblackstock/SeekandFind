@@ -1,0 +1,23 @@
+{
+  "day": 7,
+  "slug": "day-07-golden-welcome-bell",
+  "idempotency_key": "book01-day07-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+  "caption": "Can your little seeker find the Golden Welcome Bell among the festival decorations?\n\nComing soon to Amazon.\n\nCTA: Save the challenge and try it together.",
+  "start_frame_mode": "approved-still",
+  "source_image": "content/outputs/images/approved/video-source/book-01/day-07-golden-welcome-bell-video-source-no-text-v01-2026-05-08T03-13-03-039Z.png",
+  "start_frame": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-07-golden-welcome-bell/day-07-golden-welcome-bell-start-frame.png",
+  "expected_end_frame": "content/outputs/images/pending-review/start-end-frames/book-01/day-07-golden-welcome-bell/day-07-golden-welcome-bell-end-frame-v01.png",
+  "owner_review": {
+    "status": "approved",
+    "reviewed_at": "2026-05-09T00:21:19-04:00",
+    "motion_object": "bells",
+    "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-07-golden-welcome-bell/day-07-golden-welcome-bell-end-frame-v01.png"
+  },
+  "output_files": {
+    "manifest": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-07-golden-welcome-bell/day-07-golden-welcome-bell-start-end-frame-manifest.json",
+    "start_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-07-golden-welcome-bell/day-07-golden-welcome-bell-start-frame-prompt.md",
+    "end_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-07-golden-welcome-bell/day-07-golden-welcome-bell-end-frame-prompt.md",
+    "keyframe_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-07-golden-welcome-bell/day-07-golden-welcome-bell-keyframe-image-to-video-prompt.md",
+    "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-07-golden-welcome-bell/day-07-golden-welcome-bell-start-end-frame-review-checklist.md"
+  }
+}

@@ -1,0 +1,689 @@
+{
+  "ok": true,
+  "dryRun": true,
+  "projectUrl": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/project",
+  "targetCount": 35,
+  "archivedCount": 0,
+  "skippedCount": 35,
+  "errorCount": 0,
+  "options": {
+    "cdpUrl": "http://127.0.0.1:9222",
+    "projectUrl": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/project",
+    "evidenceDir": "content/outputs/chatgpt-project-archive",
+    "confirm": false,
+    "maxLoadMore": 5,
+    "excludeIds": [],
+    "logDryRun": false
+  },
+  "targets": [
+    {
+      "conversationId": "69f9826e-cea0-83ea-b361-a09eb7a1ac56",
+      "title": "Promo Image RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f9826e-cea0-83ea-b361-a09eb7a1ac56",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": -980,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f97ffa-fcfc-83ea-ab8d-5da98fbcf904",
+      "title": "Baby Flame Lantern PromoAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f97ffa-fcfc-83ea-ab8d-5da98fbcf904",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": -915,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f97b4b-96d4-83ea-b233-4fb0c0526a96",
+      "title": "Screen-Free Dragon FunAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f97b4b-96d4-83ea-b233-4fb0c0526a96",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": -850,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f97b49-3328-83ea-91cd-fcd99d1059c3",
+      "title": "Baby Flame Lantern PromoAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f97b49-3328-83ea-91cd-fcd99d1059c3",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": -785,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f97b4a-1f60-83ea-a498-4696ad3ba35e",
+      "title": "Promo Art RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f97b4a-1f60-83ea-a498-4696ad3ba35e",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": -720,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f97b4c-7708-83ea-b779-682a63de1f87",
+      "title": "Promo Image RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f97b4c-7708-83ea-b779-682a63de1f87",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": -655,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f974e6-ed9c-83ea-8f19-3315128dab37",
+      "title": "Promo Image RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f974e6-ed9c-83ea-8f19-3315128dab37",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": -590,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f974e8-9ee4-83ea-bf25-27060ab6043a",
+      "title": "Promo Image RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f974e8-9ee4-83ea-bf25-27060ab6043a",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": -525,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f974e9-1968-83ea-8bfe-7baf8d9e488b",
+      "title": "Book Promo Art RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f974e9-1968-83ea-8bfe-7baf8d9e488b",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": -460,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f974f2-9594-83ea-bc2d-c8e276942d58",
+      "title": "Promotional Art RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f974f2-9594-83ea-bc2d-c8e276942d58",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": -395,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f95ae3-c5bc-83ea-b421-12a636c1718a",
+      "title": "Seek-and-find Puzzle IllustrationCreate a brand-new commercial-quality full-color children's seek-and-find puzzle book illustration for Amazon KDP interior use. Product type: Full-color mascot-based magical adventure seek-and-find p",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f95ae3-c5bc-83ea-b421-12a636c1718a",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": -330,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f4edaa-9fc8-83ea-b989-ec7a7f7aa37c",
+      "title": "Marketing and Listing Prepthere's also options to upload an image per storyboard scene",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f4edaa-9fc8-83ea-b989-ec7a7f7aa37c",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": -265,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f58bef-16c0-83ea-8c07-9639c838b463",
+      "title": "Character Animation ReferenceCreate a clean character animation reference image of Ember for use in Seedance image-to-video. Format: Vertical 9:16 image, full body visible, centered, with enough empty space around Ember for m",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f58bef-16c0-83ea-8c07-9639c838b463",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": -200,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f56968-6414-83ea-aeb5-c4688c6e59f9",
+      "title": "Pinterest Pin Design RequestCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f56968-6414-83ea-aeb5-c4688c6e59f9",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": -135,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f5692d-aaf4-83ea-a71b-1486b4222e2e",
+      "title": "Pinterest Pin DesignCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f5692d-aaf4-83ea-a71b-1486b4222e2e",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": -70,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f56891-0d74-83ea-ab29-3aac7450026a",
+      "title": "Pinterest Pin DesignCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f56891-0d74-83ea-ab29-3aac7450026a",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": -5,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f567e3-57c0-83ea-9268-c4b48057d848",
+      "title": "Pinterest Pin DesignCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f567e3-57c0-83ea-9268-c4b48057d848",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 60,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f566fb-9abc-83ea-9143-e457b1631cde",
+      "title": "Pinterest Pin Design RequestCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f566fb-9abc-83ea-9143-e457b1631cde",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 125,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f566b0-98e4-83ea-a8d8-5cb0d78ff6cf",
+      "title": "Pinterest Pin Design RequestCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f566b0-98e4-83ea-a8d8-5cb0d78ff6cf",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 190,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f565e8-26c8-83ea-b6fc-e9a31185aa29",
+      "title": "Seek-and-find Pin DesignCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f565e8-26c8-83ea-b6fc-e9a31185aa29",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 255,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f56592-5ad0-83ea-83fc-da615a6adc28",
+      "title": "Seek-and-Find Pin DesignCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f56592-5ad0-83ea-83fc-da615a6adc28",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 320,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f56507-ce98-83ea-8692-ca49847467cb",
+      "title": "Pinterest Pin Design RequestCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f56507-ce98-83ea-8692-ca49847467cb",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 385,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f56429-0e40-83ea-81e9-8c136250d165",
+      "title": "Pinterest Pin DesignCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f56429-0e40-83ea-81e9-8c136250d165",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 450,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f56234-a680-83ea-b247-8d8831ae1eb1",
+      "title": "Pinterest Pin Design RequestCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f56234-a680-83ea-b247-8d8831ae1eb1",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 515,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f5403f-86a0-83ea-914f-bd138d85adab",
+      "title": "Seek-and-Find Book ImageCreate a commercial-quality promotional image for a children's full-color seek-and-find book. Book: Ember and the Sparkleflame Festival Search Audience: Children ages 5-8 and adult gift-buyers",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f5403f-86a0-83ea-914f-bd138d85adab",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 580,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f536af-94e4-83ea-98c1-469881c8f1fe",
+      "title": "Seek-and-Find Book PromoCreate a commercial-quality promotional image for a children's full-color seek-and-find book. Book: Ember and the Sparkleflame Festival Search Audience: Children ages 5-8 and adult gift-buyers",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f536af-94e4-83ea-98c1-469881c8f1fe",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 645,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f53588-2c68-83ea-ac36-5db08918ac62",
+      "title": "Seek-and-find Book PromoCreate a commercial-quality promotional image for a children's full-color seek-and-find book. Book: Ember and the Sparkleflame Festival Search Audience: Children ages 5-8 and adult gift-buyers",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f53588-2c68-83ea-ac36-5db08918ac62",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 710,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f53545-db8c-83ea-9b6f-6ea04203318f",
+      "title": "Seek-and-Find Book PromoCreate a commercial-quality promotional image for a children's full-color seek-and-find book. Book: Ember and the Sparkleflame Festival Search Audience: Children ages 5-8 and adult gift-buyers",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f53545-db8c-83ea-9b6f-6ea04203318f",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 775,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f534ff-5c14-83ea-8f38-d642204de720",
+      "title": "Seek-and-Find Book PromoCreate a commercial-quality promotional image for a children's full-color seek-and-find book. Book: Ember and the Sparkleflame Festival Search Audience: Children ages 5-8 and adult gift-buyers",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f534ff-5c14-83ea-8f38-d642204de720",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 840,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f5331b-7e48-83ea-aa55-5c0153a58762",
+      "title": "Promotional Image RequestCreate a commercial-quality promotional image for a children's full-color seek-and-find book. Book: Ember and the Sparkleflame Festival Search Audience: Children ages 5-8 and adult gift-buyers",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f5331b-7e48-83ea-aa55-5c0153a58762",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 905,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f50c4c-1a7c-83ea-a8ce-5424ecb56cf2",
+      "title": "Children's Book Promo DesignCreate a commercial-quality promotional image for a children's full-color seek-and-find book. Book: Ember and the Sparkleflame Festival Search Audience: Children ages 5-8 and adult gift-buyers",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f50c4c-1a7c-83ea-a8ce-5424ecb56cf2",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 970,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f50a1c-463c-83ea-b52e-e66bb9ddabba",
+      "title": "Children's Seek-and-Find PromoCreate a commercial-quality promotional image for a children's full-color seek-and-find book. Book: Ember and the Sparkleflame Festival Search Audience: Children ages 5-8 and adult gift-buyers",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f50a1c-463c-83ea-b52e-e66bb9ddabba",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 1035,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f43f4d-357c-83ea-b251-12c9f4a539e8",
+      "title": "Mascot Seek-and-Find IllustrationCreate a commercial-quality full-color title page illustration for a children's mascot seek-and-find puzzle book. Product type: Children’s full-color mascot seek-and-find book title page. Audie",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f43f4d-357c-83ea-b251-12c9f4a539e8",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 1100,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f43ec4-87a4-83ea-be71-273163343a7a",
+      "title": "Children's Book Illustration RequestCreate a commercial-quality full-color title page illustration for a children's mascot seek-and-find puzzle book. Product type: Children’s full-color mascot seek-and-find book title page. Audie",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f43ec4-87a4-83ea-be71-273163343a7a",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 1165,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f43e65-d8e4-83ea-9c9c-bed62423fc5a",
+      "title": "Ember Festival SearchCreate a commercial-quality full-color title page illustration for a children's mascot seek-and-find puzzle book. Product type: Children’s full-color mascot seek-and-find book title page. Audie",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f43e65-d8e4-83ea-9c9c-bed62423fc5a",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 1230,
+        "w": 688,
+        "h": 40
+      }
+    }
+  ],
+  "results": [
+    {
+      "conversationId": "69f9826e-cea0-83ea-b361-a09eb7a1ac56",
+      "title": "Promo Image RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f97ffa-fcfc-83ea-ab8d-5da98fbcf904",
+      "title": "Baby Flame Lantern PromoAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f97b4b-96d4-83ea-b233-4fb0c0526a96",
+      "title": "Screen-Free Dragon FunAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f97b49-3328-83ea-91cd-fcd99d1059c3",
+      "title": "Baby Flame Lantern PromoAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f97b4a-1f60-83ea-a498-4696ad3ba35e",
+      "title": "Promo Art RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f97b4c-7708-83ea-b779-682a63de1f87",
+      "title": "Promo Image RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f974e6-ed9c-83ea-8f19-3315128dab37",
+      "title": "Promo Image RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f974e8-9ee4-83ea-bf25-27060ab6043a",
+      "title": "Promo Image RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f974e9-1968-83ea-8bfe-7baf8d9e488b",
+      "title": "Book Promo Art RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f974f2-9594-83ea-bc2d-c8e276942d58",
+      "title": "Promotional Art RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f95ae3-c5bc-83ea-b421-12a636c1718a",
+      "title": "Seek-and-find Puzzle IllustrationCreate a brand-new commercial-quality full-color children's seek-and-find puzzle book illustration for Amazon KDP interior use. Product type: Full-color mascot-based magical adventure seek-and-find p",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f4edaa-9fc8-83ea-b989-ec7a7f7aa37c",
+      "title": "Marketing and Listing Prepthere's also options to upload an image per storyboard scene",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f58bef-16c0-83ea-8c07-9639c838b463",
+      "title": "Character Animation ReferenceCreate a clean character animation reference image of Ember for use in Seedance image-to-video. Format: Vertical 9:16 image, full body visible, centered, with enough empty space around Ember for m",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f56968-6414-83ea-aeb5-c4688c6e59f9",
+      "title": "Pinterest Pin Design RequestCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f5692d-aaf4-83ea-a71b-1486b4222e2e",
+      "title": "Pinterest Pin DesignCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f56891-0d74-83ea-ab29-3aac7450026a",
+      "title": "Pinterest Pin DesignCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f567e3-57c0-83ea-9268-c4b48057d848",
+      "title": "Pinterest Pin DesignCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f566fb-9abc-83ea-9143-e457b1631cde",
+      "title": "Pinterest Pin Design RequestCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f566b0-98e4-83ea-a8d8-5cb0d78ff6cf",
+      "title": "Pinterest Pin Design RequestCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f565e8-26c8-83ea-b6fc-e9a31185aa29",
+      "title": "Seek-and-find Pin DesignCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f56592-5ad0-83ea-83fc-da615a6adc28",
+      "title": "Seek-and-Find Pin DesignCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f56507-ce98-83ea-8692-ca49847467cb",
+      "title": "Pinterest Pin Design RequestCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f56429-0e40-83ea-81e9-8c136250d165",
+      "title": "Pinterest Pin DesignCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f56234-a680-83ea-b247-8d8831ae1eb1",
+      "title": "Pinterest Pin Design RequestCreate a commercial-quality vertical Pinterest pin image for a children’s full-color seek-and-find book. Format: Vertical Pinterest pin, 2:3 ratio, preferably 1000 x 1500 or 1200 x 1800. Book:",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f5403f-86a0-83ea-914f-bd138d85adab",
+      "title": "Seek-and-Find Book ImageCreate a commercial-quality promotional image for a children's full-color seek-and-find book. Book: Ember and the Sparkleflame Festival Search Audience: Children ages 5-8 and adult gift-buyers",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f536af-94e4-83ea-98c1-469881c8f1fe",
+      "title": "Seek-and-Find Book PromoCreate a commercial-quality promotional image for a children's full-color seek-and-find book. Book: Ember and the Sparkleflame Festival Search Audience: Children ages 5-8 and adult gift-buyers",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f53588-2c68-83ea-ac36-5db08918ac62",
+      "title": "Seek-and-find Book PromoCreate a commercial-quality promotional image for a children's full-color seek-and-find book. Book: Ember and the Sparkleflame Festival Search Audience: Children ages 5-8 and adult gift-buyers",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f53545-db8c-83ea-9b6f-6ea04203318f",
+      "title": "Seek-and-Find Book PromoCreate a commercial-quality promotional image for a children's full-color seek-and-find book. Book: Ember and the Sparkleflame Festival Search Audience: Children ages 5-8 and adult gift-buyers",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f534ff-5c14-83ea-8f38-d642204de720",
+      "title": "Seek-and-Find Book PromoCreate a commercial-quality promotional image for a children's full-color seek-and-find book. Book: Ember and the Sparkleflame Festival Search Audience: Children ages 5-8 and adult gift-buyers",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f5331b-7e48-83ea-aa55-5c0153a58762",
+      "title": "Promotional Image RequestCreate a commercial-quality promotional image for a children's full-color seek-and-find book. Book: Ember and the Sparkleflame Festival Search Audience: Children ages 5-8 and adult gift-buyers",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f50c4c-1a7c-83ea-a8ce-5424ecb56cf2",
+      "title": "Children's Book Promo DesignCreate a commercial-quality promotional image for a children's full-color seek-and-find book. Book: Ember and the Sparkleflame Festival Search Audience: Children ages 5-8 and adult gift-buyers",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f50a1c-463c-83ea-b52e-e66bb9ddabba",
+      "title": "Children's Seek-and-Find PromoCreate a commercial-quality promotional image for a children's full-color seek-and-find book. Book: Ember and the Sparkleflame Festival Search Audience: Children ages 5-8 and adult gift-buyers",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f43f4d-357c-83ea-b251-12c9f4a539e8",
+      "title": "Mascot Seek-and-Find IllustrationCreate a commercial-quality full-color title page illustration for a children's mascot seek-and-find puzzle book. Product type: Children’s full-color mascot seek-and-find book title page. Audie",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f43ec4-87a4-83ea-be71-273163343a7a",
+      "title": "Children's Book Illustration RequestCreate a commercial-quality full-color title page illustration for a children's mascot seek-and-find puzzle book. Product type: Children’s full-color mascot seek-and-find book title page. Audie",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    },
+    {
+      "conversationId": "69f43e65-d8e4-83ea-9c9c-bed62423fc5a",
+      "title": "Ember Festival SearchCreate a commercial-quality full-color title page illustration for a children's mascot seek-and-find puzzle book. Product type: Children’s full-color mascot seek-and-find book title page. Audie",
+      "ok": true,
+      "archived": false,
+      "skipped": true
+    }
+  ],
+  "warnings": [],
+  "evidencePath": "content/outputs/chatgpt-project-archive/seek-and-find-books-chat-archive-2026-05-09T02-32-25-210Z.json"
+}

@@ -76,6 +76,25 @@ describe("Broke Mode video-source batch integration", () => {
     });
   });
 
+  it("parses redo targets through normal args and npm-forwarded env args", () => {
+    expect(parseVideoSourceBrokeModeArgs(["--redo", "day-10"])).toMatchObject({
+      redo: "day-10",
+      day: undefined
+    });
+
+    const previousRedo = process.env.npm_config_redo;
+    process.env.npm_config_redo = "true";
+    try {
+      expect(parseVideoSourceBrokeModeArgs(["day-10"])).toMatchObject({
+        redo: "day-10",
+        day: undefined
+      });
+    } finally {
+      if (previousRedo === undefined) delete process.env.npm_config_redo;
+      else process.env.npm_config_redo = previousRedo;
+    }
+  });
+
   it("falls back to npm_config_max when npm passes --max without a value", () => {
     const previous = process.env.npm_config_max;
     process.env.npm_config_max = "3";
@@ -249,11 +268,14 @@ describe("Broke Mode video-source batch integration", () => {
     expect(prompt).toContain("Attached images are visual references only. The day-specific promo image is for composition, mood, color palette, and concept only.");
     expect(prompt).toContain("Use the uploaded day-specific promo image as the composition and mood reference only.");
     expect(prompt).toContain("Use the uploaded Ember-001, Ember-002, and Ember-003 images as character reference images.");
+    expect(prompt).toContain("Ember accuracy is the highest priority in this generation.");
+    expect(prompt).toContain("simplify the market details rather than changing Ember");
     expect(prompt).toContain("Do not render, imply, or invent any text, words, letters, captions, title graphics, signs, labels, UI, logos, or marketing copy.");
     expect(prompt).toContain("Avoid paper, tag, scrap, note, sign-like rectangle, label-like shape, or decorative stroke details that look like letters");
-    expect(prompt).toContain("Do not turn Ember into a fox, cat, generic dragon, wizard, or different character.");
+    expect(prompt).toContain("Do not turn Ember into a fox, cat, generic dragon, wizard, plush toy, mascot, chibi monster, or different character.");
     expect(prompt).toContain("no readable text anywhere");
     expect(prompt).toContain("no paper/tag/scrap marks that resemble writing");
+    expect(prompt).toContain("Ember clearly matches the three uploaded Ember reference images");
   });
 
   it("adds the Day 4 single Baby Flame Lantern shelf rule", async () => {
@@ -273,6 +295,25 @@ describe("Broke Mode video-source batch integration", () => {
     expect(prompt).toContain("include exactly one Baby Flame Lantern");
     expect(prompt).toContain("place that single Baby Flame Lantern on a shelf");
     expect(prompt).toContain("Do not create a second baby-flame-lantern-shaped object.");
+  });
+
+  it("keeps Day 4 object rules out of non-Day 4 prompts", async () => {
+    const plan = await makePlan();
+    await writeShortVideoBatchPlan(plan, { rootDir: root, force: true });
+    await writeDownloadsReferences();
+    await writeEmberReferences();
+
+    const result = await runVideoSourceBrokeMode({
+      rootDir: root,
+      downloadsDir: join(root, "Downloads"),
+      list: true,
+      day: 10
+    });
+    const prompt = await readFile(join(root, result.jobs[0].prompt_path), "utf8");
+
+    expect(prompt).toContain("Sparkle Market Token concept is present");
+    expect(prompt).not.toContain("Baby Flame Lantern");
+    expect(prompt).not.toMatch(/[\u00e2\u00c3]/);
   });
 
   it("removes publish copy, CTA text, and social captions from video-source prompts", async () => {

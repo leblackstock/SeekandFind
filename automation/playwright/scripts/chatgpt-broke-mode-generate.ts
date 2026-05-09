@@ -659,6 +659,83 @@ async function findComposer(page: Page): Promise<Locator> {
   throw new Error("Could not find the ChatGPT prompt input. The UI may have changed.");
 }
 
+async function dismissDuplicateFileModal(page: Page): Promise<boolean> {
+  const modal = page.locator("[data-testid='modal-duplicate-file'], #modal-duplicate-file").first();
+  if (!(await modal.isVisible({ timeout: 1000 }).catch(() => false))) return false;
+
+  const okButton = modal.getByRole("button", { name: /^ok$/i }).last();
+  if (await okButton.isVisible().catch(() => false)) {
+    await okButton.click();
+  } else {
+    await page.keyboard.press("Escape");
+  }
+  await modal.waitFor({ state: "hidden", timeout: 5000 }).catch(() => undefined);
+  console.log("Dismissed ChatGPT duplicate-file modal before continuing.");
+  return true;
+}
+
+async function queuedAttachmentRemoveButtons(page: Page): Promise<Locator> {
+  return page.getByRole("button", { name: /^remove file \d+:/i });
+}
+
+async function queuedAttachmentCount(page: Page): Promise<number> {
+  return (await queuedAttachmentRemoveButtons(page)).count().catch(() => 0);
+}
+
+async function clearQueuedAttachments(page: Page): Promise<number> {
+  let removed = 0;
+  for (let attempt = 0; attempt < 20; attempt += 1) {
+    await dismissDuplicateFileModal(page);
+    const buttons = await queuedAttachmentRemoveButtons(page);
+    if (!(await buttons.first().isVisible({ timeout: 750 }).catch(() => false))) break;
+    await buttons.first().click();
+    removed += 1;
+    await page.waitForTimeout(250);
+  }
+  return removed;
+}
+
+async function composerText(page: Page): Promise<string> {
+  const composer = await findComposer(page).catch(() => undefined);
+  if (!composer) return "";
+  const text = await composer.innerText({ timeout: 1000 }).catch(() => "");
+  if (text.trim()) return text;
+  return composer.inputValue({ timeout: 1000 }).catch(() => "");
+}
+
+async function clearComposer(page: Page): Promise<boolean> {
+  const composer = await findComposer(page).catch(() => undefined);
+  if (!composer) return false;
+  const existingText = await composerText(page);
+  if (!existingText.trim()) return false;
+  await composer.click();
+  await page.keyboard.press("Control+A");
+  await page.keyboard.press("Backspace");
+  return true;
+}
+
+async function preflightCleanComposerState(page: Page): Promise<void> {
+  await dismissDuplicateFileModal(page);
+  const removedAttachments = await clearQueuedAttachments(page);
+  const clearedPrompt = await clearComposer(page);
+  await dismissDuplicateFileModal(page);
+  if (removedAttachments || clearedPrompt) {
+    console.log(`Cleaned ChatGPT composer before run: removedAttachments=${removedAttachments}; clearedPrompt=${clearedPrompt}.`);
+  }
+}
+
+async function waitForUploadedReferences(page: Page, expectedCount: number): Promise<void> {
+  const deadline = Date.now() + 20000;
+  let lastCount = 0;
+  while (Date.now() < deadline) {
+    await dismissDuplicateFileModal(page);
+    lastCount = await queuedAttachmentCount(page);
+    if (lastCount >= expectedCount) return;
+    await page.waitForTimeout(500);
+  }
+  throw new Error(`Reference upload did not show ${expectedCount} queued attachment(s). Last visible attachment count: ${lastCount}.`);
+}
+
 async function pastePrompt(page: Page, prompt: string): Promise<void> {
   const composer = await findComposer(page);
   await composer.click();
@@ -674,7 +751,8 @@ async function uploadReferenceImages(page: Page, referenceImages: string[]): Pro
   await directInput.waitFor({ state: "attached", timeout: 10000 }).catch(() => undefined);
   if (await directInput.count().catch(() => 0)) {
     await directInput.setInputFiles(referenceImages);
-    await page.waitForTimeout(2000 + referenceImages.length * 750);
+    await page.waitForTimeout(1000);
+    await waitForUploadedReferences(page, referenceImages.length);
     return;
   }
 
@@ -692,7 +770,8 @@ async function uploadReferenceImages(page: Page, referenceImages: string[]): Pro
   const chooser = await chooserPromise;
   if (!chooser) throw new Error("Could not open ChatGPT file chooser for reference uploads.");
   await chooser.setFiles(referenceImages);
-  await page.waitForTimeout(2000 + referenceImages.length * 750);
+  await page.waitForTimeout(1000);
+  await waitForUploadedReferences(page, referenceImages.length);
 }
 
 function addReferenceUploadGuard(prompt: string, guard?: string): string {
@@ -1100,6 +1179,7 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
       return;
     }
 
+    await preflightCleanComposerState(page);
     await uploadReferenceImages(page, referenceImagePaths);
     if (referenceImagePaths.length) {
       console.log(`Uploaded ${referenceImagePaths.length} reference image(s) to ChatGPT.`);
@@ -1363,9 +1443,10 @@ if (invokedPath.endsWith("automation\\playwright\\scripts\\chatgpt-broke-mode-ge
       if (options.browserMode === "existing") await session.close();
     }
   } else {
-    runBrokeMode(parseBrokeModeArgs()).catch((error) => {
+    await runBrokeMode(parseBrokeModeArgs()).catch((error) => {
       console.error(error instanceof Error ? error.message : error);
       process.exitCode = 1;
     });
+    process.exit(process.exitCode ?? 0);
   }
 }

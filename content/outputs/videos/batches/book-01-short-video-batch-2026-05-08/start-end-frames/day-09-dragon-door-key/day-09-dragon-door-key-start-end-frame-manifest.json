@@ -1,0 +1,23 @@
+{
+  "day": 9,
+  "slug": "day-09-dragon-door-key",
+  "idempotency_key": "book01-day09-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+  "caption": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene.\n\nComing soon to Amazon.\n\nCTA: Can you spot it?",
+  "start_frame_mode": "approved-still",
+  "source_image": "content/outputs/images/approved/video-source/book-01/day-09-dragon-door-key-video-source-no-text-v01-2026-05-08T04-07-10-887Z.png",
+  "start_frame": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-09-dragon-door-key/day-09-dragon-door-key-start-frame.png",
+  "expected_end_frame": "content/outputs/images/pending-review/start-end-frames/book-01/day-09-dragon-door-key/day-09-dragon-door-key-end-frame-v01.png",
+  "owner_review": {
+    "status": "approved",
+    "reviewed_at": "2026-05-09T00:21:19-04:00",
+    "motion_object": "ribbon",
+    "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-09-dragon-door-key/day-09-dragon-door-key-end-frame-v01.png"
+  },
+  "output_files": {
+    "manifest": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-09-dragon-door-key/day-09-dragon-door-key-start-end-frame-manifest.json",
+    "start_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-09-dragon-door-key/day-09-dragon-door-key-start-frame-prompt.md",
+    "end_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-09-dragon-door-key/day-09-dragon-door-key-end-frame-prompt.md",
+    "keyframe_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-09-dragon-door-key/day-09-dragon-door-key-keyframe-image-to-video-prompt.md",
+    "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-09-dragon-door-key/day-09-dragon-door-key-start-end-frame-review-checklist.md"
+  }
+}

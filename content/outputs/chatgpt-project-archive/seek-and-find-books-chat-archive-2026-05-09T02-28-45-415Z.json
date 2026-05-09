@@ -1,0 +1,120 @@
+{
+  "ok": false,
+  "dryRun": false,
+  "projectUrl": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/project",
+  "targetCount": 5,
+  "archivedCount": 0,
+  "skippedCount": 0,
+  "errorCount": 5,
+  "options": {
+    "cdpUrl": "http://127.0.0.1:9222",
+    "projectUrl": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/project",
+    "evidenceDir": "content/outputs/chatgpt-project-archive",
+    "confirm": true,
+    "limit": 5,
+    "maxLoadMore": 5,
+    "excludeIds": [],
+    "logDryRun": false
+  },
+  "targets": [
+    {
+      "conversationId": "69fa445c-cdfc-83ea-a04b-15cb03b2791d",
+      "title": "B1 - Promo Batch 03 - Slot 03 - Dragon Door Key RetryAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fa445c-cdfc-83ea-a04b-15cb03b2791d",
+      "visible": true,
+      "rect": {
+        "x": 718,
+        "y": -980,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69fa4269-e400-83ea-971b-59e43d1ec39d",
+      "title": "B1 - Promo Batch 03 - Slot 04 - Sparkle Market TokenAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fa4269-e400-83ea-971b-59e43d1ec39d",
+      "visible": true,
+      "rect": {
+        "x": 718,
+        "y": -915,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69fa426c-3a50-83ea-95b1-6f02a5381fe4",
+      "title": "B1 - Promo Batch 03 - Slot 03 - Dragon Door KeyAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fa426c-3a50-83ea-95b1-6f02a5381fe4",
+      "visible": true,
+      "rect": {
+        "x": 718,
+        "y": -850,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69fa4267-1734-83ea-bfa6-56f50ce4dd99",
+      "title": "B1 - Promo Batch 03 - Slot 02 - Firefly Flower CharmAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fa4267-1734-83ea-bfa6-56f50ce4dd99",
+      "visible": true,
+      "rect": {
+        "x": 718,
+        "y": -785,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69fa4268-0eb8-83ea-9b21-e25006f5cf69",
+      "title": "B1 - Promo Batch 03 - Slot 01 - Golden Welcome BellAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fa4268-0eb8-83ea-9b21-e25006f5cf69",
+      "visible": true,
+      "rect": {
+        "x": 718,
+        "y": -720,
+        "w": 688,
+        "h": 40
+      }
+    }
+  ],
+  "results": [
+    {
+      "conversationId": "69fa445c-cdfc-83ea-a04b-15cb03b2791d",
+      "title": "B1 - Promo Batch 03 - Slot 03 - Dragon Door Key RetryAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": false,
+      "archived": false,
+      "error": "Archive clicked, but the row is still visible."
+    },
+    {
+      "conversationId": "69fa4269-e400-83ea-971b-59e43d1ec39d",
+      "title": "B1 - Promo Batch 03 - Slot 04 - Sparkle Market TokenAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": false,
+      "archived": false,
+      "error": "Archive clicked, but the row is still visible."
+    },
+    {
+      "conversationId": "69fa426c-3a50-83ea-95b1-6f02a5381fe4",
+      "title": "B1 - Promo Batch 03 - Slot 03 - Dragon Door KeyAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": false,
+      "archived": false,
+      "error": "Archive clicked, but the row is still visible."
+    },
+    {
+      "conversationId": "69fa4267-1734-83ea-bfa6-56f50ce4dd99",
+      "title": "B1 - Promo Batch 03 - Slot 02 - Firefly Flower CharmAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": false,
+      "archived": false,
+      "error": "Archive clicked, but the row is still visible."
+    },
+    {
+      "conversationId": "69fa4268-0eb8-83ea-9b21-e25006f5cf69",
+      "title": "B1 - Promo Batch 03 - Slot 01 - Golden Welcome BellAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": false,
+      "archived": false,
+      "error": "Archive clicked, but the row is still visible."
+    }
+  ],
+  "warnings": [],
+  "evidencePath": "content/outputs/chatgpt-project-archive/seek-and-find-books-chat-archive-2026-05-09T02-28-45-415Z.json"
+}

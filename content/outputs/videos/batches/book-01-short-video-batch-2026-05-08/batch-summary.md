@@ -40,6 +40,16 @@ Short Video tasks are not truly publishable unless `media_assets` includes an ex
 
 Batch prep may create prompts and checklists only. Queue status can move to `ready` only after an approved export exists, has been reviewed, and is referenced in a separate queue update pass.
 
+## Owner Source-Image Review - 2026-05-08
+
+Approved for video-source use: Days 3, 4, 5, 6, 7, 8, 9, 11, and 12.
+
+Disapproved / regenerate: Day 10.
+
+Approved source-image files were copied to `content/outputs/images/approved/video-source/book-01/`. The Day 10 candidate was moved to `content/outputs/images/failed/day-10-sparkle-market-token-video-source-no-text-v01-2026-05-08T04-09-25-782Z/`.
+
+This is not video approval and does not make the Short Video queue tasks ready. Next step is to regenerate Day 10, then create and QA 5-second 9:16 motion-only MP4 exports.
+
 ## Reporting TODO
 
 Ensure any future social readiness reporting treats ready Short Video tasks without approved exports as false-ready, not publishable.

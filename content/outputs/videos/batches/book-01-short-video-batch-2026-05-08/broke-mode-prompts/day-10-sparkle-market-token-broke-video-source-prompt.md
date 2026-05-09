@@ -4,7 +4,7 @@ Create one clean vertical 9:16 video-source image for a motion-only Ember short 
 
 Use the uploaded day-specific promo image as the composition and mood reference only. It is static promo art, not the final image-to-video source.
 
-Use the uploaded Ember-001, Ember-002, and Ember-003 images as character reference images. Use them to keep Ember's appearance, proportions, scarf, satchel, horns, eyes, and colors consistent.
+Use the uploaded Ember-001, Ember-002, and Ember-003 images as character reference images. Ember accuracy is the highest priority in this generation. Study those three references closely and match Ember's face shape, baby-dragon proportions, horn shape, eye size, scarf color, satchel shape, body color, and sweet friendly expression. If the scene becomes too busy, simplify the market details rather than changing Ember.
 
 Remove all readable text from the reference. The reference includes: "Find the Sparkle Market Token". Remove the text completely.
 
@@ -12,7 +12,7 @@ Create a clean no-text video-source image suitable for later gentle animation. P
 
 Campaign concept: Sparkle Market Token in a cozy, child-friendly seek-and-find world with lanterns, tiny treasures, and one curious baby dragon.
 
-
+Day 10 object rule: keep the Sparkle Market Token concept visible as a small seek-and-find treasure or scene idea, but do not add labels, words, arrows, circles, boxes, answer marks, or sign-like callouts.
 
 Do not render, imply, or invent any text, words, letters, captions, title graphics, signs, labels, UI, logos, or marketing copy.
 
@@ -20,7 +20,7 @@ Avoid paper, tag, scrap, note, sign-like rectangle, label-like shape, or decorat
 
 Keep Ember on-model as a tiny adorable reddish-orange baby dragon with soft pumpkin-orange and coral shading, shiny golden spiral-comma horns, large glossy blue-teal eyes, cream belly, plain bright blue-teal scarf, and tiny plain brown crossbody satchel with dull-gold button clasps.
 
-Do not turn Ember into a fox, cat, generic dragon, wizard, or different character.
+Do not turn Ember into a fox, cat, generic dragon, wizard, plush toy, mascot, chibi monster, or different character. Do not make Ember's head too large, horns too oversized, eyes the wrong color, scarf the wrong color, satchel missing, satchel too ornate, body too smooth-plastic, or expression too goofy.
 
 No new characters. No new story elements. No fake cover, fake listing preview, fake interior page, or sales graphic.
 
@@ -33,9 +33,11 @@ Self-check before finishing:
 - no paper/tag/scrap marks that resemble writing
 - no watermarks or fake UI
 - Ember on-model
+- Ember clearly matches the three uploaded Ember reference images
 - blue-teal scarf present
 - brown satchel present
-- exactly one Baby Flame Lantern on a shelf when this is Day 4
+- golden spiral-comma horns match the references
+- the Sparkle Market Token concept is present without any label, words, arrow, circle, box, or answer mark
 - no new characters
 - no new story elements
 - stable foreground/midground/background

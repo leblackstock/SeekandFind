@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-05-08T02-00-35-660Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "pending-review",
+  "assetName": "day-03-search-with-ember-video-source-no-text-v01",
+  "assetSlug": "day-03-search-with-ember-video-source-no-text-v01",
+  "promptPath": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/broke-mode-prompts/day-03-search-with-ember-broke-video-source-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/video-source/book-01/day-03-search-with-ember-video-source-no-text-v01-2026-05-08T02-00-35-660Z-prompt.md",
+  "imagePath": "content/outputs/images/pending-review/video-source/book-01/day-03-search-with-ember-video-source-no-text-v01-2026-05-08T02-00-35-660Z.png",
+  "screenshotPath": "content/outputs/images/pending-review/video-source/book-01/day-03-search-with-ember-video-source-no-text-v01-2026-05-08T02-00-35-660Z-chatgpt-screenshot.png",
+  "warnings": [
+    "Recovered existing generated image from current ChatGPT chat without uploading files or submitting a prompt. Signal: new generated image candidate.",
+    "Raw prompt mode selected; Broke Mode pasted the prompt file without compacting or appending missing production requirements."
+  ],
+  "dryRun": false,
+  "autoSubmit": false,
+  "maxAttempts": 1,
+  "browserMode": "existing",
+  "cdpUrl": "http://127.0.0.1:9222",
+  "referenceImages": [
+    "../../Downloads/day-03-reference-search-with-ember.png",
+    "Ember's Adventures/EtD Images/Ember-001.png",
+    "Ember's Adventures/EtD Images/Ember-002.png",
+    "Ember's Adventures/EtD Images/Ember-003.png"
+  ],
+  "chatTitle": "Book 1 Day 03 Video Source Image - Search with Ember",
+  "chat_rename_requested": true,
+  "chat_rename_verified": true,
+  "chat_rename_api_verified": false,
+  "chat_rename_visible_verified": true,
+  "chat_rename_verification_method": "visible",
+  "chat_rename_method": "project-list-row-menu",
+  "chat_rename_conversation_id": "69fd409f-a278-83ea-9dfd-7e759f15f117",
+  "conversation_id": "69fd409f-a278-83ea-9dfd-7e759f15f117",
+  "expected_chat_title": "Book 1 Day 03 Video Source Image - Search with Ember",
+  "observed_visible_chat_title": "Book 1 Day 03 Video Source Image - Search with EmberAttached images are visual references only. The day-specific promo image is for composition, mood, color palette, and concept only. Ember-001, Ember-002, and Ember-003 are character references for Emb",
+  "chat_rename_evidence_path": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-03-chat-rename-project-row-2026-05-08-cleanup-evidence.json",
+  "chat_rename_screenshot_path": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-03-chat-rename-project-row-2026-05-08-cleanup.png"
+}

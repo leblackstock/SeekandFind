@@ -1,0 +1,52 @@
+{
+  "workflow": "start-end-frame-owner-review",
+  "reviewed_at": "2026-05-09T00:21:19-04:00",
+  "scope": "Book 1 short-video start/end-frame stills",
+  "approved": [
+    {
+      "day": 6,
+      "slug": "day-06-cozy-dragon-village",
+      "motion_object": "ribbon",
+      "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-06-cozy-dragon-village/day-06-cozy-dragon-village-end-frame-v01.png"
+    },
+    {
+      "day": 7,
+      "slug": "day-07-golden-welcome-bell",
+      "motion_object": "bells",
+      "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-07-golden-welcome-bell/day-07-golden-welcome-bell-end-frame-v01.png"
+    },
+    {
+      "day": 9,
+      "slug": "day-09-dragon-door-key",
+      "motion_object": "ribbon",
+      "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-09-dragon-door-key/day-09-dragon-door-key-end-frame-v01.png"
+    },
+    {
+      "day": 10,
+      "slug": "day-10-sparkle-market-token",
+      "motion_object": "bell",
+      "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-10-sparkle-market-token/day-10-sparkle-market-token-end-frame-v01.png"
+    }
+  ],
+  "regenerate": [
+    {
+      "day": 8,
+      "slug": "day-08-firefly-flower-charm",
+      "reason": "Owner requested regeneration."
+    },
+    {
+      "day": 11,
+      "slug": "day-11-ember-progress-note",
+      "reason": "Owner requested regeneration."
+    },
+    {
+      "day": 12,
+      "slug": "day-12-cozy-seek-and-find-adventure",
+      "reason": "Owner requested regeneration."
+    }
+  ],
+  "notes": [
+    "Approval applies to still start/end-frame pairs only, not exported MP4s or social queue readiness.",
+    "Motion object is the small object expected to provide the subtle object motion in the 5-second keyframe video."
+  ]
+}

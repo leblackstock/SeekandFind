@@ -7,7 +7,9 @@ export type WorkflowName =
   | "marketing-calendar"
   | "kdp-qa"
   | "image-broke-mode"
-  | "image-marketing-batch";
+  | "image-marketing-batch"
+  | "chatgpt-project-chat-archive"
+  | "start-end-frame-prep";
 
 export interface GenerateResult {
   ok: boolean;

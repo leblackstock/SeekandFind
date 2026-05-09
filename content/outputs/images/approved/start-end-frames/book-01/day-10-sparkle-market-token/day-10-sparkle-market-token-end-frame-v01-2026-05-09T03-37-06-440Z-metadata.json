@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-05-09T03-37-06-440Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "pending-review",
+  "assetName": "day-10-sparkle-market-token-end-frame-v01",
+  "assetSlug": "day-10-sparkle-market-token-end-frame-v01",
+  "promptPath": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-10-sparkle-market-token/day-10-sparkle-market-token-end-frame-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/start-end-frames/book-01/day-10-sparkle-market-token/day-10-sparkle-market-token-end-frame-v01-2026-05-09T03-37-06-440Z-prompt.md",
+  "imagePath": "content/outputs/images/pending-review/start-end-frames/book-01/day-10-sparkle-market-token/day-10-sparkle-market-token-end-frame-v01-2026-05-09T03-37-06-440Z.png",
+  "screenshotPath": "content/outputs/images/pending-review/start-end-frames/book-01/day-10-sparkle-market-token/day-10-sparkle-market-token-end-frame-v01-2026-05-09T03-37-06-440Z-chatgpt-screenshot.png",
+  "warnings": [
+    "Raw prompt mode selected; Broke Mode pasted the prompt file without compacting or appending missing production requirements.",
+    "chat_rename_requested: true; chat_rename_method: project-list-row-menu; chat_rename_visible_verified: true; conversation_id=69feabe7-27f0-83ea-b2bf-eae6257d9a23; watcher_started_after=visible-title-verified rename.",
+    "Generation watcher success: new generated image candidate; elapsed=60s; candidates=1; downloads=0; actions=5; stopButtons=1."
+  ],
+  "dryRun": false,
+  "autoSubmit": true,
+  "maxAttempts": 1,
+  "chat_rename_requested": true,
+  "chat_rename_verified": true,
+  "chat_rename_api_verified": false,
+  "chat_rename_visible_verified": true,
+  "chat_rename_verification_method": "visible",
+  "chat_rename_method": "project-list-row-menu",
+  "chat_rename_conversation_id": "69feabe7-27f0-83ea-b2bf-eae6257d9a23",
+  "chat_rename_visible_title": "Book 1 Day 10 End Frame - Sparkle Market TokenAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+  "chat_rename_visible_candidates": [
+    "Book 1 Day 10 End Frame - Sparkle Market TokenAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C"
+  ],
+  "chat_rename_evidence_path": "content/outputs/images/pending-review/start-end-frames/book-01/day-10-sparkle-market-token/day-10-sparkle-market-token-end-frame-v01-2026-05-09T03-37-06-440Z-chat-rename-evidence.json",
+  "chat_rename_screenshot_path": "content/outputs/images/pending-review/start-end-frames/book-01/day-10-sparkle-market-token/day-10-sparkle-market-token-end-frame-v01-2026-05-09T03-37-06-440Z-chat-rename-project-row.png",
+  "conversation_id": "69feabe7-27f0-83ea-b2bf-eae6257d9a23",
+  "expected_chat_title": "Book 1 Day 10 End Frame - Sparkle Market Token",
+  "observed_visible_chat_title": "Book 1 Day 10 End Frame - Sparkle Market TokenAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+  "watcher_started_after_chat_rename": "visible-title-verified rename",
+  "browserMode": "existing",
+  "cdpUrl": "http://127.0.0.1:9222",
+  "referenceImages": [
+    "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-10-sparkle-market-token/day-10-sparkle-market-token-start-frame.png"
+  ],
+  "chatTitle": "Book 1 Day 10 End Frame - Sparkle Market Token"
+}

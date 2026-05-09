@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-05-08T05:57:19.124Z",
+  "workflow": "chatgpt-project-chat-rename-post-run-repair",
+  "bodyCheck": {
+    "url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fd7a63-00e4-83ea-8797-e8a42007c0ec",
+    "pageTitle": "Seek and Find Books - Ember Video-Source Image",
+    "hasProgressNote": true,
+    "hasDay11": false,
+    "hasReference": false,
+    "hasPromptGuard": true
+  },
+  "chat_rename_requested": true,
+  "chat_rename_visible_verified": true,
+  "chat_rename_method": "project-list-row-menu",
+  "conversation_id": "69fd7a63-00e4-83ea-8797-e8a42007c0ec",
+  "expected_chat_title": "Book 1 Day 11 Video Source Image - Ember Progress Note",
+  "observed_visible_chat_title": "Book 1 Day 11 Video Source Image - Ember Progress NoteAttached images are visual references only. The day-specific promo image is for composition, mood, color palette, and concept only. Ember-001, Ember-002, and Ember-003 are character references for Emb",
+  "active_chat_url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fd7a63-00e4-83ea-8797-e8a42007c0ec",
+  "project_url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/project",
+  "visible_row_href": "/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fd7a63-00e4-83ea-8797-e8a42007c0ec",
+  "visible_row_rect": {
+    "x": 717,
+    "y": 354,
+    "w": 688,
+    "h": 40
+  },
+  "visible_candidates": [
+    "Book 1 Day 11 Video Source Image - Ember Progress NoteAttached images are visual references only. The day-specific promo image is for composition, mood, color palette, and concept only. Ember-001, Ember-002, and Ember-003 are character references for Emb"
+  ],
+  "screenshot_path": "content/outputs/images/pending-review/video-source/book-01/day-11-ember-progress-note-video-source-no-text-v01-2026-05-08T05-54-04-371Z-chat-rename-project-row.png"
+}

@@ -47,6 +47,18 @@ Redo a failed day:
 npm run social:broke-video-source -- --redo day-03
 ```
 
+If npm/PowerShell forwarding strips a flag, use the direct tsx form:
+
+```powershell
+npx tsx automation/social/broke-video-source.ts --redo day-03
+```
+
+Before any one-day or batch run, verify selection without opening/submitting ChatGPT:
+
+```powershell
+npm run social:broke-video-source -- --list --redo day-03
+```
+
 Recover a completed-after-timeout image from the current ChatGPT chat without submitting a new prompt:
 
 ```powershell
@@ -61,12 +73,12 @@ npm run social:broke-video-source -- --browser-mode existing --cdp-url http://12
 
 ## Start Over After A Stuck Browser Upload
 
-If a batch is interrupted or ChatGPT opens a duplicate-file modal, do not click Send and do not continue the batch. Treat the browser state as contaminated if the project composer has mixed day references, more than 4 attachments, an empty prompt with queued images, or a duplicate-file modal blocking the prompt box.
+The runner preflights the ChatGPT composer before each one-day or batch job: it dismisses the duplicate-file modal, removes queued attachments, clears stale prompt text, and verifies the expected 4 reference attachments before submitting. If a batch is interrupted outside the runner or the browser is left in a mixed manual state, do not click Send and do not continue the batch. Treat the browser state as contaminated if the project composer has mixed day references, more than 4 attachments, an empty prompt with queued images, or a duplicate-file modal blocking the prompt box.
 
 Clean restart procedure for one day:
 
 1. Stop any still-running `social:broke-video-source` / `broke-video-source.ts` node processes.
-2. In the ChatGPT project tab, dismiss any duplicate-file modal and remove every queued attachment, or reload the project tab until the composer has an empty prompt and zero attachments.
+2. Prefer rerunning through this workflow so the automated preflight clears the composer. If working manually, dismiss any duplicate-file modal and remove every queued attachment, or reload the project tab until the composer has an empty prompt and zero attachments.
 3. Verify the exact one-day selection without opening/submitting ChatGPT:
 
 ```powershell
@@ -80,6 +92,8 @@ npm run social:broke-video-source -- --redo day-08
 ```
 
 Do not use `--max` again until the contaminated browser state is cleared and the one-day redo succeeds or fails cleanly. Recovery mode is only for a generated image already visible in the current chat; it is not the right tool for a pre-submit duplicate-file modal or mixed-attachment composer.
+
+Interrupted `broke-mode-running` entries older than 10 minutes are treated as failed/regeneration-needed on the next state rebuild unless a pending-review or approved source image exists on disk.
 
 ## Output Rules
 

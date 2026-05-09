@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-05-09T03-07-10-595Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "pending-review",
+  "assetName": "day-05-lantern-maker-workshop-end-frame-v01",
+  "assetSlug": "day-05-lantern-maker-workshop-end-frame-v01",
+  "promptPath": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-end-frame-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/start-end-frames/book-01/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-end-frame-v01-2026-05-09T03-07-10-595Z-prompt.md",
+  "imagePath": "content/outputs/images/pending-review/start-end-frames/book-01/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-end-frame-v01-2026-05-09T03-07-10-595Z.png",
+  "screenshotPath": "content/outputs/images/pending-review/start-end-frames/book-01/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-end-frame-v01-2026-05-09T03-07-10-595Z-chatgpt-screenshot.png",
+  "warnings": [
+    "Raw prompt mode selected; Broke Mode pasted the prompt file without compacting or appending missing production requirements.",
+    "chat_rename_requested: true; chat_rename_method: project-list-row-menu; chat_rename_visible_verified: true; conversation_id=69fea4e3-111c-83ea-a43a-2369c9a710d4; watcher_started_after=visible-title-verified rename.",
+    "Generation watcher success: new generated image candidate; elapsed=45s; candidates=1; downloads=0; actions=8; stopButtons=1."
+  ],
+  "dryRun": false,
+  "autoSubmit": true,
+  "maxAttempts": 1,
+  "chat_rename_requested": true,
+  "chat_rename_verified": true,
+  "chat_rename_api_verified": false,
+  "chat_rename_visible_verified": true,
+  "chat_rename_verification_method": "visible",
+  "chat_rename_method": "project-list-row-menu",
+  "chat_rename_conversation_id": "69fea4e3-111c-83ea-a43a-2369c9a710d4",
+  "chat_rename_visible_title": "Book 1 Day 05 End Frame - Lantern Maker WorkshopAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+  "chat_rename_visible_candidates": [
+    "Book 1 Day 05 End Frame - Lantern Maker WorkshopAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C"
+  ],
+  "chat_rename_evidence_path": "content/outputs/images/pending-review/start-end-frames/book-01/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-end-frame-v01-2026-05-09T03-07-10-595Z-chat-rename-evidence.json",
+  "chat_rename_screenshot_path": "content/outputs/images/pending-review/start-end-frames/book-01/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-end-frame-v01-2026-05-09T03-07-10-595Z-chat-rename-project-row.png",
+  "conversation_id": "69fea4e3-111c-83ea-a43a-2369c9a710d4",
+  "expected_chat_title": "Book 1 Day 05 End Frame - Lantern Maker Workshop",
+  "observed_visible_chat_title": "Book 1 Day 05 End Frame - Lantern Maker WorkshopAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+  "watcher_started_after_chat_rename": "visible-title-verified rename",
+  "browserMode": "existing",
+  "cdpUrl": "http://127.0.0.1:9222",
+  "referenceImages": [
+    "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-start-frame.png"
+  ],
+  "chatTitle": "Book 1 Day 05 End Frame - Lantern Maker Workshop"
+}

@@ -1,0 +1,207 @@
+{
+  "ok": true,
+  "dryRun": false,
+  "projectUrl": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/project",
+  "targetCount": 10,
+  "archivedCount": 10,
+  "skippedCount": 0,
+  "errorCount": 0,
+  "options": {
+    "cdpUrl": "http://127.0.0.1:9222",
+    "projectUrl": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/project",
+    "evidenceDir": "content/outputs/chatgpt-project-archive",
+    "confirm": true,
+    "limit": 10,
+    "maxLoadMore": 5,
+    "excludeIds": [],
+    "logDryRun": false
+  },
+  "targets": [
+    {
+      "conversationId": "69f9826e-cea0-83ea-b361-a09eb7a1ac56",
+      "title": "Promo Image RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f9826e-cea0-83ea-b361-a09eb7a1ac56",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 354,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f97ffa-fcfc-83ea-ab8d-5da98fbcf904",
+      "title": "Baby Flame Lantern PromoAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f97ffa-fcfc-83ea-ab8d-5da98fbcf904",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 419,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f97b4b-96d4-83ea-b233-4fb0c0526a96",
+      "title": "Screen-Free Dragon FunAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f97b4b-96d4-83ea-b233-4fb0c0526a96",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 484,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f97b49-3328-83ea-91cd-fcd99d1059c3",
+      "title": "Baby Flame Lantern PromoAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f97b49-3328-83ea-91cd-fcd99d1059c3",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 549,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f97b4a-1f60-83ea-a498-4696ad3ba35e",
+      "title": "Promo Art RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f97b4a-1f60-83ea-a498-4696ad3ba35e",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 614,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f97b4c-7708-83ea-b779-682a63de1f87",
+      "title": "Promo Image RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f97b4c-7708-83ea-b779-682a63de1f87",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 679,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f974e6-ed9c-83ea-8f19-3315128dab37",
+      "title": "Promo Image RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f974e6-ed9c-83ea-8f19-3315128dab37",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 744,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f974e8-9ee4-83ea-bf25-27060ab6043a",
+      "title": "Promo Image RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f974e8-9ee4-83ea-bf25-27060ab6043a",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 809,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f974e9-1968-83ea-8bfe-7baf8d9e488b",
+      "title": "Book Promo Art RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f974e9-1968-83ea-8bfe-7baf8d9e488b",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 874,
+        "w": 688,
+        "h": 40
+      }
+    },
+    {
+      "conversationId": "69f974f2-9594-83ea-bc2d-c8e276942d58",
+      "title": "Promotional Art RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "href": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69f974f2-9594-83ea-bc2d-c8e276942d58",
+      "visible": true,
+      "rect": {
+        "x": 717,
+        "y": 939,
+        "w": 688,
+        "h": 40
+      }
+    }
+  ],
+  "results": [
+    {
+      "conversationId": "69f9826e-cea0-83ea-b361-a09eb7a1ac56",
+      "title": "Promo Image RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": true,
+      "archived": true
+    },
+    {
+      "conversationId": "69f97ffa-fcfc-83ea-ab8d-5da98fbcf904",
+      "title": "Baby Flame Lantern PromoAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": true,
+      "archived": true
+    },
+    {
+      "conversationId": "69f97b4b-96d4-83ea-b233-4fb0c0526a96",
+      "title": "Screen-Free Dragon FunAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": true,
+      "archived": true
+    },
+    {
+      "conversationId": "69f97b49-3328-83ea-91cd-fcd99d1059c3",
+      "title": "Baby Flame Lantern PromoAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": true,
+      "archived": true
+    },
+    {
+      "conversationId": "69f97b4a-1f60-83ea-a498-4696ad3ba35e",
+      "title": "Promo Art RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": true,
+      "archived": true
+    },
+    {
+      "conversationId": "69f97b4c-7708-83ea-b779-682a63de1f87",
+      "title": "Promo Image RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": true,
+      "archived": true
+    },
+    {
+      "conversationId": "69f974e6-ed9c-83ea-8f19-3315128dab37",
+      "title": "Promo Image RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": true,
+      "archived": true
+    },
+    {
+      "conversationId": "69f974e8-9ee4-83ea-bf25-27060ab6043a",
+      "title": "Promo Image RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": true,
+      "archived": true
+    },
+    {
+      "conversationId": "69f974e9-1968-83ea-8bfe-7baf8d9e488b",
+      "title": "Book Promo Art RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": true,
+      "archived": true
+    },
+    {
+      "conversationId": "69f974f2-9594-83ea-bc2d-c8e276942d58",
+      "title": "Promotional Art RequestAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+      "ok": true,
+      "archived": true
+    }
+  ],
+  "warnings": [
+    "Reconciled 10 archive result(s) after reloading the project list."
+  ],
+  "evidencePath": "content/outputs/chatgpt-project-archive/seek-and-find-books-chat-archive-2026-05-09T02-34-27-948Z.json"
+}

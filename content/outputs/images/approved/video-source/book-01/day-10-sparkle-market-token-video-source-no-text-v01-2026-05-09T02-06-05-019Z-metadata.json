@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-05-09T02-06-05-019Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "pending-review",
+  "assetName": "day-10-sparkle-market-token-video-source-no-text-v01",
+  "assetSlug": "day-10-sparkle-market-token-video-source-no-text-v01",
+  "promptPath": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/broke-mode-prompts/day-10-sparkle-market-token-broke-video-source-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/video-source/book-01/day-10-sparkle-market-token-video-source-no-text-v01-2026-05-09T02-06-05-019Z-prompt.md",
+  "imagePath": "content/outputs/images/pending-review/video-source/book-01/day-10-sparkle-market-token-video-source-no-text-v01-2026-05-09T02-06-05-019Z.png",
+  "screenshotPath": "content/outputs/images/pending-review/video-source/book-01/day-10-sparkle-market-token-video-source-no-text-v01-2026-05-09T02-06-05-019Z-chatgpt-screenshot.png",
+  "warnings": [
+    "Raw prompt mode selected; Broke Mode pasted the prompt file without compacting or appending missing production requirements.",
+    "chat_rename_requested: true; chat_rename_method: project-list-row-menu; chat_rename_visible_verified: true; conversation_id=69fe9693-2d54-83ea-9cbd-5a3e9bdfc164; watcher_started_after=visible-title-verified rename.",
+    "Generation watcher success: new generated image candidate; elapsed=75s; candidates=1; downloads=0; actions=11; stopButtons=0."
+  ],
+  "dryRun": false,
+  "autoSubmit": true,
+  "maxAttempts": 1,
+  "chat_rename_requested": true,
+  "chat_rename_verified": true,
+  "chat_rename_api_verified": false,
+  "chat_rename_visible_verified": true,
+  "chat_rename_verification_method": "visible",
+  "chat_rename_method": "project-list-row-menu",
+  "chat_rename_conversation_id": "69fe9693-2d54-83ea-9cbd-5a3e9bdfc164",
+  "chat_rename_visible_title": "Book 1 Day 10 Video Source Image - Sparkle Market TokenAttached images are visual references only. The day-specific promo image is for composition, mood, color palette, and concept only. Ember-001, Ember-002, and Ember-003 are character references for Emb",
+  "chat_rename_visible_candidates": [
+    "Book 1 Day 10 Video Source Image - Sparkle Market TokenAttached images are visual references only. The day-specific promo image is for composition, mood, color palette, and concept only. Ember-001, Ember-002, and Ember-003 are character references for Emb"
+  ],
+  "chat_rename_evidence_path": "content/outputs/images/pending-review/video-source/book-01/day-10-sparkle-market-token-video-source-no-text-v01-2026-05-09T02-06-05-019Z-chat-rename-evidence.json",
+  "chat_rename_screenshot_path": "content/outputs/images/pending-review/video-source/book-01/day-10-sparkle-market-token-video-source-no-text-v01-2026-05-09T02-06-05-019Z-chat-rename-project-row.png",
+  "conversation_id": "69fe9693-2d54-83ea-9cbd-5a3e9bdfc164",
+  "expected_chat_title": "Book 1 Day 10 Video Source Image - Sparkle Market Token",
+  "observed_visible_chat_title": "Book 1 Day 10 Video Source Image - Sparkle Market TokenAttached images are visual references only. The day-specific promo image is for composition, mood, color palette, and concept only. Ember-001, Ember-002, and Ember-003 are character references for Emb",
+  "watcher_started_after_chat_rename": "visible-title-verified rename",
+  "browserMode": "existing",
+  "cdpUrl": "http://127.0.0.1:9222",
+  "referenceImages": [
+    "../../Downloads/day-10-reference-sparkle-market-token.png",
+    "Ember's Adventures/EtD Images/Ember-001.png",
+    "Ember's Adventures/EtD Images/Ember-002.png",
+    "Ember's Adventures/EtD Images/Ember-003.png"
+  ],
+  "chatTitle": "Book 1 Day 10 Video Source Image - Sparkle Market Token"
+}

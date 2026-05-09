@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-05-09T02-59-05-008Z",
+  "workflow": "chatgpt-project-chat-rename",
+  "chat_rename_requested": true,
+  "chat_rename_api_verified": false,
+  "chat_rename_visible_verified": true,
+  "chat_rename_method": "project-list-row-menu",
+  "conversation_id": "69fea2fd-5978-83ea-907d-2e7ccd83f0e9",
+  "expected_chat_title": "Book 1 Day 03 End Frame - Search with Ember",
+  "observed_visible_chat_title": "Book 1 Day 03 End Frame - Search with EmberAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+  "active_chat_url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fea2fd-5978-83ea-907d-2e7ccd83f0e9",
+  "project_url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/project",
+  "visible_row_href": "/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fea2fd-5978-83ea-907d-2e7ccd83f0e9",
+  "visible_row_rect": {
+    "x": 718,
+    "y": 354,
+    "w": 688,
+    "h": 40
+  },
+  "visible_candidates": [
+    "Book 1 Day 03 End Frame - Search with EmberAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C"
+  ],
+  "prompt_fingerprint": [
+    "day-03-search-with-ember-end-frame-v01",
+    "Attached images are visual references only for character appearance and proportions. Do not create a character reference"
+  ],
+  "prompt_fingerprint_verified": true,
+  "screenshot_path": "content/outputs/images/pending-review/start-end-frames/book-01/day-03-search-with-ember/day-03-search-with-ember-end-frame-v01-2026-05-09T02-59-05-008Z-chat-rename-project-row.png"
+}

@@ -1,0 +1,22 @@
+{
+  "day": 8,
+  "slug": "day-08-firefly-flower-charm",
+  "idempotency_key": "book01-day08-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+  "caption": "Find the Firefly Flower Charm.\n\nComing soon to Amazon.\n\nCTA: Tap, pause, and search.",
+  "start_frame_mode": "approved-still",
+  "source_image": "content/outputs/images/approved/video-source/book-01/day-08-firefly-flower-charm-video-source-no-text-v01-2026-05-08T03-58-33-089Z.png",
+  "start_frame": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-08-firefly-flower-charm/day-08-firefly-flower-charm-start-frame.png",
+  "expected_end_frame": "content/outputs/images/pending-review/start-end-frames/book-01/day-08-firefly-flower-charm/day-08-firefly-flower-charm-end-frame-v01.png",
+  "owner_review": {
+    "status": "regenerate",
+    "reviewed_at": "2026-05-09T00:21:19-04:00",
+    "reason": "Owner requested regeneration."
+  },
+  "output_files": {
+    "manifest": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-08-firefly-flower-charm/day-08-firefly-flower-charm-start-end-frame-manifest.json",
+    "start_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-08-firefly-flower-charm/day-08-firefly-flower-charm-start-frame-prompt.md",
+    "end_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-08-firefly-flower-charm/day-08-firefly-flower-charm-end-frame-prompt.md",
+    "keyframe_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-08-firefly-flower-charm/day-08-firefly-flower-charm-keyframe-image-to-video-prompt.md",
+    "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-08-firefly-flower-charm/day-08-firefly-flower-charm-start-end-frame-review-checklist.md"
+  }
+}

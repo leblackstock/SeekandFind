@@ -19,7 +19,7 @@
       "day": 3,
       "slug": "day-03-search-with-ember",
       "idempotency_key": "book01-day03-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
-      "status": "generated-pending-review",
+      "status": "user-approved-video-source",
       "reference_image_downloads_path": "C:/Users/outdo/Downloads/day-03-reference-search-with-ember.png",
       "ember_reference_images": [
         "Ember's Adventures/EtD Images/Ember-001.png",
@@ -40,7 +40,10 @@
         "content/outputs/images/pending-review/video-source/book-01/day-03-search-with-ember-video-source-no-text-v01-2026-05-08T02-00-35-660Z-chatgpt-screenshot.png",
         "content/outputs/images/pending-review/video-source/book-01/day-03-search-with-ember-video-source-no-text-v01-2026-05-08T02-00-35-660Z.png"
       ],
-      "approved_video_source_images": [],
+      "approved_video_source_images": [
+        "content/outputs/images/approved/video-source/book-01/day-03-search-with-ember-video-source-no-text-v01-2026-05-08T02-00-35-660Z-chatgpt-screenshot.png",
+        "content/outputs/images/approved/video-source/book-01/day-03-search-with-ember-video-source-no-text-v01-2026-05-08T02-00-35-660Z.png"
+      ],
       "failed_paths": [
         "content/outputs/images/failed/day-03-search-with-ember-video-source-no-text-v01-2026-05-08T01-16-48-862Z",
         "content/outputs/images/failed/day-03-search-with-ember-video-source-no-text-v01-2026-05-08T01-18-17-997Z",
@@ -48,17 +51,15 @@
         "content/outputs/images/failed/day-03-search-with-ember-video-source-no-text-v01-2026-05-08T01-47-25-325Z"
       ],
       "notes": [
-        "Broke Mode run failed before a pending-review video-source image was created.",
-        "Broke Mode run failed before a pending-review video-source image was created.",
-        "Broke Mode run failed before a pending-review video-source image was created."
+        "Owner approved video-source image on 2026-05-08T21:20:54.745-04:00. Ready for 5-second 9:16 motion-only video export prep; not queue-ready until approved MP4 exists."
       ],
-      "updated_at": "2026-05-08T05:59:59.155Z"
+      "updated_at": "2026-05-09T02:10:15.881Z"
     },
     {
       "day": 4,
       "slug": "day-04-baby-flame-lantern",
       "idempotency_key": "book01-day04-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
-      "status": "generated-pending-review",
+      "status": "user-approved-video-source",
       "reference_image_downloads_path": "C:/Users/outdo/Downloads/day-04-reference-baby-flame-lantern.png",
       "ember_reference_images": [
         "Ember's Adventures/EtD Images/Ember-001.png",
@@ -79,7 +80,10 @@
         "content/outputs/images/pending-review/video-source/book-01/day-04-baby-flame-lantern-video-source-no-text-v01-2026-05-08T02-40-44-561Z-chatgpt-screenshot.png",
         "content/outputs/images/pending-review/video-source/book-01/day-04-baby-flame-lantern-video-source-no-text-v01-2026-05-08T02-40-44-561Z.png"
       ],
-      "approved_video_source_images": [],
+      "approved_video_source_images": [
+        "content/outputs/images/approved/video-source/book-01/day-04-baby-flame-lantern-video-source-no-text-v01-2026-05-08T02-40-44-561Z-chatgpt-screenshot.png",
+        "content/outputs/images/approved/video-source/book-01/day-04-baby-flame-lantern-video-source-no-text-v01-2026-05-08T02-40-44-561Z.png"
+      ],
       "failed_paths": [
         "content/outputs/images/failed/day-04-baby-flame-lantern-video-source-no-text-v01-2026-05-08T02-05-53-140Z",
         "content/outputs/images/failed/day-04-baby-flame-lantern-video-source-no-text-v01-2026-05-08T02-16-15-892Z",
@@ -87,14 +91,16 @@
         "content/outputs/images/failed/day-04-baby-flame-lantern-video-source-no-text-v01-2026-05-08T02-33-41-731Z",
         "content/outputs/images/failed/day-04-baby-flame-lantern-video-source-no-text-v01-2026-05-08T02-35-26-403Z"
       ],
-      "notes": [],
-      "updated_at": "2026-05-08T05:59:59.155Z"
+      "notes": [
+        "Owner approved video-source image on 2026-05-08T21:20:54.745-04:00. Ready for 5-second 9:16 motion-only video export prep; not queue-ready until approved MP4 exists."
+      ],
+      "updated_at": "2026-05-09T02:10:15.881Z"
     },
     {
       "day": 5,
       "slug": "day-05-lantern-maker-workshop",
       "idempotency_key": "book01-day05-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
-      "status": "generated-pending-review",
+      "status": "user-approved-video-source",
       "reference_image_downloads_path": "C:/Users/outdo/Downloads/day-05-reference-lantern-maker-workshop.png",
       "ember_reference_images": [
         "Ember's Adventures/EtD Images/Ember-001.png",
@@ -115,16 +121,21 @@
         "content/outputs/images/pending-review/video-source/book-01/day-05-lantern-maker-workshop-video-source-no-text-v01-2026-05-08T03-08-42-168Z-chatgpt-screenshot.png",
         "content/outputs/images/pending-review/video-source/book-01/day-05-lantern-maker-workshop-video-source-no-text-v01-2026-05-08T03-08-42-168Z.png"
       ],
-      "approved_video_source_images": [],
+      "approved_video_source_images": [
+        "content/outputs/images/approved/video-source/book-01/day-05-lantern-maker-workshop-video-source-no-text-v01-2026-05-08T03-08-42-168Z-chatgpt-screenshot.png",
+        "content/outputs/images/approved/video-source/book-01/day-05-lantern-maker-workshop-video-source-no-text-v01-2026-05-08T03-08-42-168Z.png"
+      ],
       "failed_paths": [],
-      "notes": [],
-      "updated_at": "2026-05-08T05:59:59.155Z"
+      "notes": [
+        "Owner approved video-source image on 2026-05-08T21:20:54.745-04:00. Ready for 5-second 9:16 motion-only video export prep; not queue-ready until approved MP4 exists."
+      ],
+      "updated_at": "2026-05-09T02:10:15.881Z"
     },
     {
       "day": 6,
       "slug": "day-06-cozy-dragon-village",
       "idempotency_key": "book01-day06-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
-      "status": "generated-pending-review",
+      "status": "user-approved-video-source",
       "reference_image_downloads_path": "C:/Users/outdo/Downloads/day-06-reference-cozy-dragon-village.png",
       "ember_reference_images": [
         "Ember's Adventures/EtD Images/Ember-001.png",
@@ -145,16 +156,21 @@
         "content/outputs/images/pending-review/video-source/book-01/day-06-cozy-dragon-village-video-source-no-text-v01-2026-05-08T03-10-51-994Z-chatgpt-screenshot.png",
         "content/outputs/images/pending-review/video-source/book-01/day-06-cozy-dragon-village-video-source-no-text-v01-2026-05-08T03-10-51-994Z.png"
       ],
-      "approved_video_source_images": [],
+      "approved_video_source_images": [
+        "content/outputs/images/approved/video-source/book-01/day-06-cozy-dragon-village-video-source-no-text-v01-2026-05-08T03-10-51-994Z-chatgpt-screenshot.png",
+        "content/outputs/images/approved/video-source/book-01/day-06-cozy-dragon-village-video-source-no-text-v01-2026-05-08T03-10-51-994Z.png"
+      ],
       "failed_paths": [],
-      "notes": [],
-      "updated_at": "2026-05-08T05:59:59.155Z"
+      "notes": [
+        "Owner approved video-source image on 2026-05-08T21:20:54.745-04:00. Ready for 5-second 9:16 motion-only video export prep; not queue-ready until approved MP4 exists."
+      ],
+      "updated_at": "2026-05-09T02:10:15.881Z"
     },
     {
       "day": 7,
       "slug": "day-07-golden-welcome-bell",
       "idempotency_key": "book01-day07-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
-      "status": "generated-pending-review",
+      "status": "user-approved-video-source",
       "reference_image_downloads_path": "C:/Users/outdo/Downloads/day-07-reference-golden-welcome-bell.png",
       "ember_reference_images": [
         "Ember's Adventures/EtD Images/Ember-001.png",
@@ -175,16 +191,21 @@
         "content/outputs/images/pending-review/video-source/book-01/day-07-golden-welcome-bell-video-source-no-text-v01-2026-05-08T03-13-03-039Z-chatgpt-screenshot.png",
         "content/outputs/images/pending-review/video-source/book-01/day-07-golden-welcome-bell-video-source-no-text-v01-2026-05-08T03-13-03-039Z.png"
       ],
-      "approved_video_source_images": [],
+      "approved_video_source_images": [
+        "content/outputs/images/approved/video-source/book-01/day-07-golden-welcome-bell-video-source-no-text-v01-2026-05-08T03-13-03-039Z-chatgpt-screenshot.png",
+        "content/outputs/images/approved/video-source/book-01/day-07-golden-welcome-bell-video-source-no-text-v01-2026-05-08T03-13-03-039Z.png"
+      ],
       "failed_paths": [],
-      "notes": [],
-      "updated_at": "2026-05-08T05:59:59.155Z"
+      "notes": [
+        "Owner approved video-source image on 2026-05-08T21:20:54.745-04:00. Ready for 5-second 9:16 motion-only video export prep; not queue-ready until approved MP4 exists."
+      ],
+      "updated_at": "2026-05-09T02:10:15.881Z"
     },
     {
       "day": 8,
       "slug": "day-08-firefly-flower-charm",
       "idempotency_key": "book01-day08-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
-      "status": "generated-pending-review",
+      "status": "user-approved-video-source",
       "reference_image_downloads_path": "C:/Users/outdo/Downloads/day-08-reference-firefly-flower-charm.png",
       "ember_reference_images": [
         "Ember's Adventures/EtD Images/Ember-001.png",
@@ -205,20 +226,23 @@
         "content/outputs/images/pending-review/video-source/book-01/day-08-firefly-flower-charm-video-source-no-text-v01-2026-05-08T03-58-33-089Z-chatgpt-screenshot.png",
         "content/outputs/images/pending-review/video-source/book-01/day-08-firefly-flower-charm-video-source-no-text-v01-2026-05-08T03-58-33-089Z.png"
       ],
-      "approved_video_source_images": [],
+      "approved_video_source_images": [
+        "content/outputs/images/approved/video-source/book-01/day-08-firefly-flower-charm-video-source-no-text-v01-2026-05-08T03-58-33-089Z-chatgpt-screenshot.png",
+        "content/outputs/images/approved/video-source/book-01/day-08-firefly-flower-charm-video-source-no-text-v01-2026-05-08T03-58-33-089Z.png"
+      ],
       "failed_paths": [
         "content/outputs/images/failed/day-08-firefly-flower-charm-video-source-no-text-v01-2026-05-08T03-48-21-831Z"
       ],
       "notes": [
-        "Broke Mode run failed before a pending-review video-source image was created."
+        "Owner approved video-source image on 2026-05-08T21:20:54.745-04:00. Ready for 5-second 9:16 motion-only video export prep; not queue-ready until approved MP4 exists."
       ],
-      "updated_at": "2026-05-08T05:59:59.155Z"
+      "updated_at": "2026-05-09T02:10:15.881Z"
     },
     {
       "day": 9,
       "slug": "day-09-dragon-door-key",
       "idempotency_key": "book01-day09-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
-      "status": "generated-pending-review",
+      "status": "user-approved-video-source",
       "reference_image_downloads_path": "C:/Users/outdo/Downloads/day-09-reference-dragon-door-key.png",
       "ember_reference_images": [
         "Ember's Adventures/EtD Images/Ember-001.png",
@@ -239,20 +263,23 @@
         "content/outputs/images/pending-review/video-source/book-01/day-09-dragon-door-key-video-source-no-text-v01-2026-05-08T04-07-10-887Z-chatgpt-screenshot.png",
         "content/outputs/images/pending-review/video-source/book-01/day-09-dragon-door-key-video-source-no-text-v01-2026-05-08T04-07-10-887Z.png"
       ],
-      "approved_video_source_images": [],
+      "approved_video_source_images": [
+        "content/outputs/images/approved/video-source/book-01/day-09-dragon-door-key-video-source-no-text-v01-2026-05-08T04-07-10-887Z-chatgpt-screenshot.png",
+        "content/outputs/images/approved/video-source/book-01/day-09-dragon-door-key-video-source-no-text-v01-2026-05-08T04-07-10-887Z.png"
+      ],
       "failed_paths": [
         "content/outputs/images/failed/day-09-dragon-door-key-video-source-no-text-v01-2026-05-08T03-49-08-386Z"
       ],
       "notes": [
-        "Broke Mode run failed before a pending-review video-source image was created."
+        "Owner approved video-source image on 2026-05-08T21:20:54.745-04:00. Ready for 5-second 9:16 motion-only video export prep; not queue-ready until approved MP4 exists."
       ],
-      "updated_at": "2026-05-08T05:59:59.155Z"
+      "updated_at": "2026-05-09T02:10:15.881Z"
     },
     {
       "day": 10,
       "slug": "day-10-sparkle-market-token",
       "idempotency_key": "book01-day10-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
-      "status": "generated-pending-review",
+      "status": "user-approved-video-source",
       "reference_image_downloads_path": "C:/Users/outdo/Downloads/day-10-reference-sparkle-market-token.png",
       "ember_reference_images": [
         "Ember's Adventures/EtD Images/Ember-001.png",
@@ -270,23 +297,30 @@
       "prompt_path": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/broke-mode-prompts/day-10-sparkle-market-token-broke-video-source-prompt.md",
       "review_checklist_path": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/day-10-sparkle-market-token/day-10-sparkle-market-token-review-checklist.md",
       "pending_review_images": [
-        "content/outputs/images/pending-review/video-source/book-01/day-10-sparkle-market-token-video-source-no-text-v01-2026-05-08T04-09-25-782Z-chatgpt-screenshot.png",
-        "content/outputs/images/pending-review/video-source/book-01/day-10-sparkle-market-token-video-source-no-text-v01-2026-05-08T04-09-25-782Z.png"
+        "content/outputs/images/pending-review/video-source/book-01/day-10-sparkle-market-token-video-source-no-text-v01-2026-05-09T02-06-05-019Z-chat-rename-project-row.png",
+        "content/outputs/images/pending-review/video-source/book-01/day-10-sparkle-market-token-video-source-no-text-v01-2026-05-09T02-06-05-019Z-chatgpt-screenshot.png",
+        "content/outputs/images/pending-review/video-source/book-01/day-10-sparkle-market-token-video-source-no-text-v01-2026-05-09T02-06-05-019Z.png"
       ],
-      "approved_video_source_images": [],
+      "approved_video_source_images": [
+        "content/outputs/images/approved/video-source/book-01/day-10-sparkle-market-token-video-source-no-text-v01-2026-05-09T02-06-05-019Z-chat-rename-project-row.png",
+        "content/outputs/images/approved/video-source/book-01/day-10-sparkle-market-token-video-source-no-text-v01-2026-05-09T02-06-05-019Z-chatgpt-screenshot.png",
+        "content/outputs/images/approved/video-source/book-01/day-10-sparkle-market-token-video-source-no-text-v01-2026-05-09T02-06-05-019Z.png"
+      ],
       "failed_paths": [
-        "content/outputs/images/failed/day-10-sparkle-market-token-video-source-no-text-v01-2026-05-08T03-49-54-887Z"
+        "content/outputs/images/failed/day-10-sparkle-market-token-video-source-no-text-v01-2026-05-08T03-49-54-887Z",
+        "content/outputs/images/failed/day-10-sparkle-market-token-video-source-no-text-v01-2026-05-08T04-09-25-782Z",
+        "content/outputs/images/failed/day-10-sparkle-market-token-video-source-no-text-v01-2026-05-09T01-23-40-621Z",
+        "content/outputs/images/failed/day-10-sparkle-market-token-video-source-no-text-v01-2026-05-09T01-57-03-948Z",
+        "content/outputs/images/failed/day-10-sparkle-market-token-video-source-no-text-v01-2026-05-09T02-00-59-328Z"
       ],
-      "notes": [
-        "Broke Mode run failed before a pending-review video-source image was created."
-      ],
-      "updated_at": "2026-05-08T05:59:59.155Z"
+      "notes": [],
+      "updated_at": "2026-05-09T02:10:15.881Z"
     },
     {
       "day": 11,
       "slug": "day-11-ember-progress-note",
       "idempotency_key": "book01-day11-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
-      "status": "generated-pending-review",
+      "status": "user-approved-video-source",
       "reference_image_downloads_path": "C:/Users/outdo/Downloads/day-11-reference-ember-progress-note.png",
       "ember_reference_images": [
         "Ember's Adventures/EtD Images/Ember-001.png",
@@ -308,16 +342,22 @@
         "content/outputs/images/pending-review/video-source/book-01/day-11-ember-progress-note-video-source-no-text-v01-2026-05-08T05-54-04-371Z-chatgpt-screenshot.png",
         "content/outputs/images/pending-review/video-source/book-01/day-11-ember-progress-note-video-source-no-text-v01-2026-05-08T05-54-04-371Z.png"
       ],
-      "approved_video_source_images": [],
+      "approved_video_source_images": [
+        "content/outputs/images/approved/video-source/book-01/day-11-ember-progress-note-video-source-no-text-v01-2026-05-08T05-54-04-371Z-chat-rename-project-row.png",
+        "content/outputs/images/approved/video-source/book-01/day-11-ember-progress-note-video-source-no-text-v01-2026-05-08T05-54-04-371Z-chatgpt-screenshot.png",
+        "content/outputs/images/approved/video-source/book-01/day-11-ember-progress-note-video-source-no-text-v01-2026-05-08T05-54-04-371Z.png"
+      ],
       "failed_paths": [],
-      "notes": [],
-      "updated_at": "2026-05-08T05:59:59.155Z"
+      "notes": [
+        "Owner approved video-source image on 2026-05-08T21:20:54.745-04:00. Ready for 5-second 9:16 motion-only video export prep; not queue-ready until approved MP4 exists."
+      ],
+      "updated_at": "2026-05-09T02:10:15.881Z"
     },
     {
       "day": 12,
       "slug": "day-12-cozy-seek-and-find-adventure",
       "idempotency_key": "book01-day12-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
-      "status": "generated-pending-review",
+      "status": "user-approved-video-source",
       "reference_image_downloads_path": "C:/Users/outdo/Downloads/day-12-reference-cozy-seek-and-find-adventure.png",
       "ember_reference_images": [
         "Ember's Adventures/EtD Images/Ember-001.png",
@@ -339,19 +379,25 @@
         "content/outputs/images/pending-review/video-source/book-01/day-12-cozy-seek-and-find-adventure-video-source-no-text-v01-2026-05-08T05-58-02-551Z-chatgpt-screenshot.png",
         "content/outputs/images/pending-review/video-source/book-01/day-12-cozy-seek-and-find-adventure-video-source-no-text-v01-2026-05-08T05-58-02-551Z.png"
       ],
-      "approved_video_source_images": [],
+      "approved_video_source_images": [
+        "content/outputs/images/approved/video-source/book-01/day-12-cozy-seek-and-find-adventure-video-source-no-text-v01-2026-05-08T05-58-02-551Z-chat-rename-project-row.png",
+        "content/outputs/images/approved/video-source/book-01/day-12-cozy-seek-and-find-adventure-video-source-no-text-v01-2026-05-08T05-58-02-551Z-chatgpt-screenshot.png",
+        "content/outputs/images/approved/video-source/book-01/day-12-cozy-seek-and-find-adventure-video-source-no-text-v01-2026-05-08T05-58-02-551Z.png"
+      ],
       "failed_paths": [],
-      "notes": [],
-      "updated_at": "2026-05-08T05:59:59.155Z"
+      "notes": [
+        "Owner approved video-source image on 2026-05-08T21:20:54.745-04:00. Ready for 5-second 9:16 motion-only video export prep; not queue-ready until approved MP4 exists."
+      ],
+      "updated_at": "2026-05-09T02:10:15.881Z"
     }
   ],
   "last_selection": [
     {
-      "day": 12,
-      "slug": "day-12-cozy-seek-and-find-adventure",
-      "status": "not-started",
-      "reason": "selected for Broke Mode"
+      "day": 10,
+      "slug": "day-10-sparkle-market-token",
+      "status": "user-approved-video-source",
+      "reason": "listed only"
     }
   ],
-  "updated_at": "2026-05-08T05:59:59.155Z"
+  "updated_at": "2026-05-09T02:10:15.893Z"
 }

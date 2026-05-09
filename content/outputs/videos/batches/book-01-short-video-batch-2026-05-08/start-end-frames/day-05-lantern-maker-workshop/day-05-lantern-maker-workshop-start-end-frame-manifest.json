@@ -1,0 +1,17 @@
+{
+  "day": 5,
+  "slug": "day-05-lantern-maker-workshop",
+  "idempotency_key": "book01-day05-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+  "caption": "The Lantern Maker’s Workshop is full of tiny details for young eyes to explore.\n\nComing soon to Amazon.\n\nCTA: Follow for the next Ember progress update.",
+  "start_frame_mode": "approved-still",
+  "source_image": "content/outputs/images/approved/video-source/book-01/day-05-lantern-maker-workshop-video-source-no-text-v01-2026-05-08T03-08-42-168Z.png",
+  "start_frame": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-start-frame.png",
+  "expected_end_frame": "content/outputs/images/pending-review/start-end-frames/book-01/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-end-frame-v01.png",
+  "output_files": {
+    "manifest": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-start-end-frame-manifest.json",
+    "start_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-start-frame-prompt.md",
+    "end_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-end-frame-prompt.md",
+    "keyframe_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-keyframe-image-to-video-prompt.md",
+    "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-start-end-frame-review-checklist.md"
+  }
+}

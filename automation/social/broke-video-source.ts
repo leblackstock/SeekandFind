@@ -164,6 +164,12 @@ function cleanText(value: string): string {
     .replaceAll("\u00e2\u20ac\u201c", "–");
 }
 
+function assertNoMojibake(text: string, context: string): void {
+  if (/[\u00e2\u00c3]/.test(text)) {
+    throw new Error(`${context} contains mojibake; fix UTF-8 text before writing or submitting.`);
+  }
+}
+
 function repoRelativeFromAbsolute(root: string, path: string): string {
   return normalizePath(toRepoRelative(root, path));
 }
@@ -243,12 +249,32 @@ async function readExistingState(batchDir: string, root: string): Promise<VideoS
   return JSON.parse(await readFile(statePath, "utf8")) as VideoSourceBrokeModeState;
 }
 
-function stateStatusFromFiles(previous: VideoSourceBrokeModeStatus | undefined, pending: string[], approved: string[], failed: string[]): VideoSourceBrokeModeStatus {
+function isStaleRunning(previous: VideoSourceBrokeModeStateEntry | undefined): boolean {
+  if (previous?.status !== "broke-mode-running") return false;
+  const updatedAt = Date.parse(previous.updated_at);
+  if (!Number.isFinite(updatedAt)) return true;
+  return Date.now() - updatedAt > 10 * 60 * 1000;
+}
+
+function stateStatusFromFiles(previous: VideoSourceBrokeModeStateEntry | undefined, pending: string[], approved: string[], failed: string[]): VideoSourceBrokeModeStatus {
   if (approved.length > 0) return "user-approved-video-source";
   if (pending.length > 0) return "generated-pending-review";
-  if (failed.length > 0 && (!previous || previous === "broke-mode-running" || previous === "failed-needs-regeneration")) return "failed-needs-regeneration";
-  if (previous && previous !== "generated-pending-review" && previous !== "user-approved-video-source") return previous;
+  if (failed.length > 0) return "failed-needs-regeneration";
+  if (isStaleRunning(previous)) return "failed-needs-regeneration";
+  if (previous && previous.status !== "generated-pending-review" && previous.status !== "user-approved-video-source") return previous.status;
   return "not-started";
+}
+
+function notesForCurrentStatus(notes: string[], status: VideoSourceBrokeModeStatus): string[] {
+  if (!["generated-pending-review", "user-approved-video-source"].includes(status)) return notes;
+  return notes.filter((note) => ![
+    /^Broke Mode run failed before a pending-review video-source image was created/i,
+    /^Broke Mode run ended without a pending-review image/i,
+    /^Owner disapproved video-source image/i,
+    ...(status === "user-approved-video-source"
+      ? [/^Generated video-source image is pending owner review/i]
+      : [])
+  ].some((pattern) => pattern.test(note)));
 }
 
 export async function buildVideoSourceBrokeModeState(
@@ -267,11 +293,12 @@ export async function buildVideoSourceBrokeModeState(
     const approved = await listMatchingFiles(root, approvedFolder, record.slug);
     const failed = await listMatchingFailedPaths(root, record.slug);
     const dayReferencePath = downloadsReferencePath(record, options.downloadsDir);
+    const status = stateStatusFromFiles(previous, pending, approved, failed);
     days.push({
       day: record.day,
       slug: record.slug,
       idempotency_key: record.idempotency_key,
-      status: stateStatusFromFiles(previous?.status, pending, approved, failed),
+      status,
       reference_image_downloads_path: dayReferencePath,
       ember_reference_images: emberReferenceImages,
       required_reference_images: requiredReferenceImages(dayReferencePath),
@@ -282,7 +309,7 @@ export async function buildVideoSourceBrokeModeState(
       pending_review_images: pending,
       approved_video_source_images: approved,
       failed_paths: failed.length > 0 ? failed : previous?.failed_paths ?? [],
-      notes: previous?.notes ?? [],
+      notes: notesForCurrentStatus(previous?.notes ?? [], status),
       updated_at: timestamp
     });
   }
@@ -365,22 +392,33 @@ export function selectVideoSourceJobs(
   return { records: selected, skipped };
 }
 
+function daySpecificPromptRule(record: ImagePreflightRecord): string {
+  if (record.slug === "day-04-baby-flame-lantern") {
+    return "Day 4 object rule: include exactly one Baby Flame Lantern, and place that single Baby Flame Lantern on a shelf. Do not put a Baby Flame Lantern on the table, floor, foreground, wall, in Ember's hands, or anywhere else. Do not create a second baby-flame-lantern-shaped object.";
+  }
+  return `Day ${record.day} object rule: keep the ${titleFromSlug(record.slug)} concept visible as a small seek-and-find treasure or scene idea, but do not add labels, words, arrows, circles, boxes, answer marks, or sign-like callouts.`;
+}
+
+function daySpecificSelfCheck(record: ImagePreflightRecord): string {
+  if (record.slug === "day-04-baby-flame-lantern") return "- exactly one Baby Flame Lantern on a shelf";
+  return `- the ${titleFromSlug(record.slug)} concept is present without any label, words, arrow, circle, box, or answer mark`;
+}
+
 function renderBrokeModePrompt(record: ImagePreflightRecord): string {
   const visibleText = record.visible_text_found.length > 0
     ? record.visible_text_found.map((text) => `"${cleanText(text)}"`).join(", ")
     : "any readable text";
   const concept = `Campaign concept: ${titleFromSlug(record.slug)} in a cozy, child-friendly seek-and-find world with lanterns, tiny treasures, and one curious baby dragon.`;
-  const daySpecificObjectRule = record.slug === "day-04-baby-flame-lantern"
-    ? "Day 4 object rule: include exactly one Baby Flame Lantern, and place that single Baby Flame Lantern on a shelf. Do not put a Baby Flame Lantern on the table, floor, foreground, wall, in Ember's hands, or anywhere else. Do not create a second baby-flame-lantern-shaped object."
-    : "";
+  const daySpecificObjectRule = daySpecificPromptRule(record);
+  const selfCheck = daySpecificSelfCheck(record);
 
-  return `${videoSourceReferenceUploadGuard}
+  const prompt = `${videoSourceReferenceUploadGuard}
 
 Create one clean vertical 9:16 video-source image for a motion-only Ember short video.
 
 Use the uploaded day-specific promo image as the composition and mood reference only. It is static promo art, not the final image-to-video source.
 
-Use the uploaded Ember-001, Ember-002, and Ember-003 images as character reference images. Use them to keep Ember's appearance, proportions, scarf, satchel, horns, eyes, and colors consistent.
+Use the uploaded Ember-001, Ember-002, and Ember-003 images as character reference images. Ember accuracy is the highest priority in this generation. Study those three references closely and match Ember's face shape, baby-dragon proportions, horn shape, eye size, scarf color, satchel shape, body color, and sweet friendly expression. If the scene becomes too busy, simplify the market details rather than changing Ember.
 
 Remove all readable text from the reference. The reference includes: ${visibleText}. Remove the text completely.
 
@@ -396,7 +434,7 @@ Avoid paper, tag, scrap, note, sign-like rectangle, label-like shape, or decorat
 
 Keep Ember on-model as a tiny adorable reddish-orange baby dragon with soft pumpkin-orange and coral shading, shiny golden spiral-comma horns, large glossy blue-teal eyes, cream belly, plain bright blue-teal scarf, and tiny plain brown crossbody satchel with dull-gold button clasps.
 
-Do not turn Ember into a fox, cat, generic dragon, wizard, or different character.
+Do not turn Ember into a fox, cat, generic dragon, wizard, plush toy, mascot, chibi monster, or different character. Do not make Ember's head too large, horns too oversized, eyes the wrong color, scarf the wrong color, satchel missing, satchel too ornate, body too smooth-plastic, or expression too goofy.
 
 No new characters. No new story elements. No fake cover, fake listing preview, fake interior page, or sales graphic.
 
@@ -409,9 +447,11 @@ Self-check before finishing:
 - no paper/tag/scrap marks that resemble writing
 - no watermarks or fake UI
 - Ember on-model
+- Ember clearly matches the three uploaded Ember reference images
 - blue-teal scarf present
 - brown satchel present
-- exactly one Baby Flame Lantern on a shelf when this is Day 4
+- golden spiral-comma horns match the references
+${selfCheck}
 - no new characters
 - no new story elements
 - stable foreground/midground/background
@@ -424,6 +464,8 @@ No paper scraps, tags, labels, sign-like rectangles, or decorative strokes with 
 
 No scary expression, angry face, smug face, photorealism, flat cartoon style, distorted scarf, missing satchel, extra limbs, muddy glitter fog, heavy sparkle haze, or clutter that makes the scene hard to read.
 `;
+  assertNoMojibake(prompt, `Broke Mode prompt for Day ${record.day}`);
+  return prompt;
 }
 
 function renderWorkflowDoc(batchDir: string): string {
@@ -476,6 +518,18 @@ Redo a failed day:
 npm run social:broke-video-source -- --redo day-03
 \`\`\`
 
+If npm/PowerShell forwarding strips a flag, use the direct tsx form:
+
+\`\`\`powershell
+npx tsx automation/social/broke-video-source.ts --redo day-03
+\`\`\`
+
+Before any one-day or batch run, verify selection without opening/submitting ChatGPT:
+
+\`\`\`powershell
+npm run social:broke-video-source -- --list --redo day-03
+\`\`\`
+
 Recover a completed-after-timeout image from the current ChatGPT chat without submitting a new prompt:
 
 \`\`\`powershell
@@ -490,12 +544,12 @@ npm run social:broke-video-source -- --browser-mode existing --cdp-url http://12
 
 ## Start Over After A Stuck Browser Upload
 
-If a batch is interrupted or ChatGPT opens a duplicate-file modal, do not click Send and do not continue the batch. Treat the browser state as contaminated if the project composer has mixed day references, more than 4 attachments, an empty prompt with queued images, or a duplicate-file modal blocking the prompt box.
+The runner preflights the ChatGPT composer before each one-day or batch job: it dismisses the duplicate-file modal, removes queued attachments, clears stale prompt text, and verifies the expected 4 reference attachments before submitting. If a batch is interrupted outside the runner or the browser is left in a mixed manual state, do not click Send and do not continue the batch. Treat the browser state as contaminated if the project composer has mixed day references, more than 4 attachments, an empty prompt with queued images, or a duplicate-file modal blocking the prompt box.
 
 Clean restart procedure for one day:
 
 1. Stop any still-running \`social:broke-video-source\` / \`broke-video-source.ts\` node processes.
-2. In the ChatGPT project tab, dismiss any duplicate-file modal and remove every queued attachment, or reload the project tab until the composer has an empty prompt and zero attachments.
+2. Prefer rerunning through this workflow so the automated preflight clears the composer. If working manually, dismiss any duplicate-file modal and remove every queued attachment, or reload the project tab until the composer has an empty prompt and zero attachments.
 3. Verify the exact one-day selection without opening/submitting ChatGPT:
 
 \`\`\`powershell
@@ -509,6 +563,8 @@ npm run social:broke-video-source -- --redo day-08
 \`\`\`
 
 Do not use \`--max\` again until the contaminated browser state is cleared and the one-day redo succeeds or fails cleanly. Recovery mode is only for a generated image already visible in the current chat; it is not the right tool for a pre-submit duplicate-file modal or mixed-attachment composer.
+
+Interrupted \`broke-mode-running\` entries older than 10 minutes are treated as failed/regeneration-needed on the next state rebuild unless a pending-review or approved source image exists on disk.
 
 ## Output Rules
 
@@ -569,6 +625,30 @@ async function writeWorkflowDoc(batchDir: string, root: string): Promise<string>
   await mkdir(dirname(absolute), { recursive: true });
   await writeFile(absolute, renderWorkflowDoc(batchDir), "utf8");
   return repoRelativeFromAbsolute(root, absolute);
+}
+
+function addNote(entry: VideoSourceBrokeModeStateEntry, note: string): void {
+  if (!entry.notes.includes(note)) entry.notes = [...entry.notes, note];
+}
+
+async function finalizeJobStateAfterRun(entry: VideoSourceBrokeModeStateEntry, root: string, reasonIfNoOutput: string): Promise<void> {
+  const pending = await listMatchingFiles(root, pendingReviewFolder, entry.slug);
+  const approved = await listMatchingFiles(root, approvedFolder, entry.slug);
+  const failed = await listMatchingFailedPaths(root, entry.slug);
+  entry.pending_review_images = pending;
+  entry.approved_video_source_images = approved;
+  entry.failed_paths = failed.length > 0 ? failed : entry.failed_paths;
+  if (approved.length > 0) entry.status = "user-approved-video-source";
+  else if (pending.length > 0) {
+    entry.status = "generated-pending-review";
+    addNote(entry, "Generated video-source image is pending owner review; not queue-ready until approved MP4 exists.");
+  }
+  else {
+    entry.status = "failed-needs-regeneration";
+    addNote(entry, reasonIfNoOutput);
+  }
+  entry.notes = notesForCurrentStatus(entry.notes, entry.status);
+  entry.updated_at = nowIso();
 }
 
 function makeJob(record: ImagePreflightRecord, entry: VideoSourceBrokeModeStateEntry): VideoSourceBrokeModeJob {
@@ -715,35 +795,48 @@ export async function runVideoSourceBrokeMode(options: VideoSourceBrokeModeOptio
 
       const brokeModeDefaults = defaultBrokeModeOptions(job.prompt_path);
       const { runBrokeMode } = await import("../playwright/scripts/chatgpt-broke-mode-generate.js");
-      await runBrokeMode({
-        ...brokeModeDefaults,
-        prompt: job.prompt_path,
-        rawPrompt: true,
-        referenceImages: job.reference_images,
-        referenceImageRoot: ".",
-        outputFolder: pendingReviewFolder,
-        referenceUploadGuard: videoSourceReferenceUploadGuard,
-        assetName: job.asset_name,
-        chatTitle: job.chat_title,
-        browserMode: options.browserMode ?? brokeModeDefaults.browserMode,
-        cdpUrl: options.cdpUrl ?? brokeModeDefaults.cdpUrl,
-        generationTimeoutMs: options.timeoutMinutes ? options.timeoutMinutes * 60000 : brokeModeDefaults.generationTimeoutMs,
-        pollIntervalMs: brokeModeDefaults.pollIntervalMs,
-        recoverOnly: Boolean(options.recover),
-        dryRun: options.dryRun ?? false,
-        autoSubmit: options.autoSubmit ?? brokeModeDefaults.autoSubmit,
-        force: options.force ?? false
-      });
+      try {
+        await runBrokeMode({
+          ...brokeModeDefaults,
+          prompt: job.prompt_path,
+          rawPrompt: true,
+          referenceImages: job.reference_images,
+          referenceImageRoot: ".",
+          outputFolder: pendingReviewFolder,
+          referenceUploadGuard: videoSourceReferenceUploadGuard,
+          assetName: job.asset_name,
+          chatTitle: job.chat_title,
+          browserMode: options.browserMode ?? brokeModeDefaults.browserMode,
+          cdpUrl: options.cdpUrl ?? brokeModeDefaults.cdpUrl,
+          generationTimeoutMs: options.timeoutMinutes ? options.timeoutMinutes * 60000 : brokeModeDefaults.generationTimeoutMs,
+          pollIntervalMs: brokeModeDefaults.pollIntervalMs,
+          recoverOnly: Boolean(options.recover),
+          dryRun: options.dryRun ?? false,
+          autoSubmit: options.autoSubmit ?? brokeModeDefaults.autoSubmit,
+          force: options.force ?? false
+        });
+        await finalizeJobStateAfterRun(
+          entry,
+          root,
+          "Broke Mode run ended without a pending-review image, approved source image, or failed archive."
+        );
+        await writeState(state, root);
+      } catch (error) {
+        await finalizeJobStateAfterRun(
+          entry,
+          root,
+          `Broke Mode run failed before a pending-review video-source image was created: ${error instanceof Error ? error.message : String(error)}`
+        );
+        await writeState(state, root);
+        throw error;
+      }
 
-      if (process.exitCode === 1) {
+      if (process.exitCode === 1 && entry.status === "broke-mode-running") {
         entry.status = "failed-needs-regeneration";
         entry.failed_paths = entry.failed_paths.length > 0
           ? entry.failed_paths
           : [`content/outputs/images/failed/${job.asset_name}`];
-        entry.notes = [
-          ...entry.notes,
-          "Broke Mode run failed before a pending-review video-source image was created."
-        ];
+        addNote(entry, "Broke Mode run failed before a pending-review video-source image was created.");
         entry.updated_at = nowIso();
         await writeState(state, root);
       }
@@ -773,8 +866,9 @@ async function main(): Promise<void> {
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
-  main().catch((error: unknown) => {
+  await main().catch((error: unknown) => {
     console.error(error instanceof Error ? error.message : error);
     process.exitCode = 1;
   });
+  process.exit(process.exitCode ?? 0);
 }
