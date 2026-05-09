@@ -35,20 +35,37 @@ Latest check passed:
    - Treat `queue.json` as live truth.
    - Use old marketing calendars and launch-plan markdown only as reference/history.
 
-2. Decide whether to catch up ready Meta/static posts.
+2. Check live social account wording.
+   - Check all active social accounts for the phrase "Coming soon to Amazon".
+   - Make sure the wording is present anywhere it is supposed to be present.
+   - If an account is missing it, record which account/post/profile needs fixing before changing queue state.
+   - Ask tomorrow before deciding placement:
+     - Should profile pictures or banners say "Coming soon to Amazon"?
+     - Would a pinned post be better?
+     - Should we make a special promo still for this wording?
+     - Should we make a special promo video for this wording?
+     - Should the wording live in account bios, post captions, pinned content, visual assets, or some combination?
+     - Which social accounts should carry the wording: Pinterest, Instagram, Facebook, TikTok, YouTube, or all of them?
+     - Should the wording be exactly "Coming soon to Amazon" everywhere, or should each platform use a slightly different version?
+     - Should the wording point to a future Amazon page, a temporary landing page, or no link until the listing exists?
+     - Should the pinned/static/video promo use existing approved Ember art, or should it get a dedicated new asset?
+     - Should this be a one-time announcement, a pinned evergreen notice, or a recurring line in campaign captions?
+     - What should be removed or changed once the Amazon listing is live?
+
+3. Decide whether to catch up ready Meta/static posts.
    - The next ready task is Day 4 Instagram, scheduled for Friday, May 8.
    - Meta access is not currently the blocker.
    - Do not publish catch-up posts unless Lauren explicitly wants to proceed.
    - If posting is approved, record receipts through the canonical helper paths.
 
-3. Main production blocker: short-video exports.
+4. Main production blocker: short-video exports.
    - Days 3-12 still need finished video exports.
    - Days 3-12 now have approved start/end-frame still packages.
    - Start with Day 3, "Search with Ember"; its still/static posts are already complete.
    - Use closed-mouth language: no talking, no lip movement, no jaw movement, no lip sync.
    - Do not mark a short-video queue task `ready` until the approved video file exists under `content/outputs/videos/approved/`.
 
-4. Keep the full-platform runway honest.
+5. Keep the full-platform runway honest.
    - Static/Pinterest/Meta runway is healthy after clearing stale account statuses.
    - Full-platform runway is not healthy until video exports move forward.
    - The goal is at least 7 fully prepared campaign days, not just 7 days of static images.
