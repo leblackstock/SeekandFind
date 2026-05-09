@@ -269,7 +269,9 @@ function scoreCandidates(
       quadrant: "Q1",
       importance: 4,
       urgency: 4,
-      reason: "Video exports matter for the campaign, but account blockers should be cleared first unless this video is needed immediately.",
+      reason: nextAccountBlocker
+        ? "Video exports matter for the campaign, but account blockers should be cleared first unless this video is needed immediately."
+        : "Video exports are now the main campaign blocker because static, Pinterest, and Meta tasks are ready.",
       usefulCommand: "Use the Day 3 short-video asset brief, then export/review before marking the queue.",
       avoid: "Do not mark the short-video task posted without a finished export and live URLs."
     });
@@ -304,7 +306,9 @@ function scoreCandidates(
     quadrant: "Q2",
     importance: 3,
     urgency: 2,
-    reason: "Automation improvements are useful, but only after Q1 account/video blockers are under control.",
+    reason: nextAccountBlocker
+      ? "Automation improvements are useful, but only after Q1 account/video blockers are under control."
+      : "Automation improvements are useful, but only after the Q1 video-export blocker is under control.",
     usefulCommand: "Ask Codex: Propose one small automation improvement for blocker cleanup.",
     avoid: "Do not over-optimize a working flow during a posting day."
   });

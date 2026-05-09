@@ -13,6 +13,7 @@ import {
   savePromptCopy
 } from "../src/core/image-file-manager.js";
 import {
+  activeGenerationWatchTimeoutMs,
   managedModeBlockedByInsecureBrowser,
   manualModeMessage,
   generationStillInProgress,
@@ -20,6 +21,8 @@ import {
   parseBrokeModeArgs,
   parseBrowserMode,
   preparePromptForChatGPTImageGeneration,
+  prepareRawPromptForChatGPTImageGeneration,
+  qaPromptForChatGPTImageGeneration,
   resolveReferenceImagePaths,
   sanitizePromptForBrokeMode,
   selectGeneratedImageCandidate
@@ -154,6 +157,13 @@ describe("image file manager", () => {
     expect(parseBrokeModeArgs(["--prompt", "prompt.md"]).pollIntervalMs).toBe(15000);
     expect(parseBrokeModeArgs(["--prompt", "prompt.md", "--timeout-minutes=6"]).generationTimeoutMs).toBe(360000);
     expect(() => parseBrokeModeArgs(["--prompt", "prompt.md", "--generation-timeout-ms=30000"])).toThrow(/at least 60000/);
+  });
+
+  it("reserves cleanup time before the outer watcher budget is exhausted", () => {
+    expect(activeGenerationWatchTimeoutMs(180000)).toBe(150000);
+    expect(activeGenerationWatchTimeoutMs(360000)).toBe(330000);
+    expect(activeGenerationWatchTimeoutMs(90000)).toBe(90000);
+    expect(activeGenerationWatchTimeoutMs(60000)).toBe(60000);
   });
 
   it("parses recovery-only mode without changing prompt submission defaults", () => {
@@ -499,6 +509,62 @@ Avoid: off-model Ember, cover-art-sized Ember, duplicate Ember, hidden Ember, du
     expect(result.prompt.match(/Use Ember-001, Ember-002, and Ember-003 as visual references for Ember\./g)?.length).toBe(1);
     expect(result.prompt).not.toMatch(/Ember must match this canon/);
     expect(result.prompt).not.toMatch(/when available|If references are unavailable|If references are not available|project\/source context|Do not rewrite|summarize|planning response/i);
+  });
+
+  it("cleans raw start/end-frame prompt files before ChatGPT submission", () => {
+    const result = prepareRawPromptForChatGPTImageGeneration(`
+# day-12-cozy-seek-and-find-adventure End Frame Prompt
+
+Campaign: Book 1 Prelaunch Rolling Campaign
+Campaign day: Day 12
+Task: \`book01-day12-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels\`
+
+## References
+
+Approved source image:
+
+\`content/outputs/images/approved/video-source/book-01/day-12.png\`
+
+Start frame:
+
+\`content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-12/day-12-start-frame.png\`
+
+Expected end-frame save path:
+
+\`content/outputs/images/pending-review/start-end-frames/book-01/day-12/day-12-end-frame-v01.png\`
+
+Caption context:
+
+Coming soon to Amazon.
+
+CTA: Save for children's book gift ideas.
+
+## Prompt
+
+Create the END FRAME for the same 5-second vertical 9:16 clip. Use the same shot, same Ember, and one small scene-object motion. Anything Ember is holding or attached to Ember must move slightly with Ember. No readable text.
+
+## Negative Prompt / Avoid
+
+No readable text, captions, labels, logos, watermarks, open mouth, teeth, or lip sync.
+`);
+
+    expect(result.prompt).toContain("Create one image now.");
+    expect(result.prompt).toContain("## Image Prompt");
+    expect(result.prompt).toContain("Anything Ember is holding or attached to Ember must move slightly");
+    expect(result.prompt).not.toMatch(/Campaign:|Task:|Expected end-frame save path|Caption context|CTA:|Coming soon to Amazon|content\/outputs/i);
+    expect(qaPromptForChatGPTImageGeneration(result.prompt).passed).toBe(true);
+  });
+
+  it("fails prompt QA when image prompts still contain repo workflow scaffolding", () => {
+    const qa = qaPromptForChatGPTImageGeneration(`
+Create one image now.
+Campaign: Book 1 Prelaunch Rolling Campaign
+Expected end-frame save path:
+content/outputs/images/pending-review/example.png
+`);
+
+    expect(qa.passed).toBe(false);
+    expect(qa.failures.join(" ")).toMatch(/campaign bookkeeping|expected save path|local file path/i);
   });
 });
 

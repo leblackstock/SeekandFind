@@ -1,22 +1,8 @@
 # day-12-cozy-seek-and-find-adventure Start Frame Prompt
 
-Campaign: Book 1 Prelaunch Rolling Campaign
-Campaign day: Day 12
-Task: `book01-day12-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels`
-Video type: motion-only start/end-frame image-to-video
-Start-frame mode: approved text-less still is the start frame
+## Image Reference
 
-## Source Image
-
-Use the approved no-text video-source image as the exact visual base:
-
-`content/outputs/images/approved/video-source/book-01/day-12-cozy-seek-and-find-adventure-video-source-no-text-v01-2026-05-08T05-58-02-551Z.png`
-
-The staged start-frame file for upload is:
-
-`content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-start-frame.png`
-
-No new start-frame image generation is needed unless the approved still fails visual QA or needs a deliberate repair.
+Use the attached approved no-text video-source image as the exact visual base. No new start-frame image generation is needed unless the approved still fails visual QA or needs a deliberate repair.
 
 ## Prompt
 

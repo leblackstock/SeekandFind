@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-05-09T04-39-22-491Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "pending-review",
+  "assetName": "day-11-ember-progress-note-end-frame-v01",
+  "assetSlug": "day-11-ember-progress-note-end-frame-v01",
+  "promptPath": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-11-ember-progress-note/day-11-ember-progress-note-end-frame-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/start-end-frames/book-01/day-11-ember-progress-note/day-11-ember-progress-note-end-frame-v01-2026-05-09T04-39-22-491Z-prompt.md",
+  "imagePath": "content/outputs/images/pending-review/start-end-frames/book-01/day-11-ember-progress-note/day-11-ember-progress-note-end-frame-v01-2026-05-09T04-39-22-491Z.png",
+  "screenshotPath": "content/outputs/images/pending-review/start-end-frames/book-01/day-11-ember-progress-note/day-11-ember-progress-note-end-frame-v01-2026-05-09T04-39-22-491Z-chatgpt-screenshot.png",
+  "warnings": [
+    "Raw prompt mode selected; Broke Mode pasted the prompt file without compacting or appending missing production requirements.",
+    "chat_rename_requested: true; chat_rename_method: project-list-row-menu; chat_rename_visible_verified: true; conversation_id=69feba7f-5fd4-83ea-b201-462548763acb; watcher_started_after=visible-title-verified rename.",
+    "Generation watcher success: new generated image candidate; elapsed=45s; candidates=1; downloads=0; actions=5; stopButtons=1."
+  ],
+  "dryRun": false,
+  "autoSubmit": true,
+  "maxAttempts": 1,
+  "chat_rename_requested": true,
+  "chat_rename_verified": true,
+  "chat_rename_api_verified": false,
+  "chat_rename_visible_verified": true,
+  "chat_rename_verification_method": "visible",
+  "chat_rename_method": "project-list-row-menu",
+  "chat_rename_conversation_id": "69feba7f-5fd4-83ea-b201-462548763acb",
+  "chat_rename_visible_title": "Book 1 Day 11 End Frame - Ember Progress NoteAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+  "chat_rename_visible_candidates": [
+    "Book 1 Day 11 End Frame - Ember Progress NoteAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C"
+  ],
+  "chat_rename_evidence_path": "content/outputs/images/pending-review/start-end-frames/book-01/day-11-ember-progress-note/day-11-ember-progress-note-end-frame-v01-2026-05-09T04-39-22-491Z-chat-rename-evidence.json",
+  "chat_rename_screenshot_path": "content/outputs/images/pending-review/start-end-frames/book-01/day-11-ember-progress-note/day-11-ember-progress-note-end-frame-v01-2026-05-09T04-39-22-491Z-chat-rename-project-row.png",
+  "conversation_id": "69feba7f-5fd4-83ea-b201-462548763acb",
+  "expected_chat_title": "Book 1 Day 11 End Frame - Ember Progress Note",
+  "observed_visible_chat_title": "Book 1 Day 11 End Frame - Ember Progress NoteAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+  "watcher_started_after_chat_rename": "visible-title-verified rename",
+  "browserMode": "existing",
+  "cdpUrl": "http://127.0.0.1:9222",
+  "referenceImages": [
+    "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-11-ember-progress-note/day-11-ember-progress-note-start-frame.png"
+  ],
+  "chatTitle": "Book 1 Day 11 End Frame - Ember Progress Note"
+}

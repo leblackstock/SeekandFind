@@ -89,6 +89,14 @@ describe("start/end frame prep", () => {
     }, null, 2), "utf8");
     await mkdir(join(root, approvedDir), { recursive: true });
     await writeFile(join(root, approvedDir, "day-03-search-with-ember-video-source-no-text-v01-test.png"), Buffer.from("fake image"));
+    await mkdir(join(root, outputDir), { recursive: true });
+    await writeFile(join(root, outputDir, "start-end-frame-owner-review-2026-05-09.json"), JSON.stringify({
+      approved: [{
+        day: 3,
+        motion_object: "string lights",
+        approved_end_frame: "content/outputs/images/approved/start-end-frames/book-01/day-03-search-with-ember/day-03-search-with-ember-end-frame-v01.png"
+      }]
+    }, null, 2), "utf8");
 
     const plan = await buildStartEndFramePlan({
       rootDir: root,
@@ -119,12 +127,30 @@ describe("start/end frame prep", () => {
     expect(result.preparedCount).toBe(1);
     expect(existsSync(join(root, plan.records[0].start_frame))).toBe(true);
     const startPrompt = await readFile(join(root, plan.records[0].output_files.start_prompt), "utf8");
-    expect(startPrompt).toContain("approved text-less still is the start frame");
+    expect(startPrompt).toContain("Use the attached approved no-text video-source image as the exact visual base");
+    expect(startPrompt).not.toMatch(/Campaign:|Task:|content\/outputs|Expected .*save path|CTA:/i);
     const endPrompt = await readFile(join(root, plan.records[0].output_files.end_prompt), "utf8");
     expect(endPrompt).toContain("Create the END FRAME");
+    expect(endPrompt).toContain("Use the attached start frame as the exact visual anchor");
+    expect(endPrompt).not.toMatch(/Campaign:|Task:|content\/outputs|Expected .*save path|Caption context|CTA:/i);
     expect(endPrompt).toContain("closed-mouth");
-    expect(endPrompt).toContain("one small object motion");
+    expect(endPrompt).toContain("required visible Ember motion");
+    expect(endPrompt).toContain("Ember must not stay frozen between frames");
+    expect(endPrompt).toContain("Anything Ember is holding, wearing, carrying, touching, or otherwise attached to him should move with Ember");
+    expect(endPrompt).toContain("Add exactly one chosen scene-object motion in addition to Ember's motion");
+    expect(endPrompt).toContain("Do not use Ember, Ember's body parts, or anything Ember is holding");
+    expect(endPrompt).toContain("do not count as the chosen scene-object motion");
     expect(endPrompt).toContain("Do not rearrange the scene or move the mission item");
+    const videoPrompt = await readFile(join(root, plan.records[0].output_files.keyframe_video_prompt), "utf8");
+    expect(videoPrompt).toContain("required natural Ember motion");
+    expect(videoPrompt).toContain("Ember and anything he is holding, wearing, carrying, touching, or otherwise attached to should move together between frames");
+    expect(videoPrompt).toContain("The chosen motion object is one additional scene object separate from Ember");
+    expect(videoPrompt).toContain("Owner-approved chosen motion object for this video: string lights");
+    const reviewChecklist = await readFile(join(root, plan.records[0].output_files.review_checklist), "utf8");
+    expect(reviewChecklist).toContain("The chosen motion object is not held by Ember");
+    expect(reviewChecklist).toContain("Ember is not frozen between frames");
+    expect(reviewChecklist).toContain("Anything Ember is holding, wearing, carrying, touching, or otherwise attached to moves visibly with Ember between frames");
+    expect(reviewChecklist).toContain("Owner-approved chosen motion object is used: string lights");
   });
 
   it("prepares create-both prompts when no approved still exists", async () => {
@@ -161,7 +187,8 @@ describe("start/end frame prep", () => {
       start_frame: "content/outputs/images/pending-review/start-end-frames/book-01/day-04-baby-flame-lantern/day-04-baby-flame-lantern-start-frame-v01.png"
     });
     const startPrompt = await readFile(join(root, result.plan.records[0].output_files.start_prompt), "utf8");
-    expect(startPrompt).toContain("no approved still exists; create both start and end frames");
+    expect(startPrompt).toContain("Create the START FRAME from this image concept: Find the Baby Flame Lantern.");
+    expect(startPrompt).not.toMatch(/Campaign:|Task:|content\/outputs|Expected .*save path|CTA:/i);
     expect(startPrompt).toContain("Create this start frame now");
   });
 

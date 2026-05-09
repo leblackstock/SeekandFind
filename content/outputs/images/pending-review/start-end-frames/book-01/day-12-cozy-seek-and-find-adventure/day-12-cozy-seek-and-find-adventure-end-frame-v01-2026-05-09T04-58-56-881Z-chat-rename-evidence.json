@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-05-09T04-58-56-881Z",
+  "workflow": "chatgpt-project-chat-rename",
+  "chat_rename_requested": true,
+  "chat_rename_api_verified": false,
+  "chat_rename_visible_verified": true,
+  "chat_rename_method": "project-list-row-menu",
+  "conversation_id": "69febf15-c6e8-83ea-a2fc-74c9e8d1efe7",
+  "expected_chat_title": "Book 1 Day 12 End Frame - Cozy Seek and Find Adventure",
+  "observed_visible_chat_title": "Book 1 Day 12 End Frame - Cozy Seek and Find AdventureAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C",
+  "active_chat_url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69febf15-c6e8-83ea-a2fc-74c9e8d1efe7",
+  "project_url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/project",
+  "visible_row_href": "/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69febf15-c6e8-83ea-a2fc-74c9e8d1efe7",
+  "visible_row_rect": {
+    "x": 717,
+    "y": 354,
+    "w": 688,
+    "h": 40
+  },
+  "visible_candidates": [
+    "Book 1 Day 12 End Frame - Cozy Seek and Find AdventureAttached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. C"
+  ],
+  "prompt_fingerprint": [
+    "day-12-cozy-seek-and-find-adventure-end-frame-v01",
+    "Attached images are visual references only for character appearance and proportions. Do not create a character reference"
+  ],
+  "prompt_fingerprint_verified": true,
+  "screenshot_path": "content/outputs/images/pending-review/start-end-frames/book-01/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-end-frame-v01-2026-05-09T04-58-56-881Z-chat-rename-project-row.png"
+}

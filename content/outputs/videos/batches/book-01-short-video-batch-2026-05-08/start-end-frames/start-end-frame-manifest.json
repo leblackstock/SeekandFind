@@ -72,6 +72,11 @@
         "end_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-06-cozy-dragon-village/day-06-cozy-dragon-village-end-frame-prompt.md",
         "keyframe_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-06-cozy-dragon-village/day-06-cozy-dragon-village-keyframe-image-to-video-prompt.md",
         "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-06-cozy-dragon-village/day-06-cozy-dragon-village-start-end-frame-review-checklist.md"
+      },
+      "owner_review": {
+        "status": "approved",
+        "motion_object": "ribbon",
+        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-06-cozy-dragon-village/day-06-cozy-dragon-village-end-frame-v01.png"
       }
     },
     {
@@ -89,6 +94,11 @@
         "end_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-07-golden-welcome-bell/day-07-golden-welcome-bell-end-frame-prompt.md",
         "keyframe_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-07-golden-welcome-bell/day-07-golden-welcome-bell-keyframe-image-to-video-prompt.md",
         "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-07-golden-welcome-bell/day-07-golden-welcome-bell-start-end-frame-review-checklist.md"
+      },
+      "owner_review": {
+        "status": "approved",
+        "motion_object": "bells",
+        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-07-golden-welcome-bell/day-07-golden-welcome-bell-end-frame-v01.png"
       }
     },
     {
@@ -106,6 +116,11 @@
         "end_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-08-firefly-flower-charm/day-08-firefly-flower-charm-end-frame-prompt.md",
         "keyframe_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-08-firefly-flower-charm/day-08-firefly-flower-charm-keyframe-image-to-video-prompt.md",
         "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-08-firefly-flower-charm/day-08-firefly-flower-charm-start-end-frame-review-checklist.md"
+      },
+      "owner_review": {
+        "status": "approved",
+        "motion_object": "blue and purple lanterns",
+        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-08-firefly-flower-charm/day-08-firefly-flower-charm-end-frame-v01.png"
       }
     },
     {
@@ -123,6 +138,11 @@
         "end_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-09-dragon-door-key/day-09-dragon-door-key-end-frame-prompt.md",
         "keyframe_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-09-dragon-door-key/day-09-dragon-door-key-keyframe-image-to-video-prompt.md",
         "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-09-dragon-door-key/day-09-dragon-door-key-start-end-frame-review-checklist.md"
+      },
+      "owner_review": {
+        "status": "approved",
+        "motion_object": "ribbon",
+        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-09-dragon-door-key/day-09-dragon-door-key-end-frame-v01.png"
       }
     },
     {
@@ -140,6 +160,11 @@
         "end_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-10-sparkle-market-token/day-10-sparkle-market-token-end-frame-prompt.md",
         "keyframe_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-10-sparkle-market-token/day-10-sparkle-market-token-keyframe-image-to-video-prompt.md",
         "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-10-sparkle-market-token/day-10-sparkle-market-token-start-end-frame-review-checklist.md"
+      },
+      "owner_review": {
+        "status": "approved",
+        "motion_object": "bell",
+        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-10-sparkle-market-token/day-10-sparkle-market-token-end-frame-v01.png"
       }
     },
     {
@@ -157,6 +182,11 @@
         "end_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-11-ember-progress-note/day-11-ember-progress-note-end-frame-prompt.md",
         "keyframe_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-11-ember-progress-note/day-11-ember-progress-note-keyframe-image-to-video-prompt.md",
         "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-11-ember-progress-note/day-11-ember-progress-note-start-end-frame-review-checklist.md"
+      },
+      "owner_review": {
+        "status": "approved",
+        "motion_object": "string lights/lanterns",
+        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-11-ember-progress-note/day-11-ember-progress-note-end-frame-v01.png"
       }
     },
     {
@@ -174,6 +204,11 @@
         "end_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-end-frame-prompt.md",
         "keyframe_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-keyframe-image-to-video-prompt.md",
         "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-start-end-frame-review-checklist.md"
+      },
+      "owner_review": {
+        "status": "approved",
+        "motion_object": "string banners & lanterns",
+        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-end-frame-v01.png"
       }
     }
   ],

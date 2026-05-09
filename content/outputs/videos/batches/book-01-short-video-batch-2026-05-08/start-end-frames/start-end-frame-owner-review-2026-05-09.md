@@ -10,24 +10,30 @@ Approval applies to still start/end-frame pairs only. It does not approve export
 | --- | --- | --- |
 | 6 | `day-06-cozy-dragon-village` | ribbon |
 | 7 | `day-07-golden-welcome-bell` | bells |
+| 8 | `day-08-firefly-flower-charm` | blue and purple lanterns |
 | 9 | `day-09-dragon-door-key` | ribbon |
 | 10 | `day-10-sparkle-market-token` | bell |
+| 11 | `day-11-ember-progress-note` | string lights/lanterns |
+| 12 | `day-12-cozy-seek-and-find-adventure` | string banners & lanterns |
 
 Approved end-frame bundles were copied to:
 
 - `content/outputs/images/approved/start-end-frames/book-01/day-06-cozy-dragon-village/`
 - `content/outputs/images/approved/start-end-frames/book-01/day-07-golden-welcome-bell/`
+- `content/outputs/images/approved/start-end-frames/book-01/day-08-firefly-flower-charm/`
 - `content/outputs/images/approved/start-end-frames/book-01/day-09-dragon-door-key/`
 - `content/outputs/images/approved/start-end-frames/book-01/day-10-sparkle-market-token/`
+- `content/outputs/images/approved/start-end-frames/book-01/day-11-ember-progress-note/`
+- `content/outputs/images/approved/start-end-frames/book-01/day-12-cozy-seek-and-find-adventure/`
+
+Motion-object rule: the chosen motion object must be a scene object, not anything Ember is holding and not anything attached to Ember. Anything Ember is holding or anything attached to Ember must still move at least slightly with Ember between the start frame and end frame.
 
 ## Regenerate
 
 | Day | Slug | Status |
 | --- | --- | --- |
-| 8 | `day-08-firefly-flower-charm` | regenerate |
-| 11 | `day-11-ember-progress-note` | regenerate |
-| 12 | `day-12-cozy-seek-and-find-adventure` | regenerate |
+| None |  |  |
 
 ## Next Step
 
-Regenerate Days 8, 11, and 12 end frames before using them for keyframe image-to-video. Use the recorded motion object for approved Days 6, 7, 9, and 10 during video generation.
+Use the recorded motion objects for approved Days 6, 7, 8, 9, 10, 11, and 12 during video generation.

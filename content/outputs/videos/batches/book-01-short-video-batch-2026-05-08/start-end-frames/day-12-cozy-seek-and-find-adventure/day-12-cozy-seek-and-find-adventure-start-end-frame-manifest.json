@@ -7,16 +7,16 @@
   "source_image": "content/outputs/images/approved/video-source/book-01/day-12-cozy-seek-and-find-adventure-video-source-no-text-v01-2026-05-08T05-58-02-551Z.png",
   "start_frame": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-start-frame.png",
   "expected_end_frame": "content/outputs/images/pending-review/start-end-frames/book-01/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-end-frame-v01.png",
-  "owner_review": {
-    "status": "regenerate",
-    "reviewed_at": "2026-05-09T00:21:19-04:00",
-    "reason": "Owner requested regeneration."
-  },
   "output_files": {
     "manifest": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-start-end-frame-manifest.json",
     "start_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-start-frame-prompt.md",
     "end_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-end-frame-prompt.md",
     "keyframe_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-keyframe-image-to-video-prompt.md",
     "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-start-end-frame-review-checklist.md"
+  },
+  "owner_review": {
+    "status": "approved",
+    "motion_object": "string banners & lanterns",
+    "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-end-frame-v01.png"
   }
 }

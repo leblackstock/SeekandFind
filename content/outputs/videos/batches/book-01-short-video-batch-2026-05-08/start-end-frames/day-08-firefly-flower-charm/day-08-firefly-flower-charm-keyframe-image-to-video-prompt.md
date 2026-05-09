@@ -18,7 +18,10 @@ Format: vertical 9:16
 
 Use the start frame and end frame as exact visual anchors. Create a gentle, cozy 5-second vertical animation that moves from the start frame toward the end frame.
 
-Motion should be small and calm: slow push-in, soft lantern glow, slight 2.25D parallax, tiny sparkle glints, one subtle natural Ember motion, and one gentle object motion such as a tinkling bell, rolling pen, swaying lantern, fluttering ribbon, or tiny charm wiggle. Keep Ember on-model, friendly, and closed-mouth.
+Motion should be small and calm but visible: slow push-in, soft lantern glow, slight 2.25D parallax, tiny sparkle glints, required natural Ember motion, and one gentle chosen scene-object motion such as a tinkling bell, rolling pen, separate swaying lantern, fluttering ribbon, or tiny charm wiggle. Ember and anything he is holding, wearing, carrying, touching, or otherwise attached to should move together between frames; his held lantern, scarf, satchel, tail, paws, horns, and carried props must not freeze while Ember moves. The chosen motion object is one additional scene object separate from Ember and must not be Ember, Ember's body parts, or anything Ember is holding/wearing/carrying/touching/attached to. Keep Ember on-model, friendly, and closed-mouth.
+
+Owner-approved chosen motion object for this video: blue and purple lanterns. Use that as the single chosen scene-object motion; do not substitute an Ember-held or Ember-attached item as the chosen object motion.
+
 
 No scene cuts. No new characters. No generated readable words. No talking or lip movement.
 
@@ -26,6 +29,6 @@ No scene cuts. No new characters. No generated readable words. No talking or lip
 
 No readable text, captions, subtitles, labels, signs, logos, watermarks, fake UI, page numbers, arrows, circles, boxes, answer marks, or extra words.
 
-Do not make Ember talk. Closed mouth only. No lip sync, no lip movement, no jaw movement, no exaggerated mouth movement, no teeth, no weird final-frame eyes, no held-long blink, no off-model face, no extra limbs, no distorted scarf, and no missing satchel.
+Do not make Ember talk. Closed mouth only. No lip sync, no lip movement, no jaw movement, no exaggerated mouth movement, no teeth, no frozen Ember, no frozen held item, no frozen scarf, no frozen satchel, no weird final-frame eyes, no held-long blink, no off-model face, no extra limbs, no distorted scarf, and no missing satchel.
 
 No frantic camera movement, hard cuts, scary lighting, muddy glitter fog, heavy sparkles covering the scene, photorealism, flat cartoon style, fake book cover, fake listing preview, fake interior page, or Amazon/buy/order language inside the video.

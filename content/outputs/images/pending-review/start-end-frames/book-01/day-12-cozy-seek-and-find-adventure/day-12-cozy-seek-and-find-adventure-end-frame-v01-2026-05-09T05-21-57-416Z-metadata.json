@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-05-09T05-21-57-416Z",
+  "workflow": "chatgpt-broke-mode-image-generation",
+  "status": "dry-run",
+  "assetName": "day-12-cozy-seek-and-find-adventure-end-frame-v01",
+  "assetSlug": "day-12-cozy-seek-and-find-adventure-end-frame-v01",
+  "promptPath": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-end-frame-prompt.md",
+  "promptCopyPath": "content/outputs/images/pending-review/start-end-frames/book-01/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-end-frame-v01-2026-05-09T05-21-57-416Z-prompt.md",
+  "warnings": [
+    "Raw prompt mode selected; image prompt QA and cleanup still ran before submission.",
+    "Prompt QA passed before ChatGPT submission."
+  ],
+  "dryRun": true,
+  "autoSubmit": false,
+  "maxAttempts": 1,
+  "browserMode": "manual",
+  "referenceImages": [
+    "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-start-frame.png"
+  ],
+  "chatTitle": "Book 1 Day 12 End Frame - Cozy Seek and Find Adventure"
+}

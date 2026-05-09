@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-05-09T05-52-16-983Z",
+  "workflow": "chatgpt-project-chat-rename",
+  "chat_rename_requested": true,
+  "chat_rename_api_verified": false,
+  "chat_rename_visible_verified": true,
+  "chat_rename_method": "project-list-row-menu",
+  "conversation_id": "69fecb95-f044-83ea-912e-04fba89ebf31",
+  "expected_chat_title": "B1D12 EF regen - cozy seek adventure",
+  "observed_visible_chat_title": "B1D12 EF regen - cozy seek adventureUse attached image(s) only as visual references for the requested image. Create one image from the prompt below. Do not make a collage, reference sheet, lineup, model sheet, or isolated character stud",
+  "active_chat_url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fecb95-f044-83ea-912e-04fba89ebf31",
+  "project_url": "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/project",
+  "visible_row_href": "/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/c/69fecb95-f044-83ea-912e-04fba89ebf31",
+  "visible_row_rect": {
+    "x": 717,
+    "y": 354,
+    "w": 688,
+    "h": 40
+  },
+  "visible_candidates": [
+    "B1D12 EF regen - cozy seek adventureUse attached image(s) only as visual references for the requested image. Create one image from the prompt below. Do not make a collage, reference sheet, lineup, model sheet, or isolated character stud"
+  ],
+  "prompt_fingerprint": [
+    "Use attached image(s) only as visual references for the requested image. Create one image from the prompt below. Do not"
+  ],
+  "prompt_fingerprint_verified": true,
+  "screenshot_path": "content/outputs/images/pending-review/start-end-frames/book-01/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-end-frame-v01-2026-05-09T05-52-16-983Z-chat-rename-project-row.png"
+}

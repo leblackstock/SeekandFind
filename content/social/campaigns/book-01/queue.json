@@ -406,13 +406,12 @@
         },
         {
           "platform": "Instagram",
-          "status": "needs-account",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-account",
           "idempotency_key": "book01-day04-instagram-feed-post-plus-story-reshare",
           "caption_source": {
             "type": "calendar_slot",
@@ -422,13 +421,12 @@
         },
         {
           "platform": "Facebook",
-          "status": "needs-account",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-account",
           "idempotency_key": "book01-day04-facebook-page-post",
           "caption_source": {
             "type": "calendar_slot",
@@ -519,13 +517,12 @@
         },
         {
           "platform": "Instagram",
-          "status": "needs-account",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-account",
           "idempotency_key": "book01-day05-instagram-feed-post-plus-story-reshare",
           "caption_source": {
             "type": "calendar_slot",
@@ -535,13 +532,12 @@
         },
         {
           "platform": "Facebook",
-          "status": "needs-account",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-account",
           "idempotency_key": "book01-day05-facebook-page-post",
           "caption_source": {
             "type": "calendar_slot",
@@ -647,13 +643,12 @@
         },
         {
           "platform": "Instagram",
-          "status": "needs-account",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-account",
           "idempotency_key": "book01-day06-instagram-feed-post-plus-story-reshare",
           "caption_source": {
             "type": "calendar_slot",
@@ -663,13 +658,12 @@
         },
         {
           "platform": "Facebook",
-          "status": "needs-account",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-account",
           "idempotency_key": "book01-day06-facebook-page-post",
           "caption_source": {
             "type": "calendar_slot",
@@ -775,13 +769,12 @@
         },
         {
           "platform": "Instagram",
-          "status": "needs-account",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-account",
           "idempotency_key": "book01-day07-instagram-feed-post-plus-story-reshare",
           "caption_source": {
             "type": "calendar_slot",
@@ -791,13 +784,12 @@
         },
         {
           "platform": "Facebook",
-          "status": "needs-account",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-account",
           "idempotency_key": "book01-day07-facebook-page-post",
           "caption_source": {
             "type": "calendar_slot",
@@ -903,13 +895,12 @@
         },
         {
           "platform": "Instagram",
-          "status": "needs-account",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-account",
           "idempotency_key": "book01-day08-instagram-story-or-reel-cover",
           "caption_source": {
             "type": "calendar_slot",
@@ -919,13 +910,12 @@
         },
         {
           "platform": "Facebook",
-          "status": "needs-account",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-account",
           "idempotency_key": "book01-day08-facebook-page-post",
           "caption_source": {
             "type": "calendar_slot",
@@ -1031,13 +1021,12 @@
         },
         {
           "platform": "Instagram",
-          "status": "needs-account",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-account",
           "idempotency_key": "book01-day09-instagram-feed-post-plus-story-reshare",
           "caption_source": {
             "type": "calendar_slot",
@@ -1047,13 +1036,12 @@
         },
         {
           "platform": "Facebook",
-          "status": "needs-account",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-account",
           "idempotency_key": "book01-day09-facebook-page-post",
           "caption_source": {
             "type": "calendar_slot",
@@ -1159,13 +1147,12 @@
         },
         {
           "platform": "Instagram",
-          "status": "needs-account",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-account",
           "idempotency_key": "book01-day10-instagram-feed-post-plus-story-reshare",
           "caption_source": {
             "type": "calendar_slot",
@@ -1175,13 +1162,12 @@
         },
         {
           "platform": "Facebook",
-          "status": "needs-account",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-account",
           "idempotency_key": "book01-day10-facebook-page-post",
           "caption_source": {
             "type": "calendar_slot",
@@ -1287,13 +1273,12 @@
         },
         {
           "platform": "Instagram",
-          "status": "needs-account",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-account",
           "idempotency_key": "book01-day11-instagram-feed-post-plus-story-reshare",
           "caption_source": {
             "type": "calendar_slot",
@@ -1303,13 +1288,12 @@
         },
         {
           "platform": "Facebook",
-          "status": "needs-account",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-account",
           "idempotency_key": "book01-day11-facebook-page-post",
           "caption_source": {
             "type": "calendar_slot",
@@ -1415,13 +1399,12 @@
         },
         {
           "platform": "Instagram",
-          "status": "needs-account",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-account",
           "idempotency_key": "book01-day12-instagram-feed-post-plus-story-reshare",
           "caption_source": {
             "type": "calendar_slot",
@@ -1431,13 +1414,12 @@
         },
         {
           "platform": "Facebook",
-          "status": "needs-account",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-account",
           "idempotency_key": "book01-day12-facebook-page-post",
           "caption_source": {
             "type": "calendar_slot",

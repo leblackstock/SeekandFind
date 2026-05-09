@@ -15,8 +15,12 @@ Task: `book01-day05-short-video-tiktok-youtube-shorts-instagram-reels-facebook-r
 ## End Frame
 
 - [ ] Same shot, same scene, same Ember, same props, same color palette.
-- [ ] Only small progression from the start frame: gentle push-in, warmer glow, tiny sparkle, tiny natural Ember motion.
-- [ ] Exactly one small object motion is included, such as a tinkling bell, rolling pen, swaying lantern, fluttering ribbon, or tiny charm wiggle.
+- [ ] Clear but gentle progression from the start frame: gentle push-in, warmer glow, tiny sparkle, and visible natural Ember motion.
+- [ ] Exactly one small chosen scene-object motion is included, such as a tinkling bell, rolling pen, swaying lantern, fluttering ribbon, or tiny charm wiggle.
+- [ ] Chosen scene-object motion follows any owner-approved motion object recorded for this day.
+- [ ] The chosen motion object is not held by Ember and is not attached to Ember.
+- [ ] Ember is not frozen between frames.
+- [ ] Anything Ember is holding, wearing, carrying, touching, or otherwise attached to moves visibly with Ember between frames, including a held lantern, scarf, satchel, tail, paws, horns, or other attached/carried items.
 - [ ] Object motion does not rearrange the scene or move the mission item in a way that changes the seek-and-find answer.
 - [ ] Ember stays closed-mouth and does not talk.
 - [ ] No new characters, new props, rearranged layout, or off-model features.

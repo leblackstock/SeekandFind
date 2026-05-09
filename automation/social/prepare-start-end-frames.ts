@@ -42,7 +42,19 @@ interface PreparedFrameRecord {
     keyframe_video_prompt: string;
     review_checklist: string;
   };
+  owner_review?: OwnerReviewRecord;
 }
+
+type OwnerReviewRecord =
+  | {
+      status: "approved";
+      motion_object: string;
+      approved_end_frame: string;
+    }
+  | {
+      status: "regenerate";
+      reason: string;
+    };
 
 interface StartEndFramePlan {
   batchDir: string;
@@ -191,38 +203,51 @@ async function listApprovedImages(options: StartEndFrameOptions): Promise<string
   return readdir(absolute);
 }
 
+async function readOwnerReviewRecords(options: StartEndFrameOptions): Promise<Map<number, OwnerReviewRecord>> {
+  const root = repoRoot(options.rootDir);
+  const reviewPath = join(root, options.outputDir, "start-end-frame-owner-review-2026-05-09.json");
+  const records = new Map<number, OwnerReviewRecord>();
+  if (!existsSync(reviewPath)) return records;
+
+  const review = JSON.parse(await readFile(reviewPath, "utf8")) as {
+    approved?: Array<{ day: number; motion_object?: string; approved_end_frame?: string }>;
+    regenerate?: Array<{ day: number; reason?: string }>;
+  };
+
+  for (const item of review.regenerate ?? []) {
+    if (typeof item.day === "number") records.set(item.day, {
+      status: "regenerate",
+      reason: item.reason ?? "Owner requested regeneration."
+    });
+  }
+
+  for (const item of review.approved ?? []) {
+    if (typeof item.day === "number" && item.motion_object && item.approved_end_frame) records.set(item.day, {
+      status: "approved",
+      motion_object: item.motion_object,
+      approved_end_frame: item.approved_end_frame
+    });
+  }
+
+  return records;
+}
+
+function imageConcept(record: PreparedFrameRecord): string {
+  const lines = (record.caption || "")
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => line && !/^CTA:/i.test(line) && !/^Coming soon to Amazon\.?$/i.test(line));
+  return lines[0] ?? `Book 1 Day ${record.day} cozy Ember seek-and-find scene.`;
+}
+
 function renderStartPrompt(record: PreparedFrameRecord): string {
   const sourceSection = record.source_image
-    ? `Use the approved no-text video-source image as the exact visual base:
-
-\`${record.source_image}\`
-
-The staged start-frame file for upload is:
-
-\`${record.start_frame}\`
-
-No new start-frame image generation is needed unless the approved still fails visual QA or needs a deliberate repair.`
-    : `No approved text-less video-source still exists yet for this day.
-
-Create the START FRAME from the campaign day, caption context, Ember canon, and Book 1 Sparkleflame Festival visual style.
-
-Expected start-frame save path:
-
-\`${record.start_frame}\`
-
-Caption context:
-
-${record.caption || "No caption found."}`;
+    ? "Use the attached approved no-text video-source image as the exact visual base. No new start-frame image generation is needed unless the approved still fails visual QA or needs a deliberate repair."
+    : `Create the START FRAME from this image concept: ${imageConcept(record)}`;
 
   return `# ${record.slug} Start Frame Prompt
 
-Campaign: Book 1 Prelaunch Rolling Campaign
-Campaign day: Day ${record.day}
-Task: \`${record.idempotency_key}\`
-Video type: motion-only start/end-frame image-to-video
-Start-frame mode: ${record.start_frame_mode === "approved-still" ? "approved text-less still is the start frame" : "no approved still exists; create both start and end frames"}
-
-## Source Image
+## Image Reference
 
 ${sourceSection}
 
@@ -246,39 +271,14 @@ No new characters, new story elements, changed outfit, missing satchel, distorte
 
 function renderEndPrompt(record: PreparedFrameRecord): string {
   const references = record.source_image
-    ? `Use the approved no-text video-source image, staged as the start frame, as the exact visual anchor.
-
-Approved source image:
-
-\`${record.source_image}\`
-
-Start frame:
-
-\`${record.start_frame}\``
-    : `Use the generated and approved start frame as the exact visual anchor.
-
-Start frame to use after generation/approval:
-
-\`${record.start_frame}\``;
+    ? "Use the attached start frame as the exact visual anchor."
+    : "Use the generated and approved start frame as the exact visual anchor.";
 
   return `# ${record.slug} End Frame Prompt
 
-Campaign: Book 1 Prelaunch Rolling Campaign
-Campaign day: Day ${record.day}
-Task: \`${record.idempotency_key}\`
-Video type: motion-only start/end-frame image-to-video
-
-## References
+## Image Reference
 
 ${references}
-
-Expected end-frame save path:
-
-\`${record.expected_end_frame}\`
-
-Caption context:
-
-${record.caption || "No caption found."}
 
 ## Prompt
 
@@ -286,9 +286,11 @@ Create the END FRAME for the same 5-second vertical 9:16 clip.
 
 It must look like the same shot, same location, same Ember, same props, same palette, same object layout, and same soft 2.25D children's storybook style. Do not create a new scene.
 
-Show only a tiny natural progression from the start frame: a 3-5 percent gentle camera push-in, slightly warmer lantern glow, very subtle sparkle glints, one small friendly Ember motion such as a tiny head tilt, tiny paw shift, or soft blink, and one small object motion that fits the scene.
+Show a clear but gentle natural progression from the start frame: a 3-5 percent gentle camera push-in, slightly warmer lantern glow, very subtle sparkle glints, and required visible Ember motion such as a small head turn, small paw shift, small body lean, soft blink, or friendly posture change.
 
-The object motion should be gentle and specific: a bell lightly tinkles, a pen or pencil rolls a tiny bit, a lantern sways softly, a ribbon flutters, a hanging charm wiggles, or one nearby prop shifts just enough to feel alive. Use only one object motion. Do not rearrange the scene or move the mission item in a way that changes the seek-and-find answer.
+Ember must not stay frozen between frames. Anything Ember is holding, wearing, carrying, touching, or otherwise attached to him should move with Ember between the start frame and end frame, including a held lantern, scarf, satchel, tail, paws, horns, or any small carried prop. These Ember-held, Ember-worn, and Ember-attached items should visibly follow Ember's movement; they do not count as the chosen scene-object motion.
+
+Add exactly one chosen scene-object motion in addition to Ember's motion. The chosen motion object must be separate from Ember: a nearby bell lightly tinkles, a pen or pencil rolls a tiny bit, a separate lantern sways softly, a ribbon flutters, a hanging charm wiggles, or one nearby prop shifts just enough to feel alive. Use only one chosen scene-object motion. Do not use Ember, Ember's body parts, or anything Ember is holding, wearing, carrying, touching, or attached to as the chosen motion object. Do not rearrange the scene or move the mission item in a way that changes the seek-and-find answer.
 
 Ember stays closed-mouth and does not talk.
 
@@ -298,11 +300,15 @@ Keep the scene clean and animation-friendly. Preserve foreground, midground, and
 
 No readable text, captions, subtitles, title graphics, signs, labels, UI, fake logos, watermarks, page numbers, arrows, circles, boxes, answer marks, decorative lettering, or gibberish text.
 
-No new characters, new mission items, new props that change the search scene, changed outfit, missing satchel, distorted scarf, extra limbs, off-model face, strange final-frame eyes, long held blink, open mouth, teeth, lip sync, jaw movement, hard zoom, hard cut, scary lighting, photorealism, flat cartoon style, fake book cover, fake listing preview, or muddy sparkle fog.
+No frozen Ember, frozen held item, frozen scarf, frozen satchel, frozen attached prop, new characters, new mission items, new props that change the search scene, changed outfit, missing satchel, distorted scarf, extra limbs, off-model face, strange final-frame eyes, long held blink, open mouth, teeth, lip sync, jaw movement, hard zoom, hard cut, scary lighting, photorealism, flat cartoon style, fake book cover, fake listing preview, or muddy sparkle fog.
 `;
 }
 
 function renderKeyframeVideoPrompt(record: PreparedFrameRecord): string {
+  const approvedMotionObject = record.owner_review?.status === "approved"
+    ? `\nOwner-approved chosen motion object for this video: ${record.owner_review.motion_object}. Use that as the single chosen scene-object motion; do not substitute an Ember-held or Ember-attached item as the chosen object motion.\n`
+    : "";
+
   return `# ${record.slug} Keyframe Image-To-Video Prompt
 
 Campaign: Book 1 Prelaunch Rolling Campaign
@@ -323,7 +329,8 @@ Format: vertical 9:16
 
 Use the start frame and end frame as exact visual anchors. Create a gentle, cozy 5-second vertical animation that moves from the start frame toward the end frame.
 
-Motion should be small and calm: slow push-in, soft lantern glow, slight 2.25D parallax, tiny sparkle glints, one subtle natural Ember motion, and one gentle object motion such as a tinkling bell, rolling pen, swaying lantern, fluttering ribbon, or tiny charm wiggle. Keep Ember on-model, friendly, and closed-mouth.
+Motion should be small and calm but visible: slow push-in, soft lantern glow, slight 2.25D parallax, tiny sparkle glints, required natural Ember motion, and one gentle chosen scene-object motion such as a tinkling bell, rolling pen, separate swaying lantern, fluttering ribbon, or tiny charm wiggle. Ember and anything he is holding, wearing, carrying, touching, or otherwise attached to should move together between frames; his held lantern, scarf, satchel, tail, paws, horns, and carried props must not freeze while Ember moves. The chosen motion object is one additional scene object separate from Ember and must not be Ember, Ember's body parts, or anything Ember is holding/wearing/carrying/touching/attached to. Keep Ember on-model, friendly, and closed-mouth.
+${approvedMotionObject}
 
 No scene cuts. No new characters. No generated readable words. No talking or lip movement.
 
@@ -331,13 +338,17 @@ No scene cuts. No new characters. No generated readable words. No talking or lip
 
 No readable text, captions, subtitles, labels, signs, logos, watermarks, fake UI, page numbers, arrows, circles, boxes, answer marks, or extra words.
 
-Do not make Ember talk. Closed mouth only. No lip sync, no lip movement, no jaw movement, no exaggerated mouth movement, no teeth, no weird final-frame eyes, no held-long blink, no off-model face, no extra limbs, no distorted scarf, and no missing satchel.
+Do not make Ember talk. Closed mouth only. No lip sync, no lip movement, no jaw movement, no exaggerated mouth movement, no teeth, no frozen Ember, no frozen held item, no frozen scarf, no frozen satchel, no weird final-frame eyes, no held-long blink, no off-model face, no extra limbs, no distorted scarf, and no missing satchel.
 
 No frantic camera movement, hard cuts, scary lighting, muddy glitter fog, heavy sparkles covering the scene, photorealism, flat cartoon style, fake book cover, fake listing preview, fake interior page, or Amazon/buy/order language inside the video.
 `;
 }
 
 function renderReviewChecklist(record: PreparedFrameRecord): string {
+  const approvedMotionObject = record.owner_review?.status === "approved"
+    ? `- [ ] Owner-approved chosen motion object is used: ${record.owner_review.motion_object}.\n`
+    : "";
+
   return `# ${record.slug} Start/End Frame Review Checklist
 
 Campaign: Book 1 Prelaunch Rolling Campaign
@@ -355,8 +366,12 @@ Task: \`${record.idempotency_key}\`
 ## End Frame
 
 - [ ] Same shot, same scene, same Ember, same props, same color palette.
-- [ ] Only small progression from the start frame: gentle push-in, warmer glow, tiny sparkle, tiny natural Ember motion.
-- [ ] Exactly one small object motion is included, such as a tinkling bell, rolling pen, swaying lantern, fluttering ribbon, or tiny charm wiggle.
+- [ ] Clear but gentle progression from the start frame: gentle push-in, warmer glow, tiny sparkle, and visible natural Ember motion.
+- [ ] Exactly one small chosen scene-object motion is included, such as a tinkling bell, rolling pen, swaying lantern, fluttering ribbon, or tiny charm wiggle.
+- [ ] Chosen scene-object motion follows any owner-approved motion object recorded for this day.
+${approvedMotionObject}- [ ] The chosen motion object is not held by Ember and is not attached to Ember.
+- [ ] Ember is not frozen between frames.
+- [ ] Anything Ember is holding, wearing, carrying, touching, or otherwise attached to moves visibly with Ember between frames, including a held lantern, scarf, satchel, tail, paws, horns, or other attached/carried items.
 - [ ] Object motion does not rearrange the scene or move the mission item in a way that changes the seek-and-find answer.
 - [ ] Ember stays closed-mouth and does not talk.
 - [ ] No new characters, new props, rearranged layout, or off-model features.
@@ -434,6 +449,10 @@ npm run social:copy-unapproved-frames
 
 The copy folder is \`C:\\Users\\outdo\\Downloads\\ember-unapproved-start-end-frames\`. It also includes \`README.md\` and \`copy-manifest.json\`. Days with already-approved end frames are skipped automatically.
 
+## Motion Object Rule
+
+For each approved start/end-frame still, record the chosen motion object for the later video render. The chosen motion object must be one separate scene object, not Ember, not Ember's body parts, and not anything Ember is holding, wearing, carrying, touching, or otherwise attached to, such as his scarf, satchel, horns, paws, tail, or held lantern. Ember and anything he is holding, wearing, carrying, touching, or otherwise attached to should move visibly between the start frame and end frame. Ember-held, Ember-worn, Ember-carried, and Ember-attached items do not count as the chosen scene-object motion.
+
 ## Output
 
 For each day, the tool:
@@ -472,6 +491,7 @@ async function writeJson(relativePath: string, value: unknown, options: StartEnd
 export async function buildStartEndFramePlan(options: StartEndFrameOptions): Promise<StartEndFramePlan> {
   const recordsByDay = await readBatchRecords(options);
   const approvedFiles = await listApprovedImages(options);
+  const ownerReviewByDay = await readOwnerReviewRecords(options);
   const records: PreparedFrameRecord[] = [];
   const missing: StartEndFramePlan["missing"] = [];
 
@@ -497,7 +517,8 @@ export async function buildStartEndFramePlan(options: StartEndFrameOptions): Pro
         end_prompt: `${dayDir}/${slug}-end-frame-prompt.md`,
         keyframe_video_prompt: `${dayDir}/${slug}-keyframe-image-to-video-prompt.md`,
         review_checklist: `${dayDir}/${slug}-start-end-frame-review-checklist.md`
-      }
+      },
+      owner_review: ownerReviewByDay.get(day)
     });
   }
 

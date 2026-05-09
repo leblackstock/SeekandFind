@@ -28,6 +28,7 @@ import { brokeModeChatTitle, ChatTitleResult, renameChatViaProjectRowMenu } from
 const chatGptUrl = "https://chatgpt.com/";
 const minimumGenerationTimeoutMs = 60000;
 const defaultPollIntervalMs = 15000;
+const watcherCleanupReserveMs = 30000;
 
 const boundaryPattern = /captcha|rate limit|cooldown|try again later|too many requests|payment|upgrade|subscribe|subscription|verify your account|account warning|unusual activity|log in|sign in|couldn.t sign you in|browser or app may not be secure|try using a different browser/i;
 const insecureBrowserPattern = /couldn.t sign you in|browser or app may not be secure|try using a different browser/i;
@@ -69,6 +70,11 @@ export function generationStillInProgress(text: string): boolean {
   return generationInProgressPattern.test(text);
 }
 
+export function activeGenerationWatchTimeoutMs(generationTimeoutMs: number): number {
+  if (generationTimeoutMs <= minimumGenerationTimeoutMs + watcherCleanupReserveMs) return generationTimeoutMs;
+  return generationTimeoutMs - watcherCleanupReserveMs;
+}
+
 export function selectGeneratedImageCandidate(candidates: GeneratedImageCandidate[]): GeneratedImageCandidate | undefined {
   const usable = candidates
     .filter((candidate) => candidate.src && !/cdn\.auth0\.com\/avatars/i.test(candidate.src))
@@ -101,6 +107,15 @@ export function normalizeReferenceNamesForBrokeMode(prompt: string): { prompt: s
 const referenceNamePattern = /\b(?:Ember|HootiePuff|Pebblekins|Luma_Leafwhisk|Gemma_Glint|Elder_Glowkeeper|Ember_Cast_Lineup)-\d{3}\b/gi;
 const localPathPattern = /(?:file:\/\/\/|[A-Za-z]:[\\/]|(?:^|[\s`"'(])(?:content|automation|src|tests|\.agents|Ember's Adventures)[\\/][^\s`"')\]]+|\/mnt\/data\/|sandbox:\/mnt\/data\/)/i;
 const localFileNamePattern = /\b[\w .,'()-]+\.(?:md|png|jpe?g|webp|json|ts|tsx)\b/i;
+const distractingPromptPatterns: Array<{ label: string; pattern: RegExp }> = [
+  { label: "local file path", pattern: localPathPattern },
+  { label: "expected save path", pattern: /expected .*save path/i },
+  { label: "campaign bookkeeping", pattern: /^Campaign(?: day)?:/im },
+  { label: "task id bookkeeping", pattern: /^Task:/im },
+  { label: "caption or CTA copy", pattern: /^(Caption context|CTA):|Coming soon to Amazon/im },
+  { label: "source file label", pattern: /^(Approved source image|Start frame|Source image|Source file|Source folder):/im },
+  { label: "assistant-routing language", pattern: /do not rewrite|summarize|planning response|turn this into/i }
+];
 
 const requiredPromptRequirements: Array<{ label: string; pattern: RegExp }> = [
   {
@@ -396,6 +411,67 @@ function extractNegativePrompt(text: string): string | undefined {
   return match?.[1]?.trim();
 }
 
+function extractAvoidSection(text: string): string | undefined {
+  return extractNegativePrompt(text) ?? extractSection(text, "Avoid");
+}
+
+export interface PromptQaResult {
+  passed: boolean;
+  failures: string[];
+  warnings: string[];
+}
+
+export function qaPromptForChatGPTImageGeneration(prompt: string): PromptQaResult {
+  const failures = distractingPromptPatterns
+    .filter((rule) => rule.pattern.test(prompt))
+    .map((rule) => `Prompt contains ${rule.label}.`);
+  const warnings: string[] = [];
+  if (prompt.length > 4500) warnings.push(`Prompt is long for direct image generation: ${prompt.length} characters.`);
+  if (!/create|generate|make/i.test(prompt)) failures.push("Prompt does not clearly ask ChatGPT to create an image.");
+  if (!/no readable text|no readable generated text|no text|without text/i.test(prompt)) {
+    warnings.push("Prompt does not explicitly forbid readable text.");
+  }
+  return { passed: failures.length === 0, failures, warnings };
+}
+
+export function assertPromptQaPassed(prompt: string): PromptQaResult {
+  const qa = qaPromptForChatGPTImageGeneration(prompt);
+  if (!qa.passed) {
+    throw new Error(`Prompt QA failed before ChatGPT submission: ${qa.failures.join(" ")}`);
+  }
+  return qa;
+}
+
+export function prepareRawPromptForChatGPTImageGeneration(prompt: string): { prompt: string; warnings: string[] } {
+  const warnings: string[] = ["Raw prompt mode selected; image prompt QA and cleanup still ran before submission."];
+  const normalized = normalizeReferenceNamesForBrokeMode(prompt);
+  warnings.push(...normalized.warnings);
+  const withoutLinks = stripMarkdownLinks(normalized.prompt, warnings);
+  const withoutPaths = stripLocalPathMaterial(withoutLinks, warnings);
+  const imagePrompt = extractSection(withoutPaths, "Prompt")
+    ?? extractFinalImagePrompt(withoutPaths)
+    ?? withoutPaths;
+  const avoid = extractAvoidSection(withoutPaths);
+  const prepared = [
+    "Create one image now.",
+    "",
+    "Use the attached reference image as the exact visual anchor when a reference image is uploaded.",
+    "",
+    "## Image Prompt",
+    "",
+    imagePrompt.trim(),
+    avoid ? "" : undefined,
+    avoid ? "## Avoid" : undefined,
+    avoid ? "" : undefined,
+    avoid
+  ].filter((part): part is string => typeof part === "string").join("\n").replace(/\n{3,}/g, "\n\n").trim();
+  const qa = assertPromptQaPassed(prepared);
+  return {
+    prompt: prepared,
+    warnings: uniqueValues([...warnings, ...qa.warnings, "Prompt QA passed before ChatGPT submission."])
+  };
+}
+
 function stripLeadingMetadataBlock(text: string): string {
   const metadataLine = /^(?:Location|Mission item|Audience|Style|Format|Paired story\/list page|Source row):\s*.+$/i;
   const lines = text.split(/\r?\n/);
@@ -488,9 +564,10 @@ export function preparePromptForChatGPTImageGeneration(prompt: string): { prompt
   const sanitized = sanitizePromptForBrokeMode(normalized.prompt);
   const compacted = compactPromptForChatGPTImageGeneration(sanitized.prompt);
   const enforced = ensureImageGenerationPromptRequirements(compacted.prompt);
+  const qa = assertPromptQaPassed(enforced.prompt);
   return {
     prompt: enforced.prompt,
-    warnings: uniqueValues([...normalized.warnings, ...sanitized.warnings, ...compacted.warnings, ...enforced.warnings])
+    warnings: uniqueValues([...normalized.warnings, ...sanitized.warnings, ...compacted.warnings, ...enforced.warnings, ...qa.warnings, "Prompt QA passed before ChatGPT submission."])
   };
 }
 
@@ -775,7 +852,7 @@ async function uploadReferenceImages(page: Page, referenceImages: string[]): Pro
 }
 
 function addReferenceUploadGuard(prompt: string, guard?: string): string {
-  const guardText = guard ?? "Attached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. Create the requested image from the prompt below.";
+  const guardText = guard ?? "Use attached image(s) only as visual references for the requested image. Create one image from the prompt below. Do not make a collage, reference sheet, lineup, model sheet, or isolated character study.";
   if (prompt.includes(guardText)) return prompt;
   return [
     guardText,
@@ -861,9 +938,13 @@ export async function detectGenerationSuccess(page: Page, startingGeneratedImage
 
 async function waitForGeneration(page: Page, startingGeneratedImageSources: string[], options: Pick<BrokeModeRuntimeOptions, "generationTimeoutMs" | "pollIntervalMs">): Promise<GenerationDetectionResult> {
   const startedAt = Date.now();
-  const deadline = startedAt + options.generationTimeoutMs;
+  const activeTimeoutMs = activeGenerationWatchTimeoutMs(options.generationTimeoutMs);
+  const deadline = startedAt + activeTimeoutMs;
   const startingGeneratedImageCount = startingGeneratedImageSources.length;
   let lastResult: GenerationDetectionResult = { ok: false, signal: "not checked", elapsedMs: 0, candidateCount: 0, downloadButtonCount: 0, imageActionCount: 0, stopButtonCount: 0 };
+  if (activeTimeoutMs !== options.generationTimeoutMs) {
+    console.log(`Broke Mode watcher budget: active=${Math.round(activeTimeoutMs / 1000)}s; cleanupReserve=${Math.round((options.generationTimeoutMs - activeTimeoutMs) / 1000)}s; total=${Math.round(options.generationTimeoutMs / 1000)}s.`);
+  }
   while (Date.now() < deadline) {
     await assertNoBoundary(page);
     lastResult = await detectGenerationSuccess(page, startingGeneratedImageCount, Date.now() - startedAt, startingGeneratedImageSources);
@@ -874,7 +955,7 @@ async function waitForGeneration(page: Page, startingGeneratedImageSources: stri
   const finalResult = await detectGenerationSuccess(page, startingGeneratedImageCount, Date.now() - startedAt, startingGeneratedImageSources);
   console.log(`Broke Mode watcher final recovery scan: signal=${finalResult.signal}; candidates=${finalResult.candidateCount}; downloads=${finalResult.downloadButtonCount}; actions=${finalResult.imageActionCount}; stopButtons=${finalResult.stopButtonCount ?? 0}`);
   if (finalResult.ok) return finalResult;
-  throw new Error(`generated-image-not-detected after ${Math.round(options.generationTimeoutMs / 1000)} seconds. Last signal: ${lastResult.signal}; candidates=${lastResult.candidateCount}; downloads=${lastResult.downloadButtonCount}; actions=${lastResult.imageActionCount}; stopButtons=${lastResult.stopButtonCount ?? 0}.`);
+  throw new Error(`generated-image-not-detected after ${Math.round(activeTimeoutMs / 1000)} seconds of active watching within a ${Math.round(options.generationTimeoutMs / 1000)} second run budget. Last signal: ${lastResult.signal}; candidates=${lastResult.candidateCount}; downloads=${lastResult.downloadButtonCount}; actions=${lastResult.imageActionCount}; stopButtons=${lastResult.stopButtonCount ?? 0}.`);
 }
 
 async function captureScreenshot(page: Page, assetSlug: string, timestamp: string, rootDir: string, outputFolder: string = imageOutputFolders.pendingReview): Promise<string> {
@@ -940,6 +1021,12 @@ async function saveCurrentGeneratedImage(page: Page, assetSlug: string, timestam
   if (!imagePath) imagePath = await trySaveVisibleGeneratedImage(page, assetSlug, timestamp, rootDir, outputFolder);
   if (imagePath) console.log(`Saved generated image from ChatGPT: ${imagePath}`);
   return { imagePath, signal };
+}
+
+function markWatcherComplete(imagePath: string, generationSignal: GenerationDetectionResult | undefined): void {
+  const signal = generationSignal?.signal ?? "saved image";
+  const elapsed = generationSignal ? ` elapsed=${Math.round(generationSignal.elapsedMs / 1000)}s;` : "";
+  console.log(`Broke Mode watcher complete; local image saved; no further generation polling will run.${elapsed} signal=${signal}; image=${imagePath}`);
 }
 
 async function logAttempt(params: {
@@ -1050,7 +1137,7 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
   const outputFolder = options.outputFolder ?? imageOutputFolders.pendingReview;
   const rawPromptText = await assertPromptFile(options.prompt, root);
   const preparedPrompt = options.rawPrompt
-    ? { prompt: rawPromptText.trim(), warnings: ["Raw prompt mode selected; Broke Mode pasted the prompt file without compacting or appending missing production requirements."] }
+    ? prepareRawPromptForChatGPTImageGeneration(rawPromptText)
     : preparePromptForChatGPTImageGeneration(rawPromptText);
   let promptText = preparedPrompt.prompt;
   const referenceResolution = resolveReferenceImagePaths(promptText, options, root);
@@ -1060,6 +1147,9 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
   if (referenceImagePaths.length > 0) {
     promptText = addReferenceUploadGuard(promptText, options.referenceUploadGuard);
   }
+  const guardedPromptQa = assertPromptQaPassed(promptText);
+  const promptQaWarnings = guardedPromptQa.warnings.length ? guardedPromptQa.warnings : [];
+  warnings.push(...promptQaWarnings);
   const assetName = options.assetName ?? basename(options.prompt, extname(options.prompt));
   const assetSlug = createSafeAssetSlug(assetName);
   const chatTitle = options.chatTitle ?? brokeModeChatTitle(assetName);
@@ -1263,6 +1353,9 @@ async function runOneAttempt(options: BrokeModeRuntimeOptions): Promise<void> {
       const saved = await saveCurrentGeneratedImage(page, assetSlug, timestamp, root, outputFolder);
       imagePath = saved.imagePath;
       generationSignal = generationSignal ?? saved.signal;
+    }
+    if (imagePath) {
+      markWatcherComplete(imagePath, generationSignal);
     }
     if (generationSignal?.ok) {
       warnings.push(`Generation watcher success: ${generationSignal.signal}; elapsed=${Math.round(generationSignal.elapsedMs / 1000)}s; candidates=${generationSignal.candidateCount}; downloads=${generationSignal.downloadButtonCount}; actions=${generationSignal.imageActionCount}; stopButtons=${generationSignal.stopButtonCount ?? 0}.`);

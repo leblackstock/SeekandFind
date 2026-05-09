@@ -26,27 +26,31 @@
       "slug": "day-10-sparkle-market-token",
       "motion_object": "bell",
       "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-10-sparkle-market-token/day-10-sparkle-market-token-end-frame-v01.png"
-    }
-  ],
-  "regenerate": [
-    {
-      "day": 8,
-      "slug": "day-08-firefly-flower-charm",
-      "reason": "Owner requested regeneration."
     },
     {
       "day": 11,
       "slug": "day-11-ember-progress-note",
-      "reason": "Owner requested regeneration."
+      "motion_object": "string lights/lanterns",
+      "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-11-ember-progress-note/day-11-ember-progress-note-end-frame-v01.png"
+    },
+    {
+      "day": 8,
+      "slug": "day-08-firefly-flower-charm",
+      "motion_object": "blue and purple lanterns",
+      "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-08-firefly-flower-charm/day-08-firefly-flower-charm-end-frame-v01.png"
     },
     {
       "day": 12,
       "slug": "day-12-cozy-seek-and-find-adventure",
-      "reason": "Owner requested regeneration."
+      "motion_object": "string banners & lanterns",
+      "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-end-frame-v01.png"
     }
   ],
+  "regenerate": [],
   "notes": [
     "Approval applies to still start/end-frame pairs only, not exported MP4s or social queue readiness.",
-    "Motion object is the small object expected to provide the subtle object motion in the 5-second keyframe video."
+    "Motion object is the small object expected to provide the subtle object motion in the 5-second keyframe video.",
+    "The chosen motion object must be a scene object, not anything Ember is holding and not anything attached to Ember.",
+    "Anything Ember is holding or anything attached to Ember must still move at least slightly with Ember between the start frame and end frame."
   ]
 }

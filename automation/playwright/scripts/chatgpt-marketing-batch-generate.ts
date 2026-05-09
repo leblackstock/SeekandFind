@@ -16,7 +16,7 @@ import { saveImageQaReport } from "../../../src/core/image-qa.js";
 import { appendSessionLog, updateProductionStatus } from "../../../src/core/progress-tracker.js";
 import { GenerateResult } from "../../../src/types.js";
 import { marketingChatTitle, renameCurrentChat } from "./chatgpt-chat-title.js";
-import { resolveReferenceImagePaths, selectGeneratedImageCandidate } from "./chatgpt-broke-mode-generate.js";
+import { assertPromptQaPassed, prepareRawPromptForChatGPTImageGeneration, resolveReferenceImagePaths, selectGeneratedImageCandidate } from "./chatgpt-broke-mode-generate.js";
 
 const defaultProjectUrl = "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/project";
 const defaultCdpUrl = "http://127.0.0.1:9222";
@@ -106,7 +106,7 @@ async function readManifest(path: string, root: string): Promise<MarketingBatchM
 
 function withReferenceGuard(prompt: string): string {
   return [
-    "Attached images are visual references only for character appearance and proportions. Do not create a character reference sheet, collage, lineup, turnaround, model sheet, or isolated character study. Create the requested promotional image from the prompt below.",
+    "Use attached image(s) only as visual references for the requested promotional image. Create one image from the prompt below. Do not make a collage, reference sheet, lineup, model sheet, or isolated character study.",
     prompt
   ].join("\n\n");
 }
@@ -256,19 +256,21 @@ async function runOnePrompt(params: {
   const assetName = prompt.assetName ?? basename(prompt.promptPath, extname(prompt.promptPath));
   const assetSlug = createSafeAssetSlug(assetName);
   const sourcePrompt = await readFile(join(root, prompt.promptPath), "utf8");
+  const preparedPrompt = prepareRawPromptForChatGPTImageGeneration(sourcePrompt);
   const referenceResolution = resolveReferenceImagePaths(sourcePrompt, {
     referenceImages: ["auto"],
     referenceImageRoot: options.referenceImageRoot
   }, root);
   const referenceImageMetadata = referenceResolution.paths.map((path) => relative(root, path).replace(/\\/g, "/"));
-  const promptText = referenceResolution.paths.length ? withReferenceGuard(sourcePrompt.trim()) : sourcePrompt.trim();
+  const promptText = referenceResolution.paths.length ? withReferenceGuard(preparedPrompt.prompt) : preparedPrompt.prompt;
+  const promptQa = assertPromptQaPassed(promptText);
   const promptCopyPath = await saveTextArtifact(`${imageOutputFolders.pendingReview}/${assetSlug}-${timestamp}-prompt.md`, promptText, { rootDir: root, force: options.force });
   const page = await context.newPage();
   let screenshotPath: string | undefined;
   let imagePath: string | undefined;
   let metadataPath: string | undefined;
   let qaReportPath: string | undefined;
-  const warnings = [...referenceResolution.warnings];
+  const warnings = [...preparedPrompt.warnings, ...referenceResolution.warnings, ...promptQa.warnings];
   const chatTitle = marketingChatTitle(params.campaign, prompt.title);
 
   try {
