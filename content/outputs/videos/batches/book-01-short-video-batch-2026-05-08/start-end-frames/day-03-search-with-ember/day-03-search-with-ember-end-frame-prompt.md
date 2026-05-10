@@ -6,7 +6,7 @@ Use the attached start frame as the exact visual anchor.
 
 ## Prompt
 
-Create the END FRAME for the same 5-second vertical 9:16 clip.
+Create the END FRAME for the same 8-second vertical 9:16 clip.
 
 It must look like the same shot, same location, same Ember, same props, same palette, same object layout, and same soft 2.25D children's storybook style. Do not create a new scene.
 

@@ -147,8 +147,22 @@ async function connectExistingBrowser(cdpUrl: string): Promise<{ browser: Browse
     throw new Error(`Could not connect to an existing browser at ${cdpUrl}. Start Chrome with --remote-debugging-port=9222 and log into ChatGPT first.`);
   });
   const context = browser.contexts()[0] ?? await browser.newContext();
-  const page = context.pages().find((candidate) => /chatgpt\.com/.test(candidate.url())) ?? await context.newPage();
+  const pages = context.pages();
+  const page = pages.find((candidate) => projectUrlPattern.test(candidate.url()))
+    ?? pages.find((candidate) => /chatgpt\.com/.test(candidate.url()))
+    ?? await context.newPage();
   return { browser, page };
+}
+
+export function resolveArchiveProjectUrl(openUrl: string | undefined, requestedProjectUrl: string): string {
+  if (openUrl && projectUrlPattern.test(openUrl) && openUrl !== requestedProjectUrl) {
+    return openUrl;
+  }
+  return requestedProjectUrl;
+}
+
+function resolveProjectUrl(page: Page, requestedProjectUrl: string): string {
+  return resolveArchiveProjectUrl(page.url(), requestedProjectUrl);
 }
 
 async function openProject(page: Page, projectUrl: string): Promise<void> {
@@ -322,6 +336,7 @@ async function writeEvidence(evidence: ArchiveEvidence, root: string): Promise<s
 async function writeLogs(evidence: ArchiveEvidence, root: string): Promise<{ sessionLog?: string; productionStatus?: string }> {
   if (evidence.dryRun && !evidence.options.logDryRun) return {};
 
+  const noArchiveTargets = evidence.dryRun && evidence.targetCount === 0;
   const sessionLog = await appendSessionLog({
     workflow: "chatgpt-project-chat-archive",
     inputs: {
@@ -344,7 +359,9 @@ async function writeLogs(evidence: ArchiveEvidence, root: string): Promise<{ ses
     ],
     qaResult: evidence.ok ? (evidence.dryRun ? "DRY-RUN PASS" : "PASS") : "WARN",
     nextManualStep: evidence.dryRun
-      ? "Rerun with --confirm to archive the listed chats."
+      ? noArchiveTargets
+        ? "No ChatGPT project chats remain to archive."
+        : "Rerun with --confirm to archive the listed chats."
       : "Review the evidence JSON and confirm the project list is empty or contains only intentionally excluded chats."
   }, root);
 
@@ -360,7 +377,9 @@ async function writeLogs(evidence: ArchiveEvidence, root: string): Promise<{ ses
       ...(evidence.errorCount ? [`${evidence.errorCount} archive target(s) reported errors.`] : [])
     ],
     nextStep: evidence.dryRun
-      ? "Rerun with --confirm when ready."
+      ? noArchiveTargets
+        ? "No ChatGPT project chats remain to archive."
+        : "Rerun with --confirm when ready."
       : "Review evidence and continue with a clean ChatGPT project list."
   };
   const productionStatus = await updateProductionStatus(statusResult, root);
@@ -371,6 +390,10 @@ export async function runArchiveProjectChats(options: ArchiveProjectChatsOptions
   const root = repoRoot();
   const { browser, page } = await connectExistingBrowser(options.cdpUrl);
   try {
+    options = {
+      ...options,
+      projectUrl: resolveProjectUrl(page, options.projectUrl)
+    };
     await openProject(page, options.projectUrl);
     const { rows, warnings: loadWarnings } = await collectProjectRowsAcrossLoads(page, options.projectUrl, options.maxLoadMore);
     const targets = filterArchiveTargets(rows, options);

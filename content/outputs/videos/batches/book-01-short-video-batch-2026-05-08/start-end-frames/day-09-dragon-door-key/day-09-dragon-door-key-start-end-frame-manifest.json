@@ -17,6 +17,7 @@
   "owner_review": {
     "status": "approved",
     "motion_object": "ribbon",
-    "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-09-dragon-door-key/day-09-dragon-door-key-end-frame-v01.png"
+    "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-09-dragon-door-key/day-09-dragon-door-key-end-frame-v01.png",
+    "motion_guidance": "Animate a separate decorative ribbon near the dragon-door scene, distinct from the Dragon Door Key and Ember's scarf: it ripples gently from one end to the other with a small breeze while staying tied or anchored."
   }
 }

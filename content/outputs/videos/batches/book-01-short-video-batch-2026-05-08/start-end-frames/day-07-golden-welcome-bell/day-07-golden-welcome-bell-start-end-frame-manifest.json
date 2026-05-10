@@ -17,6 +17,7 @@
   "owner_review": {
     "status": "approved",
     "motion_object": "bells",
-    "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-07-golden-welcome-bell/day-07-golden-welcome-bell-end-frame-v01.png"
+    "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-07-golden-welcome-bell/day-07-golden-welcome-bell-end-frame-v01.png",
+    "motion_guidance": "Animate the separate welcome bells: a tiny pendulum swing with a soft jingle feel and very small displacement. Keep them as scene decor, separate from Ember-held items."
   }
 }

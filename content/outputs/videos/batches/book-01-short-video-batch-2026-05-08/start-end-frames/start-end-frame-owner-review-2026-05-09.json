@@ -4,52 +4,81 @@
   "scope": "Book 1 short-video start/end-frame stills",
   "approved": [
     {
+      "day": 3,
+      "slug": "day-03-search-with-ember",
+      "motion_object": "separate hanging lanterns",
+      "motion_guidance": "Animate two or three background hanging lanterns clearly separate from Ember's held lantern: slow gentle sway on their cords, a slight warm glow pulse, and tiny delayed cord movement.",
+      "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-03-search-with-ember/day-03-search-with-ember-end-frame-v01.png"
+    },
+    {
+      "day": 4,
+      "slug": "day-04-baby-flame-lantern",
+      "motion_object": "overhead lanterns",
+      "motion_guidance": "Animate only the lanterns up top as the chosen scene-object motion: a slow gentle sway and a soft warm glow pulse across the hanging lanterns. The Dragon Flame Lantern on the shelf briefly glows brighter for a moment while staying fixed in place. The table lantern remains still.",
+      "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-04-baby-flame-lantern/day-04-baby-flame-lantern-end-frame-v01.png"
+    },
+    {
+      "day": 5,
+      "slug": "day-05-lantern-maker-workshop",
+      "motion_object": "loose teal ribbon on the worktable",
+      "motion_guidance": "Animate only the loose teal ribbon on the worktable: one tiny ripple travels along the free end with a barely visible edge flutter while the ribbon stays touching the table. The tools and mission item remain still.",
+      "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-end-frame-v01.png"
+    },
+    {
       "day": 6,
       "slug": "day-06-cozy-dragon-village",
       "motion_object": "ribbon",
+      "motion_guidance": "Animate one separate decorative ribbon in the village scene: a gentle flutter and small curl at its loose end while it stays attached to its decoration. The ribbon is separate from Ember's scarf and anything on Ember.",
       "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-06-cozy-dragon-village/day-06-cozy-dragon-village-end-frame-v01.png"
     },
     {
       "day": 7,
       "slug": "day-07-golden-welcome-bell",
       "motion_object": "bells",
+      "motion_guidance": "Animate the separate welcome bells: a tiny pendulum swing with a soft jingle feel and very small displacement. Keep them as scene decor, separate from Ember-held items.",
       "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-07-golden-welcome-bell/day-07-golden-welcome-bell-end-frame-v01.png"
     },
     {
       "day": 9,
       "slug": "day-09-dragon-door-key",
       "motion_object": "ribbon",
+      "motion_guidance": "Animate a separate decorative ribbon near the dragon-door scene, distinct from the Dragon Door Key and Ember's scarf: it ripples gently from one end to the other with a small breeze while staying tied or anchored.",
       "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-09-dragon-door-key/day-09-dragon-door-key-end-frame-v01.png"
     },
     {
       "day": 10,
       "slug": "day-10-sparkle-market-token",
       "motion_object": "bell",
+      "motion_guidance": "Animate one separate market bell: a small single swing and return with a soft shimmer or jingle feel. The Sparkle Market Token plus Ember-held and Ember-worn items remain outside the chosen object motion.",
       "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-10-sparkle-market-token/day-10-sparkle-market-token-end-frame-v01.png"
     },
     {
       "day": 11,
       "slug": "day-11-ember-progress-note",
       "motion_object": "string lights/lanterns",
+      "motion_guidance": "Animate only the overhead string lights and lanterns: a soft warm twinkle traveling slowly along the string plus a barely visible sway. Notes and paper content remain visually static.",
       "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-11-ember-progress-note/day-11-ember-progress-note-end-frame-v01.png"
     },
     {
       "day": 8,
       "slug": "day-08-firefly-flower-charm",
       "motion_object": "blue and purple lanterns",
+      "motion_guidance": "Animate the blue and purple hanging lanterns: alternate a very soft glow pulse with a slow synchronized sway while their positions remain recognizable. The Firefly Flower Charm mission item remains still.",
       "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-08-firefly-flower-charm/day-08-firefly-flower-charm-end-frame-v01.png"
     },
     {
       "day": 12,
       "slug": "day-12-cozy-seek-and-find-adventure",
       "motion_object": "string banners & lanterns",
+      "motion_guidance": "Animate the overhead string banners and lanterns together as one connected scene-object motion: banners flutter lightly while lanterns sway a few degrees and glow softly.",
       "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-end-frame-v01.png"
     }
   ],
   "regenerate": [],
   "notes": [
     "Approval applies to still start/end-frame pairs only, not exported MP4s or social queue readiness.",
-    "Motion object is the small object expected to provide the subtle object motion in the 5-second keyframe video.",
+    "Motion object is the small object expected to provide the subtle object motion in the 8-second keyframe video.",
+    "Days 3-5 motion objects were recovered from the approved start/end-frame visual record because the early written approval rows did not name them.",
     "The chosen motion object must be a scene object, not anything Ember is holding and not anything attached to Ember.",
     "Anything Ember is holding or anything attached to Ember must still move at least slightly with Ember between the start frame and end frame."
   ]

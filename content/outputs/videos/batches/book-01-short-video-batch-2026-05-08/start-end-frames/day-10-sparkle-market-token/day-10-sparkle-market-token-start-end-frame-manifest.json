@@ -17,6 +17,7 @@
   "owner_review": {
     "status": "approved",
     "motion_object": "bell",
-    "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-10-sparkle-market-token/day-10-sparkle-market-token-end-frame-v01.png"
+    "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-10-sparkle-market-token/day-10-sparkle-market-token-end-frame-v01.png",
+    "motion_guidance": "Animate one separate market bell: a small single swing and return with a soft shimmer or jingle feel. The Sparkle Market Token plus Ember-held and Ember-worn items remain outside the chosen object motion."
   }
 }

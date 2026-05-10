@@ -6,7 +6,7 @@ Use the attached approved no-text video-source image as the exact visual base. N
 
 ## Prompt
 
-Use this only if a start-frame repair is explicitly needed. Create the START FRAME for a 5-second vertical 9:16 image-to-video clip.
+Use this only if a start-frame repair is explicitly needed. Create the START FRAME for an 8-second vertical 9:16 image-to-video clip.
 
 Match the approved source image exactly in character design, scene layout, lighting, colors, scale, art style, object placement, and no-text cleanliness. This is the first keyframe, so it should feel like a polished still with only tiny natural readiness for motion.
 

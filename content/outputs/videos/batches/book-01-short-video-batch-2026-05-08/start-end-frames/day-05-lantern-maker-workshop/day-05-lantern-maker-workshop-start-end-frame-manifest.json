@@ -13,5 +13,11 @@
     "end_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-end-frame-prompt.md",
     "keyframe_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-keyframe-image-to-video-prompt.md",
     "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-start-end-frame-review-checklist.md"
+  },
+  "owner_review": {
+    "status": "approved",
+    "motion_object": "loose teal ribbon on the worktable",
+    "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-end-frame-v01.png",
+    "motion_guidance": "Animate only the loose teal ribbon on the worktable: one tiny ripple travels along the free end with a barely visible edge flutter while the ribbon stays touching the table. The tools and mission item remain still."
   }
 }

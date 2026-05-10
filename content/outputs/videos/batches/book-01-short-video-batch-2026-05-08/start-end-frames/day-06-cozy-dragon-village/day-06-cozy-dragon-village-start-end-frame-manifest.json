@@ -17,6 +17,7 @@
   "owner_review": {
     "status": "approved",
     "motion_object": "ribbon",
-    "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-06-cozy-dragon-village/day-06-cozy-dragon-village-end-frame-v01.png"
+    "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-06-cozy-dragon-village/day-06-cozy-dragon-village-end-frame-v01.png",
+    "motion_guidance": "Animate one separate decorative ribbon in the village scene: a gentle flutter and small curl at its loose end while it stays attached to its decoration. The ribbon is separate from Ember's scarf and anything on Ember."
   }
 }

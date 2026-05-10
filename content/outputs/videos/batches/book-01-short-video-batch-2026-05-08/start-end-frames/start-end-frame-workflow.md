@@ -25,6 +25,14 @@ npm run social:copy-unapproved-frames
 
 The copy folder is `C:\Users\outdo\Downloads\ember-unapproved-start-end-frames`. It also includes `README.md` and `copy-manifest.json`. Days with already-approved end frames are skipped automatically.
 
+To copy only the approved start/end-frame pairs into Downloads for video upload:
+
+```powershell
+npm run social:copy-approved-frames
+```
+
+The approved copy folder is `C:\Users\outdo\Downloads\ember-approved-start-end-frames`. It includes `README.md` and `copy-manifest.json`; days without an approved end frame are skipped.
+
 ## Motion Object Rule
 
 For each approved start/end-frame still, record the chosen motion object for the later video render. The chosen motion object must be one separate scene object, not Ember, not Ember's body parts, and not anything Ember is holding, wearing, carrying, touching, or otherwise attached to, such as his scarf, satchel, horns, paws, tail, or held lantern. Ember and anything he is holding, wearing, carrying, touching, or otherwise attached to should move visibly between the start frame and end frame. Ember-held, Ember-worn, Ember-carried, and Ember-attached items do not count as the chosen scene-object motion.

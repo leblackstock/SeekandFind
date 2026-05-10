@@ -94,6 +94,7 @@ describe("start/end frame prep", () => {
       approved: [{
         day: 3,
         motion_object: "string lights",
+        motion_guidance: "Animate the overhead string lights with a soft warm twinkle that travels slowly along the string.",
         approved_end_frame: "content/outputs/images/approved/start-end-frames/book-01/day-03-search-with-ember/day-03-search-with-ember-end-frame-v01.png"
       }]
     }, null, 2), "utf8");
@@ -142,15 +143,34 @@ describe("start/end frame prep", () => {
     expect(endPrompt).toContain("do not count as the chosen scene-object motion");
     expect(endPrompt).toContain("Do not rearrange the scene or move the mission item");
     const videoPrompt = await readFile(join(root, plan.records[0].output_files.keyframe_video_prompt), "utf8");
-    expect(videoPrompt).toContain("required natural Ember motion");
-    expect(videoPrompt).toContain("Ember and anything he is holding, wearing, carrying, touching, or otherwise attached to should move together between frames");
-    expect(videoPrompt).toContain("The chosen motion object is one additional scene object separate from Ember");
-    expect(videoPrompt).toContain("Owner-approved chosen motion object for this video: string lights");
+    expect(videoPrompt).toContain("content/outputs/images/approved/start-end-frames/book-01/day-03-search-with-ember/day-03-search-with-ember-end-frame-v01.png");
+    expect(videoPrompt).not.toContain("content/outputs/images/pending-review/start-end-frames/book-01/day-03-search-with-ember/day-03-search-with-ember-end-frame-v01.png");
+    expect(videoPrompt).toContain("Length: 8 seconds");
+    expect(videoPrompt).toContain("visible natural Ember motion");
+    expect(videoPrompt).toContain("Ember plus anything he holds, wears, carries, touches, or has attached must move together");
+    expect(videoPrompt).toContain("Horns stay solid in shape and follow Ember's head/body motion throughout");
+    expect(videoPrompt).toContain("exactly the named scene-object motion below");
+    expect(videoPrompt).toContain("Use this named object/object group as the only independent scene-object motion");
+    expect(videoPrompt).toContain("Chosen scene-object motion: string lights");
+    expect(videoPrompt).toContain("Specific motion: Animate the overhead string lights with a soft warm twinkle that travels slowly along the string.");
+    const motionPrompt = videoPrompt.match(/## Motion Prompt\n\n([\s\S]*?)\n\n## Negative Prompt/);
+    const negativePrompt = videoPrompt.match(/## Negative Prompt \/ Avoid\n\n([\s\S]*)$/);
+    expect(motionPrompt?.[1]).not.toContain("No scene cuts");
+    expect(motionPrompt?.[1]).not.toMatch(/\b(?:Do not|No |Never|never|must not|no )/);
+    expect(motionPrompt?.[1]).toContain("Use this named object/object group as the only independent scene-object motion");
+    expect(negativePrompt?.[1]).toContain("No readable text, captions, subtitles, labels, signs, logos, watermarks, fake UI, page numbers, arrows, circles, boxes, answer marks, emojis, or extra words.");
+    expect(negativePrompt?.[1]).toContain("No scene cuts. No new characters. No generated readable words. No talking or lip movement.");
+    expect(negativePrompt?.[1]).toContain("no teeth, no claws");
+    expect(negativePrompt?.[1]).toContain("no frozen horns, no stiff locked horns");
+    expect(negativePrompt?.[1]).toContain("No extra moving props, no alternate chosen motion object");
+    expect(motionPrompt?.[1].length ?? Infinity).toBeLessThanOrEqual(1500);
+    expect(negativePrompt?.[1].length ?? Infinity).toBeLessThan(1000);
     const reviewChecklist = await readFile(join(root, plan.records[0].output_files.review_checklist), "utf8");
     expect(reviewChecklist).toContain("The chosen motion object is not held by Ember");
     expect(reviewChecklist).toContain("Ember is not frozen between frames");
     expect(reviewChecklist).toContain("Anything Ember is holding, wearing, carrying, touching, or otherwise attached to moves visibly with Ember between frames");
-    expect(reviewChecklist).toContain("Owner-approved chosen motion object is used: string lights");
+    expect(reviewChecklist).toContain("Recorded motion object is used: string lights");
+    expect(reviewChecklist).toContain("Specific motion instruction is followed: Animate the overhead string lights with a soft warm twinkle that travels slowly along the string.");
   });
 
   it("prepares create-both prompts when no approved still exists", async () => {
@@ -242,11 +262,62 @@ describe("start/end frame prep", () => {
     expect(existsSync(join(downloadsDir, "review-copy/stale-approved-day.png"))).toBe(false);
   });
 
+  it("copies approved start/end frame pairs into a Downloads folder when approved mode is selected", async () => {
+    const root = await mkdtemp(join(tmpdir(), "ember-copy-approved-frames-"));
+    const manifestPath = "content/outputs/videos/batches/test-batch/start-end-frames/start-end-frame-manifest.json";
+    const approvedDir = "content/outputs/images/approved/start-end-frames/book-01";
+    const downloadsDir = join(root, "Downloads");
+    await mkdir(join(root, "content/outputs/videos/batches/test-batch/start-end-frames/day-03-approved"), { recursive: true });
+    await mkdir(join(root, approvedDir, "day-03-approved"), { recursive: true });
+    await writeFile(join(root, "content/outputs/videos/batches/test-batch/start-end-frames/day-03-approved/day-03-approved-start-frame.png"), "approved-start");
+    await writeFile(join(root, approvedDir, "day-03-approved/day-03-approved-end-frame-v01.png"), "approved-end");
+    await mkdir(join(root, "content/outputs/videos/batches/test-batch/start-end-frames"), { recursive: true });
+    await writeFile(join(root, manifestPath), JSON.stringify({
+      records: [
+        {
+          day: 3,
+          slug: "day-03-approved",
+          start_frame: "content/outputs/videos/batches/test-batch/start-end-frames/day-03-approved/day-03-approved-start-frame.png",
+          expected_end_frame: "content/outputs/images/pending-review/start-end-frames/book-01/day-03-approved/day-03-approved-end-frame-v01.png"
+        },
+        {
+          day: 4,
+          slug: "day-04-missing-approved",
+          start_frame: "content/outputs/videos/batches/test-batch/start-end-frames/day-04-missing-approved/day-04-missing-approved-start-frame.png",
+          expected_end_frame: "content/outputs/images/pending-review/start-end-frames/book-01/day-04-missing-approved/day-04-missing-approved-end-frame-v01.png"
+        }
+      ]
+    }, null, 2), "utf8");
+
+    const result = await copyUnapprovedStartEndFrames({
+      rootDir: root,
+      manifestPath,
+      approvedEndFrameDir: approvedDir,
+      downloadsDir,
+      folderName: "approved-copy",
+      mode: "approved"
+    });
+
+    expect(result.mode).toBe("approved");
+    expect(result.copied.map((item) => item.day)).toEqual([3]);
+    expect(result.copied[0]?.source_end_frame).toBe("content/outputs/images/approved/start-end-frames/book-01/day-03-approved/day-03-approved-end-frame-v01.png");
+    expect(result.skipped).toContainEqual({
+      day: 4,
+      slug: "day-04-missing-approved",
+      reason: "missing approved end frame: content/outputs/images/approved/start-end-frames/book-01/day-04-missing-approved/day-04-missing-approved-end-frame-v01.png"
+    });
+    expect(existsSync(join(downloadsDir, "approved-copy/day-03-approved-start-frame.png"))).toBe(true);
+    expect(existsSync(join(downloadsDir, "approved-copy/day-03-approved-end-frame-v01.png"))).toBe(true);
+  });
+
   it("parses copy options", () => {
     expect(parseCopyUnapprovedFrameArgs(["--downloads-dir", "C:/tmp", "--folder-name", "frames", "--dry-run"])).toMatchObject({
       downloadsDir: "C:/tmp",
       folderName: "frames",
       dryRun: true
+    });
+    expect(parseCopyUnapprovedFrameArgs(["--approved"])).toMatchObject({
+      mode: "approved"
     });
   });
 

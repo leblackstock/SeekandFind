@@ -13,5 +13,11 @@
     "end_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-03-search-with-ember/day-03-search-with-ember-end-frame-prompt.md",
     "keyframe_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-03-search-with-ember/day-03-search-with-ember-keyframe-image-to-video-prompt.md",
     "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-03-search-with-ember/day-03-search-with-ember-start-end-frame-review-checklist.md"
+  },
+  "owner_review": {
+    "status": "approved",
+    "motion_object": "separate hanging lanterns",
+    "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-03-search-with-ember/day-03-search-with-ember-end-frame-v01.png",
+    "motion_guidance": "Animate two or three background hanging lanterns clearly separate from Ember's held lantern: slow gentle sway on their cords, a slight warm glow pulse, and tiny delayed cord movement."
   }
 }

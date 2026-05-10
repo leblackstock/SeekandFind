@@ -7,6 +7,8 @@ const defaultManifestPath = "content/outputs/videos/batches/book-01-short-video-
 const defaultApprovedEndFrameDir = "content/outputs/images/approved/start-end-frames/book-01";
 const defaultDownloadsDir = "C:/Users/outdo/Downloads";
 const defaultFolderName = "ember-unapproved-start-end-frames";
+const defaultApprovedFolderName = "ember-approved-start-end-frames";
+type CopyMode = "unapproved" | "approved";
 
 interface StartEndFrameRecord {
   day: number;
@@ -26,6 +28,7 @@ interface CopyOptions {
   downloadsDir?: string;
   folderName?: string;
   dryRun?: boolean;
+  mode?: CopyMode;
 }
 
 interface CopiedFrameSet {
@@ -52,6 +55,7 @@ interface CopyResult {
   manifest_path: string;
   readme_path: string;
   dry_run: boolean;
+  mode: CopyMode;
 }
 
 function repoRoot(input?: string): string {
@@ -76,12 +80,16 @@ function flag(args: string[], name: string): boolean {
 }
 
 export function parseCopyUnapprovedFrameArgs(args: string[] = process.argv.slice(2)): CopyOptions {
+  const explicitMode = option(args, "mode");
   return {
     manifestPath: option(args, "manifest") ?? option(args, "manifest-path"),
     approvedEndFrameDir: option(args, "approved-dir") ?? option(args, "approved-end-frame-dir"),
     downloadsDir: option(args, "downloads-dir"),
     folderName: option(args, "folder-name"),
-    dryRun: flag(args, "dry-run")
+    dryRun: flag(args, "dry-run"),
+    mode: explicitMode === "approved" || flag(args, "approved") || flag(args, "only-approved")
+      ? "approved"
+      : "unapproved"
   };
 }
 
@@ -102,7 +110,7 @@ function sourceExists(root: string, relativePath: string): boolean {
 
 function outputFolder(options: CopyOptions): string {
   const downloadsDir = options.downloadsDir ?? defaultDownloadsDir;
-  const folderName = options.folderName ?? defaultFolderName;
+  const folderName = options.folderName ?? (options.mode === "approved" ? defaultApprovedFolderName : defaultFolderName);
   return resolve(downloadsDir, folderName);
 }
 
@@ -123,8 +131,11 @@ async function clearPreviousCopyFolder(targetFolder: string, dryRun: boolean): P
 }
 
 function renderReadme(result: Omit<CopyResult, "readme_path">): string {
+  const title = result.mode === "approved"
+    ? "# Ember Approved Start/End Frames"
+    : "# Ember Unapproved Start/End Frames";
   const lines = [
-    "# Ember Unapproved Start/End Frames",
+    title,
     "",
     `Created: ${new Date().toISOString()}`,
     "",
@@ -159,9 +170,10 @@ function renderReadme(result: Omit<CopyResult, "readme_path">): string {
 
 export async function copyUnapprovedStartEndFrames(options: CopyOptions = {}): Promise<CopyResult> {
   const root = repoRoot(options.rootDir);
+  const mode = options.mode ?? "unapproved";
   const manifestPath = normalizePath(options.manifestPath ?? defaultManifestPath);
   const approvedEndFrameDir = normalizePath(options.approvedEndFrameDir ?? defaultApprovedEndFrameDir);
-  const targetFolder = outputFolder(options);
+  const targetFolder = outputFolder({ ...options, mode });
   const manifest = await readManifest(manifestPath, root);
   const copied: CopiedFrameSet[] = [];
   const skipped: SkippedFrameSet[] = [];
@@ -171,29 +183,35 @@ export async function copyUnapprovedStartEndFrames(options: CopyOptions = {}): P
     const startFrame = normalizePath(record.start_frame);
     const endFrame = normalizePath(record.expected_end_frame);
     const approvedEndFrame = approvedEndFramePath(record, approvedEndFrameDir);
+    const sourceEndFrame = mode === "approved" ? approvedEndFrame : endFrame;
 
-    if (sourceExists(root, approvedEndFrame)) {
+    if (mode === "unapproved" && sourceExists(root, approvedEndFrame)) {
       skipped.push({ day: record.day, slug: record.slug, reason: "end frame already approved" });
+      continue;
+    }
+    if (mode === "approved" && !sourceExists(root, approvedEndFrame)) {
+      skipped.push({ day: record.day, slug: record.slug, reason: `missing approved end frame: ${approvedEndFrame}` });
       continue;
     }
     if (!sourceExists(root, startFrame)) {
       skipped.push({ day: record.day, slug: record.slug, reason: `missing start frame: ${startFrame}` });
       continue;
     }
-    if (!sourceExists(root, endFrame)) {
-      skipped.push({ day: record.day, slug: record.slug, reason: `missing pending-review end frame: ${endFrame}` });
+    if (!sourceExists(root, sourceEndFrame)) {
+      const endFrameLabel = mode === "approved" ? "approved" : "pending-review";
+      skipped.push({ day: record.day, slug: record.slug, reason: `missing ${endFrameLabel} end frame: ${sourceEndFrame}` });
       continue;
     }
 
     const copiedStart = join(targetFolder, `${record.slug}-start-frame.png`);
     const copiedEnd = join(targetFolder, `${record.slug}-end-frame-v01.png`);
     await copyFrame(root, startFrame, copiedStart, Boolean(options.dryRun));
-    await copyFrame(root, endFrame, copiedEnd, Boolean(options.dryRun));
+    await copyFrame(root, sourceEndFrame, copiedEnd, Boolean(options.dryRun));
     copied.push({
       day: record.day,
       slug: record.slug,
       source_start_frame: startFrame,
-      source_end_frame: endFrame,
+      source_end_frame: sourceEndFrame,
       copied_start_frame: normalizePath(copiedStart),
       copied_end_frame: normalizePath(copiedEnd)
     });
@@ -208,7 +226,8 @@ export async function copyUnapprovedStartEndFrames(options: CopyOptions = {}): P
     copied,
     skipped,
     manifest_path: manifestOutputPath,
-    dry_run: Boolean(options.dryRun)
+    dry_run: Boolean(options.dryRun),
+    mode
   };
   const result: CopyResult = {
     ...resultWithoutReadme,

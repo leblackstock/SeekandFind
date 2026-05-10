@@ -17,6 +17,7 @@
   "owner_review": {
     "status": "approved",
     "motion_object": "blue and purple lanterns",
-    "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-08-firefly-flower-charm/day-08-firefly-flower-charm-end-frame-v01.png"
+    "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-08-firefly-flower-charm/day-08-firefly-flower-charm-end-frame-v01.png",
+    "motion_guidance": "Animate the blue and purple hanging lanterns: alternate a very soft glow pulse with a slow synchronized sway while their positions remain recognizable. The Firefly Flower Charm mission item remains still."
   }
 }

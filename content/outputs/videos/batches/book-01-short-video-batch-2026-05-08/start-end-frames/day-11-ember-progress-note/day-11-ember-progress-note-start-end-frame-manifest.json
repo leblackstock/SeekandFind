@@ -17,6 +17,7 @@
   "owner_review": {
     "status": "approved",
     "motion_object": "string lights/lanterns",
-    "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-11-ember-progress-note/day-11-ember-progress-note-end-frame-v01.png"
+    "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-11-ember-progress-note/day-11-ember-progress-note-end-frame-v01.png",
+    "motion_guidance": "Animate only the overhead string lights and lanterns: a soft warm twinkle traveling slowly along the string plus a barely visible sway. Notes and paper content remain visually static."
   }
 }

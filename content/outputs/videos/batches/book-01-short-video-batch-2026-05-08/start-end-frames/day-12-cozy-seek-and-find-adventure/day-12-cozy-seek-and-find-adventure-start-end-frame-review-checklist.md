@@ -16,9 +16,11 @@ Task: `book01-day12-short-video-tiktok-youtube-shorts-instagram-reels-facebook-r
 
 - [ ] Same shot, same scene, same Ember, same props, same color palette.
 - [ ] Clear but gentle progression from the start frame: gentle push-in, warmer glow, tiny sparkle, and visible natural Ember motion.
-- [ ] Exactly one small chosen scene-object motion is included, such as a tinkling bell, rolling pen, swaying lantern, fluttering ribbon, or tiny charm wiggle.
-- [ ] Chosen scene-object motion follows any owner-approved motion object recorded for this day.
-- [ ] Owner-approved chosen motion object is used: string banners & lanterns.
+- [ ] Exactly one chosen scene-object motion is included and it matches the recorded object for this day.
+- [ ] The chosen motion follows the specific motion instruction in the keyframe prompt.
+- [ ] Chosen scene-object motion follows the recorded motion object for this day.
+- [ ] Recorded motion object is used: string banners & lanterns.
+- [ ] Specific motion instruction is followed: Animate the overhead string banners and lanterns together as one connected scene-object motion: banners flutter lightly while lanterns sway a few degrees and glow softly.
 - [ ] The chosen motion object is not held by Ember and is not attached to Ember.
 - [ ] Ember is not frozen between frames.
 - [ ] Anything Ember is holding, wearing, carrying, touching, or otherwise attached to moves visibly with Ember between frames, including a held lantern, scarf, satchel, tail, paws, horns, or other attached/carried items.
@@ -31,7 +33,7 @@ Task: `book01-day12-short-video-tiktok-youtube-shorts-instagram-reels-facebook-r
 
 - [ ] Start frame uploaded first.
 - [ ] End frame uploaded last.
-- [ ] 5-second vertical 9:16 output.
+- [ ] 8-second vertical 9:16 output.
 - [ ] Motion is gentle and continuous.
 - [ ] No cuts, no captions, no subtitles, no generated text, no logos, no watermarks.
 - [ ] Finished MP4 is owner-reviewed before moving to `content/outputs/videos/approved/`.

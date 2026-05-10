@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   filterArchiveTargets,
   parseArchiveProjectChatsArgs,
+  resolveArchiveProjectUrl,
   reconcileArchiveResults
 } from "../automation/playwright/scripts/chatgpt-archive-project-chats.js";
 
@@ -35,6 +36,13 @@ describe("ChatGPT Seek and Find project archive utility", () => {
       if (previous === undefined) delete process.env.npm_config_max_load_more;
       else process.env.npm_config_max_load_more = previous;
     }
+  });
+
+  it("prefers the currently open Seek and Find Books project URL when it changes", () => {
+    const oldProjectUrl = "https://chatgpt.com/g/g-p-old-seek-and-find-books/project";
+    const openProjectUrl = "https://chatgpt.com/g/g-p-new-seek-and-find-books/project";
+
+    expect(resolveArchiveProjectUrl(openProjectUrl, oldProjectUrl)).toBe(openProjectUrl);
   });
 
   it("filters archive targets by excluded ids, excluded titles, and limit", () => {

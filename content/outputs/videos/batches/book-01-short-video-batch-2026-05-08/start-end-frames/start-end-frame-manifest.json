@@ -21,6 +21,12 @@
         "end_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-03-search-with-ember/day-03-search-with-ember-end-frame-prompt.md",
         "keyframe_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-03-search-with-ember/day-03-search-with-ember-keyframe-image-to-video-prompt.md",
         "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-03-search-with-ember/day-03-search-with-ember-start-end-frame-review-checklist.md"
+      },
+      "owner_review": {
+        "status": "approved",
+        "motion_object": "separate hanging lanterns",
+        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-03-search-with-ember/day-03-search-with-ember-end-frame-v01.png",
+        "motion_guidance": "Animate two or three background hanging lanterns clearly separate from Ember's held lantern: slow gentle sway on their cords, a slight warm glow pulse, and tiny delayed cord movement."
       }
     },
     {
@@ -38,6 +44,12 @@
         "end_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-04-baby-flame-lantern/day-04-baby-flame-lantern-end-frame-prompt.md",
         "keyframe_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-04-baby-flame-lantern/day-04-baby-flame-lantern-keyframe-image-to-video-prompt.md",
         "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-04-baby-flame-lantern/day-04-baby-flame-lantern-start-end-frame-review-checklist.md"
+      },
+      "owner_review": {
+        "status": "approved",
+        "motion_object": "overhead lanterns",
+        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-04-baby-flame-lantern/day-04-baby-flame-lantern-end-frame-v01.png",
+        "motion_guidance": "Animate only the lanterns up top as the chosen scene-object motion: a slow gentle sway and a soft warm glow pulse across the hanging lanterns. The Dragon Flame Lantern on the shelf briefly glows brighter for a moment while staying fixed in place. The table lantern remains still."
       }
     },
     {
@@ -55,6 +67,12 @@
         "end_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-end-frame-prompt.md",
         "keyframe_video_prompt": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-keyframe-image-to-video-prompt.md",
         "review_checklist": "content/outputs/videos/batches/book-01-short-video-batch-2026-05-08/start-end-frames/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-start-end-frame-review-checklist.md"
+      },
+      "owner_review": {
+        "status": "approved",
+        "motion_object": "loose teal ribbon on the worktable",
+        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-05-lantern-maker-workshop/day-05-lantern-maker-workshop-end-frame-v01.png",
+        "motion_guidance": "Animate only the loose teal ribbon on the worktable: one tiny ripple travels along the free end with a barely visible edge flutter while the ribbon stays touching the table. The tools and mission item remain still."
       }
     },
     {
@@ -76,7 +94,8 @@
       "owner_review": {
         "status": "approved",
         "motion_object": "ribbon",
-        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-06-cozy-dragon-village/day-06-cozy-dragon-village-end-frame-v01.png"
+        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-06-cozy-dragon-village/day-06-cozy-dragon-village-end-frame-v01.png",
+        "motion_guidance": "Animate one separate decorative ribbon in the village scene: a gentle flutter and small curl at its loose end while it stays attached to its decoration. The ribbon is separate from Ember's scarf and anything on Ember."
       }
     },
     {
@@ -98,7 +117,8 @@
       "owner_review": {
         "status": "approved",
         "motion_object": "bells",
-        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-07-golden-welcome-bell/day-07-golden-welcome-bell-end-frame-v01.png"
+        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-07-golden-welcome-bell/day-07-golden-welcome-bell-end-frame-v01.png",
+        "motion_guidance": "Animate the separate welcome bells: a tiny pendulum swing with a soft jingle feel and very small displacement. Keep them as scene decor, separate from Ember-held items."
       }
     },
     {
@@ -120,7 +140,8 @@
       "owner_review": {
         "status": "approved",
         "motion_object": "blue and purple lanterns",
-        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-08-firefly-flower-charm/day-08-firefly-flower-charm-end-frame-v01.png"
+        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-08-firefly-flower-charm/day-08-firefly-flower-charm-end-frame-v01.png",
+        "motion_guidance": "Animate the blue and purple hanging lanterns: alternate a very soft glow pulse with a slow synchronized sway while their positions remain recognizable. The Firefly Flower Charm mission item remains still."
       }
     },
     {
@@ -142,7 +163,8 @@
       "owner_review": {
         "status": "approved",
         "motion_object": "ribbon",
-        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-09-dragon-door-key/day-09-dragon-door-key-end-frame-v01.png"
+        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-09-dragon-door-key/day-09-dragon-door-key-end-frame-v01.png",
+        "motion_guidance": "Animate a separate decorative ribbon near the dragon-door scene, distinct from the Dragon Door Key and Ember's scarf: it ripples gently from one end to the other with a small breeze while staying tied or anchored."
       }
     },
     {
@@ -164,7 +186,8 @@
       "owner_review": {
         "status": "approved",
         "motion_object": "bell",
-        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-10-sparkle-market-token/day-10-sparkle-market-token-end-frame-v01.png"
+        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-10-sparkle-market-token/day-10-sparkle-market-token-end-frame-v01.png",
+        "motion_guidance": "Animate one separate market bell: a small single swing and return with a soft shimmer or jingle feel. The Sparkle Market Token plus Ember-held and Ember-worn items remain outside the chosen object motion."
       }
     },
     {
@@ -186,7 +209,8 @@
       "owner_review": {
         "status": "approved",
         "motion_object": "string lights/lanterns",
-        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-11-ember-progress-note/day-11-ember-progress-note-end-frame-v01.png"
+        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-11-ember-progress-note/day-11-ember-progress-note-end-frame-v01.png",
+        "motion_guidance": "Animate only the overhead string lights and lanterns: a soft warm twinkle traveling slowly along the string plus a barely visible sway. Notes and paper content remain visually static."
       }
     },
     {
@@ -208,7 +232,8 @@
       "owner_review": {
         "status": "approved",
         "motion_object": "string banners & lanterns",
-        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-end-frame-v01.png"
+        "approved_end_frame": "content/outputs/images/approved/start-end-frames/book-01/day-12-cozy-seek-and-find-adventure/day-12-cozy-seek-and-find-adventure-end-frame-v01.png",
+        "motion_guidance": "Animate the overhead string banners and lanterns together as one connected scene-object motion: banners flutter lightly while lanterns sway a few degrees and glow softly."
       }
     }
   ],

@@ -23,6 +23,8 @@
     "social:broke-video-source": "tsx automation/social/broke-video-source.ts",
     "social:start-end-frames": "tsx automation/social/prepare-start-end-frames.ts",
     "social:copy-unapproved-frames": "tsx automation/social/copy-unapproved-start-end-frames.ts",
+    "social:copy-approved-frames": "tsx automation/social/copy-unapproved-start-end-frames.ts --approved --folder-name ember-approved-start-end-frames",
+    "social:copy-approved-stills": "tsx automation/social/copy-approved-social-stills.ts --from-day 3 --to-day 12 --folder-name ember-approved-social-stills-days-03-12",
     "social:next-ready": "tsx automation/social/get-next-ready-task.ts",
     "social:next-blocker": "tsx automation/social/get-next-blocker.ts",
     "social:mark-result": "tsx automation/social/mark-task-result.ts",

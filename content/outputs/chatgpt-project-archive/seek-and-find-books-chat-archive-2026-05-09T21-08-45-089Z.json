@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "dryRun": true,
+  "projectUrl": "https://chatgpt.com/g/g-p-69f1315ddc688191bc49b4723969ee86-seek-and-find-books/project",
+  "targetCount": 0,
+  "archivedCount": 0,
+  "skippedCount": 0,
+  "errorCount": 0,
+  "options": {
+    "cdpUrl": "http://127.0.0.1:9222",
+    "projectUrl": "https://chatgpt.com/g/g-p-69f1315ddc688191bc49b4723969ee86-seek-and-find-books/project",
+    "evidenceDir": "content/outputs/chatgpt-project-archive",
+    "confirm": false,
+    "maxLoadMore": 25,
+    "excludeIds": [],
+    "logDryRun": true
+  },
+  "targets": [],
+  "results": [],
+  "warnings": [],
+  "evidencePath": "content/outputs/chatgpt-project-archive/seek-and-find-books-chat-archive-2026-05-09T21-08-45-089Z.json"
+}
