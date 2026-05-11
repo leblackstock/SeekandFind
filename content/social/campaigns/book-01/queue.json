@@ -141,7 +141,7 @@
       ],
       "media_assets": [
         "content/outputs/images/approved/book-1-no-blank-promo-batch-02-03-screen-free-dragon-fun-recovered-2026-05-05T05-21-40-725Z.png",
-        "content/outputs/videos/approved/day-2-screen-free-activity-capcut-approved-2026-05-06.mp4"
+        "content/outputs/videos/approved/day-2-screen-free-activity-canva-approved-2026-05-06.mp4"
       ],
       "caption_source": {
         "type": "calendar_slot",
@@ -244,7 +244,8 @@
         "Short Video"
       ],
       "media_assets": [
-        "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png"
+        "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
+        "content/outputs/videos/approved/day-3-search-with-ember-veo31-canva-approved-2026-05-10.mp4"
       ],
       "caption_source": {
         "type": "calendar_slot",
@@ -322,23 +323,24 @@
         },
         {
           "platform": "Short Video",
-          "status": "needs-video-export",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-video-export",
+          "error": null,
           "idempotency_key": "book01-day03-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
           "caption_source": {
             "type": "calendar_slot",
             "text": "Lanterns, tiny treasures, and one curious baby dragon. Ember’s world is built for little seekers.\n\nComing soon to Amazon.",
             "cta": "Share with a little dragon fan."
-          }
+          },
+          "approved_asset": "content/outputs/videos/approved/day-3-search-with-ember-veo31-canva-approved-2026-05-10.mp4"
         }
       ],
       "idempotency_key": "book01-day03",
-      "notes": "Simple caption-only post. Also create/upload proper wide YouTube banner and proper wide Facebook Page cover image; do not use a vertical promo crop for either banner surface.",
+      "notes": "Static Day 3 posts are complete; approved Search with Ember short-video MP4 is ready for TikTok, YouTube Shorts, Instagram Reels, and Facebook Reels posting. Also create/upload proper wide YouTube banner and proper wide Facebook Page cover image; do not use a vertical promo crop for either banner surface.",
       "source_refs": [
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
@@ -360,7 +362,8 @@
         "Short Video"
       ],
       "media_assets": [
-        "content/outputs/images/approved/book-1-no-blank-promo-batch-02-02-baby-flame-lantern-teaser-balanced-approved-recovered-2026-05-05T05-47-13-309Z-1.png"
+        "content/outputs/images/approved/book-1-no-blank-promo-batch-02-02-baby-flame-lantern-teaser-balanced-approved-recovered-2026-05-05T05-47-13-309Z-1.png",
+        "content/outputs/videos/approved/day-4-find-the-dragonflame-lantern-veo31-canva-approved-2026-05-10.mp4"
       ],
       "caption_source": {
         "type": "calendar_slot",
@@ -436,23 +439,24 @@
         },
         {
           "platform": "Short Video",
-          "status": "needs-video-export",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-video-export",
+          "error": null,
           "idempotency_key": "book01-day04-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
           "caption_source": {
             "type": "calendar_slot",
             "text": "Can you find the Baby Flame Lantern hiding in Ember's cozy festival world?\n\nComing soon to Amazon.",
             "cta": "Save this tiny-treasure challenge."
-          }
+          },
+          "approved_asset": "content/outputs/videos/approved/day-4-find-the-dragonflame-lantern-veo31-canva-approved-2026-05-10.mp4"
         }
       ],
       "idempotency_key": "book01-day04",
-      "notes": "Use the balanced approved regenerate. Avoid the failed muddy-sparkle version.",
+      "notes": "Use the balanced approved regenerate. Avoid the failed muddy-sparkle version. Approved short-video MP4 uses the marketing-facing title DragonFlame Lantern while preserving the Baby Flame Lantern visual/canon anchor.",
       "source_refs": [
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
@@ -471,7 +475,8 @@
         "Short Video"
       ],
       "media_assets": [
-        "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-02-image-1-2026-05-05T04-51-23-244Z.png"
+        "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-02-image-1-2026-05-05T04-51-23-244Z.png",
+        "content/outputs/videos/approved/day-5-help-ember-find-it-veo31-canva-approved-2026-05-10.mp4"
       ],
       "caption_source": {
         "type": "calendar_slot",
@@ -547,23 +552,24 @@
         },
         {
           "platform": "Short Video",
-          "status": "needs-video-export",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-video-export",
+          "error": null,
           "idempotency_key": "book01-day05-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
           "caption_source": {
             "type": "calendar_slot",
             "text": "The Lantern Maker’s Workshop is full of tiny details for young eyes to explore.\n\nComing soon to Amazon.",
             "cta": "Follow for the next Ember progress update."
-          }
+          },
+          "approved_asset": "content/outputs/videos/approved/day-5-help-ember-find-it-veo31-canva-approved-2026-05-10.mp4"
         }
       ],
       "idempotency_key": "book01-day05",
-      "notes": "Approved Batch 01 image with no blank-template issue.",
+      "notes": "Approved Batch 01 image with no blank-template issue. Approved short-video MP4 uses the title Help Ember find it and is ready for TikTok, YouTube Shorts, Instagram Reels, and Facebook Reels posting.",
       "source_refs": [
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
@@ -582,7 +588,8 @@
         "Short Video"
       ],
       "media_assets": [
-        "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-03-image-1-2026-05-05T04-51-29-569Z.png"
+        "content/outputs/images/approved/book-1-lantern-maker-workshop-promo-batch-01-recovered-chat-03-image-1-2026-05-05T04-51-29-569Z.png",
+        "content/outputs/videos/approved/day-6-tiny-treasure-veo31-canva-approved-2026-05-10.mp4"
       ],
       "caption_source": {
         "type": "calendar_slot",
@@ -673,23 +680,24 @@
         },
         {
           "platform": "Short Video",
-          "status": "needs-video-export",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-video-export",
+          "error": null,
           "idempotency_key": "book01-day06-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
           "caption_source": {
             "type": "calendar_slot",
             "text": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers.\n\nComing soon to Amazon.",
             "cta": "Save for later if you love hidden-object books."
-          }
+          },
+          "approved_asset": "content/outputs/videos/approved/day-6-tiny-treasure-veo31-canva-approved-2026-05-10.mp4"
         }
       ],
       "idempotency_key": "book01-day06",
-      "notes": "Approved Batch 01 image with no blank-template issue.",
+      "notes": "Approved Batch 01 image with no blank-template issue. Approved short-video MP4 uses the title Tiny Treasure and is ready for TikTok, YouTube Shorts, Instagram Reels, and Facebook Reels posting.",
       "source_refs": [
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
@@ -708,7 +716,8 @@
         "Short Video"
       ],
       "media_assets": [
-        "content/outputs/images/approved/book-1-mission-item-promo-batch-03-01-golden-welcome-bell-teaser-recovered-2026-05-05T19-29-49-208Z.png"
+        "content/outputs/images/approved/book-1-mission-item-promo-batch-03-01-golden-welcome-bell-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+        "content/outputs/videos/approved/day-7-golden-welcome-bell-veo31-canva-approved-2026-05-10.mp4"
       ],
       "caption_source": {
         "type": "calendar_slot",
@@ -799,23 +808,24 @@
         },
         {
           "platform": "Short Video",
-          "status": "needs-video-export",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-video-export",
+          "error": null,
           "idempotency_key": "book01-day07-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
           "caption_source": {
             "type": "calendar_slot",
             "text": "Can your little seeker find the Golden Welcome Bell among the festival decorations?\n\nComing soon to Amazon.",
             "cta": "Save the challenge and try it together."
-          }
+          },
+          "approved_asset": "content/outputs/videos/approved/day-7-golden-welcome-bell-veo31-canva-approved-2026-05-10.mp4"
         }
       ],
       "idempotency_key": "book01-day07",
-      "notes": "Mission-item teaser. Keep copy playful and low-pressure.",
+      "notes": "Mission-item teaser. Keep copy playful and low-pressure. Approved short-video MP4 uses the title Golden Welcome Bell and is ready for TikTok, YouTube Shorts, Instagram Reels, and Facebook Reels posting.",
       "source_refs": [
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
@@ -834,7 +844,8 @@
         "Short Video"
       ],
       "media_assets": [
-        "content/outputs/images/approved/book-1-mission-item-promo-batch-03-02-firefly-flower-charm-teaser-recovered-2026-05-05T19-29-49-208Z.png"
+        "content/outputs/images/approved/book-1-mission-item-promo-batch-03-02-firefly-flower-charm-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+        "content/outputs/videos/approved/day-8-firefly-flower-charm-veo31-canva-approved-2026-05-10.mp4"
       ],
       "caption_source": {
         "type": "calendar_slot",
@@ -925,23 +936,24 @@
         },
         {
           "platform": "Short Video",
-          "status": "needs-video-export",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-video-export",
+          "error": null,
           "idempotency_key": "book01-day08-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
           "caption_source": {
             "type": "calendar_slot",
             "text": "Find the Firefly Flower Charm.\n\nComing soon to Amazon.",
             "cta": "Tap, pause, and search."
-          }
+          },
+          "approved_asset": "content/outputs/videos/approved/day-8-firefly-flower-charm-veo31-canva-approved-2026-05-10.mp4"
         }
       ],
       "idempotency_key": "book01-day08",
-      "notes": "Tall/mobile-first asset. Best for Story, Reel cover, Shorts cover, or Pinterest Idea Pin.",
+      "notes": "Tall/mobile-first asset. Best for Story, Reel cover, Shorts cover, or Pinterest Idea Pin. Approved short-video MP4 uses the title Firefly Flower Charm and is ready for TikTok, YouTube Shorts, Instagram Reels, and Facebook Reels posting.",
       "source_refs": [
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
@@ -960,7 +972,8 @@
         "Short Video"
       ],
       "media_assets": [
-        "content/outputs/images/approved/book-1-mission-item-promo-batch-03-03-dragon-door-key-teaser-retry-recovered-2026-05-05T19-37-48-357Z.png"
+        "content/outputs/images/approved/book-1-mission-item-promo-batch-03-03-dragon-door-key-teaser-retry-recovered-2026-05-05T19-37-48-357Z.png",
+        "content/outputs/videos/approved/day-9-find-the-key-veo31-canva-approved-2026-05-10.mp4"
       ],
       "caption_source": {
         "type": "calendar_slot",
@@ -1051,23 +1064,24 @@
         },
         {
           "platform": "Short Video",
-          "status": "needs-video-export",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-video-export",
+          "error": null,
           "idempotency_key": "book01-day09-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
           "caption_source": {
             "type": "calendar_slot",
             "text": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene.\n\nComing soon to Amazon.",
             "cta": "Can you spot it?"
-          }
+          },
+          "approved_asset": "content/outputs/videos/approved/day-9-find-the-key-veo31-canva-approved-2026-05-10.mp4"
         }
       ],
       "idempotency_key": "book01-day09",
-      "notes": "Mission-item teaser. Do not add answer marks or hint overlays.",
+      "notes": "Mission-item teaser. Do not add answer marks or hint overlays. Approved short-video MP4 uses the title Find the Key and is ready for TikTok, YouTube Shorts, Instagram Reels, and Facebook Reels posting.",
       "source_refs": [
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
@@ -1086,7 +1100,8 @@
         "Short Video"
       ],
       "media_assets": [
-        "content/outputs/images/approved/book-1-mission-item-promo-batch-03-04-sparkle-market-token-teaser-recovered-2026-05-05T19-29-49-208Z.png"
+        "content/outputs/images/approved/book-1-mission-item-promo-batch-03-04-sparkle-market-token-teaser-recovered-2026-05-05T19-29-49-208Z.png",
+        "content/outputs/videos/approved/day-10-sparkle-market-token-veo31-canva-approved-2026-05-10.mp4"
       ],
       "caption_source": {
         "type": "calendar_slot",
@@ -1177,23 +1192,24 @@
         },
         {
           "platform": "Short Video",
-          "status": "needs-video-export",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-video-export",
+          "error": null,
           "idempotency_key": "book01-day10-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
           "caption_source": {
             "type": "calendar_slot",
             "text": "Can you find the Sparkle Market Token among the cozy market treasures?\n\nComing soon to Amazon.",
             "cta": "Save this for a quick seek-and-find break."
-          }
+          },
+          "approved_asset": "content/outputs/videos/approved/day-10-sparkle-market-token-veo31-canva-approved-2026-05-10.mp4"
         }
       ],
       "idempotency_key": "book01-day10",
-      "notes": "Mission-item teaser. Good for hidden-object and activity-book boards.",
+      "notes": "Mission-item teaser. Good for hidden-object and activity-book boards. Approved Veo 3.1 animation edited in Canva uses the Sparkle Market Token market visual and is ready for TikTok, YouTube Shorts, Instagram Reels, and Facebook Reels posting.",
       "source_refs": [
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
@@ -1212,7 +1228,8 @@
         "Short Video"
       ],
       "media_assets": [
-        "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png"
+        "content/outputs/images/approved/book-1-no-blank-promo-batch-02-04-meet-ember-guide-recovered-2026-05-05T05-21-47-885Z.png",
+        "content/outputs/videos/approved/day-11-meet-ember-veo31-canva-approved-2026-05-10.mp4"
       ],
       "caption_source": {
         "type": "calendar_slot",
@@ -1303,23 +1320,24 @@
         },
         {
           "platform": "Short Video",
-          "status": "needs-video-export",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-video-export",
+          "error": null,
           "idempotency_key": "book01-day11-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
           "caption_source": {
             "type": "calendar_slot",
             "text": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time.\n\nComing soon to Amazon.",
             "cta": "Follow along as the book comes together."
-          }
+          },
+          "approved_asset": "content/outputs/videos/approved/day-11-meet-ember-veo31-canva-approved-2026-05-10.mp4"
         }
       ],
       "idempotency_key": "book01-day11",
-      "notes": "Behind-the-scenes copy. Do not present promo art as an interior sample.",
+      "notes": "Behind-the-scenes copy. Do not present promo art as an interior sample. Approved short-video MP4 uses the title Meet Ember and is ready for TikTok, YouTube Shorts, Instagram Reels, and Facebook Reels posting.",
       "source_refs": [
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
@@ -1338,7 +1356,8 @@
         "Short Video"
       ],
       "media_assets": [
-        "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png"
+        "content/outputs/images/approved/book-1-no-blank-promo-batch-02-01-search-with-ember-recovered-2026-05-05T05-21-26-346Z.png",
+        "content/outputs/videos/approved/day-12-search-with-ember-2-veo31-canva-approved-2026-05-10.mp4"
       ],
       "caption_source": {
         "type": "calendar_slot",
@@ -1429,23 +1448,24 @@
         },
         {
           "platform": "Short Video",
-          "status": "needs-video-export",
+          "status": "ready",
           "scheduled_time": null,
           "posted_url": null,
           "posted_at": null,
           "receipt_path": null,
           "evidence_path": null,
-          "error": "needs-video-export",
+          "error": null,
           "idempotency_key": "book01-day12-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
           "caption_source": {
             "type": "calendar_slot",
             "text": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons.\n\nComing soon to Amazon.",
             "cta": "Save for children's book gift ideas."
-          }
+          },
+          "approved_asset": "content/outputs/videos/approved/day-12-search-with-ember-2-veo31-canva-approved-2026-05-10.mp4"
         }
       ],
       "idempotency_key": "book01-day12",
-      "notes": "Gift-buyer angle. Keep links blank until a real store URL exists.",
+      "notes": "Gift-buyer angle. Keep links blank until a real store URL exists. Approved short-video MP4 uses the title Search with Ember 2 and is ready for TikTok, YouTube Shorts, Instagram Reels, and Facebook Reels posting.",
       "source_refs": [
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
