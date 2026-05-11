@@ -1,5 +1,6 @@
 import { existsSync } from "node:fs";
 import { pathToFileURL } from "node:url";
+import { buildDuePressureChunk, DuePressureChunk } from "./due-pressure-chunks.js";
 import { PlatformTask, QueuePost, validateSocialQueue } from "./validate-queue.js";
 
 type Quadrant = "Q1" | "Q2" | "Q3" | "Q4";
@@ -164,6 +165,20 @@ function formatDays(days: number[]): string {
   return days.length > 0 ? days.map((day) => `Day ${day}`).join(", ") : "none";
 }
 
+function formatChunkDays(chunk: DuePressureChunk | null): string {
+  return chunk ? formatDays(chunk.days) : "none";
+}
+
+function formatChunkTasks(chunk: DuePressureChunk | null): string {
+  if (!chunk) return "none";
+  return chunk.tasks.map((task) => {
+    const day = typeof task.campaign_day === "number" ? `Day ${task.campaign_day}` : "Unknown day";
+    const platform = asString(task.platform) || "Unknown platform";
+    const board = asString(task.board_name);
+    return `${day} ${platform}${board ? ` (${board})` : ""}`;
+  }).join("; ");
+}
+
 function statusCounts(tasks: PlatformTask[]): Record<string, number> {
   const counts: Record<string, number> = {};
   for (const task of tasks) {
@@ -224,7 +239,8 @@ function scoreCandidates(
   posts: QueuePost[],
   validationOk: boolean,
   noPinterestPublishingToday: boolean,
-  readiness: ReadinessAudit
+  readiness: ReadinessAudit,
+  duePressureChunk: DuePressureChunk | null
 ): Candidate[] {
   const candidates: Candidate[] = [];
   if (!validationOk) {
@@ -250,6 +266,20 @@ function scoreCandidates(
 
   const fullPreparedDays = readiness.fullyPreparedDays.length;
   const runwayBelowSevenDays = fullPreparedDays < 7;
+
+  if (duePressureChunk) {
+    candidates.push({
+      task: `Build/post due-pressure chunk: ${formatChunkDays(duePressureChunk)}`,
+      quadrant: duePressureChunk.quadrant,
+      importance: duePressureChunk.importance,
+      urgency: duePressureChunk.urgency,
+      reason: duePressureChunk.scope === "behind_or_due_today"
+        ? `Ready work is behind or due today across ${duePressureChunk.task_count} task(s); chunking prevents repeated handoff/browser/receipt setup.`
+        : `Ready work is due within 2 days across ${duePressureChunk.task_count} task(s); preparing it now keeps it from becoming Q1.`,
+      usefulCommand: "npm run social:handoff",
+      avoid: "Do not run one-task handoff/browser loops when a due-pressure chunk exists."
+    });
+  }
 
   if (nextAccountBlocker) {
     candidates.push({
@@ -361,7 +391,8 @@ async function main(): Promise<void> {
   const counts = statusCounts(tasks);
   const noPinterestPublishingToday = process.env.NO_PINTEREST_PUBLISHING_TODAY === "true";
   const readiness = auditReadiness(postsByDay);
-  const candidates = scoreCandidates(postsByDay, validation.ok, noPinterestPublishingToday, readiness);
+  const duePressureChunk = validation.ok ? buildDuePressureChunk(postsByDay) : null;
+  const candidates = scoreCandidates(postsByDay, validation.ok, noPinterestPublishingToday, readiness, duePressureChunk);
   const recommended = bestCandidate(candidates);
   const nextReady = validation.ok ? findNextReady(postsByDay) : null;
   const nextBlocker = validation.ok ? findNextBlocker(postsByDay) : null;
@@ -410,6 +441,12 @@ Readiness runway:
 - fully prepared days: ${formatDays(readiness.fullyPreparedDays)}
 - missing video exports: ${formatDays(readiness.missingVideoExportDays)}
 - 7-day full pre-launch ready: ${readiness.fullyPreparedDays.length >= 7 ? "yes" : "no"}
+
+Q1 prevention / chunk check:
+- due-pressure scope: ${duePressureChunk?.scope ?? "none"}
+- chunk days: ${formatChunkDays(duePressureChunk)}
+- chunk tasks: ${formatChunkTasks(duePressureChunk)}
+- prevention path: ${duePressureChunk?.prevention_path ?? "No due-pressure chunk is currently ready."}
 ${readinessWarnings.length > 0 ? `\nWarnings:\n${readinessWarnings.map((warning) => `- ${warning}`).join("\n")}` : ""}
 `);
 

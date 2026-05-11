@@ -517,7 +517,7 @@ Avoid: off-model Ember, cover-art-sized Ember, duplicate Ember, hidden Ember, du
 
 Campaign: Book 1 Prelaunch Rolling Campaign
 Campaign day: Day 12
-Task: \`book01-day12-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels\`
+Task: \`book01-day12-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public\`
 
 ## References
 

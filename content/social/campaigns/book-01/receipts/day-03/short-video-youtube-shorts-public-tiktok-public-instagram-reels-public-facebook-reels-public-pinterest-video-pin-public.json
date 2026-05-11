@@ -1,0 +1,40 @@
+{
+  "idempotency_key": "book01-day03-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
+  "post_id": "book01-day-03",
+  "campaign_day": 3,
+  "campaign_date": "2026-05-07",
+  "posted_at": "2026-05-10",
+  "status": "posted",
+  "primary_posted_url": "https://youtube.com/shorts/KbtLI34bE24?feature=share",
+  "approved_asset": "content/outputs/videos/approved/day-3-search-with-ember-veo31-canva-approved-2026-05-10.mp4",
+  "platform_urls": [
+    {
+      "platform": "YouTube Shorts",
+      "url": "https://youtube.com/shorts/KbtLI34bE24?feature=share"
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@emberdragonbooks/video/7638457876247252255"
+    },
+    {
+      "platform": "Instagram Reel",
+      "url": "https://www.instagram.com/reel/DYLqNdBFHTw/"
+    },
+    {
+      "platform": "Facebook Reel",
+      "url": "https://www.facebook.com/reel/1755780122056361"
+    },
+    {
+      "platform": "Pinterest Video Pin",
+      "url": "https://www.pinterest.com/pin/1148417973750567056/"
+    }
+  ],
+  "caption": "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers.\n\nComing soon to Amazon.\n\nShare with a little dragon fan.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #BabyDragon #KidsBooks #EmberDragonBooks #dragonbooks #dragonbooksforkids",
+  "board_name": "Dragon Books for Kids",
+  "evidence_path": "content/social/campaigns/book-01/evidence/day-03/short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public/",
+  "source_records": [
+    "content/outputs/marketing/posts/2026-05-10-day-3-search-with-ember-youtube-shorts.md",
+    "content/outputs/marketing/posts/2026-05-10-day-3-search-with-ember-short-video-platform-posts.md"
+  ],
+  "notes": "The queue stores the YouTube Shorts URL as the primary posted_url for this bundled short-video task; this receipt preserves the full platform URL set."
+}

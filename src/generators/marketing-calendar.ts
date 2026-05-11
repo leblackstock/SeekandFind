@@ -416,7 +416,7 @@ const reusePlan: ContentReusePlan[] = [
   },
   {
     source: "CapCut captioned narration storyboard",
-    reuseSurfaces: "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels, and Pinterest Idea Pins where bottom text/narration is desired.",
+    reuseSurfaces: "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels, and Pinterest Video Pins where bottom text/narration is desired.",
     creationNeeded: "Scene-by-scene script blocks that intentionally become visible bottom text, plus a clean image/media assignment and 9:16 ratio. This lane may later support AI animation too, but that workflow is not proven yet.",
     guardrail: "Do not use this subtype for clean motion-only videos; the words appear on the video."
   },
@@ -766,7 +766,7 @@ export function buildPlatformTasks(slots: MarketingCalendarSlot[]): MarketingPla
       scheduledDate: slot.scheduledDate,
       status: slot.asset === approvedAssets.fireflyFlowerCharmTall ? "ready" : "needs-video-export",
       platform: "Short Video",
-      placement: "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels",
+      placement: "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels, Pinterest Video Pin",
       theme: slot.theme,
       asset: slot.asset,
       copy: copyForPlatform(slot, "Short Video"),
@@ -775,8 +775,8 @@ export function buildPlatformTasks(slots: MarketingCalendarSlot[]): MarketingPla
         : "Follow for more Ember sneak peeks.",
       link: "no link in video caption until real landing/store URL exists",
       notes: slot.asset === approvedAssets.fireflyFlowerCharmTall
-        ? "Tall asset is ready for mobile-first Seedance storyboard/export use."
-        : "Needs a Seedance image-to-video export using the saved storyboard before posting."
+        ? "Tall asset is ready for mobile-first Seedance storyboard/export use. Include #dragonbooks and #dragonbooksforkids wherever platform hashtags are used."
+        : "Needs a Seedance image-to-video export using the saved storyboard before posting. Include #dragonbooks and #dragonbooksforkids wherever platform hashtags are used."
     });
   }
 

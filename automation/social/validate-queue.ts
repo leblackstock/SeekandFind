@@ -14,6 +14,8 @@ const allowedTaskStatuses = new Set([
   "error",
   "skipped"
 ]);
+const requiredDragonHashtags = ["#dragonbooks", "#dragonbooksforkids"];
+const hashtagFriendlyPlatforms = new Set(["Pinterest", "Instagram", "Short Video"]);
 
 export interface PlatformTask {
   platform?: unknown;
@@ -27,6 +29,10 @@ export interface PlatformTask {
   board_name?: unknown;
   caption_source?: unknown;
   source_refs?: unknown;
+  platform_urls?: unknown;
+  required_video_surfaces?: unknown;
+  legacy_missing_required_video_surfaces?: unknown;
+  required_hashtags?: unknown;
 }
 
 export interface QueuePost {
@@ -81,6 +87,50 @@ function formatStatusCounts(tasks: PlatformTask[]): string {
     .join("; ");
 }
 
+function asString(value: unknown): string {
+  return typeof value === "string" ? value : "";
+}
+
+function asStringArray(value: unknown): string[] {
+  return Array.isArray(value) ? value.filter((item): item is string => typeof item === "string") : [];
+}
+
+function includesNormalized(values: string[], needle: string): boolean {
+  const normalizedNeedle = needle.toLowerCase();
+  return values.some((value) => value.toLowerCase() === normalizedNeedle);
+}
+
+function taskMentionsPinterestVideoPin(task: PlatformTask): boolean {
+  const searchable = [
+    asString(task.idempotency_key),
+    asString(task.receipt_path),
+    asString(task.evidence_path),
+    asString(task.posted_url)
+  ].join(" ").toLowerCase();
+
+  if (searchable.includes("pinterest-video-pin") || searchable.includes("pinterest_video_pin")) return true;
+
+  if (Array.isArray(task.platform_urls)) {
+    return task.platform_urls.some((entry) => {
+      const record = entry as { platform?: unknown; url?: unknown };
+      return asString(record.platform).toLowerCase().includes("pinterest")
+        && isNonEmptyString(record.url);
+    });
+  }
+
+  if (task.platform_urls && typeof task.platform_urls === "object") {
+    const record = task.platform_urls as Record<string, unknown>;
+    return isNonEmptyString(record.pinterest_video_pin);
+  }
+
+  return false;
+}
+
+function taskShouldDeclareRequiredHashtags(task: PlatformTask): boolean {
+  return hashtagFriendlyPlatforms.has(asString(task.platform)) &&
+    (task.status === "ready" || task.status === "needs-video-export" || asStringArray(task.required_hashtags).length > 0);
+}
+
 export async function validateSocialQueue(): Promise<QueueValidationResult> {
   const errors: string[] = [];
   const absoluteQueuePath = join(process.cwd(), queuePath);
@@ -120,7 +170,37 @@ export async function validateSocialQueue(): Promise<QueueValidationResult> {
       return;
     }
 
-    (post.platform_tasks as PlatformTask[]).forEach((task, taskIndex) => {
+    const postTasks = post.platform_tasks as PlatformTask[];
+    const postLabel = `post ${String(post.post_id ?? postIndex + 1)}`;
+    const pinterestTasks = postTasks.filter((task) => task.platform === "Pinterest");
+    if (pinterestTasks.length !== 3) {
+      errors.push(`${postLabel} must have exactly 3 required Pinterest still Pin tasks; found ${pinterestTasks.length}.`);
+    }
+    for (const [pinterestIndex, pinterestTask] of pinterestTasks.entries()) {
+      if (!isNonEmptyString(pinterestTask.board_name)) {
+        errors.push(`${postLabel} Pinterest still Pin task ${pinterestIndex + 1} missing board_name.`);
+      }
+    }
+
+    const shortVideoTasks = postTasks.filter((task) => task.platform === "Short Video");
+    if (shortVideoTasks.length !== 1) {
+      errors.push(`${postLabel} must have exactly 1 required Short Video bundle task; found ${shortVideoTasks.length}.`);
+    } else {
+      const shortVideoTask = shortVideoTasks[0];
+      const requiredVideoSurfaces = asStringArray(shortVideoTask.required_video_surfaces);
+      if (!includesNormalized(requiredVideoSurfaces, "Pinterest Video Pin")) {
+        errors.push(`${postLabel} Short Video task must list Pinterest Video Pin in required_video_surfaces.`);
+      }
+      if (
+        shortVideoTask.status === "posted" &&
+        !taskMentionsPinterestVideoPin(shortVideoTask) &&
+        !includesNormalized(asStringArray(shortVideoTask.legacy_missing_required_video_surfaces), "Pinterest Video Pin")
+      ) {
+        errors.push(`${postLabel} Short Video task is posted but has no Pinterest Video Pin URL/key/receipt or explicit legacy exception.`);
+      }
+    }
+
+    postTasks.forEach((task, taskIndex) => {
       tasks.push(task);
       const label = `post ${String(post.post_id ?? postIndex + 1)} task ${taskIndex + 1}`;
 
@@ -148,6 +228,15 @@ export async function validateSocialQueue(): Promise<QueueValidationResult> {
 
       if (task.platform === "Pinterest" && task.status === "ready" && !isNonEmptyString(task.board_name)) {
         errors.push(`${label} is a ready Pinterest task but missing board_name.`);
+      }
+
+      if (taskShouldDeclareRequiredHashtags(task)) {
+        const hashtags = asStringArray(task.required_hashtags);
+        for (const tag of requiredDragonHashtags) {
+          if (!includesNormalized(hashtags, tag)) {
+            errors.push(`${label} must require ${tag} in required_hashtags.`);
+          }
+        }
       }
     });
   });

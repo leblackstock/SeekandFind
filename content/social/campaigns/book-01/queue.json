@@ -107,7 +107,18 @@
           "receipt_path": "content/social/campaigns/book-01/receipts/day-01/short-video-youtube-shorts-public-instagram-reels-public-facebook-reels-public-tiktok-public.json",
           "evidence_path": "content/social/campaigns/book-01/evidence/day-01/short-video-youtube-shorts-public-instagram-reels-public-facebook-reels-public-tiktok-public/",
           "error": null,
-          "idempotency_key": "book01-day01-short-video-youtube-shorts-public-instagram-reels-public-facebook-reels-public-tiktok-public"
+          "idempotency_key": "book01-day01-short-video-youtube-shorts-public-instagram-reels-public-facebook-reels-public-tiktok-public",
+          "required_video_surfaces": [
+            "YouTube Shorts",
+            "TikTok",
+            "Instagram Reels",
+            "Facebook Reels",
+            "Pinterest Video Pin"
+          ],
+          "legacy_missing_required_video_surfaces": [
+            "Pinterest Video Pin"
+          ],
+          "notes": "Legacy four-platform short-video bundle posted before Pinterest Video Pin became required; do not use this pattern for new short-video bundles."
         }
       ],
       "idempotency_key": "book01-day01",
@@ -141,7 +152,7 @@
       ],
       "media_assets": [
         "content/outputs/images/approved/book-1-no-blank-promo-batch-02-03-screen-free-dragon-fun-recovered-2026-05-05T05-21-40-725Z.png",
-        "content/outputs/videos/approved/day-2-screen-free-activity-canva-approved-2026-05-06.mp4"
+        "content/outputs/videos/approved/day-2-screen-free-activity-capcut-approved-2026-05-06.mp4"
       ],
       "caption_source": {
         "type": "calendar_slot",
@@ -216,7 +227,14 @@
           "receipt_path": "content/social/campaigns/book-01/receipts/day-02/short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public.json",
           "evidence_path": "content/social/campaigns/book-01/evidence/day-02/short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public/",
           "error": null,
-          "idempotency_key": "book01-day02-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public"
+          "idempotency_key": "book01-day02-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
+          "required_video_surfaces": [
+            "YouTube Shorts",
+            "TikTok",
+            "Instagram Reels",
+            "Facebook Reels",
+            "Pinterest Video Pin"
+          ]
         }
       ],
       "idempotency_key": "book01-day02",
@@ -235,7 +253,7 @@
     {
       "post_id": "book01-day-03",
       "campaign_day": 3,
-      "status": "in-progress",
+      "status": "complete",
       "scheduled_date": "2026-05-07",
       "platforms": [
         "Pinterest",
@@ -323,38 +341,61 @@
         },
         {
           "platform": "Short Video",
-          "status": "ready",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
+          "posted_url": "https://youtube.com/shorts/KbtLI34bE24?feature=share",
+          "posted_at": "2026-05-10",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-03/short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/day-03/short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public/",
           "error": null,
-          "idempotency_key": "book01-day03-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+          "idempotency_key": "book01-day03-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
           "caption_source": {
-            "type": "calendar_slot",
-            "text": "Lanterns, tiny treasures, and one curious baby dragon. Ember’s world is built for little seekers.\n\nComing soon to Amazon.",
-            "cta": "Share with a little dragon fan."
+            "type": "calendar_slot_plus_owner_hashtags",
+            "text": "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers.\n\nComing soon to Amazon.",
+            "cta": "Share with a little dragon fan.",
+            "added_hashtags": [
+              "#dragonbooks",
+              "#dragonbooksforkids"
+            ]
           },
-          "approved_asset": "content/outputs/videos/approved/day-3-search-with-ember-veo31-canva-approved-2026-05-10.mp4"
+          "approved_asset": "content/outputs/videos/approved/day-3-search-with-ember-veo31-canva-approved-2026-05-10.mp4",
+          "platform_urls": {
+            "youtube_shorts": "https://youtube.com/shorts/KbtLI34bE24?feature=share",
+            "tiktok": "https://www.tiktok.com/@emberdragonbooks/video/7638457876247252255",
+            "instagram_reels": "https://www.instagram.com/reel/DYLqNdBFHTw/",
+            "facebook_reels": "https://www.facebook.com/reel/1755780122056361",
+            "pinterest_video_pin": "https://www.pinterest.com/pin/1148417973750567056/"
+          },
+          "required_video_surfaces": [
+            "YouTube Shorts",
+            "TikTok",
+            "Instagram Reels",
+            "Facebook Reels",
+            "Pinterest Video Pin"
+          ],
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         }
       ],
       "idempotency_key": "book01-day03",
-      "notes": "Static Day 3 posts are complete; approved Search with Ember short-video MP4 is ready for TikTok, YouTube Shorts, Instagram Reels, and Facebook Reels posting. Also create/upload proper wide YouTube banner and proper wide Facebook Page cover image; do not use a vertical promo crop for either banner surface.",
+      "notes": "Day 3 is complete across tracked platforms: 3 Pinterest still Pins, Pinterest video Pin, Instagram/Facebook feed post, Instagram/Facebook Reel, YouTube Short, and TikTok video are posted.",
       "source_refs": [
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
         "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md",
         "content/outputs/session-logs/2026-05-06-session.md",
         "content/workflows/book-01/production-status.md",
-        "content/outputs/marketing/posts/2026-05-06-early-day-3-search-with-ember-pinterest-pins.md"
+        "content/outputs/marketing/posts/2026-05-06-early-day-3-search-with-ember-pinterest-pins.md",
+        "content/outputs/marketing/posts/2026-05-10-day-3-search-with-ember-short-video-platform-posts.md"
       ]
     },
     {
       "post_id": "book01-day-04",
       "campaign_day": 4,
       "status": "ready-to-schedule",
-      "scheduled_date": "2026-05-08",
+      "scheduled_date": "2026-05-10",
       "platforms": [
         "Pinterest",
         "Instagram",
@@ -420,7 +461,11 @@
             "type": "calendar_slot",
             "text": "Can you find the Baby Flame Lantern hiding in Ember's cozy festival world?\n\nComing soon to Amazon.",
             "cta": "Save this tiny-treasure challenge."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Facebook",
@@ -446,13 +491,24 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day04-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+          "idempotency_key": "book01-day04-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
           "caption_source": {
             "type": "calendar_slot",
             "text": "Can you find the Baby Flame Lantern hiding in Ember's cozy festival world?\n\nComing soon to Amazon.",
             "cta": "Save this tiny-treasure challenge."
           },
-          "approved_asset": "content/outputs/videos/approved/day-4-find-the-dragonflame-lantern-veo31-canva-approved-2026-05-10.mp4"
+          "approved_asset": "content/outputs/videos/approved/day-4-find-the-dragonflame-lantern-veo31-canva-approved-2026-05-10.mp4",
+          "required_video_surfaces": [
+            "YouTube Shorts",
+            "TikTok",
+            "Instagram Reels",
+            "Facebook Reels",
+            "Pinterest Video Pin"
+          ],
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         }
       ],
       "idempotency_key": "book01-day04",
@@ -467,7 +523,7 @@
       "post_id": "book01-day-05",
       "campaign_day": 5,
       "status": "ready-to-schedule",
-      "scheduled_date": "2026-05-09",
+      "scheduled_date": "2026-05-11",
       "platforms": [
         "Pinterest",
         "Instagram",
@@ -533,7 +589,11 @@
             "type": "calendar_slot",
             "text": "The Lantern Maker’s Workshop is full of tiny details for young eyes to explore.\n\nComing soon to Amazon.",
             "cta": "Follow for the next Ember progress update."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Facebook",
@@ -559,13 +619,24 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day05-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+          "idempotency_key": "book01-day05-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
           "caption_source": {
             "type": "calendar_slot",
             "text": "The Lantern Maker’s Workshop is full of tiny details for young eyes to explore.\n\nComing soon to Amazon.",
             "cta": "Follow for the next Ember progress update."
           },
-          "approved_asset": "content/outputs/videos/approved/day-5-help-ember-find-it-veo31-canva-approved-2026-05-10.mp4"
+          "approved_asset": "content/outputs/videos/approved/day-5-help-ember-find-it-veo31-canva-approved-2026-05-10.mp4",
+          "required_video_surfaces": [
+            "YouTube Shorts",
+            "TikTok",
+            "Instagram Reels",
+            "Facebook Reels",
+            "Pinterest Video Pin"
+          ],
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         }
       ],
       "idempotency_key": "book01-day05",
@@ -580,7 +651,7 @@
       "post_id": "book01-day-06",
       "campaign_day": 6,
       "status": "ready-to-schedule",
-      "scheduled_date": "2026-05-10",
+      "scheduled_date": "2026-05-12",
       "platforms": [
         "Pinterest",
         "Instagram",
@@ -612,7 +683,11 @@
             "type": "calendar_slot",
             "text": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers.\n\nComing soon to Amazon.",
             "cta": "Save for later if you love hidden-object books."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Pinterest",
@@ -629,7 +704,11 @@
             "type": "calendar_slot",
             "text": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers.\n\nComing soon to Amazon.",
             "cta": "Save for later if you love hidden-object books."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Pinterest",
@@ -646,7 +725,11 @@
             "type": "calendar_slot",
             "text": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers.\n\nComing soon to Amazon.",
             "cta": "Save for later if you love hidden-object books."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Instagram",
@@ -661,7 +744,11 @@
             "type": "calendar_slot",
             "text": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers.\n\nComing soon to Amazon.",
             "cta": "Save for later if you love hidden-object books."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Facebook",
@@ -687,13 +774,24 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day06-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+          "idempotency_key": "book01-day06-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
           "caption_source": {
             "type": "calendar_slot",
             "text": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers.\n\nComing soon to Amazon.",
             "cta": "Save for later if you love hidden-object books."
           },
-          "approved_asset": "content/outputs/videos/approved/day-6-tiny-treasure-veo31-canva-approved-2026-05-10.mp4"
+          "approved_asset": "content/outputs/videos/approved/day-6-tiny-treasure-veo31-canva-approved-2026-05-10.mp4",
+          "required_video_surfaces": [
+            "YouTube Shorts",
+            "TikTok",
+            "Instagram Reels",
+            "Facebook Reels",
+            "Pinterest Video Pin"
+          ],
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         }
       ],
       "idempotency_key": "book01-day06",
@@ -708,7 +806,7 @@
       "post_id": "book01-day-07",
       "campaign_day": 7,
       "status": "ready-to-schedule",
-      "scheduled_date": "2026-05-11",
+      "scheduled_date": "2026-05-13",
       "platforms": [
         "Pinterest",
         "Instagram",
@@ -740,7 +838,11 @@
             "type": "calendar_slot",
             "text": "Can your little seeker find the Golden Welcome Bell among the festival decorations?\n\nComing soon to Amazon.",
             "cta": "Save the challenge and try it together."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Pinterest",
@@ -757,7 +859,11 @@
             "type": "calendar_slot",
             "text": "Can your little seeker find the Golden Welcome Bell among the festival decorations?\n\nComing soon to Amazon.",
             "cta": "Save the challenge and try it together."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Pinterest",
@@ -774,7 +880,11 @@
             "type": "calendar_slot",
             "text": "Can your little seeker find the Golden Welcome Bell among the festival decorations?\n\nComing soon to Amazon.",
             "cta": "Save the challenge and try it together."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Instagram",
@@ -789,7 +899,11 @@
             "type": "calendar_slot",
             "text": "Can your little seeker find the Golden Welcome Bell among the festival decorations?\n\nComing soon to Amazon.",
             "cta": "Save the challenge and try it together."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Facebook",
@@ -815,13 +929,24 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day07-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+          "idempotency_key": "book01-day07-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
           "caption_source": {
             "type": "calendar_slot",
             "text": "Can your little seeker find the Golden Welcome Bell among the festival decorations?\n\nComing soon to Amazon.",
             "cta": "Save the challenge and try it together."
           },
-          "approved_asset": "content/outputs/videos/approved/day-7-golden-welcome-bell-veo31-canva-approved-2026-05-10.mp4"
+          "approved_asset": "content/outputs/videos/approved/day-7-golden-welcome-bell-veo31-canva-approved-2026-05-10.mp4",
+          "required_video_surfaces": [
+            "YouTube Shorts",
+            "TikTok",
+            "Instagram Reels",
+            "Facebook Reels",
+            "Pinterest Video Pin"
+          ],
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         }
       ],
       "idempotency_key": "book01-day07",
@@ -836,7 +961,7 @@
       "post_id": "book01-day-08",
       "campaign_day": 8,
       "status": "ready-to-schedule",
-      "scheduled_date": "2026-05-12",
+      "scheduled_date": "2026-05-14",
       "platforms": [
         "Pinterest",
         "Instagram",
@@ -868,7 +993,11 @@
             "type": "calendar_slot",
             "text": "Find the Firefly Flower Charm.\n\nComing soon to Amazon.",
             "cta": "Tap, pause, and search."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Pinterest",
@@ -885,7 +1014,11 @@
             "type": "calendar_slot",
             "text": "Find the Firefly Flower Charm.\n\nComing soon to Amazon.",
             "cta": "Tap, pause, and search."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Pinterest",
@@ -902,7 +1035,11 @@
             "type": "calendar_slot",
             "text": "Find the Firefly Flower Charm.\n\nComing soon to Amazon.",
             "cta": "Tap, pause, and search."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Instagram",
@@ -917,7 +1054,11 @@
             "type": "calendar_slot",
             "text": "Find the Firefly Flower Charm.\n\nComing soon to Amazon.",
             "cta": "Tap, pause, and search."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Facebook",
@@ -943,13 +1084,24 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day08-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+          "idempotency_key": "book01-day08-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
           "caption_source": {
             "type": "calendar_slot",
             "text": "Find the Firefly Flower Charm.\n\nComing soon to Amazon.",
             "cta": "Tap, pause, and search."
           },
-          "approved_asset": "content/outputs/videos/approved/day-8-firefly-flower-charm-veo31-canva-approved-2026-05-10.mp4"
+          "approved_asset": "content/outputs/videos/approved/day-8-firefly-flower-charm-veo31-canva-approved-2026-05-10.mp4",
+          "required_video_surfaces": [
+            "YouTube Shorts",
+            "TikTok",
+            "Instagram Reels",
+            "Facebook Reels",
+            "Pinterest Video Pin"
+          ],
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         }
       ],
       "idempotency_key": "book01-day08",
@@ -964,7 +1116,7 @@
       "post_id": "book01-day-09",
       "campaign_day": 9,
       "status": "ready-to-schedule",
-      "scheduled_date": "2026-05-13",
+      "scheduled_date": "2026-05-15",
       "platforms": [
         "Pinterest",
         "Instagram",
@@ -996,7 +1148,11 @@
             "type": "calendar_slot",
             "text": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene.\n\nComing soon to Amazon.",
             "cta": "Can you spot it?"
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Pinterest",
@@ -1013,7 +1169,11 @@
             "type": "calendar_slot",
             "text": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene.\n\nComing soon to Amazon.",
             "cta": "Can you spot it?"
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Pinterest",
@@ -1030,7 +1190,11 @@
             "type": "calendar_slot",
             "text": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene.\n\nComing soon to Amazon.",
             "cta": "Can you spot it?"
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Instagram",
@@ -1045,7 +1209,11 @@
             "type": "calendar_slot",
             "text": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene.\n\nComing soon to Amazon.",
             "cta": "Can you spot it?"
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Facebook",
@@ -1071,13 +1239,24 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day09-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+          "idempotency_key": "book01-day09-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
           "caption_source": {
             "type": "calendar_slot",
             "text": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene.\n\nComing soon to Amazon.",
             "cta": "Can you spot it?"
           },
-          "approved_asset": "content/outputs/videos/approved/day-9-find-the-key-veo31-canva-approved-2026-05-10.mp4"
+          "approved_asset": "content/outputs/videos/approved/day-9-find-the-key-veo31-canva-approved-2026-05-10.mp4",
+          "required_video_surfaces": [
+            "YouTube Shorts",
+            "TikTok",
+            "Instagram Reels",
+            "Facebook Reels",
+            "Pinterest Video Pin"
+          ],
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         }
       ],
       "idempotency_key": "book01-day09",
@@ -1092,7 +1271,7 @@
       "post_id": "book01-day-10",
       "campaign_day": 10,
       "status": "ready-to-schedule",
-      "scheduled_date": "2026-05-14",
+      "scheduled_date": "2026-05-16",
       "platforms": [
         "Pinterest",
         "Instagram",
@@ -1124,7 +1303,11 @@
             "type": "calendar_slot",
             "text": "Can you find the Sparkle Market Token among the cozy market treasures?\n\nComing soon to Amazon.",
             "cta": "Save this for a quick seek-and-find break."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Pinterest",
@@ -1141,7 +1324,11 @@
             "type": "calendar_slot",
             "text": "Can you find the Sparkle Market Token among the cozy market treasures?\n\nComing soon to Amazon.",
             "cta": "Save this for a quick seek-and-find break."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Pinterest",
@@ -1158,7 +1345,11 @@
             "type": "calendar_slot",
             "text": "Can you find the Sparkle Market Token among the cozy market treasures?\n\nComing soon to Amazon.",
             "cta": "Save this for a quick seek-and-find break."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Instagram",
@@ -1173,7 +1364,11 @@
             "type": "calendar_slot",
             "text": "Can you find the Sparkle Market Token among the cozy market treasures?\n\nComing soon to Amazon.",
             "cta": "Save this for a quick seek-and-find break."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Facebook",
@@ -1199,13 +1394,24 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day10-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+          "idempotency_key": "book01-day10-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
           "caption_source": {
             "type": "calendar_slot",
             "text": "Can you find the Sparkle Market Token among the cozy market treasures?\n\nComing soon to Amazon.",
             "cta": "Save this for a quick seek-and-find break."
           },
-          "approved_asset": "content/outputs/videos/approved/day-10-sparkle-market-token-veo31-canva-approved-2026-05-10.mp4"
+          "approved_asset": "content/outputs/videos/approved/day-10-sparkle-market-token-veo31-canva-approved-2026-05-10.mp4",
+          "required_video_surfaces": [
+            "YouTube Shorts",
+            "TikTok",
+            "Instagram Reels",
+            "Facebook Reels",
+            "Pinterest Video Pin"
+          ],
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         }
       ],
       "idempotency_key": "book01-day10",
@@ -1220,7 +1426,7 @@
       "post_id": "book01-day-11",
       "campaign_day": 11,
       "status": "ready-to-schedule",
-      "scheduled_date": "2026-05-15",
+      "scheduled_date": "2026-05-17",
       "platforms": [
         "Pinterest",
         "Instagram",
@@ -1252,7 +1458,11 @@
             "type": "calendar_slot",
             "text": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time.\n\nComing soon to Amazon.",
             "cta": "Follow along as the book comes together."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Pinterest",
@@ -1269,7 +1479,11 @@
             "type": "calendar_slot",
             "text": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time.\n\nComing soon to Amazon.",
             "cta": "Follow along as the book comes together."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Pinterest",
@@ -1286,7 +1500,11 @@
             "type": "calendar_slot",
             "text": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time.\n\nComing soon to Amazon.",
             "cta": "Follow along as the book comes together."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Instagram",
@@ -1301,7 +1519,11 @@
             "type": "calendar_slot",
             "text": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time.\n\nComing soon to Amazon.",
             "cta": "Follow along as the book comes together."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Facebook",
@@ -1327,13 +1549,24 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day11-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+          "idempotency_key": "book01-day11-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
           "caption_source": {
             "type": "calendar_slot",
             "text": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time.\n\nComing soon to Amazon.",
             "cta": "Follow along as the book comes together."
           },
-          "approved_asset": "content/outputs/videos/approved/day-11-meet-ember-veo31-canva-approved-2026-05-10.mp4"
+          "approved_asset": "content/outputs/videos/approved/day-11-meet-ember-veo31-canva-approved-2026-05-10.mp4",
+          "required_video_surfaces": [
+            "YouTube Shorts",
+            "TikTok",
+            "Instagram Reels",
+            "Facebook Reels",
+            "Pinterest Video Pin"
+          ],
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         }
       ],
       "idempotency_key": "book01-day11",
@@ -1348,7 +1581,7 @@
       "post_id": "book01-day-12",
       "campaign_day": 12,
       "status": "ready-to-schedule",
-      "scheduled_date": "2026-05-16",
+      "scheduled_date": "2026-05-18",
       "platforms": [
         "Pinterest",
         "Instagram",
@@ -1380,7 +1613,11 @@
             "type": "calendar_slot",
             "text": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons.\n\nComing soon to Amazon.",
             "cta": "Save for children's book gift ideas."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Pinterest",
@@ -1397,7 +1634,11 @@
             "type": "calendar_slot",
             "text": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons.\n\nComing soon to Amazon.",
             "cta": "Save for children's book gift ideas."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Pinterest",
@@ -1414,7 +1655,11 @@
             "type": "calendar_slot",
             "text": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons.\n\nComing soon to Amazon.",
             "cta": "Save for children's book gift ideas."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Instagram",
@@ -1429,7 +1674,11 @@
             "type": "calendar_slot",
             "text": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons.\n\nComing soon to Amazon.",
             "cta": "Save for children's book gift ideas."
-          }
+          },
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Facebook",
@@ -1455,13 +1704,24 @@
           "receipt_path": null,
           "evidence_path": null,
           "error": null,
-          "idempotency_key": "book01-day12-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels",
+          "idempotency_key": "book01-day12-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
           "caption_source": {
             "type": "calendar_slot",
             "text": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons.\n\nComing soon to Amazon.",
             "cta": "Save for children's book gift ideas."
           },
-          "approved_asset": "content/outputs/videos/approved/day-12-search-with-ember-2-veo31-canva-approved-2026-05-10.mp4"
+          "approved_asset": "content/outputs/videos/approved/day-12-search-with-ember-2-veo31-canva-approved-2026-05-10.mp4",
+          "required_video_surfaces": [
+            "YouTube Shorts",
+            "TikTok",
+            "Instagram Reels",
+            "Facebook Reels",
+            "Pinterest Video Pin"
+          ],
+          "required_hashtags": [
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         }
       ],
       "idempotency_key": "book01-day12",
@@ -1472,5 +1732,31 @@
         "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md"
       ]
     }
-  ]
+  ],
+  "posting_requirements": {
+    "pinterest_still_pins_per_day": 3,
+    "required_short_video_surfaces": [
+      "YouTube Shorts",
+      "TikTok",
+      "Instagram Reels",
+      "Facebook Reels",
+      "Pinterest Video Pin"
+    ],
+    "required_hashtags": {
+      "platforms": [
+        "Pinterest",
+        "Instagram",
+        "Short Video"
+      ],
+      "tags": [
+        "#dragonbooks",
+        "#dragonbooksforkids"
+      ],
+      "applies_to_statuses": [
+        "ready",
+        "needs-video-export"
+      ]
+    },
+    "notes": "Every campaign day requires three Pinterest still Pins. Every short-video bundle requires YouTube Shorts, TikTok, Instagram Reels, Facebook Reels, and Pinterest Video Pin. Use #dragonbooks and #dragonbooksforkids wherever hashtag-friendly posting surfaces use hashtags."
+  }
 }

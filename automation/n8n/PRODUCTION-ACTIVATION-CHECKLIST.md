@@ -12,6 +12,23 @@ Do not activate Discord yet. Discord remains Phase 9.
 - Workflow JSON exports in `automation/n8n/workflows/` pass `npm run n8n:check`.
 - Each workflow has passed test-mode verification before production activation.
 
+## Q1 Prevention Gate
+
+Before building or activating any social-posting n8n flow, run the rating-efficiency question:
+
+```powershell
+npm run social:what-next
+npm run social:handoff
+```
+
+Ask: can any upcoming or looming posting task be kept from becoming Q1?
+
+- If `social:handoff` returns a `due_pressure_chunk`, use that chunk as the fixture for dry-run payloads, receipt paths, evidence paths, hashtags, media paths, and platform gate labels.
+- Do not use overdue live posts as the first true automated publish test.
+- Do not start credential setup, app review, OAuth work, or live publishing until a read-only dry run can produce the complete chunk packet.
+- Stop at the first platform gate that is `needs credential`, `needs public media URL`, `needs app review`, `needs audit`, or `manual-only`; record the gate instead of trying to work around it.
+- Prefer one useful read-only chunk dry run over several platform-specific experiments that do not update the canonical queue or handoff notes.
+
 ## Confirm Local API
 
 ```powershell

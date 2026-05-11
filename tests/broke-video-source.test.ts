@@ -397,7 +397,7 @@ function makePost(day: number, status: string, asset: string): QueuePost {
       {
         platform: "Short Video",
         status,
-        idempotency_key: `book01-day${String(day).padStart(2, "0")}-short-video-tiktok-youtube-shorts-instagram-reels-facebook-reels`,
+        idempotency_key: `book01-day${String(day).padStart(2, "0")}-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public`,
         caption_source: {
           type: "calendar_slot",
           text: `Day ${day} caption\n\nComing soon to Amazon.`,

@@ -9,6 +9,9 @@ export interface NextReadyTask {
   status: unknown;
   idempotency_key: unknown;
   board_name: unknown;
+  required_hashtags: unknown;
+  required_video_surfaces: unknown;
+  legacy_missing_required_video_surfaces: unknown;
   media_assets: unknown;
   caption_source: unknown;
   source_refs: unknown;
@@ -28,6 +31,9 @@ function buildNextTask(post: QueuePost, task: PlatformTask): NextReadyTask {
     status: task.status,
     idempotency_key: task.idempotency_key,
     board_name: task.board_name,
+    required_hashtags: task.required_hashtags,
+    required_video_surfaces: task.required_video_surfaces,
+    legacy_missing_required_video_surfaces: task.legacy_missing_required_video_surfaces,
     media_assets: post.media_assets,
     caption_source: task.caption_source ?? post.caption_source,
     source_refs: post.source_refs,

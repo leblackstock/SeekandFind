@@ -86,8 +86,8 @@ describe("marketing calendar", () => {
     expect(dayTwoThirdPinterest?.copy).not.toBe(dayTwoSecondaryPinterest?.copy);
     expect(fireflyVideo).toMatchObject({
       status: "ready",
-      placement: "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels",
-      notes: "Tall asset is ready for mobile-first Seedance storyboard/export use."
+      placement: "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels, Pinterest Video Pin",
+      notes: "Tall asset is ready for mobile-first Seedance storyboard/export use. Include #dragonbooks and #dragonbooksforkids wherever platform hashtags are used."
     });
   });
 
@@ -112,6 +112,7 @@ describe("marketing calendar", () => {
     expect(text).toContain("## Reusable Next-Book Inputs");
     expect(text).toContain("three distinct Pinterest Pins");
     expect(text).toContain("Seedance image-to-video export");
+    expect(text).toContain("Pinterest Video Pin");
     expect(text).toContain("Day 1: Meet Ember");
   });
 

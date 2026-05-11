@@ -30,6 +30,7 @@
     "social:mark-result": "tsx automation/social/mark-task-result.ts",
     "social:plan-evidence": "tsx automation/social/plan-task-evidence.ts",
     "social:handoff": "tsx automation/social/get-posting-handoff.ts",
+    "social:live-upload-recovery": "tsx automation/social/live-upload-recovery.ts --",
     "social:dry-run-post": "tsx automation/social/playwright-dry-run-post.ts --",
     "social:meta-access-check": "tsx automation/social/meta-access-check.ts --",
     "social:meta-dry-run-post": "tsx automation/social/meta-dry-run-post.ts --",
