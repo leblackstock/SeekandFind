@@ -276,7 +276,7 @@ function scoreCandidates(
       reason: duePressureChunk.scope === "behind_or_due_today"
         ? `Ready work is behind or due today across ${duePressureChunk.task_count} task(s); chunking prevents repeated handoff/browser/receipt setup.`
         : `Ready work is due within 2 days across ${duePressureChunk.task_count} task(s); preparing it now keeps it from becoming Q1.`,
-      usefulCommand: "npm run social:handoff",
+      usefulCommand: "npm run social:today",
       avoid: "Do not run one-task handoff/browser loops when a due-pressure chunk exists."
     });
   }

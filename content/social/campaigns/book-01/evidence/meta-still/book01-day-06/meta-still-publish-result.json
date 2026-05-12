@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "mode": "ready-for-review",
+  "campaign_day": 6,
+  "media_asset": "content/outputs/images/approved/meta-feed-4x5/book-01/day-06-meta-feed-4x5-approved.png",
+  "caption": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers.\n\nComing soon to Amazon.\n\nSave for later if you love hidden-object books.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #HiddenObjectBook #KidsBooks #FamilyReading #EmberDragonBooks #dragonbooks #dragonbooksforkids",
+  "screenshots": [
+    "content/social/campaigns/book-01/evidence/meta-still/book01-day-06/01-composer-opened.png",
+    "content/social/campaigns/book-01/evidence/meta-still/book01-day-06/02-before-publish.png"
+  ],
+  "actions": [
+    "destinations_visible",
+    "clicked_add_photo",
+    "clicked_upload_choice",
+    "media_uploaded_via_upload_choice",
+    "caption_filled:[contenteditable='true']:0",
+    "stopped_before_publish_missing_yes_publish"
+  ],
+  "blocker_seen": null,
+  "urls": {
+    "instagram": null,
+    "facebook": null
+  },
+  "queue_updates": [],
+  "result_path": "content/social/campaigns/book-01/evidence/meta-still/book01-day-06/meta-still-publish-result.json"
+}

@@ -69,7 +69,7 @@ async function getPostingHandoff(): Promise<unknown> {
     workflow_efficiency: {
       question: "Can any upcoming or looming task be kept from becoming Q1?",
       recommendation: duePressureChunk
-        ? duePressureChunk.prevention_path
+        ? `${duePressureChunk.prevention_path} Start from npm run social:today for the compact packet.`
         : "No due-pressure chunk is currently ready; use the single next task."
     },
     evidence_plan: createEvidencePlan({

@@ -20,6 +20,7 @@ This repo contains the Ember seek-and-find source files plus `ember-content-stud
 
 - Token efficiency: When summarizing file contents, use a diff format, bullet points, or a short targeted excerpt. Do not rewrite an entire file in chat unless Lauren explicitly asks to see the full code.
 - Self-correction: If a command returns a 404, 500, missing-file, or missing-route error, immediately list or inspect the parent directory or route group before trying a new path. Do not keep guessing alternate paths without verifying what actually exists.
+- YouTube upload screens only: if automation attempts a reload/refresh/navigation while a YouTube Studio upload or draft is open, immediately cancel/dismiss the possible reload/leave-page warning and continue the current YouTube upload flow. Do this even if the automation did not detect a dialog event; detection is not required before canceling. Do not inspect, re-verify, or retry anything before canceling.
 - For any Instagram or Facebook live posting, reposting, or scheduling, use Meta Business Suite / Meta posting tools by default. When the same asset/caption is meant for both Instagram and Facebook, post them together from one Meta composer action with both destinations selected; do not split them into separate IG/FB posts unless Lauren explicitly asks or Meta blocks the combined post.
 
 ## Promo Art Format Rules

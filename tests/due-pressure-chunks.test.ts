@@ -50,4 +50,15 @@ describe("due-pressure chunks", () => {
     expect(chunk?.days).toEqual([6, 7]);
     expect(chunk?.task_count).toBe(2);
   });
+
+  it("uses the campaign timezone near midnight UTC", () => {
+    const chunk = buildDuePressureChunk([
+      post(6, "2026-05-12", ["ready"]),
+      post(7, "2026-05-13", ["ready"]),
+      post(8, "2026-05-14", ["ready"])
+    ], new Date("2026-05-12T03:53:00Z"));
+
+    expect(chunk?.scope).toBe("due_soon_next_2_days");
+    expect(chunk?.days).toEqual([6, 7]);
+  });
 });

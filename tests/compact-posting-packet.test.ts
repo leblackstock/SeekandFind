@@ -59,8 +59,8 @@ describe("compact posting packet", () => {
     expect(packet.markdown).toContain("asset: day-6.png");
     expect(packet.markdown).toContain("asset: day-6-meta.png");
     expect(packet.markdown).toContain("receipt: content/social/campaigns/book-01/receipts/pinterest/book01-day-06/day-6-pinterest.json");
-    expect(packet.markdown).toContain("receipt-helper: npm run social:receipt -- day-6-pinterest <POST_URL>");
-    expect(packet.markdown).toContain("each helper prints the queue mark command");
+    expect(packet.markdown).toContain("done-helper: npm run social:done -- day-6-pinterest <POST_URL>");
+    expect(packet.markdown).toContain("each helper writes the receipt, marks the queue, validates, and prints the next packet");
     expect(packet.markdown).not.toContain("mark: npm run social:mark-result");
   });
 
@@ -76,13 +76,28 @@ describe("compact posting packet", () => {
 
     expect(packet.postingAllowed).toBe(false);
     expect(packet.selectedCount).toBe(4);
-    expect(packet.markdown).toContain("Today: 2026-05-11");
+    expect(packet.markdown).toContain("Today (America/New_York): 2026-05-11");
     expect(packet.markdown).toContain("Mode: PREP ONLY");
     expect(packet.markdown).toContain("Source: due-pressure chunk (due_soon_next_2_days)");
     expect(packet.markdown).toContain("Chunk days: Day 6, Day 7");
     expect(packet.markdown).toContain("## Day 6 - 2026-05-12");
     expect(packet.markdown).toContain("## Day 7 - 2026-05-13");
     expect(packet.markdown).not.toContain("## Day 8 - 2026-05-14");
+  });
+
+  it("uses the campaign timezone instead of the host UTC date", () => {
+    const packet = buildCompactPostingPacket([
+      post(6, "2026-05-12"),
+      post(7, "2026-05-13"),
+      post(8, "2026-05-14")
+    ], {
+      autoDuePressureChunk: true,
+      today: new Date("2026-05-12T03:53:00Z")
+    });
+
+    expect(packet.markdown).toContain("Today (America/New_York): 2026-05-11");
+    expect(packet.markdown).toContain("Source: due-pressure chunk (due_soon_next_2_days)");
+    expect(packet.markdown).toContain("Chunk days: Day 6, Day 7");
   });
 
   it("allows live posting for an automatic chunk that is due today", () => {

@@ -39,6 +39,14 @@ curl http://localhost:3333/health
 
 ## CLI Examples
 
+Start the Book 1 social posting/prep lane:
+
+```powershell
+npm run social:today
+```
+
+Use this as the single front door for social work. It reads the canonical queue, uses the America/New_York campaign clock for date gates, selects the due-pressure chunk, and prints the compact packet with captions, assets, receipt paths, and done-helper commands.
+
 Generate a seek page pack:
 
 ```powershell

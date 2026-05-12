@@ -211,7 +211,8 @@ export function buildPostingReceipt(
     evidence_path: evidencePath,
     source_records: [
       "content/social/campaigns/book-01/views/tomorrow-start-plan.md",
-      "npm run social:receipt"
+      "npm run social:receipt",
+      "npm run social:done"
     ]
   };
 

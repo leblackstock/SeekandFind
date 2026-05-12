@@ -12,7 +12,7 @@ import {
 const allowedNewStatuses = new Set(["posted", "posted-early", "error", "skipped"]);
 const valueOptionNames = ["idempotency-key", "status", "posted-url", "posted-at", "receipt-path", "evidence-path", "error"];
 
-interface CliOptions {
+export interface MarkTaskResultOptions {
   idempotencyKey?: string;
   status?: string;
   postedUrl?: string;
@@ -20,7 +20,22 @@ interface CliOptions {
   receiptPath?: string;
   evidencePath?: string;
   error?: string;
-  force: boolean;
+  platformUrls?: unknown[];
+  force?: boolean;
+}
+
+export interface MarkTaskResultSummary {
+  ok: true;
+  idempotency_key: string;
+  post_id: unknown;
+  platform: unknown;
+  old_status: string | null;
+  new_status: unknown;
+  posted_url: unknown;
+  posted_at: unknown;
+  receipt_path: unknown;
+  evidence_path: unknown;
+  error: unknown;
 }
 
 interface TaskMatch {
@@ -87,7 +102,7 @@ function readFlag(args: string[], name: string): boolean {
   return args.includes(`--${name}`);
 }
 
-function parseArgs(args: string[]): CliOptions {
+function parseArgs(args: string[]): MarkTaskResultOptions {
   const normalizedArgs = normalizeNpmConsumedArgs(args);
   const positional = normalizedArgs.filter((arg) => !arg.startsWith("--"));
   const positionalStatus = readOption(normalizedArgs, "status") ?? positional[1];
@@ -106,9 +121,18 @@ function parseArgs(args: string[]): CliOptions {
   };
 }
 
+export class MarkTaskResultError extends Error {
+  errors: string[];
+
+  constructor(message: string, errors: string[] = [message]) {
+    super(message);
+    this.name = "MarkTaskResultError";
+    this.errors = errors;
+  }
+}
+
 function fail(message: string, errors: string[] = [message]): never {
-  console.log(JSON.stringify({ ok: false, message, errors }));
-  process.exit(1);
+  throw new MarkTaskResultError(message, errors);
 }
 
 function platformTasks(post: QueuePost): PlatformTask[] {
@@ -125,20 +149,21 @@ function findMatches(posts: QueuePost[], idempotencyKey: string): TaskMatch[] {
   return matches;
 }
 
-function applyTaskUpdate(task: PlatformTask, options: CliOptions): void {
+function applyTaskUpdate(task: PlatformTask, options: MarkTaskResultOptions): void {
   task.status = options.status;
   if (options.postedUrl !== undefined) task.posted_url = options.postedUrl;
   if (options.postedAt !== undefined) task.posted_at = options.postedAt;
   if (options.receiptPath !== undefined) task.receipt_path = options.receiptPath;
   if (options.evidencePath !== undefined) task.evidence_path = options.evidencePath;
   if (options.error !== undefined) task.error = options.error;
+  if (options.platformUrls !== undefined) task.platform_urls = options.platformUrls;
 }
 
 function isPostedStatus(status: unknown): boolean {
   return status === "posted" || status === "posted-early";
 }
 
-async function markTaskResult(options: CliOptions): Promise<void> {
+export async function markTaskResult(options: MarkTaskResultOptions): Promise<MarkTaskResultSummary> {
   if (!options.idempotencyKey) fail("Missing required --idempotency-key.");
   if (!options.status) fail("Missing required --status.");
   if (!allowedNewStatuses.has(options.status)) {
@@ -183,7 +208,7 @@ async function markTaskResult(options: CliOptions): Promise<void> {
   const after = await validateSocialQueue();
   if (!after.ok) fail("Social queue validation failed after update.", after.errors);
 
-  console.log(JSON.stringify({
+  return {
     ok: true,
     idempotency_key: options.idempotencyKey,
     post_id: match.post.post_id,
@@ -195,17 +220,19 @@ async function markTaskResult(options: CliOptions): Promise<void> {
     receipt_path: match.task.receipt_path ?? null,
     evidence_path: match.task.evidence_path ?? null,
     error: match.task.error ?? null
-  }));
+  };
 }
 
 async function main(): Promise<void> {
-  await markTaskResult(parseArgs(process.argv.slice(2).filter((arg) => arg !== "--")));
+  const result = await markTaskResult(parseArgs(process.argv.slice(2).filter((arg) => arg !== "--")));
+  console.log(JSON.stringify(result));
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   main().catch((error: unknown) => {
     const message = error instanceof Error ? error.message : String(error);
-    console.log(JSON.stringify({ ok: false, message, errors: [message] }));
+    const errors = error instanceof MarkTaskResultError ? error.errors : [message];
+    console.log(JSON.stringify({ ok: false, message, errors }));
     process.exitCode = 1;
   });
 }

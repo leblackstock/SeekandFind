@@ -2,6 +2,7 @@ import { existsSync } from "node:fs";
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { pathToFileURL } from "node:url";
+import { campaignDateKey, campaignTimeZone, dateFromCampaignKey } from "./campaign-clock.js";
 import { buildDuePressureChunk, DuePressureChunk } from "./due-pressure-chunks.js";
 import { buildPostingAssetRequirements } from "./posting-assets.js";
 import { createEvidencePlan } from "./plan-task-evidence.js";
@@ -42,13 +43,6 @@ function platformTasks(post: QueuePost): PlatformTask[] {
   return Array.isArray(post.platform_tasks) ? post.platform_tasks as PlatformTask[] : [];
 }
 
-function localDateKey(date = new Date()): string {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
-}
-
 function readOption(args: string[], name: string): string | undefined {
   const prefix = `--${name}=`;
   const inline = args.find((arg) => arg.startsWith(prefix));
@@ -67,12 +61,9 @@ function parseDays(value: string | undefined): number[] | undefined {
   return days.length ? days : undefined;
 }
 
-function parseLocalDate(value: string | undefined): Date | undefined {
+function parseCampaignDate(value: string | undefined): Date | undefined {
   if (!value) return undefined;
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) {
-    throw new Error(`Expected --today as YYYY-MM-DD, received: ${value}`);
-  }
-  return new Date(`${value}T12:00:00`);
+  return dateFromCampaignKey(value);
 }
 
 function parseArgs(args: string[]): CliOptions {
@@ -80,7 +71,7 @@ function parseArgs(args: string[]): CliOptions {
   const day = readOption(cleanArgs, "day") ?? cleanArgs.find((arg) => /^\d+$/.test(arg));
   const days = parseDays(readOption(cleanArgs, "days") ?? day);
   const positionalDate = cleanArgs.find((arg) => /^\d{4}-\d{2}-\d{2}$/.test(arg));
-  const today = parseLocalDate(readOption(cleanArgs, "today") ?? positionalDate ?? process.env.SOCIAL_TODAY_DATE);
+  const today = parseCampaignDate(readOption(cleanArgs, "today") ?? positionalDate ?? process.env.SOCIAL_TODAY_DATE);
   const lifecycleEvent = process.env.npm_lifecycle_event;
   const hasExplicitDayMode = Boolean(days?.length || cleanArgs.includes("--prep") || cleanArgs.includes("prep"));
   const autoDuePressureChunk = cleanArgs.includes("--auto-chunk")
@@ -111,7 +102,7 @@ function sortTasks(left: SelectedTask, right: SelectedTask): number {
 }
 
 function selectTasks(posts: QueuePost[], options: CompactPacketOptions): SelectedTask[] {
-  const todayKey = localDateKey(options.today);
+  const todayKey = campaignDateKey(options.today);
   const allowedDays = new Set(options.days ?? []);
   const selected: SelectedTask[] = [];
 
@@ -177,11 +168,11 @@ function hasMissingRequiredAsset(post: QueuePost, task: PlatformTask): boolean {
     .some((requirement) => requirement.required && requirement.status === "missing");
 }
 
-function receiptCommand(task: PlatformTask): string {
+function doneCommand(task: PlatformTask): string {
   const key = asString(task.idempotency_key);
   if (task.platform === "Short Video") {
     return [
-      "npm run social:receipt --",
+      "npm run social:done --",
       key,
       "--youtube <YOUTUBE_SHORTS_URL>",
       "--tiktok <TIKTOK_URL>",
@@ -192,7 +183,7 @@ function receiptCommand(task: PlatformTask): string {
   }
 
   return [
-    "npm run social:receipt --",
+    "npm run social:done --",
     key,
     "<POST_URL>"
   ].join(" ");
@@ -214,7 +205,7 @@ export function buildCompactPostingPacket(
   posts: QueuePost[],
   options: CompactPacketOptions = {}
 ): { ok: boolean; markdown: string; selectedCount: number; postingAllowed: boolean } {
-  const todayKey = localDateKey(options.today);
+  const todayKey = campaignDateKey(options.today);
   const { autoChunk, effectiveOptions, tasks } = resolvePacketSelection(posts, options);
   const grouped = groupByDay(tasks);
   const lines: string[] = [];
@@ -227,7 +218,7 @@ export function buildCompactPostingPacket(
 
   lines.push("# Compact Posting Packet");
   lines.push("");
-  lines.push(`Today: ${todayKey}`);
+  lines.push(`Today (${campaignTimeZone}): ${todayKey}`);
   lines.push(`Mode: ${effectiveOptions.prep ? "PREP ONLY" : postingAllowed ? "LIVE POSTING OK" : "HOLD"}`);
   lines.push(`Ready tasks included: ${tasks.length}`);
   if (autoChunk) {
@@ -238,7 +229,7 @@ export function buildCompactPostingPacket(
   if (futureDays.length) {
     lines.push("Gate: future scheduled day included; do not live post from this packet.");
   }
-  lines.push("Use receipt-helper commands only after live post URL(s) exist; each helper prints the queue mark command.");
+  lines.push("Use done-helper commands only after live post URL(s) exist; each helper writes the receipt, marks the queue, validates, and prints the next packet.");
   lines.push("");
 
   if (!tasks.length) {
@@ -278,17 +269,17 @@ export function buildCompactPostingPacket(
       if (surfaces) lines.push(`  surfaces: ${surfaces}`);
       lines.push(`  receipt: ${evidence.recommended_receipt_path}`);
       lines.push(`  evidence: ${evidence.recommended_evidence_path}`);
-      lines.push(`  receipt-helper: ${receiptCommand(task)}`);
+      lines.push(`  done-helper: ${doneCommand(task)}`);
     }
 
     lines.push("");
   }
 
-  lines.push("After posting:");
+  lines.push("After each live post URL exists:");
   lines.push("");
   lines.push("```powershell");
-  lines.push("npm run validate:social-queue");
-  lines.push("npm run social:what-next");
+  lines.push("# Run the matching done-helper line above.");
+  lines.push("# It writes the receipt, marks the queue, validates, and prints the next packet.");
   lines.push("```");
 
   return {

@@ -1,6 +1,7 @@
 import { PlatformTask, QueuePost } from "./validate-queue.js";
 import { buildPostingAssetRequirements, PostingAssetRequirement } from "./posting-assets.js";
 import { buildPostingCaption } from "./social-captions.js";
+import { addCampaignDaysKey, campaignDateKey } from "./campaign-clock.js";
 
 export type DuePressureScope = "behind_or_due_today" | "due_soon_next_2_days";
 export type DuePressureQuadrant = "Q1" | "Q2";
@@ -42,8 +43,6 @@ interface ReadyTaskWithSort {
   taskIndex: number;
 }
 
-const oneDayMs = 24 * 60 * 60 * 1000;
-
 function asString(value: unknown): string {
   return typeof value === "string" ? value : "";
 }
@@ -62,17 +61,6 @@ function scheduledDate(post: QueuePost): string {
 
 function isIsoDate(value: string): boolean {
   return /^\d{4}-\d{2}-\d{2}$/.test(value);
-}
-
-export function localDateKey(date = new Date()): string {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
-}
-
-export function addDaysKey(date: Date, days: number): string {
-  return localDateKey(new Date(date.getTime() + days * oneDayMs));
 }
 
 function buildReadyTask(post: QueuePost, task: PlatformTask): ReadyChunkTask {
@@ -143,8 +131,8 @@ function buildChunk(
 }
 
 export function buildDuePressureChunk(posts: QueuePost[], today = new Date()): DuePressureChunk | null {
-  const todayKey = localDateKey(today);
-  const dueSoonKey = addDaysKey(today, 2);
+  const todayKey = campaignDateKey(today);
+  const dueSoonKey = addCampaignDaysKey(today, 2);
   const behindOrDue = tasksOnOrBefore(posts, todayKey);
   if (behindOrDue.length > 0) {
     return buildChunk("behind_or_due_today", "Q1", 5, 5, behindOrDue);
