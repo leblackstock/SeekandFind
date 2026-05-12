@@ -2,6 +2,7 @@ import { copyFile, mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { basename, dirname, extname, join } from "node:path";
 import { repoRoot, toRepoRelative } from "../config.js";
+import { durableCdpBrowser } from "./cdp-browser.js";
 import { slugify } from "./naming.js";
 
 export const imageOutputFolders = {
@@ -115,7 +116,7 @@ export function defaultBrokeModeOptions(prompt: string): BrokeModeRuntimeOptions
     pollIntervalMs: 15000,
     recoverOnly: false,
     browserMode: "existing",
-    cdpUrl: "http://127.0.0.1:9222",
+    cdpUrl: durableCdpBrowser.defaultUrl,
     profileDir: ".cache/playwright-chatgpt-profile",
     dryRun: false,
     force: false

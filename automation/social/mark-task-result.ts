@@ -1,7 +1,13 @@
 import { writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
-import { PlatformTask, QueuePost, queuePath, validateSocialQueue } from "./validate-queue.js";
+import {
+  PlatformTask,
+  QueuePost,
+  checkRequiredVideoSurfaces,
+  queuePath,
+  validateSocialQueue
+} from "./validate-queue.js";
 
 const allowedNewStatuses = new Set(["posted", "posted-early", "error", "skipped"]);
 const valueOptionNames = ["idempotency-key", "status", "posted-url", "posted-at", "receipt-path", "evidence-path", "error"];
@@ -128,6 +134,10 @@ function applyTaskUpdate(task: PlatformTask, options: CliOptions): void {
   if (options.error !== undefined) task.error = options.error;
 }
 
+function isPostedStatus(status: unknown): boolean {
+  return status === "posted" || status === "posted-early";
+}
+
 async function markTaskResult(options: CliOptions): Promise<void> {
   if (!options.idempotencyKey) fail("Missing required --idempotency-key.");
   if (!options.status) fail("Missing required --status.");
@@ -149,6 +159,22 @@ async function markTaskResult(options: CliOptions): Promise<void> {
   const oldStatus = typeof match.task.status === "string" ? match.task.status : null;
   if ((oldStatus === "posted" || oldStatus === "posted-early") && !options.force) {
     fail(`Task "${options.idempotencyKey}" is already ${oldStatus}. Re-run with --force to overwrite.`);
+  }
+
+  const updatedTask = { ...match.task };
+  applyTaskUpdate(updatedTask, options);
+
+  if (updatedTask.platform === "Short Video" && isPostedStatus(updatedTask.status)) {
+    const surfaceCheck = await checkRequiredVideoSurfaces(updatedTask);
+    if (surfaceCheck.errors.length > 0 || surfaceCheck.missing.length > 0) {
+      fail(`Short Video bundle "${options.idempotencyKey}" is not complete across all required video surfaces.`, [
+        ...surfaceCheck.errors,
+        ...(surfaceCheck.missing.length
+          ? [`Missing posted URL(s) for required surface(s): ${surfaceCheck.missing.join(", ")}.`]
+          : []),
+        "Keep the task ready until the receipt/platform_urls include every required video surface."
+      ]);
+    }
   }
 
   applyTaskUpdate(match.task, options);

@@ -6,6 +6,7 @@ import { stdin as input, stdout as output } from "node:process";
 import { Browser, BrowserContext, chromium, Locator, Page } from "@playwright/test";
 import { repoRoot } from "../../../src/config.js";
 import { appendSessionLog, updateProductionStatus } from "../../../src/core/progress-tracker.js";
+import { cdpSetupHint } from "../../../src/core/cdp-browser.js";
 import {
   archiveFailedAttempt,
   assertPromptFile,
@@ -682,7 +683,7 @@ async function connectExistingBrowser(options: Pick<BrokeModeRuntimeOptions, "cd
   try {
     browser = await chromium.connectOverCDP(options.cdpUrl);
   } catch {
-    throw new Error(`Could not connect to an existing browser at ${options.cdpUrl}. Start a normal browser with remote debugging or use --browser-mode=manual. Example: chrome.exe --remote-debugging-port=9222 --user-data-dir="%TEMP%\\ember-chatgpt-cdp-profile"`);
+    throw new Error(`Could not connect to an existing browser at ${options.cdpUrl}. ${cdpSetupHint(options.cdpUrl)} Or use --browser-mode=manual.`);
   }
   const context = browser.contexts()[0] ?? await browser.newContext({ acceptDownloads: true });
   return { context, page: await choosePage(context), close: () => disconnectBrowser(browser) };

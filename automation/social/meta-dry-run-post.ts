@@ -3,9 +3,10 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { pathToFileURL } from "node:url";
 import { chromium, type Browser, type BrowserContext, type Locator, type Page } from "@playwright/test";
+import { cdpUrlFromEnv } from "../../src/core/cdp-browser.js";
 import { validateSocialQueue, type PlatformTask, type QueuePost } from "./validate-queue.js";
+import { buildPostingCaption } from "./social-captions.js";
 
-const defaultCdpUrl = "http://127.0.0.1:9222";
 const composerUrl = "https://business.facebook.com/latest/composer";
 const evidenceDir = "content/social/campaigns/book-01/evidence/day-03/meta-dry-run";
 const expectedFacebookPage = "Ember Dragon Books";
@@ -67,7 +68,7 @@ function optionValue(name: string): string | undefined {
 
 function parseOptions(): CliOptions {
   return {
-    cdpUrl: optionValue("cdp-url") ?? process.env.META_CDP_URL ?? process.env.SOCIAL_CDP_URL ?? defaultCdpUrl
+    cdpUrl: optionValue("cdp-url") ?? cdpUrlFromEnv(["META_CDP_URL", "SOCIAL_CDP_URL"])
   };
 }
 
@@ -85,16 +86,6 @@ function normalized(value: string): string {
 
 function bodyHasDestination(text: string, destination: string): boolean {
   return normalized(text).includes(normalized(destination));
-}
-
-function captionText(source: unknown): string {
-  if (typeof source === "string") return source;
-  if (!source || typeof source !== "object") return "";
-  const record = source as Record<string, unknown>;
-  return [record.text, record.cta]
-    .map((value) => asString(value))
-    .filter((value): value is string => Boolean(value))
-    .join("\n\n");
 }
 
 function isMetaPage(page: Page): boolean {
@@ -201,7 +192,8 @@ function findDay3Plan(posts: QueuePost[]): Day3Plan {
   if (!mediaAsset) throw new Error("Day 3 post has no media asset.");
   if (!existsSync(join(process.cwd(), mediaAsset))) throw new Error(`Day 3 media asset does not exist: ${mediaAsset}`);
 
-  const caption = captionText(tasks.find((task) => task.caption_source)?.caption_source ?? post.caption_source);
+  const captionTask = tasks.find((task) => task.caption_source) ?? tasks.find((task) => Array.isArray(task.required_hashtags));
+  const caption = buildPostingCaption(captionTask?.caption_source ?? post.caption_source, captionTask?.required_hashtags);
   if (!caption.trim()) throw new Error("Day 3 caption is empty.");
 
   return { post, tasks, mediaAsset, caption };

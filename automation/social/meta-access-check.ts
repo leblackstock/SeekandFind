@@ -2,9 +2,9 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { pathToFileURL } from "node:url";
 import { chromium, type Browser, type BrowserContext, type Locator, type Page } from "@playwright/test";
+import { cdpUrlFromEnv } from "../../src/core/cdp-browser.js";
 import { validateSocialQueue, type PlatformTask, type QueuePost } from "./validate-queue.js";
 
-const defaultCdpUrl = "http://127.0.0.1:9222";
 const composerUrl = "https://business.facebook.com/latest/composer";
 const evidenceDir = "content/social/campaigns/book-01/evidence/day-03/meta-access-check";
 const expectedFacebookPage = "Ember Dragon Books";
@@ -61,7 +61,7 @@ function optionValue(name: string): string | undefined {
 
 function parseOptions(): CliOptions {
   return {
-    cdpUrl: optionValue("cdp-url") ?? process.env.META_CDP_URL ?? process.env.SOCIAL_CDP_URL ?? defaultCdpUrl
+    cdpUrl: optionValue("cdp-url") ?? cdpUrlFromEnv(["META_CDP_URL", "SOCIAL_CDP_URL"])
   };
 }
 

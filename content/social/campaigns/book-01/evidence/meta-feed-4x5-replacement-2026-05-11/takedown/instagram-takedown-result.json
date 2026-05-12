@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-05-11T21:20:10.483Z",
+  "results": [
+    {
+      "day": 1,
+      "platform": "instagram",
+      "url": "https://www.instagram.com/emberdragonbooks/p/DYAfOQbiY2F/",
+      "ok": true,
+      "actions": [
+        "opened_more_options",
+        "clicked_delete_menu_item",
+        "confirmed_delete"
+      ],
+      "screenshots": [
+        "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/takedown/day-01-instagram-01-before-delete.png",
+        "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/takedown/day-01-instagram-02-delete-menu.png",
+        "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/takedown/day-01-instagram-03-delete-confirm.png",
+        "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/takedown/day-01-instagram-04-after-delete.png"
+      ],
+      "blocker": null,
+      "finalUrl": "https://www.instagram.com/emberdragonbooks/",
+      "finalBodySnippet": "emberdragonbooks Note... emberdragonbooks 6 posts 0 followers 0 following Ember Dragon Adventures With Ember: The Sparkleflame Festival. A cozy seek-and-find adventure for kids ages 5-8. Coming soon to... more Edit profile View archive New Post deleted. Post deleted."
+    },
+    {
+      "day": 4,
+      "platform": "instagram",
+      "url": "https://www.instagram.com/p/DYNj1tEH6BZ/",
+      "ok": true,
+      "actions": [
+        "opened_more_options",
+        "clicked_delete_menu_item",
+        "confirmed_delete"
+      ],
+      "screenshots": [
+        "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/takedown/day-04-instagram-01-before-delete.png",
+        "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/takedown/day-04-instagram-02-delete-menu.png",
+        "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/takedown/day-04-instagram-03-delete-confirm.png",
+        "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/takedown/day-04-instagram-04-after-delete.png"
+      ],
+      "blocker": null,
+      "finalUrl": "https://www.instagram.com/emberdragonbooks/",
+      "finalBodySnippet": "emberdragonbooks Note... emberdragonbooks 5 posts 0 followers 0 following Ember Dragon Adventures With Ember: The Sparkleflame Festival. A cozy seek-and-find adventure for kids ages 5-8. Coming soon to... more Edit profile View archive New Post deleted. Post deleted."
+    }
+  ]
+}

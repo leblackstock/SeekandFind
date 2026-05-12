@@ -5,11 +5,12 @@ import { dirname, join, resolve } from "node:path";
 import { promisify } from "node:util";
 import { pathToFileURL } from "node:url";
 import { chromium, type Browser, type BrowserContext, type Locator, type Page } from "@playwright/test";
+import { cdpSetupHint, durableCdpBrowser, optionalCdpUrlFromEnv } from "../../src/core/cdp-browser.js";
+import { buildPostingCaption, firstCaptionLine } from "./social-captions.js";
 
 const execFileAsync = promisify(execFile);
 const pinterestCreateUrl = "https://www.pinterest.com/pin-builder/";
 const defaultPinterestProfileDir = ".cache/playwright/social/pinterest-profile";
-const defaultPinterestCdpUrl = "http://127.0.0.1:9222";
 
 type BrowserMode = "cdp" | "persistent-profile";
 
@@ -42,6 +43,8 @@ interface HandoffTask {
   board_name?: unknown;
   media_assets?: unknown;
   caption_source?: unknown;
+  posting_caption?: unknown;
+  required_hashtags?: unknown;
   notes?: unknown;
 }
 
@@ -96,11 +99,11 @@ function optionValue(name: string): string | undefined {
 
 function browserOptions(): BrowserOptions {
   const requestedMode = (optionValue("browser-mode") ?? process.env.npm_config_browser_mode)?.toLowerCase();
-  const cdpUrl = optionValue("cdp-url") ?? process.env.npm_config_cdp_url ?? process.env.PINTEREST_CDP_URL ?? null;
+  const cdpUrl = optionValue("cdp-url") ?? process.env.npm_config_cdp_url ?? optionalCdpUrlFromEnv(["PINTEREST_CDP_URL", "SOCIAL_CDP_URL"]);
   const useCdp = Boolean(cdpUrl) || requestedMode === "existing" || requestedMode === "cdp";
   return {
     browserMode: useCdp ? "cdp" : "persistent-profile",
-    cdpUrl: useCdp ? cdpUrl ?? defaultPinterestCdpUrl : null,
+    cdpUrl: useCdp ? cdpUrl || durableCdpBrowser.defaultUrl : null,
     closeBrowser: hasFlag("close-browser")
   };
 }
@@ -119,20 +122,13 @@ function firstString(values: unknown): string | null {
   return asString(values);
 }
 
-function captionText(captionSource: unknown): string {
-  if (typeof captionSource === "string") return captionSource;
-  if (!captionSource || typeof captionSource !== "object") return "";
-
-  const source = captionSource as Record<string, unknown>;
-  return [source.text, source.cta]
-    .map((value) => asString(value))
-    .filter((value): value is string => Boolean(value))
-    .join("\n\n");
+function titleText(captionSource: unknown): string {
+  const text = firstCaptionLine(captionSource);
+  return text ? text.slice(0, 90) : "Ember Seek-and-Find Challenge";
 }
 
-function titleText(captionSource: unknown): string {
-  const text = captionText(captionSource).split(/\r?\n/).find((line) => line.trim());
-  return text ? text.slice(0, 90) : "Ember Seek-and-Find Challenge";
+function postingCaption(task: HandoffTask): string {
+  return asString(task.posting_caption) ?? buildPostingCaption(task.caption_source, task.required_hashtags);
 }
 
 function escapeRegExp(value: string): string {
@@ -295,7 +291,7 @@ async function openCdpSession(cdpUrl: string): Promise<BrowserSession> {
 
 async function openBrowserSession(options: BrowserOptions): Promise<BrowserSession> {
   if (options.browserMode === "cdp") {
-    if (!options.cdpUrl) throw new Error("CDP browser mode requires --cdp-url or PINTEREST_CDP_URL.");
+    if (!options.cdpUrl) throw new Error(`CDP browser mode requires --cdp-url or PINTEREST_CDP_URL. ${cdpSetupHint()}`);
     return openCdpSession(options.cdpUrl);
   }
   return openPersistentSession();
@@ -323,7 +319,7 @@ async function uploadMediaIfPossible(page: Page, mediaAsset: string | null, acti
 
 async function fillPinterestFields(page: Page, task: HandoffTask, actions: string[]): Promise<void> {
   const title = titleText(task.caption_source);
-  const description = captionText(task.caption_source);
+  const description = postingCaption(task);
 
   const titleFilled = await fillFirstVisible([
     page.getByLabel(/title/i),

@@ -62,7 +62,7 @@
           "evidence_path": "content/social/campaigns/book-01/evidence/day-01/pinterest-children-s-activity-books/",
           "error": null,
           "idempotency_key": "book01-day01-pinterest-children-s-activity-books",
-          "board_name": "Children’s Activity Books"
+          "board_name": "Children's Activity Books"
         },
         {
           "platform": "Pinterest",
@@ -80,10 +80,10 @@
           "platform": "Instagram",
           "status": "posted",
           "scheduled_time": null,
-          "posted_url": "https://www.instagram.com/emberdragonbooks/p/DYAfOQbiY2F/",
-          "posted_at": "2026-05-06",
-          "receipt_path": "content/social/campaigns/book-01/receipts/day-01/instagram-feed-post.json",
-          "evidence_path": "content/social/campaigns/book-01/evidence/day-01/instagram-feed-post/",
+          "posted_url": "https://www.instagram.com/emberdragonbooks/p/DYNqjIJCaTT/",
+          "posted_at": "2026-05-11T21:29:51.646Z",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-01/instagram-feed-post-replacement-2026-05-11.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/repost/day-01-instagram/",
           "error": null,
           "idempotency_key": "book01-day01-instagram-feed-post"
         },
@@ -137,7 +137,10 @@
         "content/outputs/marketing/posts/2026-05-06-tiktok-day-1-meet-ember.md",
         "content/outputs/marketing/posts/2026-05-06-youtube-shorts-channel-setup.md",
         "content/outputs/marketing/posts/2026-05-06-youtube-shorts-day-1-meet-ember.md"
-      ]
+      ],
+      "approved_platform_assets": {
+        "meta_feed_4x5": "content/outputs/images/approved/meta-feed-4x5/book-01/day-01-meta-feed-4x5-approved.png"
+      }
     },
     {
       "post_id": "book01-day-02",
@@ -156,7 +159,7 @@
       ],
       "caption_source": {
         "type": "calendar_slot",
-        "text": "A warm little search adventure for families who love screen-free kids’ activity ideas and gentle fantasy worlds.",
+        "text": "A warm little search adventure for families who love screen-free kids' activity ideas and gentle fantasy worlds.",
         "cta": "Save this for screen-free activity inspiration."
       },
       "platform_tasks": [
@@ -182,7 +185,7 @@
           "evidence_path": "content/social/campaigns/book-01/evidence/day-02/pinterest-children-s-activity-books/",
           "error": null,
           "idempotency_key": "book01-day02-pinterest-children-s-activity-books",
-          "board_name": "Children’s Activity Books"
+          "board_name": "Children's Activity Books"
         },
         {
           "platform": "Pinterest",
@@ -248,7 +251,10 @@
         "content/outputs/marketing/posts/2026-05-06-day-2-screen-free-meta-feed-posts.md",
         "content/outputs/marketing/posts/2026-05-06-day-2-screen-free-pinterest-still-pins.md",
         "content/outputs/marketing/posts/2026-05-06-day-2-screen-free-short-video-platform-posts.md"
-      ]
+      ],
+      "approved_platform_assets": {
+        "meta_feed_4x5": "content/outputs/images/approved/meta-feed-4x5/book-01/day-02-meta-feed-4x5-approved.png"
+      }
     },
     {
       "post_id": "book01-day-03",
@@ -267,7 +273,7 @@
       ],
       "caption_source": {
         "type": "calendar_slot",
-        "text": "Lanterns, tiny treasures, and one curious baby dragon. Ember’s world is built for little seekers.",
+        "text": "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers.",
         "cta": "Share with a little dragon fan."
       },
       "platform_tasks": [
@@ -293,7 +299,7 @@
           "evidence_path": "content/social/campaigns/book-01/evidence/day-03/pinterest-children-s-activity-books/",
           "error": null,
           "idempotency_key": "book01-day03-pinterest-children-s-activity-books",
-          "board_name": "Children’s Activity Books"
+          "board_name": "Children's Activity Books"
         },
         {
           "platform": "Pinterest",
@@ -319,7 +325,7 @@
           "idempotency_key": "book01-day03-instagram-feed-post-plus-story-reshare",
           "caption_source": {
             "type": "calendar_slot",
-            "text": "Lanterns, tiny treasures, and one curious baby dragon. Ember’s world is built for little seekers.\n\nComing soon to Amazon.",
+            "text": "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers.\n\nComing soon to Amazon.",
             "cta": "Share with a little dragon fan."
           }
         },
@@ -335,7 +341,7 @@
           "idempotency_key": "book01-day03-facebook-page-post",
           "caption_source": {
             "type": "calendar_slot",
-            "text": "Lanterns, tiny treasures, and one curious baby dragon. Ember’s world is built for little seekers.\n\nComing soon to Amazon.",
+            "text": "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers.\n\nComing soon to Amazon.",
             "cta": "Share with a little dragon fan."
           }
         },
@@ -389,7 +395,10 @@
         "content/workflows/book-01/production-status.md",
         "content/outputs/marketing/posts/2026-05-06-early-day-3-search-with-ember-pinterest-pins.md",
         "content/outputs/marketing/posts/2026-05-10-day-3-search-with-ember-short-video-platform-posts.md"
-      ]
+      ],
+      "approved_platform_assets": {
+        "meta_feed_4x5": "content/outputs/images/approved/meta-feed-4x5/book-01/day-03-meta-feed-4x5-approved.png"
+      }
     },
     {
       "post_id": "book01-day-04",
@@ -450,12 +459,12 @@
         },
         {
           "platform": "Instagram",
-          "status": "ready",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
+          "posted_url": "https://www.instagram.com/emberdragonbooks/p/DYNqCklH2RD/",
+          "posted_at": "2026-05-11T21:24:59.076Z",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-04/instagram-feed-post-plus-story-reshare-replacement-2026-05-11.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/repost/day-04-meta/",
           "idempotency_key": "book01-day04-instagram-feed-post-plus-story-reshare",
           "caption_source": {
             "type": "calendar_slot",
@@ -469,12 +478,12 @@
         },
         {
           "platform": "Facebook",
-          "status": "ready",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
+          "posted_url": "https://facebook.com/permalink.php?story_fbid=122101601415308464&id=61589253935031",
+          "posted_at": "2026-05-11T21:24:59.076Z",
+          "receipt_path": "content/social/campaigns/book-01/receipts/day-04/facebook-page-post-replacement-2026-05-11.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/repost/day-04-meta/",
           "idempotency_key": "book01-day04-facebook-page-post",
           "caption_source": {
             "type": "calendar_slot",
@@ -484,12 +493,12 @@
         },
         {
           "platform": "Short Video",
-          "status": "ready",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
+          "posted_url": "https://youtube.com/shorts/t3I5Jz3gKyU",
+          "posted_at": "2026-05-11T19:12:20-04:00",
+          "receipt_path": "content/social/campaigns/book-01/receipts/short-video/book01-day-04/book01-day04-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-04/",
           "error": null,
           "idempotency_key": "book01-day04-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
           "caption_source": {
@@ -517,7 +526,10 @@
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
         "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md"
-      ]
+      ],
+      "approved_platform_assets": {
+        "meta_feed_4x5": "content/outputs/images/approved/meta-feed-4x5/book-01/day-04-meta-feed-4x5-approved.png"
+      }
     },
     {
       "post_id": "book01-day-05",
@@ -536,7 +548,7 @@
       ],
       "caption_source": {
         "type": "calendar_slot",
-        "text": "The Lantern Maker’s Workshop is full of tiny details for young eyes to explore.",
+        "text": "The Lantern Maker's Workshop is full of tiny details for young eyes to explore.",
         "cta": "Follow for the next Ember progress update."
       },
       "platform_tasks": [
@@ -562,7 +574,7 @@
           "evidence_path": "content/social/campaigns/book-01/evidence/pinterest/book01-day-05/book01-day05-pinterest-children-s-activity-books-2026-05-07T21-37-40Z.png",
           "error": null,
           "idempotency_key": "book01-day05-pinterest-children-s-activity-books",
-          "board_name": "Children’s Activity Books"
+          "board_name": "Children's Activity Books"
         },
         {
           "platform": "Pinterest",
@@ -578,16 +590,16 @@
         },
         {
           "platform": "Instagram",
-          "status": "ready",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
+          "posted_url": "https://www.instagram.com/emberdragonbooks/p/DYN3EUqn885/",
+          "posted_at": "2026-05-11T19:22:29-04:00",
+          "receipt_path": "content/social/campaigns/book-01/receipts/instagram/book01-day-05/book01-day05-instagram-feed-post-plus-story-reshare.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/meta-still/book01-day-05/",
           "idempotency_key": "book01-day05-instagram-feed-post-plus-story-reshare",
           "caption_source": {
             "type": "calendar_slot",
-            "text": "The Lantern Maker’s Workshop is full of tiny details for young eyes to explore.\n\nComing soon to Amazon.",
+            "text": "The Lantern Maker's Workshop is full of tiny details for young eyes to explore.\n\nComing soon to Amazon.",
             "cta": "Follow for the next Ember progress update."
           },
           "required_hashtags": [
@@ -597,32 +609,32 @@
         },
         {
           "platform": "Facebook",
-          "status": "ready",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
+          "posted_url": "https://www.facebook.com/photo/?fbid=122101654593308464&set=a.122097467409308464",
+          "posted_at": "2026-05-11T19:22:29-04:00",
+          "receipt_path": "content/social/campaigns/book-01/receipts/facebook/book01-day-05/book01-day05-facebook-page-post.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/meta-still/book01-day-05/",
           "idempotency_key": "book01-day05-facebook-page-post",
           "caption_source": {
             "type": "calendar_slot",
-            "text": "The Lantern Maker’s Workshop is full of tiny details for young eyes to explore.\n\nComing soon to Amazon.",
+            "text": "The Lantern Maker's Workshop is full of tiny details for young eyes to explore.\n\nComing soon to Amazon.",
             "cta": "Follow for the next Ember progress update."
           }
         },
         {
           "platform": "Short Video",
-          "status": "ready",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
+          "posted_url": "https://youtube.com/shorts/wx5iuwZJ_xc",
+          "posted_at": "2026-05-11T20:24:18-04:00",
+          "receipt_path": "content/social/campaigns/book-01/receipts/short-video/book01-day-05/book01-day05-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-05/",
           "error": null,
           "idempotency_key": "book01-day05-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
           "caption_source": {
             "type": "calendar_slot",
-            "text": "The Lantern Maker’s Workshop is full of tiny details for young eyes to explore.\n\nComing soon to Amazon.",
+            "text": "The Lantern Maker's Workshop is full of tiny details for young eyes to explore.\n\nComing soon to Amazon.",
             "cta": "Follow for the next Ember progress update."
           },
           "approved_asset": "content/outputs/videos/approved/day-5-help-ember-find-it-veo31-canva-approved-2026-05-10.mp4",
@@ -645,7 +657,10 @@
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
         "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md"
-      ]
+      ],
+      "approved_platform_assets": {
+        "meta_feed_4x5": "content/outputs/images/approved/meta-feed-4x5/book-01/day-05-meta-feed-4x5-approved.png"
+      }
     },
     {
       "post_id": "book01-day-06",
@@ -685,6 +700,15 @@
             "cta": "Save for later if you love hidden-object books."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -699,13 +723,22 @@
           "evidence_path": null,
           "error": null,
           "idempotency_key": "book01-day06-pinterest-children-s-activity-books",
-          "board_name": "Children’s Activity Books",
+          "board_name": "Children's Activity Books",
           "caption_source": {
             "type": "calendar_slot",
             "text": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers.\n\nComing soon to Amazon.",
             "cta": "Save for later if you love hidden-object books."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -727,6 +760,15 @@
             "cta": "Save for later if you love hidden-object books."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -746,6 +788,15 @@
             "cta": "Save for later if you love hidden-object books."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -763,7 +814,20 @@
             "type": "calendar_slot",
             "text": "A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers.\n\nComing soon to Amazon.",
             "cta": "Save for later if you love hidden-object books."
-          }
+          },
+          "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Short Video",
@@ -789,6 +853,15 @@
             "Pinterest Video Pin"
           ],
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -800,7 +873,10 @@
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
         "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md"
-      ]
+      ],
+      "approved_platform_assets": {
+        "meta_feed_4x5": "content/outputs/images/approved/meta-feed-4x5/book-01/day-06-meta-feed-4x5-approved.png"
+      }
     },
     {
       "post_id": "book01-day-07",
@@ -840,6 +916,15 @@
             "cta": "Save the challenge and try it together."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -861,6 +946,15 @@
             "cta": "Save the challenge and try it together."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -882,6 +976,15 @@
             "cta": "Save the challenge and try it together."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -901,6 +1004,15 @@
             "cta": "Save the challenge and try it together."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -918,7 +1030,20 @@
             "type": "calendar_slot",
             "text": "Can your little seeker find the Golden Welcome Bell among the festival decorations?\n\nComing soon to Amazon.",
             "cta": "Save the challenge and try it together."
-          }
+          },
+          "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Short Video",
@@ -944,6 +1069,15 @@
             "Pinterest Video Pin"
           ],
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -955,7 +1089,10 @@
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
         "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md"
-      ]
+      ],
+      "approved_platform_assets": {
+        "meta_feed_4x5": "content/outputs/images/approved/meta-feed-4x5/book-01/day-07-meta-feed-4x5-approved.png"
+      }
     },
     {
       "post_id": "book01-day-08",
@@ -995,6 +1132,15 @@
             "cta": "Tap, pause, and search."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1016,6 +1162,15 @@
             "cta": "Tap, pause, and search."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1037,6 +1192,15 @@
             "cta": "Tap, pause, and search."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1056,6 +1220,15 @@
             "cta": "Tap, pause, and search."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1073,7 +1246,20 @@
             "type": "calendar_slot",
             "text": "Find the Firefly Flower Charm.\n\nComing soon to Amazon.",
             "cta": "Tap, pause, and search."
-          }
+          },
+          "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Short Video",
@@ -1099,6 +1285,15 @@
             "Pinterest Video Pin"
           ],
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1110,7 +1305,10 @@
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
         "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md"
-      ]
+      ],
+      "approved_platform_assets": {
+        "meta_feed_4x5": "content/outputs/images/approved/meta-feed-4x5/book-01/day-08-meta-feed-4x5-approved.png"
+      }
     },
     {
       "post_id": "book01-day-09",
@@ -1150,6 +1348,15 @@
             "cta": "Can you spot it?"
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1171,6 +1378,15 @@
             "cta": "Can you spot it?"
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1192,6 +1408,15 @@
             "cta": "Can you spot it?"
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1211,6 +1436,15 @@
             "cta": "Can you spot it?"
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1228,7 +1462,20 @@
             "type": "calendar_slot",
             "text": "A tiny Dragon Door Key is tucked somewhere in Ember's festival scene.\n\nComing soon to Amazon.",
             "cta": "Can you spot it?"
-          }
+          },
+          "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Short Video",
@@ -1254,6 +1501,15 @@
             "Pinterest Video Pin"
           ],
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1265,7 +1521,10 @@
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
         "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md"
-      ]
+      ],
+      "approved_platform_assets": {
+        "meta_feed_4x5": "content/outputs/images/approved/meta-feed-4x5/book-01/day-09-meta-feed-4x5-approved.png"
+      }
     },
     {
       "post_id": "book01-day-10",
@@ -1305,6 +1564,15 @@
             "cta": "Save this for a quick seek-and-find break."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1326,6 +1594,15 @@
             "cta": "Save this for a quick seek-and-find break."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1347,6 +1624,15 @@
             "cta": "Save this for a quick seek-and-find break."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1366,6 +1652,15 @@
             "cta": "Save this for a quick seek-and-find break."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1383,7 +1678,20 @@
             "type": "calendar_slot",
             "text": "Can you find the Sparkle Market Token among the cozy market treasures?\n\nComing soon to Amazon.",
             "cta": "Save this for a quick seek-and-find break."
-          }
+          },
+          "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Short Video",
@@ -1409,6 +1717,15 @@
             "Pinterest Video Pin"
           ],
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1420,7 +1737,10 @@
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
         "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md"
-      ]
+      ],
+      "approved_platform_assets": {
+        "meta_feed_4x5": "content/outputs/images/approved/meta-feed-4x5/book-01/day-10-meta-feed-4x5-approved.png"
+      }
     },
     {
       "post_id": "book01-day-11",
@@ -1460,6 +1780,15 @@
             "cta": "Follow along as the book comes together."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1474,13 +1803,22 @@
           "evidence_path": null,
           "error": null,
           "idempotency_key": "book01-day11-pinterest-children-s-activity-books",
-          "board_name": "Children’s Activity Books",
+          "board_name": "Children's Activity Books",
           "caption_source": {
             "type": "calendar_slot",
             "text": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time.\n\nComing soon to Amazon.",
             "cta": "Follow along as the book comes together."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1502,6 +1840,15 @@
             "cta": "Follow along as the book comes together."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1521,6 +1868,15 @@
             "cta": "Follow along as the book comes together."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1538,7 +1894,20 @@
             "type": "calendar_slot",
             "text": "The seek-page and story/list workflow is working, and Ember's first book world is getting closer one approved asset at a time.\n\nComing soon to Amazon.",
             "cta": "Follow along as the book comes together."
-          }
+          },
+          "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Short Video",
@@ -1564,6 +1933,15 @@
             "Pinterest Video Pin"
           ],
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1575,7 +1953,10 @@
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
         "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md"
-      ]
+      ],
+      "approved_platform_assets": {
+        "meta_feed_4x5": "content/outputs/images/approved/meta-feed-4x5/book-01/day-11-meta-feed-4x5-approved.png"
+      }
     },
     {
       "post_id": "book01-day-12",
@@ -1615,6 +1996,15 @@
             "cta": "Save for children's book gift ideas."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1629,13 +2019,22 @@
           "evidence_path": null,
           "error": null,
           "idempotency_key": "book01-day12-pinterest-children-s-activity-books",
-          "board_name": "Children’s Activity Books",
+          "board_name": "Children's Activity Books",
           "caption_source": {
             "type": "calendar_slot",
             "text": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons.\n\nComing soon to Amazon.",
             "cta": "Save for children's book gift ideas."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1657,6 +2056,15 @@
             "cta": "Save for children's book gift ideas."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1676,6 +2084,15 @@
             "cta": "Save for children's book gift ideas."
           },
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1693,7 +2110,20 @@
             "type": "calendar_slot",
             "text": "A cozy seek-and-find adventure for kids who love tiny treasures, gentle magic, and baby dragons.\n\nComing soon to Amazon.",
             "cta": "Save for children's book gift ideas."
-          }
+          },
+          "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
+            "#dragonbooks",
+            "#dragonbooksforkids"
+          ]
         },
         {
           "platform": "Short Video",
@@ -1719,6 +2149,15 @@
             "Pinterest Video Pin"
           ],
           "required_hashtags": [
+            "#SeekAndFind",
+            "#KidsActivityBook",
+            "#ChildrensBooks",
+            "#ScreenFreeFun",
+            "#BabyDragon",
+            "#HiddenObjectBook",
+            "#KidsBooks",
+            "#FamilyReading",
+            "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
           ]
@@ -1730,7 +2169,10 @@
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.json",
         "content/outputs/marketing/calendar/book-1-prelaunch-rolling-campaign.md",
         "content/outputs/marketing/launch-plan/book-1-prelaunch-rolling-campaign-full-launch-plan.md"
-      ]
+      ],
+      "approved_platform_assets": {
+        "meta_feed_4x5": "content/outputs/images/approved/meta-feed-4x5/book-01/day-12-meta-feed-4x5-approved.png"
+      }
     }
   ],
   "posting_requirements": {
@@ -1746,17 +2188,42 @@
       "platforms": [
         "Pinterest",
         "Instagram",
+        "Facebook",
         "Short Video"
       ],
       "tags": [
+        "#SeekAndFind",
+        "#KidsActivityBook",
+        "#ChildrensBooks",
+        "#ScreenFreeFun",
+        "#BabyDragon",
+        "#HiddenObjectBook",
+        "#KidsBooks",
+        "#FamilyReading",
+        "#EmberDragonBooks",
         "#dragonbooks",
         "#dragonbooksforkids"
       ],
       "applies_to_statuses": [
         "ready",
         "needs-video-export"
-      ]
+      ],
+      "note": "Use the full original discovery hashtag block plus the two additional dragon hashtags in posting captions; do not replace the original tags with only the dragon tags."
     },
-    "notes": "Every campaign day requires three Pinterest still Pins. Every short-video bundle requires YouTube Shorts, TikTok, Instagram Reels, Facebook Reels, and Pinterest Video Pin. Use #dragonbooks and #dragonbooksforkids wherever hashtag-friendly posting surfaces use hashtags."
+    "approved_feed_still_assets": {
+      "applies_to_platforms": [
+        "Instagram",
+        "Facebook"
+      ],
+      "required_slots": [
+        "approved_platform_assets.meta_feed_4x5",
+        "approved_platform_assets.instagram_feed_4x5",
+        "approved_platform_assets.facebook_feed_4x5"
+      ],
+      "rule": "Instagram/Facebook feed stills require separately approved native 4:5 images. One approved meta_feed_4x5 image may be used for both Facebook and Instagram if it is approved for both. Do not crop, resize, or repurpose 9:16 Pinterest/Shorts/Story art into feed stills.",
+      "posting_schedule_check": "Before a feed-still task is treated as live-postable, the schedule or handoff must check whether the matching approved 4:5 image exists, first via approved_platform_assets.meta_feed_4x5 and then via platform-specific 4:5 slots.",
+      "posting_pack_requirement": "Posting packs must include the approved 4:5 image path for each Instagram/Facebook feed-still task, or show a missing-asset blocker instead of only listing the older vertical campaign image. The same meta_feed_4x5 path can appear on both platform tasks when it is the approved shared feed image."
+    },
+    "notes": "Every campaign day requires three Pinterest still Pins. Every short-video bundle requires YouTube Shorts, TikTok, Instagram Reels, Facebook Reels, and Pinterest Video Pin. Use #dragonbooks and #dragonbooksforkids wherever hashtag-friendly posting surfaces use hashtags. Instagram/Facebook feed stills require separately approved native 4:5 images in posting schedules and posting packs."
   }
 }

@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-05-11T21:22:46.562Z",
+  "day": 4,
+  "platform": "facebook",
+  "url": "https://facebook.com/permalink.php?story_fbid=pfbid0EX8X16J6oK16JACfn8Tf1PcUC8fgy2qb2nQAAHMEAyHfoUrLHSVfRmFtEaztBELVl&id=61589253935031",
+  "ok": true,
+  "actions": [
+    "opened_post_actions_by_coordinate",
+    "clicked_delete_post",
+    "confirmed_delete_post"
+  ],
+  "screenshots": [
+    "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/takedown/day-04-facebook-01-before-delete.png",
+    "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/takedown/day-04-facebook-02-delete-menu.png",
+    "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/takedown/day-04-facebook-03-delete-confirm.png",
+    "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/takedown/day-04-facebook-04-after-delete.png"
+  ],
+  "finalUrl": "https://www.facebook.com/",
+  "finalBodySnippet": "Number of unread notifications 4 Facebook Menu Ember Dragon Books Professional dashboard Ads Manager Ad Center See more Suggested Meta AI Manus AI Feeds See more Your shortcuts Eggdrasil Farms Eggdrasil Farms Woodworking Ember Dragon Books Heathen Pinnacle Gap See more Privacy · Consumer Health Privacy · Terms · Advertising · Ad Choices · Cookies · More Home Create a post What's on your mind, Ember Dragon Books? Tips for your Page Recommended post You could reach up to 6 more Account Center accounts daily when you spend $42 to boost this post. Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers. Coming soon to Amazon. Share with a little dragon fan. #SeekAndFind #KidsActivityBook #ChildrensBooks #BabyDragon #KidsBooks #EmberDragonBooks #dragonbooksforkids #dragonbooks Yesterday at 7:48 PM · Boost reel See insights Stories Photos and videos Reels Short videos Feed posts Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook F",
+  "error": null
+}

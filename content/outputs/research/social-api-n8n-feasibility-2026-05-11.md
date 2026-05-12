@@ -60,6 +60,24 @@ It should output:
 
 This gives API research a target and prevents wasting time on abstract platform reading.
 
+## Live Gate Matrix - 2026-05-11
+
+This pass filled the gate matrix only. It did not create credentials, build n8n workflows, call live publishing APIs, or change `queue.json`.
+
+| Surface we use | Official API/n8n can publish? | Blocker label(s) | Current campaign use | Gate note |
+| --- | --- | --- | --- | --- |
+| Pinterest still Pins | Yes, through Pinterest API v5 `Create Pin` using n8n HTTP Request | `needs credential` | `ready for dry-run`; keep manual for live posting until token and board IDs are set | Need Pinterest app/access token and exact board IDs. Sandbox can test image Pin and board flows without touching production data. |
+| Pinterest Video Pins | Yes, through Pinterest media upload plus `Create Pin` using n8n HTTP Request | `needs credential`, `needs public media URL` | dry-run payload only, then later live automation | Production video Pins require media registration/upload/status polling plus a valid `cover_image_url`. Pinterest Sandbox currently does not support creating video Pins. |
+| Instagram feed image/video | Yes, for Instagram professional accounts through Meta content publishing | `needs credential`, `needs public media URL`, `needs app review` | manual posting for current Q1; dry-run payload later | Meta docs are reachable again. The official page confirms publishing single images, videos, Reels, and carousel posts on Instagram professional accounts. |
+| Instagram Reels | Yes, for Instagram professional accounts through Meta content publishing | `needs credential`, `needs public media URL`, `needs app review` | manual posting for current Q1; dry-run payload later | Treat as setup-heavy. Do not use Q1 campaign posts as first live API test. |
+| Instagram Story reshare | Not confirmed for the exact current "feed post plus story reshare" workflow | `manual-only` | manual-only for current campaign | Native Instagram Story container publishing appears distinct from manually resharing a feed post to Story. Keep the queue's reshare behavior manual unless the task is redesigned as a native Story publish. |
+| Facebook Page still posts | Yes, through Meta Pages/Graph API and n8n Facebook Graph API node | `needs credential`, `needs app review` | manual posting for current Q1; dry-run payload later | Page posting requires a Page token/permissions. Do not post to personal profiles. |
+| Facebook Reels | Yes, through Meta Reels/Video API and n8n Facebook Graph API video host | `needs credential`, `needs app review` | manual posting for current Q1; later live automation | n8n's Facebook Graph API node supports POST and a video host URL option for video upload requests. |
+| YouTube Shorts | Yes, as YouTube video upload through n8n YouTube node | `needs credential`, `needs audit` | dry-run/private-upload rehearsal only; manual for public current campaign | YouTube Data API uploads from unverified projects created after 2020-07-28 are restricted to private until audit. |
+| TikTok video | Yes, through Content Posting API Direct Post | `needs credential`, `needs audit` | manual posting for current Q1; dry-run only until audit/consent UX exists | TikTok requires creator info, explicit user consent, privacy options from `creator_info`, and audit for public posting. Unaudited clients are private-only. |
+
+Decision for Book 1 right now: keep live Day 4-5 posting manual, and use the Day 4-5 packet as the first read-only automation fixture. No surface is cleared for live API publishing yet because credentials, review/audit, or public-media prerequisites are not in place.
+
 ## Source Notes
 
 - Pinterest API v5 supports creating image and video Pins. Video Pins require registering media, uploading to Pinterest's provided upload URL, checking media upload status, then creating a Pin with the `media_id`.

@@ -1,0 +1,54 @@
+{
+  "idempotency_key": "book01-day05-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
+  "post_id": "book01-day-05",
+  "campaign_day": 5,
+  "campaign_date": "2026-05-11",
+  "posted_at": "2026-05-11T20:24:18-04:00",
+  "status": "posted",
+  "primary_posted_url": "https://youtube.com/shorts/wx5iuwZJ_xc",
+  "approved_asset": "content/outputs/videos/approved/day-5-help-ember-find-it-veo31-canva-approved-2026-05-10.mp4",
+  "platform_urls": [
+    {
+      "platform": "YouTube Shorts",
+      "url": "https://youtube.com/shorts/wx5iuwZJ_xc"
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@emberdragonbooks/video/7638784548569926942"
+    },
+    {
+      "platform": "Instagram Reel",
+      "url": "https://www.instagram.com/emberdragonbooks/reel/DYN7cIogtL9/"
+    },
+    {
+      "platform": "Facebook Reel",
+      "url": "https://www.facebook.com/reel/1109238345604139/"
+    },
+    {
+      "platform": "Pinterest Video Pin",
+      "url": "https://www.pinterest.com/pin/1148417973750622588/"
+    }
+  ],
+  "caption": "The Lantern Maker's Workshop is full of tiny details for young eyes to explore.\n\nComing soon to Amazon.\n\nFollow for the next Ember progress update.\n\n#dragonbooks #dragonbooksforkids",
+  "board_name": "Dragon Books for Kids",
+  "evidence_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-05/",
+  "source_records": [
+    "content/social/campaigns/book-01/views/day-04-05-chunk-packet.md",
+    "content/social/campaigns/book-01/views/tomorrow-start-plan.md"
+  ],
+  "pinterest_caption_fix": {
+    "fixed_at": "2026-05-11T20:36:32-04:00",
+    "url": "https://www.pinterest.com/pin/1148417973750622588/",
+    "before_state": "Public Pin view showed title plus hashtags only.",
+    "action": "Opened Edit Pin and replaced the Description field with the full saved Day 5 caption.",
+    "after_state": "Public Pin view verified after reload with the full caption plus hashtags visible.",
+    "evidence": [
+      "content/social/campaigns/book-01/evidence/short-video/book01-day-05/day05-pinterest-video-pin-before-caption-fix.png",
+      "content/social/campaigns/book-01/evidence/short-video/book01-day-05/day05-pinterest-video-pin-edit-dialog-before-fix.png",
+      "content/social/campaigns/book-01/evidence/short-video/book01-day-05/day05-pinterest-video-pin-edit-dialog-after-caption-fill-before-save.png",
+      "content/social/campaigns/book-01/evidence/short-video/book01-day-05/day05-pinterest-video-pin-after-save-immediate.png",
+      "content/social/campaigns/book-01/evidence/short-video/book01-day-05/day05-pinterest-video-pin-after-caption-fix-public.png"
+    ]
+  },
+  "notes": "Posted as one bundled Day 5 short-video task. Instagram Reels and Facebook Reels were posted together through Meta Business Suite from one composer action with both destinations selected. The queue stores the YouTube Shorts URL as the primary posted_url for this bundled short-video task; this receipt preserves the full platform URL set. Pinterest Video Pin is live on the correct board. The earlier Pinterest public-caption issue was fixed by editing the Pin description to the full saved caption and verifying the public Pin after reload."
+}

@@ -1,9 +1,9 @@
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { pathToFileURL } from "node:url";
+import { cdpUrlFromEnv } from "../../src/core/cdp-browser.js";
 
 const execFileAsync = promisify(execFile);
-const defaultCdpUrl = "http://127.0.0.1:9222";
 const defaultTimeoutMs = 180000;
 
 interface CliOptions {
@@ -54,7 +54,7 @@ function parseArgs(args: string[]): CliOptions {
   const cleanArgs = args.filter((arg) => arg !== "--");
   const timeoutValue = optionValue(cleanArgs, "timeout-ms");
   return {
-    cdpUrl: optionValue(cleanArgs, "cdp-url") ?? process.env.PINTEREST_CDP_URL ?? defaultCdpUrl,
+    cdpUrl: optionValue(cleanArgs, "cdp-url") ?? cdpUrlFromEnv(["PINTEREST_CDP_URL", "SOCIAL_CDP_URL"]),
     timeoutMs: timeoutValue ? Number(timeoutValue) : defaultTimeoutMs
   };
 }

@@ -14,12 +14,12 @@ import {
 } from "../../../src/core/image-file-manager.js";
 import { saveImageQaReport } from "../../../src/core/image-qa.js";
 import { appendSessionLog, updateProductionStatus } from "../../../src/core/progress-tracker.js";
+import { cdpSetupHint, cdpUrlFromEnv } from "../../../src/core/cdp-browser.js";
 import { GenerateResult } from "../../../src/types.js";
 import { marketingChatTitle, renameCurrentChat } from "./chatgpt-chat-title.js";
 import { assertPromptQaPassed, prepareRawPromptForChatGPTImageGeneration, resolveReferenceImagePaths, selectGeneratedImageCandidate } from "./chatgpt-broke-mode-generate.js";
 
 const defaultProjectUrl = "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/project";
-const defaultCdpUrl = "http://127.0.0.1:9222";
 const defaultGenerationTimeoutMs = 120000;
 const boundaryPattern = /captcha|rate limit|cooldown|try again later|too many requests|payment|upgrade|subscribe|subscription|verify your account|account warning|unusual activity|log in|sign in|couldn.t sign you in|browser or app may not be secure/i;
 
@@ -86,7 +86,7 @@ function parseArgs(args = process.argv.slice(2)): BatchOptions {
     manifest,
     promptId: option(args, "prompt-id"),
     concurrency,
-    cdpUrl: option(args, "cdp-url") ?? defaultCdpUrl,
+    cdpUrl: option(args, "cdp-url") ?? cdpUrlFromEnv(["SOCIAL_CDP_URL"]),
     projectUrl: option(args, "project-url") ?? defaultProjectUrl,
     referenceImageRoot: option(args, "reference-image-root") ?? "Ember's Adventures/EtD Images",
     timeoutMs: timeoutSeconds * 1000,
@@ -364,7 +364,9 @@ export async function runMarketingBatch(options: BatchOptions): Promise<void> {
   if (options.promptId && prompts.length === 0) {
     throw new Error(`No prompt found for --prompt-id ${options.promptId} in ${options.manifest}`);
   }
-  const browser = await chromium.connectOverCDP(options.cdpUrl);
+  const browser = await chromium.connectOverCDP(options.cdpUrl).catch(() => {
+    throw new Error(`Could not connect to an existing browser at ${options.cdpUrl}. ${cdpSetupHint(options.cdpUrl)}`);
+  });
   const context = browser.contexts()[0] ?? await browser.newContext({ acceptDownloads: true });
   const results: Array<{ ok: boolean; files: string[]; warnings: string[]; error?: string }> = [];
   try {

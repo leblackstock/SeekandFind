@@ -122,6 +122,8 @@ const approvedAssets = {
   sparkleMarketToken: "content/outputs/images/approved/book-1-mission-item-promo-batch-03-04-sparkle-market-token-teaser-recovered-2026-05-05T19-29-49-208Z.png"
 };
 
+const campaignHashtagBlock = "#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #HiddenObjectBook #KidsBooks #FamilyReading #EmberDragonBooks #dragonbooks #dragonbooksforkids";
+
 const basePlan: CalendarPlanSlot[] = [
   {
     platform: "Pinterest primary, Instagram/Facebook secondary",
@@ -403,10 +405,10 @@ const baseStructures: LaunchStructure[] = [
 
 const reusePlan: ContentReusePlan[] = [
   {
-    source: "Approved square or vertical promo image",
+    source: "Approved platform-specific promo image",
     reuseSurfaces: "Pinterest Pin; Instagram feed/story; Facebook Page post; short-video cover; later newsletter or website slot.",
-    creationNeeded: "Platform-specific caption, alt text, hashtags, and a motion-only Seedance image-to-video export from the saved storyboard.",
-    guardrail: "Do not call fresh promo art a real cover, real interior page, listing preview, or sample page."
+    creationNeeded: "Platform-specific caption, alt text, hashtags, a separate native 4:5 image for Instagram/Facebook feed stills, and a motion-only Seedance image-to-video export from the saved storyboard. A shared approved meta_feed_4x5 image can serve both Instagram and Facebook feed posts.",
+    guardrail: "Do not call fresh promo art a real cover, real interior page, listing preview, or sample page. Do not treat 9:16 art as Instagram/Facebook feed-safe."
   },
   {
     source: "Mission-item teaser asset",
@@ -500,11 +502,12 @@ const creationBacklog: ContentCreationItem[] = [
 const dailyOperatingSchedule = [
   "Read the next open calendar day and its platform tasks.",
   "Verify the approved asset exists and check any image warning from the post record or QA notes.",
-      "Post or schedule the primary Pinterest Pin first because Pinterest is the active discovery platform.",
-      "Post or schedule the second and third daily Pinterest Pins with distinct board angles, titles, and descriptions.",
-      "If the third Pin cannot be made meaningfully different, record a content-creation blocker instead of treating it as optional.",
+  "For Instagram/Facebook feed stills, verify the approved native 4:5 image exists in the posting schedule and include that exact path in the posting pack. A shared approved meta_feed_4x5 image can serve both Meta feed tasks.",
+  "Post or schedule the primary Pinterest Pin first because Pinterest is the active discovery platform.",
+  "Post or schedule the second and third daily Pinterest Pins with distinct board angles, titles, and descriptions.",
+  "If the third Pin cannot be made meaningfully different, record a content-creation blocker instead of treating it as optional.",
   "Post, schedule, or record blockers for Instagram, Facebook, YouTube Shorts, and TikTok.",
-  "Reuse the same approved image only with platform-specific copy, alt text, hashtags, and link status.",
+  "Reuse approved art only when the asset is native-safe for that platform's aspect ratio; Instagram/Facebook feed stills require a separately created 4:5 image, which may be one shared meta_feed_4x5 asset.",
   "Create one missing asset or export only when it supports the next open calendar row.",
   "Save a post record with live URL, platform, board/playlist/placement, copy used, warnings, and next action.",
   "Regenerate the calendar only after completion state changes."
@@ -618,10 +621,10 @@ function copyForPlatform(slot: MarketingCalendarSlot, platform: string): string 
     return `${slot.caption} ${slot.cta}`;
   }
   if (platform === "Instagram") {
-    return `${slot.caption}\n\n${slot.cta}\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #KidsBooks`;
+    return `${slot.caption}\n\n${slot.cta}\n\n${campaignHashtagBlock}`;
   }
   if (platform === "Facebook") {
-    return `${slot.caption}\n\n${slot.cta}`;
+    return `${slot.caption}\n\n${campaignHashtagBlock}`;
   }
   if (platform === "Short Video") {
     return slot.theme.includes("Firefly Flower Charm")
@@ -775,8 +778,8 @@ export function buildPlatformTasks(slots: MarketingCalendarSlot[]): MarketingPla
         : "Follow for more Ember sneak peeks.",
       link: "no link in video caption until real landing/store URL exists",
       notes: slot.asset === approvedAssets.fireflyFlowerCharmTall
-        ? "Tall asset is ready for mobile-first Seedance storyboard/export use. Include #dragonbooks and #dragonbooksforkids wherever platform hashtags are used."
-        : "Needs a Seedance image-to-video export using the saved storyboard before posting. Include #dragonbooks and #dragonbooksforkids wherever platform hashtags are used."
+        ? "Tall asset is ready for mobile-first Seedance storyboard/export use. Include the full campaign hashtag block wherever platform hashtags are used; #dragonbooks and #dragonbooksforkids are additions, not replacements."
+        : "Needs a Seedance image-to-video export using the saved storyboard before posting. Include the full campaign hashtag block wherever platform hashtags are used; #dragonbooks and #dragonbooksforkids are additions, not replacements."
     });
   }
 
@@ -1137,10 +1140,11 @@ For the requested date or step:
 1. Read the matching calendar row from this file or the JSON manifest.
 2. Verify the approved asset file exists.
 3. Check basic image facts when possible: file type, dimensions, and file size.
-4. Confirm the row has platform, theme, caption, CTA, and notes.
-5. Add practical posting copy for the platform: Pinterest title/description, Instagram/Facebook caption, alt text, hashtags, and link status.
-6. Call out anything missing as a blocker or warning.
-7. Keep prelaunch guardrails active: use follow/save/progress wording only until production status confirms stronger sales or listing language.
+4. For Instagram/Facebook feed stills, confirm the asset is a separately created native 4:5 image and not a crop or reuse of 9:16 Pinterest/Shorts/Story art. One shared approved \`meta_feed_4x5\` image can satisfy both Facebook and Instagram feed tasks.
+5. Confirm the row has platform, theme, caption, CTA, and notes.
+6. Add practical posting copy for the platform: Pinterest title/description, Instagram/Facebook caption, alt text, hashtags, and link status.
+7. Call out anything missing as a blocker or warning.
+8. Keep prelaunch guardrails active: use follow/save/progress wording only until production status confirms stronger sales or listing language.
 
 Readiness answer format:
 
@@ -1154,6 +1158,7 @@ Readiness answer format:
 
 - Use only approved images listed in this calendar unless a later human approval tracker adds more.
 - The Firefly Flower Charm image is tall/mobile-first; prioritize Story, Reel cover, Shorts cover, and Pinterest Idea Pin use.
+- Create Instagram/Facebook feed stills separately as native 4:5 images; do not crop, resize, or repurpose 9:16 vertical art into feed art. A shared approved \`meta_feed_4x5\` image can be used for both Meta feed posts.
 - Do not add overlay text to assets that were approved as no-added-text images.
 - For images with generated text, the text must be exact, readable, and approved before posting.
 - Keep links blank until a real store or landing URL exists.
@@ -1162,7 +1167,7 @@ Readiness answer format:
 
 Pinterest: publish or schedule three distinct Pins per campaign day. Use different board fit, title/description angle, or crop/context. Do not dump the exact same image/copy onto multiple boards in one sitting. If one of the three required Pins cannot be meaningfully distinct, record it as a content-creation blocker.
 
-Instagram: use caption-first posts, Reels covers, or Stories. Do not depend on Lauren adding image text.
+Instagram: use caption-first posts, Reels covers, or Stories. Feed stills require a separately created native 4:5 image with critical text/key art inside the feed-safe area and centered square grid-safe area. The same approved \`meta_feed_4x5\` image may also serve the matching Facebook Page feed post. Do not depend on Lauren adding image text.
 
 Facebook: use warmer progress-note copy and family/gift-buyer framing.
 
@@ -1354,7 +1359,7 @@ Use this workflow to generate and run a launch plan for any Ember book after tha
 | Platform | Structures To Plan | Reuse Rule |
 | --- | --- | --- |
 | Pinterest | 4-6 boards around discovery intent | Three distinct Pins per day; if a Pin cannot be meaningfully distinct, record a content-creation blocker |
-| Instagram | Profile, highlights, feed/story/reel lanes | Reuse approved art with captions and no fake listing claims |
+| Instagram | Profile, highlights, feed/story/reel lanes | Use a separately created native 4:5 feed asset for feed posts; one approved meta_feed_4x5 image may serve both Instagram and Facebook feed posts; use Story/Reel/Shorts assets only on those vertical surfaces |
 | Facebook | Page, pinned intro, albums, warmer posts | Use parent/gift-buyer framing and progress updates |
 | YouTube Shorts | Channel and playlists | Use Seedance storyboard exports from approved art |
 | TikTok | Account, playlists if available, pinned-video fallback | Use the same vertical exports and challenge captions |
@@ -1374,6 +1379,9 @@ ${orderedList(weeklyReview)}
 - Do not reuse Book 1-specific Sparkleflame language for another book unless that book is Book 1.
 - Do not use fresh promo art as real cover, interior sample, listing preview, or product mockup.
 - Do not add readable generated text to marketing art unless exact text is approved.
+- Create 4:5 feed promo images separately; do not crop, resize, or repurpose 9:16 Pinterest/Shorts/Story art into Instagram/Facebook feed art.
+- One approved meta_feed_4x5 image may serve both Instagram and Facebook feed posts if it passes QA for both.
+- Treat 9:16 text-bearing stills as unsafe for Instagram feed/grid unless a separate Instagram-safe 4:5 asset or shared meta_feed_4x5 asset passes QA or Lauren explicitly approves the risk.
 - Do not automate around payment, login protections, CAPTCHA, rate limits, free-credit limits, or platform restrictions.
 - Stop browser automation at sensitive account/payment boundaries.
 `;

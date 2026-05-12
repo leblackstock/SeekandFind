@@ -12,7 +12,7 @@ function post(day: number, scheduledDate: string, statuses: string[]): QueuePost
     platform_tasks: statuses.map((status, index) => ({
       platform: index === 0 ? "Instagram" : "Facebook",
       status,
-      idempotency_key: `day-${day}-task-${index + 1}`
+      idempotency_key: index === 0 ? `day-${day}-instagram-feed-post` : `day-${day}-facebook-page-post`
     }))
   };
 }
@@ -30,6 +30,12 @@ describe("due-pressure chunks", () => {
     expect(chunk?.days).toEqual([4, 5]);
     expect(chunk?.task_count).toBe(3);
     expect(chunk?.prevention_path).toContain("one Day 4-5 chunk packet");
+    expect(chunk?.tasks[0].posting_asset_requirements).toContainEqual(expect.objectContaining({
+      slot: "instagram_feed_4x5",
+      required: true,
+      status: "missing"
+    }));
+    expect(chunk?.tasks[0].posting_caption).toBe("Caption 4");
   });
 
   it("groups the next two days as Q2 when nothing is due now", () => {

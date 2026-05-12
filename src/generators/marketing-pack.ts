@@ -41,11 +41,13 @@ Follow Ember into a cozy seek-and-find adventure.
 
 ## Hashtags
 
-#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #FantasyForKids
+#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #HiddenObjectBook #KidsBooks #FamilyReading #EmberDragonBooks #dragonbooks #dragonbooksforkids
 
 ## Marketing Image Prompt
 
 Create promotional-style art inspired by {{asset}}. Use Ember reference images Ember-001, Ember-002, and Ember-003 when available. Keep Ember on-model, cheerful, and child-safe. This is fresh promo art, not an interior sample page, not a fake cover, and not an Amazon listing preview.
+
+If this is for an Instagram/Facebook feed still, create a separate native 4:5 composition. One approved meta_feed_4x5 image may serve both Instagram feed and Facebook Page feed posts if it is approved for both. Do not crop, resize, or repurpose a 9:16 Pinterest/Shorts/Story image into 4:5. Keep critical text and key art inside the 4:5 feed-safe area and the centered square profile-grid-safe area.
 
 No text unless exact approved marketing text is provided. No fake text, labels, logos, watermarks, page numbers, arrows, circles, boxes, or answer marks.
 

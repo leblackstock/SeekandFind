@@ -4,10 +4,13 @@ import { dirname } from "node:path";
 import { promisify } from "node:util";
 import { pathToFileURL } from "node:url";
 import { chromium, type Browser, type Page } from "@playwright/test";
+import { cdpUrlFromEnv } from "../../src/core/cdp-browser.js";
 import { validateSocialQueue } from "./validate-queue.js";
+import { buildPostingCaption, firstCaptionLine } from "./social-captions.js";
 
 /*
 PowerShell:
+npm run browser:open
 $env:PINTEREST_CDP_URL="http://127.0.0.1:9222"
 npm run social:pinterest-auto-publish -- --yes-publish
 npm run social:pinterest-auto-publish -- --yes-publish --max 3
@@ -15,7 +18,6 @@ Remove-Item Env:PINTEREST_CDP_URL
 */
 
 const execFileAsync = promisify(execFile);
-const defaultCdpUrl = "http://127.0.0.1:9222";
 const defaultTimeoutMs = 240000;
 const maxBatchCap = 3;
 const betweenPostDelayMs = 12000;
@@ -35,6 +37,8 @@ interface HandoffTask {
   board_name?: unknown;
   media_assets?: unknown;
   caption_source?: unknown;
+  posting_caption?: unknown;
+  required_hashtags?: unknown;
 }
 
 interface HandoffResult {
@@ -148,7 +152,7 @@ function parseArgs(args: string[]): CliOptions {
   const rawMax = maxValue(cleanArgs);
   const requestedMax = rawMax === undefined ? 1 : Number(rawMax);
   return {
-    cdpUrl: optionValue(cleanArgs, "cdp-url") ?? process.env.PINTEREST_CDP_URL ?? defaultCdpUrl,
+    cdpUrl: optionValue(cleanArgs, "cdp-url") ?? cdpUrlFromEnv(["PINTEREST_CDP_URL", "SOCIAL_CDP_URL"]),
     timeoutMs: timeoutValue ? Number(timeoutValue) : defaultTimeoutMs,
     yesPublish: hasFlag(cleanArgs, "yes-publish"),
     requestedMax,
@@ -168,20 +172,13 @@ function normalizeText(value: string): string {
   return value.toLowerCase().replace(/\s+/g, " ").trim();
 }
 
-function captionText(captionSource: unknown): string {
-  if (typeof captionSource === "string") return captionSource;
-  if (!captionSource || typeof captionSource !== "object") return "";
-
-  const source = captionSource as Record<string, unknown>;
-  return [source.text, source.cta]
-    .map((value) => asString(value))
-    .filter((value): value is string => Boolean(value))
-    .join("\n\n");
+function titleText(captionSource: unknown): string {
+  const firstLine = firstCaptionLine(captionSource);
+  return firstLine ? firstLine.slice(0, 90) : "";
 }
 
-function titleText(captionSource: unknown): string {
-  const firstLine = captionText(captionSource).split(/\r?\n/).find((line) => line.trim());
-  return firstLine ? firstLine.slice(0, 90) : "";
+function postingCaption(task: HandoffTask): string {
+  return asString(task.posting_caption) ?? buildPostingCaption(task.caption_source, task.required_hashtags);
 }
 
 function parseLastJson<T>(stdout: string, label: string): T {
@@ -252,7 +249,7 @@ function publishErrorPath(prePublishPath: string): string {
 async function verifyPreparedComposer(page: Page, task: HandoffTask): Promise<ComposerVerification> {
   const expectedBoard = asString(task.board_name) ?? "";
   const expectedTitle = titleText(task.caption_source);
-  const expectedDescription = captionText(task.caption_source);
+  const expectedDescription = postingCaption(task);
   const bodyText = await page.locator("body").innerText({ timeout: 5000 });
   const normalizedBody = normalizeText(bodyText);
   const boardText = await page.locator("[data-test-id='board-dropdown-item-selected']").first()

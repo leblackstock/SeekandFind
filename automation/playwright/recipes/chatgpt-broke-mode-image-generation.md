@@ -27,13 +27,13 @@ Broke Mode has three browser strategies:
 
 Existing-browser mode does not copy, scrape, or expose cookies. It only connects to a browser endpoint you intentionally start for this supervised workflow.
 
-Start a normal browser with remote debugging and a separate profile:
+Start the durable CDP browser with its repeatable profile:
 
 ```powershell
-chrome.exe --remote-debugging-port=9222 --user-data-dir="$env:TEMP\ember-chatgpt-cdp-profile"
+npm run browser:open -- --url=https://chatgpt.com/
 ```
 
-Log into ChatGPT manually in that browser.
+Log into ChatGPT manually in that browser. Reuse the same launcher command in future sessions so the profile and CDP endpoint stay consistent.
 
 Run setup against the existing browser:
 

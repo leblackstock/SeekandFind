@@ -1,0 +1,40 @@
+{
+  "idempotency_key": "book01-day04-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
+  "post_id": "book01-day-04",
+  "campaign_day": 4,
+  "campaign_date": "2026-05-10",
+  "posted_at": "2026-05-11T19:12:20-04:00",
+  "status": "posted",
+  "primary_posted_url": "https://youtube.com/shorts/t3I5Jz3gKyU",
+  "approved_asset": "content/outputs/videos/approved/day-4-find-the-dragonflame-lantern-veo31-canva-approved-2026-05-10.mp4",
+  "platform_urls": [
+    {
+      "platform": "YouTube Shorts",
+      "url": "https://youtube.com/shorts/t3I5Jz3gKyU"
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@emberdragonbooks/video/7638771089514024223"
+    },
+    {
+      "platform": "Instagram Reel",
+      "url": "https://www.instagram.com/emberdragonbooks/reel/DYN1dBNDrAj/"
+    },
+    {
+      "platform": "Facebook Reel",
+      "url": "https://www.facebook.com/reel/1425014576131222/"
+    },
+    {
+      "platform": "Pinterest Video Pin",
+      "url": "https://www.pinterest.com/pin/1148417973750620024/"
+    }
+  ],
+  "caption": "Can you find the Baby Flame Lantern hiding in Ember's cozy festival world?\n\nComing soon to Amazon.\n\nSave this tiny-treasure challenge.\n\n#dragonbooks #dragonbooksforkids",
+  "board_name": "Dragon Books for Kids",
+  "evidence_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-04/",
+  "source_records": [
+    "content/social/campaigns/book-01/views/day-04-05-chunk-packet.md",
+    "content/social/campaigns/book-01/views/tomorrow-start-plan.md"
+  ],
+  "notes": "Posted as one bundled Day 4 short-video task. Instagram Reels and Facebook Reels were posted together through Meta Business Suite from one composer action with both destinations selected. The queue stores the YouTube Shorts URL as the primary posted_url for this bundled short-video task; this receipt preserves the full platform URL set."
+}

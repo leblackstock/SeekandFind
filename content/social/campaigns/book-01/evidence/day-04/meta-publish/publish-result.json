@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "day": 4,
+  "actions": [
+    "clicked_add_photo",
+    "clicked_upload_from_desktop",
+    "media_uploaded_filechooser",
+    "caption_filled:[contenteditable='true']:0",
+    "publish_clicked:0"
+  ],
+  "screenshots": [
+    "content/social/campaigns/book-01/evidence/day-04/meta-publish/01-composer-opened.png",
+    "content/social/campaigns/book-01/evidence/day-04/meta-publish/02-before-publish.png",
+    "content/social/campaigns/book-01/evidence/day-04/meta-publish/03-after-publish.png"
+  ],
+  "urls": {
+    "facebook": "https://facebook.com/permalink.php?story_fbid=pfbid0EX8X16J6oK16JACfn8Tf1PcUC8fgy2qb2nQAAHMEAyHfoUrLHSVfRmFtEaztBELVl&id=61589253935031",
+    "instagram": "https://www.instagram.com/p/DYNj1tEH6BZ/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExemw2M29iYW96OGlOWEN0SnNydGMGYXBwX2lkDzUxNDc3MTU2OTIyODA2MQABHoEYz4ltTas9c0cA6FWxJBDmoQHOFHSjLDIwWcWxW5v0z7M6VZbS4TQeRUXF_aem_6uJWviqJBRzecKz80quNAQ",
+    "contentTextHasCaption": true,
+    "contentUrl": "https://business.facebook.com/latest/insights/object_insights/?asset_id=1092344023964202&business_id=1070793548859525&ir_qe_exposed=1&content_id=122101575045308464&nav_ref=bizweb_published_posts_table"
+  },
+  "errors": []
+}

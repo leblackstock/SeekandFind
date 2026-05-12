@@ -3,11 +3,11 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { promisify } from "node:util";
 import { pathToFileURL } from "node:url";
+import { cdpUrlFromEnv } from "../../src/core/cdp-browser.js";
 import { createEvidencePlan } from "./plan-task-evidence.js";
 import { PlatformTask, QueuePost, validateSocialQueue } from "./validate-queue.js";
 
 const execFileAsync = promisify(execFile);
-const defaultCdpUrl = "http://127.0.0.1:9222";
 const defaultTimeoutMs = 45000;
 
 interface CliOptions {
@@ -97,7 +97,7 @@ function parseArgs(args: string[]): CliOptions {
   const timeoutValue = optionValue(cleanArgs, "timeout-ms");
   return {
     idempotencyKey: optionValue(cleanArgs, "idempotency-key") ?? positional[0],
-    cdpUrl: optionValue(cleanArgs, "cdp-url") ?? process.env.PINTEREST_CDP_URL ?? defaultCdpUrl,
+    cdpUrl: optionValue(cleanArgs, "cdp-url") ?? cdpUrlFromEnv(["PINTEREST_CDP_URL", "SOCIAL_CDP_URL"]),
     evidencePath: optionValue(cleanArgs, "evidence-path") ?? positional[1],
     errorPath: optionValue(cleanArgs, "error-path") ?? positional[2],
     timeoutMs: timeoutValue ? Number(timeoutValue) : defaultTimeoutMs,

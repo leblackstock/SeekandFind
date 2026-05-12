@@ -2,11 +2,11 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { Browser, chromium, Page } from "@playwright/test";
 import { repoRoot } from "../../../src/config.js";
+import { cdpSetupHint, cdpUrlFromEnv, durableCdpBrowser } from "../../../src/core/cdp-browser.js";
 import { appendSessionLog, updateProductionStatus } from "../../../src/core/progress-tracker.js";
 import { GenerateResult } from "../../../src/types.js";
 
 const defaultProjectUrl = "https://chatgpt.com/g/g-p-69efa9ddfdd08191b8673b0f32dfb621-seek-and-find-books/project";
-const defaultCdpUrl = "http://127.0.0.1:9222";
 const defaultEvidenceDir = "content/outputs/chatgpt-project-archive";
 const projectUrlPattern = /^https:\/\/chatgpt\.com\/g\/g-p-[^/]*seek-and-find-books[^/]*\/project$/i;
 
@@ -107,7 +107,7 @@ export function parseArchiveProjectChatsArgs(args = process.argv.slice(2)): Arch
   if (maxLoadMore > 200) throw new Error("--max-load-more must be 200 or less.");
 
   return {
-    cdpUrl: option(args, "cdp-url") ?? defaultCdpUrl,
+    cdpUrl: option(args, "cdp-url") ?? cdpUrlFromEnv(["SOCIAL_CDP_URL"]),
     projectUrl,
     evidenceDir: option(args, "evidence-dir") ?? defaultEvidenceDir,
     confirm: flag(args, "confirm"),
@@ -131,7 +131,7 @@ function helpText(): string {
     "  --exclude-id a,b,c        Keep these conversation IDs.",
     "  --exclude-title PATTERN   Keep rows whose visible title matches this JavaScript regex.",
     "  --max-load-more N         Click Load more conversations up to N times before collecting rows. Default 25.",
-    "  --cdp-url URL             Existing browser CDP URL. Default http://127.0.0.1:9222",
+    `  --cdp-url URL             Existing browser CDP URL. Default ${durableCdpBrowser.defaultUrl}`,
     "  --evidence-dir PATH       Evidence output folder.",
     "",
     "The script is standalone. It is not part of the video-source workflow."
@@ -144,7 +144,7 @@ function timestampSlug(): string {
 
 async function connectExistingBrowser(cdpUrl: string): Promise<{ browser: Browser; page: Page }> {
   const browser = await chromium.connectOverCDP(cdpUrl).catch(() => {
-    throw new Error(`Could not connect to an existing browser at ${cdpUrl}. Start Chrome with --remote-debugging-port=9222 and log into ChatGPT first.`);
+    throw new Error(`Could not connect to an existing browser at ${cdpUrl}. ${cdpSetupHint(cdpUrl)} Log into ChatGPT manually first.`);
   });
   const context = browser.contexts()[0] ?? await browser.newContext();
   const pages = context.pages();

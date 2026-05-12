@@ -1,0 +1,443 @@
+{
+  "timestamp": "2026-05-11T21:15:05.939Z",
+  "cdpUrl": "http://127.0.0.1:9222",
+  "evidenceDir": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/review",
+  "targets": [
+    {
+      "day": 1,
+      "platform": "instagram",
+      "source": "queue.posted_url",
+      "url": "https://www.instagram.com/emberdragonbooks/p/DYAfOQbiY2F/",
+      "finalUrl": "https://www.instagram.com/emberdragonbooks/p/DYAfOQbiY2F/",
+      "screenshot": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/review/day-01-instagram-full.png",
+      "viewportScreenshot": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/review/day-01-instagram-viewport.png",
+      "title": "Instagram",
+      "blockerSeen": null,
+      "bodySnippet": "Post emberdragonbooks View insights Boost post 1 1 emberdragonbooks Meet Ember, a tiny baby dragon guide for a cozy seek-and-find adventure made for children ages 5-8.... more View 1 comment 5 days ago More posts from emberdragonbooks",
+      "images": [
+        {
+          "alt": "Photo by Ember Dragon on May 06, 2026. May be a video game screenshot of text that says 'Dute Your baby dragon guide'.",
+          "src": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/684219023_18104696668780820_6284800416477690025_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ig_cache_key=Mzg5MTI0NzM5NzIwNDQ5NTc0OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuOTQxLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=mYYLeFYmdtYQ7kNvwFloXvG&_nc_oc=Adrp-hBlD6zFLMaNsaRKFvmoATKKdKmeEfyb9lW_V1kTXre-WJZyOrKX2XKTKy2IOSRIV0yoSTSNjepH9bq36Sd1&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=6qgDaj3TtB5PJw5Ug2zw9A&_nc_ss=7a22e&oh=00_Af6sWEfxVaEHKMNNP2P7RvtpePjhZLdymnaIX5in8xHZQw&oe=6A07FE83",
+          "currentSrc": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/684219023_18104696668780820_6284800416477690025_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ig_cache_key=Mzg5MTI0NzM5NzIwNDQ5NTc0OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuOTQxLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=mYYLeFYmdtYQ7kNvwFloXvG&_nc_oc=Adrp-hBlD6zFLMaNsaRKFvmoATKKdKmeEfyb9lW_V1kTXre-WJZyOrKX2XKTKy2IOSRIV0yoSTSNjepH9bq36Sd1&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=6qgDaj3TtB5PJw5Ug2zw9A&_nc_ss=7a22e&oh=00_Af6sWEfxVaEHKMNNP2P7RvtpePjhZLdymnaIX5in8xHZQw&oe=6A07FE83",
+          "clientWidth": 430,
+          "clientHeight": 430,
+          "naturalWidth": 941,
+          "naturalHeight": 941
+        },
+        {
+          "alt": "Photo by Ember Dragon on May 11, 2026. May be a cartoon of lantern and text that says 'Can you find the Baby Flame Lantern? 皿'.",
+          "src": "https://scontent-atl3-3.cdninstagram.com/v/t39.30808-6/696302351_122101574919308464_1284638365670859299_n.jpg?stp=c0.248.941.1176a_dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=Mzg5NDkyNjg3NDg5MzA2NjMyOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuOTQxLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ez4iT4wNfZ4Q7kNvwEZn6kd&_nc_oc=AdpGHNhFN2qGkpAce_7mjtW5HKZh9Kz4pwNZC35GRsXYm16zGpHDiI5jqfraElBznQzt3GlZwGqPT4-UYV-Tp4Ll&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_gid=6qgDaj3TtB5PJw5Ug2zw9A&_nc_ss=7a22e&oh=00_Af5MZaMkORQql5Gk0LIFR9OXkyFtYEcSrh27FppGLHyS3w&oe=6A080457",
+          "currentSrc": "https://scontent-atl3-3.cdninstagram.com/v/t39.30808-6/696302351_122101574919308464_1284638365670859299_n.jpg?stp=c0.248.941.1176a_dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=Mzg5NDkyNjg3NDg5MzA2NjMyOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuOTQxLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ez4iT4wNfZ4Q7kNvwEZn6kd&_nc_oc=AdpGHNhFN2qGkpAce_7mjtW5HKZh9Kz4pwNZC35GRsXYm16zGpHDiI5jqfraElBznQzt3GlZwGqPT4-UYV-Tp4Ll&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_gid=6qgDaj3TtB5PJw5Ug2zw9A&_nc_ss=7a22e&oh=00_Af5MZaMkORQql5Gk0LIFR9OXkyFtYEcSrh27FppGLHyS3w&oe=6A080457",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 941,
+          "naturalHeight": 1176
+        },
+        {
+          "alt": "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers.\n\nComing soon to Amazon.\n\nShare with a little dragon fan.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #BabyDragon #KidsBooks #EmberDragonBooks #dragonbooksforkids #dragonbooks",
+          "src": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/671277477_18105781753780820_488339291069983432_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=103&ig_cache_key=Mzg5NDM5MTk0NTI1NTIyMDQ2NDE4MTA1NzgxNzQ3NzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEwODAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=b8wuLU32a9wQ7kNvwGhnELW&_nc_oc=AdqYQc7r9FZjaP2uDagmWeB5z4xxtsL7gXaTriBv8m-1GTLhp_RSYb5xRd22pc3NM5hHPg_-KeKxRyWZRGP1KNdl&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=6qgDaj3TtB5PJw5Ug2zw9A&_nc_ss=7a22e&oh=00_Af7-c9JKXXULS1CjBmSx4vCSc8o3uiWDPqHW_crtCUBRsQ&oe=6A082CB6",
+          "currentSrc": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/671277477_18105781753780820_488339291069983432_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=103&ig_cache_key=Mzg5NDM5MTk0NTI1NTIyMDQ2NDE4MTA1NzgxNzQ3NzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEwODAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=b8wuLU32a9wQ7kNvwGhnELW&_nc_oc=AdqYQc7r9FZjaP2uDagmWeB5z4xxtsL7gXaTriBv8m-1GTLhp_RSYb5xRd22pc3NM5hHPg_-KeKxRyWZRGP1KNdl&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=6qgDaj3TtB5PJw5Ug2zw9A&_nc_ss=7a22e&oh=00_Af7-c9JKXXULS1CjBmSx4vCSc8o3uiWDPqHW_crtCUBRsQ&oe=6A082CB6",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 1080,
+          "naturalHeight": 1920
+        },
+        {
+          "alt": "Photo by Ember Dragon on May 07, 2026. May be a cartoon of text that says 'Search with Ember!'.",
+          "src": "https://scontent-atl3-3.cdninstagram.com/v/t39.30808-6/688826047_122098467615308464_7955118311513773631_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=Mzg5MjEwNzY2NTc4MjQ2NzEyMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=7X8tzGgUVuoQ7kNvwG856JD&_nc_oc=Adomd6K_1vGWZ4n5K9tNOmZBL1n_PafReY4VMCr2TMshTvOpcrBAVrqF-MdUp4DCS7XPVGX_xYcj-ro4l-6UIHdr&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_gid=6qgDaj3TtB5PJw5Ug2zw9A&_nc_ss=7a22e&oh=00_Af74q6wQP-bRALIFQ1DWd0y8IdlrGtasc6CyjVcPjto7HQ&oe=6A081E7D",
+          "currentSrc": "https://scontent-atl3-3.cdninstagram.com/v/t39.30808-6/688826047_122098467615308464_7955118311513773631_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=Mzg5MjEwNzY2NTc4MjQ2NzEyMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=7X8tzGgUVuoQ7kNvwG856JD&_nc_oc=Adomd6K_1vGWZ4n5K9tNOmZBL1n_PafReY4VMCr2TMshTvOpcrBAVrqF-MdUp4DCS7XPVGX_xYcj-ro4l-6UIHdr&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_gid=6qgDaj3TtB5PJw5Ug2zw9A&_nc_ss=7a22e&oh=00_Af74q6wQP-bRALIFQ1DWd0y8IdlrGtasc6CyjVcPjto7HQ&oe=6A081E7D",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 1122,
+          "naturalHeight": 1402
+        },
+        {
+          "alt": "Photo by Ember Dragon on May 06, 2026. May be a cartoon of poster and text that says 'Screen-fr en-free drágon fun'.",
+          "src": "https://scontent-atl3-2.cdninstagram.com/v/t39.30808-6/690624599_122097672177308464_3481704654223956251_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ig_cache_key=Mzg5MTQ5MjczNjY3NjYzNTE1MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=DhG4pFRvP14Q7kNvwE9dLZu&_nc_oc=AdocRCDFmH9mR3rErn5Unj8etLe-p_kurhzI8oJyEgJ8RMIaYX31nOGGoNbqSNtwnLM5nkv-weOGp6SNO2LOtZ57&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=6qgDaj3TtB5PJw5Ug2zw9A&_nc_ss=7a22e&oh=00_Af5P1JSJIGNtgQV4U51qsJ1d03uGZTrRejeUCOroiTQ1Uw&oe=6A081574",
+          "currentSrc": "https://scontent-atl3-2.cdninstagram.com/v/t39.30808-6/690624599_122097672177308464_3481704654223956251_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ig_cache_key=Mzg5MTQ5MjczNjY3NjYzNTE1MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=DhG4pFRvP14Q7kNvwE9dLZu&_nc_oc=AdocRCDFmH9mR3rErn5Unj8etLe-p_kurhzI8oJyEgJ8RMIaYX31nOGGoNbqSNtwnLM5nkv-weOGp6SNO2LOtZ57&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=6qgDaj3TtB5PJw5Ug2zw9A&_nc_ss=7a22e&oh=00_Af5P1JSJIGNtgQV4U51qsJ1d03uGZTrRejeUCOroiTQ1Uw&oe=6A081574",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 1122,
+          "naturalHeight": 1402
+        },
+        {
+          "alt": "Can your little seeker help Ember find the star?\n\nA cozy screen-free activity idea for kids who love dragons, picture books, and seek-and-find fun.\n\n#KidsActivities #ScreenFreeKids #SeekAndFind #DragonBooks #KidsBooks #EmberDragonBooks",
+          "src": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/686529620_18104764216780820_8716572975070763158_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=Mzg5MTQ4OTkzNTYxMDI2MTMyOTE4MTA0NzY0MjEwNzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEwODAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=PsNRubzM13cQ7kNvwGWGjr5&_nc_oc=Adqs6Q6WDhAhdG3K1bzdImMdWiV3ppyQJVAV4vAVQG5EUiW5Yf6rHjFVbIM9hzBliYfkAtljyaLh7lrYl-d22daD&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=6qgDaj3TtB5PJw5Ug2zw9A&_nc_ss=7a22e&oh=00_Af5v7ZeufDVGFliHLrPiLygOuv1y1fQ5i8pljLIXXpG0CA&oe=6A081B46",
+          "currentSrc": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/686529620_18104764216780820_8716572975070763158_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=Mzg5MTQ4OTkzNTYxMDI2MTMyOTE4MTA0NzY0MjEwNzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEwODAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=PsNRubzM13cQ7kNvwGWGjr5&_nc_oc=Adqs6Q6WDhAhdG3K1bzdImMdWiV3ppyQJVAV4vAVQG5EUiW5Yf6rHjFVbIM9hzBliYfkAtljyaLh7lrYl-d22daD&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=6qgDaj3TtB5PJw5Ug2zw9A&_nc_ss=7a22e&oh=00_Af5v7ZeufDVGFliHLrPiLygOuv1y1fQ5i8pljLIXXpG0CA&oe=6A081B46",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 1080,
+          "naturalHeight": 1920
+        },
+        {
+          "alt": "Meet Ember. A quick cozy search moment with Ember.\n\nFollow for more Ember sneak peeks.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #KidsBooks",
+          "src": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/684771002_18104695954780820_1583764775773970060_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=Mzg5MTI0NTQ4NjI1NjQ1ODAxOTE4MTA0Njk1OTQ4NzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjU5Mi5zZHIudmlkZW9fZGVmYXVsdF9jb3Zlcl9mcmFtZS5DMyJ9&_nc_ohc=jFwXQkq0hykQ7kNvwEQlcAf&_nc_oc=AdpgFODmoZ1zPPSqhwNFz9JLeT4Gs3pGRXvDOG26DQBUS5tb9lD4rFpKj50Gue6QChXObzrz71kgi-7C8iRGK4QC&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=6qgDaj3TtB5PJw5Ug2zw9A&_nc_ss=7a22e&oh=00_Af6DryF6V_ivkcW3WpOfWjgUhvpD8rSUNcaS-dOJowjSTw&oe=6A080944",
+          "currentSrc": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/684771002_18104695954780820_1583764775773970060_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=Mzg5MTI0NTQ4NjI1NjQ1ODAxOTE4MTA0Njk1OTQ4NzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjU5Mi5zZHIudmlkZW9fZGVmYXVsdF9jb3Zlcl9mcmFtZS5DMyJ9&_nc_ohc=jFwXQkq0hykQ7kNvwEQlcAf&_nc_oc=AdpgFODmoZ1zPPSqhwNFz9JLeT4Gs3pGRXvDOG26DQBUS5tb9lD4rFpKj50Gue6QChXObzrz71kgi-7C8iRGK4QC&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=6qgDaj3TtB5PJw5Ug2zw9A&_nc_ss=7a22e&oh=00_Af6DryF6V_ivkcW3WpOfWjgUhvpD8rSUNcaS-dOJowjSTw&oe=6A080944",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 592,
+          "naturalHeight": 592
+        }
+      ]
+    },
+    {
+      "day": 1,
+      "platform": "facebook",
+      "source": "queue.posted_url",
+      "url": "https://www.facebook.com/photo/?fbid=122097466095308464&set=a.122097467409308464",
+      "finalUrl": "https://www.facebook.com/photo/?fbid=122097466095308464&set=a.122097467409308464",
+      "screenshot": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/review/day-01-facebook-full.png",
+      "viewportScreenshot": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/review/day-01-facebook-viewport.png",
+      "title": "(4) Facebook",
+      "blockerSeen": null,
+      "bodySnippet": "Number of unread notifications 4 Ember Dragon Books t n s S p d o e r o 6 t f 7 5 t g h 0 h m 0 4 P 0 1 a 4 3 8 1 m h l 1 4 y 2 a m a 6 M f M a a l c 1 3 1 3 : 3 c · Meet Ember, a tiny baby dragon guide for a cozy seek-and-find adventure made for children ages 5-8. Follow for more Ember sneak peeks. Edit Boost post Comments No comments yet Be the first to comment. Comment as Ember Dragon Books",
+      "images": [
+        {
+          "alt": "May be an image of text that says 'Meet Ember dragon guide Your baby'",
+          "src": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/689470588_122097466101308464_6361639128747175024_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_ohc=RnHTQ1xytK0Q7kNvwGUMM9m&_nc_oc=AdpI-LPLiENk7UbbgpPMutS6P0fRgzod5tRGM5Ewr6GiRfRkwXNWlrPpLdpL6LosAC_5tHrOMNiZwSLqypYLK09q&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=lhetWOh9TYJDA6DU19ZZHw&_nc_ss=7b2a8&oh=00_Af6qbL-l459tL4_vH-Tc6SbnLWTEiwduuxnTA6_JC2iC5Q&oe=6A0800A6",
+          "currentSrc": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/689470588_122097466101308464_6361639128747175024_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_ohc=RnHTQ1xytK0Q7kNvwGUMM9m&_nc_oc=AdpI-LPLiENk7UbbgpPMutS6P0fRgzod5tRGM5Ewr6GiRfRkwXNWlrPpLdpL6LosAC_5tHrOMNiZwSLqypYLK09q&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=lhetWOh9TYJDA6DU19ZZHw&_nc_ss=7b2a8&oh=00_Af6qbL-l459tL4_vH-Tc6SbnLWTEiwduuxnTA6_JC2iC5Q&oe=6A0800A6",
+          "clientWidth": 492,
+          "clientHeight": 874,
+          "naturalWidth": 941,
+          "naturalHeight": 1672
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "platform": "instagram",
+      "source": "queue.posted_url",
+      "url": "https://www.instagram.com/emberdragonbooks/p/DYBXAann6IO/",
+      "finalUrl": "https://www.instagram.com/emberdragonbooks/p/DYBXAann6IO/",
+      "screenshot": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/review/day-02-instagram-full.png",
+      "viewportScreenshot": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/review/day-02-instagram-viewport.png",
+      "title": "Instagram",
+      "blockerSeen": null,
+      "bodySnippet": "Post emberdragonbooks View insights Boost post 1 1 emberdragonbooks A warm little search adventure for families who love screen-free kids' activity ideas and gentle fantasy worlds.... more View 1 comment 4 days ago More posts from emberdragonbooks",
+      "images": [
+        {
+          "alt": "Photo by Ember Dragon on May 06, 2026. May be a cartoon of poster and text that says 'Screen-fr en-free drágon fun'.",
+          "src": "https://scontent-atl3-2.cdninstagram.com/v/t39.30808-6/690624599_122097672177308464_3481704654223956251_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ig_cache_key=Mzg5MTQ5MjczNjY3NjYzNTE1MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=DhG4pFRvP14Q7kNvwE9dLZu&_nc_oc=AdocRCDFmH9mR3rErn5Unj8etLe-p_kurhzI8oJyEgJ8RMIaYX31nOGGoNbqSNtwnLM5nkv-weOGp6SNO2LOtZ57&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=XLv7Ue6j381x54R7vKE8Xw&_nc_ss=7a22e&oh=00_Af5ipP90p17B2e3GfwIpwDewYnBIBKUs7aiBT8LTjKBT9Q&oe=6A081574",
+          "currentSrc": "https://scontent-atl3-2.cdninstagram.com/v/t39.30808-6/690624599_122097672177308464_3481704654223956251_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ig_cache_key=Mzg5MTQ5MjczNjY3NjYzNTE1MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=DhG4pFRvP14Q7kNvwE9dLZu&_nc_oc=AdocRCDFmH9mR3rErn5Unj8etLe-p_kurhzI8oJyEgJ8RMIaYX31nOGGoNbqSNtwnLM5nkv-weOGp6SNO2LOtZ57&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=XLv7Ue6j381x54R7vKE8Xw&_nc_ss=7a22e&oh=00_Af5ipP90p17B2e3GfwIpwDewYnBIBKUs7aiBT8LTjKBT9Q&oe=6A081574",
+          "clientWidth": 430,
+          "clientHeight": 537,
+          "naturalWidth": 1122,
+          "naturalHeight": 1402
+        },
+        {
+          "alt": "Photo by Ember Dragon on May 11, 2026. May be a cartoon of lantern and text that says 'Can you find the Baby Flame Lantern? 皿'.",
+          "src": "https://scontent-atl3-3.cdninstagram.com/v/t39.30808-6/696302351_122101574919308464_1284638365670859299_n.jpg?stp=c0.248.941.1176a_dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=Mzg5NDkyNjg3NDg5MzA2NjMyOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuOTQxLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ez4iT4wNfZ4Q7kNvwEZn6kd&_nc_oc=AdpGHNhFN2qGkpAce_7mjtW5HKZh9Kz4pwNZC35GRsXYm16zGpHDiI5jqfraElBznQzt3GlZwGqPT4-UYV-Tp4Ll&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_gid=XLv7Ue6j381x54R7vKE8Xw&_nc_ss=7a22e&oh=00_Af7jqGPD6vXGt8jQ_8n8DLmVAPnly-VHMVSSR2YBisdSSw&oe=6A080457",
+          "currentSrc": "https://scontent-atl3-3.cdninstagram.com/v/t39.30808-6/696302351_122101574919308464_1284638365670859299_n.jpg?stp=c0.248.941.1176a_dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=Mzg5NDkyNjg3NDg5MzA2NjMyOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuOTQxLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ez4iT4wNfZ4Q7kNvwEZn6kd&_nc_oc=AdpGHNhFN2qGkpAce_7mjtW5HKZh9Kz4pwNZC35GRsXYm16zGpHDiI5jqfraElBznQzt3GlZwGqPT4-UYV-Tp4Ll&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_gid=XLv7Ue6j381x54R7vKE8Xw&_nc_ss=7a22e&oh=00_Af7jqGPD6vXGt8jQ_8n8DLmVAPnly-VHMVSSR2YBisdSSw&oe=6A080457",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 941,
+          "naturalHeight": 1176
+        },
+        {
+          "alt": "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers.\n\nComing soon to Amazon.\n\nShare with a little dragon fan.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #BabyDragon #KidsBooks #EmberDragonBooks #dragonbooksforkids #dragonbooks",
+          "src": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/671277477_18105781753780820_488339291069983432_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=103&ig_cache_key=Mzg5NDM5MTk0NTI1NTIyMDQ2NDE4MTA1NzgxNzQ3NzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEwODAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=b8wuLU32a9wQ7kNvwGhnELW&_nc_oc=AdqYQc7r9FZjaP2uDagmWeB5z4xxtsL7gXaTriBv8m-1GTLhp_RSYb5xRd22pc3NM5hHPg_-KeKxRyWZRGP1KNdl&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=XLv7Ue6j381x54R7vKE8Xw&_nc_ss=7a22e&oh=00_Af5DrPc3l2HAlY5GMKVysKjMx24yeImPhLuiijgOJcL84A&oe=6A082CB6",
+          "currentSrc": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/671277477_18105781753780820_488339291069983432_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=103&ig_cache_key=Mzg5NDM5MTk0NTI1NTIyMDQ2NDE4MTA1NzgxNzQ3NzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEwODAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=b8wuLU32a9wQ7kNvwGhnELW&_nc_oc=AdqYQc7r9FZjaP2uDagmWeB5z4xxtsL7gXaTriBv8m-1GTLhp_RSYb5xRd22pc3NM5hHPg_-KeKxRyWZRGP1KNdl&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=XLv7Ue6j381x54R7vKE8Xw&_nc_ss=7a22e&oh=00_Af5DrPc3l2HAlY5GMKVysKjMx24yeImPhLuiijgOJcL84A&oe=6A082CB6",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 1080,
+          "naturalHeight": 1920
+        },
+        {
+          "alt": "Photo by Ember Dragon on May 07, 2026. May be a cartoon of text that says 'Search with Ember!'.",
+          "src": "https://scontent-atl3-3.cdninstagram.com/v/t39.30808-6/688826047_122098467615308464_7955118311513773631_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=Mzg5MjEwNzY2NTc4MjQ2NzEyMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=7X8tzGgUVuoQ7kNvwG856JD&_nc_oc=Adomd6K_1vGWZ4n5K9tNOmZBL1n_PafReY4VMCr2TMshTvOpcrBAVrqF-MdUp4DCS7XPVGX_xYcj-ro4l-6UIHdr&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_gid=XLv7Ue6j381x54R7vKE8Xw&_nc_ss=7a22e&oh=00_Af7GJyVe6mboHH_7Y-Uy-0Q3oERqvb9uaXwiUZeQZBHYSQ&oe=6A081E7D",
+          "currentSrc": "https://scontent-atl3-3.cdninstagram.com/v/t39.30808-6/688826047_122098467615308464_7955118311513773631_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=Mzg5MjEwNzY2NTc4MjQ2NzEyMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=7X8tzGgUVuoQ7kNvwG856JD&_nc_oc=Adomd6K_1vGWZ4n5K9tNOmZBL1n_PafReY4VMCr2TMshTvOpcrBAVrqF-MdUp4DCS7XPVGX_xYcj-ro4l-6UIHdr&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_gid=XLv7Ue6j381x54R7vKE8Xw&_nc_ss=7a22e&oh=00_Af7GJyVe6mboHH_7Y-Uy-0Q3oERqvb9uaXwiUZeQZBHYSQ&oe=6A081E7D",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 1122,
+          "naturalHeight": 1402
+        },
+        {
+          "alt": "Can your little seeker help Ember find the star?\n\nA cozy screen-free activity idea for kids who love dragons, picture books, and seek-and-find fun.\n\n#KidsActivities #ScreenFreeKids #SeekAndFind #DragonBooks #KidsBooks #EmberDragonBooks",
+          "src": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/686529620_18104764216780820_8716572975070763158_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=Mzg5MTQ4OTkzNTYxMDI2MTMyOTE4MTA0NzY0MjEwNzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEwODAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=PsNRubzM13cQ7kNvwGWGjr5&_nc_oc=Adqs6Q6WDhAhdG3K1bzdImMdWiV3ppyQJVAV4vAVQG5EUiW5Yf6rHjFVbIM9hzBliYfkAtljyaLh7lrYl-d22daD&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=XLv7Ue6j381x54R7vKE8Xw&_nc_ss=7a22e&oh=00_Af4XasxqCGddeRAthQkSq2JJGjhgFMgXihrkS0oik-oIQw&oe=6A081B46",
+          "currentSrc": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/686529620_18104764216780820_8716572975070763158_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=Mzg5MTQ4OTkzNTYxMDI2MTMyOTE4MTA0NzY0MjEwNzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEwODAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=PsNRubzM13cQ7kNvwGWGjr5&_nc_oc=Adqs6Q6WDhAhdG3K1bzdImMdWiV3ppyQJVAV4vAVQG5EUiW5Yf6rHjFVbIM9hzBliYfkAtljyaLh7lrYl-d22daD&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=XLv7Ue6j381x54R7vKE8Xw&_nc_ss=7a22e&oh=00_Af4XasxqCGddeRAthQkSq2JJGjhgFMgXihrkS0oik-oIQw&oe=6A081B46",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 1080,
+          "naturalHeight": 1920
+        },
+        {
+          "alt": "Photo by Ember Dragon on May 06, 2026. May be a video game screenshot of text that says 'Dute Your baby dragon guide'.",
+          "src": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/684219023_18104696668780820_6284800416477690025_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ig_cache_key=Mzg5MTI0NzM5NzIwNDQ5NTc0OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuOTQxLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=mYYLeFYmdtYQ7kNvwFloXvG&_nc_oc=Adrp-hBlD6zFLMaNsaRKFvmoATKKdKmeEfyb9lW_V1kTXre-WJZyOrKX2XKTKy2IOSRIV0yoSTSNjepH9bq36Sd1&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=XLv7Ue6j381x54R7vKE8Xw&_nc_ss=7a22e&oh=00_Af4uL7MGv3bc-D7vI78Prufv4YxsxPvRlFGTfcvs8US_5g&oe=6A07FE83",
+          "currentSrc": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/684219023_18104696668780820_6284800416477690025_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ig_cache_key=Mzg5MTI0NzM5NzIwNDQ5NTc0OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuOTQxLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=mYYLeFYmdtYQ7kNvwFloXvG&_nc_oc=Adrp-hBlD6zFLMaNsaRKFvmoATKKdKmeEfyb9lW_V1kTXre-WJZyOrKX2XKTKy2IOSRIV0yoSTSNjepH9bq36Sd1&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=XLv7Ue6j381x54R7vKE8Xw&_nc_ss=7a22e&oh=00_Af4uL7MGv3bc-D7vI78Prufv4YxsxPvRlFGTfcvs8US_5g&oe=6A07FE83",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 941,
+          "naturalHeight": 941
+        },
+        {
+          "alt": "Meet Ember. A quick cozy search moment with Ember.\n\nFollow for more Ember sneak peeks.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #KidsBooks",
+          "src": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/684771002_18104695954780820_1583764775773970060_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=Mzg5MTI0NTQ4NjI1NjQ1ODAxOTE4MTA0Njk1OTQ4NzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjU5Mi5zZHIudmlkZW9fZGVmYXVsdF9jb3Zlcl9mcmFtZS5DMyJ9&_nc_ohc=jFwXQkq0hykQ7kNvwEQlcAf&_nc_oc=AdpgFODmoZ1zPPSqhwNFz9JLeT4Gs3pGRXvDOG26DQBUS5tb9lD4rFpKj50Gue6QChXObzrz71kgi-7C8iRGK4QC&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=XLv7Ue6j381x54R7vKE8Xw&_nc_ss=7a22e&oh=00_Af6-OchQhrVs0vwNVSk1YaEdV5Do18h0JsiRjRN-xJmaug&oe=6A080944",
+          "currentSrc": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/684771002_18104695954780820_1583764775773970060_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=Mzg5MTI0NTQ4NjI1NjQ1ODAxOTE4MTA0Njk1OTQ4NzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjU5Mi5zZHIudmlkZW9fZGVmYXVsdF9jb3Zlcl9mcmFtZS5DMyJ9&_nc_ohc=jFwXQkq0hykQ7kNvwEQlcAf&_nc_oc=AdpgFODmoZ1zPPSqhwNFz9JLeT4Gs3pGRXvDOG26DQBUS5tb9lD4rFpKj50Gue6QChXObzrz71kgi-7C8iRGK4QC&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=XLv7Ue6j381x54R7vKE8Xw&_nc_ss=7a22e&oh=00_Af6-OchQhrVs0vwNVSk1YaEdV5Do18h0JsiRjRN-xJmaug&oe=6A080944",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 592,
+          "naturalHeight": 592
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "platform": "facebook",
+      "source": "queue.posted_url",
+      "url": "https://www.facebook.com/photo.php?fbid=122097672171308464&set=pb.61589253935031.-2207520000&type=3",
+      "finalUrl": "https://www.facebook.com/photo.php?fbid=122097672171308464&set=pb.61589253935031.-2207520000&type=3",
+      "screenshot": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/review/day-02-facebook-full.png",
+      "viewportScreenshot": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/review/day-02-facebook-viewport.png",
+      "title": "(4) Facebook",
+      "blockerSeen": null,
+      "bodySnippet": "Number of unread notifications 4 Ember Dragon Books e d t p s o o S r n 0 t h y a 9 1 0 6 g a 1 6 5 u 1 a a f M 1 7 4 a M 6 h P 4 8 : 1 a 2 f 0 8 a 7 c 6 l 7 6 8 a · A warm little search adventure for families who love screen-free kids' activity ideas and gentle fantasy worlds. Save this for screen-free activity inspiration. #SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #KidsBooks Edit Boost post Comments No comments yet Be the first to comment. Comment as Ember Dragon Books",
+      "images": [
+        {
+          "alt": "May be an image of text that says 'Screen-f en-free drágon fun'",
+          "src": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/690624599_122097672177308464_3481704654223956251_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_ohc=DhG4pFRvP14Q7kNvwE9dLZu&_nc_oc=AdocRCDFmH9mR3rErn5Unj8etLe-p_kurhzI8oJyEgJ8RMIaYX31nOGGoNbqSNtwnLM5nkv-weOGp6SNO2LOtZ57&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=ZJlkY82fSluo5piCuwNB3A&_nc_ss=7b2a8&oh=00_Af6jN2KsYGA39rYkjcIiMbFr9P4qfcihALAikVclA2aK7Q&oe=6A081574",
+          "currentSrc": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/690624599_122097672177308464_3481704654223956251_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_ohc=DhG4pFRvP14Q7kNvwE9dLZu&_nc_oc=AdocRCDFmH9mR3rErn5Unj8etLe-p_kurhzI8oJyEgJ8RMIaYX31nOGGoNbqSNtwnLM5nkv-weOGp6SNO2LOtZ57&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=ZJlkY82fSluo5piCuwNB3A&_nc_ss=7b2a8&oh=00_Af6jN2KsYGA39rYkjcIiMbFr9P4qfcihALAikVclA2aK7Q&oe=6A081574",
+          "clientWidth": 699,
+          "clientHeight": 874,
+          "naturalWidth": 1122,
+          "naturalHeight": 1402
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "platform": "instagram",
+      "source": "queue.posted_url",
+      "url": "https://www.instagram.com/p/DYDi0z-ieoz/",
+      "finalUrl": "https://www.instagram.com/p/DYDi0z-ieoz/",
+      "screenshot": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/review/day-03-instagram-full.png",
+      "viewportScreenshot": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/review/day-03-instagram-viewport.png",
+      "title": "Instagram",
+      "blockerSeen": null,
+      "bodySnippet": "Post emberdragonbooks View insights Boost post emberdragonbooks Lanterns, tiny treasures, and one curious baby dragon. Ember’s world is built for little seekers.... more 3 days ago More posts from emberdragonbooks",
+      "images": [
+        {
+          "alt": "Photo by Ember Dragon on May 07, 2026. May be a cartoon of text that says 'Search with Ember!'.",
+          "src": "https://scontent-atl3-3.cdninstagram.com/v/t39.30808-6/688826047_122098467615308464_7955118311513773631_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=Mzg5MjEwNzY2NTc4MjQ2NzEyMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=7X8tzGgUVuoQ7kNvwG856JD&_nc_oc=Adomd6K_1vGWZ4n5K9tNOmZBL1n_PafReY4VMCr2TMshTvOpcrBAVrqF-MdUp4DCS7XPVGX_xYcj-ro4l-6UIHdr&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_gid=QQHn18i1nr9TYfREvozgrw&_nc_ss=7a22e&oh=00_Af54hejaYc5mtj32Llpcx1KxoXhfV7pB3z1qMAXxVnF_3w&oe=6A081E7D",
+          "currentSrc": "https://scontent-atl3-3.cdninstagram.com/v/t39.30808-6/688826047_122098467615308464_7955118311513773631_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=Mzg5MjEwNzY2NTc4MjQ2NzEyMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=7X8tzGgUVuoQ7kNvwG856JD&_nc_oc=Adomd6K_1vGWZ4n5K9tNOmZBL1n_PafReY4VMCr2TMshTvOpcrBAVrqF-MdUp4DCS7XPVGX_xYcj-ro4l-6UIHdr&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_gid=QQHn18i1nr9TYfREvozgrw&_nc_ss=7a22e&oh=00_Af54hejaYc5mtj32Llpcx1KxoXhfV7pB3z1qMAXxVnF_3w&oe=6A081E7D",
+          "clientWidth": 430,
+          "clientHeight": 537,
+          "naturalWidth": 1122,
+          "naturalHeight": 1402
+        },
+        {
+          "alt": "Photo by Ember Dragon on May 11, 2026. May be a cartoon of lantern and text that says 'Can you find the Baby Flame Lantern? 皿'.",
+          "src": "https://scontent-atl3-3.cdninstagram.com/v/t39.30808-6/696302351_122101574919308464_1284638365670859299_n.jpg?stp=c0.248.941.1176a_dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=Mzg5NDkyNjg3NDg5MzA2NjMyOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuOTQxLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ez4iT4wNfZ4Q7kNvwEZn6kd&_nc_oc=AdpGHNhFN2qGkpAce_7mjtW5HKZh9Kz4pwNZC35GRsXYm16zGpHDiI5jqfraElBznQzt3GlZwGqPT4-UYV-Tp4Ll&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_gid=QQHn18i1nr9TYfREvozgrw&_nc_ss=7a22e&oh=00_Af5tEHghPcJiXnraupojf-QnvRIoEXnQijyuHbUzVyvTIQ&oe=6A080457",
+          "currentSrc": "https://scontent-atl3-3.cdninstagram.com/v/t39.30808-6/696302351_122101574919308464_1284638365670859299_n.jpg?stp=c0.248.941.1176a_dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=Mzg5NDkyNjg3NDg5MzA2NjMyOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuOTQxLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ez4iT4wNfZ4Q7kNvwEZn6kd&_nc_oc=AdpGHNhFN2qGkpAce_7mjtW5HKZh9Kz4pwNZC35GRsXYm16zGpHDiI5jqfraElBznQzt3GlZwGqPT4-UYV-Tp4Ll&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_gid=QQHn18i1nr9TYfREvozgrw&_nc_ss=7a22e&oh=00_Af5tEHghPcJiXnraupojf-QnvRIoEXnQijyuHbUzVyvTIQ&oe=6A080457",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 941,
+          "naturalHeight": 1176
+        },
+        {
+          "alt": "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers.\n\nComing soon to Amazon.\n\nShare with a little dragon fan.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #BabyDragon #KidsBooks #EmberDragonBooks #dragonbooksforkids #dragonbooks",
+          "src": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/671277477_18105781753780820_488339291069983432_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=103&ig_cache_key=Mzg5NDM5MTk0NTI1NTIyMDQ2NDE4MTA1NzgxNzQ3NzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEwODAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=b8wuLU32a9wQ7kNvwGhnELW&_nc_oc=AdqYQc7r9FZjaP2uDagmWeB5z4xxtsL7gXaTriBv8m-1GTLhp_RSYb5xRd22pc3NM5hHPg_-KeKxRyWZRGP1KNdl&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=QQHn18i1nr9TYfREvozgrw&_nc_ss=7a22e&oh=00_Af54jJ8A8O1Uao6HHXo699mMfEKxxyLFVuI1osSB5wZZyA&oe=6A082CB6",
+          "currentSrc": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/671277477_18105781753780820_488339291069983432_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=103&ig_cache_key=Mzg5NDM5MTk0NTI1NTIyMDQ2NDE4MTA1NzgxNzQ3NzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEwODAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=b8wuLU32a9wQ7kNvwGhnELW&_nc_oc=AdqYQc7r9FZjaP2uDagmWeB5z4xxtsL7gXaTriBv8m-1GTLhp_RSYb5xRd22pc3NM5hHPg_-KeKxRyWZRGP1KNdl&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=QQHn18i1nr9TYfREvozgrw&_nc_ss=7a22e&oh=00_Af54jJ8A8O1Uao6HHXo699mMfEKxxyLFVuI1osSB5wZZyA&oe=6A082CB6",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 1080,
+          "naturalHeight": 1920
+        },
+        {
+          "alt": "Photo by Ember Dragon on May 06, 2026. May be a cartoon of poster and text that says 'Screen-fr en-free drágon fun'.",
+          "src": "https://scontent-atl3-2.cdninstagram.com/v/t39.30808-6/690624599_122097672177308464_3481704654223956251_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ig_cache_key=Mzg5MTQ5MjczNjY3NjYzNTE1MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=DhG4pFRvP14Q7kNvwE9dLZu&_nc_oc=AdocRCDFmH9mR3rErn5Unj8etLe-p_kurhzI8oJyEgJ8RMIaYX31nOGGoNbqSNtwnLM5nkv-weOGp6SNO2LOtZ57&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=QQHn18i1nr9TYfREvozgrw&_nc_ss=7a22e&oh=00_Af5i-sng_mTye5rSmd5GboUlWVrVbIX9OmPSIAJ50FBuOw&oe=6A081574",
+          "currentSrc": "https://scontent-atl3-2.cdninstagram.com/v/t39.30808-6/690624599_122097672177308464_3481704654223956251_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ig_cache_key=Mzg5MTQ5MjczNjY3NjYzNTE1MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=DhG4pFRvP14Q7kNvwE9dLZu&_nc_oc=AdocRCDFmH9mR3rErn5Unj8etLe-p_kurhzI8oJyEgJ8RMIaYX31nOGGoNbqSNtwnLM5nkv-weOGp6SNO2LOtZ57&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=QQHn18i1nr9TYfREvozgrw&_nc_ss=7a22e&oh=00_Af5i-sng_mTye5rSmd5GboUlWVrVbIX9OmPSIAJ50FBuOw&oe=6A081574",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 1122,
+          "naturalHeight": 1402
+        },
+        {
+          "alt": "Can your little seeker help Ember find the star?\n\nA cozy screen-free activity idea for kids who love dragons, picture books, and seek-and-find fun.\n\n#KidsActivities #ScreenFreeKids #SeekAndFind #DragonBooks #KidsBooks #EmberDragonBooks",
+          "src": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/686529620_18104764216780820_8716572975070763158_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=Mzg5MTQ4OTkzNTYxMDI2MTMyOTE4MTA0NzY0MjEwNzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEwODAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=PsNRubzM13cQ7kNvwGWGjr5&_nc_oc=Adqs6Q6WDhAhdG3K1bzdImMdWiV3ppyQJVAV4vAVQG5EUiW5Yf6rHjFVbIM9hzBliYfkAtljyaLh7lrYl-d22daD&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=QQHn18i1nr9TYfREvozgrw&_nc_ss=7a22e&oh=00_Af7GM1MD0eem3_RrGi5sON-6nREnIZ4OYvRC8AZphRgCiw&oe=6A081B46",
+          "currentSrc": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/686529620_18104764216780820_8716572975070763158_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=Mzg5MTQ4OTkzNTYxMDI2MTMyOTE4MTA0NzY0MjEwNzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEwODAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=PsNRubzM13cQ7kNvwGWGjr5&_nc_oc=Adqs6Q6WDhAhdG3K1bzdImMdWiV3ppyQJVAV4vAVQG5EUiW5Yf6rHjFVbIM9hzBliYfkAtljyaLh7lrYl-d22daD&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=QQHn18i1nr9TYfREvozgrw&_nc_ss=7a22e&oh=00_Af7GM1MD0eem3_RrGi5sON-6nREnIZ4OYvRC8AZphRgCiw&oe=6A081B46",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 1080,
+          "naturalHeight": 1920
+        },
+        {
+          "alt": "Photo by Ember Dragon on May 06, 2026. May be a video game screenshot of text that says 'Dute Your baby dragon guide'.",
+          "src": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/684219023_18104696668780820_6284800416477690025_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ig_cache_key=Mzg5MTI0NzM5NzIwNDQ5NTc0OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuOTQxLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=mYYLeFYmdtYQ7kNvwFloXvG&_nc_oc=Adrp-hBlD6zFLMaNsaRKFvmoATKKdKmeEfyb9lW_V1kTXre-WJZyOrKX2XKTKy2IOSRIV0yoSTSNjepH9bq36Sd1&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=QQHn18i1nr9TYfREvozgrw&_nc_ss=7a22e&oh=00_Af6TcPJkur7bov-cL94H_U3qLqXovB7At6_zZcizzuF0Bw&oe=6A07FE83",
+          "currentSrc": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/684219023_18104696668780820_6284800416477690025_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ig_cache_key=Mzg5MTI0NzM5NzIwNDQ5NTc0OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuOTQxLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=mYYLeFYmdtYQ7kNvwFloXvG&_nc_oc=Adrp-hBlD6zFLMaNsaRKFvmoATKKdKmeEfyb9lW_V1kTXre-WJZyOrKX2XKTKy2IOSRIV0yoSTSNjepH9bq36Sd1&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=QQHn18i1nr9TYfREvozgrw&_nc_ss=7a22e&oh=00_Af6TcPJkur7bov-cL94H_U3qLqXovB7At6_zZcizzuF0Bw&oe=6A07FE83",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 941,
+          "naturalHeight": 941
+        },
+        {
+          "alt": "Meet Ember. A quick cozy search moment with Ember.\n\nFollow for more Ember sneak peeks.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #KidsBooks",
+          "src": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/684771002_18104695954780820_1583764775773970060_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=Mzg5MTI0NTQ4NjI1NjQ1ODAxOTE4MTA0Njk1OTQ4NzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjU5Mi5zZHIudmlkZW9fZGVmYXVsdF9jb3Zlcl9mcmFtZS5DMyJ9&_nc_ohc=jFwXQkq0hykQ7kNvwEQlcAf&_nc_oc=AdpgFODmoZ1zPPSqhwNFz9JLeT4Gs3pGRXvDOG26DQBUS5tb9lD4rFpKj50Gue6QChXObzrz71kgi-7C8iRGK4QC&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=QQHn18i1nr9TYfREvozgrw&_nc_ss=7a22e&oh=00_Af5vN1gA9oZIODpuu9YJDRxW-FLs41yPLIimgosyuvpYuw&oe=6A080944",
+          "currentSrc": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/684771002_18104695954780820_1583764775773970060_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=Mzg5MTI0NTQ4NjI1NjQ1ODAxOTE4MTA0Njk1OTQ4NzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjU5Mi5zZHIudmlkZW9fZGVmYXVsdF9jb3Zlcl9mcmFtZS5DMyJ9&_nc_ohc=jFwXQkq0hykQ7kNvwEQlcAf&_nc_oc=AdpgFODmoZ1zPPSqhwNFz9JLeT4Gs3pGRXvDOG26DQBUS5tb9lD4rFpKj50Gue6QChXObzrz71kgi-7C8iRGK4QC&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=QQHn18i1nr9TYfREvozgrw&_nc_ss=7a22e&oh=00_Af5vN1gA9oZIODpuu9YJDRxW-FLs41yPLIimgosyuvpYuw&oe=6A080944",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 592,
+          "naturalHeight": 592
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "platform": "facebook",
+      "source": "queue.posted_url",
+      "url": "https://facebook.com/permalink.php?story_fbid=pfbid0jTuUrmPJTKaGTruHJvNtt5NyDBVMZSL4Xy8C5jUxXQXuj93oPaAuLmyP5CcHRFrbl&id=61589253935031",
+      "finalUrl": "https://www.facebook.com/permalink.php?story_fbid=pfbid0jTuUrmPJTKaGTruHJvNtt5NyDBVMZSL4Xy8C5jUxXQXuj93oPaAuLmyP5CcHRFrbl&id=61589253935031",
+      "screenshot": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/review/day-03-facebook-full.png",
+      "viewportScreenshot": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/review/day-03-facebook-viewport.png",
+      "title": "(4) Lanterns, tiny treasures, and one curious... - Ember Dragon Books | Facebook",
+      "blockerSeen": null,
+      "bodySnippet": "Number of unread notifications 4 Facebook Menu Ember Dragon Books Professional dashboard Ads Manager Ad Center See more Suggested Meta AI Manus AI Feeds See more Your shortcuts Eggdrasil Farms Eggdrasil Farms Woodworking Ember Dragon Books Heathen Pinnacle Gap See more Privacy · Consumer Health Privacy · Terms · Advertising · Ad Choices · Cookies · More Home Create a post What's on your mind, Ember Dragon Books? Tips for your Page Recommended post You could reach up to 6 more Account Center accounts daily when you spend $42 to boost this post. Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers. Coming soon to Amazon. Share with a little dragon fan. #SeekAndFind #KidsActivityBook #ChildrensBooks #BabyDragon #KidsBooks #EmberDragonBooks #dragonbooksforkids #dragonbooks Yesterday at 7:48 PM · Boost reel See insights Stories Photos and videos Reels Short videos Feed posts Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Fac",
+      "images": [
+        {
+          "alt": "",
+          "src": "https://scontent-atl3-2.xx.fbcdn.net/v/t15.5256-10/690797189_947793244729679_1626515806113053819_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=kD6bYA4idUwQ7kNvwF9A6IG&_nc_oc=AdpY4nfnwd0W0dghE8oTIToQLM87LEJTxTKjQT0AiIbzhZCROsOkCSMpwdw1fshlno_xf1S5Ia5qZELq7ba9-cID&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=yz7WbTXIvPU1V5xtnLttjg&_nc_ss=7b2a8&oh=00_Af4tzEKvPWsdORJ0A_zSb9eSeuvv_VyuHcKtoNx0G3muPg&oe=6A0803BB",
+          "currentSrc": "https://scontent-atl3-2.xx.fbcdn.net/v/t15.5256-10/690797189_947793244729679_1626515806113053819_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=kD6bYA4idUwQ7kNvwF9A6IG&_nc_oc=AdpY4nfnwd0W0dghE8oTIToQLM87LEJTxTKjQT0AiIbzhZCROsOkCSMpwdw1fshlno_xf1S5Ia5qZELq7ba9-cID&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=yz7WbTXIvPU1V5xtnLttjg&_nc_ss=7b2a8&oh=00_Af4tzEKvPWsdORJ0A_zSb9eSeuvv_VyuHcKtoNx0G3muPg&oe=6A0803BB",
+          "clientWidth": 70,
+          "clientHeight": 124,
+          "naturalWidth": 540,
+          "naturalHeight": 960
+        },
+        {
+          "alt": "May be an image of road and text that says 'Welcome to Tennessee TheVolunteerState State olunteer WelcomeT To NORTH CAROLINA FIRST FIRSTINFLIGHT IN FLIGHT WELCOMETO TO VIRGINIA. VIRGINIAISFORLOVERS VIRGINIA CONFUSEDB VIRGINIA 海OCTH GAROUINA'",
+          "src": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/689006028_122123790225218385_4869746169477108691_n.jpg?stp=cp6_dst-jpg_s565x565_tt6&_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_ohc=KDFtted-6bYQ7kNvwGYvfsU&_nc_oc=Ado8UJuUb0iR2KLUKO0a5Tc975g6aQNRU29xW871BQfCAYvti5nm9yQzVgKNj5q6vrbQVpHm25jJkt_QkQvF_6cd&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=d5JE0_JGCI3AwVCQ9BV40w&_nc_ss=7b2a8&oh=00_Af61PjCeuVwTo5p3HmTtRSrvV7c9PcmISFlVXyQYXRZftg&oe=6A082038",
+          "currentSrc": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/689006028_122123790225218385_4869746169477108691_n.jpg?stp=cp6_dst-jpg_s565x565_tt6&_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_ohc=KDFtted-6bYQ7kNvwGYvfsU&_nc_oc=Ado8UJuUb0iR2KLUKO0a5Tc975g6aQNRU29xW871BQfCAYvti5nm9yQzVgKNj5q6vrbQVpHm25jJkt_QkQvF_6cd&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=d5JE0_JGCI3AwVCQ9BV40w&_nc_ss=7b2a8&oh=00_Af61PjCeuVwTo5p3HmTtRSrvV7c9PcmISFlVXyQYXRZftg&oe=6A082038",
+          "clientWidth": 545,
+          "clientHeight": 605,
+          "naturalWidth": 509,
+          "naturalHeight": 565
+        },
+        {
+          "alt": "May be an image of text that says 'Search with Ember!'",
+          "src": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/688826047_122098467615308464_7955118311513773631_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=109&ccb=1-7&_nc_sid=13d280&_nc_ohc=7X8tzGgUVuoQ7kNvwG856JD&_nc_oc=Adomd6K_1vGWZ4n5K9tNOmZBL1n_PafReY4VMCr2TMshTvOpcrBAVrqF-MdUp4DCS7XPVGX_xYcj-ro4l-6UIHdr&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=zvegFIzsuDFS51p-8QiLsg&_nc_ss=7b2a8&oh=00_Af4GyGN-MYCBiHp9TAZwO1cCU9mQpcvoSZJUA2fHL1Ba8Q&oe=6A081E7D",
+          "currentSrc": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/688826047_122098467615308464_7955118311513773631_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=109&ccb=1-7&_nc_sid=13d280&_nc_ohc=7X8tzGgUVuoQ7kNvwG856JD&_nc_oc=Adomd6K_1vGWZ4n5K9tNOmZBL1n_PafReY4VMCr2TMshTvOpcrBAVrqF-MdUp4DCS7XPVGX_xYcj-ro4l-6UIHdr&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=zvegFIzsuDFS51p-8QiLsg&_nc_ss=7b2a8&oh=00_Af4GyGN-MYCBiHp9TAZwO1cCU9mQpcvoSZJUA2fHL1Ba8Q&oe=6A081E7D",
+          "clientWidth": 484,
+          "clientHeight": 605,
+          "naturalWidth": 512,
+          "naturalHeight": 640
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "platform": "instagram",
+      "source": "day-04 publish-result.json",
+      "url": "https://www.instagram.com/p/DYNj1tEH6BZ/",
+      "finalUrl": "https://www.instagram.com/p/DYNj1tEH6BZ/",
+      "screenshot": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/review/day-04-instagram-full.png",
+      "viewportScreenshot": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/review/day-04-instagram-viewport.png",
+      "title": "Instagram",
+      "blockerSeen": null,
+      "bodySnippet": "Post emberdragonbooks View insights Boost post emberdragonbooks Can you find the Baby Flame Lantern hiding in Ember's cozy festival world?... more 44 minutes ago More posts from emberdragonbooks",
+      "images": [
+        {
+          "alt": "Photo by Ember Dragon on May 11, 2026. May be a cartoon of lantern and text that says 'Can you find the Baby Flame Lantern? 皿'.",
+          "src": "https://scontent-atl3-3.cdninstagram.com/v/t39.30808-6/696302351_122101574919308464_1284638365670859299_n.jpg?stp=c0.248.941.1176a_dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=Mzg5NDkyNjg3NDg5MzA2NjMyOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuOTQxLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ez4iT4wNfZ4Q7kNvwEZn6kd&_nc_oc=AdpGHNhFN2qGkpAce_7mjtW5HKZh9Kz4pwNZC35GRsXYm16zGpHDiI5jqfraElBznQzt3GlZwGqPT4-UYV-Tp4Ll&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_gid=RZDocGqrif8OHhGHHRffxQ&_nc_ss=7a22e&oh=00_Af6Eha6Oq8R0r4fGRshe3cuhc4ShO15np_MFOdin0l7sWQ&oe=6A080457",
+          "currentSrc": "https://scontent-atl3-3.cdninstagram.com/v/t39.30808-6/696302351_122101574919308464_1284638365670859299_n.jpg?stp=c0.248.941.1176a_dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=Mzg5NDkyNjg3NDg5MzA2NjMyOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuOTQxLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=ez4iT4wNfZ4Q7kNvwEZn6kd&_nc_oc=AdpGHNhFN2qGkpAce_7mjtW5HKZh9Kz4pwNZC35GRsXYm16zGpHDiI5jqfraElBznQzt3GlZwGqPT4-UYV-Tp4Ll&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_gid=RZDocGqrif8OHhGHHRffxQ&_nc_ss=7a22e&oh=00_Af6Eha6Oq8R0r4fGRshe3cuhc4ShO15np_MFOdin0l7sWQ&oe=6A080457",
+          "clientWidth": 430,
+          "clientHeight": 764,
+          "naturalWidth": 941,
+          "naturalHeight": 1176
+        },
+        {
+          "alt": "Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers.\n\nComing soon to Amazon.\n\nShare with a little dragon fan.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #BabyDragon #KidsBooks #EmberDragonBooks #dragonbooksforkids #dragonbooks",
+          "src": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/671277477_18105781753780820_488339291069983432_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=103&ig_cache_key=Mzg5NDM5MTk0NTI1NTIyMDQ2NDE4MTA1NzgxNzQ3NzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEwODAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=b8wuLU32a9wQ7kNvwGhnELW&_nc_oc=AdqYQc7r9FZjaP2uDagmWeB5z4xxtsL7gXaTriBv8m-1GTLhp_RSYb5xRd22pc3NM5hHPg_-KeKxRyWZRGP1KNdl&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=RZDocGqrif8OHhGHHRffxQ&_nc_ss=7a22e&oh=00_Af4b3gWF9tLGic1Wa2Mvnc7yj0z6rF8B-4EDJov8JWCmyQ&oe=6A082CB6",
+          "currentSrc": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/671277477_18105781753780820_488339291069983432_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=103&ig_cache_key=Mzg5NDM5MTk0NTI1NTIyMDQ2NDE4MTA1NzgxNzQ3NzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEwODAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=b8wuLU32a9wQ7kNvwGhnELW&_nc_oc=AdqYQc7r9FZjaP2uDagmWeB5z4xxtsL7gXaTriBv8m-1GTLhp_RSYb5xRd22pc3NM5hHPg_-KeKxRyWZRGP1KNdl&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=RZDocGqrif8OHhGHHRffxQ&_nc_ss=7a22e&oh=00_Af4b3gWF9tLGic1Wa2Mvnc7yj0z6rF8B-4EDJov8JWCmyQ&oe=6A082CB6",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 1080,
+          "naturalHeight": 1920
+        },
+        {
+          "alt": "Photo by Ember Dragon on May 07, 2026. May be a cartoon of text that says 'Search with Ember!'.",
+          "src": "https://scontent-atl3-3.cdninstagram.com/v/t39.30808-6/688826047_122098467615308464_7955118311513773631_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=Mzg5MjEwNzY2NTc4MjQ2NzEyMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=7X8tzGgUVuoQ7kNvwG856JD&_nc_oc=Adomd6K_1vGWZ4n5K9tNOmZBL1n_PafReY4VMCr2TMshTvOpcrBAVrqF-MdUp4DCS7XPVGX_xYcj-ro4l-6UIHdr&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_gid=RZDocGqrif8OHhGHHRffxQ&_nc_ss=7a22e&oh=00_Af7tKXxcxNXtRtAynzhbt9kOy_mnJLouDeHIo3WxMoNLcg&oe=6A081E7D",
+          "currentSrc": "https://scontent-atl3-3.cdninstagram.com/v/t39.30808-6/688826047_122098467615308464_7955118311513773631_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=Mzg5MjEwNzY2NTc4MjQ2NzEyMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=7X8tzGgUVuoQ7kNvwG856JD&_nc_oc=Adomd6K_1vGWZ4n5K9tNOmZBL1n_PafReY4VMCr2TMshTvOpcrBAVrqF-MdUp4DCS7XPVGX_xYcj-ro4l-6UIHdr&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_gid=RZDocGqrif8OHhGHHRffxQ&_nc_ss=7a22e&oh=00_Af7tKXxcxNXtRtAynzhbt9kOy_mnJLouDeHIo3WxMoNLcg&oe=6A081E7D",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 1122,
+          "naturalHeight": 1402
+        },
+        {
+          "alt": "Photo by Ember Dragon on May 06, 2026. May be a cartoon of poster and text that says 'Screen-fr en-free drágon fun'.",
+          "src": "https://scontent-atl3-2.cdninstagram.com/v/t39.30808-6/690624599_122097672177308464_3481704654223956251_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ig_cache_key=Mzg5MTQ5MjczNjY3NjYzNTE1MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=DhG4pFRvP14Q7kNvwE9dLZu&_nc_oc=AdocRCDFmH9mR3rErn5Unj8etLe-p_kurhzI8oJyEgJ8RMIaYX31nOGGoNbqSNtwnLM5nkv-weOGp6SNO2LOtZ57&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=RZDocGqrif8OHhGHHRffxQ&_nc_ss=7a22e&oh=00_Af6ACEkftCTM6DZPnMuvY7T59zPFKHQ5DDo2ZxRhXTWkTg&oe=6A081574",
+          "currentSrc": "https://scontent-atl3-2.cdninstagram.com/v/t39.30808-6/690624599_122097672177308464_3481704654223956251_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ig_cache_key=Mzg5MTQ5MjczNjY3NjYzNTE1MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=DhG4pFRvP14Q7kNvwE9dLZu&_nc_oc=AdocRCDFmH9mR3rErn5Unj8etLe-p_kurhzI8oJyEgJ8RMIaYX31nOGGoNbqSNtwnLM5nkv-weOGp6SNO2LOtZ57&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=RZDocGqrif8OHhGHHRffxQ&_nc_ss=7a22e&oh=00_Af6ACEkftCTM6DZPnMuvY7T59zPFKHQ5DDo2ZxRhXTWkTg&oe=6A081574",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 1122,
+          "naturalHeight": 1402
+        },
+        {
+          "alt": "Can your little seeker help Ember find the star?\n\nA cozy screen-free activity idea for kids who love dragons, picture books, and seek-and-find fun.\n\n#KidsActivities #ScreenFreeKids #SeekAndFind #DragonBooks #KidsBooks #EmberDragonBooks",
+          "src": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/686529620_18104764216780820_8716572975070763158_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=Mzg5MTQ4OTkzNTYxMDI2MTMyOTE4MTA0NzY0MjEwNzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEwODAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=PsNRubzM13cQ7kNvwGWGjr5&_nc_oc=Adqs6Q6WDhAhdG3K1bzdImMdWiV3ppyQJVAV4vAVQG5EUiW5Yf6rHjFVbIM9hzBliYfkAtljyaLh7lrYl-d22daD&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=RZDocGqrif8OHhGHHRffxQ&_nc_ss=7a22e&oh=00_Af5cjf-gyc9svzY0i60ERdbtSL1IYK3tplmY4o9SS3k7yg&oe=6A081B46",
+          "currentSrc": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/686529620_18104764216780820_8716572975070763158_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=Mzg5MTQ4OTkzNTYxMDI2MTMyOTE4MTA0NzY0MjEwNzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEwODAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=PsNRubzM13cQ7kNvwGWGjr5&_nc_oc=Adqs6Q6WDhAhdG3K1bzdImMdWiV3ppyQJVAV4vAVQG5EUiW5Yf6rHjFVbIM9hzBliYfkAtljyaLh7lrYl-d22daD&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=RZDocGqrif8OHhGHHRffxQ&_nc_ss=7a22e&oh=00_Af5cjf-gyc9svzY0i60ERdbtSL1IYK3tplmY4o9SS3k7yg&oe=6A081B46",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 1080,
+          "naturalHeight": 1920
+        },
+        {
+          "alt": "Photo by Ember Dragon on May 06, 2026. May be a video game screenshot of text that says 'Dute Your baby dragon guide'.",
+          "src": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/684219023_18104696668780820_6284800416477690025_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ig_cache_key=Mzg5MTI0NzM5NzIwNDQ5NTc0OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuOTQxLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=mYYLeFYmdtYQ7kNvwFloXvG&_nc_oc=Adrp-hBlD6zFLMaNsaRKFvmoATKKdKmeEfyb9lW_V1kTXre-WJZyOrKX2XKTKy2IOSRIV0yoSTSNjepH9bq36Sd1&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=RZDocGqrif8OHhGHHRffxQ&_nc_ss=7a22e&oh=00_Af5bXts_itokxtng-0zDcKNrntZ6Az4X883lC52ztXBwdg&oe=6A07FE83",
+          "currentSrc": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/684219023_18104696668780820_6284800416477690025_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ig_cache_key=Mzg5MTI0NzM5NzIwNDQ5NTc0OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuOTQxLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=mYYLeFYmdtYQ7kNvwFloXvG&_nc_oc=Adrp-hBlD6zFLMaNsaRKFvmoATKKdKmeEfyb9lW_V1kTXre-WJZyOrKX2XKTKy2IOSRIV0yoSTSNjepH9bq36Sd1&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_gid=RZDocGqrif8OHhGHHRffxQ&_nc_ss=7a22e&oh=00_Af5bXts_itokxtng-0zDcKNrntZ6Az4X883lC52ztXBwdg&oe=6A07FE83",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 941,
+          "naturalHeight": 941
+        },
+        {
+          "alt": "Meet Ember. A quick cozy search moment with Ember.\n\nFollow for more Ember sneak peeks.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #KidsBooks",
+          "src": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/684771002_18104695954780820_1583764775773970060_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=Mzg5MTI0NTQ4NjI1NjQ1ODAxOTE4MTA0Njk1OTQ4NzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjU5Mi5zZHIudmlkZW9fZGVmYXVsdF9jb3Zlcl9mcmFtZS5DMyJ9&_nc_ohc=jFwXQkq0hykQ7kNvwEQlcAf&_nc_oc=AdpgFODmoZ1zPPSqhwNFz9JLeT4Gs3pGRXvDOG26DQBUS5tb9lD4rFpKj50Gue6QChXObzrz71kgi-7C8iRGK4QC&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=RZDocGqrif8OHhGHHRffxQ&_nc_ss=7a22e&oh=00_Af592eLd9l-CWqQMfbssGfcj0AZNKJZo8jxLcjTwPsaVfA&oe=6A080944",
+          "currentSrc": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-15/684771002_18104695954780820_1583764775773970060_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=Mzg5MTI0NTQ4NjI1NjQ1ODAxOTE4MTA0Njk1OTQ4NzgwODIw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjU5Mi5zZHIudmlkZW9fZGVmYXVsdF9jb3Zlcl9mcmFtZS5DMyJ9&_nc_ohc=jFwXQkq0hykQ7kNvwEQlcAf&_nc_oc=AdpgFODmoZ1zPPSqhwNFz9JLeT4Gs3pGRXvDOG26DQBUS5tb9lD4rFpKj50Gue6QChXObzrz71kgi-7C8iRGK4QC&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=RZDocGqrif8OHhGHHRffxQ&_nc_ss=7a22e&oh=00_Af592eLd9l-CWqQMfbssGfcj0AZNKJZo8jxLcjTwPsaVfA&oe=6A080944",
+          "clientWidth": 142,
+          "clientHeight": 190,
+          "naturalWidth": 592,
+          "naturalHeight": 592
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "platform": "facebook",
+      "source": "day-04 publish-result.json",
+      "url": "https://facebook.com/permalink.php?story_fbid=pfbid0EX8X16J6oK16JACfn8Tf1PcUC8fgy2qb2nQAAHMEAyHfoUrLHSVfRmFtEaztBELVl&id=61589253935031",
+      "finalUrl": "https://www.facebook.com/permalink.php?story_fbid=pfbid0EX8X16J6oK16JACfn8Tf1PcUC8fgy2qb2nQAAHMEAyHfoUrLHSVfRmFtEaztBELVl&id=61589253935031",
+      "screenshot": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/review/day-04-facebook-full.png",
+      "viewportScreenshot": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/review/day-04-facebook-viewport.png",
+      "title": "(4) Can you find the Baby Flame Lantern hiding in... - Ember Dragon Books | Facebook",
+      "blockerSeen": null,
+      "bodySnippet": "Number of unread notifications 4 Facebook Menu Ember Dragon Books Professional dashboard Ads Manager Ad Center See more Suggested Meta AI Manus AI Feeds See more Your shortcuts Eggdrasil Farms Eggdrasil Farms Woodworking Ember Dragon Books Heathen Pinnacle Gap See more Privacy · Consumer Health Privacy · Terms · Advertising · Ad Choices · Cookies · More Home Create a post What's on your mind, Ember Dragon Books? Tips for your Page Recommended post You could reach up to 6 more Account Center accounts daily when you spend $42 to boost this post. Lanterns, tiny treasures, and one curious baby dragon. Ember's world is built for little seekers. Coming soon to Amazon. Share with a little dragon fan. #SeekAndFind #KidsActivityBook #ChildrensBooks #BabyDragon #KidsBooks #EmberDragonBooks #dragonbooksforkids #dragonbooks Yesterday at 7:48 PM · Boost reel See insights Stories Photos and videos Reels Short videos Feed posts Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Fac",
+      "images": [
+        {
+          "alt": "",
+          "src": "https://scontent-atl3-2.xx.fbcdn.net/v/t15.5256-10/690797189_947793244729679_1626515806113053819_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=kD6bYA4idUwQ7kNvwF9A6IG&_nc_oc=AdpY4nfnwd0W0dghE8oTIToQLM87LEJTxTKjQT0AiIbzhZCROsOkCSMpwdw1fshlno_xf1S5Ia5qZELq7ba9-cID&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=11T1nHiT32Py5qv_xpLttg&_nc_ss=7b2a8&oh=00_Af6YrGavrbIHs9QbvaqKmhXU2xElq84jrinELZfGslP0gA&oe=6A0803BB",
+          "currentSrc": "https://scontent-atl3-2.xx.fbcdn.net/v/t15.5256-10/690797189_947793244729679_1626515806113053819_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=kD6bYA4idUwQ7kNvwF9A6IG&_nc_oc=AdpY4nfnwd0W0dghE8oTIToQLM87LEJTxTKjQT0AiIbzhZCROsOkCSMpwdw1fshlno_xf1S5Ia5qZELq7ba9-cID&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=11T1nHiT32Py5qv_xpLttg&_nc_ss=7b2a8&oh=00_Af6YrGavrbIHs9QbvaqKmhXU2xElq84jrinELZfGslP0gA&oe=6A0803BB",
+          "clientWidth": 70,
+          "clientHeight": 124,
+          "naturalWidth": 540,
+          "naturalHeight": 960
+        },
+        {
+          "alt": "May be an image of road and text that says 'Welcome to Tennessee TheVolunteerState State olunteer WelcomeT To NORTH CAROLINA FIRST FIRSTINFLIGHT IN FLIGHT WELCOMETO TO VIRGINIA. VIRGINIAISFORLOVERS VIRGINIA CONFUSEDB VIRGINIA 海OCTH GAROUINA'",
+          "src": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/689006028_122123790225218385_4869746169477108691_n.jpg?stp=cp6_dst-jpg_s565x565_tt6&_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_ohc=KDFtted-6bYQ7kNvwGYvfsU&_nc_oc=Ado8UJuUb0iR2KLUKO0a5Tc975g6aQNRU29xW871BQfCAYvti5nm9yQzVgKNj5q6vrbQVpHm25jJkt_QkQvF_6cd&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=SL8HeNuvx1uIw_qnw936fw&_nc_ss=7b2a8&oh=00_Af6iFp-CIAhhMO97zoT09LEfgH798cr1-OZZsmBHIHPHsg&oe=6A082038",
+          "currentSrc": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/689006028_122123790225218385_4869746169477108691_n.jpg?stp=cp6_dst-jpg_s565x565_tt6&_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_ohc=KDFtted-6bYQ7kNvwGYvfsU&_nc_oc=Ado8UJuUb0iR2KLUKO0a5Tc975g6aQNRU29xW871BQfCAYvti5nm9yQzVgKNj5q6vrbQVpHm25jJkt_QkQvF_6cd&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=SL8HeNuvx1uIw_qnw936fw&_nc_ss=7b2a8&oh=00_Af6iFp-CIAhhMO97zoT09LEfgH798cr1-OZZsmBHIHPHsg&oe=6A082038",
+          "clientWidth": 545,
+          "clientHeight": 605,
+          "naturalWidth": 509,
+          "naturalHeight": 565
+        },
+        {
+          "alt": "May be an image of text that says 'Can you find the Baby Flame Lantern? 皿'",
+          "src": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/696302351_122101574919308464_1284638365670859299_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_ohc=ez4iT4wNfZ4Q7kNvwEZn6kd&_nc_oc=AdpGHNhFN2qGkpAce_7mjtW5HKZh9Kz4pwNZC35GRsXYm16zGpHDiI5jqfraElBznQzt3GlZwGqPT4-UYV-Tp4Ll&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=urntX36C8UaD6TjOrtKrFg&_nc_ss=7b2a8&oh=00_Af7mT-MzsZjIbjjB0SOrVWbUJYf5KKo4wIvy7pIZS5JIvQ&oe=6A080457",
+          "currentSrc": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/696302351_122101574919308464_1284638365670859299_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_ohc=ez4iT4wNfZ4Q7kNvwEZn6kd&_nc_oc=AdpGHNhFN2qGkpAce_7mjtW5HKZh9Kz4pwNZC35GRsXYm16zGpHDiI5jqfraElBznQzt3GlZwGqPT4-UYV-Tp4Ll&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=urntX36C8UaD6TjOrtKrFg&_nc_ss=7b2a8&oh=00_Af7mT-MzsZjIbjjB0SOrVWbUJYf5KKo4wIvy7pIZS5JIvQ&oe=6A080457",
+          "clientWidth": 403,
+          "clientHeight": 717,
+          "naturalWidth": 526,
+          "naturalHeight": 935
+        }
+      ]
+    }
+  ]
+}

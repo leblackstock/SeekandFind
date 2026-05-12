@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-05-11T21:38:30Z",
+  "campaign_day": 4,
+  "platform": "Facebook",
+  "task": "book01-day04-facebook-page-post",
+  "action": "replace_cut_off_text_post",
+  "old_post_url": "https://facebook.com/permalink.php?story_fbid=pfbid0EX8X16J6oK16JACfn8Tf1PcUC8fgy2qb2nQAAHMEAyHfoUrLHSVfRmFtEaztBELVl&id=61589253935031",
+  "old_post_takedown_evidence": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/takedown/facebook-takedown-result.json",
+  "new_post_url": "https://facebook.com/permalink.php?story_fbid=122101601415308464&id=61589253935031",
+  "approved_asset": "content/outputs/images/approved/meta-feed-4x5/book-01/day-04-meta-feed-4x5-approved.png",
+  "caption": "Can you find the Baby Flame Lantern hiding in Ember's cozy festival world?\n\nComing soon to Amazon.\n\nSave this tiny-treasure challenge.\n\n#dragonbooks #dragonbooksforkids",
+  "repost_evidence": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/repost/day-04-meta/repost-result.json",
+  "final_review_screenshot": "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/final-review/facebook-new-url-probe-3.png",
+  "result": "posted"
+}

@@ -59,6 +59,7 @@ Use case: ${useCase}.
 Audience: children ages 5-8 and adult gift-buyers.
 Character references: use Ember-001, Ember-002, and Ember-003 for Ember.
 Format: vertical social-promo composition, phone-friendly, warm, polished, full-color.
+Aspect-ratio rule: if this asset is for an Instagram/Facebook feed still, create it separately as a native 4:5 composition. One approved meta_feed_4x5 image may serve both Instagram feed and Facebook Page feed posts if it is approved for both. Do not crop, resize, or repurpose a 9:16 Pinterest/Shorts/Story image into 4:5. Keep critical text and key art inside the 4:5 feed-safe area and the centered square profile-grid-safe area.
 
 Hard marketing guardrails:
 - Fresh promo art only.
@@ -155,7 +156,7 @@ Can you spot the tiny treasure before Ember does?
 
 ## Hashtags
 
-#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #HiddenObjectBook #FantasyForKids #KidsBooks #FamilyReading #ActivityBook
+#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #HiddenObjectBook #KidsBooks #FamilyReading #EmberDragonBooks #dragonbooks #dragonbooksforkids
 
 ## Image Prompt Plan
 
@@ -167,6 +168,7 @@ Do not say available now, buy now, published, on Amazon, order today, or inside 
 Do not present fresh promo art as a real cover, real interior sample, Amazon listing preview, or finished product mockup.
 Do not create blank promo templates that require Lauren to add text before posting; each image must either include exact approved text or be useful without text as a background, profile/header image, banner, or caption-only post image.
 Avoid promo-template compositions built around large blank parchment, empty sky, empty wall, or open text space.
+Create Instagram/Facebook feed stills separately as native 4:5 images. A shared approved meta_feed_4x5 image can be used for both Facebook and Instagram feed posts. Do not treat 9:16 Pinterest/Shorts/Story art as feed-safe, especially when the image contains generated text.
 `;
 }
 
@@ -222,7 +224,8 @@ export async function generateMarketingBatch(input: Partial<MarketingBatchInput>
     assumptions: [
       "Book is not described as published or available for sale.",
       "Promo art is fresh marketing art, not a fake cover, fake listing preview, or interior sample.",
-      "Promo images are post-ready as generated, or useful without added text as background/profile/banner assets."
+      "Promo images are post-ready as generated, or useful without added text as background/profile/banner assets.",
+      "Instagram/Facebook feed stills require separately created native 4:5 assets, not cropped 9:16 art; one approved meta_feed_4x5 image can serve both feed surfaces."
     ],
     outputsCreated: files,
     warnings: result.warnings,

@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { pathToFileURL } from "node:url";
+import { cdpUrlFromEnv } from "../../src/core/cdp-browser.js";
 
 export interface LiveUploadRecoveryOptions {
   cdpUrl: string;
@@ -20,7 +21,6 @@ export interface LiveUploadRecoveryResult {
   error?: string;
 }
 
-const defaultCdpUrl = "http://127.0.0.1:9222";
 const defaultMatchUrl = "studio.youtube.com";
 
 export const liveUploadRecoveryRule =
@@ -59,7 +59,7 @@ function readFlag(args: string[], name: string): boolean {
 export function parseLiveUploadRecoveryArgs(args: string[]): LiveUploadRecoveryOptions {
   const cleanArgs = args.filter((arg) => arg !== "--");
   return {
-    cdpUrl: readOption(cleanArgs, "cdp-url") ?? defaultCdpUrl,
+    cdpUrl: readOption(cleanArgs, "cdp-url") ?? cdpUrlFromEnv(["SOCIAL_CDP_URL"]),
     matchUrl: readOption(cleanArgs, "match-url") ?? defaultMatchUrl,
     screenshotPath: readOption(cleanArgs, "screenshot-path") ?? defaultScreenshotPath(),
     includeBodyText: readFlag(cleanArgs, "include-body-text")

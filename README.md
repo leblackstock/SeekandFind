@@ -147,11 +147,48 @@ Playwright helper scripts and recipes live under `automation/playwright/`.
 Examples:
 
 ```powershell
+npm run browser:open
 npm run playwright:open -- --tool seedance
 npm run playwright:screenshot -- --name seedance-login-check
 ```
 
 The helpers are reviewable browser assistance only. They stop at login, CAPTCHA, payment/subscription prompts, account verification, or unreliable UI changes.
+
+### Durable CDP Browser
+
+Use this repo command when Codex needs a browser it can reliably reconnect to:
+
+```powershell
+npm run browser:open
+```
+
+Default behavior:
+
+- Opens Chrome/Edge with CDP at `http://127.0.0.1:9222`.
+- Uses the durable gitignored profile `.cache/ember-cdp-browser-profile`.
+- Opens `https://www.pinterest.com/emberdragonbooks/`.
+- Writes the last launch/reconnect result to `content/outputs/session-logs/cdp-browser/last-open-browser.json`.
+
+Useful variants:
+
+```powershell
+npm run browser:open -- --url=https://business.facebook.com/latest/home
+npm run browser:open -- --url=https://www.instagram.com/emberdragonbooks/
+npm run browser:open -- --status=true
+npm run browser:open -- --print-env=true
+```
+
+Use equals-form options with npm on Windows; some npm versions strip bare flags before the script receives them.
+
+After this browser is open, the existing social helpers can reconnect with the default CDP URL or these explicit environment variables:
+
+```powershell
+$env:SOCIAL_CDP_URL="http://127.0.0.1:9222"
+$env:PINTEREST_CDP_URL="http://127.0.0.1:9222"
+$env:META_CDP_URL="http://127.0.0.1:9222"
+```
+
+Do account login, 2FA, CAPTCHA, payment, verification, or security prompts manually in that browser. Do not automate those boundaries.
 
 ## Broke Mode ChatGPT Image Generation
 
@@ -169,10 +206,10 @@ Broke Mode has three browser strategies:
 
 Default mode is `existing`. It expects a CDP-compatible browser endpoint, usually `http://127.0.0.1:9222`.
 
-Start a normal browser with a separate remote-debugging profile when you want existing-browser mode:
+Start the durable CDP browser when you want existing-browser mode:
 
 ```powershell
-chrome.exe --remote-debugging-port=9222 --user-data-dir="$env:TEMP\ember-chatgpt-cdp-profile"
+npm run browser:open -- --url=https://chatgpt.com/
 ```
 
 Log into ChatGPT manually in that browser. Do not automate Google login. Do not copy or expose cookies.

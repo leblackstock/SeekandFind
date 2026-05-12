@@ -1,5 +1,7 @@
 import { pathToFileURL } from "node:url";
 import { PlatformTask, QueuePost, validateSocialQueue } from "./validate-queue.js";
+import { buildPostingAssetRequirements, PostingAssetRequirement } from "./posting-assets.js";
+import { buildPostingCaption } from "./social-captions.js";
 
 export interface NextReadyTask {
   post_id: unknown;
@@ -13,7 +15,9 @@ export interface NextReadyTask {
   required_video_surfaces: unknown;
   legacy_missing_required_video_surfaces: unknown;
   media_assets: unknown;
+  posting_asset_requirements: PostingAssetRequirement[];
   caption_source: unknown;
+  posting_caption: string;
   source_refs: unknown;
   notes: unknown;
 }
@@ -35,7 +39,9 @@ function buildNextTask(post: QueuePost, task: PlatformTask): NextReadyTask {
     required_video_surfaces: task.required_video_surfaces,
     legacy_missing_required_video_surfaces: task.legacy_missing_required_video_surfaces,
     media_assets: post.media_assets,
+    posting_asset_requirements: buildPostingAssetRequirements(post, task),
     caption_source: task.caption_source ?? post.caption_source,
+    posting_caption: buildPostingCaption(task.caption_source ?? post.caption_source, task.required_hashtags),
     source_refs: post.source_refs,
     notes: post.notes
   };

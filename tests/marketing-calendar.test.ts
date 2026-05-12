@@ -87,7 +87,7 @@ describe("marketing calendar", () => {
     expect(fireflyVideo).toMatchObject({
       status: "ready",
       placement: "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels, Pinterest Video Pin",
-      notes: "Tall asset is ready for mobile-first Seedance storyboard/export use. Include #dragonbooks and #dragonbooksforkids wherever platform hashtags are used."
+      notes: "Tall asset is ready for mobile-first Seedance storyboard/export use. Include the full campaign hashtag block wherever platform hashtags are used; #dragonbooks and #dragonbooksforkids are additions, not replacements."
     });
   });
 
@@ -125,6 +125,8 @@ describe("marketing calendar", () => {
     expect(text).toContain("three distinct Pins per campaign day");
     expect(text).toContain("Seedance storyboard exports");
     expect(text).toContain("Do not reuse Book 1-specific Sparkleflame language");
+    expect(text).toContain("Create 4:5 feed promo images separately");
+    expect(text).toContain("one approved meta_feed_4x5 image may serve both Instagram and Facebook feed posts");
   });
 
   it("renders posting guardrails without confirmed purchase claims", () => {

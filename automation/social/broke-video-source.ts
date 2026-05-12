@@ -3,6 +3,7 @@ import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { dirname, isAbsolute, join } from "node:path";
 import { pathToFileURL } from "node:url";
 import { repoRoot, toRepoRelative } from "../../src/config.js";
+import { optionalCdpUrlFromEnv } from "../../src/core/cdp-browser.js";
 import { writeTextFileSafe } from "../../src/core/file-writer.js";
 import { slugify } from "../../src/core/naming.js";
 import { BrowserMode, defaultBrokeModeOptions } from "../../src/core/image-file-manager.js";
@@ -536,10 +537,11 @@ Recover a completed-after-timeout image from the current ChatGPT chat without su
 npm run social:broke-video-source -- --recover day-03
 \`\`\`
 
-Existing-browser Broke Mode uses the already logged-in ChatGPT project tab:
+Existing-browser Broke Mode uses the durable browser profile and reconnects to the already logged-in ChatGPT project tab:
 
 \`\`\`powershell
-npm run social:broke-video-source -- --browser-mode existing --cdp-url http://127.0.0.1:9222
+npm run browser:open -- --url=https://chatgpt.com/
+npm run social:broke-video-source -- --browser-mode existing
 \`\`\`
 
 ## Start Over After A Stuck Browser Upload
@@ -748,7 +750,7 @@ export function parseVideoSourceBrokeModeArgs(args: string[]): VideoSourceBrokeM
     dryRun: parseFlag(args, "dry-run"),
     force: parseFlag(args, "force"),
     browserMode: (parseOption(args, "browser-mode") as BrowserMode | undefined) ?? undefined,
-    cdpUrl: parseOption(args, "cdp-url"),
+    cdpUrl: parseOption(args, "cdp-url") ?? optionalCdpUrlFromEnv(["SOCIAL_CDP_URL"]),
     autoSubmit: parseFlag(args, "auto-submit"),
     timeoutMinutes: parseOption(args, "timeout-minutes") ? Number.parseInt(parseOption(args, "timeout-minutes")!, 10) : undefined
   };

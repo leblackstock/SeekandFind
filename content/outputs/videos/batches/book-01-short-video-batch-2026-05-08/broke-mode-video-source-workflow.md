@@ -65,10 +65,11 @@ Recover a completed-after-timeout image from the current ChatGPT chat without su
 npm run social:broke-video-source -- --recover day-03
 ```
 
-Existing-browser Broke Mode uses the already logged-in ChatGPT project tab:
+Existing-browser Broke Mode uses the durable browser profile and reconnects to the already logged-in ChatGPT project tab:
 
 ```powershell
-npm run social:broke-video-source -- --browser-mode existing --cdp-url http://127.0.0.1:9222
+npm run browser:open -- --url=https://chatgpt.com/
+npm run social:broke-video-source -- --browser-mode existing
 ```
 
 ## Start Over After A Stuck Browser Upload

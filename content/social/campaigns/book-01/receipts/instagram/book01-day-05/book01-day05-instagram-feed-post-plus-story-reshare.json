@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-05-11T19:22:29-04:00",
+  "campaign_day": 5,
+  "platform": "Instagram",
+  "task": "book01-day05-instagram-feed-post-plus-story-reshare",
+  "action": "posted_from_single_meta_composer_with_facebook",
+  "post_url": "https://www.instagram.com/emberdragonbooks/p/DYN3EUqn885/",
+  "approved_asset": "content/outputs/images/approved/meta-feed-4x5/book-01/day-05-meta-feed-4x5-approved.png",
+  "caption": "The Lantern Maker's Workshop is full of tiny details for young eyes to explore.\n\nComing soon to Amazon.\n\nFollow for the next Ember progress update.\n\n#dragonbooks #dragonbooksforkids",
+  "evidence_path": "content/social/campaigns/book-01/evidence/meta-still/book01-day-05/",
+  "final_review_screenshot": "content/social/campaigns/book-01/evidence/meta-still/book01-day-05/08-instagram-day5-post-opened.png",
+  "paired_meta_task": "book01-day05-facebook-page-post",
+  "story_reshare": "not performed during feed post",
+  "result": "posted"
+}

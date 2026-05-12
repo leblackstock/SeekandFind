@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-05-11T21:24:59.076Z",
+  "day": 4,
+  "platforms": [
+    "instagram",
+    "facebook"
+  ],
+  "mediaAsset": "content/outputs/images/approved/meta-feed-4x5/book-01/day-04-meta-feed-4x5-approved.png",
+  "caption": "Can you find the Baby Flame Lantern hiding in Ember's cozy festival world?\n\nComing soon to Amazon.\n\nSave this tiny-treasure challenge.\n\n#dragonbooks #dragonbooksforkids",
+  "ok": true,
+  "actions": [
+    "destinations_text_facebook:true",
+    "destinations_text_instagram:true",
+    "clicked_add_photo",
+    "clicked_upload_from_desktop",
+    "media_uploaded_upload_from_desktop",
+    "caption_filled:[contenteditable='true']:0",
+    "publish_clicked:0"
+  ],
+  "screenshots": [
+    "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/repost/day-04-meta/01-composer-opened.png",
+    "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/repost/day-04-meta/02-before-fill.png",
+    "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/repost/day-04-meta/03-before-publish.png",
+    "content/social/campaigns/book-01/evidence/meta-feed-4x5-replacement-2026-05-11/repost/day-04-meta/04-after-publish.png"
+  ],
+  "blocker": null,
+  "finalUrl": "https://business.facebook.com/latest/composer?asset_id=1092344023964202&business_id=1070793548859525&ir_qe_exposed=1",
+  "finalBodySnippet": "Create post Post to Post to ​ Ember Dragon Books and emberdragonbooks ​ Media Share photos or a video. Instagram posts can't exceed 10 photos. 941 x 1176 Edit photo ​ Edit ​ Remove photo ​ Add photo Post details Customize post for Facebook and Instagram Text Can you find the Baby Flame Lantern hiding in Ember's cozy festival world? Coming soon to Amazon. Save this tiny-treasure challenge. #dragonbooks #dragonbooksforkids Click to open hashtag menu. ​ Choose emoji ​ Write with AI Fix grammar Shorter Longer Funny Professional More Schedule Set date and time Share to Privacy settings Adjust your privacy settings to control who can see your post in Feed, Watch, search results and on your profile. Public Anyone on or off Facebook will be able to see your post. Restricted Choose certain people on Facebook who can see your post. Boost Cancel Finish later Publish Facebook Feed preview ​ ​ Ember Dragon Books Just now · Can you find the Baby Flame Lantern hiding in Ember's cozy festival world? Coming soon to Amazon. Save this tiny-treasure challenge. #dragonbooks #dragonbooksforkids Like Comment Share Publishing your post This may take a moment... Meta Business Suite Links Home Home Notifica",
+  "error": null
+}
