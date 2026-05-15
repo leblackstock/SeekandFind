@@ -1,0 +1,23 @@
+{
+  "ok": false,
+  "dry_run": false,
+  "youtube_url": null,
+  "markers": {
+    "youtube_studio_target_opened_from_available_browser": false,
+    "youtube_studio_loaded_after_new_tab": false,
+    "playwright_filechooser_flow": true,
+    "video_file_attached_via_filechooser": false,
+    "upload_wizard_ready_after_file_attach": false,
+    "details_title_description_filled_playwright": false,
+    "audience_yes_selected_playwright": false,
+    "audience_yes_selected_visible_radio": false,
+    "details_next_clicked_dom": false,
+    "public_selected_playwright": false,
+    "dry_run_stopped_before_publish": false
+  },
+  "publish_clicked": false,
+  "result_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-07/youtube-redo-resume/continue-upload-result.json",
+  "compact_result_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-07/youtube-redo-resume/continue-upload-compact-result.json",
+  "screenshots": 0,
+  "error": "browserType.connectOverCDP: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - <ws preparing> retrieving websocket url from http://127.0.0.1:9222\u001b[22m\n\u001b[2m  - <ws connecting> ws://127.0.0.1:9222/devtools/browser/db1fc181-7448-4deb-aabc-a18c41ee6169\u001b[22m\n\u001b[2m  - <ws connected> ws://127.0.0.1:9222/devtools/browser/db1fc181-7448-4deb-aabc-a18c41ee6169\u001b[22m\n"
+}

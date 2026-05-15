@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import {
   chooseYoutubeTarget,
@@ -5,7 +6,8 @@ import {
   compactYoutubeUploadResult,
   isMadeForKidsConfirmed,
   isYoutubeContentBusy,
-  parseYoutubeUploadArgs
+  parseYoutubeUploadArgs,
+  youtubeProductionUploadSafetyRule
 } from "../automation/social/youtube-shorts-continue-upload.js";
 
 describe("YouTube Shorts upload continuation state detection", () => {
@@ -71,5 +73,20 @@ describe("YouTube Shorts upload continuation state detection", () => {
     expect(options.compact).toBe(true);
     expect(options.recordRun).toBe(true);
     expect(options.verbose).toBe(true);
+  });
+
+  it("parses the direct existing-target CDP production mode", () => {
+    expect(parseYoutubeUploadArgs(["--cdp-only"]).cdpOnly).toBe(true);
+  });
+
+  it("keeps the production Playwright upload path free of navigation and close calls", () => {
+    const source = readFileSync("automation/social/youtube-shorts-continue-upload.ts", "utf8");
+    const productionPath = source.match(/async function runYoutubeShortsUploadPlaywright[\s\S]*?\nasync function advanceWizardFast/);
+
+    expect(youtubeProductionUploadSafetyRule).toContain("already-open YouTube Studio tab");
+    expect(productionPath?.[0]).toBeTruthy();
+    expect(productionPath?.[0]).not.toMatch(/\bpage\s*\.\s*(?:goto|reload|goBack|goForward)\s*\(/);
+    expect(productionPath?.[0]).not.toMatch(/\b(?:newPage|newContext)\s*\(/);
+    expect(source).not.toMatch(/\bbrowser\s*\.\s*close\s*\(/);
   });
 });

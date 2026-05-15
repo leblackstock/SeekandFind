@@ -1,0 +1,16 @@
+{
+  "ok": false,
+  "dry_run": false,
+  "rule": "On YouTube Studio upload/draft screens only: if automation triggers a reload/leave-page dialog, immediately cancel it and continue the current YouTube upload flow.",
+  "target": null,
+  "actions": [
+    "youtube_upload_only_no_reload_no_goto",
+    "playwright_filechooser_flow"
+  ],
+  "youtube_url": null,
+  "screenshots": [],
+  "body_excerpt": "",
+  "error": "browserType.connectOverCDP: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - <ws preparing> retrieving websocket url from http://127.0.0.1:9222\u001b[22m\n\u001b[2m  - <ws connecting> ws://127.0.0.1:9222/devtools/browser/db1fc181-7448-4deb-aabc-a18c41ee6169\u001b[22m\n\u001b[2m  - <ws connected> ws://127.0.0.1:9222/devtools/browser/db1fc181-7448-4deb-aabc-a18c41ee6169\u001b[22m\n",
+  "result_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-07/youtube-redo-resume/continue-upload-result.json",
+  "compact_result_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-07/youtube-redo-resume/continue-upload-compact-result.json"
+}

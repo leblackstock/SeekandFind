@@ -1,0 +1,25 @@
+{
+  "ok": false,
+  "dry_run": false,
+  "rule": "On YouTube Studio upload/draft screens only: if automation triggers a reload/leave-page dialog, immediately cancel it and continue the current YouTube upload flow.",
+  "target": {
+    "title": "Channel content - YouTube Studio",
+    "url": "https://studio.youtube.com/channel/UC9I5x3-uPYURdn__A8x9xuA/videos/short?d=ud&filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D"
+  },
+  "actions": [
+    "youtube_upload_only_no_reload_no_goto",
+    "cdp_existing_target_flow",
+    "proactive_youtube_reload_dialog_cancel_attempt_no_open_dialog",
+    "upload_dialog_already_open",
+    "details_fields_not_ready"
+  ],
+  "youtube_url": null,
+  "screenshots": [
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-07/youtube-cdp-production-2026-05-13T21-52/continue-upload-before.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-07/youtube-cdp-production-2026-05-13T21-52/upload-dialog-started.png"
+  ],
+  "body_excerpt": "All changes saved. Skip navigation Create Your channel Ember Dragon Books Dashboard Content Analytics Community Subtitles Content detection Earn Customization Audio library Settings Send feedback Channel content Videos Shorts Live Posts Playlists Podcasts Promotions Collaborations Short Visibility Restrictions Date Views Comments Likes (vs. dislikes) Golden Welcome Bell #Shorts Saved as private Details Video elements Checks Visibility Visibility Choose when to publish and who can see your video Save or publish Make your video public, unlisted, or private Schedule Select a date to make your video public. Schedule as public May 14, 2026 Time zone Video will be private before publishing Before you publish, check the following: Do kids appear in this video? Make sure you follow our policies to protect minors from harm, exploitation, bullying, and violations of labor law. Learn more Looking for overall content guidance? Our Community Guidelines can help you avoid trouble and ensure that YouTube remains a safe and vibrant community. Learn more 0:00 / 0:09 Golden Welcome Bell #Shorts Video link https://youtube.com/shorts/yfm0fnA_rB4 Checks complete. No issues found. Back Schedule",
+  "error": "Details were not safely filled; stopped before advancing the upload wizard.",
+  "result_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-07/youtube-cdp-production-2026-05-13T21-52/continue-upload-result.json",
+  "compact_result_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-07/youtube-cdp-production-2026-05-13T21-52/continue-upload-compact-result.json"
+}

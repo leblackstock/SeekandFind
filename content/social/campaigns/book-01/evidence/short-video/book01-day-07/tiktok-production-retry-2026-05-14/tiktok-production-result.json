@@ -1,0 +1,15 @@
+{
+  "ok": false,
+  "actions": [
+    "video_file_attached",
+    "caption_filled"
+  ],
+  "tiktok_url": null,
+  "screenshots": [
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-07/tiktok-production-retry-2026-05-14/01-select-video-ready.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-07/tiktok-production-retry-2026-05-14/02-after-file-attach.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-07/tiktok-production-retry-2026-05-14/03-before-post.png"
+  ],
+  "body_excerpt": "Upload MANAGE Home Posts Analytics Comments GROWTH Inspiration Creator Academy TOOLS Monetization Unlimited Sounds Smart Split OTHERS Feedback Back to TikTok Something went wrong Please try again. Retry",
+  "error": "post button not clicked {\"ok\":false,\"labels\":[\"\",\"Upload\",\"Home\",\"Po t\",\"Analytic\",\"Comment\",\"In piration\",\"Creator Academy\",\"Monetization\",\"Unlimited Sound\",\"Smart Split\",\"Feedback\",\"\",\"Retry\"]}"
+}

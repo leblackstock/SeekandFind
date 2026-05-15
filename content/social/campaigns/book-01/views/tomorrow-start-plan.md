@@ -21,18 +21,24 @@ Canonical source of truth: `content/social/campaigns/book-01/queue.json`
    - Prep order: 3 Pinterest still Pins, Meta still post, then the 5-surface short-video bundle.
    - On the due date, run `npm run social:packet -- 7` for the paste-friendly live checklist.
 
-3. Keep Day 8 as quiet prep only until Thursday, May 14, 2026.
-   - Day 8 appears in the due-pressure packet because it is near-term, not because it is cleared for live posting.
+3. Keep the Amazon/KDP release as quiet prep only until campaign Day 9, Friday, May 15, 2026.
+   - Day 8 social posting may proceed when its campaign gate is open, but the listing/release moment stays held.
    - Quiet prep can include KDP checklist, listing copy draft, metadata review, launch/link update copy, and asset checks.
-   - Do not publish the listing, use a buy CTA, or switch to "available now" wording before the Day 8 gate is cleared.
+   - Do not publish the listing, use a buy CTA, or switch to "available now" wording before the Day 9 release gate is cleared.
 
-4. Close completed live posts with the finish-button helpers.
+4. After the live book link is available, update every social account.
+   - Add the book link anywhere the platform supports it.
+   - Remove "Coming soon" wording from bios, pinned/profile text, banners, and reusable public copy.
+   - Make sure profile images, header/banner art, and visible account branding are current.
+   - Check Pinterest, Instagram, Facebook, YouTube, TikTok, and any other active Ember social surface.
+
+5. Close completed live posts with the finish-button helpers.
    - Still post pattern: `npm run social:done -- <TASK_KEY> <POST_URL>`.
    - Short-video bundle pattern: `npm run social:done -- <TASK_KEY> --youtube <YOUTUBE_SHORTS_URL> --tiktok <TIKTOK_URL> --instagram <INSTAGRAM_REEL_URL> --facebook <FACEBOOK_REEL_URL> --pinterest <PINTEREST_VIDEO_PIN_URL>`.
    - The helper writes the receipt, creates evidence, marks `queue.json`, validates, and prints the next compact packet.
    - Use `npm run social:receipt` only for lower-level manual or recovery cases.
 
-5. Keep this plan compact.
+6. Keep this plan compact.
    - Record only current gates, next actions, receipts, and watch items here.
    - Use generated compact packets for full task detail instead of adding long chat-style handoffs.
 
@@ -126,11 +132,12 @@ When the gate opens:
 - Run the matching `social:done` helper only after the live URL or full URL set exists.
 - Re-run `npm run validate:social-queue` after marking results.
 
-## Day 8 Boundary - Hold Until May 14
+## Day 8 Social Boundary / Day 9 Release Hold
 
 - Scheduled date: 2026-05-14.
 - Status: ready-to-schedule.
-- Live posting/listing gate: HOLD. Do not post Day 8 or publish/announce the listing before Thursday, May 14, 2026 unless Lauren explicitly changes the schedule.
+- Day 8 social gate: opens on Thursday, May 14, 2026.
+- Amazon/KDP listing/release gate: HOLD until campaign Day 9, Friday, May 15, 2026, unless Lauren explicitly changes the schedule.
 - Day 8 is included by `npm run social:today` only because it is due soon.
 - Quiet prep is allowed before the gate: KDP upload checklist, cover/interior PDF QA, listing copy draft, metadata review, and launch/link update copy.
 - Day 8 social assets are ready in `queue.json`, but readiness does not equal permission to publish early.
@@ -180,7 +187,7 @@ Day 6 short-video URLs:
 - Use Meta Business Suite / Meta posting tools for Instagram and Facebook feed, Reel, repost, and scheduled work.
 - When the same asset/caption is meant for Instagram and Facebook, use one Meta composer action with both destinations selected unless Lauren asks to split them or Meta blocks the combined post.
 - Keep public wording in "Coming soon to Amazon" mode until the listing is live.
-- Do not publish or announce the Amazon/KDP listing until campaign Day 8, and only after Days 1-7 are complete or explicitly deferred.
+- Do not publish or announce the Amazon/KDP listing until campaign Day 9, Friday, May 15, 2026, and only after Days 1-7 are complete or explicitly deferred.
 - Do not automate bypassing login, payment, CAPTCHA, rate limits, platform restrictions, or sensitive account boundaries.
 
 ## Watch Items
@@ -222,6 +229,6 @@ npm run social:live-upload-recovery -- --match-url studio.youtube.com
 - Do not treat Meta access as blocked unless a fresh live platform check shows a real login, permission, verification, payment, CAPTCHA, or account boundary.
 - Do not start by making more random marketing assets.
 - Do not use old campaign markdown as the live queue.
-- Do not publish the Amazon/KDP listing before Day 8.
+- Do not publish the Amazon/KDP listing before Day 9.
 - Do not use "available now" or buy-link language before the listing is live.
 - Do not publish overdue or due-soon ready tasks without a deliberate go-ahead.

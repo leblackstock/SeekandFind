@@ -1,0 +1,23 @@
+{
+  "ok": false,
+  "dry_run": false,
+  "youtube_url": null,
+  "markers": {
+    "youtube_studio_target_opened_from_available_browser": false,
+    "youtube_studio_loaded_after_new_tab": false,
+    "playwright_filechooser_flow": true,
+    "video_file_attached_via_filechooser": false,
+    "upload_wizard_ready_after_file_attach": false,
+    "details_title_description_filled_playwright": false,
+    "audience_yes_selected_playwright": false,
+    "audience_yes_selected_visible_radio": false,
+    "details_next_clicked_dom": false,
+    "public_selected_playwright": false,
+    "dry_run_stopped_before_publish": false
+  },
+  "publish_clicked": false,
+  "result_path": "true/continue-upload-result.json",
+  "compact_result_path": "true/continue-upload-compact-result.json",
+  "screenshots": 2,
+  "error": "locator.setInputFiles: Error: File input does not support directories, pass individual files instead\nCall log:\n\u001b[2m  - waiting for locator('input[type=file]').first()\u001b[22m\n\u001b[2m    - locator resolved to <input multiple type=\"file\" tabindex=\"-1\" name=\"Filedata\" aria-hidden=\"true\"/>\u001b[22m\n"
+}

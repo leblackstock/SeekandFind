@@ -47,6 +47,20 @@ npm run social:today
 
 Use this as the single front door for social work. It reads the canonical queue, uses the America/New_York campaign clock for date gates, selects the due-pressure chunk, and prints the compact packet with captions, assets, receipt paths, and done-helper commands.
 
+Publish a TikTok short from the existing logged-in TikTok Studio browser tab:
+
+```powershell
+npm run social:tiktok-publish -- day-07
+```
+
+This helper connects to the durable CDP browser, uses TikTok's real file chooser, fills the queue caption, posts, and waits for the row to leave `Content under review` / `Only me` before treating the post as public.
+
+Recover the URL for an already-posted TikTok row without creating a new upload:
+
+```powershell
+npm run social:tiktok-recover-url -- day-07
+```
+
 Generate a seek page pack:
 
 ```powershell

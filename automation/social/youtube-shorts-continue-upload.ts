@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
+import { chromium, type Browser, type Page } from "@playwright/test";
 import { cdpUrlFromEnv } from "../../src/core/cdp-browser.js";
 import { appendProductionRunLog } from "./production-run-log.js";
 import { youtubeUploadReloadCancelRule } from "./youtube-upload-guard.js";
@@ -35,7 +36,11 @@ export interface CliOptions {
   compact: boolean;
   verbose: boolean;
   recordRun: boolean;
+  cdpOnly: boolean;
 }
+
+export const youtubeProductionUploadSafetyRule =
+  "The YouTube production upload helper must attach only to an already-open YouTube Studio tab; it must not navigate, reload, open a new page, or close the attached browser session.";
 
 const defaultVideoAsset = "content/outputs/videos/approved/day-6-tiny-treasure-veo31-canva-approved-2026-05-10.mp4";
 const defaultStudioUrl = "https://studio.youtube.com/channel/UC9I5x3-uPYURdn__A8x9xuA";
@@ -93,7 +98,8 @@ export function parseYoutubeUploadArgs(args: string[]): CliOptions {
     allowNewDraft: cleanArgs.includes("--allow-new-draft") || npmFlag("allow-new-draft"),
     compact: readFlag(cleanArgs, "compact"),
     verbose: readFlag(cleanArgs, "verbose"),
-    recordRun: readFlag(cleanArgs, "record-run")
+    recordRun: readFlag(cleanArgs, "record-run"),
+    cdpOnly: readFlag(cleanArgs, "cdp-only")
   };
 }
 
@@ -426,8 +432,14 @@ export function compactYoutubeUploadResult(result: Record<string, unknown>): Rec
   const markerNames = [
     "youtube_studio_target_opened_from_available_browser",
     "youtube_studio_loaded_after_new_tab",
+    "playwright_filechooser_flow",
+    "video_file_attached_via_filechooser",
+    "upload_wizard_ready_after_file_attach",
+    "details_title_description_filled_playwright",
+    "audience_yes_selected_playwright",
     "audience_yes_selected_visible_radio",
     "details_next_clicked_dom",
+    "public_selected_playwright",
     "dry_run_stopped_before_publish"
   ];
   return {
@@ -816,6 +828,557 @@ async function closePublishedModalForDraftRun(client: CdpClient, actions: string
   await cancelPossibleReloadDialog(client, actions);
 }
 
+async function disconnectPlaywrightBrowser(browser: Browser): Promise<void> {
+  const disconnectable = browser as Browser & { disconnect?: () => void };
+  if (typeof disconnectable.disconnect === "function") {
+    disconnectable.disconnect();
+    return;
+  }
+  // For CDP-attached live browser sessions, closing the browser can close the
+  // user's active page and trigger YouTube's beforeunload warning.
+}
+
+async function savePlaywrightScreenshot(page: Page, evidenceDir: string, name: string): Promise<string | null> {
+  const relativePath = join(evidenceDir, name).replaceAll("\\", "/");
+  const absolutePath = join(process.cwd(), relativePath);
+  await mkdir(dirname(absolutePath), { recursive: true });
+  await page.screenshot({ path: absolutePath, fullPage: true, timeout: 15000 })
+    .catch(async () => {
+      await page.screenshot({ path: absolutePath, fullPage: false, timeout: 15000 });
+    });
+  return relativePath;
+}
+
+async function playBodyText(page: Page): Promise<string> {
+  return page.locator("body").innerText({ timeout: 10000 }).catch(() => "");
+}
+
+function looksLikeUploadWizard(text: string): boolean {
+  return classifyYoutubeState(text) === "upload_wizard";
+}
+
+async function visible(page: Page, selector: string, timeout = 1500): Promise<boolean> {
+  return page.locator(selector).first().isVisible({ timeout }).catch(() => false);
+}
+
+async function clickFirstVisible(page: Page, locators: Array<ReturnType<Page["locator"]>>, actions: string[], label: string): Promise<boolean> {
+  for (const locator of locators) {
+    if (await locator.first().isVisible({ timeout: 1500 }).catch(() => false)) {
+      await locator.first().click({ timeout: 8000, force: true });
+      actions.push(label);
+      return true;
+    }
+  }
+  actions.push(`${label}_not_found`);
+  return false;
+}
+
+async function openUploadWizardWithPlaywright(page: Page, options: CliOptions, actions: string[], screenshots: string[]): Promise<void> {
+  let text = await playBodyText(page);
+  if (classifyYoutubeState(text) === "published_modal") {
+    if (options.dryRun && options.allowNewDraft) {
+      const closed = await clickFirstVisible(page, [
+        page.getByRole("button", { name: /^close$/i }),
+        page.getByText(/^close$/i)
+      ], actions, "published_modal_close_clicked_playwright");
+      if (closed) await page.waitForTimeout(1200);
+      text = await playBodyText(page);
+    } else {
+      actions.push("published_modal_detected_stop");
+      return;
+    }
+  }
+
+  if (looksLikeUploadWizard(text)) {
+    actions.push("upload_dialog_already_open");
+    return;
+  }
+
+  if (options.dryRun && !options.allowNewDraft) {
+    actions.push("dry_run_no_open_upload_dialog_no_new_draft");
+    return;
+  }
+
+  const createClicked = await clickFirstVisible(page, [
+    page.getByRole("button", { name: /^Create$/i }),
+    page.locator("button").filter({ hasText: /^Create$/i }),
+    page.getByText(/^Create$/i)
+  ], actions, "create_clicked_playwright");
+  if (!createClicked) return;
+
+  await page.waitForTimeout(800);
+  await clickFirstVisible(page, [
+    page.getByText(/^Upload videos$/i),
+    page.getByRole("menuitem", { name: /upload videos/i }),
+    page.locator("[role='menuitem']").filter({ hasText: /upload videos/i })
+  ], actions, "upload_videos_clicked_playwright");
+
+  await page.getByText(/^Select files$/i).first().waitFor({ state: "visible", timeout: 30000 });
+  screenshots.push(await savePlaywrightScreenshot(page, options.evidenceDir, "upload-select-files-visible.png") ?? "");
+
+  const selectFiles = page.getByText(/^Select files$/i).first();
+  const input = page.locator("input[type=file]").first();
+  let attached = false;
+  try {
+    const [chooser] = await Promise.all([
+      page.waitForEvent("filechooser", { timeout: 15000 }),
+      selectFiles.click({ timeout: 10000, force: true })
+    ]);
+    await chooser.setFiles(resolve(options.videoAsset));
+    attached = true;
+    actions.push("video_file_attached_via_filechooser");
+  } catch {
+    if (await input.count().catch(() => 0)) {
+      await input.setInputFiles(resolve(options.videoAsset));
+      attached = true;
+      actions.push("video_file_attached_via_input");
+    }
+  }
+  if (!attached) {
+    actions.push("video_file_attach_failed");
+    return;
+  }
+
+  const wizardReady = await page.waitForFunction(() => {
+    const body = document.body?.innerText || "";
+    return /Details\s+Video elements\s+Checks\s+Visibility/i.test(body)
+      && /Title \(required\)|Description|Made for kids/i.test(body);
+  }, null, { timeout: 120000 }).then(() => true).catch(() => false);
+  actions.push(wizardReady ? "upload_wizard_ready_after_file_attach" : "upload_wizard_not_ready_after_file_attach");
+  screenshots.push(await savePlaywrightScreenshot(page, options.evidenceDir, "upload-wizard-after-file-attach.png") ?? "");
+}
+
+async function setEditableByIndex(page: Page, index: number, value: string): Promise<void> {
+  const locator = page.locator('[contenteditable="true"], textarea').nth(index);
+  await locator.waitFor({ state: "visible", timeout: 30000 });
+  await locator.click({ timeout: 8000 });
+  await page.keyboard.press(process.platform === "darwin" ? "Meta+A" : "Control+A");
+  await page.keyboard.type(value, { delay: 0 });
+}
+
+async function fillDetailsWithPlaywright(page: Page, options: CliOptions, actions: string[], screenshots: string[]): Promise<void> {
+  await setEditableByIndex(page, 0, options.title);
+  await setEditableByIndex(page, 1, options.description);
+  actions.push("details_title_description_filled_playwright");
+  screenshots.push(await savePlaywrightScreenshot(page, options.evidenceDir, "details-title-description-filled.png") ?? "");
+}
+
+async function selectMadeForKidsWithPlaywright(page: Page, actions: string[], screenshots: string[], evidenceDir: string): Promise<boolean> {
+  const radio = page.locator("tp-yt-paper-radio-button, ytcp-radio-button, [role='radio']")
+    .filter({ hasText: /Yes,.*made for kids/i })
+    .first();
+  await radio.scrollIntoViewIfNeeded({ timeout: 10000 }).catch(() => null);
+  if (!(await radio.isVisible({ timeout: 10000 }).catch(() => false))) {
+    actions.push("audience_yes_radio_not_found_playwright");
+    return false;
+  }
+  await radio.click({ timeout: 10000, force: true });
+  await page.waitForTimeout(1000);
+  const checked = await radio.getAttribute("aria-checked").catch(() => null);
+  actions.push(checked === "true" ? "audience_yes_selected_playwright" : "audience_yes_clicked_playwright");
+  screenshots.push(await savePlaywrightScreenshot(page, evidenceDir, "made-for-kids-selected.png") ?? "");
+  return true;
+}
+
+async function clickWizardButtonWithPlaywright(page: Page, label: "Next" | "Publish", actions: string[]): Promise<void> {
+  const button = page.getByRole("button", { name: new RegExp(`^${label}$`, "i") }).last();
+  await button.waitFor({ state: "visible", timeout: 30000 });
+  await button.click({ timeout: 10000 });
+  actions.push(`${label.toLowerCase()}_clicked_playwright`);
+  await page.waitForTimeout(2000);
+}
+
+async function advanceWizardWithPlaywright(page: Page, options: CliOptions, actions: string[], screenshots: string[]): Promise<void> {
+  const madeForKids = await selectMadeForKidsWithPlaywright(page, actions, screenshots, options.evidenceDir);
+  if (!madeForKids) {
+    actions.push("wizard_stopped_before_details_next");
+    return;
+  }
+
+  await clickWizardButtonWithPlaywright(page, "Next", actions);
+  screenshots.push(await savePlaywrightScreenshot(page, options.evidenceDir, "video-elements-screen.png") ?? "");
+  await clickWizardButtonWithPlaywright(page, "Next", actions);
+  await page.waitForFunction(() => /Checks complete|No issues found|Copyright|Visibility/i.test(document.body?.innerText || ""), null, { timeout: 120000 }).catch(() => null);
+  screenshots.push(await savePlaywrightScreenshot(page, options.evidenceDir, "checks-screen.png") ?? "");
+  await clickWizardButtonWithPlaywright(page, "Next", actions);
+  screenshots.push(await savePlaywrightScreenshot(page, options.evidenceDir, "visibility-screen.png") ?? "");
+
+  await selectPublicAndMaybePublishWithPlaywright(page, options, actions, screenshots);
+}
+
+async function selectPublicAndMaybePublishWithPlaywright(page: Page, options: CliOptions, actions: string[], screenshots: string[]): Promise<void> {
+  const publicLabel = page.getByText(/^Public$/i).last();
+  await publicLabel.scrollIntoViewIfNeeded({ timeout: 10000 }).catch(() => null);
+  const box = await publicLabel.boundingBox({ timeout: 10000 }).catch(() => null);
+  if (!box) {
+    actions.push("public_label_rect_not_found_playwright");
+    return;
+  }
+  await page.mouse.click(Math.max(0, box.x - 22), box.y + box.height / 2);
+  actions.push("public_selected_playwright");
+  await page.waitForTimeout(1000);
+  screenshots.push(await savePlaywrightScreenshot(page, options.evidenceDir, "public-selected.png") ?? "");
+  if (options.dryRun) {
+    actions.push("dry_run_stopped_before_publish");
+    screenshots.push(await savePlaywrightScreenshot(page, options.evidenceDir, "dry-run-before-publish.png") ?? "");
+    return;
+  }
+
+  await clickWizardButtonWithPlaywright(page, "Publish", actions);
+  actions.push("publish_clicked_playwright");
+}
+
+async function youtubeUrlFromPage(page: Page): Promise<string | null> {
+  const text = await playBodyText(page);
+  const links = await page.locator("a[href]").evaluateAll((anchors) => anchors.map((anchor) => (anchor as HTMLAnchorElement).href)).catch(() => []);
+  return text.match(/https:\/\/(?:www\.)?youtube\.com\/shorts\/[A-Za-z0-9_-]+(?:\?feature=share)?/)?.[0]
+    ?? links.find((href) => /youtube\.com\/shorts\/[A-Za-z0-9_-]+|youtu\.be\/[A-Za-z0-9_-]+/.test(href))
+    ?? links.find((href) => /youtube\.com\/watch\?v=[A-Za-z0-9_-]+/.test(href))
+    ?? null;
+}
+
+async function runYoutubeShortsUploadPlaywright(options: CliOptions): Promise<Record<string, unknown>> {
+  const actions: string[] = ["youtube_upload_only_no_reload_no_goto", "playwright_filechooser_flow"];
+  const screenshots: string[] = [];
+  let browser: Browser | null = null;
+  let page: Page | null = null;
+
+  async function writeResult(result: Record<string, unknown>): Promise<Record<string, unknown>> {
+    const resultPath = join(options.evidenceDir, "continue-upload-result.json").replaceAll("\\", "/");
+    const absoluteResultPath = join(process.cwd(), resultPath);
+    const compactResultPath = join(options.evidenceDir, "continue-upload-compact-result.json").replaceAll("\\", "/");
+    await mkdir(dirname(absoluteResultPath), { recursive: true });
+    const fullResult: Record<string, unknown> = { ...result, result_path: resultPath, compact_result_path: compactResultPath };
+    await writeFile(absoluteResultPath, `${JSON.stringify(fullResult, null, 2)}\n`, "utf8");
+    const compactResult = compactYoutubeUploadResult(fullResult);
+    if (options.compact || options.recordRun) {
+      await writeFile(join(process.cwd(), compactResultPath), `${JSON.stringify(compactResult, null, 2)}\n`, "utf8");
+    }
+    if (options.recordRun) {
+      await appendProductionRunLog({
+        workflowName: options.dryRun ? "social-youtube-draft-compact-run" : "social-youtube-publish-compact-run",
+        summary: `${options.dryRun ? "Prepared YouTube draft" : "Ran YouTube publish flow"} for ${options.title}; URL: ${String(compactResult.youtube_url ?? "none")}; stopped_before_publish=${String((compactResult.markers as Record<string, boolean>).dry_run_stopped_before_publish ?? false)}; publish_clicked=${String(compactResult.publish_clicked)}. Files: ${resultPath}, ${compactResultPath}`,
+        inputs: [
+          options.videoAsset,
+          options.evidenceDir,
+          options.dryRun ? "dry-run/no-publish" : "publish-enabled"
+        ],
+        assumptions: [
+          "Durable CDP browser is available.",
+          "YouTube Studio is handled through Playwright file chooser events.",
+          options.dryRun ? "This run must stop before Publish." : "This run is allowed to click Publish."
+        ],
+        outputsCreated: [resultPath, compactResultPath, ...(Array.isArray(fullResult.screenshots) ? fullResult.screenshots as string[] : [])],
+        warnings: [
+          ...(options.dryRun ? ["No queue status was changed because this was draft-only."] : []),
+          ...((compactResult.error ? [String(compactResult.error)] : []))
+        ],
+        qaResult: compactResult.ok ? "PASS: compact marker summary written." : "FAIL: see compact result and evidence folder.",
+        nextManualStep: options.dryRun
+          ? "Review/publish manually, then close the bundle only after every required platform URL exists."
+          : "Use `npm run social:post-short-video -- <TASK_KEY> --youtube <URL> --tiktok <URL> --instagram <URL> --facebook <URL> --pinterest <URL>` after every required platform URL exists."
+      });
+    }
+    console.log(JSON.stringify(options.compact && !options.verbose ? compactResult : fullResult, null, 2));
+    return fullResult;
+  }
+
+  try {
+    browser = await chromium.connectOverCDP(options.cdpUrl);
+    const contexts = browser.contexts();
+    const pages = contexts.flatMap((context) => context.pages());
+    page = pages.find((candidate) => /studio\.youtube\.com/i.test(candidate.url())) ?? null;
+    if (!page) {
+      const result = {
+        ok: false,
+        dry_run: options.dryRun,
+        rule: youtubeProductionUploadSafetyRule,
+        target: null,
+        actions: [...actions, "youtube_studio_existing_tab_not_found_stop"],
+        youtube_url: null,
+        screenshots: screenshots.filter(Boolean),
+        body_excerpt: "",
+        error: "No existing YouTube Studio tab was found. Open YouTube Studio manually, then rerun; production upload mode will not navigate or open a new tab."
+      };
+      process.exitCode = 1;
+      return await writeResult(result);
+    }
+    page.on("dialog", async (dialog) => {
+      actions.push(`dialog_dismissed:${dialog.type()}`);
+      await dialog.dismiss().catch(() => null);
+    });
+    await page.bringToFront();
+    await page.waitForLoadState("domcontentloaded", { timeout: 45000 }).catch(() => null);
+    screenshots.push(await savePlaywrightScreenshot(page, options.evidenceDir, "continue-upload-before.png") ?? "");
+    await openUploadWizardWithPlaywright(page, options, actions, screenshots);
+
+    const textAfterOpen = await playBodyText(page);
+    if (actions.includes("published_modal_detected_stop")) {
+      const result = {
+        ok: false,
+        dry_run: options.dryRun,
+        rule: youtubeUploadReloadCancelRule,
+        target: { title: await page.title().catch(() => null), url: page.url() },
+        actions,
+        youtube_url: await youtubeUrlFromPage(page),
+        screenshots: screenshots.filter(Boolean),
+        body_excerpt: textAfterOpen.replace(/\s+/g, " ").slice(0, 1200),
+        error: "YouTube is already showing the Video published modal; stopping without further clicks."
+      };
+      process.exitCode = 1;
+      return await writeResult(result);
+    }
+    if (actions.includes("dry_run_no_open_upload_dialog_no_new_draft")) {
+      return await writeResult({
+        ok: true,
+        dry_run: true,
+        rule: youtubeUploadReloadCancelRule,
+        target: { title: await page.title().catch(() => null), url: page.url() },
+        actions,
+        youtube_url: null,
+        screenshots: screenshots.filter(Boolean),
+        body_excerpt: textAfterOpen.replace(/\s+/g, " ").slice(0, 1200)
+      });
+    }
+    if (!looksLikeUploadWizard(textAfterOpen) || actions.includes("video_file_attach_failed") || actions.includes("upload_wizard_not_ready_after_file_attach")) {
+      const result = {
+        ok: false,
+        dry_run: options.dryRun,
+        rule: youtubeUploadReloadCancelRule,
+        target: { title: await page.title().catch(() => null), url: page.url() },
+        actions,
+        youtube_url: null,
+        screenshots: screenshots.filter(Boolean),
+        body_excerpt: textAfterOpen.replace(/\s+/g, " ").slice(0, 1200),
+        error: "Upload setup did not reach a verified upload wizard with the requested video attached."
+      };
+      process.exitCode = 1;
+      return await writeResult(result);
+    }
+
+    if (/Visibility\s+Choose when to publish/i.test(textAfterOpen)) {
+      actions.push("resuming_existing_visibility_step");
+      await selectPublicAndMaybePublishWithPlaywright(page, options, actions, screenshots);
+    } else {
+      await fillDetailsWithPlaywright(page, options, actions, screenshots);
+      await advanceWizardWithPlaywright(page, options, actions, screenshots);
+    }
+    await page.waitForTimeout(options.afterPublishWaitMs);
+    screenshots.push(await savePlaywrightScreenshot(page, options.evidenceDir, "continue-upload-after.png") ?? "");
+    const finalText = await playBodyText(page);
+    const youtubeUrl = await youtubeUrlFromPage(page);
+    const ok = options.dryRun ? actions.includes("dry_run_stopped_before_publish") : Boolean(youtubeUrl);
+    const result = {
+      ok,
+      dry_run: options.dryRun,
+      rule: youtubeUploadReloadCancelRule,
+      target: { title: await page.title().catch(() => null), url: page.url() },
+      actions,
+      youtube_url: youtubeUrl,
+      screenshots: screenshots.filter(Boolean),
+      body_excerpt: finalText.replace(/\s+/g, " ").slice(0, 1200)
+    };
+    if (!ok) process.exitCode = 1;
+    return await writeResult(result);
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : String(error);
+    const result = {
+      ok: false,
+      dry_run: options.dryRun,
+      rule: youtubeUploadReloadCancelRule,
+      target: page ? { title: await page.title().catch(() => null), url: page.url() } : null,
+      actions,
+      youtube_url: page ? await youtubeUrlFromPage(page).catch(() => null) : null,
+      screenshots: screenshots.filter(Boolean),
+      body_excerpt: page ? (await playBodyText(page).catch(() => "")).replace(/\s+/g, " ").slice(0, 1200) : "",
+      error: message
+    };
+    process.exitCode = 1;
+    return await writeResult(result);
+  } finally {
+    if (browser) await disconnectPlaywrightBrowser(browser).catch(() => null);
+  }
+}
+
+async function runYoutubeShortsUploadCdpOnly(options: CliOptions): Promise<Record<string, unknown>> {
+  const actions: string[] = ["youtube_upload_only_no_reload_no_goto", "cdp_existing_target_flow"];
+  const screenshots: string[] = [];
+
+  async function writeResult(result: Record<string, unknown>): Promise<Record<string, unknown>> {
+    const resultPath = join(options.evidenceDir, "continue-upload-result.json").replaceAll("\\", "/");
+    const absoluteResultPath = join(process.cwd(), resultPath);
+    const compactResultPath = join(options.evidenceDir, "continue-upload-compact-result.json").replaceAll("\\", "/");
+    await mkdir(dirname(absoluteResultPath), { recursive: true });
+    const fullResult: Record<string, unknown> = { ...result, result_path: resultPath, compact_result_path: compactResultPath };
+    await writeFile(absoluteResultPath, `${JSON.stringify(fullResult, null, 2)}\n`, "utf8");
+    const compactResult = compactYoutubeUploadResult(fullResult);
+    if (options.compact || options.recordRun) {
+      await writeFile(join(process.cwd(), compactResultPath), `${JSON.stringify(compactResult, null, 2)}\n`, "utf8");
+    }
+    if (options.recordRun) {
+      await appendProductionRunLog({
+        workflowName: options.dryRun ? "social-youtube-draft-compact-run" : "social-youtube-publish-compact-run",
+        summary: `${options.dryRun ? "Prepared YouTube draft" : "Ran YouTube publish flow"} for ${options.title}; URL: ${String(compactResult.youtube_url ?? "none")}; stopped_before_publish=${String((compactResult.markers as Record<string, boolean>).dry_run_stopped_before_publish ?? false)}; publish_clicked=${String(compactResult.publish_clicked)}. Files: ${resultPath}, ${compactResultPath}`,
+        inputs: [
+          options.videoAsset,
+          options.evidenceDir,
+          options.dryRun ? "dry-run/no-publish" : "publish-enabled"
+        ],
+        assumptions: [
+          "Durable CDP browser is available.",
+          "YouTube Studio is handled through a direct existing-tab CDP flow.",
+          options.dryRun ? "This run must stop before Publish." : "This run is allowed to click Publish."
+        ],
+        outputsCreated: [resultPath, compactResultPath, ...screenshots],
+        warnings: [
+          ...(options.dryRun ? ["No queue status was changed because this was draft-only."] : []),
+          ...((compactResult.error ? [String(compactResult.error)] : []))
+        ],
+        qaResult: compactResult.ok ? "PASS: compact marker summary written." : "FAIL: see compact result and evidence folder.",
+        nextManualStep: options.dryRun
+          ? "Review/publish manually, then close the bundle only after every required platform URL exists."
+          : "Use `npm run social:post-short-video -- <TASK_KEY> --youtube <URL> --tiktok <URL> --instagram <URL> --facebook <URL> --pinterest <URL>` after every required platform URL exists."
+      });
+    }
+    console.log(JSON.stringify(options.compact && !options.verbose ? compactResult : fullResult, null, 2));
+    return fullResult;
+  }
+
+  let target: DevToolsTarget | null = null;
+  let client: CdpClient | null = null;
+  try {
+    const targets = await fetchTargets(options.cdpUrl);
+    target = chooseYoutubeTarget(targets);
+    if (!target) {
+      const result = {
+        ok: false,
+        dry_run: options.dryRun,
+        rule: youtubeProductionUploadSafetyRule,
+        target: null,
+        actions: [...actions, "youtube_studio_existing_target_not_found_stop"],
+        youtube_url: null,
+        screenshots,
+        body_excerpt: "",
+        error: "No existing YouTube Studio target was found. Open YouTube Studio manually, then rerun; CDP-only production mode will not navigate or open a new tab."
+      };
+      process.exitCode = 1;
+      return await writeResult(result);
+    }
+
+    client = await connect(target);
+    await client.call("Page.enable").catch(() => undefined);
+    await client.call("Runtime.enable").catch(() => undefined);
+    await client.call("Page.bringToFront").catch(() => undefined);
+    await delay(1000);
+    await cancelPossibleReloadDialog(client, actions);
+    const before = await captureScreenshot(client, options.evidenceDir, "continue-upload-before.png");
+    if (before) screenshots.push(before);
+
+    await ensureUploadDialog(client, options, actions);
+    if (actions.includes("published_modal_detected_stop") || actions.includes("published_modal_still_open_stop")) {
+      const text = await pageText(client);
+      const result = {
+        ok: false,
+        dry_run: options.dryRun,
+        rule: youtubeUploadReloadCancelRule,
+        target: { title: target.title ?? null, url: target.url ?? null },
+        actions,
+        youtube_url: null,
+        screenshots,
+        body_excerpt: text.replace(/\s+/g, " ").slice(0, 1200),
+        error: "YouTube is already showing the Video published modal; stopping without further clicks."
+      };
+      process.exitCode = 1;
+      return await writeResult(result);
+    }
+    if (actions.includes("dry_run_no_open_upload_dialog_no_new_draft")) {
+      return await writeResult({
+        ok: true,
+        dry_run: true,
+        rule: youtubeUploadReloadCancelRule,
+        target: { title: target.title ?? null, url: target.url ?? null },
+        actions,
+        youtube_url: null,
+        screenshots,
+        body_excerpt: (await pageText(client)).replace(/\s+/g, " ").slice(0, 1200)
+      });
+    }
+    const started = await captureScreenshot(client, options.evidenceDir, "upload-dialog-started.png");
+    if (started) screenshots.push(started);
+    if (hasBlockingAction(actions)) {
+      const result = {
+        ok: false,
+        dry_run: options.dryRun,
+        rule: youtubeUploadReloadCancelRule,
+        target: { title: target.title ?? null, url: target.url ?? null },
+        actions,
+        youtube_url: null,
+        screenshots,
+        body_excerpt: (await pageText(client)).replace(/\s+/g, " ").slice(0, 1200),
+        error: "Upload setup did not reach a verified upload wizard with the requested video attached; stopped before title/description writes."
+      };
+      process.exitCode = 1;
+      return await writeResult(result);
+    }
+
+    await fillDetails(client, options, actions);
+    if (hasBlockingAction(actions)) {
+      const result = {
+        ok: false,
+        dry_run: options.dryRun,
+        rule: youtubeUploadReloadCancelRule,
+        target: { title: target.title ?? null, url: target.url ?? null },
+        actions,
+        youtube_url: null,
+        screenshots,
+        body_excerpt: (await pageText(client)).replace(/\s+/g, " ").slice(0, 1200),
+        error: "Details were not safely filled; stopped before advancing the upload wizard."
+      };
+      process.exitCode = 1;
+      return await writeResult(result);
+    }
+
+    await advanceWizardFast(client, options, actions, screenshots);
+    await delay(options.afterPublishWaitMs);
+    const after = await captureScreenshot(client, options.evidenceDir, "continue-upload-after.png");
+    if (after) screenshots.push(after);
+    const text = await pageText(client);
+    const linkText = String(await runtimeEvaluate(client, `document.body ? document.body.innerText : ""`, 5000).catch(() => ""));
+    const url = linkText.match(/https:\/\/(?:www\.)?youtube\.com\/shorts\/[A-Za-z0-9_-]+(?:\?feature=share)?/)?.[0]
+      ?? linkText.match(/https:\/\/(?:www\.)?youtube\.com\/watch\?v=[A-Za-z0-9_-]+/)?.[0]
+      ?? null;
+    const result = {
+      ok: options.dryRun ? actions.includes("dry_run_stopped_before_publish") : Boolean(url),
+      dry_run: options.dryRun,
+      rule: youtubeUploadReloadCancelRule,
+      target: { title: target.title ?? null, url: target.url ?? null },
+      actions,
+      youtube_url: url,
+      screenshots,
+      body_excerpt: text.replace(/\s+/g, " ").slice(0, 1200)
+    };
+    if (!result.ok) process.exitCode = 1;
+    return await writeResult(result);
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : String(error);
+    const result = {
+      ok: false,
+      dry_run: options.dryRun,
+      rule: youtubeUploadReloadCancelRule,
+      target: target ? { title: target.title ?? null, url: target.url ?? null } : null,
+      actions,
+      youtube_url: null,
+      screenshots,
+      body_excerpt: client ? (await pageText(client).catch(() => "")).replace(/\s+/g, " ").slice(0, 1200) : "",
+      error: message
+    };
+    process.exitCode = 1;
+    return await writeResult(result);
+  } finally {
+    client?.close();
+  }
+}
+
 async function advanceWizardFast(client: CdpClient, options: CliOptions, actions: string[], screenshots: string[]): Promise<void> {
   const madeForKidsConfirmed = await selectMadeForKids(client, actions, options.evidenceDir, screenshots);
   if (!madeForKidsConfirmed) {
@@ -845,164 +1408,8 @@ async function advanceWizardFast(client: CdpClient, options: CliOptions, actions
 }
 
 export async function runYoutubeShortsUpload(options: CliOptions): Promise<Record<string, unknown>> {
-  let targets = await fetchTargets(options.cdpUrl);
-  let target = chooseYoutubeTarget(targets);
-  const openedFreshStudioTarget = !target;
-  if (!target) {
-    await openYoutubeStudioTarget(options.cdpUrl, options.studioUrl);
-    await delay(2000);
-    targets = await fetchTargets(options.cdpUrl);
-    target = chooseYoutubeTarget(targets);
-  }
-  if (!target) throw new Error("No open YouTube Studio tab found and opening a fresh Studio tab did not create one.");
-  const client = await connect(target);
-  const actions: string[] = [
-    "youtube_upload_only_no_reload_no_goto",
-    ...(openedFreshStudioTarget ? ["youtube_studio_target_opened_from_available_browser"] : [])
-  ];
-  const screenshots: string[] = [];
-  async function writeResult(result: Record<string, unknown>): Promise<Record<string, unknown>> {
-    const resultPath = join(options.evidenceDir, "continue-upload-result.json").replaceAll("\\", "/");
-    const absoluteResultPath = join(process.cwd(), resultPath);
-    const compactResultPath = join(options.evidenceDir, "continue-upload-compact-result.json").replaceAll("\\", "/");
-    await mkdir(dirname(absoluteResultPath), { recursive: true });
-    const fullResult: Record<string, unknown> = { ...result, result_path: resultPath, compact_result_path: compactResultPath };
-    await writeFile(absoluteResultPath, `${JSON.stringify(fullResult, null, 2)}\n`, "utf8");
-    const compactResult = compactYoutubeUploadResult(fullResult);
-    if (options.compact || options.recordRun) {
-      await writeFile(join(process.cwd(), compactResultPath), `${JSON.stringify(compactResult, null, 2)}\n`, "utf8");
-    }
-    if (options.recordRun) {
-      await appendProductionRunLog({
-        workflowName: options.dryRun ? "social-youtube-draft-compact-run" : "social-youtube-publish-compact-run",
-        summary: `${options.dryRun ? "Prepared YouTube draft" : "Ran YouTube publish flow"} for ${options.title}; URL: ${String(compactResult.youtube_url ?? "none")}; stopped_before_publish=${String((compactResult.markers as Record<string, boolean>).dry_run_stopped_before_publish ?? false)}; publish_clicked=${String(compactResult.publish_clicked)}. Files: ${resultPath}, ${compactResultPath}`,
-        inputs: [
-          options.videoAsset,
-          options.evidenceDir,
-          options.dryRun ? "dry-run/no-publish" : "publish-enabled"
-        ],
-        assumptions: [
-          "Durable CDP browser is available.",
-          options.dryRun ? "This run must stop before Publish." : "This run is allowed to click Publish."
-        ],
-        outputsCreated: [resultPath, compactResultPath, ...(Array.isArray(fullResult.screenshots) ? fullResult.screenshots as string[] : [])],
-        warnings: [
-          ...(options.dryRun ? ["No queue status was changed because this was draft-only."] : []),
-          ...((compactResult.error ? [String(compactResult.error)] : []))
-        ],
-        qaResult: compactResult.ok ? "PASS: compact marker summary written." : "FAIL: see compact result and evidence folder.",
-        nextManualStep: options.dryRun
-          ? "Review/publish manually, then close the bundle only after every required platform URL exists."
-          : "Use `npm run social:post-short-video -- <TASK_KEY> --youtube <URL> --tiktok <URL> --instagram <URL> --facebook <URL> --pinterest <URL>` after every required platform URL exists."
-      });
-    }
-    console.log(JSON.stringify(options.compact && !options.verbose ? compactResult : fullResult, null, 2));
-    return fullResult;
-  }
-
-  try {
-    await client.call("Page.enable").catch(() => undefined);
-    await client.call("Runtime.enable").catch(() => undefined);
-    if (openedFreshStudioTarget) {
-      await waitForYoutubeStudioLoaded(client, actions);
-    }
-    await cancelPossibleReloadDialog(client, actions);
-    const before = await captureScreenshot(client, options.evidenceDir, "continue-upload-before.png");
-    if (before) screenshots.push(before);
-    await ensureUploadDialog(client, options, actions);
-    if (actions.includes("published_modal_detected_stop") || actions.includes("published_modal_still_open_stop")) {
-      const result = {
-        ok: false,
-        dry_run: options.dryRun,
-        rule: youtubeUploadReloadCancelRule,
-        target: { title: target.title ?? null, url: target.url ?? null },
-        actions,
-        youtube_url: null,
-        screenshots,
-        body_excerpt: (await pageText(client)).replace(/\s+/g, " ").slice(0, 1200),
-        error: "YouTube is already showing the Video published modal; stopping without further clicks."
-      };
-      await writeResult(result);
-      process.exitCode = 1;
-      return result;
-    }
-    if (actions.includes("dry_run_no_open_upload_dialog_no_new_draft")) {
-      const result = {
-        ok: true,
-        dry_run: true,
-        rule: youtubeUploadReloadCancelRule,
-        target: { title: target.title ?? null, url: target.url ?? null },
-        actions,
-        youtube_url: null,
-        screenshots,
-        body_excerpt: (await pageText(client)).replace(/\s+/g, " ").slice(0, 1200)
-      };
-      return await writeResult(result);
-    }
-    const started = await captureScreenshot(client, options.evidenceDir, "upload-dialog-started.png");
-    if (started) screenshots.push(started);
-    if (hasBlockingAction(actions)) {
-      const result = {
-        ok: false,
-        dry_run: options.dryRun,
-        rule: youtubeUploadReloadCancelRule,
-        target: { title: target.title ?? null, url: target.url ?? null },
-        actions,
-        youtube_url: null,
-        screenshots,
-        body_excerpt: (await pageText(client)).replace(/\s+/g, " ").slice(0, 1200),
-        error: "Upload setup did not reach a verified upload wizard with the requested video attached; stopped before title/description writes."
-      };
-      await writeResult(result);
-      process.exitCode = 1;
-      return result;
-    }
-    await fillDetails(client, options, actions);
-    if (hasBlockingAction(actions)) {
-      const result = {
-        ok: false,
-        dry_run: options.dryRun,
-        rule: youtubeUploadReloadCancelRule,
-        target: { title: target.title ?? null, url: target.url ?? null },
-        actions,
-        youtube_url: null,
-        screenshots,
-        body_excerpt: (await pageText(client)).replace(/\s+/g, " ").slice(0, 1200),
-        error: "Upload setup did not reach a verified upload wizard with the requested video attached; stopped before wizard clicks."
-      };
-      await writeResult(result);
-      process.exitCode = 1;
-      return result;
-    }
-    await delay(1000);
-    await cancelPossibleReloadDialog(client, actions);
-    await advanceWizardFast(client, options, actions, screenshots);
-    await delay(options.afterPublishWaitMs);
-    const after = await captureScreenshot(client, options.evidenceDir, "continue-upload-after.png");
-    if (after) screenshots.push(after);
-    const text = await pageText(client);
-    const links = await runtimeEvaluate(client, `(() => [...document.querySelectorAll("a[href]")].map((link) => link.href).filter(Boolean))()`, 8000).catch(() => []);
-    const linkText = Array.isArray(links) ? links.join("\n") : "";
-    const url = text.match(/https:\/\/(?:www\.)?youtube\.com\/shorts\/[A-Za-z0-9_-]+(?:\?feature=share)?/)?.[0]
-      ?? linkText.match(/https:\/\/(?:www\.)?youtube\.com\/shorts\/[A-Za-z0-9_-]+(?:\?feature=share)?/)?.[0]
-      ?? linkText.match(/https:\/\/(?:www\.)?youtube\.com\/watch\?v=[A-Za-z0-9_-]+/)?.[0]
-      ?? null;
-    const result = {
-      ok: options.dryRun ? actions.includes("dry_run_stopped_before_publish") : Boolean(url),
-      dry_run: options.dryRun,
-      rule: youtubeUploadReloadCancelRule,
-      target: { title: target.title ?? null, url: target.url ?? null },
-      actions,
-      youtube_url: url,
-      screenshots,
-      body_excerpt: text.replace(/\s+/g, " ").slice(0, 1200)
-    };
-    await writeResult(result);
-    if (!url) process.exitCode = 1;
-    return result;
-  } finally {
-    client.close();
-  }
+  if (options.cdpOnly) return await runYoutubeShortsUploadCdpOnly(options);
+  return await runYoutubeShortsUploadPlaywright(options);
 }
 
 async function main(): Promise<void> {

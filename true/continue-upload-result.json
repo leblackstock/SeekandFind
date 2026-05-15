@@ -1,0 +1,24 @@
+{
+  "ok": false,
+  "dry_run": false,
+  "rule": "On YouTube Studio upload/draft screens only: if automation triggers a reload/leave-page dialog, immediately cancel it and continue the current YouTube upload flow.",
+  "target": {
+    "title": "Channel content - YouTube Studio",
+    "url": "https://studio.youtube.com/channel/UC9I5x3-uPYURdn__A8x9xuA/videos/short?d=ud&filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D"
+  },
+  "actions": [
+    "youtube_upload_only_no_reload_no_goto",
+    "playwright_filechooser_flow",
+    "create_clicked_playwright",
+    "upload_videos_clicked_playwright"
+  ],
+  "youtube_url": null,
+  "screenshots": [
+    "true/continue-upload-before.png",
+    "true/upload-select-files-visible.png"
+  ],
+  "body_excerpt": "Channel content Skip navigation Create Your channel Ember Dragon Books Dashboard Content Analytics Community Subtitles Content detection Earn Customization Audio library Settings Send feedback Channel content Videos Shorts Live Posts Playlists Podcasts Promotions Collaborations Short Visibility Restrictions Date Views Comments Likes (vs. dislikes) 0:09 Tiny Treasure #Shorts A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers. Coming soon to Amazon. Save for later if you love hidden-object books. #SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #HiddenObjectBook #KidsBooks #FamilyReading #EmberDragonBooks #dragonbooks #dragonbooksforkids Public Made for kids May 12, 2026 Published 0 0 – 0:09 Help Ember Find It #Shorts The Lantern Maker's Workshop is full of tiny details for young eyes to explore. Coming soon to Amazon. Follow for the next Ember progress update. #dragonbooks #dragonbooksforkids Public Made for kids May 11, 2026 Published 0 0 – 0:09 Find the DragonFlame Lantern #Shorts Can you find the Baby Flame Lantern hiding in Ember's cozy festival world? Coming soon to Amazon. Save this tiny-treasure challenge. #d",
+  "error": "locator.setInputFiles: Error: File input does not support directories, pass individual files instead\nCall log:\n\u001b[2m  - waiting for locator('input[type=file]').first()\u001b[22m\n\u001b[2m    - locator resolved to <input multiple type=\"file\" tabindex=\"-1\" name=\"Filedata\" aria-hidden=\"true\"/>\u001b[22m\n",
+  "result_path": "true/continue-upload-result.json",
+  "compact_result_path": "true/continue-upload-compact-result.json"
+}

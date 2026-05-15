@@ -1,0 +1,17 @@
+{
+  "ok": false,
+  "dry_run": true,
+  "youtube_url": "https://youtube.com/shorts/iI5WsYKQJpY",
+  "markers": {
+    "youtube_studio_target_opened_from_available_browser": false,
+    "youtube_studio_loaded_after_new_tab": false,
+    "audience_yes_selected_visible_radio": false,
+    "details_next_clicked_dom": false,
+    "dry_run_stopped_before_publish": false
+  },
+  "publish_clicked": false,
+  "result_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-07/youtube-dry-run-fix-check/continue-upload-result.json",
+  "compact_result_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-07/youtube-dry-run-fix-check/continue-upload-compact-result.json",
+  "screenshots": 8,
+  "error": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('tp-yt-paper-radio-button, ytcp-radio-button, [role=\\'radio\\']').filter({ hasText: /^Public$/i }).first()\u001b[22m\n"
+}

@@ -43,6 +43,8 @@
     "social:youtube-dry-run-draft": "tsx automation/social/youtube-shorts-continue-upload.ts --dry-run --no-publish --allow-new-draft",
     "social:youtube-dry-run-quiet": "tsx automation/social/youtube-shorts-continue-upload.ts --dry-run --no-publish --allow-new-draft --compact --record-run",
     "social:youtube-publish": "tsx automation/social/youtube-shorts-continue-upload.ts --allow-new-draft --compact --record-run",
+    "social:tiktok-publish": "tsx automation/social/tiktok-video-publish.ts --compact --record-run --",
+    "social:tiktok-recover-url": "tsx automation/social/tiktok-video-publish.ts --recover-url-only --compact --record-run --",
     "social:live-upload-recovery": "tsx automation/social/live-upload-recovery.ts --",
     "social:dry-run-post": "tsx automation/social/playwright-dry-run-post.ts --",
     "social:meta-access-check": "tsx automation/social/meta-access-check.ts --",

@@ -1,0 +1,21 @@
+{
+  "ok": false,
+  "actions": [
+    "upload_clicked_coordinate",
+    "video_file_attached",
+    "caption_filled"
+  ],
+  "tiktok_url": null,
+  "screenshots": [
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-07/tiktok-production-2026-05-14/01-before-upload.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-07/tiktok-production-2026-05-14/02-upload-page.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-07/tiktok-production-2026-05-14/03-after-file-attach.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-07/tiktok-production-2026-05-14/04-before-post.png"
+  ],
+  "target": {
+    "title": "TikTok Studio",
+    "url": "https://www.tiktok.com/tiktokstudio/content"
+  },
+  "body_excerpt": "Upload MANAGE Home Posts Analytics Comments GROWTH Inspiration Creator Academy TOOLS Monetization Unlimited Sounds Smart Split OTHERS Feedback Back to TikTok Something went wrong Please try again. Retry",
+  "error": "TikTok Post button not found: not_found"
+}

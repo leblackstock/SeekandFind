@@ -1,0 +1,20 @@
+{
+  "idempotency_key": "book01-day07-instagram-feed-post-plus-story-reshare",
+  "post_id": "book01-day-07",
+  "campaign_day": 7,
+  "campaign_date": "2026-05-13",
+  "platform": "Instagram",
+  "board_name": null,
+  "posted_at": "2026-05-13T17:24:19-04:00",
+  "status": "posted",
+  "primary_posted_url": "https://www.instagram.com/emberdragonbooks/p/DYSzZHdnwQi/",
+  "approved_asset": "content/outputs/images/approved/meta-feed-4x5/book-01/day-07-meta-feed-4x5-approved.png",
+  "caption": "Can your little seeker find the Golden Welcome Bell among the festival decorations?\n\nComing soon to Amazon.\n\nSave the challenge and try it together.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #HiddenObjectBook #KidsBooks #FamilyReading #EmberDragonBooks #dragonbooks #dragonbooksforkids",
+  "evidence_path": "content/social/campaigns/book-01/evidence/meta-still/book01-day-07/06-instagram-post-opened.png",
+  "source_records": [
+    "content/social/campaigns/book-01/views/tomorrow-start-plan.md",
+    "npm run social:receipt",
+    "npm run social:done"
+  ],
+  "notes": "Posted from one Meta Business Suite composer with Facebook."
+}

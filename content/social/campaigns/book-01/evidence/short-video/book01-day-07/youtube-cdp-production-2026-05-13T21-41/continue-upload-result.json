@@ -1,0 +1,28 @@
+{
+  "ok": false,
+  "dry_run": false,
+  "rule": "On YouTube Studio upload/draft screens only: if automation triggers a reload/leave-page dialog, immediately cancel it and continue the current YouTube upload flow.",
+  "target": {
+    "title": "Channel content - YouTube Studio",
+    "url": "https://studio.youtube.com/channel/UC9I5x3-uPYURdn__A8x9xuA/videos/short?d=ud&filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D"
+  },
+  "actions": [
+    "youtube_upload_only_no_reload_no_goto",
+    "cdp_existing_target_flow",
+    "proactive_youtube_reload_dialog_cancel_attempt_no_open_dialog",
+    "create_clicked_coordinate_fallback",
+    "create_clicked",
+    "proactive_youtube_reload_dialog_cancel_attempt_no_open_dialog",
+    "upload_videos_menu_not_visible",
+    "upload_videos_clicked_coordinate_fallback",
+    "upload_videos_not_clicked",
+    "proactive_youtube_reload_dialog_cancel_attempt_no_open_dialog",
+    "upload_file_input_not_found"
+  ],
+  "youtube_url": null,
+  "screenshots": [],
+  "body_excerpt": "",
+  "error": "Upload setup did not reach a verified upload wizard with the requested video attached; stopped before title/description writes.",
+  "result_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-07/youtube-cdp-production-2026-05-13T21-41/continue-upload-result.json",
+  "compact_result_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-07/youtube-cdp-production-2026-05-13T21-41/continue-upload-compact-result.json"
+}

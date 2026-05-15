@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "mode": "url-recovered-from-cdp-targets",
+  "day": 7,
+  "task": "book01-day07-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
+  "tiktok_url": "https://www.tiktok.com/@emberdragonbooks/video/7639927542748597535",
+  "evidence_dir": "content/social/campaigns/book-01/evidence/short-video/book01-day-07/tiktok-url-recovery-2026-05-14T21-57-25Z",
+  "cdp_targets_checked": 64,
+  "relevant_targets": [
+    {
+      "title": "TikTok Studio",
+      "type": "page",
+      "url": "https://www.tiktok.com/tiktokstudio/analytics/7639927542748597535"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "ok": false,
+  "dry_run": false,
+  "youtube_url": "https://youtube.com/shorts/qi1VKKhcgXw",
+  "markers": {
+    "youtube_studio_target_opened_from_available_browser": false,
+    "youtube_studio_loaded_after_new_tab": false,
+    "playwright_filechooser_flow": true,
+    "video_file_attached_via_filechooser": true,
+    "upload_wizard_ready_after_file_attach": true,
+    "details_title_description_filled_playwright": true,
+    "audience_yes_selected_playwright": true,
+    "audience_yes_selected_visible_radio": false,
+    "details_next_clicked_dom": false,
+    "public_selected_playwright": false,
+    "dry_run_stopped_before_publish": false
+  },
+  "publish_clicked": false,
+  "result_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-07/youtube-redo/continue-upload-result.json",
+  "compact_result_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-07/youtube-redo/continue-upload-compact-result.json",
+  "screenshots": 8,
+  "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:302:30), <anonymous>:1:187)\n    at UtilityScript.evaluate (<anonymous>:304:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+}
