@@ -1,0 +1,41 @@
+{
+  "idempotency_key": "book01-day07-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
+  "post_id": "book01-day-07",
+  "campaign_day": 7,
+  "campaign_date": "2026-05-13",
+  "platform": "Short Video",
+  "board_name": null,
+  "posted_at": "2026-05-15T17:57:36-04:00",
+  "status": "posted",
+  "primary_posted_url": "https://youtube.com/shorts/yfm0fnA_rB4",
+  "approved_asset": "content/outputs/videos/approved/day-7-golden-welcome-bell-veo31-canva-approved-2026-05-10.mp4",
+  "caption": "Can your little seeker find the Golden Welcome Bell among the festival decorations?\n\nComing soon to Amazon.\n\nSave the challenge and try it together.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #HiddenObjectBook #KidsBooks #FamilyReading #EmberDragonBooks #dragonbooks #dragonbooksforkids",
+  "evidence_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-07/book01-day07-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public-2026-05-15T21-57-36Z.png",
+  "source_records": [
+    "content/social/campaigns/book-01/views/tomorrow-start-plan.md",
+    "npm run social:receipt",
+    "npm run social:done"
+  ],
+  "platform_urls": [
+    {
+      "platform": "YouTube Shorts",
+      "url": "https://youtube.com/shorts/yfm0fnA_rB4"
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@emberdragonbooks/video/7639927542748597535"
+    },
+    {
+      "platform": "Instagram Reels",
+      "url": "https://www.instagram.com/emberdragonbooks/reel/DYX_X-nCAX0/"
+    },
+    {
+      "platform": "Facebook Reels",
+      "url": "https://www.facebook.com/reel/1515537370077113/"
+    },
+    {
+      "platform": "Pinterest Video Pin",
+      "url": "https://www.pinterest.com/pin/1148417973750876000/"
+    }
+  ]
+}

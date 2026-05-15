@@ -1069,12 +1069,12 @@
         },
         {
           "platform": "Short Video",
-          "status": "ready",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
+          "posted_url": "https://youtube.com/shorts/yfm0fnA_rB4",
+          "posted_at": "2026-05-15T17:57:36-04:00",
+          "receipt_path": "content/social/campaigns/book-01/receipts/short-video/book01-day-07/book01-day07-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-07/book01-day07-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public-2026-05-15T21-57-36Z.png",
           "error": null,
           "idempotency_key": "book01-day07-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
           "caption_source": {
@@ -1102,6 +1102,28 @@
             "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
+          ],
+          "platform_urls": [
+            {
+              "platform": "YouTube Shorts",
+              "url": "https://youtube.com/shorts/yfm0fnA_rB4"
+            },
+            {
+              "platform": "TikTok",
+              "url": "https://www.tiktok.com/@emberdragonbooks/video/7639927542748597535"
+            },
+            {
+              "platform": "Instagram Reels",
+              "url": "https://www.instagram.com/emberdragonbooks/reel/DYX_X-nCAX0/"
+            },
+            {
+              "platform": "Facebook Reels",
+              "url": "https://www.facebook.com/reel/1515537370077113/"
+            },
+            {
+              "platform": "Pinterest Video Pin",
+              "url": "https://www.pinterest.com/pin/1148417973750876000/"
+            }
           ]
         }
       ],

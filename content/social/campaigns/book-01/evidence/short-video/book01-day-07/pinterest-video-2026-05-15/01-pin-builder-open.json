@@ -1,0 +1,259 @@
+{
+  "url": "https://www.pinterest.com/pin-builder/",
+  "title": "Pinterest",
+  "text": "Skip to content\nCreate Pin for ad\nEmber Dragon Books\nEmber Dragon Books\nPin Builder\nFantasy Activity Books for Kids\nPublish\nDrag and drop or click to upload images or a video\nWe recommend using high quality .jpg files less than 20MB or .mp4 files less than 2GB\nReview Pin best practices\nSave from site\nEmber Dragon Books\nTell everyone what your Pin is about\n\n\nAdd alt text\nPin draft\nPublish immediately\nPublish at a later date",
+  "fields": [
+    {
+      "tag": "A",
+      "text": "Skip to content",
+      "aria": null,
+      "placeholder": null,
+      "role": null,
+      "type": null,
+      "href": "#"
+    },
+    {
+      "tag": "DIV",
+      "text": "Create Pin for ad",
+      "aria": null,
+      "placeholder": null,
+      "role": "button",
+      "type": null,
+      "href": null
+    },
+    {
+      "tag": "DIV",
+      "text": "Ember Dragon Books\nEmber Dragon Books",
+      "aria": null,
+      "placeholder": null,
+      "role": "button",
+      "type": null,
+      "href": null
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Search icon",
+      "aria": "Search icon",
+      "placeholder": null,
+      "role": null,
+      "type": "button",
+      "href": null
+    },
+    {
+      "tag": "A",
+      "text": "Notifications",
+      "aria": "Notifications",
+      "placeholder": null,
+      "role": null,
+      "type": null,
+      "href": ""
+    },
+    {
+      "tag": "A",
+      "text": "Messages",
+      "aria": "Messages",
+      "placeholder": null,
+      "role": null,
+      "type": null,
+      "href": ""
+    },
+    {
+      "tag": "A",
+      "text": "Manage comments and social activity",
+      "aria": "Manage comments and social activity",
+      "placeholder": null,
+      "role": null,
+      "type": null,
+      "href": "/engagement/"
+    },
+    {
+      "tag": "A",
+      "text": "Your profile",
+      "aria": "Your profile",
+      "placeholder": null,
+      "role": null,
+      "type": null,
+      "href": "/emberdragonbooks/"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Accounts and more options",
+      "aria": "Accounts and more options",
+      "placeholder": null,
+      "role": null,
+      "type": "button",
+      "href": null
+    },
+    {
+      "tag": "BUTTON",
+      "text": "More",
+      "aria": "More",
+      "placeholder": null,
+      "role": null,
+      "type": "button",
+      "href": null
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Options",
+      "aria": "Options",
+      "placeholder": null,
+      "role": null,
+      "type": "button",
+      "href": null
+    },
+    {
+      "tag": "DIV",
+      "text": "Fantasy Activity Books for Kids",
+      "aria": "",
+      "placeholder": null,
+      "role": "button",
+      "type": null,
+      "href": null
+    },
+    {
+      "tag": "DIV",
+      "text": "Publish",
+      "aria": "",
+      "placeholder": null,
+      "role": "button",
+      "type": null,
+      "href": null
+    },
+    {
+      "tag": "A",
+      "text": "Review Pin best practices",
+      "aria": null,
+      "placeholder": null,
+      "role": null,
+      "type": null,
+      "href": "https://www.pinterest.com/_/_/business/content/creative-best-practices"
+    },
+    {
+      "tag": "INPUT",
+      "text": "File upload",
+      "aria": "File upload",
+      "placeholder": null,
+      "role": null,
+      "type": "file",
+      "href": null
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Save from site",
+      "aria": null,
+      "placeholder": null,
+      "role": null,
+      "type": "button",
+      "href": null
+    },
+    {
+      "tag": "TEXTAREA",
+      "text": "Add your title",
+      "aria": null,
+      "placeholder": "Add your title",
+      "role": null,
+      "type": null,
+      "href": null
+    },
+    {
+      "tag": "DIV",
+      "text": "",
+      "aria": null,
+      "placeholder": null,
+      "role": "button",
+      "type": null,
+      "href": null
+    },
+    {
+      "tag": "DIV",
+      "text": "",
+      "aria": "Tell everyone what your Pin is about",
+      "placeholder": null,
+      "role": "combobox",
+      "type": null,
+      "href": null
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Select an emoji",
+      "aria": "Select an emoji",
+      "placeholder": null,
+      "role": null,
+      "type": "button",
+      "href": null
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Add alt text",
+      "aria": null,
+      "placeholder": null,
+      "role": null,
+      "type": "button",
+      "href": null
+    },
+    {
+      "tag": "TEXTAREA",
+      "text": "Add a destination link",
+      "aria": null,
+      "placeholder": "Add a destination link",
+      "role": null,
+      "type": null,
+      "href": null
+    },
+    {
+      "tag": "INPUT",
+      "text": "",
+      "aria": null,
+      "placeholder": null,
+      "role": null,
+      "type": "radio",
+      "href": null
+    },
+    {
+      "tag": "INPUT",
+      "text": "",
+      "aria": null,
+      "placeholder": null,
+      "role": null,
+      "type": "radio",
+      "href": null
+    },
+    {
+      "tag": "DIV",
+      "text": "",
+      "aria": null,
+      "placeholder": null,
+      "role": "button",
+      "type": null,
+      "href": null
+    },
+    {
+      "tag": "DIV",
+      "text": "",
+      "aria": null,
+      "placeholder": null,
+      "role": "button",
+      "type": null,
+      "href": null
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Learn more",
+      "aria": "Learn more",
+      "placeholder": null,
+      "role": null,
+      "type": "button",
+      "href": null
+    },
+    {
+      "tag": "TEXTAREA",
+      "text": "",
+      "aria": null,
+      "placeholder": null,
+      "role": null,
+      "type": null,
+      "href": null
+    }
+  ]
+}
