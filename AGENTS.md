@@ -23,6 +23,35 @@ This repo contains the Ember seek-and-find source files plus `ember-content-stud
 - YouTube upload screens only: if automation attempts a reload/refresh/navigation while a YouTube Studio upload or draft is open, immediately cancel/dismiss the possible reload/leave-page warning and continue the current YouTube upload flow. Do this even if the automation did not detect a dialog event; detection is not required before canceling. Do not inspect, re-verify, or retry anything before canceling.
 - For any Instagram or Facebook live posting, reposting, or scheduling, use Meta Business Suite / Meta posting tools by default. When the same asset/caption is meant for both Instagram and Facebook, post them together from one Meta composer action with both destinations selected; do not split them into separate IG/FB posts unless Lauren explicitly asks or Meta blocks the combined post.
 
+## Self-Correction Protocol
+
+Use this loop during workspace tasks: Plan → Act → Verify → Reflect → Record reusable lesson → Continue.
+
+- Verify before claiming success. Check files, command output, tests, generated artifacts, or browser state as appropriate to the task.
+- When a command, edit, test, generation, or workflow step fails, identify the exact failure, diagnose the likely cause, attempt the smallest safe fix, and rerun the relevant verification.
+- If the failure reveals a reusable lesson, record it in `LESSONS_LEARNED.md` using the template there.
+- Add a lesson only when it is specific, reusable, tied to a trigger condition, and based on a real failure, mistake, confusion, or inefficient workflow.
+- Do not add generic lessons such as "be careful," "check your work," "do better," or "avoid mistakes."
+- Prefer updating an existing related lesson over creating a duplicate.
+- If a lesson becomes obsolete, mark it as superseded instead of leaving conflicting guidance.
+- Escalate to Lauren before risky, destructive, account-sensitive, payment-related, or broad cross-workspace actions.
+- Use `prompts/reflect-and-fix.md` when a task needs an explicit reflection pass before continuing.
+
+## Lesson Hygiene
+
+Do not add a new rule or lesson for every minor issue.
+
+Add a lesson only when it prevents a likely future mistake.
+
+Keep lessons:
+- short
+- specific
+- action-oriented
+- tied to a trigger condition
+
+Prefer updating an existing related lesson over creating a duplicate.
+If a lesson becomes obsolete, mark it as superseded instead of leaving conflicting guidance.
+
 ## Promo Art Format Rules
 
 - Create platform-specific promo art at the needed aspect ratio instead of relying on later crops.
