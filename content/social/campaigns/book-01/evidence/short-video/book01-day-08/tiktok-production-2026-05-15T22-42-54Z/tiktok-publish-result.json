@@ -1,0 +1,12 @@
+{
+  "ok": false,
+  "mode": "error",
+  "day": 8,
+  "task": "book01-day08-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
+  "tiktok_url": null,
+  "actions": [],
+  "screenshots": [],
+  "evidence_dir": "content/social/campaigns/book-01/evidence/short-video/book01-day-08/tiktok-production-2026-05-15T22-42-54Z",
+  "body_excerpt": "",
+  "error": "No existing TikTok Studio target was found at the CDP endpoint. Open TikTok Studio first."
+}

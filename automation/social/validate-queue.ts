@@ -192,6 +192,49 @@ function taskShouldDeclareRequiredHashtags(task: PlatformTask): boolean {
     (task.status === "ready" || task.status === "needs-video-export");
 }
 
+export function metaStillPairShapeErrors(post: QueuePost, postLabel: string): string[] {
+  const postTasks = Array.isArray(post.platform_tasks) ? post.platform_tasks as PlatformTask[] : [];
+  const readyInstagramTasks = postTasks.filter((task) =>
+    task.platform === "Instagram" && task.status === "ready"
+  );
+  const instagramFeedTasks = postTasks.filter((task) =>
+    task.platform === "Instagram"
+    && asString(task.idempotency_key).includes("feed-post-plus-story-reshare")
+  );
+  const readyInstagramFeedTasks = instagramFeedTasks.filter((task) =>
+    task.status === "ready"
+  );
+  const postedInstagramFeedTasks = instagramFeedTasks.filter((task) =>
+    task.status === "posted" || task.status === "posted-early"
+  );
+  const malformedReadyInstagramTasks = readyInstagramTasks.filter((task) =>
+    !asString(task.idempotency_key).includes("feed-post-plus-story-reshare")
+  );
+  const hasAnyReadyInstagramFeedTask = readyInstagramTasks.some((task) =>
+    asString(task.idempotency_key).includes("feed-post-plus-story-reshare")
+  );
+  const readyFacebookPageTasks = postTasks.filter((task) =>
+    task.platform === "Facebook"
+    && task.status === "ready"
+    && asString(task.idempotency_key).includes("page-post")
+  );
+
+  if (readyFacebookPageTasks.length === 0 || readyInstagramFeedTasks.length === 1) return [];
+  if (postedInstagramFeedTasks.length === 1 && !malformedReadyInstagramTasks.length) return [];
+
+  const foundKeys = readyInstagramTasks
+    .map((task) => asString(task.idempotency_key) || "(missing idempotency_key)")
+    .join(", ") || "none";
+
+  const issue = hasAnyReadyInstagramFeedTask
+    ? "matching ready Instagram feed-post-plus-story-reshare task count is not exactly one"
+    : "no matching ready Instagram feed-post-plus-story-reshare task";
+
+  return [
+    `${postLabel} has a ready Facebook page-post task but ${issue}. This is a Meta still production blocker; fix the queue before opening or running a Meta browser helper. Ready Instagram task key(s): ${foundKeys}.`
+  ];
+}
+
 export async function validateSocialQueue(): Promise<QueueValidationResult> {
   const errors: string[] = [];
   const absoluteQueuePath = join(process.cwd(), queuePath);
@@ -262,6 +305,8 @@ export async function validateSocialQueue(): Promise<QueueValidationResult> {
         }
       }
     }
+
+    errors.push(...metaStillPairShapeErrors(post, postLabel));
 
     postTasks.forEach((task, taskIndex) => {
       tasks.push(task);

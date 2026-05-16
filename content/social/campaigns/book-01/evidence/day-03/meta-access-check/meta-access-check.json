@@ -15,14 +15,14 @@
     {
       "idempotency_key": "book01-day03-instagram-feed-post-plus-story-reshare",
       "platform": "Instagram",
-      "status": "needs-account",
-      "error": "needs-account"
+      "status": "posted",
+      "error": null
     },
     {
       "idempotency_key": "book01-day03-facebook-page-post",
       "platform": "Facebook",
-      "status": "needs-account",
-      "error": "needs-account"
+      "status": "posted",
+      "error": null
     }
   ],
   "selector_probes": [
@@ -33,7 +33,7 @@
     },
     {
       "label": "publish_to",
-      "opened": true,
+      "opened": false,
       "text": "Create post\nPost to\nPost to\n​\nEmber Dragon Books and emberdragonbooks\n​\nMedia\nShare photos or a video. Instagram posts can't exceed 10 photos.\nAdd photo\nAdd video\nPost details\nCustomize post for Facebook and Instagram\nText\n\n\nClick to open hashtag menu.\n​\nChoose emoji\n​\nSchedule\nSet date and time\nShare to\nPrivacy settings\nAdjust your privacy settings to control who can see your post in Feed, Watch, search results and on your profile.\nPublic\nAnyone on or off Facebook will be able to see your post.\nRestricted\nChoose certain people on Facebook who can see your post.\nBoost\nCancel\nFinish later\nPublish\nFacebook Feed preview\n​\n​\nEmber Dragon Books\nJust now\nLike\nComment\nShare\nMeta Business Suite\nLinks\nHome\nHome\nNotifications\nNotifications\nAds Manager\nAds Manager\nInbox\nInbox\nContent\nContent\nCreator marketplace\nCreator marketplace\nPlanner\nPlanner\nAds\nAds\nInsights\nInsights\nAll tools\nAll tools\nEdit\nSearch\nSearch\nLinks\nSettings\nSettings\nHelp\nHelp"
     },
     {
@@ -48,7 +48,7 @@
     }
   ],
   "should_promote_day3_ig_facebook_to_ready": true,
-  "later_ig_facebook_needs_account_likely_stale": true,
+  "later_ig_facebook_needs_account_likely_stale": false,
   "stopped_before_publish": true,
   "notes": [
     "No media uploaded. No Post, Publish, Schedule, Boost, or Promote action clicked."

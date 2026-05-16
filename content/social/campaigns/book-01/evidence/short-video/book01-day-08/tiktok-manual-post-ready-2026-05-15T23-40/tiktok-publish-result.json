@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "mode": "ready-for-review",
+  "stopped_before_publish": true,
+  "day": 8,
+  "task": "book01-day08-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
+  "tiktok_url": null,
+  "actions": [
+    "upload_clicked",
+    "video_filechooser_set",
+    "caption_filled:0",
+    "dry_run_stopped_before_post"
+  ],
+  "screenshots": [
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-08/tiktok-manual-post-ready-2026-05-15T23-40/01-upload-ready.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-08/tiktok-manual-post-ready-2026-05-15T23-40/02-after-filechooser.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-08/tiktok-manual-post-ready-2026-05-15T23-40/03-before-post.png"
+  ],
+  "evidence_dir": "content/social/campaigns/book-01/evidence/short-video/book01-day-08/tiktok-manual-post-ready-2026-05-15T23-40"
+}

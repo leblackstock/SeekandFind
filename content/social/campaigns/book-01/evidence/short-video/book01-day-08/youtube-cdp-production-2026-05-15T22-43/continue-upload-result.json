@@ -1,0 +1,17 @@
+{
+  "ok": false,
+  "dry_run": false,
+  "rule": "The YouTube production upload helper must attach only to an already-open YouTube Studio tab; it must not navigate, reload, open a new page, or close the attached browser session.",
+  "target": null,
+  "actions": [
+    "youtube_upload_only_no_reload_no_goto",
+    "cdp_existing_target_flow",
+    "youtube_studio_existing_target_not_found_stop"
+  ],
+  "youtube_url": null,
+  "screenshots": [],
+  "body_excerpt": "",
+  "error": "No existing YouTube Studio target was found. Open YouTube Studio manually, then rerun; CDP-only production mode will not navigate or open a new tab.",
+  "result_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-08/youtube-cdp-production-2026-05-15T22-43/continue-upload-result.json",
+  "compact_result_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-08/youtube-cdp-production-2026-05-15T22-43/continue-upload-compact-result.json"
+}

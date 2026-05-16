@@ -1,7 +1,7 @@
 # Current Start Plan - Book 1 Social Automation
 
 Plan date: Friday, May 15, 2026
-Latest live check: Friday, May 15, 2026 at 5:09 PM ET
+Latest live check: Friday, May 15, 2026 at 11:47 PM ET
 Canonical source of truth: `content/social/campaigns/book-01/queue.json`
 
 ## Lauren's Note
@@ -17,9 +17,12 @@ Canonical source of truth: `content/social/campaigns/book-01/queue.json`
    - Treat `PREP ONLY` as a hard hold for future scheduled days.
 
 2. Work the due-pressure posting chunk before opening new browser tabs.
-   - Current chunk: Day 7, Day 8, and Day 9.
-   - Day 7 has only the 5-surface short-video bundle left.
-   - Day 8 and Day 9 still need their full social posting sets.
+   - Current chunk: Day 8 and Day 9.
+   - Day 7 is fully posted.
+   - Day 8 is partially posted: all three Pinterest still Pins, Instagram feed, Facebook page post, YouTube Shorts, Instagram Reels, Facebook Reels, and Pinterest Video Pin are posted/recorded.
+   - Day 8 still needs TikTok before the bundled short-video task can close.
+   - Before posting Day 9, first retry Day 8 TikTok recovery: Lauren saw TikTok's normal "video published" popup after the manual Post click, so check Studio/public profile for delayed visibility and recover the URL before any Day 9 posting.
+   - Day 9 still needs its full social posting set.
 
 3. Keep the Amazon/KDP release as quiet prep only until campaign Day 12, Monday, May 18, 2026.
    - Day 8 through Day 11 social posting may proceed when their campaign gates are open, but the listing/release moment stays held.
@@ -54,8 +57,8 @@ Fresh command checks:
 ```powershell
 npm run validate:social-queue
 npm run social:today
-npm run social:status-compact -- day-06
 npm run social:status-compact -- day-07
+npm run social:status-compact -- day-08
 ```
 
 Current verified result:
@@ -63,22 +66,25 @@ Current verified result:
 - `npm run validate:social-queue`: PASS.
 - Campaign posts: 12/12.
 - Platform tasks: 72/72.
-- Queue statuses: `posted=38`, `posted-early=3`, `ready=31`.
+- Queue statuses: `posted=44`, `posted-early=3`, `ready=25`.
 - `npm run social:today`: PASS.
 - Today in campaign clock: 2026-05-15.
 - Current mode: `LIVE POSTING OK`.
-- Current due-pressure chunk: Day 7, Day 8, and Day 9.
-- Day 7 status: 5/6 posted, 1 ready, 0 blocked.
-- Day 8 status: 0/6 posted, 6 ready, 0 blocked.
+- Current due-pressure chunk: Day 8 and Day 9.
+- Day 7 status: 6/6 posted, 0 ready, 0 blocked.
+- Day 8 status: 5/6 posted, 1 ready, 0 blocked.
+- Day 8 short-video partial: YouTube Shorts `https://youtube.com/shorts/T3YI9t7_v0Y`, Instagram Reels `https://www.instagram.com/emberdragonbooks/reel/DYYWwnDDbaT/`, Facebook Reels `https://www.facebook.com/reel/737527209411899`, and Pinterest Video Pin `https://www.pinterest.com/pin/1148417973750883260/` are recorded; missing TikTok only.
 - Day 9 status: 0/6 posted, 6 ready, 0 blocked.
-- Next real blocker: none.
+- Next real blocker: TikTok did not recover the Day 8 Firefly video during the watch window after the manual Post click, but Lauren saw TikTok's normal "video published" popup. Treat this as likely delayed/hidden visibility first: retry recovery at the start of Day 9 before any Day 9 posting.
+- Automation note: fixed the Day 8 Instagram queue key to `book01-day08-instagram-feed-post-plus-story-reshare`. `validate:social-queue` now treats a ready Facebook page-post without a matching ready Instagram feed-post-plus-story-reshare task as a hard Meta still production blocker before browser automation.
 
 ## Recommended First Action
 
-Use the compact packet script when posting or prepping:
+Before any Day 9 posting, retry Day 8 TikTok recovery and close the short-video bundle if a URL appears:
 
 ```powershell
-npm run social:today
+npm run social:tiktok-recover-url -- --day=day-08
+npm run social:post-day -- day-08 --close-short-video --tiktok <TIKTOK_URL>
 ```
 
 After each completed posting block:

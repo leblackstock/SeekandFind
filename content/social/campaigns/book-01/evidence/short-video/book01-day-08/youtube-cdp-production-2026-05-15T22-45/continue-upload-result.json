@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "dry_run": false,
+  "rule": "On YouTube Studio upload/draft screens only: if automation triggers a reload/leave-page dialog, immediately cancel it and continue the current YouTube upload flow.",
+  "target": {
+    "title": "Channel dashboard - YouTube Studio",
+    "url": "https://studio.youtube.com/channel/UC9I5x3-uPYURdn__A8x9xuA"
+  },
+  "actions": [
+    "youtube_upload_only_no_reload_no_goto",
+    "cdp_existing_target_flow",
+    "proactive_youtube_reload_dialog_cancel_attempt_no_open_dialog",
+    "upload_videos_clicked_from_open_menu",
+    "upload_videos_clicked",
+    "proactive_youtube_reload_dialog_cancel_attempt_no_open_dialog",
+    "upload_file_input_ready",
+    "video_file_attached",
+    "proactive_youtube_reload_dialog_cancel_attempt_no_open_dialog",
+    "details_fields_ready",
+    "details_title_description_filled",
+    "audience_dom_click_attempted",
+    "proactive_youtube_reload_dialog_cancel_attempt_no_open_dialog",
+    "audience_scroll_failed",
+    "audience_yes_clicked_visible_radio",
+    "proactive_youtube_reload_dialog_cancel_attempt_no_open_dialog",
+    "audience_yes_selected_visible_radio",
+    "details_next_clicked_dom",
+    "proactive_youtube_reload_dialog_cancel_attempt_no_open_dialog",
+    "video_elements_next_clicked_dom",
+    "proactive_youtube_reload_dialog_cancel_attempt_no_open_dialog",
+    "checks_next_clicked_dom",
+    "proactive_youtube_reload_dialog_cancel_attempt_no_open_dialog",
+    "public_clicked_dom",
+    "proactive_youtube_reload_dialog_cancel_attempt_no_open_dialog",
+    "publish_clicked_dom",
+    "proactive_youtube_reload_dialog_cancel_attempt_no_open_dialog"
+  ],
+  "youtube_url": "https://youtube.com/shorts/T3YI9t7_v0Y",
+  "screenshots": [
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-08/youtube-cdp-production-2026-05-15T22-45/continue-upload-before.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-08/youtube-cdp-production-2026-05-15T22-45/upload-dialog-started.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-08/youtube-cdp-production-2026-05-15T22-45/made-for-kids-selected.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-08/youtube-cdp-production-2026-05-15T22-45/video-elements-screen.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-08/youtube-cdp-production-2026-05-15T22-45/checks-screen.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-08/youtube-cdp-production-2026-05-15T22-45/visibility-screen.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-08/youtube-cdp-production-2026-05-15T22-45/public-selected.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-08/youtube-cdp-production-2026-05-15T22-45/continue-upload-after.png"
+  ],
+  "body_excerpt": "All changes saved. Skip navigation Create Your channel Ember Dragon Books Dashboard Content Analytics Community Subtitles Content detection Earn Customization Audio library Settings Send feedback Channel dashboard Latest YouTube Short performance Golden Welcome Bell #Shorts 0 0 0 First 1 day 20 hours Ranking by views 3 of 7 Views 0 Average percentage viewed 0% Likes 0 Go to video analytics See comments (0) Published videos Tiny Treasure #Shorts 0 0 0 Help Ember Find It #Shorts 0 0 0 Find the DragonFlame Lantern #Shorts 0 0 0 Search with Ember #Shorts 0 0 0 Go to videos Create your first post to start a conversation and get feedback from your community. Create post Channel analytics Current subscribers 4 +4 in last 28 days Summary Last 28 days Views 114 — Watch time (hours) 0.1 — Top content Last 48 hours · Views Go to channel analytics News Monthly Creator Roundup Catch up on the latest news, features, and trending updates from YouTube Creators to help your channel grow Check it out YouTube known issues 🚨 Issue with Shorts and Homepage recommendations 1 / 4 Creator Insider Be organized — Hannah Berner of Giggly Squar #Creator Advice Hannah Berner & Rene Ritchie on YouTube strategy",
+  "result_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-08/youtube-cdp-production-2026-05-15T22-45/continue-upload-result.json",
+  "compact_result_path": "content/social/campaigns/book-01/evidence/short-video/book01-day-08/youtube-cdp-production-2026-05-15T22-45/continue-upload-compact-result.json"
+}

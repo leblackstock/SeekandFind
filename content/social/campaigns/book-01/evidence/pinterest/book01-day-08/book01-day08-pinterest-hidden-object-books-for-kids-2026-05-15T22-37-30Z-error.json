@@ -1,0 +1,21 @@
+{
+  "ok": false,
+  "mode": "dry-run-error",
+  "platform": "Pinterest",
+  "idempotency_key": "book01-day08-pinterest-hidden-object-books-for-kids",
+  "error": "Stopped at login or sensitive platform boundary.",
+  "url": "https://www.pinterest.com/",
+  "stopped_before_publish": true,
+  "browser_mode": "cdp",
+  "browser_left_open": true,
+  "reused_existing_pinterest_tab": true,
+  "cdp_url": "http://127.0.0.1:9222",
+  "profile_path": null,
+  "message": "Browser left open for manual login/review. Log in in this same browser window, then rerun npm run social:dry-run-post.",
+  "actions": [
+    "browser_mode:cdp",
+    "reused_existing_pinterest_tab",
+    "opened_pinterest_builder"
+  ],
+  "timestamp": "2026-05-15T22:37:34.735Z"
+}

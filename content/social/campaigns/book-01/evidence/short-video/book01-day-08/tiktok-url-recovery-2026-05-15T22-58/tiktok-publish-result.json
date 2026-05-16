@@ -1,0 +1,16 @@
+{
+  "ok": false,
+  "mode": "url-not-recovered",
+  "day": 8,
+  "task": "book01-day08-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
+  "tiktok_url": null,
+  "evidence_dir": "content/social/campaigns/book-01/evidence/short-video/book01-day-08/tiktok-url-recovery-2026-05-15T22-58",
+  "cdp_targets_checked": 61,
+  "relevant_targets": [
+    {
+      "title": "TikTok Studio",
+      "type": "page",
+      "url": "https://www.tiktok.com/tiktokstudio/content"
+    }
+  ]
+}

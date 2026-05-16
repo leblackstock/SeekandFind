@@ -1,0 +1,21 @@
+{
+  "ok": false,
+  "mode": "error",
+  "day": 8,
+  "task": "book01-day08-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
+  "tiktok_url": null,
+  "actions": [
+    "upload_clicked",
+    "video_filechooser_set",
+    "caption_filled:0",
+    "post_clicked"
+  ],
+  "screenshots": [
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-08/tiktok-repost-watched-2026-05-15T22-20/01-upload-ready.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-08/tiktok-repost-watched-2026-05-15T22-20/02-after-filechooser.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-08/tiktok-repost-watched-2026-05-15T22-20/03-before-post.png"
+  ],
+  "evidence_dir": "content/social/campaigns/book-01/evidence/short-video/book01-day-08/tiktok-repost-watched-2026-05-15T22-20",
+  "body_excerpt": "",
+  "error": "page.screenshot: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n"
+}

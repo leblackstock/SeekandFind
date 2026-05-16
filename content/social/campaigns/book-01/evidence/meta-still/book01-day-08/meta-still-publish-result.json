@@ -1,0 +1,30 @@
+{
+  "ok": false,
+  "mode": "error",
+  "campaign_day": 8,
+  "media_asset": "content/outputs/images/approved/meta-feed-4x5/book-01/day-08-meta-feed-4x5-approved.png",
+  "caption": "Find the Firefly Flower Charm.\n\nComing soon to Amazon.\n\nTap, pause, and search.\n\n#SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #HiddenObjectBook #KidsBooks #FamilyReading #EmberDragonBooks #dragonbooks #dragonbooksforkids",
+  "screenshots": [
+    "content/social/campaigns/book-01/evidence/meta-still/book01-day-08/01-composer-opened.png",
+    "content/social/campaigns/book-01/evidence/meta-still/book01-day-08/02-before-publish.png",
+    "content/social/campaigns/book-01/evidence/meta-still/book01-day-08/03-after-publish.png"
+  ],
+  "actions": [
+    "destinations_visible",
+    "clicked_add_photo",
+    "clicked_upload_choice",
+    "media_uploaded_via_upload_choice",
+    "caption_filled:[contenteditable='true']:0",
+    "clicked_publish",
+    "clicked_maybe_later",
+    "instagram_url_recovered:https://www.instagram.com/emberdragonbooks/p/DYYWLaWiQM8/",
+    "facebook_url_recovered:https://www.facebook.com/photo/?fbid=122103367587308464&set=pb.61589253935031.-2207520000"
+  ],
+  "blocker_seen": "Social queue validation failed after update.",
+  "urls": {
+    "instagram": null,
+    "facebook": null
+  },
+  "queue_updates": [],
+  "result_path": "content/social/campaigns/book-01/evidence/meta-still/book01-day-08/meta-still-publish-result.json"
+}

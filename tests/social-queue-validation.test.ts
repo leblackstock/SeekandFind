@@ -2,7 +2,7 @@ import { mkdtemp, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { checkRequiredVideoSurfaces, validateSocialQueue } from "../automation/social/validate-queue.js";
+import { checkRequiredVideoSurfaces, metaStillPairShapeErrors, validateSocialQueue } from "../automation/social/validate-queue.js";
 
 const requiredHashtags = [
   "#SeekAndFind",
@@ -95,5 +95,50 @@ describe("canonical social queue requirements", () => {
     }, root);
 
     expect(result).toEqual({ missing: [], errors: [] });
+  });
+
+  it("blocks ready Meta still posting when Facebook lacks a matching Instagram feed task", () => {
+    const errors = metaStillPairShapeErrors({
+      post_id: "book01-day-08",
+      campaign_day: 8,
+      platform_tasks: [
+        {
+          platform: "Instagram",
+          status: "ready",
+          idempotency_key: "book01-day08-instagram-story-or-reel-cover"
+        },
+        {
+          platform: "Facebook",
+          status: "ready",
+          idempotency_key: "book01-day08-facebook-page-post"
+        }
+      ]
+    }, "post book01-day-08");
+
+    expect(errors).toEqual([
+      expect.stringContaining("Meta still production blocker")
+    ]);
+    expect(errors[0]).toContain("book01-day08-instagram-story-or-reel-cover");
+  });
+
+  it("allows a partially closed Meta still pair after Instagram is posted", () => {
+    const errors = metaStillPairShapeErrors({
+      post_id: "book01-day-08",
+      campaign_day: 8,
+      platform_tasks: [
+        {
+          platform: "Instagram",
+          status: "posted",
+          idempotency_key: "book01-day08-instagram-feed-post-plus-story-reshare"
+        },
+        {
+          platform: "Facebook",
+          status: "ready",
+          idempotency_key: "book01-day08-facebook-page-post"
+        }
+      ]
+    }, "post book01-day-08");
+
+    expect(errors).toEqual([]);
   });
 });

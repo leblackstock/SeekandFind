@@ -1161,12 +1161,12 @@
       "platform_tasks": [
         {
           "platform": "Pinterest",
-          "status": "ready",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
+          "posted_url": "https://www.pinterest.com/pin/1148417973750878345",
+          "posted_at": "2026-05-15T22:41:21Z",
+          "receipt_path": "content/social/campaigns/book-01/evidence/pinterest/book01-day-08/book01-day08-pinterest-hidden-object-books-for-kids-2026-05-15T22-41-06Z.png",
+          "evidence_path": "content/social/campaigns/book-01/evidence/pinterest/book01-day-08/book01-day08-pinterest-hidden-object-books-for-kids-2026-05-15T22-41-06Z.png",
           "error": null,
           "idempotency_key": "book01-day08-pinterest-hidden-object-books-for-kids",
           "board_name": "Hidden Object Books for Kids",
@@ -1191,12 +1191,12 @@
         },
         {
           "platform": "Pinterest",
-          "status": "ready",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
+          "posted_url": "https://www.pinterest.com/pin/1148417973750878378",
+          "posted_at": "2026-05-15T22:41:49Z",
+          "receipt_path": "content/social/campaigns/book-01/evidence/pinterest/book01-day-08/book01-day08-pinterest-fantasy-activity-books-for-kids-2026-05-15T22-41-37Z.png",
+          "evidence_path": "content/social/campaigns/book-01/evidence/pinterest/book01-day-08/book01-day08-pinterest-fantasy-activity-books-for-kids-2026-05-15T22-41-37Z.png",
           "error": null,
           "idempotency_key": "book01-day08-pinterest-fantasy-activity-books-for-kids",
           "board_name": "Fantasy Activity Books for Kids",
@@ -1221,12 +1221,12 @@
         },
         {
           "platform": "Pinterest",
-          "status": "ready",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
+          "posted_url": "https://www.pinterest.com/pin/1148417973750878394",
+          "posted_at": "2026-05-15T22:42:17Z",
+          "receipt_path": "content/social/campaigns/book-01/evidence/pinterest/book01-day-08/book01-day08-pinterest-seek-and-find-books-for-kids-2026-05-15T22-42-05Z.png",
+          "evidence_path": "content/social/campaigns/book-01/evidence/pinterest/book01-day-08/book01-day08-pinterest-seek-and-find-books-for-kids-2026-05-15T22-42-05Z.png",
           "error": null,
           "idempotency_key": "book01-day08-pinterest-seek-and-find-books-for-kids",
           "board_name": "Seek-and-Find Books for Kids",
@@ -1251,13 +1251,13 @@
         },
         {
           "platform": "Instagram",
-          "status": "ready",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
-          "idempotency_key": "book01-day08-instagram-story-or-reel-cover",
+          "posted_url": "https://www.instagram.com/emberdragonbooks/p/DYYWLaWiQM8/",
+          "posted_at": "2026-05-15T21:04:29-04:00",
+          "receipt_path": "content/social/campaigns/book-01/receipts/instagram/book01-day-08/book01-day08-instagram-feed-post-plus-story-reshare.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/meta-still/book01-day-08/06-instagram-post-opened.png",
+          "idempotency_key": "book01-day08-instagram-feed-post-plus-story-reshare",
           "caption_source": {
             "type": "calendar_slot",
             "text": "Find the Firefly Flower Charm.\n\nComing soon to Amazon.",
@@ -1279,12 +1279,12 @@
         },
         {
           "platform": "Facebook",
-          "status": "ready",
+          "status": "posted",
           "scheduled_time": null,
-          "posted_url": null,
-          "posted_at": null,
-          "receipt_path": null,
-          "evidence_path": null,
+          "posted_url": "https://www.facebook.com/photo/?fbid=122103367587308464&set=pb.61589253935031.-2207520000",
+          "posted_at": "2026-05-15T21:05:30-04:00",
+          "receipt_path": "content/social/campaigns/book-01/receipts/facebook/book01-day-08/book01-day08-facebook-page-post.json",
+          "evidence_path": "content/social/campaigns/book-01/evidence/facebook/book01-day-08/book01-day08-facebook-page-post-2026-05-16T01-05-30Z.png",
           "idempotency_key": "book01-day08-facebook-page-post",
           "caption_source": {
             "type": "calendar_slot",
@@ -1340,6 +1340,24 @@
             "#EmberDragonBooks",
             "#dragonbooks",
             "#dragonbooksforkids"
+          ],
+          "platform_urls": [
+            {
+              "platform": "YouTube Shorts",
+              "url": "https://youtube.com/shorts/T3YI9t7_v0Y"
+            },
+            {
+              "platform": "Instagram Reels",
+              "url": "https://www.instagram.com/emberdragonbooks/reel/DYYWwnDDbaT/"
+            },
+            {
+              "platform": "Facebook Reels",
+              "url": "https://www.facebook.com/reel/737527209411899"
+            },
+            {
+              "platform": "Pinterest Video Pin",
+              "url": "https://www.pinterest.com/pin/1148417973750883260/"
+            }
           ]
         }
       ],

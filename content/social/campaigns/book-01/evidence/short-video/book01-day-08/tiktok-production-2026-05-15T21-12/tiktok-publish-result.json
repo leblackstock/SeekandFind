@@ -1,0 +1,48 @@
+{
+  "ok": false,
+  "mode": "not-public",
+  "day": 8,
+  "task": "book01-day08-short-video-youtube-shorts-public-tiktok-public-instagram-reels-public-facebook-reels-public-pinterest-video-pin-public",
+  "tiktok_url": null,
+  "public_status": {
+    "public": false,
+    "underReview": false,
+    "onlyMe": false,
+    "visible": false,
+    "excerpt": "Upload MANAGE Home Posts Analytics Comments GROWTH Inspiration Creator Academy TOOLS Monetization Unlimited Sounds Smart Split OTHERS Feedback Back to TikTok Views Likes Comments Privacy Posts (Created on) Privacy Views Likes Comments Actions 00:08 Can your little seeker find the Golden Welcome Bell among the festival decorations? Coming soon to Amazon. Save the challenge and try it together. #SeekAndFind #KidsActivityBook #ChildrensBooks #ScreenFreeFun #BabyDragon #HiddenObjectBook #KidsBooks #FamilyReading #EmberDragonBooks #dragonbooks #dragonbooksforkids May 14, 9:41 PM Everyone 23 0 0 00:08 A cozy dragon-village search scene, made to feel warm, gentle, and findable for young readers. Co"
+  },
+  "actions": [
+    "upload_clicked",
+    "video_filechooser_set",
+    "caption_filled:0",
+    "post_clicked",
+    "status_poll:not_ready",
+    "status_poll:not_ready",
+    "status_poll:not_ready",
+    "status_poll:not_ready",
+    "status_poll:not_ready",
+    "status_poll:not_ready",
+    "status_poll:not_ready",
+    "status_poll:not_ready",
+    "status_poll:not_ready",
+    "status_poll:not_ready",
+    "status_poll:not_ready",
+    "status_poll:not_ready",
+    "status_poll:not_ready",
+    "status_poll:not_ready",
+    "status_poll:not_ready",
+    "status_poll:not_ready",
+    "status_poll:not_ready",
+    "status_poll:not_ready",
+    "status_poll:not_ready",
+    "status_poll:not_ready"
+  ],
+  "screenshots": [
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-08/tiktok-production-2026-05-15T21-12/01-upload-ready.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-08/tiktok-production-2026-05-15T21-12/02-after-filechooser.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-08/tiktok-production-2026-05-15T21-12/03-before-post.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-08/tiktok-production-2026-05-15T21-12/04-after-post.png",
+    "content/social/campaigns/book-01/evidence/short-video/book01-day-08/tiktok-production-2026-05-15T21-12/05-final-status.png"
+  ],
+  "evidence_dir": "content/social/campaigns/book-01/evidence/short-video/book01-day-08/tiktok-production-2026-05-15T21-12"
+}
